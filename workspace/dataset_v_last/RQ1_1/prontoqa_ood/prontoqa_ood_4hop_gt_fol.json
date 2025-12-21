@@ -1,0 +1,6406 @@
+{
+    "4hop_OOD_Composed_random_noadj_example30_example": [
+        {
+            "ref": "Gorpuses are lempuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every brimpus is a tumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each grimpus is a numpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each gorpus is a jompus and a zumpus and a grimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a jompus or an impus or a lempus is a tumpus.",
+            "gt_fol": "∀x ((Jompus(x) ∨ Impus(x) ∨ Lempus(x)) → Tumpus(x))"
+        },
+        {
+            "ref": "Shumpuses are lorpuses.",
+            "gt_fol": "∀x (Shumpus(x) → Lorpus(x))"
+        },
+        {
+            "ref": "Vumpuses are impuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each zumpus is a wumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every vumpus is a brimpus and a shumpus and a gorpus.",
+            "gt_fol": "∀x (Vumpus(x) → (Brimpus(x) ∧ Shumpus(x) ∧ Gorpus(x)))"
+        },
+        {
+            "ref": "Fae is a numpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Fae is a vumpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_OOD_Composed_random_noadj_example59_example": [
+        {
+            "ref": "Grimpuses are shumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Numpuses are rompuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every dumpus is a zumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sam is a zumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Jompuses are rompuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a yumpus, a brimpus, and a dumpus is a sterpus.",
+            "gt_fol": "∀x ((Yumpus(x) ∧ Brimpus(x) ∧ Dumpus(x)) → Sterpus(x))"
+        },
+        {
+            "ref": "Everything that is a yumpus, a brimpus, and a dumpus is a grimpus and a jompus and a numpus.",
+            "gt_fol": "∀x ((Yumpus(x) ∧ Brimpus(x) ∧ Dumpus(x)) → (Grimpus(x) ∧ Jompus(x) ∧ Numpus(x)))"
+        },
+        {
+            "ref": "Vumpuses are lempuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a yumpus and a shumpus and a zumpus is a sterpus.",
+            "gt_fol": "∀x ((Yumpus(x) ∧ Shumpus(x) ∧ Zumpus(x)) → Sterpus(x))"
+        },
+        {
+            "ref": "Sam is a yumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sam is a shumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Jompuses are vumpuses, gorpuses, and dumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sam is a yumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sam is a lempus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sam is a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sam is a dumpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_OOD_Composed_random_noadj_example31_example": [
+        {
+            "ref": "Yumpuses are lorpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each numpus is a yumpus, a vumpus, and a tumpus.",
+            "gt_fol": "∀x (Numpus(x) → (Yumpus(x) ∧ Vumpus(x) ∧ Tumpus(x)))"
+        },
+        {
+            "ref": "Every yumpus is a grimpus and a wumpus and a lempus.",
+            "gt_fol": "∀x (Yumpus(x) → (Grimpus(x) ∧ Wumpus(x) ∧ Lempus(x)))"
+        },
+        {
+            "ref": "Wumpuses are zumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Tumpuses are jompuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a rompus or a lempus or a dumpus is a lorpus.",
+            "gt_fol": "∀x ((Rompus(x) ∨ Lempus(x) ∨ Dumpus(x)) → Lorpus(x))"
+        },
+        {
+            "ref": "Each vumpus is a rompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Grimpuses are rompuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Numpuses are zumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wren is a gorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wren is a numpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_OOD_Composed_random_noadj_example98_example": [
+        {
+            "ref": "Wren is a jompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wumpuses are brimpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each yumpus is a jompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each dumpus is a tumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a numpus and a jompus and a lempus is a lorpus.",
+            "gt_fol": "∀x ((Numpus(x) ∧ Jompus(x) ∧ Lempus(x)) → Lorpus(x))"
+        },
+        {
+            "ref": "Everything that is a numpus, a vumpus, and a sterpus is a dumpus and a wumpus and a yumpus.",
+            "gt_fol": "∀x ((Numpus(x) ∧ Vumpus(x) ∧ Sterpus(x)) → (Dumpus(x) ∧ Wumpus(x) ∧ Yumpus(x)))"
+        },
+        {
+            "ref": "Wren is a lempus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wumpuses are lempuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a brimpus, a grimpus, or a zumpus is a lorpus.",
+            "gt_fol": "∀x ((Brimpus(x) ∨ Grimpus(x) ∨ Zumpus(x)) → Lorpus(x))"
+        },
+        {
+            "ref": "Everything that is a numpus and a vumpus and a sterpus is a grimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wren is a numpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wren is a numpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wren is a gorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wren is a vumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wren is a sterpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_OOD_Composed_random_noadj_example76_example": [
+        {
+            "ref": "Sterpuses are tumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Alex is a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a lempus or a dumpus or a brimpus is a numpus.",
+            "gt_fol": "∀x ((Lempus(x) ∨ Dumpus(x) ∨ Brimpus(x)) → Numpus(x))"
+        },
+        {
+            "ref": "Everything that is a zumpus, a yumpus, and a shumpus is a lorpus.",
+            "gt_fol": "∀x ((Zumpus(x) ∧ Yumpus(x) ∧ Shumpus(x)) → Lorpus(x))"
+        },
+        {
+            "ref": "Every gorpus is a vumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Alex is a lempus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each jompus is a dumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a zumpus and a brimpus and a lempus is a numpus.",
+            "gt_fol": "∀x ((Zumpus(x) ∧ Brimpus(x) ∧ Lempus(x)) → Numpus(x))"
+        },
+        {
+            "ref": "Alex is a zumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each jompus is a grimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a zumpus and a yumpus and a shumpus is a sterpus and a gorpus and a jompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Alex is a zumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Alex is a yumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Alex is a grimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Alex is a shumpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_OOD_Composed_random_noadj_example55_example": [
+        {
+            "ref": "Each gorpus is a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Gorpuses are lempuses and shumpuses and rompuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lempuses are vumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a gorpus or a sterpus or a lempus is a shumpus.",
+            "gt_fol": "∀x ((Gorpus(x) ∨ Sterpus(x) ∨ Lempus(x)) → Shumpus(x))"
+        },
+        {
+            "ref": "Everything that is a lempus, a vumpus, or a grimpus is a lorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Rompuses are brimpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a gorpus, a sterpus, or a lempus is an impus.",
+            "gt_fol": "∀x ((Gorpus(x) ∨ Sterpus(x) ∨ Lempus(x)) → Impus(x))"
+        },
+        {
+            "ref": "Tumpuses are grimpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every shumpus is an impus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Alex is a numpus, a grimpus, and a wumpus.",
+            "gt_fol": "Numpus(alex) ∧ Grimpus(alex) ∧ Wumpus(alex)"
+        },
+        {
+            "ref": "Alex is a gorpus and a tumpus and a lempus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_OOD_Composed_random_noadj_example85_example": [
+        {
+            "ref": "Everything that is a vumpus, a jompus, or a lorpus is a wumpus.",
+            "gt_fol": "∀x ((Vumpus(x) ∨ Jompus(x) ∨ Lorpus(x)) → Wumpus(x))"
+        },
+        {
+            "ref": "Every zumpus is a dumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Tumpuses are wumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sterpuses are grimpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a vumpus or a jompus or a lorpus is a sterpus and a lempus and a zumpus.",
+            "gt_fol": "∀x ((Vumpus(x) ∨ Jompus(x) ∨ Lorpus(x)) → (Sterpus(x) ∧ Lempus(x) ∧ Zumpus(x)))"
+        },
+        {
+            "ref": "Everything that is a wumpus, a vumpus, or a brimpus is an impus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lempuses are dumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lempuses are zumpuses and numpuses and tumpuses.",
+            "gt_fol": "∀x (Lempus(x) → (Zumpus(x) ∧ Numpus(x) ∧ Tumpus(x)))"
+        },
+        {
+            "ref": "Zumpuses are rompuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Polly is a grimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Polly is a vumpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_OOD_Composed_random_noadj_example62_example1": [
+        {
+            "ref": "Everything that is an impus or a sterpus is a jompus.",
+            "gt_fol": "∀x ((Impus(x) ∨ Sterpus(x)) → Jompus(x))"
+        },
+        {
+            "ref": "Everything that is a yumpus or a lempus is a vumpus.",
+            "gt_fol": "∀x ((Yumpus(x) ∨ Lempus(x)) → Vumpus(x))"
+        },
+        {
+            "ref": "Everything that is an impus or a sterpus is a vumpus.",
+            "gt_fol": "∀x ((Impus(x) ∨ Sterpus(x)) → Vumpus(x))"
+        },
+        {
+            "ref": "Polly is not a vumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Polly is not a numpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_OOD_Composed_random_noadj_example74_example": [
+        {
+            "ref": "Stella is a rompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each dumpus is a yumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each vumpus is a yumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Shumpuses are wumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a sterpus and a numpus and a rompus is a yumpus.",
+            "gt_fol": "∀x ((Sterpus(x) ∧ Numpus(x) ∧ Rompus(x)) → Yumpus(x))"
+        },
+        {
+            "ref": "Everything that is a sterpus, a brimpus, and a wumpus is a dumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a sterpus, a brimpus, and a wumpus is a jompus.",
+            "gt_fol": "∀x ((Sterpus(x) ∧ Brimpus(x) ∧ Wumpus(x)) → Jompus(x))"
+        },
+        {
+            "ref": "Each shumpus is a jompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lempuses are jompuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every lempus is a sterpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Stella is a numpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Dumpuses are shumpuses, vumpuses, and lorpuses.",
+            "gt_fol": "∀x (Dumpus(x) → (Shumpus(x) ∧ Vumpus(x) ∧ Lorpus(x)))"
+        },
+        {
+            "ref": "Gorpuses are brimpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Stella is a sterpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Stella is a lempus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Stella is a gorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Stella is a zumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Stella is a shumpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_OOD_Composed_random_noadj_example47_example": [
+        {
+            "ref": "Everything that is an impus and a jompus and a numpus is a zumpus.",
+            "gt_fol": "∀x ((Impus(x) ∧ Jompus(x) ∧ Numpus(x)) → Zumpus(x))"
+        },
+        {
+            "ref": "Grimpuses are lempuses and brimpuses and gorpuses.",
+            "gt_fol": "∀x (Grimpus(x) → (Lempus(x) ∧ Brimpus(x) ∧ Gorpus(x)))"
+        },
+        {
+            "ref": "Everything that is an impus, a brimpus, and a sterpus is a wumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is an impus, a brimpus, and a sterpus is a lempus and a grimpus and a lorpus.",
+            "gt_fol": "∀x ((Impus(x) ∧ Brimpus(x) ∧ Sterpus(x)) → (Lempus(x) ∧ Grimpus(x) ∧ Lorpus(x)))"
+        },
+        {
+            "ref": "Every grimpus is a numpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every lorpus is a zumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Fae is an impus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Fae is a jompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each gorpus is a shumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Fae is a numpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each brimpus is a wumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each lempus is a dumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Fae is a vumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Fae is an impus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Fae is a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Fae is a sterpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_OOD_Composed_random_noadj_example97_example": [
+        {
+            "ref": "Gorpuses are vumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a jompus, a numpus, or a lorpus is a rompus.",
+            "gt_fol": "∀x ((Jompus(x) ∨ Numpus(x) ∨ Lorpus(x)) → Rompus(x))"
+        },
+        {
+            "ref": "Every zumpus is a rompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Tumpuses are lorpuses and gorpuses and zumpuses.",
+            "gt_fol": "∀x (Tumpus(x) → (Lorpus(x) ∧ Gorpus(x) ∧ Zumpus(x)))"
+        },
+        {
+            "ref": "Yumpuses are impuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Tumpuses are vumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each lempus is a rompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a vumpus, a lorpus, or an impus is a wumpus.",
+            "gt_fol": "∀x ((Vumpus(x) ∨ Lorpus(x) ∨ Impus(x)) → Wumpus(x))"
+        },
+        {
+            "ref": "Everything that is a jompus, a numpus, or a lorpus is a yumpus, a dumpus, and a lempus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sally is a grimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sally is a tumpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_OOD_Composed_random_noadj_example42_example2": [
+        {
+            "ref": "Everything that is a gorpus or a rompus is a dumpus.",
+            "gt_fol": "∀x ((Gorpus(x) ∨ Rompus(x)) → Dumpus(x))"
+        },
+        {
+            "ref": "Everything that is a gorpus or a rompus is a vumpus.",
+            "gt_fol": "∀x ((Gorpus(x) ∨ Rompus(x)) → Vumpus(x))"
+        },
+        {
+            "ref": "Everything that is a grimpus or a shumpus is a vumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sam is not a brimpus.",
+            "gt_fol": "¬Brimpus(sam)"
+        },
+        {
+            "ref": "Sam is not a vumpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_OOD_Composed_random_noadj_example4_example4": [
+        {
+            "ref": "Everything that is a lempus or a dumpus is a sterpus.",
+            "gt_fol": "∀x ((Lempus(x) ∨ Dumpus(x)) → Sterpus(x))"
+        },
+        {
+            "ref": "Everything that is a brimpus or a lorpus is a sterpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a lempus or a dumpus is a grimpus.",
+            "gt_fol": "∀x ((Lempus(x) ∨ Dumpus(x)) → Grimpus(x))"
+        },
+        {
+            "ref": "Alex is not a sterpus.",
+            "gt_fol": "¬Sterpus(alex)"
+        },
+        {
+            "ref": "Alex is not a numpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_OOD_Composed_random_noadj_example86_example5": [
+        {
+            "ref": "Everything that is a brimpus or a shumpus is a rompus.",
+            "gt_fol": "∀x ((Brimpus(x) ∨ Shumpus(x)) → Rompus(x))"
+        },
+        {
+            "ref": "Everything that is a brimpus or a shumpus is a lorpus.",
+            "gt_fol": "∀x ((Brimpus(x) ∨ Shumpus(x)) → Lorpus(x))"
+        },
+        {
+            "ref": "Everything that is a grimpus or a wumpus is a rompus.",
+            "gt_fol": "∀x ((Grimpus(x) ∨ Wumpus(x)) → Rompus(x))"
+        },
+        {
+            "ref": "Alex is not a dumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Alex is not a rompus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_OOD_Composed_random_noadj_example42_example6": [
+        {
+            "ref": "Everything that is a lorpus or a yumpus is a sterpus.",
+            "gt_fol": "∀x ((Lorpus(x) ∨ Yumpus(x)) → Sterpus(x))"
+        },
+        {
+            "ref": "Everything that is a brimpus or a numpus is a shumpus.",
+            "gt_fol": "∀x ((Brimpus(x) ∨ Numpus(x)) → Shumpus(x))"
+        },
+        {
+            "ref": "Everything that is a lorpus or a yumpus is a shumpus.",
+            "gt_fol": "∀x ((Lorpus(x) ∨ Yumpus(x)) → Shumpus(x))"
+        },
+        {
+            "ref": "Sally is not a shumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sally is not an impus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_OOD_Composed_random_noadj_example89_example": [
+        {
+            "ref": "Rompuses are tumpuses.",
+            "gt_fol": "∀x (Rompus(x) → Tumpus(x))"
+        },
+        {
+            "ref": "Every shumpus is a gorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every vumpus is a yumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every brimpus is a lempus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each dumpus is a sterpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Grimpuses are impuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every dumpus is a rompus, a grimpus, and a brimpus.",
+            "gt_fol": "∀x (Dumpus(x) → (Rompus(x) ∧ Grimpus(x) ∧ Brimpus(x)))"
+        },
+        {
+            "ref": "Every grimpus is a lorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is an impus, a sterpus, or a numpus is a lempus.",
+            "gt_fol": "∀x ((Impus(x) ∨ Sterpus(x) ∨ Numpus(x)) → Lempus(x))"
+        },
+        {
+            "ref": "Polly is a gorpus and a lempus and a sterpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Polly is a shumpus, a vumpus, and a dumpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_OOD_Composed_random_noadj_example46_example": [
+        {
+            "ref": "Everything that is a lorpus or a numpus or a sterpus is a yumpus.",
+            "gt_fol": "∀x ((Lorpus(x) ∨ Numpus(x) ∨ Sterpus(x)) → Yumpus(x))"
+        },
+        {
+            "ref": "Numpuses are dumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a lorpus or a numpus or a sterpus is a rompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every rompus is a vumpus.",
+            "gt_fol": "∀x (Rompus(x) → Vumpus(x))"
+        },
+        {
+            "ref": "Everything that is a zumpus, a sterpus, or a dumpus is a grimpus.",
+            "gt_fol": "∀x ((Zumpus(x) ∨ Sterpus(x) ∨ Dumpus(x)) → Grimpus(x))"
+        },
+        {
+            "ref": "Impuses are wumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each vumpus is a tumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each vumpus is a shumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Rompuses are wumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Polly is a dumpus and a yumpus and a gorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Polly is a sterpus, a numpus, and an impus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_OOD_Composed_random_noadj_example27_example7": [
+        {
+            "ref": "Everything that is a yumpus or a dumpus is a shumpus.",
+            "gt_fol": "∀x ((Yumpus(x) ∨ Dumpus(x)) → Shumpus(x))"
+        },
+        {
+            "ref": "Everything that is a yumpus or a dumpus is a wumpus.",
+            "gt_fol": "∀x ((Yumpus(x) ∨ Dumpus(x)) → Wumpus(x))"
+        },
+        {
+            "ref": "Everything that is a vumpus or a brimpus is a wumpus.",
+            "gt_fol": "∀x ((Vumpus(x) ∨ Brimpus(x)) → Wumpus(x))"
+        },
+        {
+            "ref": "Sally is not a wumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sally is not a grimpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_OOD_Composed_random_noadj_example80_example": [
+        {
+            "ref": "Everything that is a zumpus or a wumpus or a rompus is a brimpus.",
+            "gt_fol": "∀x ((Zumpus(x) ∨ Wumpus(x) ∨ Rompus(x)) → Brimpus(x))"
+        },
+        {
+            "ref": "Each lempus is a yumpus.",
+            "gt_fol": "∀x (Lempus(x) → Yumpus(x))"
+        },
+        {
+            "ref": "Everything that is a zumpus, a wumpus, or a rompus is a tumpus.",
+            "gt_fol": "∀x ((Zumpus(x) ∨ Wumpus(x) ∨ Rompus(x)) → Tumpus(x))"
+        },
+        {
+            "ref": "Every impus is a lorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Rompuses are sterpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Rompuses are yumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Tumpuses are shumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a wumpus, a sterpus, or a lorpus is a grimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every lempus is a wumpus, a rompus, and a tumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Max is a grimpus and a lorpus and a yumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Max is an impus, a rompus, and a lempus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_OOD_Composed_random_noadj_example90_example": [
+        {
+            "ref": "Everything that is a wumpus or a shumpus or a yumpus is a grimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Impuses are numpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a sterpus, a zumpus, or a dumpus is a shumpus.",
+            "gt_fol": "∀x ((Sterpus(x) ∨ Zumpus(x) ∨ Dumpus(x)) → Shumpus(x))"
+        },
+        {
+            "ref": "Everything that is a lempus or a gorpus or a wumpus is a sterpus.",
+            "gt_fol": "∀x ((Lempus(x) ∨ Gorpus(x) ∨ Wumpus(x)) → Sterpus(x))"
+        },
+        {
+            "ref": "Tumpuses are vumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Impuses are jompuses and wumpuses and tumpuses.",
+            "gt_fol": "∀x (Impus(x) → (Jompus(x) ∧ Wumpus(x) ∧ Tumpus(x)))"
+        },
+        {
+            "ref": "Everything that is a lempus, a gorpus, or a wumpus is a zumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each jompus is a shumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Max is a vumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Max is an impus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_OOD_Composed_random_noadj_example14_example": [
+        {
+            "ref": "Yumpuses are vumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every lempus is a rompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a tumpus, a jompus, or a shumpus is an impus.",
+            "gt_fol": "∀x ((Tumpus(x) ∨ Jompus(x) ∨ Shumpus(x)) → Impus(x))"
+        },
+        {
+            "ref": "Lempuses are lorpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every lempus is a sterpus.",
+            "gt_fol": "∀x (Lempus(x) → Sterpus(x))"
+        },
+        {
+            "ref": "Each yumpus is a tumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each gorpus is a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sterpuses are lempuses and yumpuses and gorpuses.",
+            "gt_fol": "∀x (Sterpus(x) → (Lempus(x) ∧ Yumpus(x) ∧ Gorpus(x)))"
+        },
+        {
+            "ref": "Sterpuses are brimpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wren is a rompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wren is a lempus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_OOD_Composed_random_noadj_example54_example": [
+        {
+            "ref": "Stella is a vumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a numpus, a grimpus, or a lempus is an impus.",
+            "gt_fol": "∀x ((Numpus(x) ∨ Grimpus(x) ∨ Lempus(x)) → Impus(x))"
+        },
+        {
+            "ref": "Stella is a rompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is an impus and a vumpus and a rompus is a jompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a numpus, a grimpus, or a lempus is a vumpus.",
+            "gt_fol": "∀x ((Numpus(x) ∨ Grimpus(x) ∨ Lempus(x)) → Vumpus(x))"
+        },
+        {
+            "ref": "Stella is an impus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a vumpus, a wumpus, and a shumpus is a gorpus.",
+            "gt_fol": "∀x ((Vumpus(x) ∧ Wumpus(x) ∧ Shumpus(x)) → Gorpus(x))"
+        },
+        {
+            "ref": "Everything that is a grimpus or a jompus or a yumpus is a lorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a vumpus, a wumpus, and a shumpus is a lorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each lempus is a wumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a zumpus and a brimpus and a sterpus is a shumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a gorpus or a lorpus or a rompus is a jompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Stella is a grimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Stella is a dumpus and a lempus and a grimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Stella is a zumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Stella is an impus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Stella is a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Stella is a sterpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_OOD_Composed_random_noadj_example57_example": [
+        {
+            "ref": "Dumpuses are tumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each jompus is a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a numpus or a wumpus or a jompus is a brimpus.",
+            "gt_fol": "∀x ((Numpus(x) ∨ Wumpus(x) ∨ Jompus(x)) → Brimpus(x))"
+        },
+        {
+            "ref": "Everything that is a numpus or a sterpus or a rompus is a shumpus.",
+            "gt_fol": "∀x ((Numpus(x) ∨ Sterpus(x) ∨ Rompus(x)) → Shumpus(x))"
+        },
+        {
+            "ref": "Each vumpus is a sterpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Yumpuses are rompuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every yumpus is a sterpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each vumpus is a lempus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a numpus, a wumpus, or a jompus is a yumpus and a dumpus and a vumpus.",
+            "gt_fol": "∀x ((Numpus(x) ∨ Wumpus(x) ∨ Jompus(x)) → (Yumpus(x) ∧ Dumpus(x) ∧ Vumpus(x)))"
+        },
+        {
+            "ref": "Polly is a sterpus and a rompus and an impus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Polly is a jompus, a numpus, and a yumpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_OOD_Composed_random_noadj_example84_example": [
+        {
+            "ref": "Fae is a zumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every dumpus is a numpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a brimpus and a vumpus and a grimpus is a lorpus, a dumpus, and a lempus.",
+            "gt_fol": "∀x ((Brimpus(x) ∧ Vumpus(x) ∧ Grimpus(x)) → (Lorpus(x) ∧ Dumpus(x) ∧ Lempus(x)))"
+        },
+        {
+            "ref": "Lorpuses are gorpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every lempus is a jompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a brimpus and a vumpus and a grimpus is a numpus.",
+            "gt_fol": "∀x ((Brimpus(x) ∧ Vumpus(x) ∧ Grimpus(x)) → Numpus(x))"
+        },
+        {
+            "ref": "Fae is a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each lorpus is a shumpus and a rompus and a lempus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a brimpus and a zumpus and a gorpus is a yumpus.",
+            "gt_fol": "∀x ((Brimpus(x) ∧ Zumpus(x) ∧ Gorpus(x)) → Yumpus(x))"
+        },
+        {
+            "ref": "Every rompus is an impus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Shumpuses are wumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Fae is a gorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Fae is a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Fae is a vumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Fae is a wumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Fae is a grimpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_OOD_Composed_random_noadj_example81_example": [
+        {
+            "ref": "Sterpuses are gorpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a grimpus, an impus, or a lorpus is a tumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a grimpus, an impus, or a lorpus is a jompus, a sterpus, and a vumpus.",
+            "gt_fol": "∀x ((Grimpus(x) ∨ Impus(x) ∨ Lorpus(x)) → (Jompus(x) ∧ Sterpus(x) ∧ Vumpus(x)))"
+        },
+        {
+            "ref": "Each numpus is a wumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a rompus or an impus or a wumpus is a brimpus.",
+            "gt_fol": "∀x ((Rompus(x) ∨ Impus(x) ∨ Wumpus(x)) → Brimpus(x))"
+        },
+        {
+            "ref": "Numpuses are impuses.",
+            "gt_fol": "∀x (Numpus(x) → Impus(x))"
+        },
+        {
+            "ref": "Every jompus is a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every vumpus is a zumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each jompus is a grimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sally is a yumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sally is a numpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_OOD_Composed_random_noadj_example41_example": [
+        {
+            "ref": "Everything that is a grimpus or a vumpus or a dumpus is a tumpus.",
+            "gt_fol": "∀x ((Grimpus(x) ∨ Vumpus(x) ∨ Dumpus(x)) → Tumpus(x))"
+        },
+        {
+            "ref": "Each numpus is a yumpus.",
+            "gt_fol": "∀x (Numpus(x) → Yumpus(x))"
+        },
+        {
+            "ref": "Everything that is a vumpus, a wumpus, or a rompus is a tumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a grimpus, a vumpus, or a dumpus is a shumpus and a gorpus and a numpus.",
+            "gt_fol": "∀x ((Grimpus(x) ∨ Vumpus(x) ∨ Dumpus(x)) → (Shumpus(x) ∧ Gorpus(x) ∧ Numpus(x)))"
+        },
+        {
+            "ref": "Shumpuses are sterpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each gorpus is a rompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each brimpus is a wumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Jompuses are rompuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Numpuses are jompuses and lorpuses and brimpuses.",
+            "gt_fol": "∀x (Numpus(x) → (Jompus(x) ∧ Lorpus(x) ∧ Brimpus(x)))"
+        },
+        {
+            "ref": "Polly is a sterpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Polly is a vumpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_OOD_Composed_random_noadj_example94_example": [
+        {
+            "ref": "Everything that is an impus, a wumpus, and a lempus is a gorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a yumpus, a tumpus, or a numpus is a zumpus.",
+            "gt_fol": "∀x ((Yumpus(x) ∨ Tumpus(x) ∨ Numpus(x)) → Zumpus(x))"
+        },
+        {
+            "ref": "Everything that is an impus and a wumpus and a lempus is a yumpus and a grimpus and a vumpus.",
+            "gt_fol": "∀x ((Impus(x) ∧ Wumpus(x) ∧ Lempus(x)) → (Yumpus(x) ∧ Grimpus(x) ∧ Vumpus(x)))"
+        },
+        {
+            "ref": "Wren is an impus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a yumpus or a tumpus or a numpus is a jompus.",
+            "gt_fol": "∀x ((Yumpus(x) ∨ Tumpus(x) ∨ Numpus(x)) → Jompus(x))"
+        },
+        {
+            "ref": "Everything that is an impus and a rompus and a shumpus is a dumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wren is a rompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wren is a shumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a gorpus, a yumpus, or a sterpus is a zumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every vumpus is a rompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Grimpuses are brimpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wren is an impus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wren is a wumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wren is a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wren is a lempus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_OOD_Composed_random_noadj_example93_example": [
+        {
+            "ref": "Everything that is a lempus, a sterpus, or an impus is a yumpus.",
+            "gt_fol": "∀x ((Lempus(x) ∨ Sterpus(x) ∨ Impus(x)) → Yumpus(x))"
+        },
+        {
+            "ref": "Shumpuses are lempuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every dumpus is a wumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Brimpuses are tumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a numpus or a sterpus or a gorpus is an impus.",
+            "gt_fol": "∀x ((Numpus(x) ∨ Sterpus(x) ∨ Gorpus(x)) → Impus(x))"
+        },
+        {
+            "ref": "Each zumpus is a wumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every brimpus is a shumpus and a zumpus and a jompus.",
+            "gt_fol": "∀x (Brimpus(x) → (Shumpus(x) ∧ Zumpus(x) ∧ Jompus(x)))"
+        },
+        {
+            "ref": "Everything that is a numpus or a sterpus or a gorpus is a dumpus, a lorpus, and a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each lorpus is a vumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Stella is a wumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Stella is a sterpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_OOD_Composed_random_noadj_example65_example": [
+        {
+            "ref": "Everything that is a yumpus, a jompus, or a rompus is a brimpus and a zumpus and a shumpus.",
+            "gt_fol": "∀x ((Yumpus(x) ∨ Jompus(x) ∨ Rompus(x)) → (Brimpus(x) ∧ Zumpus(x) ∧ Shumpus(x)))"
+        },
+        {
+            "ref": "Shumpuses are vumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Zumpuses are sterpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lorpuses are wumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Zumpuses are lorpuses and tumpuses and yumpuses.",
+            "gt_fol": "∀x (Zumpus(x) → (Lorpus(x) ∧ Tumpus(x) ∧ Yumpus(x)))"
+        },
+        {
+            "ref": "Everything that is a sterpus or a yumpus or a numpus is a gorpus.",
+            "gt_fol": "∀x ((Sterpus(x) ∨ Yumpus(x) ∨ Numpus(x)) → Gorpus(x))"
+        },
+        {
+            "ref": "Zumpuses are grimpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a yumpus, a jompus, or a rompus is a sterpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Tumpuses are gorpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sally is a grimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sally is a zumpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_OOD_Composed_random_noadj_example49_example": [
+        {
+            "ref": "Lempuses are vumpuses.",
+            "gt_fol": "∀x (Lempus(x) → Vumpus(x))"
+        },
+        {
+            "ref": "Brimpuses are grimpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lempuses are shumpuses, gorpuses, and tumpuses.",
+            "gt_fol": "∀x (Lempus(x) → (Shumpus(x) ∧ Gorpus(x) ∧ Tumpus(x)))"
+        },
+        {
+            "ref": "Every gorpus is an impus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Rompuses are dumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Shumpuses are wumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Shumpuses are jompuses and brimpuses and rompuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a jompus or a zumpus or an impus is a vumpus.",
+            "gt_fol": "∀x ((Jompus(x) ∨ Zumpus(x) ∨ Impus(x)) → Vumpus(x))"
+        },
+        {
+            "ref": "Tumpuses are vumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wren is an impus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wren is a lempus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_OOD_Composed_random_noadj_example70_example": [
+        {
+            "ref": "Everything that is a lempus and a rompus and a jompus is a tumpus.",
+            "gt_fol": "∀x ((Lempus(x) ∧ Rompus(x) ∧ Jompus(x)) → Tumpus(x))"
+        },
+        {
+            "ref": "Polly is a jompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every dumpus is a yumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every brimpus is a zumpus.",
+            "gt_fol": "∀x (Brimpus(x) → Zumpus(x))"
+        },
+        {
+            "ref": "Polly is a lempus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each grimpus is a rompus.",
+            "gt_fol": "∀x (Grimpus(x) → Rompus(x))"
+        },
+        {
+            "ref": "Numpuses are vumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Shumpuses are wumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Numpuses are impuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Polly is a rompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Grimpuses are yumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a rompus, a zumpus, and a lorpus is an impus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a rompus, a zumpus, and a lorpus is a numpus and a shumpus and a dumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every grimpus is a lorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Polly is a grimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Polly is a tumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Polly is a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Polly is a grimpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_OOD_Composed_random_noadj_example17_example": [
+        {
+            "ref": "Everything that is a wumpus or a grimpus or a dumpus is a numpus.",
+            "gt_fol": "∀x ((Wumpus(x) ∨ Grimpus(x) ∨ Dumpus(x)) → Numpus(x))"
+        },
+        {
+            "ref": "Everything that is a yumpus or a lorpus or a rompus is a tumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every jompus is a rompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a sterpus, a lempus, or a lorpus is a shumpus.",
+            "gt_fol": "∀x ((Sterpus(x) ∨ Lempus(x) ∨ Lorpus(x)) → Shumpus(x))"
+        },
+        {
+            "ref": "Every gorpus is a shumpus.",
+            "gt_fol": "∀x (Gorpus(x) → Shumpus(x))"
+        },
+        {
+            "ref": "Everything that is a wumpus or a grimpus or a dumpus is a gorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a sterpus, a lempus, or a lorpus is a wumpus and a gorpus and a jompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a wumpus, a shumpus, or an impus is a yumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Max is a tumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Max is a lorpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_ProofsOnly_random_noadj_example77_example7": [
+        {
+            "ref": "Each impus is a wumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Shumpuses are yumpuses.",
+            "gt_fol": "∀x (Shumpus(x) → Yumpus(x))"
+        },
+        {
+            "ref": "Vumpuses are grimpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every brimpus is earthy.",
+            "gt_fol": "∀x (Brimpus(x) → Earthy(x))"
+        },
+        {
+            "ref": "Jompuses are brown.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Jompuses are lorpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each shumpus is windy.",
+            "gt_fol": "∀x (Shumpus(x) → Windy(x))"
+        },
+        {
+            "ref": "Brimpuses are rompuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Rompuses are shy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every yumpus is moderate.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every grimpus is melodic.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Brimpuses are vumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Vumpuses are lempuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every vumpus is small.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each shumpus is an impus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Impuses are not cold.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each impus is a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each wumpus is not aggressive.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sally is a shumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sally is a jompus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_ProofsOnly_random_noadj_example44_example4": [
+        {
+            "ref": "Each sterpus is not dull.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Dumpuses are not red.",
+            "gt_fol": "∀x (Dumpus(x) → ¬Red(x))"
+        },
+        {
+            "ref": "Lorpuses are happy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Tumpuses are floral.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lempuses are not kind.",
+            "gt_fol": "∀x (Lempus(x) → ¬Kind(x))"
+        },
+        {
+            "ref": "Each shumpus is a rompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every rompus is not metallic.",
+            "gt_fol": "∀x (Rompus(x) → ¬Metallic(x))"
+        },
+        {
+            "ref": "Each shumpus is a dumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lempuses are yumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every impus is spicy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Dumpuses are lorpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Gorpuses are slow.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every sterpus is a jompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every tumpus is a gorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Dumpuses are sterpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each shumpus is not sunny.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every sterpus is an impus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Tumpuses are shumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Polly is a lempus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Polly is a tumpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_ProofsOnly_random_noadj_example55_example3": [
+        {
+            "ref": "Rompuses are not fast.",
+            "gt_fol": "∀x (Rompus(x) → ¬Fast(x))"
+        },
+        {
+            "ref": "Shumpuses are orange.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each yumpus is aggressive.",
+            "gt_fol": "∀x (Yumpus(x) → Aggressive(x))"
+        },
+        {
+            "ref": "Lorpuses are dull.",
+            "gt_fol": "∀x (Lorpus(x) → Dull(x))"
+        },
+        {
+            "ref": "Zumpuses are wumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Brimpuses are dumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every gorpus is metallic.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every gorpus is a yumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each impus is not happy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Impuses are vumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Zumpuses are not bitter.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lempuses are earthy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each yumpus is a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Brimpuses are not opaque.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each dumpus is not sunny.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every lorpus is a shumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Grimpuses are not hot.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each lorpus is a gorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Yumpuses are grimpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every zumpus is a rompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each gorpus is a lempus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Brimpuses are zumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Polly is a lorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Polly is an impus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_ProofsOnly_random_noadj_example70_example": [
+        {
+            "ref": "Every vumpus is not floral.",
+            "gt_fol": "∀x (Vumpus(x) → ¬Floral(x))"
+        },
+        {
+            "ref": "Each lempus is a dumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every vumpus is a lorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every lempus is a jompus.",
+            "gt_fol": "∀x (Lempus(x) → Jompus(x))"
+        },
+        {
+            "ref": "Numpuses are wumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each impus is overcast.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Impuses are sterpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each sterpus is discordant.",
+            "gt_fol": "∀x (Sterpus(x) → Discordant(x))"
+        },
+        {
+            "ref": "Lempuses are not cold.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every numpus is slow.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each yumpus is a shumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Vumpuses are impuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Dumpuses are spicy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each yumpus is large.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each yumpus is a lempus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every shumpus is blue.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each impus is a yumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lorpuses are shy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Polly is a vumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Polly is a numpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_ProofsOnly_random_noadj_example96_example4": [
+        {
+            "ref": "Every wumpus is a jompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every tumpus is a wumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every lempus is not loud.",
+            "gt_fol": "∀x (Lempus(x) → ¬Loud(x))"
+        },
+        {
+            "ref": "Each rompus is not bright.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each rompus is a gorpus.",
+            "gt_fol": "∀x (Rompus(x) → Gorpus(x))"
+        },
+        {
+            "ref": "Tumpuses are not bitter.",
+            "gt_fol": "∀x (Tumpus(x) → ¬Bitter(x))"
+        },
+        {
+            "ref": "Jompuses are small.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every vumpus is a lempus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Rompuses are tumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sterpuses are opaque.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Gorpuses are not happy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Vumpuses are yumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each numpus is not temperate.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each tumpus is a sterpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each wumpus is kind.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Numpuses are grimpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every vumpus is fast.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wumpuses are vumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Fae is a numpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Fae is a rompus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_ProofsOnly_random_noadj_example29_example0": [
+        {
+            "ref": "Every dumpus is a grimpus.",
+            "gt_fol": "∀x (Dumpus(x) → Grimpus(x))"
+        },
+        {
+            "ref": "Shumpuses are dumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lorpuses are zumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Shumpuses are lempuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each grimpus is a jompus.",
+            "gt_fol": "∀x (Grimpus(x) → Jompus(x))"
+        },
+        {
+            "ref": "Every grimpus is a wumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lorpuses are shumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every lempus is not metallic.",
+            "gt_fol": "∀x (Lempus(x) → ¬Metallic(x))"
+        },
+        {
+            "ref": "Every shumpus is mean.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Dumpuses are sterpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Grimpuses are not red.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wumpuses are bright.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every sterpus is opaque.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every dumpus is large.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every vumpus is windy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lorpuses are nervous.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Zumpuses are not spicy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Vumpuses are impuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Max is a lorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Max is a vumpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_ProofsOnly_random_noadj_example16_example1": [
+        {
+            "ref": "Every jompus is a tumpus.",
+            "gt_fol": "∀x (Jompus(x) → Tumpus(x))"
+        },
+        {
+            "ref": "Each impus is a zumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Gorpuses are lorpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every impus is a numpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every impus is sunny.",
+            "gt_fol": "∀x (Impus(x) → Sunny(x))"
+        },
+        {
+            "ref": "Every lorpus is a dumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Yumpuses are fruity.",
+            "gt_fol": "∀x (Yumpus(x) → Fruity(x))"
+        },
+        {
+            "ref": "Each brimpus is happy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every gorpus is red.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lorpuses are rompuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each brimpus is a gorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Brimpuses are lempuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lorpuses are aggressive.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every zumpus is large.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every wumpus is loud.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Numpuses are yumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every numpus is a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every numpus is bright.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each gorpus is a wumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every jompus is metallic.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Rompuses are slow.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every lempus is bitter.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Stella is an impus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Stella is a jompus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_ProofsOnly_random_noadj_example59_example3": [
+        {
+            "ref": "Every impus is a lempus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each jompus is a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lorpuses are opaque.",
+            "gt_fol": "∀x (Lorpus(x) → Opaque(x))"
+        },
+        {
+            "ref": "Each sterpus is a jompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every brimpus is not sour.",
+            "gt_fol": "∀x (Brimpus(x) → ¬Sour(x))"
+        },
+        {
+            "ref": "Jompuses are grimpuses.",
+            "gt_fol": "∀x (Jompus(x) → Grimpus(x))"
+        },
+        {
+            "ref": "Each rompus is not earthy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Grimpuses are cold.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each dumpus is large.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sterpuses are gorpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lorpuses are shumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every sterpus is moderate.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Grimpuses are dumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every tumpus is amenable.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Grimpuses are vumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every vumpus is a rompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each jompus is not wooden.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lorpuses are tumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Vumpuses are lorpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each vumpus is bright.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Gorpuses are red.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Impuses are not loud.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wren is an impus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wren is a sterpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_ProofsOnly_random_noadj_example10_example0": [
+        {
+            "ref": "Each dumpus is not brown.",
+            "gt_fol": "∀x (Dumpus(x) → ¬Brown(x))"
+        },
+        {
+            "ref": "Lempuses are fruity.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Gorpuses are transparent.",
+            "gt_fol": "∀x (Gorpus(x) → Transparent(x))"
+        },
+        {
+            "ref": "Lempuses are grimpuses.",
+            "gt_fol": "∀x (Lempus(x) → Grimpus(x))"
+        },
+        {
+            "ref": "Shumpuses are sterpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every shumpus is a zumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every gorpus is a yumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every zumpus is a wumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Gorpuses are shumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Jompuses are temperate.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Tumpuses are spicy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every grimpus is happy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wumpuses are angry.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Zumpuses are not rainy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each grimpus is a numpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each shumpus is large.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Jompuses are vumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Yumpuses are muffled.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every lempus is a tumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every sterpus is moderate.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Grimpuses are dumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every zumpus is a lempus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Stella is a shumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Stella is a jompus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_ProofsOnly_random_noadj_example55_example": [
+        {
+            "ref": "Grimpuses are sterpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every rompus is a wumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Dumpuses are rompuses.",
+            "gt_fol": "∀x (Dumpus(x) → Rompus(x))"
+        },
+        {
+            "ref": "Sterpuses are dumpuses.",
+            "gt_fol": "∀x (Sterpus(x) → Dumpus(x))"
+        },
+        {
+            "ref": "Grimpuses are shumpuses.",
+            "gt_fol": "∀x (Grimpus(x) → Shumpus(x))"
+        },
+        {
+            "ref": "Each gorpus is spicy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every zumpus is a numpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sterpuses are jompuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every jompus is dull.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Rompuses are luminous.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sterpuses are temperate.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every dumpus is a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Grimpuses are sunny.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each yumpus is fruity.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each zumpus is not transparent.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each vumpus is melodic.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every gorpus is a grimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every shumpus is not mean.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every dumpus is not happy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Rompuses are yumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every brimpus is not orange.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each gorpus is a vumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Stella is a gorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Stella is a zumpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_ProofsOnly_random_noadj_example90_example6": [
+        {
+            "ref": "Impuses are small.",
+            "gt_fol": "∀x (Impus(x) → Small(x))"
+        },
+        {
+            "ref": "Wumpuses are earthy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lorpuses are zumpuses.",
+            "gt_fol": "∀x (Lorpus(x) → Zumpus(x))"
+        },
+        {
+            "ref": "Shumpuses are wumpuses.",
+            "gt_fol": "∀x (Shumpus(x) → Wumpus(x))"
+        },
+        {
+            "ref": "Numpuses are red.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Shumpuses are impuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lorpuses are sour.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every brimpus is not luminous.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wumpuses are numpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every tumpus is a lempus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each lorpus is a gorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lempuses are cold.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Brimpuses are yumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Gorpuses are sunny.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Shumpuses are not mean.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Tumpuses are not slow.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wumpuses are tumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Tumpuses are lorpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Max is a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Max is a shumpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_ProofsOnly_random_noadj_example11_example7": [
+        {
+            "ref": "Wumpuses are zumpuses.",
+            "gt_fol": "∀x (Wumpus(x) → Zumpus(x))"
+        },
+        {
+            "ref": "Each sterpus is floral.",
+            "gt_fol": "∀x (Sterpus(x) → Floral(x))"
+        },
+        {
+            "ref": "Each gorpus is an impus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Numpuses are shumpuses.",
+            "gt_fol": "∀x (Numpus(x) → Shumpus(x))"
+        },
+        {
+            "ref": "Shumpuses are not rainy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each impus is a dumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every lorpus is a gorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each numpus is dull.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Zumpuses are cold.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wumpuses are lorpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Brimpuses are mean.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each lorpus is a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Impuses are not opaque.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every gorpus is orange.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every rompus is sweet.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every impus is a vumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every wumpus is discordant.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sterpuses are lempuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each gorpus is a rompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every lorpus is slow.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Dumpuses are happy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every numpus is a wumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Max is a sterpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Max is a wumpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_ProofsOnly_random_noadj_example32_example6": [
+        {
+            "ref": "Dumpuses are not wooden.",
+            "gt_fol": "∀x (Dumpus(x) → ¬Wooden(x))"
+        },
+        {
+            "ref": "Every jompus is angry.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lempuses are not cold.",
+            "gt_fol": "∀x (Lempus(x) → ¬Cold(x))"
+        },
+        {
+            "ref": "Sterpuses are fruity.",
+            "gt_fol": "∀x (Sterpus(x) → Fruity(x))"
+        },
+        {
+            "ref": "Wumpuses are not large.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Brimpuses are bright.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each shumpus is a yumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sterpuses are vumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Dumpuses are lempuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lempuses are grimpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each grimpus is not discordant.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Grimpuses are wumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each shumpus is a zumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each lempus is a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every shumpus is not sour.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Yumpuses are rainy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Dumpuses are jompuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each grimpus is a shumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Max is a sterpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Max is a dumpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_ProofsOnly_random_noadj_example28_example2": [
+        {
+            "ref": "Every vumpus is opaque.",
+            "gt_fol": "∀x (Vumpus(x) → Opaque(x))"
+        },
+        {
+            "ref": "Every yumpus is a lempus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every gorpus is a shumpus.",
+            "gt_fol": "∀x (Gorpus(x) → Shumpus(x))"
+        },
+        {
+            "ref": "Every yumpus is feisty.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Gorpuses are temperate.",
+            "gt_fol": "∀x (Gorpus(x) → Temperate(x))"
+        },
+        {
+            "ref": "Every vumpus is an impus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each impus is large.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Jompuses are kind.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every lorpus is a gorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each brimpus is a grimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every grimpus is red.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every vumpus is a zumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every brimpus is a numpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lorpuses are dumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Grimpuses are vumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every numpus is floral.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each shumpus is slow.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lorpuses are snowy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each grimpus is a jompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Gorpuses are brimpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each brimpus is bright.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Dumpuses are not loud.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Max is a lorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Max is a yumpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_ProofsOnly_random_noadj_example26_example5": [
+        {
+            "ref": "Dumpuses are impuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every lorpus is aggressive.",
+            "gt_fol": "∀x (Lorpus(x) → Aggressive(x))"
+        },
+        {
+            "ref": "Every vumpus is a shumpus.",
+            "gt_fol": "∀x (Vumpus(x) → Shumpus(x))"
+        },
+        {
+            "ref": "Lorpuses are zumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wumpuses are not hot.",
+            "gt_fol": "∀x (Wumpus(x) → ¬Hot(x))"
+        },
+        {
+            "ref": "Lempuses are not opaque.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every gorpus is not sunny.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every numpus is liquid.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Impuses are grimpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Dumpuses are wumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Vumpuses are large.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every lorpus is a lempus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every zumpus is a gorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every zumpus is a dumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Zumpuses are not bright.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each impus is fruity.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each dumpus is sour.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each impus is a numpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Rex is a lorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Rex is a vumpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_ProofsOnly_random_noadj_example49_example6": [
+        {
+            "ref": "Each gorpus is a vumpus.",
+            "gt_fol": "∀x (Gorpus(x) → Vumpus(x))"
+        },
+        {
+            "ref": "Rompuses are grimpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every numpus is opaque.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Impuses are slow.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Yumpuses are muffled.",
+            "gt_fol": "∀x (Yumpus(x) → Muffled(x))"
+        },
+        {
+            "ref": "Every lorpus is luminous.",
+            "gt_fol": "∀x (Lorpus(x) → Luminous(x))"
+        },
+        {
+            "ref": "Impuses are lorpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each wumpus is not large.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Grimpuses are not bright.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each zumpus is a yumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Zumpuses are wumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each wumpus is a lempus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each wumpus is a jompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each shumpus is a rompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Rompuses are earthy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every jompus is happy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Shumpuses are numpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each zumpus is brown.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Gorpuses are sunny.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every impus is a shumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Rompuses are zumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every shumpus is hot.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Alex is a gorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Alex is a shumpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_ProofsOnly_random_noadj_example34_example6": [
+        {
+            "ref": "Every sterpus is brown.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Brimpuses are tumpuses.",
+            "gt_fol": "∀x (Brimpus(x) → Tumpus(x))"
+        },
+        {
+            "ref": "Zumpuses are liquid.",
+            "gt_fol": "∀x (Zumpus(x) → Liquid(x))"
+        },
+        {
+            "ref": "Brimpuses are shumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Numpuses are spicy.",
+            "gt_fol": "∀x (Numpus(x) → Spicy(x))"
+        },
+        {
+            "ref": "Each yumpus is a zumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Grimpuses are bright.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each rompus is aggressive.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Tumpuses are yumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each tumpus is not temperate.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Brimpuses are opaque.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Shumpuses are not muffled.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sterpuses are grimpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every jompus is feisty.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sterpuses are brimpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Rompuses are gorpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Yumpuses are rainy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Vumpuses are not fast.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Vumpuses are wumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Tumpuses are jompuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Yumpuses are vumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Vumpuses are numpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Polly is a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Polly is a rompus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_ProofsOnly_random_noadj_example71_example5": [
+        {
+            "ref": "Every lempus is luminous.",
+            "gt_fol": "∀x (Lempus(x) → Luminous(x))"
+        },
+        {
+            "ref": "Each yumpus is a numpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Numpuses are amenable.",
+            "gt_fol": "∀x (Numpus(x) → Amenable(x))"
+        },
+        {
+            "ref": "Tumpuses are melodic.",
+            "gt_fol": "∀x (Tumpus(x) → Melodic(x))"
+        },
+        {
+            "ref": "Rompuses are large.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Jompuses are shy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every yumpus is opaque.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each tumpus is a yumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every yumpus is a jompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each lempus is a rompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each tumpus is a lorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every numpus is a zumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Dumpuses are bright.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every numpus is a sterpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every lempus is a tumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sterpuses are hot.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Dumpuses are brimpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lorpuses are orange.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sally is a lempus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sally is a dumpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_ProofsOnly_random_noadj_example38_example": [
+        {
+            "ref": "Each shumpus is an impus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Zumpuses are jompuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each jompus is a tumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lempuses are not sweet.",
+            "gt_fol": "∀x (Lempus(x) → ¬Sweet(x))"
+        },
+        {
+            "ref": "Shumpuses are wumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every impus is a zumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Zumpuses are dumpuses.",
+            "gt_fol": "∀x (Zumpus(x) → Dumpus(x))"
+        },
+        {
+            "ref": "Each wumpus is not loud.",
+            "gt_fol": "∀x (Wumpus(x) → ¬Loud(x))"
+        },
+        {
+            "ref": "Each lorpus is kind.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each shumpus is not dull.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every tumpus is not nervous.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each tumpus is a grimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each zumpus is hot.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every jompus is a lorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Tumpuses are lempuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Brimpuses are numpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Impuses are rompuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each jompus is not small.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Impuses are fruity.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Dumpuses are brown.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Rompuses are transparent.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Brimpuses are windy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sally is a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sally is a shumpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_ProofsOnly_random_noadj_example67_example2": [
+        {
+            "ref": "Wumpuses are gorpuses.",
+            "gt_fol": "∀x (Wumpus(x) → Gorpus(x))"
+        },
+        {
+            "ref": "Zumpuses are not large.",
+            "gt_fol": "∀x (Zumpus(x) → ¬Large(x))"
+        },
+        {
+            "ref": "Vumpuses are lempuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each lempus is a sterpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Dumpuses are not slow.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every lempus is a wumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every zumpus is a rompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lempuses are dull.",
+            "gt_fol": "∀x (Lempus(x) → Dull(x))"
+        },
+        {
+            "ref": "Shumpuses are hot.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each sterpus is blue.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each wumpus is a yumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Vumpuses are not wooden.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each yumpus is not opaque.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every vumpus is a shumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every yumpus is a dumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Yumpuses are brimpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each gorpus is not aggressive.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each wumpus is sour.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Stella is a vumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Stella is a zumpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_ProofsOnly_random_noadj_example4_example0": [
+        {
+            "ref": "Yumpuses are gorpuses.",
+            "gt_fol": "∀x (Yumpus(x) → Gorpus(x))"
+        },
+        {
+            "ref": "Each gorpus is snowy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Gorpuses are lorpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each gorpus is an impus.",
+            "gt_fol": "∀x (Gorpus(x) → Impus(x))"
+        },
+        {
+            "ref": "Every vumpus is slow.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Impuses are large.",
+            "gt_fol": "∀x (Impus(x) → Large(x))"
+        },
+        {
+            "ref": "Grimpuses are bitter.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lorpuses are lempuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every yumpus is a dumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every vumpus is a yumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Vumpuses are grimpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each jompus is dull.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Yumpuses are not feisty.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lorpuses are luminous.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lempuses are discordant.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Dumpuses are not angry.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every jompus is a rompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each lorpus is a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Max is a jompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Max is a vumpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_ProofsOnly_random_noadj_example54_example0": [
+        {
+            "ref": "Shumpuses are opaque.",
+            "gt_fol": "∀x (Shumpus(x) → Opaque(x))"
+        },
+        {
+            "ref": "Each rompus is orange.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every shumpus is a numpus.",
+            "gt_fol": "∀x (Shumpus(x) → Numpus(x))"
+        },
+        {
+            "ref": "Every dumpus is a rompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lempuses are brimpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Brimpuses are not happy.",
+            "gt_fol": "∀x (Brimpus(x) → ¬Happy(x))"
+        },
+        {
+            "ref": "Every numpus is sour.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Tumpuses are dumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Zumpuses are liquid.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Tumpuses are not loud.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each lempus is a tumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Shumpuses are lempuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lempuses are hot.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Zumpuses are yumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Dumpuses are amenable.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each dumpus is a zumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Jompuses are wumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every tumpus is an impus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each impus is not fast.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every gorpus is rainy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Jompuses are not bright.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Zumpuses are gorpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Polly is a lempus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Polly is a jompus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_ProofsOnly_random_noadj_example20_example5": [
+        {
+            "ref": "Every grimpus is a rompus.",
+            "gt_fol": "∀x (Grimpus(x) → Rompus(x))"
+        },
+        {
+            "ref": "Yumpuses are dull.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each numpus is opaque.",
+            "gt_fol": "∀x (Numpus(x) → Opaque(x))"
+        },
+        {
+            "ref": "Shumpuses are gorpuses.",
+            "gt_fol": "∀x (Shumpus(x) → Gorpus(x))"
+        },
+        {
+            "ref": "Rompuses are kind.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Yumpuses are zumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Impuses are sterpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Yumpuses are lempuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wumpuses are yumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Tumpuses are not slow.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wumpuses are lorpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each gorpus is loud.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Tumpuses are numpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Tumpuses are grimpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each zumpus is windy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every wumpus is orange.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each grimpus is large.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each impus is not hot.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Grimpuses are wumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every shumpus is a tumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every lorpus is not floral.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every shumpus is feisty.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Alex is a tumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Alex is an impus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_ProofsOnly_random_noadj_example55_example0": [
+        {
+            "ref": "Each vumpus is snowy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each rompus is a lorpus.",
+            "gt_fol": "∀x (Rompus(x) → Lorpus(x))"
+        },
+        {
+            "ref": "Every wumpus is not amenable.",
+            "gt_fol": "∀x (Wumpus(x) → ¬Amenable(x))"
+        },
+        {
+            "ref": "Each numpus is an impus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Gorpuses are hot.",
+            "gt_fol": "∀x (Gorpus(x) → Hot(x))"
+        },
+        {
+            "ref": "Numpuses are liquid.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each shumpus is bright.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Numpuses are vumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each impus is not loud.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Zumpuses are blue.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lorpuses are nervous.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Rompuses are fast.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wumpuses are jompuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Rompuses are zumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Impuses are rompuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Zumpuses are gorpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every impus is a shumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Zumpuses are brimpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sally is a wumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sally is a numpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_ProofsOnly_random_noadj_example79_example0": [
+        {
+            "ref": "Vumpuses are zumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each yumpus is rainy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Vumpuses are lempuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Yumpuses are sterpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Tumpuses are transparent.",
+            "gt_fol": "∀x (Tumpus(x) → Transparent(x))"
+        },
+        {
+            "ref": "Shumpuses are tumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Rompuses are vumpuses.",
+            "gt_fol": "∀x (Rompus(x) → Vumpus(x))"
+        },
+        {
+            "ref": "Every gorpus is a lorpus.",
+            "gt_fol": "∀x (Gorpus(x) → Lorpus(x))"
+        },
+        {
+            "ref": "Jompuses are not spicy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every gorpus is fruity.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Yumpuses are rompuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each sterpus is nervous.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Shumpuses are gorpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each gorpus is a yumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Rompuses are small.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Vumpuses are wooden.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Shumpuses are muffled.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Grimpuses are kind.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every rompus is a jompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lorpuses are moderate.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Zumpuses are dull.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every grimpus is a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sally is a gorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sally is a grimpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_ProofsOnly_random_noadj_example13_example3": [
+        {
+            "ref": "Each wumpus is an impus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Dumpuses are grimpuses.",
+            "gt_fol": "∀x (Dumpus(x) → Grimpus(x))"
+        },
+        {
+            "ref": "Each yumpus is a sterpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each shumpus is nervous.",
+            "gt_fol": "∀x (Shumpus(x) → Nervous(x))"
+        },
+        {
+            "ref": "Dumpuses are rompuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every brimpus is a lorpus.",
+            "gt_fol": "∀x (Brimpus(x) → Lorpus(x))"
+        },
+        {
+            "ref": "Every grimpus is opaque.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every tumpus is moderate.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every dumpus is earthy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Yumpuses are wumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Brimpuses are red.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wumpuses are shumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Tumpuses are numpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every lempus is small.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Rompuses are yumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every sterpus is rainy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lorpuses are not discordant.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every wumpus is hot.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each rompus is a lempus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Yumpuses are dull.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Rompuses are not spicy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every brimpus is a dumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sally is a dumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sally is a tumpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_ProofsOnly_random_noadj_example48_example3": [
+        {
+            "ref": "Zumpuses are rompuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each sterpus is temperate.",
+            "gt_fol": "∀x (Sterpus(x) → Temperate(x))"
+        },
+        {
+            "ref": "Brimpuses are floral.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every numpus is discordant.",
+            "gt_fol": "∀x (Numpus(x) → Discordant(x))"
+        },
+        {
+            "ref": "Every zumpus is luminous.",
+            "gt_fol": "∀x (Zumpus(x) → Luminous(x))"
+        },
+        {
+            "ref": "Every wumpus is large.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Numpuses are vumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every wumpus is a dumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sterpuses are numpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Impuses are transparent.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each wumpus is a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each brimpus is a sterpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each brimpus is a jompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Jompuses are not dull.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each vumpus is nervous.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Numpuses are grimpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sterpuses are impuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each dumpus is not brown.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Fae is a wumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Fae is a zumpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_ProofsOnly_random_noadj_example56_example2": [
+        {
+            "ref": "Lempuses are sterpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each jompus is sunny.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every rompus is a yumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wumpuses are jompuses.",
+            "gt_fol": "∀x (Wumpus(x) → Jompus(x))"
+        },
+        {
+            "ref": "Dumpuses are not orange.",
+            "gt_fol": "∀x (Dumpus(x) → ¬Orange(x))"
+        },
+        {
+            "ref": "Lempuses are numpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wumpuses are opaque.",
+            "gt_fol": "∀x (Wumpus(x) → Opaque(x))"
+        },
+        {
+            "ref": "Each sterpus is temperate.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Rompuses are shumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lorpuses are brimpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each yumpus is a lempus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each wumpus is a rompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each lempus is angry.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Shumpuses are not spicy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Yumpuses are metallic.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Rompuses are earthy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each yumpus is a dumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lorpuses are muffled.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Fae is a lorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Fae is a wumpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_ProofsOnly_random_noadj_example55_example5": [
+        {
+            "ref": "Rompuses are grimpuses.",
+            "gt_fol": "∀x (Rompus(x) → Grimpus(x))"
+        },
+        {
+            "ref": "Jompuses are numpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each zumpus is small.",
+            "gt_fol": "∀x (Zumpus(x) → Small(x))"
+        },
+        {
+            "ref": "Each brimpus is slow.",
+            "gt_fol": "∀x (Brimpus(x) → Slow(x))"
+        },
+        {
+            "ref": "Each brimpus is a shumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Shumpuses are lorpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lorpuses are zumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Jompuses are not hot.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every lorpus is a rompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Dumpuses are overcast.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each lempus is liquid.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every shumpus is an impus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every impus is not dull.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each lorpus is not amenable.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every rompus is not brown.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every shumpus is not floral.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every brimpus is a lempus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Rompuses are dumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Rex is a jompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Rex is a brimpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_ProofsOnly_random_noadj_example73_example1": [
+        {
+            "ref": "Each rompus is a sterpus.",
+            "gt_fol": "∀x (Rompus(x) → Sterpus(x))"
+        },
+        {
+            "ref": "Every impus is spicy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every sterpus is a numpus.",
+            "gt_fol": "∀x (Sterpus(x) → Numpus(x))"
+        },
+        {
+            "ref": "Each grimpus is an impus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Rompuses are zumpuses.",
+            "gt_fol": "∀x (Rompus(x) → Zumpus(x))"
+        },
+        {
+            "ref": "Every numpus is snowy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every zumpus is moderate.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sterpuses are vumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Brimpuses are amenable.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each sterpus is not opaque.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Grimpuses are red.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each grimpus is a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each shumpus is not muffled.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Brimpuses are rompuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Shumpuses are lorpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each brimpus is a wumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every rompus is fruity.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wumpuses are bright.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Alex is a shumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Alex is a grimpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_ProofsOnly_random_noadj_example71_example3": [
+        {
+            "ref": "Every numpus is a jompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Jompuses are yumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Tumpuses are earthy.",
+            "gt_fol": "∀x (Tumpus(x) → Earthy(x))"
+        },
+        {
+            "ref": "Each jompus is rainy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Numpuses are not nervous.",
+            "gt_fol": "∀x (Numpus(x) → ¬Nervous(x))"
+        },
+        {
+            "ref": "Shumpuses are sour.",
+            "gt_fol": "∀x (Shumpus(x) → Sour(x))"
+        },
+        {
+            "ref": "Sterpuses are aggressive.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sterpuses are shumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Brimpuses are transparent.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every sterpus is a lempus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each jompus is a sterpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every lempus is bright.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every lorpus is a gorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lempuses are dumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each dumpus is not slow.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every lorpus is not muffled.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lorpuses are brimpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every lempus is a lorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each yumpus is hot.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Numpuses are tumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Grimpuses are wumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every grimpus is luminous.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sally is a numpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sally is a grimpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_ProofsOnly_random_noadj_example32_example5": [
+        {
+            "ref": "Yumpuses are orange.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every jompus is amenable.",
+            "gt_fol": "∀x (Jompus(x) → Amenable(x))"
+        },
+        {
+            "ref": "Jompuses are lorpuses.",
+            "gt_fol": "∀x (Jompus(x) → Lorpus(x))"
+        },
+        {
+            "ref": "Brimpuses are tumpuses.",
+            "gt_fol": "∀x (Brimpus(x) → Tumpus(x))"
+        },
+        {
+            "ref": "Each numpus is earthy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Numpuses are shumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each brimpus is luminous.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each shumpus is a rompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Impuses are wumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Jompuses are numpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Shumpuses are brimpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Brimpuses are gorpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Rompuses are not hot.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Numpuses are yumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each lorpus is not sunny.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each impus is opaque.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Shumpuses are not moderate.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Tumpuses are small.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Fae is an impus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Fae is a jompus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_ProofsOnly_random_noadj_example82_example7": [
+        {
+            "ref": "Each yumpus is a rompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sterpuses are not bright.",
+            "gt_fol": "∀x (Sterpus(x) → ¬Bright(x))"
+        },
+        {
+            "ref": "Every zumpus is a sterpus.",
+            "gt_fol": "∀x (Zumpus(x) → Sterpus(x))"
+        },
+        {
+            "ref": "Gorpuses are yumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every yumpus is not orange.",
+            "gt_fol": "∀x (Yumpus(x) → ¬Orange(x))"
+        },
+        {
+            "ref": "Vumpuses are sweet.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each jompus is not windy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every sterpus is a lorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Vumpuses are numpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each impus is a zumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every impus is fruity.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Zumpuses are nervous.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each gorpus is a jompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Yumpuses are grimpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every lorpus is hot.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Impuses are shumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every zumpus is a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sterpuses are gorpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each brimpus is liquid.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Rompuses are large.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Gorpuses are not slow.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Shumpuses are opaque.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Stella is an impus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Stella is a vumpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_ProofsOnly_random_noadj_example87_example7": [
+        {
+            "ref": "Every wumpus is not shy.",
+            "gt_fol": "∀x (Wumpus(x) → ¬Shy(x))"
+        },
+        {
+            "ref": "Every lempus is a shumpus.",
+            "gt_fol": "∀x (Lempus(x) → Shumpus(x))"
+        },
+        {
+            "ref": "Vumpuses are tumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Impuses are wumpuses.",
+            "gt_fol": "∀x (Impus(x) → Wumpus(x))"
+        },
+        {
+            "ref": "Impuses are sterpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every lempus is discordant.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sterpuses are not brown.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Vumpuses are bright.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Shumpuses are not moderate.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lorpuses are zumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each gorpus is not earthy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each vumpus is a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Tumpuses are sunny.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wumpuses are gorpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every lorpus is amenable.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Impuses are not hot.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lempuses are vumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every wumpus is a lempus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sally is a lorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sally is an impus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_ProofsOnly_random_noadj_example9_example4": [
+        {
+            "ref": "Grimpuses are impuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each yumpus is a gorpus.",
+            "gt_fol": "∀x (Yumpus(x) → Gorpus(x))"
+        },
+        {
+            "ref": "Grimpuses are large.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lorpuses are not sweet.",
+            "gt_fol": "∀x (Lorpus(x) → ¬Sweet(x))"
+        },
+        {
+            "ref": "Each impus is a jompus.",
+            "gt_fol": "∀x (Impus(x) → Jompus(x))"
+        },
+        {
+            "ref": "Every tumpus is metallic.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every vumpus is transparent.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Impuses are shumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Shumpuses are hot.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lempuses are discordant.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each dumpus is a lempus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each tumpus is a dumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each sterpus is not dull.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each tumpus is a sterpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every brimpus is a vumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Impuses are slow.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Brimpuses are rainy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every grimpus is a lorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every yumpus is not earthy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Brimpuses are tumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Dumpuses are blue.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Dumpuses are grimpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Polly is a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Polly is a yumpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_ProofsOnly_random_noadj_example68_example4": [
+        {
+            "ref": "Brimpuses are jompuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sterpuses are wumpuses.",
+            "gt_fol": "∀x (Sterpus(x) → Wumpus(x))"
+        },
+        {
+            "ref": "Every vumpus is a lempus.",
+            "gt_fol": "∀x (Vumpus(x) → Lempus(x))"
+        },
+        {
+            "ref": "Each sterpus is a numpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each dumpus is a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each grimpus is cold.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every wumpus is orange.",
+            "gt_fol": "∀x (Wumpus(x) → Orange(x))"
+        },
+        {
+            "ref": "Every zumpus is floral.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every dumpus is opaque.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every zumpus is a yumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each brimpus is a zumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each sterpus is overcast.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each yumpus is small.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every zumpus is a tumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each dumpus is a grimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each vumpus is bitter.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each tumpus is not loud.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each jompus is not shy.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Tumpuses are rompuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each tumpus is a sterpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Brimpuses are slow.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every rompus is not bright.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wren is a vumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wren is a brimpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_Composed_random_noadj_example98_example4": [
+        {
+            "ref": "Each grimpus is a sterpus and an impus and a zumpus.",
+            "gt_fol": "∀x (Grimpus(x) → (Sterpus(x) ∧ Impus(x) ∧ Zumpus(x)))"
+        },
+        {
+            "ref": "Everything that is an impus or a shumpus or a numpus is a yumpus.",
+            "gt_fol": "∀x ((Impus(x) ∨ Shumpus(x) ∨ Numpus(x)) → Yumpus(x))"
+        },
+        {
+            "ref": "Everything that is a gorpus or an impus or a tumpus is a rompus.",
+            "gt_fol": "∀x ((Gorpus(x) ∨ Impus(x) ∨ Tumpus(x)) → Rompus(x))"
+        },
+        {
+            "ref": "Grimpuses are lempuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a gorpus, an impus, or a tumpus is a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sterpuses are shumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Rompuses are dumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each zumpus is a lempus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Rompuses are jompuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sally is a yumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sally is a grimpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_Composed_random_noadj_example13_example0": [
+        {
+            "ref": "Everything that is a tumpus, a sterpus, or a shumpus is a grimpus.",
+            "gt_fol": "∀x ((Tumpus(x) ∨ Sterpus(x) ∨ Shumpus(x)) → Grimpus(x))"
+        },
+        {
+            "ref": "Each gorpus is an impus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each jompus is a yumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each jompus is a grimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every vumpus is a lorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every wumpus is a grimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each yumpus is a zumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a yumpus, a tumpus, or a dumpus is a wumpus, a jompus, and a gorpus.",
+            "gt_fol": "∀x ((Yumpus(x) ∨ Tumpus(x) ∨ Dumpus(x)) → (Wumpus(x) ∧ Jompus(x) ∧ Gorpus(x)))"
+        },
+        {
+            "ref": "Everything that is a yumpus, a tumpus, or a dumpus is a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wren is a zumpus and a lempus and a lorpus.",
+            "gt_fol": "Zumpus(wren) ∧ Lempus(wren) ∧ Lorpus(wren)"
+        },
+        {
+            "ref": "Wren is a vumpus and a yumpus and a tumpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_Composed_random_noadj_example96_example7": [
+        {
+            "ref": "Everything that is a lempus, a zumpus, or a vumpus is a jompus, an impus, and a grimpus.",
+            "gt_fol": "∀x ((Lempus(x) ∨ Zumpus(x) ∨ Vumpus(x)) → (Jompus(x) ∧ Impus(x) ∧ Grimpus(x)))"
+        },
+        {
+            "ref": "Jompuses are numpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Grimpuses are wumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lorpuses are numpuses.",
+            "gt_fol": "∀x (Lorpus(x) → Numpus(x))"
+        },
+        {
+            "ref": "Everything that is a lempus, a zumpus, or a vumpus is a rompus.",
+            "gt_fol": "∀x ((Lempus(x) ∨ Zumpus(x) ∨ Vumpus(x)) → Rompus(x))"
+        },
+        {
+            "ref": "Grimpuses are rompuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Impuses are gorpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a sterpus or a vumpus or a dumpus is a numpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Impuses are numpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Alex is a tumpus, a wumpus, and a yumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Alex is a lorpus and a grimpus and a vumpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_Composed_random_noadj_example24_example5": [
+        {
+            "ref": "Everything that is a rompus, a sterpus, or a numpus is a zumpus.",
+            "gt_fol": "∀x ((Rompus(x) ∨ Sterpus(x) ∨ Numpus(x)) → Zumpus(x))"
+        },
+        {
+            "ref": "Lorpuses are impuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Brimpuses are grimpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a sterpus or a dumpus or a brimpus is a yumpus, a shumpus, and a tumpus.",
+            "gt_fol": "∀x ((Sterpus(x) ∨ Dumpus(x) ∨ Brimpus(x)) → (Yumpus(x) ∧ Shumpus(x) ∧ Tumpus(x)))"
+        },
+        {
+            "ref": "Each vumpus is a brimpus and a lorpus and a sterpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Tumpuses are grimpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a sterpus, a dumpus, or a brimpus is a zumpus.",
+            "gt_fol": "∀x ((Sterpus(x) ∨ Dumpus(x) ∨ Brimpus(x)) → Zumpus(x))"
+        },
+        {
+            "ref": "Vumpuses are numpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every shumpus is a rompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Polly is a numpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Polly is a vumpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_Composed_random_noadj_example5_example4": [
+        {
+            "ref": "Dumpuses are shumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every tumpus is a gorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Brimpuses are lorpuses.",
+            "gt_fol": "∀x (Brimpus(x) → Lorpus(x))"
+        },
+        {
+            "ref": "Sterpuses are lempuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Max is a yumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a vumpus and a wumpus and a zumpus is a shumpus.",
+            "gt_fol": "∀x ((Vumpus(x) ∧ Wumpus(x) ∧ Zumpus(x)) → Shumpus(x))"
+        },
+        {
+            "ref": "Every jompus is a rompus.",
+            "gt_fol": "∀x (Jompus(x) → Rompus(x))"
+        },
+        {
+            "ref": "Zumpuses are wumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Tumpuses are vumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each impus is a shumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Grimpuses are zumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Max is a vumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Max is a lorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a vumpus, a wumpus, and a zumpus is a jompus and an impus and a lempus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a vumpus, a yumpus, and a lorpus is a shumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Max is a rompus, a yumpus, and a lorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Max is a dumpus and Max is not a lempus and Max is a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Max is a tumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Max is a grimpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_Composed_random_noadj_example16_example7": [
+        {
+            "ref": "Everything that is a wumpus or a yumpus or a vumpus is a shumpus, a dumpus, and a zumpus.",
+            "gt_fol": "∀x ((Wumpus(x) ∨ Yumpus(x) ∨ Vumpus(x)) → (Shumpus(x) ∧ Dumpus(x) ∧ Zumpus(x)))"
+        },
+        {
+            "ref": "Every shumpus is a lorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every zumpus is a numpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every zumpus is a dumpus, a shumpus, and a gorpus.",
+            "gt_fol": "∀x (Zumpus(x) → (Dumpus(x) ∧ Shumpus(x) ∧ Gorpus(x)))"
+        },
+        {
+            "ref": "Everything that is a wumpus or a yumpus or a vumpus is a numpus.",
+            "gt_fol": "∀x ((Wumpus(x) ∨ Yumpus(x) ∨ Vumpus(x)) → Numpus(x))"
+        },
+        {
+            "ref": "Dumpuses are jompuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every shumpus is a sterpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each gorpus is a grimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a wumpus, a rompus, or a jompus is a grimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sam is a rompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sam is a wumpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_Composed_random_noadj_example24_example2": [
+        {
+            "ref": "Grimpuses are lorpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each rompus is a grimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a sterpus, a lempus, or a gorpus is a zumpus.",
+            "gt_fol": "∀x ((Sterpus(x) ∨ Lempus(x) ∨ Gorpus(x)) → Zumpus(x))"
+        },
+        {
+            "ref": "Each impus is a zumpus.",
+            "gt_fol": "∀x (Impus(x) → Zumpus(x))"
+        },
+        {
+            "ref": "Grimpuses are brimpuses.",
+            "gt_fol": "∀x (Grimpus(x) → Brimpus(x))"
+        },
+        {
+            "ref": "Rompuses are brimpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a lempus, a vumpus, or a dumpus is a tumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each yumpus is a numpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a sterpus, a lempus, or a gorpus is a yumpus, an impus, and a rompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sally is a wumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sally is a lempus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_Composed_random_noadj_example83_example0": [
+        {
+            "ref": "Every brimpus is a yumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a gorpus, a lorpus, or a vumpus is a wumpus.",
+            "gt_fol": "∀x ((Gorpus(x) ∨ Lorpus(x) ∨ Vumpus(x)) → Wumpus(x))"
+        },
+        {
+            "ref": "Impuses are grimpuses.",
+            "gt_fol": "∀x (Impus(x) → Grimpus(x))"
+        },
+        {
+            "ref": "Every wumpus is a jompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Impuses are vumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a grimpus or a vumpus or a rompus is a jompus.",
+            "gt_fol": "∀x ((Grimpus(x) ∨ Vumpus(x) ∨ Rompus(x)) → Jompus(x))"
+        },
+        {
+            "ref": "Dumpuses are shumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a gorpus or a lorpus or a vumpus is a grimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each dumpus is an impus, a wumpus, and a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sally is a shumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sally is a dumpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_Composed_random_noadj_example42_example1": [
+        {
+            "ref": "Everything that is a rompus, a lempus, or a jompus is a lorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Vumpuses are brimpuses, tumpuses, and jompuses.",
+            "gt_fol": "∀x (Vumpus(x) → (Brimpus(x) ∧ Tumpus(x) ∧ Jompus(x)))"
+        },
+        {
+            "ref": "Every lorpus is a vumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a rompus or a lempus or a jompus is a grimpus.",
+            "gt_fol": "∀x ((Rompus(x) ∨ Lempus(x) ∨ Jompus(x)) → Grimpus(x))"
+        },
+        {
+            "ref": "Each jompus is a shumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Tumpuses are wumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each lorpus is a grimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a yumpus, a rompus, or a wumpus is a grimpus.",
+            "gt_fol": "∀x ((Yumpus(x) ∨ Rompus(x) ∨ Wumpus(x)) → Grimpus(x))"
+        },
+        {
+            "ref": "Vumpuses are numpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Max is a numpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Max is a rompus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_Composed_random_noadj_example96_example5": [
+        {
+            "ref": "Sally is a jompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a sterpus, a yumpus, and a grimpus is a vumpus.",
+            "gt_fol": "∀x ((Sterpus(x) ∧ Yumpus(x) ∧ Grimpus(x)) → Vumpus(x))"
+        },
+        {
+            "ref": "Tumpuses are shumpuses.",
+            "gt_fol": "∀x (Tumpus(x) → Shumpus(x))"
+        },
+        {
+            "ref": "Sally is a sterpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Zumpuses are brimpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a vumpus, a lorpus, or a lempus is a rompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a sterpus, a yumpus, and a grimpus is a numpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a jompus, a sterpus, and a lorpus is a lempus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a vumpus or a gorpus or a dumpus is a jompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a vumpus, a gorpus, or a dumpus is a wumpus, a zumpus, and a tumpus.",
+            "gt_fol": "∀x ((Vumpus(x) ∨ Gorpus(x) ∨ Dumpus(x)) → (Wumpus(x) ∧ Zumpus(x) ∧ Tumpus(x)))"
+        },
+        {
+            "ref": "Sally is a lorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sally is a sterpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sally is a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sally is a yumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sally is a grimpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_Composed_random_noadj_example22_example7": [
+        {
+            "ref": "Everything that is a grimpus or a numpus or a jompus is a wumpus and a brimpus and a rompus.",
+            "gt_fol": "∀x ((Grimpus(x) ∨ Numpus(x) ∨ Jompus(x)) → (Wumpus(x) ∧ Brimpus(x) ∧ Rompus(x)))"
+        },
+        {
+            "ref": "Everything that is a numpus or a lempus or a shumpus is a sterpus.",
+            "gt_fol": "∀x ((Numpus(x) ∨ Lempus(x) ∨ Shumpus(x)) → Sterpus(x))"
+        },
+        {
+            "ref": "Every lorpus is a numpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every rompus is a sterpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a grimpus, a numpus, or a jompus is a shumpus.",
+            "gt_fol": "∀x ((Grimpus(x) ∨ Numpus(x) ∨ Jompus(x)) → Shumpus(x))"
+        },
+        {
+            "ref": "Each dumpus is a yumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every lorpus is a sterpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Brimpuses are yumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every dumpus is a lorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wren is a sterpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wren is a dumpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_Composed_random_noadj_example45_example0": [
+        {
+            "ref": "Each sterpus is a tumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sterpuses are yumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a gorpus and an impus and a rompus is a sterpus.",
+            "gt_fol": "∀x ((Gorpus(x) ∧ Impus(x) ∧ Rompus(x)) → Sterpus(x))"
+        },
+        {
+            "ref": "Sam is a gorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Gorpuses are numpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Tumpuses are vumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sam is a numpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a gorpus, an impus, and a rompus is a yumpus.",
+            "gt_fol": "∀x ((Gorpus(x) ∧ Impus(x) ∧ Rompus(x)) → Yumpus(x))"
+        },
+        {
+            "ref": "Everything that is a lempus, a gorpus, and a numpus is a yumpus.",
+            "gt_fol": "∀x ((Lempus(x) ∧ Gorpus(x) ∧ Numpus(x)) → Yumpus(x))"
+        },
+        {
+            "ref": "Tumpuses are grimpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Brimpuses are grimpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Rompuses are yumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sam is a lempus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sam is a gorpus, Sam is a rompus, and Sam is not a grimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sam is a gorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sam is a zumpus and a yumpus and a dumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sam is a rompus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_Composed_random_noadj_example86_example1": [
+        {
+            "ref": "Everything that is a vumpus or a tumpus or a lorpus is a lempus.",
+            "gt_fol": "∀x ((Vumpus(x) ∨ Tumpus(x) ∨ Lorpus(x)) → Lempus(x))"
+        },
+        {
+            "ref": "Everything that is a vumpus or a tumpus or a lorpus is a numpus.",
+            "gt_fol": "∀x ((Vumpus(x) ∨ Tumpus(x) ∨ Lorpus(x)) → Numpus(x))"
+        },
+        {
+            "ref": "Gorpuses are wumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a jompus, a lorpus, or a yumpus is a grimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Rompuses are grimpuses.",
+            "gt_fol": "∀x (Rompus(x) → Grimpus(x))"
+        },
+        {
+            "ref": "Everything that is a lempus, a dumpus, or an impus is a numpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a lempus, a dumpus, or an impus is a gorpus, a rompus, and a vumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a lempus, a brimpus, or a yumpus is a wumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Max is a grimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Max is a lorpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_Composed_random_noadj_example51_example4": [
+        {
+            "ref": "Gorpuses are vumpuses.",
+            "gt_fol": "∀x (Gorpus(x) → Vumpus(x))"
+        },
+        {
+            "ref": "Each gorpus is a zumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wumpuses are shumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is an impus, a zumpus, or a shumpus is a numpus.",
+            "gt_fol": "∀x ((Impus(x) ∨ Zumpus(x) ∨ Shumpus(x)) → Numpus(x))"
+        },
+        {
+            "ref": "Everything that is a tumpus or a zumpus or a yumpus is a lempus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every grimpus is a lempus.",
+            "gt_fol": "∀x (Grimpus(x) → Lempus(x))"
+        },
+        {
+            "ref": "Everything that is a tumpus or a dumpus or a jompus is an impus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a tumpus, a zumpus, or a yumpus is a grimpus and a gorpus and a wumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Stella is a shumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Stella is a tumpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_Composed_random_noadj_example78_example3": [
+        {
+            "ref": "Everything that is a gorpus and a sterpus and a grimpus is a dumpus.",
+            "gt_fol": "∀x ((Gorpus(x) ∧ Sterpus(x) ∧ Grimpus(x)) → Dumpus(x))"
+        },
+        {
+            "ref": "Everything that is a gorpus and a sterpus and a grimpus is a brimpus.",
+            "gt_fol": "∀x ((Gorpus(x) ∧ Sterpus(x) ∧ Grimpus(x)) → Brimpus(x))"
+        },
+        {
+            "ref": "Wren is a brimpus.",
+            "gt_fol": "Brimpus(wren)"
+        },
+        {
+            "ref": "Zumpuses are wumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a gorpus, a brimpus, and a vumpus is a tumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wren is a gorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wren is a vumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each dumpus is a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every dumpus is a lorpus and a zumpus and a rompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each lorpus is an impus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every rompus is a lempus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Zumpuses are shumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wren is a gorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wren is a sterpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wren is a tumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wren is a grimpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_Composed_random_noadj_example36_example7": [
+        {
+            "ref": "Numpuses are impuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Shumpuses are brimpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each numpus is a lempus, a lorpus, and a shumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a gorpus, a dumpus, or a rompus is an impus.",
+            "gt_fol": "∀x ((Gorpus(x) ∨ Dumpus(x) ∨ Rompus(x)) → Impus(x))"
+        },
+        {
+            "ref": "Grimpuses are impuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a tumpus, a gorpus, or a yumpus is a numpus, a vumpus, and a grimpus.",
+            "gt_fol": "∀x ((Tumpus(x) ∨ Gorpus(x) ∨ Yumpus(x)) → (Numpus(x) ∧ Vumpus(x) ∧ Grimpus(x)))"
+        },
+        {
+            "ref": "Each vumpus is a rompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every lorpus is an impus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a tumpus, a gorpus, or a yumpus is a sterpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sally is a dumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sally is a gorpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_Composed_random_noadj_example62_example5": [
+        {
+            "ref": "Everything that is a gorpus or a zumpus or a grimpus is a wumpus.",
+            "gt_fol": "∀x ((Gorpus(x) ∨ Zumpus(x) ∨ Grimpus(x)) → Wumpus(x))"
+        },
+        {
+            "ref": "Sterpuses are zumpuses, vumpuses, and numpuses.",
+            "gt_fol": "∀x (Sterpus(x) → (Zumpus(x) ∧ Vumpus(x) ∧ Numpus(x)))"
+        },
+        {
+            "ref": "Each sterpus is a jompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Vumpuses are wumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a tumpus, a zumpus, or a lorpus is a numpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every numpus is an impus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Shumpuses are lempuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Dumpuses are jompuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a tumpus, a zumpus, or a lorpus is a rompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Fae is a grimpus, a wumpus, and a jompus.",
+            "gt_fol": "Grimpus(fae) ∧ Wumpus(fae) ∧ Jompus(fae)"
+        },
+        {
+            "ref": "Fae is a shumpus, a sterpus, and a dumpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_Composed_random_noadj_example32_example0": [
+        {
+            "ref": "Everything that is a lorpus or a tumpus or a dumpus is a brimpus, a vumpus, and a yumpus.",
+            "gt_fol": "∀x ((Lorpus(x) ∨ Tumpus(x) ∨ Dumpus(x)) → (Brimpus(x) ∧ Vumpus(x) ∧ Yumpus(x)))"
+        },
+        {
+            "ref": "Everything that is a lorpus or a lempus or a rompus is an impus.",
+            "gt_fol": "∀x ((Lorpus(x) ∨ Lempus(x) ∨ Rompus(x)) → Impus(x))"
+        },
+        {
+            "ref": "Everything that is a lorpus or a tumpus or a dumpus is a rompus.",
+            "gt_fol": "∀x ((Lorpus(x) ∨ Tumpus(x) ∨ Dumpus(x)) → Rompus(x))"
+        },
+        {
+            "ref": "Brimpuses are grimpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each shumpus is a wumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each vumpus is an impus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sterpuses are rompuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Vumpuses are numpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each yumpus is a gorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Polly is a rompus, a wumpus, and a zumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Polly is a lorpus and a shumpus and a sterpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_Composed_random_noadj_example16_example5": [
+        {
+            "ref": "Fae is a rompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Grimpuses are wumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Zumpuses are tumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sterpuses are impuses, zumpuses, and grimpuses.",
+            "gt_fol": "∀x (Sterpus(x) → (Impus(x) ∧ Zumpus(x) ∧ Grimpus(x)))"
+        },
+        {
+            "ref": "Everything that is a numpus, a rompus, and a dumpus is a yumpus.",
+            "gt_fol": "∀x ((Numpus(x) ∧ Rompus(x) ∧ Dumpus(x)) → Yumpus(x))"
+        },
+        {
+            "ref": "Fae is a dumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each brimpus is a lorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each brimpus is a numpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a numpus and a shumpus and a tumpus is a dumpus.",
+            "gt_fol": "∀x ((Numpus(x) ∧ Shumpus(x) ∧ Tumpus(x)) → Dumpus(x))"
+        },
+        {
+            "ref": "Everything that is a numpus, a shumpus, and a tumpus is a sterpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each sterpus is a lorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Gorpuses are shumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Fae is a numpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Zumpuses are yumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Fae is a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Fae is a gorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Fae is a lempus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Fae is a zumpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_Composed_random_noadj_example38_example0": [
+        {
+            "ref": "Every dumpus is a yumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every vumpus is a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Vumpuses are rompuses, impuses, and zumpuses.",
+            "gt_fol": "∀x (Vumpus(x) → (Rompus(x) ∧ Impus(x) ∧ Zumpus(x)))"
+        },
+        {
+            "ref": "Lorpuses are sterpuses.",
+            "gt_fol": "∀x (Lorpus(x) → Sterpus(x))"
+        },
+        {
+            "ref": "Every gorpus is a shumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Tumpuses are yumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every zumpus is a lempus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Zumpuses are gorpuses, jompuses, and tumpuses.",
+            "gt_fol": "∀x (Zumpus(x) → (Gorpus(x) ∧ Jompus(x) ∧ Tumpus(x)))"
+        },
+        {
+            "ref": "Impuses are shumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every rompus is a yumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Grimpuses are jompuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Alex is a sterpus and a brimpus and a yumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Alex is a lorpus and Alex is not a jompus and Alex is a dumpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_Composed_random_noadj_example18_example3": [
+        {
+            "ref": "Every sterpus is a grimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every lempus is a gorpus, a sterpus, and a yumpus.",
+            "gt_fol": "∀x (Lempus(x) → (Gorpus(x) ∧ Sterpus(x) ∧ Yumpus(x)))"
+        },
+        {
+            "ref": "Lempuses are rompuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Vumpuses are rompuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a yumpus, a rompus, or a wumpus is an impus.",
+            "gt_fol": "∀x ((Yumpus(x) ∨ Rompus(x) ∨ Wumpus(x)) → Impus(x))"
+        },
+        {
+            "ref": "Everything that is a tumpus, a yumpus, or a shumpus is a numpus.",
+            "gt_fol": "∀x ((Tumpus(x) ∨ Yumpus(x) ∨ Shumpus(x)) → Numpus(x))"
+        },
+        {
+            "ref": "Gorpuses are jompuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a tumpus, a yumpus, or a shumpus is a rompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lorpuses are dumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Fae is a grimpus and a rompus and a zumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Fae is a lorpus and a lempus and a vumpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_Composed_random_noadj_example94_example7": [
+        {
+            "ref": "Everything that is a lorpus and a tumpus and a numpus is a lempus and a vumpus and a gorpus.",
+            "gt_fol": "∀x ((Lorpus(x) ∧ Tumpus(x) ∧ Numpus(x)) → (Lempus(x) ∧ Vumpus(x) ∧ Gorpus(x)))"
+        },
+        {
+            "ref": "Every brimpus is an impus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Vumpuses are impuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Shumpuses are sterpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Vumpuses are brimpuses, gorpuses, and shumpuses.",
+            "gt_fol": "∀x (Vumpus(x) → (Brimpus(x) ∧ Gorpus(x) ∧ Shumpus(x)))"
+        },
+        {
+            "ref": "Everything that is a lorpus and a tumpus and a numpus is a grimpus.",
+            "gt_fol": "∀x ((Lorpus(x) ∧ Tumpus(x) ∧ Numpus(x)) → Grimpus(x))"
+        },
+        {
+            "ref": "Every gorpus is a sterpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Alex is a lorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Alex is a wumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Alex is a sterpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a wumpus and a lorpus and a sterpus is a zumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each lempus is a jompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Alex is a lorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Alex is a zumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Alex is a tumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Alex is a numpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_Composed_random_noadj_example96_example1": [
+        {
+            "ref": "Dumpuses are impuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every tumpus is a shumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a jompus and a wumpus and a yumpus is a lorpus.",
+            "gt_fol": "∀x ((Jompus(x) ∧ Wumpus(x) ∧ Yumpus(x)) → Lorpus(x))"
+        },
+        {
+            "ref": "Brimpuses are tumpuses and grimpuses and dumpuses.",
+            "gt_fol": "∀x (Brimpus(x) → (Tumpus(x) ∧ Grimpus(x) ∧ Dumpus(x)))"
+        },
+        {
+            "ref": "Max is a wumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Tumpuses are dumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each brimpus is an impus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a jompus and a grimpus and a rompus is a lorpus.",
+            "gt_fol": "∀x ((Jompus(x) ∧ Grimpus(x) ∧ Rompus(x)) → Lorpus(x))"
+        },
+        {
+            "ref": "Max is a yumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a jompus and a grimpus and a rompus is a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every grimpus is a zumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Max is a jompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Max is a lempus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Max is a jompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Max is a grimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Max is a rompus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_Composed_random_noadj_example98_example": [
+        {
+            "ref": "Yumpuses are brimpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sterpuses are jompuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Zumpuses are shumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every rompus is a grimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a lempus, a lorpus, or a numpus is a gorpus and a sterpus and a zumpus.",
+            "gt_fol": "∀x ((Lempus(x) ∨ Lorpus(x) ∨ Numpus(x)) → (Gorpus(x) ∧ Sterpus(x) ∧ Zumpus(x)))"
+        },
+        {
+            "ref": "Each rompus is a lempus, a yumpus, and a numpus.",
+            "gt_fol": "∀x (Rompus(x) → (Lempus(x) ∧ Yumpus(x) ∧ Numpus(x)))"
+        },
+        {
+            "ref": "Numpuses are impuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a lempus or a lorpus or a numpus is an impus.",
+            "gt_fol": "∀x ((Lempus(x) ∨ Lorpus(x) ∨ Numpus(x)) → Impus(x))"
+        },
+        {
+            "ref": "Everything that is an impus or a lempus or a shumpus is a tumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wren is a shumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wren is a rompus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_Composed_random_noadj_example71_example0": [
+        {
+            "ref": "Everything that is a jompus, a yumpus, or a vumpus is a zumpus.",
+            "gt_fol": "∀x ((Jompus(x) ∨ Yumpus(x) ∨ Vumpus(x)) → Zumpus(x))"
+        },
+        {
+            "ref": "Everything that is a grimpus, a gorpus, and a lempus is a yumpus and a jompus and a shumpus.",
+            "gt_fol": "∀x ((Grimpus(x) ∧ Gorpus(x) ∧ Lempus(x)) → (Yumpus(x) ∧ Jompus(x) ∧ Shumpus(x)))"
+        },
+        {
+            "ref": "Everything that is a grimpus and a gorpus and a lempus is a numpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every yumpus is a dumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a jompus or a yumpus or a vumpus is a lorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wren is a grimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a tumpus or a jompus or a dumpus is a brimpus.",
+            "gt_fol": "∀x ((Tumpus(x) ∨ Jompus(x) ∨ Dumpus(x)) → Brimpus(x))"
+        },
+        {
+            "ref": "Shumpuses are sterpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wren is a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a dumpus and a grimpus and a brimpus is a numpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wren is a dumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wren is a grimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wren is a lorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wren is a gorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wren is a lempus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_Composed_random_noadj_example66_example6": [
+        {
+            "ref": "Each tumpus is a dumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Jompuses are sterpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a zumpus or a lorpus or a sterpus is a brimpus.",
+            "gt_fol": "∀x ((Zumpus(x) ∨ Lorpus(x) ∨ Sterpus(x)) → Brimpus(x))"
+        },
+        {
+            "ref": "Every jompus is a wumpus and a tumpus and a lorpus.",
+            "gt_fol": "∀x (Jompus(x) → (Wumpus(x) ∧ Tumpus(x) ∧ Lorpus(x)))"
+        },
+        {
+            "ref": "Each lempus is a wumpus, a grimpus, and a jompus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every wumpus is a sterpus.",
+            "gt_fol": "∀x (Wumpus(x) → Sterpus(x))"
+        },
+        {
+            "ref": "Every lempus is a zumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Grimpuses are gorpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each wumpus is a shumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Stella is a numpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Stella is a lempus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_Composed_random_noadj_example52_example0": [
+        {
+            "ref": "Everything that is a jompus, a sterpus, or a rompus is a grimpus.",
+            "gt_fol": "∀x ((Jompus(x) ∨ Sterpus(x) ∨ Rompus(x)) → Grimpus(x))"
+        },
+        {
+            "ref": "Each dumpus is a lempus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lempuses are grimpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Zumpuses are brimpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a jompus, a sterpus, or a rompus is a wumpus and a yumpus and a zumpus.",
+            "gt_fol": "∀x ((Jompus(x) ∨ Sterpus(x) ∨ Rompus(x)) → (Wumpus(x) ∧ Yumpus(x) ∧ Zumpus(x)))"
+        },
+        {
+            "ref": "Wumpuses are impuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lempuses are jompuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a jompus, an impus, or a gorpus is a vumpus.",
+            "gt_fol": "∀x ((Jompus(x) ∨ Impus(x) ∨ Gorpus(x)) → Vumpus(x))"
+        },
+        {
+            "ref": "Each dumpus is a shumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Stella is a lorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Stella is a dumpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_Composed_random_noadj_example82_example0": [
+        {
+            "ref": "Everything that is a numpus, a yumpus, or a jompus is a dumpus.",
+            "gt_fol": "∀x ((Numpus(x) ∨ Yumpus(x) ∨ Jompus(x)) → Dumpus(x))"
+        },
+        {
+            "ref": "Rompuses are lempuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a vumpus, a lempus, or a numpus is a gorpus.",
+            "gt_fol": "∀x ((Vumpus(x) ∨ Lempus(x) ∨ Numpus(x)) → Gorpus(x))"
+        },
+        {
+            "ref": "Lorpuses are vumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a rompus or a tumpus or a lempus is a yumpus.",
+            "gt_fol": "∀x ((Rompus(x) ∨ Tumpus(x) ∨ Lempus(x)) → Yumpus(x))"
+        },
+        {
+            "ref": "Zumpuses are dumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each rompus is a dumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a rompus or a tumpus or a lempus is a numpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Polly is a gorpus and a numpus and a grimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Polly is a zumpus, a lorpus, and a rompus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_Composed_random_noadj_example8_example4": [
+        {
+            "ref": "Every impus is a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each jompus is a lempus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every wumpus is a numpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Zumpuses are jompuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Jompuses are zumpuses, sterpuses, and impuses.",
+            "gt_fol": "∀x (Jompus(x) → (Zumpus(x) ∧ Sterpus(x) ∧ Impus(x)))"
+        },
+        {
+            "ref": "Rompuses are gorpuses.",
+            "gt_fol": "∀x (Rompus(x) → Gorpus(x))"
+        },
+        {
+            "ref": "Sterpuses are gorpuses.",
+            "gt_fol": "∀x (Sterpus(x) → Gorpus(x))"
+        },
+        {
+            "ref": "Jompuses are brimpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Jompuses are numpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sterpuses are tumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each zumpus is a lorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Fae is a lempus, a dumpus, and a shumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Fae is a rompus, Fae is not a numpus, and Fae is a sterpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_Composed_random_noadj_example3_example4": [
+        {
+            "ref": "Rompuses are jompuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every shumpus is a vumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a yumpus or a vumpus or a lorpus is a numpus.",
+            "gt_fol": "∀x ((Yumpus(x) ∨ Vumpus(x) ∨ Lorpus(x)) → Numpus(x))"
+        },
+        {
+            "ref": "Everything that is a zumpus or a grimpus or a yumpus is a lempus.",
+            "gt_fol": "∀x ((Zumpus(x) ∨ Grimpus(x) ∨ Yumpus(x)) → Lempus(x))"
+        },
+        {
+            "ref": "Rompuses are wumpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sterpuses are numpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each sterpus is a gorpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a zumpus or a grimpus or a yumpus is a shumpus and a rompus and a sterpus.",
+            "gt_fol": "∀x ((Zumpus(x) ∨ Grimpus(x) ∨ Yumpus(x)) → (Shumpus(x) ∧ Rompus(x) ∧ Sterpus(x)))"
+        },
+        {
+            "ref": "Every shumpus is a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wren is a gorpus and a numpus and a lempus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Wren is a shumpus, a sterpus, and a yumpus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_Composed_random_noadj_example48_example7": [
+        {
+            "ref": "Everything that is a brimpus or a rompus or a numpus is a yumpus.",
+            "gt_fol": "∀x ((Brimpus(x) ∨ Rompus(x) ∨ Numpus(x)) → Yumpus(x))"
+        },
+        {
+            "ref": "Every dumpus is a grimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Each vumpus is a yumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a shumpus or a tumpus or a rompus is a grimpus.",
+            "gt_fol": "∀x ((Shumpus(x) ∨ Tumpus(x) ∨ Rompus(x)) → Grimpus(x))"
+        },
+        {
+            "ref": "Lempuses are jompuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Everything that is a shumpus or a tumpus or a rompus is a lorpus, a lempus, and a dumpus.",
+            "gt_fol": "∀x ((Shumpus(x) ∨ Tumpus(x) ∨ Rompus(x)) → (Lorpus(x) ∧ Lempus(x) ∧ Dumpus(x)))"
+        },
+        {
+            "ref": "Lempuses are impuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every gorpus is a zumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Lorpuses are jompuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Stella is a sterpus and a jompus and a yumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Stella is a vumpus and a gorpus and a rompus.",
+            "gt_fol": ""
+        }
+    ],
+    "4hop_Composed_random_noadj_example32_example": [
+        {
+            "ref": "Each gorpus is an impus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sterpuses are lorpuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Shumpuses are lempuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Yumpuses are sterpuses and shumpuses and jompuses.",
+            "gt_fol": "∀x (Yumpus(x) → (Sterpus(x) ∧ Shumpus(x) ∧ Jompus(x)))"
+        },
+        {
+            "ref": "Everything that is a lorpus, a grimpus, or an impus is a rompus.",
+            "gt_fol": "∀x ((Lorpus(x) ∨ Grimpus(x) ∨ Impus(x)) → Rompus(x))"
+        },
+        {
+            "ref": "Yumpuses are rompuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Every jompus is a dumpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sterpuses are impuses.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Shumpuses are grimpuses and sterpuses and gorpuses.",
+            "gt_fol": "∀x (Shumpus(x) → (Grimpus(x) ∧ Sterpus(x) ∧ Gorpus(x)))"
+        },
+        {
+            "ref": "Sam is a brimpus.",
+            "gt_fol": ""
+        },
+        {
+            "ref": "Sam is a yumpus.",
+            "gt_fol": ""
+        }
+    ]
+}

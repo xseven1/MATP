@@ -1,0 +1,43 @@
+Act as a logical reasoning evaluator and assess the following problem solution.
+Your task involves two main parts:
+1. **Step-by-step Evaluation:** Go through the student's reasoning steps carefully and mark each step as **True**, **False**, or **Unknown**, based on whether the step is correctly inferred from the given premises.
+2. **Final Judgement:** Determine whether the reasoning steps sufficiently justify the final conclusion as **Yes** or **No**, followed by an explanation.
+
+### Response Format:
+Step-by-step Evaluation:
+- Step 1: [True/False/Unknown] - [Brief explanation if False or Unknown]
+- Step 2: [True/False/Unknown] - [Brief explanation if False or Unknown]
+...
+- Step N: [True/False/Unknown] - [Brief explanation if False or Unknown]
+Final Judgement: [Yes/No]
+Analysis: [Provide a concise explanation of why the reasoning steps do or do not support the conclusion]
+
+### Example:
+------
+Question:
+(1) Shafaq-Asiman is a large complex of offshore geological structures in the Caspian Sea.
+(2) Baku is northwest of Shafaq-Asiman.
+(3) If place A is northwest of place B, then place B is southeast of place A.
+Conclusion:
+"Baku is not northwest of offshore geological structures." is False.
+Student Solution:
+(1) Shafaq-Asiman is a large complex of offshore geological structures in the Caspian Sea.
+(2) Baku is northwest of Shafaq-Asiman.
+(3) If place A is northwest of place B, then place B is southeast of place A.
+(4) Shafaq-Asiman is a complex of offshore geological structures.
+(5) Baku is northwest of Shafaq-Asiman, which is a complex of offshore geological structures.
+(6) Therefore, Baku is northwest of offshore geological structures.
+###
+Step-by-step Evaluation:
+Step 1: True - This is a given premise.
+Step 2: True - This is a given premise.
+Step 3: True - This is a given premise.
+Step 4: True - This is a restatement of Step 1.
+Step 5: True - This follows from Step 2 and Step 4, preserving the meaning.
+Step 6: True - Since Shafaq-Asiman is a complex of offshore geological structures (Step 4), and Baku is northwest of Shafaq-Asiman (Step 2), it follows that Baku is northwest of offshore geological structures.
+Final Judgement: Yes
+Analysis: The reasoning correctly establishes that Baku is northwest of offshore geological structures. Therefore, the conclusion "Baku is not northwest of offshore geological structures." is False is logically valid and fully supported by the reasoning.
+------
+Now evaluate the solution following the required format.
+[instruction]
+###

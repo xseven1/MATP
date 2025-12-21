@@ -1,0 +1,93 @@
+Parse the premises and the conclusions into first-order logic formulars.
+
+### Rules
+1. Each natural language sentence must correspond to a single FOL formula.
+2. Use the following FOL syntax:
+    - Conjunction ("and"): expr1 ∧ expr2
+    - Disjunction ("or"): expr1 ∨ expr2
+    - Exclusive Disjunction ("exclusive or"): expr1 ⊕ expr2
+    - Negation ("not"): ¬expr1
+    - Implication ("if ... then ..."): expr1 → expr2
+    - Biconditional ("if and only if"): expr1 ↔ expr2
+    - logical universal quantification: ∀x (expr)
+    - logical existential quantification: ∃x (expr)
+3. Every formula must explicitly include quantifiers (∀x or ∃x) where applicable.
+4. Always consider the scope of quantification carefully. The quantifier's domain should generally cover the entire sentence rather than just a single predicate, ensuring the correct logical representation.
+    - For nl "If someone is big and they see the bald eagle then they need the mouse".
+    - "∀x (big(x) ∧ sees(x, bald_eagle)) → needs(x, mouse)" is false.
+    - "∀x ((big(x) ∧ sees(x, bald_eagle)) → needs(x, mouse))" is true.
+
+### Output Format
+Premises:
+fol-formula ::: (index) reference.
+Conclusions:
+fol-formula ::: (index) reference. 
+
+### Examples
+------
+Premises:
+(1) The cow is cold.
+(2) The cow is not round.
+(3) The cow sees the tiger.
+(4) The mouse needs the cow.
+(5) The squirrel needs the cow.
+(6) The tiger is blue.
+(7) The tiger sees the mouse.
+(8) Gary is quiet.
+(9) Charlie is blue.
+(10) If something needs the squirrel then the squirrel sees the tiger.
+(11) If the cow sees the squirrel then the cow eats the mouse.
+(12) If the squirrel eats the mouse and the squirrel is not green then the mouse is not red.
+(13) If the mouse needs the tiger and the mouse is red then the tiger does not see the squirrel.
+(14) If something needs the mouse and the mouse eats the cow then the cow eats the squirrel.
+(15) If something is blue then it needs the squirrel.
+(16) If something needs the cow and the cow is blue then it eats the mouse.
+(17) If something eats the mouse then it is blue.
+(18) If the mouse likes the bear and the bear likes the mouse then the mouse is not kind.
+(19) If someone is big and they see the bald eagle then they need the mouse.
+Conclusions:
+(1) The mouse needs the cow.
+(2) If something visits the cat then the cat likes the mouse.
+(3) If something needs the cow and the cow is blue then it eats the mouse.
+(4) If something eats the mouse then it is blue.
+(5) If the cow sees the squirrel then the cow eats the mouse.
+(6) The cow sees the squirrel.
+(7) The cow eats the mouse.
+(8) The cow is blue.
+(9) The mouse eats the mouse.
+###
+Premises:
+Cold(cow) ::: (1) The cow is cold.
+¬Round(cow) ::: (2) The cow is not round.
+Sees(cow, tiger) ::: (3) The cow sees the tiger.
+Needs(mouse, tiger) ::: (4) The mouse needs the tiger.
+Needs(squirrel, cow) ::: (5) The squirrel needs the cow.
+Blue(tiger) ::: (6) The tiger is blue.
+Sees(tiger, mouse) ::: (7) The tiger sees the mouse.
+Quiet(gary) ::: (8) Gary is quiet.
+Blue(charlie) ::: (9) Charlie is blue.
+∀x (Needs(x, squirrel) → Sees(squirrel, tiger)) ::: (10) If something needs the squirrel then the squirrel sees the tiger.
+Sees(cow, squirrel) → Eats(cow, mouse) ::: (11) If the cow sees the squirrel then the cow eats the mouse.
+(Eats(squirrel, mouse) ∧ ¬Green(squirrel)) → ¬Red(mouse) ::: (12) If the squirrel eats the mouse and the squirrel is not green then the mouse is not red.
+(Needs(mouse, tiger) ∧ Red(mouse)) → ¬Sees(tiger, squirrel) ::: (13) If the mouse needs the tiger and the mouse is red then the tiger does not see the squirrel.
+∀x ((Needs(x, mouse) ∧ Eats(mouse, cow)) → Eats(cow, squirrel)) ::: (14) If something needs the mouse and the mouse eats the cow then the cow eats the squirrel.
+∀x (Blue(x) → Needs(x, squirrel)) ::: (15) If something is blue then it needs the squirrel.
+∀x ((Needs(x, cow) ∧ Blue(cow)) → Eats(x, mouse)) ::: (16) If something needs the cow and the cow is blue then it eats the mouse.
+∀x (Eats(x, mouse) → Blue(x)) ::: (17) If something eats the mouse then it is blue.
+(Likes(mouse,bear) ∧ Likes(bear,mouse)) → ¬Kind(mouse) ::: (18) If the mouse likes the bear and the bear likes the mouse then the mouse is not kind.
+∀x ((big(x) ∧ sees(x, bald_eagle)) → needs(x, mouse)) ::: (19) If someone is big and they see the bald eagle then they need the mouse.
+Conclusions:
+Needs(mouse, cow) ::: (1) The mouse needs the cow.
+∀x (Visits(x, cat) → Likes(cat, mouse)) ::: (2) If something visits the cat then the cat likes the mouse.
+∀x ((Needs(x, cow) ∧ Blue(cow)) → Eats(x, mouse)) ::: (3) If something needs the cow and the cow is blue then it eats the mouse.
+∀x (Eats(x, mouse) → Blue(x)) ::: (4) If something eats the mouse then it is blue.
+Sees(cow, squirrel) → Eats(cow, mouse) ::: (5) If the cow sees the squirrel then the cow eats the mouse.
+Sees(cow, squirrel) ::: (6) The cow sees the squirrel.
+Eats(cow, mouse) ::: (7) The cow eats the mouse.
+Blue(cow) ::: (8) The cow is blue.
+Eats(mouse, mouse) ::: (9) The mouse eats the mouse.
+------
+### Your Task
+Return first-order logic formulars with NO other texts.
+[instruction]
+###

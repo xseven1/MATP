@@ -1,0 +1,77 @@
+Act as a logical reasoning evaluator and assess the following problem solution.
+Your task involves two main parts:
+1. **Step-by-step Evaluation:** Go through the student's reasoning steps carefully and mark each step as **True**, **False**, or **Unknown**, based on whether the step is correctly inferred from the given premises.
+2. **Final Judgement:** Determine whether the reasoning steps sufficiently justify the final conclusion as **Yes** or **No**, followed by an explanation.
+
+### Response Format:
+Step-by-step Evaluation:
+- Step 1: [True/False/Unknown] - [Brief explanation if False or Unknown]
+- Step 2: [True/False/Unknown] - [Brief explanation if False or Unknown]
+...
+- Step N: [True/False/Unknown] - [Brief explanation if False or Unknown]
+Final Judgement: [Yes/No]
+Analysis: [Provide a concise explanation of why the reasoning steps do or do not support the conclusion]
+
+### Example:
+------
+Question:
+(1) Anne is nice.
+(2) Anne is white.
+(3) Anne is young.
+(4) Dave is cold.
+(5) Dave is nice.
+(6) Dave is smart.
+(7) Erin is cold.
+(8) Erin is not kind.
+(9) Erin is not nice.
+(10) Erin is smart.
+(11) Erin is young.
+(12) Fiona is kind.
+(13) Smart people are white.
+(14) Kind, cold people are smart.
+(15) Kind people are big.
+(16) If Fiona is cold and Fiona is big then Fiona is nice.
+(17) If someone is nice and big then they are cold.
+(18) If someone is young and white then they are cold.
+(19) If Anne is nice then Anne is cold.
+(20) Big, young people are nice.
+(21) Big people are young.
+Conclusion:
+"Fiona is not big." is False.
+Student Solution:
+(1) Anne is young.
+(2) Anne is white.
+(3) If someone is young and white then they are cold.
+(4) Anne is cold.
+(5) Dave is cold.
+(6) Erin is cold.
+(7) Fiona is kind.
+(8) Kind people are big.
+(9) Fiona is big.
+(10) Big people are young.
+(11) Fiona is young.
+(12) Big, young people are nice.
+(13) Fiona is nice.
+(14) If Fiona is cold and Fiona is big then Fiona is nice.
+###
+Step-by-step Evaluation:
+Step 1: True - Given premise (3) states "Anne is young," so this step is correct.
+Step 2: True - Given premise (2) states "Anne is white," so this step is correct.
+Step 3: True - Given premise (18) states "If someone is young and white then they are cold," so this step is correct.
+Step 4: True - From Step 1, Step 2, and Step 3, Anne is young and white, so she must be cold.
+Step 5: True - Given premise (4) states "Dave is cold," so this step is correct.
+Step 6: True - Given premise (7) states "Erin is cold," so this step is correct.
+Step 7: True - Given premise (12) states "Fiona is kind," so this step is correct.
+Step 8: True - Given premise (15) states "Kind people are big," so this step is correct.
+Step 9: True - From Step 7 and Step 8, since Fiona is kind and kind people are big, Fiona must be big.
+Step 10: True - Given premise (21) states "Big people are young," so this step is correct.
+Step 11: True - From Step 9 and Step 10, since Fiona is big and big people are young, Fiona must be young.
+Step 12: True - Given premise (20) states "Big, young people are nice," so this step is correct.
+Step 13: True - From Step 9, Step 11, and Step 12, since Fiona is big and young, she must be nice.
+Step 14: True - Given premise (16) states "If Fiona is cold and Fiona is big then Fiona is nice," so this step is correct.
+Final Judgement: Yes
+Analysis: The student's reasoning correctly establishes that Fiona is big, which directly contradicts the statement "Fiona is not big." Therefore, the conclusion "Fiona is not big." is False is logically valid and fully supported by the reasoning.
+------
+Now evaluate the solution following the required format.
+[instruction]
+###

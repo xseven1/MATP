@@ -1,0 +1,115 @@
+{
+    "idx": "57_168",
+    "premises": [
+        "All pets are animals.",
+        "Pets can be either a dog or a cat.",
+        "If a person has a pet, they care for that pet. ",
+        "Dogs and cats can be naughty. ",
+        "Pets who are naughty are not liked as much. ",
+        "Charlie has a naughty pet dog named Leo. "
+    ],
+    "question": [
+        "Leo is an animal."
+    ],
+    "premises_gt_fol": [
+        "∀x (Pet(x) → Animal(x))",
+        "∀x (Pet(x) → (Dog(x) ⊕ Cat(x)))",
+        "∀x ∀y ((Pet(y) ∧ OwnedBy(x,y)) → Cares(x, y))",
+        "∃x ∃y (Cat(x) ∧ Naughty(x) ∧ (¬(x=y)) ∧ Dog(y) ∧ Naughty(y))",
+        "∀x ∀y ((Pet(x) ∧ Naughty(x) ∧ OwnedBy(x,y)) → ¬Liked(x, y))",
+        "OwnedBy(leo, charlie) ∧ Pet(leo) ∧ Dog(leo) ∧ Naughty(leo)"
+    ],
+    "label": 1,
+    "reasoning_steps": [
+        "All pets are animals.",
+        "Charlie has a naughty pet dog named Leo.",
+        "A pet dog is a type of pet.",
+        "Since all pets are animals, Leo being a pet implies Leo is an animal.",
+        "The conclusion directly follows from the premises."
+    ],
+    "reasoning_answer": 1,
+    "mistake_steps": [],
+    "reasoning_content": "Okay, let's see. The premises say that all pets are animals. Then, Charlie has a naughty pet dog named Leo. Since Leo is a pet dog, and all pets are animals, that should mean Leo is an animal. Let me check each step.\n\nFirst, \"All pets are animals.\" So any pet, regardless of type, is an animal. Then, \"Charlie has a naughty pet dog named Leo.\" The word \"pet\" here directly classifies Leo as a pet. Therefore, by the first premise, Leo being a pet makes him an animal. The other details about being naughty or a dog are just additional attributes but don't affect the classification as an animal. So the conclusion that Leo is an animal should be true.",
+    "content": "Thoughts:\nAll pets are animals.\nCharlie has a naughty pet dog named Leo.\nA pet dog is a type of pet.\nSince all pets are animals, Leo being a pet implies Leo is an animal.\nThe conclusion directly follows from the premises.\nAnswer:\n(A) True",
+    "filter_reasoning_steps": [
+        "All pets are animals.",
+        "Charlie has a naughty pet dog named Leo.",
+        "A pet dog is a type of pet.",
+        "Since all pets are animals, Leo being a pet implies Leo is an animal.",
+        null
+    ],
+    "premise:_fol": [
+        {
+            "ref": "(1) all pets are animals.",
+            "fol": "∀x (pet(x) → animal(x))",
+            "tptp": "![X]: (pet(X) => animal(X))"
+        },
+        {
+            "ref": "(2) pets can be either a dog or a cat.",
+            "fol": "∀x (pet(x) → (dog(x) ⊕ cat(x)))",
+            "tptp": "![X]: (pet(X) => (((~(dog(X)) & (cat(X))) | ((dog(X)) & ~(cat(X))))))"
+        },
+        {
+            "ref": "(3) if a person has a pet, they care for that pet.",
+            "fol": "∀x ∀y ((haspet(y, x) ∧ pet(x)) → caresfor(y, x))",
+            "tptp": "![X]: ![Y]: ((haspet(Y, X) & pet(X)) => caresfor(Y, X))"
+        },
+        {
+            "ref": "(4) dogs and cats can be naughty.",
+            "fol": "∀x ((dog(x) ∨ cat(x)) → naughty(x))",
+            "tptp": "![X]: ((dog(X) | cat(X)) => naughty(X))"
+        },
+        {
+            "ref": "(5) pets who are naughty are not liked as much.",
+            "fol": "∀x ((pet(x) ∧ naughty(x)) → ¬likedasmuch(x))",
+            "tptp": "![X]: ((pet(X) & naughty(X)) => ~likedasmuch(X))"
+        },
+        {
+            "ref": "(6) charlie has a naughty pet dog named leo.",
+            "fol": "pet(leo) ∧ dog(leo) ∧ naughty(leo) ∧ haspet(charlie, leo)",
+            "tptp": "pet(leo) & dog(leo) & naughty(leo) & haspet(charlie, leo)"
+        }
+    ],
+    "conclusion:_fol": {
+        "ref": "(5) leo is an animal.",
+        "fol": "animal(leo)",
+        "tptp": "animal(leo)"
+    },
+    "steps:_fol": [
+        {
+            "ref": "(1) all pets are animals.",
+            "fol": "∀x (pet(x) → animal(x))",
+            "tptp": "![X]: (pet(X) => animal(X))"
+        },
+        {
+            "ref": "(2) charlie has a naughty pet dog named leo.",
+            "fol": "pet(leo) ∧ dog(leo) ∧ naughty(leo) ∧ haspet(charlie, leo)",
+            "tptp": "pet(leo) & dog(leo) & naughty(leo) & haspet(charlie, leo)"
+        },
+        {
+            "ref": "(3) a pet dog is a type of pet.",
+            "fol": "∀x (dog(x) → pet(x))",
+            "tptp": "![X]: (dog(X) => pet(X))"
+        },
+        {
+            "ref": "(4) since all pets are animals, leo being a pet implies leo is an animal.",
+            "fol": "∀x ((pet(x) ∧ animal(x)) → (pet(leo) → animal(leo)))",
+            "tptp": "![X]: ((pet(X) & animal(X)) => (pet(leo) => animal(leo)))"
+        }
+    ],
+    "final_filter_reasoning_steps": [
+        "All pets are animals.",
+        "Charlie has a naughty pet dog named Leo.",
+        "A pet dog is a type of pet.",
+        "Since all pets are animals, Leo being a pet implies Leo is an animal."
+    ],
+    "AnswerCorrect": true,
+    "step_correctness_label": [
+        "True",
+        "True",
+        "Unknown",
+        "True"
+    ],
+    "has_valid_proof_path_label": true,
+    "cate": "T2"
+}

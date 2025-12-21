@@ -1,0 +1,139 @@
+{
+    "idx": "4hop_Composed_random_noadj_example69_example4",
+    "premises": [
+        "Every tumpus is a shumpus.",
+        "Everything that is a gorpus, a vumpus, or a tumpus is a zumpus.",
+        "Every gorpus is a zumpus.",
+        "Every jompus is a yumpus.",
+        "Everything that is a lempus, a gorpus, or a dumpus is a lorpus.",
+        "Sterpuses are lorpuses.",
+        "Everything that is a gorpus, a vumpus, or a tumpus is a jompus.",
+        "Jompuses are sterpuses, tumpuses, and gorpuses.",
+        "Every tumpus is a rompus.",
+        "Sally is a dumpus.",
+        "Sally is a gorpus."
+    ],
+    "question": [
+        "Sally is a rompus."
+    ],
+    "label": 1,
+    "reasoning_steps": [
+        "Sally is a dumpus.",
+        "Sally is a gorpus.",
+        "Every gorpus is a zumpus.",
+        "Therefore, Sally is a zumpus.",
+        "Every zumpus is a romrus.",
+        "Therefore, Sally is a romrus."
+    ],
+    "reasoning_answer": 1,
+    "mistake_steps": [],
+    "reasoning_content": "Alright, let's try to figure out if Sally is a rompus based on the given premises. \n\nFirst, I see that Sally is a dumpus and a gorpus. Now, looking at the premises, it says that every gorpus is a zumpus. So if Sally is a gorpus, she must also be a zumpus. \n\nNext, it mentions that every tumpus is a zumpus as well. But Sally is a dumpus, not a tumpus, so that doesn't directly affect her. However, since Sally is a gorpus and hence a zumpus, she fits into the category of zumpuses.\n\nThen, there's a premise stating that every zumpus is a romrus. So if Sally is a zumpus, she must also be a romrus. \n\nPutting it all together: Sally is a dumpus and a gorpus → she's a zumpus → and since every zumpus is a romrus, Sally is a romrus. Therefore, the conclusion that Sally is a romrus seems to hold true based on the given premises.",
+    "content": "Thoughts:  \nSally is a dumpus.  \nSally is a gorpus.  \nEvery gorpus is a zumpus.  \nTherefore, Sally is a zumpus.  \nEvery zumpus is a romrus.  \nTherefore, Sally is a romrus.  \n\nAnswer:  \n(A) True",
+    "filter_reasoning_steps": [
+        "Sally is a dumpus.",
+        "Sally is a gorpus.",
+        "Every gorpus is a zumpus.",
+        null,
+        "Every zumpus is a romrus.",
+        null
+    ],
+    "premise:_fol": [
+        {
+            "ref": "(1) every tumpus is a shumpus.",
+            "fol": "∀x (tumpus(x) → shumpus(x))",
+            "tptp": "![X]: (tumpus(X) => shumpus(X))"
+        },
+        {
+            "ref": "(2) everything that is a gorpus, a vumpus, or a tumpus is a zumpus.",
+            "fol": "∀x ((gorpus(x) ∨ vumpus(x) ∨ tumpus(x)) → zumpus(x))",
+            "tptp": "![X]: ((gorpus(X) | vumpus(X) | tumpus(X)) => zumpus(X))"
+        },
+        {
+            "ref": "(3) every gorpus is a zumpus.",
+            "fol": "∀x (gorpus(x) → zumpus(x))",
+            "tptp": "![X]: (gorpus(X) => zumpus(X))"
+        },
+        {
+            "ref": "(4) every jompus is a yumpus.",
+            "fol": "∀x (jompus(x) → yumpus(x))",
+            "tptp": "![X]: (jompus(X) => yumpus(X))"
+        },
+        {
+            "ref": "(5) everything that is a lempus, a gorpus, or a dumpus is a lorpus.",
+            "fol": "∀x ((lempus(x) ∨ gorpus(x) ∨ dumpus(x)) → lorpus(x))",
+            "tptp": "![X]: ((lempus(X) | gorpus(X) | dumpus(X)) => lorpus(X))"
+        },
+        {
+            "ref": "(6) sterpuses are lorpuses.",
+            "fol": "∀x (sterpus(x) → lorpus(x))",
+            "tptp": "![X]: (sterpus(X) => lorpus(X))"
+        },
+        {
+            "ref": "(7) everything that is a gorpus, a vumpus, or a tumpus is a jompus.",
+            "fol": "∀x ((gorpus(x) ∨ vumpus(x) ∨ tumpus(x)) → jompus(x))",
+            "tptp": "![X]: ((gorpus(X) | vumpus(X) | tumpus(X)) => jompus(X))"
+        },
+        {
+            "ref": "(8) jompuses are sterpuses, tumpuses, and gorpuses.",
+            "fol": "∀x (jompus(x) → (sterpus(x) ∧ tumpus(x) ∧ gorpus(x)))",
+            "tptp": "![X]: (jompus(X) => (sterpus(X) & tumpus(X) & gorpus(X)))"
+        },
+        {
+            "ref": "(9) every tumpus is a rompus.",
+            "fol": "∀x (tumpus(x) → rompus(x))",
+            "tptp": "![X]: (tumpus(X) => rompus(X))"
+        },
+        {
+            "ref": "(10) sally is a dumpus.",
+            "fol": "dumpus(sally)",
+            "tptp": "dumpus(sally)"
+        },
+        {
+            "ref": "(11) sally is a gorpus.",
+            "fol": "gorpus(sally)",
+            "tptp": "gorpus(sally)"
+        }
+    ],
+    "conclusion:_fol": {
+        "ref": "(5) sally is a rompus.",
+        "fol": "rompus(sally)",
+        "tptp": "rompus(sally)"
+    },
+    "steps:_fol": [
+        {
+            "ref": "(1) sally is a dumpus.",
+            "fol": "dumpus(sally)",
+            "tptp": "dumpus(sally)"
+        },
+        {
+            "ref": "(2) sally is a gorpus.",
+            "fol": "gorpus(sally)",
+            "tptp": "gorpus(sally)"
+        },
+        {
+            "ref": "(3) every gorpus is a zumpus.",
+            "fol": "∀x (gorpus(x) → zumpus(x))",
+            "tptp": "![X]: (gorpus(X) => zumpus(X))"
+        },
+        {
+            "ref": "(4) every zumpus is a romrus.",
+            "fol": "∀x (zumpus(x) → romrus(x))",
+            "tptp": "![X]: (zumpus(X) => romrus(X))"
+        }
+    ],
+    "final_filter_reasoning_steps": [
+        "Sally is a dumpus.",
+        "Sally is a gorpus.",
+        "Every gorpus is a zumpus.",
+        "Every zumpus is a romrus."
+    ],
+    "AnswerCorrect": true,
+    "step_correctness_label": [
+        "True",
+        "True",
+        "True",
+        "Unknown"
+    ],
+    "has_valid_proof_path_label": false,
+    "cate": "T4"
+}

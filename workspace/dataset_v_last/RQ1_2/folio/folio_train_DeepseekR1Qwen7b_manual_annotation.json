@@ -1,0 +1,2918 @@
+[
+    {
+        "idx": "123_369",
+        "premises": [
+            "Businesses are either sanctioned or unsanctioned.",
+            "Sanctioned businesses are limited.",
+            "Unsanctioned businesses are free.",
+            "The Crude Oil Data Exchange is a business that isn't free."
+        ],
+        "question": [
+            "Crude Oil Data Exchange is limited."
+        ],
+        "premises_gt_fol": [
+            "∀x (Buisness(x) → Sanctioned(x) ⊕ ¬Sanctioned(x))",
+            "∀x (Buisness(x) ∧ Sanctioned(x) → Limited(x))",
+            "∀x (Buisness(x) ∧ ¬Sanctioned(x) → Free(x))",
+            "Buisness(crudeOilDataExchange) ∧ ¬Free(crudeOilDataExchange)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "The Crude Oil Data Exchange is not free.",
+            "it is not unsanctioned.",
+            "Since unsanctioned businesses are free, the business must be sanctioned.",
+            "All sanctioned businesses are limited.",
+            "The Crude Oil Data Exchange is limited."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Alright, I'm trying to figure out whether the conclusion that \"Crude Oil Data Exchange is limited\" is true based on the given premises. Let me break this down step by step.\n\nFirst, the premises state that businesses can be either sanctioned or unsanctioned. So, every business falls into one of these two categories. Then, it says that sanctioned businesses are limited, which I take to mean they have some restrictions or limitations. On the other hand, unsanctioned businesses are free, meaning they don't have any restrictions.\n\nNext, there's a specific business mentioned: The Crude Oil Data Exchange. It's given that this business isn't free. From the premises, unsanctioned businesses are free, so if it's not free, it can't be unsanctioned. Therefore, it must be classified as a sanctioned business.\n\nSince all sanctioned businesses are limited, as per the premises, it follows that The Crude Oil Data Exchange, being a sanctioned business, is limited. There's no information or logical step that would suggest otherwise. The premises don't provide any exceptions or additional conditions that would change this conclusion.\n\nSo, putting it all together: The business isn't free, so it's not unsanctioned. Therefore, it must be sanctioned, and thus limited. The conclusion seems solid based on the given information.",
+        "content": "The Crude Oil Data Exchange is not free, so it is not unsanctioned. Since unsanctioned businesses are free, the business must be sanctioned. All sanctioned businesses are limited, so The Crude Oil Data Exchange is limited.\n\nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "The Crude Oil Data Exchange is not free.",
+            "it is not unsanctioned.",
+            "Since unsanctioned businesses are free, the business must be sanctioned.",
+            "All sanctioned businesses are limited.",
+            "The Crude Oil Data Exchange is limited."
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) businesses are either sanctioned or unsanctioned.",
+                "fol": "∀x (sanctioned(x) ⊕ unsanctioned(x))",
+                "tptp": "![X]: (((~(sanctioned(X)) & (unsanctioned(X))) | ((sanctioned(X)) & ~(unsanctioned(X)))))"
+            },
+            {
+                "ref": "(2) sanctioned businesses are limited.",
+                "fol": "∀x (sanctioned(x) → limited(x))",
+                "tptp": "![X]: (sanctioned(X) => limited(X))"
+            },
+            {
+                "ref": "(3) unsanctioned businesses are free.",
+                "fol": "∀x (unsanctioned(x) → free(x))",
+                "tptp": "![X]: (unsanctioned(X) => free(X))"
+            },
+            {
+                "ref": "(4) the crude oil data exchange is a business that isn't free.",
+                "fol": "business(crudeoildataexchange) ∧ ¬free(crudeoildataexchange)",
+                "tptp": "business(crudeoildataexchange) & ~free(crudeoildataexchange)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(6) crude oil data exchange is limited.",
+            "fol": "limited(crudeoildataexchange)",
+            "tptp": "limited(crudeoildataexchange)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) the crude oil data exchange is not free.",
+                "fol": "¬free(crudeoildataexchange)",
+                "tptp": "~free(crudeoildataexchange)"
+            },
+            {
+                "ref": "(2) it is not unsanctioned.",
+                "fol": "¬unsanctioned(crudeoildataexchange)",
+                "tptp": "~unsanctioned(crudeoildataexchange)"
+            },
+            {
+                "ref": "(3) since unsanctioned businesses are free, the business must be sanctioned.",
+                "fol": "(unsanctioned(crudeoildataexchange) → free(crudeoildataexchange)) → sanctioned(crudeoildataexchange)",
+                "tptp": "(unsanctioned(crudeoildataexchange) => free(crudeoildataexchange)) => sanctioned(crudeoildataexchange)"
+            },
+            {
+                "ref": "(4) all sanctioned businesses are limited.",
+                "fol": "∀x (sanctioned(x) → limited(x))",
+                "tptp": "![X]: (sanctioned(X) => limited(X))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "The Crude Oil Data Exchange is not free.",
+            "it is not unsanctioned.",
+            "Since unsanctioned businesses are free, the business must be sanctioned.",
+            "All sanctioned businesses are limited."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "428_1216",
+        "premises": [
+            "All devices belonging to the company are connected to Google Home. ",
+            "All devices with the company logo belong to the company. ",
+            "Each device either has the company logo or belongs to employees. ",
+            "All of the devices belonging to employees can be connected to the company's wifi. ",
+            "All of the devices connected to Google Home are controlled by managers. ",
+            "All of the devices that connect to the company's wifi are easy to operate. ",
+            "All of the devices that are easy to operate were produced after a new CTO is appointed. ",
+            "ModelXX was not produced after a new CTO was appointed."
+        ],
+        "question": [
+            "ModelXX is either produced after a new CTO was appointed or it is controlled by managers."
+        ],
+        "premises_gt_fol": [
+            "∀x ((Devices(x) ∧ BelongTo(x, company)) → ConnectTo(x, googleHome))",
+            "∀x ((Devices(x) ∧ With(x, companyLogo)) → BelongTo(x, company))",
+            "∀x ((Devices(x) → (With(x, companyLogo) ⊕ BelongTo(x, employee)))",
+            "∀x ((Devices(x) ∧ BelongTo(x, employee)) → CanBeConnectedTo(x, wifi))",
+            "∀x ((Devices(x) ∧ ConnectTo(x, googleHome)) → ControlledBy(x, manager))",
+            "∀x ((Devices(x) ∧ CanBeConnectedTo(x, wifi)) → EasyToOperate(x))",
+            "∀x ((Devices(x) ∧ EasyToOperate(x)) → ProducedAfterNewCTOAppointed(x, company))",
+            "Devices(modelXX) ∧ (¬ProducedAfterNewCTOAppointed(modelXX, company))"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "ModelXX was not produced after a new CTO was appointed.",
+            "All devices that are easy to operate were produced after a new CTO is appointed.",
+            "Therefore, ModelXX is not easy to operate.",
+            "From premise 6, devices that connect to the company's wifi are easy to operate.",
+            "From premise 4, devices belonging to employees can connect to the company's wifi.",
+            "From premise 2, devices with the company logo belong to the company.",
+            "From premise 3, each device either has the company logo or belongs to employees.",
+            "Therefore, devices that belong to employees are easy to operate.",
+            "From premise 7, easy to operate devices were produced after a new CTO.",
+            "However, ModelXX was not produced after a new CTO.",
+            "Therefore, ModelXX does not belong to employees.",
+            "From premise 1, all devices belonging to the company are connected to Google Home.",
+            "Therefore, ModelXX is connected to Google Home.",
+            "From premise 5, all devices connected to Google Home are controlled by managers.",
+            "Therefore, ModelXX is controlled by managers.",
+            "Hence, ModelXX is either produced after a new CTO or controlled by managers."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Alright, let's try to figure this out step by step. So, I have a set of premises and a conclusion to evaluate. The conclusion is: \"ModelXX is either produced after a new CTO was appointed or it is controlled by managers.\" I need to determine if this conclusion is true or false based on the given premises.\n\nFirst, I'll list out all the premises to make sure I don't miss anything:\n\n1. All devices belonging to the company are connected to Google Home.\n2. All devices with the company logo belong to the company.\n3. Each device either has the company logo or belongs to employees.\n4. All of the devices belonging to employees can be connected to the company's wifi.\n5. All of the devices connected to Google Home are controlled by managers.\n6. All of the devices that connect to the company's wifi are easy to operate.\n7. All of the devices that are easy to operate were produced after a new CTO is appointed.\n8. ModelXX was not produced after a new CTO was appointed.\n\nOkay, so I need to see if ModelXX fits into either being produced after a CTO or being controlled by managers.\n\nStarting with ModelXX: Premise 8 says it wasn't produced after a new CTO. So, according to premise 7, if a device is easy to operate, it was produced after a CTO. But since ModelXX wasn't produced after a CTO, it's not easy to operate. Wait, no, premise 7 is a general statement: all devices that are easy to operate were produced after a CTO. So, the contrapositive would be: if a device was not produced after a CTO, then it's not easy to operate. But ModelXX wasn't produced after a CTO, so it's not easy to operate. \n\nNow, what does it mean for a device to be easy to operate? From premise 6, devices that connect to the company's wifi are easy to operate. From premise 4, devices belonging to employees can connect to the company's wifi. But from premise 2, devices with the company logo belong to the company, and from premise 3, each device either has the company logo or belongs to employees. So, devices that belong to employees can connect to the company's wifi, meaning they are easy to operate. But ModelXX's origin isn't specified yet.\n\nWait, ModelXX's category isn't given. It could be a device belonging to the company, an employee device, or something else. Let's consider possibilities.\n\nIf ModelXX is a device belonging to the company (premise 1), then it's connected to Google Home (premise 1). From premise 5, connected devices are controlled by managers. So, ModelXX would be controlled by managers, making the conclusion true because it's either controlled by managers or produced after a CTO (but it wasn't produced after a CTO, so it's controlled by managers).\n\nIf ModelXX belongs to employees, then from premise 4, it can connect to the company's wifi, making it easy to operate (premise 6). From premise 7, easy to operate implies produced after a CTO, but ModelXX wasn't produced after a CTO. This creates a contradiction. Therefore, ModelXX can't belong to employees because that would imply it was produced after a CTO, which it wasn't.\n\nAlternatively, if ModelXX isn't a company device or an employee device, perhaps it's something else. But from premise 3, every device has the company logo or belongs to employees. So, ModelXX must either have the company logo (thus belong to the company) or belong to employees. But we saw that if it belonged to employees, it would have to be produced after a CTO, which it wasn't. Therefore, the only possibility is that ModelXX belongs to the company, making it connected to Google Home and thus controlled by managers.\n\nTherefore, the conclusion that ModelXX is either produced after a CTO or controlled by managers is true because it's controlled by managers.",
+        "content": "1) ModelXX was not produced after a new CTO was appointed.\n2) All devices that are easy to operate were produced after a new CTO is appointed.\n3) Therefore, ModelXX is not easy to operate.\n4) From premise 6, devices that connect to the company's wifi are easy to operate.\n5) From premise 4, devices belonging to employees can connect to the company's wifi.\n6) From premise 2, devices with the company logo belong to the company.\n7) From premise 3, each device either has the company logo or belongs to employees.\n8) Therefore, devices that belong to employees are easy to operate.\n9) From premise 7, easy to operate devices were produced after a new CTO.\n10) However, ModelXX was not produced after a new CTO.\n11) Therefore, ModelXX does not belong to employees.\n12) From premise 1, all devices belonging to the company are connected to Google Home.\n13) Therefore, ModelXX is connected to Google Home.\n14) From premise 5, all devices connected to Google Home are controlled by managers.\n15) Therefore, ModelXX is controlled by managers.\n16) Hence, ModelXX is either produced after a new CTO or controlled by managers.\n\nAnswer: (A) True",
+        "filter_reasoning_steps": [
+            "ModelXX was not produced after a new CTO was appointed.",
+            "All devices that are easy to operate were produced after a new CTO is appointed.",
+            null,
+            "From premise 6, devices that connect to the company's wifi are easy to operate.",
+            "From premise 4, devices belonging to employees can connect to the company's wifi.",
+            "From premise 2, devices with the company logo belong to the company.",
+            "From premise 3, each device either has the company logo or belongs to employees.",
+            null,
+            "From premise 7, easy to operate devices were produced after a new CTO.",
+            null,
+            null,
+            "From premise 1, all devices belonging to the company are connected to Google Home.",
+            null,
+            "From premise 5, all devices connected to Google Home are controlled by managers.",
+            null,
+            "Hence, ModelXX is either produced after a new CTO or controlled by managers."
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) all devices belonging to the company are connected to google home.",
+                "fol": "∀x (belongcompany(x) → connectedgooglehome(x))",
+                "tptp": "![X]: (belongcompany(X) => connectedgooglehome(X))"
+            },
+            {
+                "ref": "(2) all devices with the company logo belong to the company.",
+                "fol": "∀x (companylogo(x) → belongcompany(x))",
+                "tptp": "![X]: (companylogo(X) => belongcompany(X))"
+            },
+            {
+                "ref": "(3) each device either has the company logo or belongs to employees.",
+                "fol": "∀x (companylogo(x) ⊕ belongemployees(x))",
+                "tptp": "![X]: (((~(companylogo(X)) & (belongemployees(X))) | ((companylogo(X)) & ~(belongemployees(X)))))"
+            },
+            {
+                "ref": "(4) all of the devices belonging to employees can be connected to the company's wifi.",
+                "fol": "∀x (belongemployees(x) → connectcompanywifi(x))",
+                "tptp": "![X]: (belongemployees(X) => connectcompanywifi(X))"
+            },
+            {
+                "ref": "(5) all of the devices connected to google home are controlled by managers.",
+                "fol": "∀x (connectedgooglehome(x) → controlledmanagers(x))",
+                "tptp": "![X]: (connectedgooglehome(X) => controlledmanagers(X))"
+            },
+            {
+                "ref": "(6) all of the devices that connect to the company's wifi are easy to operate.",
+                "fol": "∀x (connectcompanywifi(x) → easyoperate(x))",
+                "tptp": "![X]: (connectcompanywifi(X) => easyoperate(X))"
+            },
+            {
+                "ref": "(7) all of the devices that are easy to operate were produced after a new cto is appointed.",
+                "fol": "∀x (easyoperate(x) → producedaftercto(x))",
+                "tptp": "![X]: (easyoperate(X) => producedaftercto(X))"
+            },
+            {
+                "ref": "(8) modelxx was not produced after a new cto was appointed.",
+                "fol": "¬producedaftercto(modelxx)",
+                "tptp": "~producedaftercto(modelxx)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(11) modelxx is either produced after a new cto was appointed or it is controlled by managers.",
+            "fol": "controlledmanagers(modelxx) ∨ producedaftercto(modelxx)",
+            "tptp": "controlledmanagers(modelxx) | producedaftercto(modelxx)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) modelxx was not produced after a new cto was appointed.",
+                "fol": "¬producedaftercto(modelxx)",
+                "tptp": "~producedaftercto(modelxx)"
+            },
+            {
+                "ref": "(2) all devices that are easy to operate were produced after a new cto is appointed.",
+                "fol": "∀x (easyoperate(x) → producedaftercto(x))",
+                "tptp": "![X]: (easyoperate(X) => producedaftercto(X))"
+            },
+            {
+                "ref": "(3) from premise 6, devices that connect to the company's wifi are easy to operate.",
+                "fol": "∀x (connectcompanywifi(x) → easyoperate(x))",
+                "tptp": "![X]: (connectcompanywifi(X) => easyoperate(X))"
+            },
+            {
+                "ref": "(4) from premise 4, devices belonging to employees can connect to the company's wifi.",
+                "fol": "∀x (belongemployees(x) → connectcompanywifi(x))",
+                "tptp": "![X]: (belongemployees(X) => connectcompanywifi(X))"
+            },
+            {
+                "ref": "(5) from premise 2, devices with the company logo belong to the company.",
+                "fol": "∀x (companylogo(x) → belongcompany(x))",
+                "tptp": "![X]: (companylogo(X) => belongcompany(X))"
+            },
+            {
+                "ref": "(6) from premise 3, each device either has the company logo or belongs to employees.",
+                "fol": "∀x (companylogo(x) ⊕ belongemployees(x))",
+                "tptp": "![X]: (((~(companylogo(X)) & (belongemployees(X))) | ((companylogo(X)) & ~(belongemployees(X)))))"
+            },
+            {
+                "ref": "(7) from premise 7, easy to operate devices were produced after a new cto.",
+                "fol": "∀x (easyoperate(x) → producedaftercto(x))",
+                "tptp": "![X]: (easyoperate(X) => producedaftercto(X))"
+            },
+            {
+                "ref": "(8) from premise 1, all devices belonging to the company are connected to google home.",
+                "fol": "∀x (belongcompany(x) → connectedgooglehome(x))",
+                "tptp": "![X]: (belongcompany(X) => connectedgooglehome(X))"
+            },
+            {
+                "ref": "(9) from premise 5, all devices connected to google home are controlled by managers.",
+                "fol": "∀x (connectedgooglehome(x) → controlledmanagers(x))",
+                "tptp": "![X]: (connectedgooglehome(X) => controlledmanagers(X))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "ModelXX was not produced after a new CTO was appointed.",
+            "All devices that are easy to operate were produced after a new CTO is appointed.",
+            "From premise 6, devices that connect to the company's wifi are easy to operate.",
+            "From premise 4, devices belonging to employees can connect to the company's wifi.",
+            "From premise 2, devices with the company logo belong to the company.",
+            "From premise 3, each device either has the company logo or belongs to employees.",
+            "From premise 7, easy to operate devices were produced after a new CTO.",
+            "From premise 1, all devices belonging to the company are connected to Google Home.",
+            "From premise 5, all devices connected to Google Home are controlled by managers."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "484_1415",
+        "premises": [
+            "No songs are visuals. ",
+            "All folk songs are songs. ",
+            "All videos are visuals. ",
+            "All movies are videos.",
+            "All sci-fi movies are movies.",
+            "Inception is a sci-fi movie.",
+            "Mac is neither a folk song nor a sci-fi movie."
+        ],
+        "question": [
+            "Inception is a folk song."
+        ],
+        "premises_gt_fol": [
+            "∀x (Song(x) → ¬Visual(x))",
+            "∀x (FolkSong(x) → Song(x))",
+            "∀x (Video(x) → Visual(x))",
+            "∀x (Movie(x) → Video(x))",
+            "∀x (ScifiMovie(x) → Movie(x))",
+            "ScifiMovie(inception)",
+            "¬FolkSong(mac) ∧ ¬ScifiMovie(mac)"
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "Inception is a scifi movie.",
+            "All scifi movies are movies.",
+            "Therefore, Inception is a movie.",
+            "All movies are videos.",
+            "Therefore, Inception is a video.",
+            "All videos are visuals.",
+            "Therefore, Inception is a visual.",
+            "No songs are visuals.",
+            "Therefore, Inception is not a song.",
+            "All folk songs are songs.",
+            "Therefore, Inception is not a folk song."
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "reasoning_content": "Alright, let's try to figure out whether the conclusion \"Inception is a folk song\" is true or false based on the given premises. \n\nFirst, I'll list out all the premises to make sure I don't miss anything:\n\n1. No songs are visuals.\n2. All folk songs are songs.\n3. All videos are visuals.\n4. All movies are videos.\n5. All sci-fi movies are movies.\n6. Inception is a sci-fi movie.\n7. Mac is neither a folk song nor a sci-fi movie.\n\nThe conclusion we need to evaluate is: Inception is a folk song.\n\nLet me break this down step by step.\n\nStarting with premise 6: Inception is a sci-fi movie. From premise 5, all sci-fi movies are movies. So, Inception is a movie.\n\nFrom premise 4, all movies are videos. Therefore, since Inception is a movie, it must also be a video.\n\nPremise 3 states that all videos are visuals. So, Inception being a video means it's a visual.\n\nLooking at premise 2, all folk songs are songs. But premise 1 says no songs are visuals. This means that if something is a song, it can't be a visual. Since Inception is a visual (from premises 3 and 4), it can't be a song. Therefore, Inception can't be a folk song because folk songs are a subset of songs, and songs aren't visuals.\n\nAdditionally, premise 7 tells us that Mac is neither a folk song nor a sci-fi movie. But since Inception is a sci-fi movie, that doesn't directly affect our conclusion about Inception being a folk song.\n\nSo, putting it all together, Inception is a sci-fi movie, which makes it a video and a visual. But since all songs (including folk songs) are not visuals, Inception can't be a song, let alone a folk song. Therefore, the conclusion that Inception is a folk song must be false.",
+        "content": "1) Inception is a sci-fi movie.\n2) All sci-fi movies are movies.\n3) Therefore, Inception is a movie.\n4) All movies are videos.\n5) Therefore, Inception is a video.\n6) All videos are visuals.\n7) Therefore, Inception is a visual.\n8) No songs are visuals.\n9) Therefore, Inception is not a song.\n10) All folk songs are songs.\n11) Therefore, Inception is not a folk song.\nAnswer: (B) False",
+        "filter_reasoning_steps": [
+            "Inception is a scifi movie.",
+            "All scifi movies are movies.",
+            null,
+            "All movies are videos.",
+            null,
+            "All videos are visuals.",
+            null,
+            "No songs are visuals.",
+            null,
+            "All folk songs are songs.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) no songs are visuals.",
+                "fol": "∀x (song(x) → ¬visual(x))",
+                "tptp": "![X]: (song(X) => ~visual(X))"
+            },
+            {
+                "ref": "(2) all folk songs are songs.",
+                "fol": "∀x (folksong(x) → song(x))",
+                "tptp": "![X]: (folksong(X) => song(X))"
+            },
+            {
+                "ref": "(3) all videos are visuals.",
+                "fol": "∀x (video(x) → visual(x))",
+                "tptp": "![X]: (video(X) => visual(X))"
+            },
+            {
+                "ref": "(4) all movies are videos.",
+                "fol": "∀x (movie(x) → video(x))",
+                "tptp": "![X]: (movie(X) => video(X))"
+            },
+            {
+                "ref": "(5) all sci-fi movies are movies.",
+                "fol": "∀x (scifimovie(x) → movie(x))",
+                "tptp": "![X]: (scifimovie(X) => movie(X))"
+            },
+            {
+                "ref": "(6) inception is a sci-fi movie.",
+                "fol": "scifimovie(inception)",
+                "tptp": "scifimovie(inception)"
+            },
+            {
+                "ref": "(7) mac is neither a folk song nor a sci-fi movie.",
+                "fol": "¬(folksong(mac) ∨ scifimovie(mac))",
+                "tptp": "~(folksong(mac) | scifimovie(mac))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(7) inception is a folk song.",
+            "fol": "folksong(inception)",
+            "tptp": "folksong(inception)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) inception is a scifi movie.",
+                "fol": "scifimovie(inception)",
+                "tptp": "scifimovie(inception)"
+            },
+            {
+                "ref": "(2) all scifi movies are movies.",
+                "fol": "∀x (scifimovie(x) → movie(x))",
+                "tptp": "![X]: (scifimovie(X) => movie(X))"
+            },
+            {
+                "ref": "(3) all movies are videos.",
+                "fol": "∀x (movie(x) → video(x))",
+                "tptp": "![X]: (movie(X) => video(X))"
+            },
+            {
+                "ref": "(4) all videos are visuals.",
+                "fol": "∀x (video(x) → visual(x))",
+                "tptp": "![X]: (video(X) => visual(X))"
+            },
+            {
+                "ref": "(5) no songs are visuals.",
+                "fol": "∀x (song(x) → ¬visual(x))",
+                "tptp": "![X]: (song(X) => ~visual(X))"
+            },
+            {
+                "ref": "(6) all folk songs are songs.",
+                "fol": "∀x (folksong(x) → song(x))",
+                "tptp": "![X]: (folksong(X) => song(X))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Inception is a scifi movie.",
+            "All scifi movies are movies.",
+            "All movies are videos.",
+            "All videos are visuals.",
+            "No songs are visuals.",
+            "All folk songs are songs."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "92_282",
+        "premises": [
+            "Adventures of Rusty is a drama film and children's film.",
+            "Columbia Pictures produced Adventures of Rusty.",
+            "Tintin was produced by Paramount.",
+            "Tintin is an adventure film."
+        ],
+        "question": [
+            "Paramount produces adventure films."
+        ],
+        "premises_gt_fol": [
+            "DramaFilm(adventuresOfRusty) ∧ ChildrensFilm(adventuresOfRusty)",
+            "Produces(columbiaPictures, adventuresOfRusty)",
+            "Produces(paramount, tintin)",
+            "AdventureFilm(tintin)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Premises:",
+            "Adventures of Rusty is a drama film and children's film.",
+            "Columbia Pictures produced Adventures of Rusty.",
+            "Tintin was produced by Paramount.",
+            "Tintin is an adventure film.",
+            "Conclusion:",
+            "Paramount produces adventure films.",
+            "Therefore, Paramount produces adventure films."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, let's break this down. The premises say that Adventures of Rusty is both a drama and a children's film, and it was produced by Columbia Pictures. Then, Tintin was produced by Paramount and is an adventure film. The conclusion is that Paramount produces adventure films. \n\nHmm, so Tintin is an adventure film made by Paramount. That directly connects Paramount producing an adventure film. But the premises only talk about Tintin being produced by Paramount, not necessarily that Paramount only makes adventure films. It's possible that Paramount makes other genres too, but since Tintin is an adventure film, it's evidence that they do produce them. So the conclusion seems to follow from the premises.",
+        "content": "Premises:\nAdventures of Rusty is a drama film and children's film.\nColumbia Pictures produced Adventures of Rusty.\nTintin was produced by Paramount.\nTintin is an adventure film.\nConclusion:\nParamount produces adventure films.\n\nThoughts:\nTintin is an adventure film. Tintin was produced by Paramount. Therefore, Paramount produces adventure films.\nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            null,
+            "Adventures of Rusty is a drama film and children's film.",
+            "Columbia Pictures produced Adventures of Rusty.",
+            "Tintin was produced by Paramount.",
+            "Tintin is an adventure film.",
+            null,
+            "Paramount produces adventure films.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) adventures of rusty is a drama film and children's film.",
+                "fol": "dramafilm(adventuresofrusty) ∧ childrensfilm(adventuresofrusty)",
+                "tptp": "dramafilm(adventuresofrusty) & childrensfilm(adventuresofrusty)"
+            },
+            {
+                "ref": "(2) columbia pictures produced adventures of rusty.",
+                "fol": "producedby(adventuresofrusty, columbiapictures)",
+                "tptp": "producedby(adventuresofrusty, columbiapictures)"
+            },
+            {
+                "ref": "(3) tintin was produced by paramount.",
+                "fol": "producedby(tintin, paramount)",
+                "tptp": "producedby(tintin, paramount)"
+            },
+            {
+                "ref": "(4) tintin is an adventure film.",
+                "fol": "adventurefilm(tintin)",
+                "tptp": "adventurefilm(tintin)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(6) paramount produces adventure films.",
+            "fol": "∃x (producedby(x, paramount) ∧ adventurefilm(x))",
+            "tptp": "?[X]: (producedby(X, paramount) & adventurefilm(X))"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) adventures of rusty is a drama film and children's film.",
+                "fol": "dramafilm(adventuresofrusty) ∧ childrensfilm(adventuresofrusty)",
+                "tptp": "dramafilm(adventuresofrusty) & childrensfilm(adventuresofrusty)"
+            },
+            {
+                "ref": "(2) columbia pictures produced adventures of rusty.",
+                "fol": "producedby(adventuresofrusty, columbiapictures)",
+                "tptp": "producedby(adventuresofrusty, columbiapictures)"
+            },
+            {
+                "ref": "(3) tintin was produced by paramount.",
+                "fol": "producedby(tintin, paramount)",
+                "tptp": "producedby(tintin, paramount)"
+            },
+            {
+                "ref": "(4) tintin is an adventure film.",
+                "fol": "adventurefilm(tintin)",
+                "tptp": "adventurefilm(tintin)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Adventures of Rusty is a drama film and children's film.",
+            "Columbia Pictures produced Adventures of Rusty.",
+            "Tintin was produced by Paramount.",
+            "Tintin is an adventure film."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "484_1417",
+        "premises": [
+            "No songs are visuals. ",
+            "All folk songs are songs. ",
+            "All videos are visuals. ",
+            "All movies are videos.",
+            "All sci-fi movies are movies.",
+            "Inception is a sci-fi movie.",
+            "Mac is neither a folk song nor a sci-fi movie."
+        ],
+        "question": [
+            "Inception is either a video or a folk song."
+        ],
+        "premises_gt_fol": [
+            "∀x (Song(x) → ¬Visual(x))",
+            "∀x (FolkSong(x) → Song(x))",
+            "∀x (Video(x) → Visual(x))",
+            "∀x (Movie(x) → Video(x))",
+            "∀x (ScifiMovie(x) → Movie(x))",
+            "ScifiMovie(inception)",
+            "¬FolkSong(mac) ∧ ¬ScifiMovie(mac)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Inception is a scifi movie.",
+            "All scifi movies are movies.",
+            "Therefore, Inception is a movie.",
+            "All movies are videos.",
+            "Therefore, Inception is a video.",
+            "All videos are visuals.",
+            "All songs are not visuals (from premise\n.",
+            "Therefore, Inception is not a song.",
+            "All folk songs are songs.",
+            "Therefore, Inception is not a folk song.",
+            "The conclusion states Inception is either a video or a folk song.",
+            "Since Inception is a video, the conclusion holds true."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, so I need to figure out whether the conclusion \"Inception is either a video or a folk song.\" is true or false based on the given premises. Let me break this down step by step.\n\nFirst, let me list out all the premises to make sure I don't miss anything:\n\n1. No songs are visuals.\n2. All folk songs are songs.\n3. All videos are visuals.\n4. All movies are videos.\n5. All sci-fi movies are movies.\n6. Inception is a sci-fi movie.\n7. Mac is neither a folk song nor a sci-fi movie.\n\nAnd the conclusion is that Inception is either a video or a folk song.\n\nAlright, starting with premise 6: Inception is a sci-fi movie. According to premise 5, all sci-fi movies are movies. So that means Inception is a movie.\n\nNext, premise 4 says all movies are videos. So since Inception is a movie, it must also be a video. That seems straightforward.\n\nWait, but let me check if there's any possibility that Inception isn't a video. No, because it's a movie, and all movies are videos. So Inception is definitely a video.\n\nNow, looking at the conclusion: it says Inception is either a video or a folk song. Since we've established Inception is a video, that makes the conclusion true. However, I should make sure that there's no other way Inception could be a folk song.\n\nPremise 2 states all folk songs are songs. But premise 1 says no songs are visuals, and premise 3 says all videos are visuals. So if Inception is a video, it can't be a song. But can it be a folk song? Well, if a folk song is a type of song, and no songs are visuals, but Inception is a video (which is a visual), so it can't be a song at all. Therefore, Inception can't be a folk song because that would require it to be a song, which it can't be.\n\nSo the conclusion is that Inception is either a video or a folk song, but actually, it's only a video. So the conclusion is true because it includes the possibility of being a video, which it is. The \"or\" doesn't exclude the fact that it could also be a video; it's just that the \"or\" is true because at least one of the options is correct.\n\nWait, but does the conclusion require that it must be one or the other, or just that it could be one of them? The conclusion is stating that it's either a video or a folk song, which is true because it is a video. So the conclusion is true because it's correct that Inception is either a video or a folk song. Even though it's only a video, the statement is still true because it covers both possibilities.\n\nI think that's the reasoning. So the answer should be True.",
+        "content": "1) Inception is a sci-fi movie.\n2) All sci-fi movies are movies.\n3) Therefore, Inception is a movie.\n4) All movies are videos.\n5) Therefore, Inception is a video.\n6) All videos are visuals.\n7) All songs are not visuals (from premise 1).\n8) Therefore, Inception is not a song.\n9) All folk songs are songs.\n10) Therefore, Inception is not a folk song.\n11) The conclusion states Inception is either a video or a folk song.\n12) Since Inception is a video, the conclusion holds true.\n\nAnswer: (A) True",
+        "filter_reasoning_steps": [
+            "Inception is a scifi movie.",
+            "All scifi movies are movies.",
+            null,
+            "All movies are videos.",
+            null,
+            "All videos are visuals.",
+            "All songs are not visuals (from premise\n.",
+            null,
+            "All folk songs are songs.",
+            null,
+            null,
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) no songs are visuals.",
+                "fol": "∀x (song(x) → ¬visual(x))",
+                "tptp": "![X]: (song(X) => ~visual(X))"
+            },
+            {
+                "ref": "(2) all folk songs are songs.",
+                "fol": "∀x (folksong(x) → song(x))",
+                "tptp": "![X]: (folksong(X) => song(X))"
+            },
+            {
+                "ref": "(3) all videos are visuals.",
+                "fol": "∀x (video(x) → visual(x))",
+                "tptp": "![X]: (video(X) => visual(X))"
+            },
+            {
+                "ref": "(4) all movies are videos.",
+                "fol": "∀x (movie(x) → video(x))",
+                "tptp": "![X]: (movie(X) => video(X))"
+            },
+            {
+                "ref": "(5) all sci-fi movies are movies.",
+                "fol": "∀x (scifimovie(x) → movie(x))",
+                "tptp": "![X]: (scifimovie(X) => movie(X))"
+            },
+            {
+                "ref": "(6) inception is a sci-fi movie.",
+                "fol": "scifimovie(inception)",
+                "tptp": "scifimovie(inception)"
+            },
+            {
+                "ref": "(7) mac is neither a folk song nor a sci-fi movie.",
+                "fol": "¬(folksong(mac) ∨ scifimovie(mac))",
+                "tptp": "~(folksong(mac) | scifimovie(mac))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(7) inception is either a video or a folk song.",
+            "fol": "video(inception) ∨ folksong(inception)",
+            "tptp": "video(inception) | folksong(inception)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) inception is a scifi movie.",
+                "fol": "scifimovie(inception)",
+                "tptp": "scifimovie(inception)"
+            },
+            {
+                "ref": "(2) all scifi movies are movies.",
+                "fol": "∀x (scifimovie(x) → movie(x))",
+                "tptp": "![X]: (scifimovie(X) => movie(X))"
+            },
+            {
+                "ref": "(3) all movies are videos.",
+                "fol": "∀x (movie(x) → video(x))",
+                "tptp": "![X]: (movie(X) => video(X))"
+            },
+            {
+                "ref": "(4) all videos are visuals.",
+                "fol": "∀x (video(x) → visual(x))",
+                "tptp": "![X]: (video(X) => visual(X))"
+            },
+            {
+                "ref": "(5) all songs are not visuals (from premise).",
+                "fol": "∀x (song(x) → ¬visual(x))",
+                "tptp": "![X]: (song(X) => ~visual(X))"
+            },
+            {
+                "ref": "(6) all folk songs are songs.",
+                "fol": "∀x (folksong(x) → song(x))",
+                "tptp": "![X]: (folksong(X) => song(X))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Inception is a scifi movie.",
+            "All scifi movies are movies.",
+            "All movies are videos.",
+            "All videos are visuals.",
+            "All songs are not visuals (from premise\n.",
+            "All folk songs are songs."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "123_367",
+        "premises": [
+            "Businesses are either sanctioned or unsanctioned.",
+            "Sanctioned businesses are limited.",
+            "Unsanctioned businesses are free.",
+            "The Crude Oil Data Exchange is a business that isn't free."
+        ],
+        "question": [
+            "Crude Oil Data Exchange is sanctioned."
+        ],
+        "premises_gt_fol": [
+            "∀x (Buisness(x) → Sanctioned(x) ⊕ ¬Sanctioned(x))",
+            "∀x (Buisness(x) ∧ Sanctioned(x) → Limited(x))",
+            "∀x (Buisness(x) ∧ ¬Sanctioned(x) → Free(x))",
+            "Buisness(crudeOilDataExchange) ∧ ¬Free(crudeOilDataExchange)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Businesses are either sanctioned or unsanctioned.",
+            "The Crude Oil Data Exchange is a business.",
+            "The Crude Oil Data Exchange is either sanitized or unsanctioned.",
+            "The Crude Oil Data Exchange isn't free.",
+            "Unsanctioned businesses are free.",
+            "Since the Crude Oil Data Exchange isn't free, it isn't unsanctioned.",
+            "Therefore, it must be sanctioned.",
+            "All unsanctioned businesses are free.",
+            "The Crude Oil Data Exchange is a business that isn't free, hence it is unsanctioned.",
+            "Wait, no, that's not right.",
+            "Let me correct that.",
+            "If unsanctioned businesses are free, and the Crude Oil Data Exchange isn't free, then it can't be unsanctioned.",
+            "Therefore, it must be sanitized.",
+            "So, the conclusion that the Crude Oil Data Exchange is sanitized is supported by the premises."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Alright, let's try to figure out whether the conclusion is true or false based on the given premises. So, the premises are about businesses being either sanctioned or unsanctioned. Sanctioned businesses are limited, while unsanctioned ones are free. There's a specific business called the Crude Oil Data Exchange, and it's stated that this business isn't free. The conclusion is that this business is sanctioned.\n\nFirst, I need to break down the information step by step. The first premise says that businesses are either sanctioned or unsanctioned. That means every business falls into one of these two categories; there's no middle ground. So, the Crude Oil Data Exchange must be either sanctioned or unsanctioned.\n\nNext, it's mentioned that sanctioned businesses are limited. I'm not sure what \"limited\" means here—could it mean they have certain restrictions or maybe they're smaller in size? Regardless, the key point is that they're categorized as limited in some way. On the other hand, unsanctioned businesses are free. So, if a business isn't free, it can't be unsanctioned. \n\nThe Crude Oil Data Exchange isn't free, according to the premises. Since unsanctioned businesses are free, that means this business can't be unsanctioned. Therefore, the only remaining option is that it's sanctioned. \n\nPutting this together, because the business isn't free, and unsanctioned businesses are free, it must be that the business is sanctioned. So, the conclusion that the Crude Oil Data Exchange is sanctioned seems to be supported by the premises. \n\nI don't see any contradictions or missing information that would make this conclusion false. The premises clearly state the categories and the nature of each, so following those logically leads to the conclusion being true.",
+        "content": "1) Businesses are either sanctioned or unsanctioned.\n2) The Crude Oil Data Exchange is a business.\n3) The Crude Oil Data Exchange is either sanitized or unsanctioned.\n4) The Crude Oil Data Exchange isn't free.\n5) Unsanctioned businesses are free.\n6) Since the Crude Oil Data Exchange isn't free, it isn't unsanctioned.\n7) Therefore, it must be sanctioned.\n8) All unsanctioned businesses are free.\n9) The Crude Oil Data Exchange is a business that isn't free, hence it is unsanctioned.\n10) Wait, no, that's not right. Let me correct that. If unsanctioned businesses are free, and the Crude Oil Data Exchange isn't free, then it can't be unsanctioned. Therefore, it must be sanitized.\n11) So, the conclusion that the Crude Oil Data Exchange is sanitized is supported by the premises.\n\nAnswer: (A) True",
+        "filter_reasoning_steps": [
+            "Businesses are either sanctioned or unsanctioned.",
+            "The Crude Oil Data Exchange is a business.",
+            "The Crude Oil Data Exchange is either sanitized or unsanctioned.",
+            "The Crude Oil Data Exchange isn't free.",
+            "Unsanctioned businesses are free.",
+            "Since the Crude Oil Data Exchange isn't free, it isn't unsanctioned.",
+            null,
+            "All unsanctioned businesses are free.",
+            "The Crude Oil Data Exchange is a business that isn't free, hence it is unsanctioned.",
+            "Wait, no, that's not right.",
+            "Let me correct that.",
+            "If unsanctioned businesses are free, and the Crude Oil Data Exchange isn't free, then it can't be unsanctioned.",
+            null,
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) businesses are either sanctioned or unsanctioned.",
+                "fol": "∀x (business(x) → sanctioned(x) ⊕ unsanctioned(x))",
+                "tptp": "![X]: (((~(business(X) => sanctioned(X)) & (unsanctioned(X))) | ((business(X) => sanctioned(X)) & ~(unsanctioned(X)))))"
+            },
+            {
+                "ref": "(2) sanctioned businesses are limited.",
+                "fol": "∀x (sanctioned(x) → limited(x))",
+                "tptp": "![X]: (sanctioned(X) => limited(X))"
+            },
+            {
+                "ref": "(3) unsanctioned businesses are free.",
+                "fol": "∀x (unsanctioned(x) → free(x))",
+                "tptp": "![X]: (unsanctioned(X) => free(X))"
+            },
+            {
+                "ref": "(4) the crude oil data exchange is a business that isn't free.",
+                "fol": "business(crudeoildataexchange) ∧ ¬free(crudeoildataexchange)",
+                "tptp": "business(crudeoildataexchange) & ~free(crudeoildataexchange)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(12) crude oil data exchange is sanctioned.",
+            "fol": "sanctioned(crudeoildataexchange)",
+            "tptp": "sanctioned(crudeoildataexchange)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) businesses are either sanctioned or unsanctioned.",
+                "fol": "∀x (business(x) → sanctioned(x) ⊕ unsanctioned(x))",
+                "tptp": "![X]: (((~(business(X) => sanctioned(X)) & (unsanctioned(X))) | ((business(X) => sanctioned(X)) & ~(unsanctioned(X)))))"
+            },
+            {
+                "ref": "(2) the crude oil data exchange is a business.",
+                "fol": "business(crudeoildataexchange)",
+                "tptp": "business(crudeoildataexchange)"
+            },
+            {
+                "ref": "(3) the crude oil data exchange is either sanitized or unsanctioned.",
+                "fol": "sanctioned(crudeoildataexchange) ⊕ unsanctioned(crudeoildataexchange)",
+                "tptp": "((~(sanctioned(crudeoildataexchange)) & (unsanctioned(crudeoildataexchange))) | ((sanctioned(crudeoildataexchange)) & ~(unsanctioned(crudeoildataexchange))))"
+            },
+            {
+                "ref": "(4) the crude oil data exchange isn't free.",
+                "fol": "¬free(crudeoildataexchange)",
+                "tptp": "~free(crudeoildataexchange)"
+            },
+            {
+                "ref": "(5) unsanctioned businesses are free.",
+                "fol": "∀x (unsanctioned(x) → free(x))",
+                "tptp": "![X]: (unsanctioned(X) => free(X))"
+            },
+            {
+                "ref": "(6) since the crude oil data exchange isn't free, it isn't unsanctioned.",
+                "fol": "¬free(crudeoildataexchange) → ¬unsanctioned(crudeoildataexchange)",
+                "tptp": "~free(crudeoildataexchange) => ~unsanctioned(crudeoildataexchange)"
+            },
+            {
+                "ref": "(7) all unsanctioned businesses are free.",
+                "fol": "∀x (unsanctioned(x) → free(x))",
+                "tptp": "![X]: (unsanctioned(X) => free(X))"
+            },
+            {
+                "ref": "(8) the crude oil data exchange is a business that isn't free, hence it is unsanctioned.",
+                "fol": "business(crudeoildataexchange) ∧ ¬free(crudeoildataexchange) → unsanctioned(crudeoildataexchange)",
+                "tptp": "business(crudeoildataexchange) & ~free(crudeoildataexchange) => unsanctioned(crudeoildataexchange)"
+            },
+            {
+                "ref": "(9) wait, no, that's not right.",
+                "fol": "¬(business(crudeoildataexchange) ∧ ¬free(crudeoildataexchange) → unsanctioned(crudeoildataexchange))",
+                "tptp": "~(business(crudeoildataexchange) & ~free(crudeoildataexchange) => unsanctioned(crudeoildataexchange))"
+            },
+            {
+                "ref": "(10) let me correct that.",
+                "fol": "¬(business(crudeoildataexchange) ∧ ¬free(crudeoildataexchange) → unsanctioned(crudeoildataexchange))",
+                "tptp": "~(business(crudeoildataexchange) & ~free(crudeoildataexchange) => unsanctioned(crudeoildataexchange))"
+            },
+            {
+                "ref": "(11) if unsanctioned businesses are free, and the crude oil data exchange isn't free, then it can't be unsanctioned.",
+                "fol": "(∀x (unsanctioned(x) → free(x)) ∧ ¬free(crudeoildataexchange)) → ¬unsanctioned(crudeoildataexchange)",
+                "tptp": "(![X]: (unsanctioned(X) => free(X)) & ~free(crudeoildataexchange)) => ~unsanctioned(crudeoildataexchange)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Businesses are either sanctioned or unsanctioned.",
+            "The Crude Oil Data Exchange is a business.",
+            "The Crude Oil Data Exchange is either sanitized or unsanctioned.",
+            "The Crude Oil Data Exchange isn't free.",
+            "Unsanctioned businesses are free.",
+            "Since the Crude Oil Data Exchange isn't free, it isn't unsanctioned.",
+            "All unsanctioned businesses are free.",
+            "The Crude Oil Data Exchange is a business that isn't free, hence it is unsanctioned.",
+            "Wait, no, that's not right.",
+            "Let me correct that.",
+            "If unsanctioned businesses are free, and the Crude Oil Data Exchange isn't free, then it can't be unsanctioned."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "False",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T2",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "False",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "440_1264",
+        "premises": [
+            "All tigers are cats.",
+            "No cats are dogs.",
+            "All Bengal tigers are tigers.",
+            "All huskies are dogs.",
+            "Fido is either a Bengal tiger or a cat."
+        ],
+        "question": [
+            "Fido is a husky animal."
+        ],
+        "premises_gt_fol": [
+            "∀x (Tiger(x) → Cat(x))",
+            "∀x (Cat(x) → ¬Dog(x))",
+            "∀x (BengalTiger(x) → Tiger(x))",
+            "∀x (Husky(x) → Dog(x))",
+            "BengalTiger(fido) ⊕ Cat(fido)"
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "All tigers are cats.",
+            "Fido is either a Bengal tiger or a cat.",
+            "Fido is a cat if he's a tiger.",
+            "No cats are dogs.",
+            "Fido can't be a dog.",
+            "All huskies are dogs.",
+            "Fido can't be a husky.",
+            "Therefore, Fido is a cat, not a husky.",
+            "Hence, the conclusion is false."
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "reasoning_content": "Alright, I need to figure out whether the conclusion \"Fido is a husky animal\" is true or false based on the given premises. Let's break this down step by step.\n\nFirst, the premises say that all tigers are cats. That means if something is a tiger, it's definitely a cat. Next, it states that no cats are dogs. So, if something is a cat, it can't be a dog. Then, all Bengal tigers are tigers, which is a bit redundant because we already know tigers are tigers, but it's emphasizing that Bengal tigers are a subset of tigers. Moving on, all huskies are dogs. So, huskies are a type of dog. \n\nNow, Fido is either a Bengal tiger or a cat. Let's analyze both possibilities. If Fido is a Bengal tiger, since all tigers are cats, he is also a cat. But we know no cats are dogs, so Fido can't be a dog. Additionally, since all huskies are dogs, Fido can't be a husky either because being a cat excludes him from being a dog, and thus a husky. \n\nAlternatively, if Fido is a cat, the same conclusion applies. Cats aren't dogs, so Fido can't be a husky. Therefore, regardless of whether Fido is a Bengal tiger or just a cat, he cannot be a husky animal. \n\nSo, the conclusion that Fido is a husky animal is definitely false based on the premises provided.",
+        "content": "1) All tigers are cats.\n2) Fido is either a Bengal tiger or a cat.\n3) All tigers are cats, so Fido is a cat if he's a tiger.\n4) No cats are dogs, so Fido can't be a dog.\n5) All huskies are dogs, so Fido can't be a husky.\n6) Therefore, Fido is a cat, not a husky.\n7) Hence, the conclusion is false.\n\nAnswer: (B) False",
+        "filter_reasoning_steps": [
+            "All tigers are cats.",
+            "Fido is either a Bengal tiger or a cat.",
+            "Fido is a cat if he's a tiger.",
+            "No cats are dogs.",
+            "Fido can't be a dog.",
+            "All huskies are dogs.",
+            "Fido can't be a husky.",
+            null,
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) all tigers are cats.",
+                "fol": "∀x (tiger(x) → cat(x))",
+                "tptp": "![X]: (tiger(X) => cat(X))"
+            },
+            {
+                "ref": "(2) no cats are dogs.",
+                "fol": "∀x (cat(x) → ¬dog(x))",
+                "tptp": "![X]: (cat(X) => ~dog(X))"
+            },
+            {
+                "ref": "(3) all bengal tigers are tigers.",
+                "fol": "∀x (bengaltiger(x) → tiger(x))",
+                "tptp": "![X]: (bengaltiger(X) => tiger(X))"
+            },
+            {
+                "ref": "(4) all huskies are dogs.",
+                "fol": "∀x (husky(x) → dog(x))",
+                "tptp": "![X]: (husky(X) => dog(X))"
+            },
+            {
+                "ref": "(5) fido is either a bengal tiger or a cat.",
+                "fol": "bengaltiger(fido) ⊕ cat(fido)",
+                "tptp": "((~(bengaltiger(fido)) & (cat(fido))) | ((bengaltiger(fido)) & ~(cat(fido))))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(8) fido is a husky animal.",
+            "fol": "husky(fido)",
+            "tptp": "husky(fido)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) all tigers are cats.",
+                "fol": "∀x (tiger(x) → cat(x))",
+                "tptp": "![X]: (tiger(X) => cat(X))"
+            },
+            {
+                "ref": "(2) fido is either a bengal tiger or a cat.",
+                "fol": "bengaltiger(fido) ⊕ cat(fido)",
+                "tptp": "((~(bengaltiger(fido)) & (cat(fido))) | ((bengaltiger(fido)) & ~(cat(fido))))"
+            },
+            {
+                "ref": "(3) fido is a cat if he's a tiger.",
+                "fol": "tiger(fido) → cat(fido)",
+                "tptp": "tiger(fido) => cat(fido)"
+            },
+            {
+                "ref": "(4) no cats are dogs.",
+                "fol": "∀x (cat(x) → ¬dog(x))",
+                "tptp": "![X]: (cat(X) => ~dog(X))"
+            },
+            {
+                "ref": "(5) fido can't be a dog.",
+                "fol": "¬dog(fido)",
+                "tptp": "~dog(fido)"
+            },
+            {
+                "ref": "(6) all huskies are dogs.",
+                "fol": "∀x (husky(x) → dog(x))",
+                "tptp": "![X]: (husky(X) => dog(X))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "All tigers are cats.",
+            "Fido is either a Bengal tiger or a cat.",
+            "Fido is a cat if he's a tiger.",
+            "No cats are dogs.",
+            "Fido can't be a dog.",
+            "All huskies are dogs."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "342_900",
+        "premises": [
+            "All sports cars are loud.",
+            "No loud cars are electric.",
+            "If a car is a Ferrari, then it is a sports car.",
+            "All cars made in Maranello are Ferraris.",
+            "The Toyota Prius is made in Maranello or is a loud car, or both."
+        ],
+        "question": [
+            "Prius is an electric car."
+        ],
+        "premises_gt_fol": [
+            "∀x (SportsCar(x) → LoudCar(x))",
+            "∀x (LoudCar(x) → ¬ElectricCar(x))",
+            "∀x (Ferrari(x) → SportsCar(x))",
+            "∀x ((Car(x) ∧ MadeIn(x, maranello)) → Ferrari(x))",
+            "(Car(toyotaPrius) ∧ MadeIn(toyotaPrius, maranello)) ∨ LoudCar(toyotaPrius)"
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "All sports cars are loud.",
+            "No loud cars are electric.",
+            "If a car is a Ferrari, then it is a sports car.",
+            "All cars made in Maranello are Ferraris.",
+            "The Toyota Prius is made in Maranello or is a loud car, or both.",
+            "If the Toyota Prius is made in Maranello, then it is a Ferrari.",
+            "Therefore, it is a sports car.",
+            "Since it is a sports car, it is loud.",
+            "But no loud cars are electric.",
+            "Therefore, the Toyota Prius is not electric."
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "reasoning_content": "Alright, let me try to figure this out step by step. So, the premises are about cars and their characteristics. Let's break them down one by one.\n\nFirst, \"All sports cars are loud.\" That means if a car is a sports car, it must be loud. So, sports cars → loud cars.\n\nNext, \"No loud cars are electric.\" So, if a car is loud, it can't be electric. Therefore, loud cars → not electric cars.\n\nThen, \"If a car is a Ferrari, then it is a sports car.\" So, Ferraris are a subset of sports cars. Therefore, Ferraris → sports cars.\n\nNext, \"All cars made in Maranello are Ferraris.\" So, Maranello cars → Ferris. That means any car from Maranello is a Ferrari, which in turn is a sports car.\n\nNow, the conclusion is about the Toyota Prius. The statement is: \"The Toyota Prius is made in Maranello or is a loud car, or both.\" And the conclusion is that the Prius is an electric car. Wait, is that true?\n\nLet me see. Let's assume the Prius is made in Maranello. From the premises, all Maranello cars are Ferraris, which are sports cars. And since sports cars are loud, the Prius would be a sports car and therefore loud. But from the second premise, no loud cars are electric. So if the Prius is loud, it can't be electric. Therefore, if it's made in Maranello, it's loud, hence not electric.\n\nAlternatively, if the Prius is a loud car but not made in Maranello, then since no loud cars are electric, it would again not be electric.\n\nWait, but the statement says \"made in Maranello or a loud car or both.\" So it's possible that it's neither, but that's not covered by the premises. However, the conclusion is that it's electric. But from the premises, whether it's made in Maranello or loud, it would not be electric. So the conclusion that it is electric contradicts the premises.\n\nSo, the conclusion should be false.",
+        "content": "1) All sports cars are loud. \n2) No loud cars are electric. \n3) If a car is a Ferrari, then it is a sports car. \n4) All cars made in Maranello are Ferraris. \n5) The Toyota Prius is made in Maranello or is a loud car, or both. \n6) If the Toyota Prius is made in Maranello, then it is a Ferrari. \n7) Therefore, it is a sports car. \n8) Since it is a sports car, it is loud. \n9) But no loud cars are electric. \n10) Therefore, the Toyota Prius is not electric. \n\nAnswer:\n(B) False",
+        "filter_reasoning_steps": [
+            "All sports cars are loud.",
+            "No loud cars are electric.",
+            "If a car is a Ferrari, then it is a sports car.",
+            "All cars made in Maranello are Ferraris.",
+            "The Toyota Prius is made in Maranello or is a loud car, or both.",
+            "If the Toyota Prius is made in Maranello, then it is a Ferrari.",
+            null,
+            "Since it is a sports car, it is loud.",
+            "But no loud cars are electric.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) all sports cars are loud.",
+                "fol": "∀x (sportscar(x) → loud(x))",
+                "tptp": "![X]: (sportscar(X) => loud(X))"
+            },
+            {
+                "ref": "(2) no loud cars are electric.",
+                "fol": "∀x (loud(x) → ¬electric(x))",
+                "tptp": "![X]: (loud(X) => ~electric(X))"
+            },
+            {
+                "ref": "(3) if a car is a ferrari, then it is a sports car.",
+                "fol": "∀x (ferrari(x) → sportscar(x))",
+                "tptp": "![X]: (ferrari(X) => sportscar(X))"
+            },
+            {
+                "ref": "(4) all cars made in maranello are ferraris.",
+                "fol": "∀x (madeinmaranello(x) → ferrari(x))",
+                "tptp": "![X]: (madeinmaranello(X) => ferrari(X))"
+            },
+            {
+                "ref": "(5) the toyota prius is made in maranello or is a loud car, or both.",
+                "fol": "madeinmaranello(prius) ∨ loud(prius)",
+                "tptp": "madeinmaranello(prius) | loud(prius)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(9) prius is an electric car.",
+            "fol": "electric(prius)",
+            "tptp": "electric(prius)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) all sports cars are loud.",
+                "fol": "∀x (sportscar(x) → loud(x))",
+                "tptp": "![X]: (sportscar(X) => loud(X))"
+            },
+            {
+                "ref": "(2) no loud cars are electric.",
+                "fol": "∀x (loud(x) → ¬electric(x))",
+                "tptp": "![X]: (loud(X) => ~electric(X))"
+            },
+            {
+                "ref": "(3) if a car is a ferrari, then it is a sports car.",
+                "fol": "∀x (ferrari(x) → sportscar(x))",
+                "tptp": "![X]: (ferrari(X) => sportscar(X))"
+            },
+            {
+                "ref": "(4) all cars made in maranello are ferraris.",
+                "fol": "∀x (madeinmaranello(x) → ferrari(x))",
+                "tptp": "![X]: (madeinmaranello(X) => ferrari(X))"
+            },
+            {
+                "ref": "(5) the toyota prius is made in maranello or is a loud car, or both.",
+                "fol": "madeinmaranello(prius) ∨ loud(prius)",
+                "tptp": "madeinmaranello(prius) | loud(prius)"
+            },
+            {
+                "ref": "(6) if the toyota prius is made in maranello, then it is a ferrari.",
+                "fol": "madeinmaranello(prius) → ferrari(prius)",
+                "tptp": "madeinmaranello(prius) => ferrari(prius)"
+            },
+            {
+                "ref": "(7) since it is a sports car, it is loud.",
+                "fol": "sportscar(prius) → loud(prius)",
+                "tptp": "sportscar(prius) => loud(prius)"
+            },
+            {
+                "ref": "(8) but no loud cars are electric.",
+                "fol": "∀x (loud(x) → ¬electric(x))",
+                "tptp": "![X]: (loud(X) => ~electric(X))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "All sports cars are loud.",
+            "No loud cars are electric.",
+            "If a car is a Ferrari, then it is a sports car.",
+            "All cars made in Maranello are Ferraris.",
+            "The Toyota Prius is made in Maranello or is a loud car, or both.",
+            "If the Toyota Prius is made in Maranello, then it is a Ferrari.",
+            "Since it is a sports car, it is loud.",
+            "But no loud cars are electric."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "206_589",
+        "premises": [
+            "China is one of the BRICS, and its economy is emerging.",
+            "If someone is from China, then they are from a country of BRICS.",
+            "India is one of the BRICS, and its economy is emerging.",
+            "If someone is from India, then they are in a country of BRICS.",
+            "All people from China are Chinese people.",
+            "All people from India are Indian people.",
+            "There is a person from India."
+        ],
+        "question": [
+            "No people from BRICS are Indian people."
+        ],
+        "premises_gt_fol": [
+            "∃x (BRIC(x) ∧ ¬(x=china) ∧ BRIC(china) ∧ Emerging(chinaEconomy))",
+            "∀x (From(x, china) → From(x, bric))",
+            "BRIC(india) ∧ Emerging(indiaEconomy)",
+            "∀x (From(x, india) → From(x, bric))",
+            "∀x (From(x, china) → Chinese(x))",
+            "∀x (From(x, india) → Indian(x))",
+            "∃x (From(x, india))"
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "China is one of the BRICS, and its economy is emerging.",
+            "If someone is from China, then they are from a country of BRICS.",
+            "India is one of the BRICS, and its economy is emerging.",
+            "If someone is from India, then they are in a country of BRICS.",
+            "All people from China are Chinese people.",
+            "All people from India are Indian people.",
+            "There is a person from India.",
+            "Therefore, there exists at least one person who is both Indian and a BRICS citizen.",
+            "The conclusion states that no people from BRICS are Indian people, which contradicts the existence of that person.",
+            "Hence, the conclusion is false."
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "reasoning_content": "Alright, let's break this down step by step. The premises mention that China and India are both part of the BRICS group, and their economies are emerging. It also states that if someone is from China or India, they're from a BRICS country. \n\nNext, it's given that all people from China are Chinese and all from India are Indian. Additionally, there's at least one person from India. \n\nThe conclusion claims that no BRICS people are Indian. But wait, since India is a BRICS country, and there's a person from India, that person is both Indian and a BRICS citizen. Therefore, there exists at least one person who is both Indian and BRICS, making the conclusion false.",
+        "content": "1) China is one of the BRICS, and its economy is emerging.\n2) If someone is from China, then they are from a country of BRICS.\n3) India is one of the BRICS, and its economy is emerging.\n4) If someone is from India, then they are in a country of BRICS.\n5) All people from China are Chinese people.\n6) All people from India are Indian people.\n7) There is a person from India.\n8) Therefore, there exists at least one person who is both Indian and a BRICS citizen.\n9) The conclusion states that no people from BRICS are Indian people, which contradicts the existence of that person.\n10) Hence, the conclusion is false.\n\nAnswer: (B) False",
+        "filter_reasoning_steps": [
+            "China is one of the BRICS, and its economy is emerging.",
+            "If someone is from China, then they are from a country of BRICS.",
+            "India is one of the BRICS, and its economy is emerging.",
+            "If someone is from India, then they are in a country of BRICS.",
+            "All people from China are Chinese people.",
+            "All people from India are Indian people.",
+            null,
+            null,
+            null,
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) china is one of the brics, and its economy is emerging.",
+                "fol": "brics(china) ∧ emergingeconomy(china)",
+                "tptp": "brics(china) & emergingeconomy(china)"
+            },
+            {
+                "ref": "(2) if someone is from china, then they are from a country of brics.",
+                "fol": "∀x (from(x, china) → from(x, brics))",
+                "tptp": "![X]: (from(X, china) => from(X, brics))"
+            },
+            {
+                "ref": "(3) india is one of the brics, and its economy is emerging.",
+                "fol": "brics(india) ∧ emergingeconomy(india)",
+                "tptp": "brics(india) & emergingeconomy(india)"
+            },
+            {
+                "ref": "(4) if someone is from india, then they are in a country of brics.",
+                "fol": "∀x (from(x, india) → from(x, brics))",
+                "tptp": "![X]: (from(X, india) => from(X, brics))"
+            },
+            {
+                "ref": "(5) all people from china are chinese people.",
+                "fol": "∀x (from(x, china) → chinese(x))",
+                "tptp": "![X]: (from(X, china) => chinese(X))"
+            },
+            {
+                "ref": "(6) all people from india are indian people.",
+                "fol": "∀x (from(x, india) → indian(x))",
+                "tptp": "![X]: (from(X, india) => indian(X))"
+            },
+            {
+                "ref": "(7) there is a person from india.",
+                "fol": "∃x (from(x, india))",
+                "tptp": "?[X]: (from(X, india))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(7) no people from brics are indian people.",
+            "fol": "¬∃x (from(x, brics) ∧ indian(x))",
+            "tptp": "~?[X]: (from(X, brics) & indian(X))"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) china is one of the brics, and its economy is emerging.",
+                "fol": "brics(china) ∧ emergingeconomy(china)",
+                "tptp": "brics(china) & emergingeconomy(china)"
+            },
+            {
+                "ref": "(2) if someone is from china, then they are from a country of brics.",
+                "fol": "∀x (from(x, china) → from(x, brics))",
+                "tptp": "![X]: (from(X, china) => from(X, brics))"
+            },
+            {
+                "ref": "(3) india is one of the brics, and its economy is emerging.",
+                "fol": "brics(india) ∧ emergingeconomy(india)",
+                "tptp": "brics(india) & emergingeconomy(india)"
+            },
+            {
+                "ref": "(4) if someone is from india, then they are in a country of brics.",
+                "fol": "∀x (from(x, india) → from(x, brics))",
+                "tptp": "![X]: (from(X, india) => from(X, brics))"
+            },
+            {
+                "ref": "(5) all people from china are chinese people.",
+                "fol": "∀x (from(x, china) → chinese(x))",
+                "tptp": "![X]: (from(X, china) => chinese(X))"
+            },
+            {
+                "ref": "(6) all people from india are indian people.",
+                "fol": "∀x (from(x, india) → indian(x))",
+                "tptp": "![X]: (from(X, india) => indian(X))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "China is one of the BRICS, and its economy is emerging.",
+            "If someone is from China, then they are from a country of BRICS.",
+            "India is one of the BRICS, and its economy is emerging.",
+            "If someone is from India, then they are in a country of BRICS.",
+            "All people from China are Chinese people.",
+            "All people from India are Indian people."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": false,
+        "cate": "T3",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "34_98",
+        "premises": [
+            "Rafa Nadal was born in Mallorca.",
+            "Rafa Nadal is a professional tennis player.",
+            "Nadal's win ratio is high.",
+            "All players in the Big 3 are professionals who have a high win ratio."
+        ],
+        "question": [
+            "Nadal was not born in Mallorca."
+        ],
+        "premises_gt_fol": [
+            "BornIn(rafaNadal, mallorca)",
+            "ProfessionalTennisPlayer(rafaNadal)",
+            "HighWinRatio(rafaNadal)",
+            "∀x ((ProfessionalTennisPlayer(x) ∧ HighWinRatio(x)) → InBig3(x))"
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "Rafa Nadal was born in Mallorca.",
+            "Rafa Nadal is a professional tennis player.",
+            "Nadal's win ratio is high.",
+            "All players in the Big 3 are professionals who have a high win ratio.",
+            "The premises do not mention anything about Nadal not being born in Mallorca.",
+            "The conclusion contradicts the premise that Nadal was born in Mallorca.",
+            "There is no evidence to conclude that Nadal was not born in Mallorca.",
+            "The conclusion is false.",
+            "it directly contradicts the given premise."
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, let's break this down. The premises say that Rafa Nadal was born in Mallorca and that he's a professional tennis player. Also, his win ratio is high. Then, it states that all players in the Big 3 are professionals with high win ratios. The conclusion is that Nadal wasn't born in Mallorca. Hmm, that seems contradictory. The premises clearly state he was born in Mallorca, so the conclusion must be false. There's no way to infer the opposite from the given info. So, the answer is false.",
+        "content": "1) Rafa Nadal was born in Mallorca.\n2) Rafa Nadal is a professional tennis player.\n3) Nadal's win ratio is high.\n4) All players in the Big 3 are professionals who have a high win ratio.\n5) The premises do not mention anything about Nadal not being born in Mallorca.\n6) The conclusion contradicts the premise that Nadal was born in Mallorca.\n7) There is no evidence to conclude that Nadal was not born in Mallorca.\n8) The conclusion is false because it directly contradicts the given premise.\n\nAnswer: (B) False",
+        "filter_reasoning_steps": [
+            "Rafa Nadal was born in Mallorca.",
+            "Rafa Nadal is a professional tennis player.",
+            "Nadal's win ratio is high.",
+            "All players in the Big 3 are professionals who have a high win ratio.",
+            "The premises do not mention anything about Nadal not being born in Mallorca.",
+            null,
+            null,
+            null,
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) rafa nadal was born in mallorca.",
+                "fol": "bornin(rafa, mallorca)",
+                "tptp": "bornin(rafa, mallorca)"
+            },
+            {
+                "ref": "(2) rafa nadal is a professional tennis player.",
+                "fol": "professional(rafa) ∧ tennisplayer(rafa)",
+                "tptp": "professional(rafa) & tennisplayer(rafa)"
+            },
+            {
+                "ref": "(3) nadal's win ratio is high.",
+                "fol": "highwinratio(rafa)",
+                "tptp": "highwinratio(rafa)"
+            },
+            {
+                "ref": "(4) all players in the big 3 are professionals who have a high win ratio.",
+                "fol": "∀x (big3(x) → professional(x) ∧ highwinratio(x))",
+                "tptp": "![X]: (big3(X) => professional(X) & highwinratio(X))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(6) nadal was not born in mallorca.",
+            "fol": "¬bornin(rafa, mallorca)",
+            "tptp": "~bornin(rafa, mallorca)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(2) rafa nadal is a professional tennis player.",
+                "fol": "professional(rafa) ∧ tennisplayer(rafa)",
+                "tptp": "professional(rafa) & tennisplayer(rafa)"
+            },
+            {
+                "ref": "(3) nadal's win ratio is high.",
+                "fol": "highwinratio(rafa)",
+                "tptp": "highwinratio(rafa)"
+            },
+            {
+                "ref": "(4) all players in the big 3 are professionals who have a high win ratio.",
+                "fol": "∀x (big3(x) → professional(x) ∧ highwinratio(x))",
+                "tptp": "![X]: (big3(X) => professional(X) & highwinratio(X))"
+            },
+            {
+                "ref": "(5) the premises do not mention anything about nadal not being born in mallorca.",
+                "fol": "¬∃x (¬bornin(rafa, mallorca))",
+                "tptp": "~?[X]: (~bornin(rafa, mallorca))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Rafa Nadal was born in Mallorca.",
+            "Rafa Nadal is a professional tennis player.",
+            "Nadal's win ratio is high.",
+            "All players in the Big 3 are professionals who have a high win ratio."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "428_1218",
+        "premises": [
+            "All devices belonging to the company are connected to Google Home. ",
+            "All devices with the company logo belong to the company. ",
+            "Each device either has the company logo or belongs to employees. ",
+            "All of the devices belonging to employees can be connected to the company's wifi. ",
+            "All of the devices connected to Google Home are controlled by managers. ",
+            "All of the devices that connect to the company's wifi are easy to operate. ",
+            "All of the devices that are easy to operate were produced after a new CTO is appointed. ",
+            "ModelXX was not produced after a new CTO was appointed."
+        ],
+        "question": [
+            "ModelXX is either with the company logo or controlled by managers."
+        ],
+        "premises_gt_fol": [
+            "∀x ((Devices(x) ∧ BelongTo(x, company)) → ConnectTo(x, googleHome))",
+            "∀x ((Devices(x) ∧ With(x, companyLogo)) → BelongTo(x, company))",
+            "∀x ((Devices(x) → (With(x, companyLogo) ⊕ BelongTo(x, employee)))",
+            "∀x ((Devices(x) ∧ BelongTo(x, employee)) → CanBeConnectedTo(x, wifi))",
+            "∀x ((Devices(x) ∧ ConnectTo(x, googleHome)) → ControlledBy(x, manager))",
+            "∀x ((Devices(x) ∧ CanBeConnectedTo(x, wifi)) → EasyToOperate(x))",
+            "∀x ((Devices(x) ∧ EasyToOperate(x)) → ProducedAfterNewCTOAppointed(x, company))",
+            "Devices(modelXX) ∧ (¬ProducedAfterNewCTOAppointed(modelXX, company))"
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "ModelXX was not produced after a new CTO was appointed.",
+            "All devices produced after a new CTO are easy to operate.",
+            "Therefore, ModelXX was not easy to operate.",
+            "All devices that connect to the company's wifi are easy to operate.",
+            "Therefore, ModelXX does not connect to the company's wifi.",
+            "All devices with the company logo belong to the company.",
+            "All devices belonging to employees can be connected to the company's wifi.",
+            "Therefore, ModelXX does not belong to employees.",
+            "Each device either has the company logo or belongs to employees.",
+            "Therefore, ModelXX has the company logo.",
+            "All devices belonging to the company are connected to Google Home.",
+            "Therefore, ModelXX is connected to Google Home.",
+            "All devices connected to Google Home are controlled by managers.",
+            "Therefore, ModelXX is controlled by managers.",
+            "Thus, ModelXX is either with the company logo or controlled by managers."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, let's break this down step by step. The premises given are about devices, their ownership, and various characteristics. The conclusion we need to evaluate is whether \"ModelXX is either with the company logo or controlled by managers.\"\n\nFirst, I'll list out the premises to make sure I don't miss any details:\n\n1. All devices belonging to the company are connected to Google Home.\n2. All devices with the company logo belong to the company.\n3. Each device either has the company logo or belongs to employees.\n4. All of the devices belonging to employees can be connected to the company's wifi.\n5. All of the devices connected to Google Home are controlled by managers.\n6. All of the devices that connect to the company's wifi are easy to operate.\n7. All of the devices that are easy to operate were produced after a new CTO is appointed.\n8. ModelXX was not produced after a new CTO was appointed.\n\nNow, the conclusion is: ModelXX is either with the company logo or controlled by managers.\n\nLet me try to connect these points. Starting with ModelXX, it wasn't produced after a new CTO was appointed (premise 8). From premise 7, all devices produced after a new CTO are easy to operate. So, since ModelXX wasn't produced after a CTO, it wasn't easy to operate (contrapositive of premise 7).\n\nFrom premise 6, devices that connect to the company's wifi are easy to operate. So, if ModelXX isn't easy to operate, it can't be connecting to the company's wifi. Therefore, it doesn't connect to the company's wifi.\n\nFrom premise 4, devices belonging to employees can be connected to the company's wifi. Since ModelXX doesn't connect to the company's wifi, it can't belong to employees. Therefore, ModelXX must belong to someone else, possibly the company or another category.\n\nLooking at premise 3, each device either has the company logo or belongs to employees. Since ModelXX doesn't belong to employees, it must have the company logo. Because of premise 2, if it has the company logo, it belongs to the company.\n\nNow, from premise 1, all devices belonging to the company are connected to Google Home. So, ModelXX is connected to Google Home. From premise 5, all devices connected to Google Home are controlled by managers. Therefore, ModelXX is controlled by managers.\n\nSo, putting it all together, ModelXX has the company logo and is controlled by managers. Therefore, the conclusion that ModelXX is either with the company logo or controlled by managers is true because both are true.",
+        "content": "1. ModelXX was not produced after a new CTO was appointed. \n2. All devices produced after a new CTO are easy to operate. \n3. Therefore, ModelXX was not easy to operate. \n4. All devices that connect to the company's wifi are easy to operate. \n5. Therefore, ModelXX does not connect to the company's wifi. \n6. All devices with the company logo belong to the company. \n7. All devices belonging to employees can be connected to the company's wifi. \n8. Therefore, ModelXX does not belong to employees. \n9. Each device either has the company logo or belongs to employees. \n10. Therefore, ModelXX has the company logo. \n11. All devices belonging to the company are connected to Google Home. \n12. Therefore, ModelXX is connected to Google Home. \n13. All devices connected to Google Home are controlled by managers. \n14. Therefore, ModelXX is controlled by managers. \n15. Thus, ModelXX is either with the company logo or controlled by managers.\n\nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "ModelXX was not produced after a new CTO was appointed.",
+            "All devices produced after a new CTO are easy to operate.",
+            null,
+            "All devices that connect to the company's wifi are easy to operate.",
+            null,
+            "All devices with the company logo belong to the company.",
+            "All devices belonging to employees can be connected to the company's wifi.",
+            null,
+            "Each device either has the company logo or belongs to employees.",
+            null,
+            "All devices belonging to the company are connected to Google Home.",
+            null,
+            "All devices connected to Google Home are controlled by managers.",
+            null,
+            "Thus, ModelXX is either with the company logo or controlled by managers."
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) all devices belonging to the company are connected to google home.",
+                "fol": "∀x (belongcompany(x) → connectedgooglehome(x))",
+                "tptp": "![X]: (belongcompany(X) => connectedgooglehome(X))"
+            },
+            {
+                "ref": "(2) all devices with the company logo belong to the company.",
+                "fol": "∀x (companylogo(x) → belongcompany(x))",
+                "tptp": "![X]: (companylogo(X) => belongcompany(X))"
+            },
+            {
+                "ref": "(3) each device either has the company logo or belongs to employees.",
+                "fol": "∀x (companylogo(x) ⊕ belongemployees(x))",
+                "tptp": "![X]: (((~(companylogo(X)) & (belongemployees(X))) | ((companylogo(X)) & ~(belongemployees(X)))))"
+            },
+            {
+                "ref": "(4) all of the devices belonging to employees can be connected to the company's wifi.",
+                "fol": "∀x (belongemployees(x) → connectcompanywifi(x))",
+                "tptp": "![X]: (belongemployees(X) => connectcompanywifi(X))"
+            },
+            {
+                "ref": "(5) all of the devices connected to google home are controlled by managers.",
+                "fol": "∀x (connectedgooglehome(x) → controlledmanagers(x))",
+                "tptp": "![X]: (connectedgooglehome(X) => controlledmanagers(X))"
+            },
+            {
+                "ref": "(6) all of the devices that connect to the company's wifi are easy to operate.",
+                "fol": "∀x (connectcompanywifi(x) → easyoperate(x))",
+                "tptp": "![X]: (connectcompanywifi(X) => easyoperate(X))"
+            },
+            {
+                "ref": "(7) all of the devices that are easy to operate were produced after a new cto is appointed.",
+                "fol": "∀x (easyoperate(x) → producedaftercto(x))",
+                "tptp": "![X]: (easyoperate(X) => producedaftercto(X))"
+            },
+            {
+                "ref": "(8) modelxx was not produced after a new cto was appointed.",
+                "fol": "¬producedaftercto(modelxx)",
+                "tptp": "~producedaftercto(modelxx)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(10) modelxx is either with the company logo or controlled by managers.",
+            "fol": "companylogo(modelxx) ⊕ controlledmanagers(modelxx)",
+            "tptp": "((~(companylogo(modelxx)) & (controlledmanagers(modelxx))) | ((companylogo(modelxx)) & ~(controlledmanagers(modelxx))))"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) modelxx was not produced after a new cto was appointed.",
+                "fol": "¬producedaftercto(modelxx)",
+                "tptp": "~producedaftercto(modelxx)"
+            },
+            {
+                "ref": "(2) all devices produced after a new cto are easy to operate.",
+                "fol": "∀x (producedaftercto(x) → easyoperate(x))",
+                "tptp": "![X]: (producedaftercto(X) => easyoperate(X))"
+            },
+            {
+                "ref": "(3) all devices that connect to the company's wifi are easy to operate.",
+                "fol": "∀x (connectcompanywifi(x) → easyoperate(x))",
+                "tptp": "![X]: (connectcompanywifi(X) => easyoperate(X))"
+            },
+            {
+                "ref": "(4) all devices with the company logo belong to the company.",
+                "fol": "∀x (companylogo(x) → belongcompany(x))",
+                "tptp": "![X]: (companylogo(X) => belongcompany(X))"
+            },
+            {
+                "ref": "(5) all devices belonging to employees can be connected to the company's wifi.",
+                "fol": "∀x (belongemployees(x) → connectcompanywifi(x))",
+                "tptp": "![X]: (belongemployees(X) => connectcompanywifi(X))"
+            },
+            {
+                "ref": "(6) each device either has the company logo or belongs to employees.",
+                "fol": "∀x (companylogo(x) ⊕ belongemployees(x))",
+                "tptp": "![X]: (((~(companylogo(X)) & (belongemployees(X))) | ((companylogo(X)) & ~(belongemployees(X)))))"
+            },
+            {
+                "ref": "(7) all devices belonging to the company are connected to google home.",
+                "fol": "∀x (belongcompany(x) → connectedgooglehome(x))",
+                "tptp": "![X]: (belongcompany(X) => connectedgooglehome(X))"
+            },
+            {
+                "ref": "(8) all devices connected to google home are controlled by managers.",
+                "fol": "∀x (connectedgooglehome(x) → controlledmanagers(x))",
+                "tptp": "![X]: (connectedgooglehome(X) => controlledmanagers(X))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "ModelXX was not produced after a new CTO was appointed.",
+            "All devices produced after a new CTO are easy to operate.",
+            "All devices that connect to the company's wifi are easy to operate.",
+            "All devices with the company logo belong to the company.",
+            "All devices belonging to employees can be connected to the company's wifi.",
+            "Each device either has the company logo or belongs to employees.",
+            "All devices belonging to the company are connected to Google Home.",
+            "All devices connected to Google Home are controlled by managers."
+        ],
+        "AnswerCorrect": false,
+        "step_correctness_label": [
+            "True",
+            "Unknown",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": false,
+        "cate": "F2",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "Unknown",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "312_777",
+        "premises": [
+            "To have the authorization to study in the United States as a foreigner, you must be enrolled in an academic program.",
+            "Those who are enrolled in an academic program can not work full-time.",
+            "Every who studies in the United States as a foreigner has the authorization to study in the U.S.",
+            "All PhD graduate can work full-time. ",
+            "If Tom does not study in the United States as a foreigner, he is enrolled in an academic program."
+        ],
+        "question": [
+            "Tom is not a PhD graduate."
+        ],
+        "premises_gt_fol": [
+            "∀x (Have(x, authorization, studyIn, unitedStates) → EnrolledIn(x, academicProgram))",
+            "∀x (EnrolledIn(x, academicProgram) → ¬Work(x, fullTime))",
+            "∀x (StudyIn(x, unitedStates) → Have(x, authorization, studyIn, unitedStates))",
+            "∀x (PhDGraduate(x) → Work(x, fullTime))",
+            "¬StudyIn(x, unitedStates) → EnrolledIn(x, academicProgram)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "To study in the U.S. as a foreigner, you must be enrolled in an academic program.",
+            "If Tom does not study in the U.S. as a foreigner, he is enrolled in an academic program.",
+            "Those who are enrolled in an academic program cannot work fulltime.",
+            "All PhD graduates can work fulltime.",
+            "Therefore, if Tom were a PhD graduate, he would be able to work fulltime, which contradicts his being enrolled.",
+            "Hence, Tom cannot be a PhD graduate."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, let's break this down step by step. The premises are about authorization to study in the U.S. as a foreigner, academic programs, working full-time, and PhD graduates. The conclusion is that Tom is not a PhD graduate.\n\nFirst, the premise says that to study in the U.S. as a foreigner, you must be enrolled in an academic program. So, if someone isn't studying there as a foreigner, they might not be enrolled. Wait, no, actually, it's a conditional statement. So, if you are studying as a foreigner, then you're enrolled. But the contrapositive would be that if you're not enrolled in an academic program, you can't study as a foreigner. Hmm, not sure if that's relevant here.\n\nNext, those enrolled in academic programs can't work full-time. So, if someone is enrolled, they can't have full-time work. But the premise also says that all PhD graduates can work full-time. That seems contradictory. So, if someone is a PhD graduate, they can work full-time, but if they're enrolled, they can't. Therefore, a PhD graduate can't be enrolled in an academic program.\n\nNow, looking at Tom. The premise says that if Tom does not study in the U.S. as a foreigner, then he is enrolled in an academic program. But wait, that seems a bit confusing. Let me parse that again. It says, \"If Tom does not study in the U.S. as a foreigner, he is enrolled in an academic program.\" So, if Tom isn't a foreign student in the U.S., he must be enrolled. But from the first premise, to study as a foreigner, you must be enrolled. So, if Tom isn't studying as a foreigner, does that mean he isn't enrolled? Or does it mean he has to be enrolled regardless of his study status? I think it's the latter. So, if Tom isn't a foreign student, he still has to be enrolled in an academic program.\n\nBut wait, if he's enrolled, then he can't work full-time. And since all PhD graduates can work full-time, if Tom were a PhD graduate, he would have to be working full-time, which contradicts his being enrolled. Therefore, Tom can't be a PhD graduate because that would make him both enrolled (can't work full-time) and a PhD graduate (can work full-time). So, the conclusion that Tom is not a PhD graduate must be true.",
+        "content": "1) To study in the U.S. as a foreigner, you must be enrolled in an academic program. \n2) If Tom does not study in the U.S. as a foreigner, he is enrolled in an academic program. \n3) Those who are enrolled in an academic program cannot work full-time. \n4) All PhD graduates can work full-time. \n5) Therefore, if Tom were a PhD graduate, he would be able to work full-time, which contradicts his being enrolled. \n6) Hence, Tom cannot be a PhD graduate. \n\nAnswer: (A) True",
+        "filter_reasoning_steps": [
+            "To study in the U.S. as a foreigner, you must be enrolled in an academic program.",
+            "If Tom does not study in the U.S. as a foreigner, he is enrolled in an academic program.",
+            "Those who are enrolled in an academic program cannot work fulltime.",
+            "All PhD graduates can work fulltime.",
+            null,
+            "Hence, Tom cannot be a PhD graduate."
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) to have the authorization to study in the united states as a foreigner, you must be enrolled in an academic program.",
+                "fol": "∀x (authorization(x) → enrolled(x))",
+                "tptp": "![X]: (authorization(X) => enrolled(X))"
+            },
+            {
+                "ref": "(2) those who are enrolled in an academic program can not work full-time.",
+                "fol": "∀x (enrolled(x) → ¬workfulltime(x))",
+                "tptp": "![X]: (enrolled(X) => ~workfulltime(X))"
+            },
+            {
+                "ref": "(3) every who studies in the united states as a foreigner has the authorization to study in the u.s.",
+                "fol": "∀x (studiesinus(x) → authorization(x))",
+                "tptp": "![X]: (studiesinus(X) => authorization(X))"
+            },
+            {
+                "ref": "(4) all phd graduate can work full-time.",
+                "fol": "∀x (phdgraduate(x) → workfulltime(x))",
+                "tptp": "![X]: (phdgraduate(X) => workfulltime(X))"
+            },
+            {
+                "ref": "(5) if tom does not study in the united states as a foreigner, he is enrolled in an academic program.",
+                "fol": "¬studiesinus(tom) → enrolled(tom)",
+                "tptp": "~studiesinus(tom) => enrolled(tom)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(6) tom is not a phd graduate.",
+            "fol": "¬phdgraduate(tom)",
+            "tptp": "~phdgraduate(tom)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) to study in the u.s. as a foreigner, you must be enrolled in an academic program.",
+                "fol": "∀x (studiesinus(x) → enrolled(x))",
+                "tptp": "![X]: (studiesinus(X) => enrolled(X))"
+            },
+            {
+                "ref": "(2) if tom does not study in the u.s. as a foreigner, he is enrolled in an academic program.",
+                "fol": "¬studiesinus(tom) → enrolled(tom)",
+                "tptp": "~studiesinus(tom) => enrolled(tom)"
+            },
+            {
+                "ref": "(3) those who are enrolled in an academic program cannot work fulltime.",
+                "fol": "∀x (enrolled(x) → ¬workfulltime(x))",
+                "tptp": "![X]: (enrolled(X) => ~workfulltime(X))"
+            },
+            {
+                "ref": "(4) all phd graduates can work fulltime.",
+                "fol": "∀x (phdgraduate(x) → workfulltime(x))",
+                "tptp": "![X]: (phdgraduate(X) => workfulltime(X))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "To study in the U.S. as a foreigner, you must be enrolled in an academic program.",
+            "If Tom does not study in the U.S. as a foreigner, he is enrolled in an academic program.",
+            "Those who are enrolled in an academic program cannot work fulltime.",
+            "All PhD graduates can work fulltime."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "316_794",
+        "premises": [
+            "There are no mansion houses in an urban area.",
+            "All skyscrapers are in urban areas.",
+            "Every creepy haunted house is a mansion house.",
+            "Every terrifying building on Halloween is a creepy haunted house.",
+            "The LaLaurie House is a creepy haunted house or a terrifying building on Halloween."
+        ],
+        "question": [
+            "The LaLaurie House is either a skyscraper or a creepy haunted house."
+        ],
+        "premises_gt_fol": [
+            "∀x (InUrbanArea(x) → ¬MansionHouse(x))",
+            "∀x (Skyscraper(x) → InUrbanArea(x))",
+            "∀x (CreepyHauntedHouse(x) → MansionHouse(x))",
+            "∀x (TerrifyingBuilding(x) ∧ OnHalloween(x) → CreepyHauntedHouse(x))",
+            "CreepyHauntedHouse(laLaurieHouse) ∨ TerrifyingBuilding(laLaurieHouse) ∧ OnHalloween(laLaurieHouse)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "The conclusion is True.",
+            "Stepbystep reasoning:",
+            "Premise 5 states The LaLaurie House is either a creepy haunted house or a terrifying building on Halloween.",
+            "Premise 4 states Every terrifying building on Halloween is a creepy haunted house.",
+            "it cannot be a skyscraper.",
+            "Premise 3 states Every creepy haunted house is a mansion house, but mansion houses are not in urban areas (premise\n, and skyscrapers are in urban areas (premise\n.",
+            "Hence, a skyscraper cannot be a creepy haunted house.",
+            "Therefore, The LaLaurie House cannot be a skyscraper, but since it must be either a creepy haunted house or a terrifying building on Halloween, and the latter implies it's a creepy haunted house, the conclusion that it's either a skyscraper or a creepy haunted house holds true."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Alright, let's try to figure out whether the conclusion is true or false based on the given premises. \n\nFirst, I'll list out all the premises to make sure I don't miss anything. \n\n1. There are no mansion houses in an urban area.\n2. All skyscrapers are in urban areas.\n3. Every creepy haunted house is a mansion house.\n4. Every terrifying building on Halloween is a creepy haunted house.\n5. The LaLaurie House is either a creepy haunted house or a terrifying building on Halloween.\n\nAnd the conclusion is: The LaLaurie House is either a skyscraper or a creepy haunted house.\n\nOkay, let's break this down step by step.\n\nStarting with premise 3: Every creepy haunted house is a mansion house. But premise 1 says there are no mansion houses in an urban area. From premise 2, all skyscrapers are in urban areas. So, if skyscrapers are in urban areas, and there are no mansion houses there, then creepy haunted houses can't be skyscrapers either because skyscrapers are in urban areas where mansion houses aren't allowed.\n\nNow, looking at premise 5: The LaLaurie House is either a creepy haunted house or a terrifying building on Halloween. If it's a terrifying building on Halloween, then from premise 4, it's a creepy haunted house. So either way, if it's one, it's the other.\n\nBut from premise 3 and the fact that skyscrapers are in urban areas without mansion houses, it's impossible for a skyscraper to be a creepy haunted house. Therefore, the only possibility left is that the LaLaurie House is a creepy haunted house. Since it's either a skyscraper or a creepy haunted house, and we've established it can't be a skyscraper, the conclusion that it is either a skyscraper or a creepy haunted house is technically true because it could be one of them, but in reality, it must be a creepy haunted house. However, the conclusion doesn't say it's only one or the other, just that it's either. So, since it's a creepy haunted house, it fits as either, making the conclusion true.\n\nWait, but the conclusion says \"either a skyscraper or a creepy haunted house.\" Since we've established it can't be a skyscraper, but it must be a creepy haunted house, the conclusion is still true because it's one of the options. So, the answer should be True.\n\nBut I'm a bit confused because if it's a creepy haunted house, then it's not a skyscraper, so the conclusion that it's either is still correct because it's one of them. Therefore, the conclusion is True.",
+        "content": "The conclusion is True.\n\nStep-by-step reasoning: \n- Premise 5 states The LaLaurie House is either a creepy haunted house or a terrifying building on Halloween.\n- Premise 4 states Every terrifying building on Halloween is a creepy haunted house, so it cannot be a skyscraper.\n- Premise 3 states Every creepy haunted house is a mansion house, but mansion houses are not in urban areas (premise 1), and skyscrapers are in urban areas (premise 2). Hence, a skyscraper cannot be a creepy haunted house.\n- Therefore, The LaLaurie House cannot be a skyscraper, but since it must be either a creepy haunted house or a terrifying building on Halloween, and the latter implies it's a creepy haunted house, the conclusion that it's either a skyscraper or a creepy haunted house holds true.\n\nAnswer: (A) True",
+        "filter_reasoning_steps": [
+            null,
+            "Stepbystep reasoning:",
+            "Premise 5 states The LaLaurie House is either a creepy haunted house or a terrifying building on Halloween.",
+            "Premise 4 states Every terrifying building on Halloween is a creepy haunted house.",
+            "it cannot be a skyscraper.",
+            "Premise 3 states Every creepy haunted house is a mansion house, but mansion houses are not in urban areas (premise\n, and skyscrapers are in urban areas (premise\n.",
+            "Hence, a skyscraper cannot be a creepy haunted house.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) there are no mansion houses in an urban area.",
+                "fol": "¬∃x (mansionhouse(x) ∧ urbanarea(x))",
+                "tptp": "~?[X]: (mansionhouse(X) & urbanarea(X))"
+            },
+            {
+                "ref": "(2) all skyscrapers are in urban areas.",
+                "fol": "∀x (skyscraper(x) → urbanarea(x))",
+                "tptp": "![X]: (skyscraper(X) => urbanarea(X))"
+            },
+            {
+                "ref": "(3) every creepy haunted house is a mansion house.",
+                "fol": "∀x (creepyhauntedhouse(x) → mansionhouse(x))",
+                "tptp": "![X]: (creepyhauntedhouse(X) => mansionhouse(X))"
+            },
+            {
+                "ref": "(4) every terrifying building on halloween is a creepy haunted house.",
+                "fol": "∀x (terrifyingbuildingonhalloween(x) → creepyhauntedhouse(x))",
+                "tptp": "![X]: (terrifyingbuildingonhalloween(X) => creepyhauntedhouse(X))"
+            },
+            {
+                "ref": "(5) the lalaurie house is a creepy haunted house or a terrifying building on halloween.",
+                "fol": "creepyhauntedhouse(lalauriehouse) ∨ terrifyingbuildingonhalloween(lalauriehouse)",
+                "tptp": "creepyhauntedhouse(lalauriehouse) | terrifyingbuildingonhalloween(lalauriehouse)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(7) the lalaurie house is either a skyscraper or a creepy haunted house.",
+            "fol": "skyscraper(lalauriehouse) ∨ creepyhauntedhouse(lalauriehouse)",
+            "tptp": "skyscraper(lalauriehouse) | creepyhauntedhouse(lalauriehouse)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) stepbystep reasoning:",
+                "fol": "¬skyscraper(lalauriehouse) ∧ creepyhauntedhouse(lalauriehouse)",
+                "tptp": "~skyscraper(lalauriehouse) & creepyhauntedhouse(lalauriehouse)"
+            },
+            {
+                "ref": "(2) premise 5 states the lalaurie house is either a creepy haunted house or a terrifying building on halloween.",
+                "fol": "creepyhauntedhouse(lalauriehouse) ∨ terrifyingbuildingonhalloween(lalauriehouse)",
+                "tptp": "creepyhauntedhouse(lalauriehouse) | terrifyingbuildingonhalloween(lalauriehouse)"
+            },
+            {
+                "ref": "(3) premise 4 states every terrifying building on halloween is a creepy haunted house.",
+                "fol": "terrifyingbuildingonhalloween(lalauriehouse) → creepyhauntedhouse(lalauriehouse)",
+                "tptp": "terrifyingbuildingonhalloween(lalauriehouse) => creepyhauntedhouse(lalauriehouse)"
+            },
+            {
+                "ref": "(4) it cannot be a skyscraper.",
+                "fol": "¬skyscraper(lalauriehouse)",
+                "tptp": "~skyscraper(lalauriehouse)"
+            },
+            {
+                "ref": "(5) premise 3 states every creepy haunted house is a mansion house, but mansion houses are not in urban areas (premise, and skyscrapers are in urban areas (premise.",
+                "fol": "creepyhauntedhouse(lalauriehouse) → mansionhouse(lalauriehouse) ∧ ¬urbanarea(lalauriehouse) ∧ urbanarea(lalauriehouse)",
+                "tptp": "creepyhauntedhouse(lalauriehouse) => mansionhouse(lalauriehouse) & ~urbanarea(lalauriehouse) & urbanarea(lalauriehouse)"
+            },
+            {
+                "ref": "(6) hence, a skyscraper cannot be a creepy haunted house.",
+                "fol": "¬∃x (skyscraper(x) ∧ creepyhauntedhouse(x))",
+                "tptp": "~?[X]: (skyscraper(X) & creepyhauntedhouse(X))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Stepbystep reasoning:",
+            "Premise 5 states The LaLaurie House is either a creepy haunted house or a terrifying building on Halloween.",
+            "Premise 4 states Every terrifying building on Halloween is a creepy haunted house.",
+            "it cannot be a skyscraper.",
+            "Premise 3 states Every creepy haunted house is a mansion house, but mansion houses are not in urban areas (premise\n, and skyscrapers are in urban areas (premise\n.",
+            "Hence, a skyscraper cannot be a creepy haunted house."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "False",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T2",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "Unknown",
+            "True"
+        ]
+    },
+    {
+        "idx": "316_792",
+        "premises": [
+            "There are no mansion houses in an urban area.",
+            "All skyscrapers are in urban areas.",
+            "Every creepy haunted house is a mansion house.",
+            "Every terrifying building on Halloween is a creepy haunted house.",
+            "The LaLaurie House is a creepy haunted house or a terrifying building on Halloween."
+        ],
+        "question": [
+            "The LaLaurie House is either a skyscraper or a mansion house."
+        ],
+        "premises_gt_fol": [
+            "∀x (InUrbanArea(x) → ¬MansionHouse(x))",
+            "∀x (Skyscraper(x) → InUrbanArea(x))",
+            "∀x (CreepyHauntedHouse(x) → MansionHouse(x))",
+            "∀x (TerrifyingBuilding(x) ∧ OnHalloween(x) → CreepyHauntedHouse(x))",
+            "CreepyHauntedHouse(laLaurieHouse) ∨ TerrifyingBuilding(laLaurieHouse) ∧ OnHalloween(laLaurieHouse)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "The premises indicate that the LaLaurie House is a mansion house, which means it cannot be a skyscraper.",
+            "Since all skyscrapers are in urban areas and there are no mansion houses there, the LaLaurie House isn't a skyscraper.",
+            "Therefore, the conclusion that it's either a skyscraper or a mansion house is false.",
+            "it can only be a mansion house."
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "reasoning_content": "Alright, let's try to figure out whether the conclusion is true or false based on the given premises. \n\nFirst, I need to understand each premise and see how they connect. \n\nPremise 1 says there are no mansion houses in an urban area. So, mansion houses can't be in cities.\n\nPremise 2 states that all skyscrapers are in urban areas. So, skyscrapers are definitely in cities.\n\nPremise 3 mentions that every creepy haunted house is a mansion house. So, creepy haunted houses are a type of mansion.\n\nPremise 4 says every terrifying building on Halloween is a creepy haunted house. So, those scary buildings on Halloween are also creepy haunted houses, which are mansion houses.\n\nPremise 5 tells us that the LaLaurie House is either a creepy haunted house or a terrifying building on Halloween. So, it fits into one of these two categories.\n\nNow, if it's a creepy haunted house, then from premise 3, it's a mansion house. But from premise 1, mansion houses aren't in urban areas, so it can't be a skyscraper because skyscrapers are in cities.\n\nIf it's a terrifying building on Halloween, then from premise 4, it's a creepy haunted house, which again makes it a mansion house. So, it's a mansion house and not a skyscraper.\n\nTherefore, the conclusion that the LaLaurie House is either a skyscraper or a mansion house is false because it can't be a skyscraper and can only be a mansion house. So, the answer should be False.",
+        "content": "The premises indicate that the LaLaurie House is a mansion house, which means it cannot be a skyscraper. Since all skyscrapers are in urban areas and there are no mansion houses there, the LaLaurie House isn't a skyscraper. Therefore, the conclusion that it's either a skyscraper or a mansion house is false because it can only be a mansion house.\n\nAnswer: (B) False",
+        "filter_reasoning_steps": [
+            "The premises indicate that the LaLaurie House is a mansion house, which means it cannot be a skyscraper.",
+            "Since all skyscrapers are in urban areas and there are no mansion houses there, the LaLaurie House isn't a skyscraper.",
+            null,
+            "it can only be a mansion house."
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) there are no mansion houses in an urban area.",
+                "fol": "¬∃x (mansionhouse(x) ∧ urbanarea(x))",
+                "tptp": "~?[X]: (mansionhouse(X) & urbanarea(X))"
+            },
+            {
+                "ref": "(2) all skyscrapers are in urban areas.",
+                "fol": "∀x (skyscraper(x) → urbanarea(x))",
+                "tptp": "![X]: (skyscraper(X) => urbanarea(X))"
+            },
+            {
+                "ref": "(3) every creepy haunted house is a mansion house.",
+                "fol": "∀x (creepyhauntedhouse(x) → mansionhouse(x))",
+                "tptp": "![X]: (creepyhauntedhouse(X) => mansionhouse(X))"
+            },
+            {
+                "ref": "(4) every terrifying building on halloween is a creepy haunted house.",
+                "fol": "∀x (terrifyingbuildingonhalloween(x) → creepyhauntedhouse(x))",
+                "tptp": "![X]: (terrifyingbuildingonhalloween(X) => creepyhauntedhouse(X))"
+            },
+            {
+                "ref": "(5) the lalaurie house is a creepy haunted house or a terrifying building on halloween.",
+                "fol": "creepyhauntedhouse(lalaurie) ∨ terrifyingbuildingonhalloween(lalaurie)",
+                "tptp": "creepyhauntedhouse(lalaurie) | terrifyingbuildingonhalloween(lalaurie)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(4) the lalaurie house is either a skyscraper or a mansion house.",
+            "fol": "skyscraper(lalaurie) ⊕ mansionhouse(lalaurie)",
+            "tptp": "((~(skyscraper(lalaurie)) & (mansionhouse(lalaurie))) | ((skyscraper(lalaurie)) & ~(mansionhouse(lalaurie))))"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) the premises indicate that the lalaurie house is a mansion house, which means it cannot be a skyscraper.",
+                "fol": "mansionhouse(lalaurie) ∧ ¬skyscraper(lalaurie)",
+                "tptp": "mansionhouse(lalaurie) & ~skyscraper(lalaurie)"
+            },
+            {
+                "ref": "(2) since all skyscrapers are in urban areas and there are no mansion houses there, the lalaurie house isn't a skyscraper.",
+                "fol": "¬skyscraper(lalaurie)",
+                "tptp": "~skyscraper(lalaurie)"
+            },
+            {
+                "ref": "(3) it can only be a mansion house.",
+                "fol": "mansionhouse(lalaurie)",
+                "tptp": "mansionhouse(lalaurie)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "The premises indicate that the LaLaurie House is a mansion house, which means it cannot be a skyscraper.",
+            "Since all skyscrapers are in urban areas and there are no mansion houses there, the LaLaurie House isn't a skyscraper.",
+            "it can only be a mansion house."
+        ],
+        "AnswerCorrect": false,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "F1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "420_1186",
+        "premises": [
+            "Some people are both late-night and early-morning people.",
+            "If a person is an earl- morning person, they have early-morning habits.",
+            "Everyone who has early-morning habits gets up early.",
+            "Everyone who gets up early catches the sunrise.",
+            "James doesn't catch the sunrise."
+        ],
+        "question": [
+            "If James is an early-morning person, then he is a late night person."
+        ],
+        "premises_gt_fol": [
+            "∃x (LateNightPerson(x) ∧ EarlyMorningPerson(x))",
+            "∀x (EarlyMorningPerson(x) → Have(x, earlyMorningHabit))",
+            "∀x (Have(x, earlyMorningHabit) → GetUpEarly(x))",
+            "∀x (GetUpEarly(x) → CatchTheSunrise(x))",
+            "¬CatchTheSunrise(james)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Some people are both latenight and earlymorning people.",
+            "If a person is an earlmorning person, they have earlymorning habits.",
+            "Everyone who has earlymorning habits gets up early.",
+            "Everyone who gets up early catches the sunrise.",
+            "James doesn't catch the sunrise.",
+            "If James is an earlymorning person, he has earlymorning habits.",
+            "James has earlymorning habits if he is an earlymorning person.",
+            "James gets up early if he has earlymorning habits.",
+            "James catches the sunrise if he gets up early.",
+            "he doesn't get up early.",
+            "Therefore, James isn't an earlymorning person.",
+            "Since James isn't an earlymorning person, the statement \"If James is an earlymorning person, then he is a latenight person\" is vacuously true.",
+            "the premise is false."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Alright, let me try to figure out whether the conclusion is true or false based on the given premises. \n\nFirst, I'll list out all the premises to understand each statement:\n\n1. Some people are both late-night and early-morning people.\n2. If a person is an early-morning person, they have early-morning habits.\n3. Everyone who has early-morning habits gets up early.\n4. Everyone who gets up early catches the sunrise.\n5. James doesn't catch the sunrise.\n\nThe conclusion we need to evaluate is: If James is an early-morning person, then he is a late-night person.\n\nLet me break this down step by step.\n\nFrom premise 2: Early-morning people have early-morning habits. So, being an early-morning person implies having early-morning habits.\n\nFrom premise 3: Having early-morning habits means getting up early (since everyone with those habits does). So, being an early-morning person leads to getting up early.\n\nFrom premise 4: Getting up early means James catches the sunrise. So, if James is an early-morning person, he would get up early and catch the sunrise.\n\nBut from premise 5, we know that James doesn't catch the sunrise. This creates a contradiction because if he were an early-morning person, he should be catching the sunrise.\n\nThis contradiction suggests that our initial assumption—that James is an early-morning person—must be false. Therefore, James cannot be an early-morning person.\n\nNow, looking at premise 1: Some people are both late-night and early-morning people. This doesn't directly affect James, but it's a general statement about people.\n\nSince James isn't an early-morning person, the conclusion that if he were, he'd be a late-night person might not hold. However, the premises don't specify that being a late-night person is the only other option. It's possible that someone could be neither, but the conclusion is making a specific claim.\n\nWait, but the conclusion is framed as a conditional: If James is an early-morning person, then he is a late-night person. Since we've established that James cannot be an early-morning person (because that would lead to him catching the sunrise, which he doesn't), the conditional statement is vacuously true. In logic, if the premise is false, the entire implication is considered true regardless of the conclusion.\n\nSo, the conclusion is technically true because the antecedent (James being an early-morning person) is false, making the whole statement true by default.\n\nTherefore, the conclusion is True.",
+        "content": "1) Some people are both late-night and early-morning people.  \n2) If a person is an earl-morning person, they have early-morning habits.  \n3) Everyone who has early-morning habits gets up early.  \n4) Everyone who gets up early catches the sunrise.  \n5) James doesn't catch the sunrise.  \n6) If James is an early-morning person, he has early-morning habits.  \n7) James has early-morning habits if he is an early-morning person.  \n8) James gets up early if he has early-morning habits.  \n9) James catches the sunrise if he gets up early.  \n10) James doesn't catch the sunrise, so he doesn't get up early.  \n11) Therefore, James isn't an early-morning person.  \n12) Since James isn't an early-morning person, the statement \"If James is an early-morning person, then he is a late-night person\" is vacuously true because the premise is false.\n\nAnswer:  \n(A) True",
+        "filter_reasoning_steps": [
+            "Some people are both latenight and earlymorning people.",
+            "If a person is an earlmorning person, they have earlymorning habits.",
+            "Everyone who has earlymorning habits gets up early.",
+            "Everyone who gets up early catches the sunrise.",
+            "James doesn't catch the sunrise.",
+            "If James is an earlymorning person, he has earlymorning habits.",
+            "James has earlymorning habits if he is an earlymorning person.",
+            "James gets up early if he has earlymorning habits.",
+            "James catches the sunrise if he gets up early.",
+            "he doesn't get up early.",
+            null,
+            "Since James isn't an earlymorning person, the statement \"If James is an earlymorning person, then he is a latenight person\" is vacuously true.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) some people are both late-night and early-morning people.",
+                "fol": "∃x (latenight(x) ∧ earlymorning(x))",
+                "tptp": "?[X]: (latenight(X) & earlymorning(X))"
+            },
+            {
+                "ref": "(2) if a person is an early-morning person, they have early-morning habits.",
+                "fol": "∀x (earlymorning(x) → earlymorninghabits(x))",
+                "tptp": "![X]: (earlymorning(X) => earlymorninghabits(X))"
+            },
+            {
+                "ref": "(3) everyone who has early-morning habits gets up early.",
+                "fol": "∀x (earlymorninghabits(x) → getsupearly(x))",
+                "tptp": "![X]: (earlymorninghabits(X) => getsupearly(X))"
+            },
+            {
+                "ref": "(4) everyone who gets up early catches the sunrise.",
+                "fol": "∀x (getsupearly(x) → catchessunrise(x))",
+                "tptp": "![X]: (getsupearly(X) => catchessunrise(X))"
+            },
+            {
+                "ref": "(5) james doesn't catch the sunrise.",
+                "fol": "¬catchessunrise(james)",
+                "tptp": "~catchessunrise(james)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(12) if james is an early-morning person, then he is a late night person.",
+            "fol": "earlymorning(james) → latenight(james)",
+            "tptp": "earlymorning(james) => latenight(james)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) some people are both latenight and earlymorning people.",
+                "fol": "∃x (latenight(x) ∧ earlymorning(x))",
+                "tptp": "?[X]: (latenight(X) & earlymorning(X))"
+            },
+            {
+                "ref": "(2) if a person is an earlmorning person, they have earlymorning habits.",
+                "fol": "∀x (earlymorning(x) → earlymorninghabits(x))",
+                "tptp": "![X]: (earlymorning(X) => earlymorninghabits(X))"
+            },
+            {
+                "ref": "(3) everyone who has earlymorning habits gets up early.",
+                "fol": "∀x (earlymorninghabits(x) → getsupearly(x))",
+                "tptp": "![X]: (earlymorninghabits(X) => getsupearly(X))"
+            },
+            {
+                "ref": "(4) everyone who gets up early catches the sunrise.",
+                "fol": "∀x (getsupearly(x) → catchessunrise(x))",
+                "tptp": "![X]: (getsupearly(X) => catchessunrise(X))"
+            },
+            {
+                "ref": "(5) james doesn't catch the sunrise.",
+                "fol": "¬catchessunrise(james)",
+                "tptp": "~catchessunrise(james)"
+            },
+            {
+                "ref": "(6) if james is an earlymorning person, he has earlymorning habits.",
+                "fol": "earlymorning(james) → earlymorninghabits(james)",
+                "tptp": "earlymorning(james) => earlymorninghabits(james)"
+            },
+            {
+                "ref": "(7) james has earlymorning habits if he is an earlymorning person.",
+                "fol": "earlymorning(james) → earlymorninghabits(james)",
+                "tptp": "earlymorning(james) => earlymorninghabits(james)"
+            },
+            {
+                "ref": "(8) james gets up early if he has earlymorning habits.",
+                "fol": "earlymorninghabits(james) → getsupearly(james)",
+                "tptp": "earlymorninghabits(james) => getsupearly(james)"
+            },
+            {
+                "ref": "(9) james catches the sunrise if he gets up early.",
+                "fol": "getsupearly(james) → catchessunrise(james)",
+                "tptp": "getsupearly(james) => catchessunrise(james)"
+            },
+            {
+                "ref": "(10) he doesn't get up early.",
+                "fol": "¬getsupearly(james)",
+                "tptp": "~getsupearly(james)"
+            },
+            {
+                "ref": "(11) since james isn't an earlymorning person, the statement \"if james is an earlymorning person, then he is a latenight person\" is vacuously true.",
+                "fol": "¬earlymorning(james) → (earlymorning(james) → latenight(james))",
+                "tptp": "~earlymorning(james) => (earlymorning(james) => latenight(james))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Some people are both latenight and earlymorning people.",
+            "If a person is an earlmorning person, they have earlymorning habits.",
+            "Everyone who has earlymorning habits gets up early.",
+            "Everyone who gets up early catches the sunrise.",
+            "James doesn't catch the sunrise.",
+            "If James is an earlymorning person, he has earlymorning habits.",
+            "James has earlymorning habits if he is an earlymorning person.",
+            "James gets up early if he has earlymorning habits.",
+            "James catches the sunrise if he gets up early.",
+            "he doesn't get up early.",
+            "Since James isn't an earlymorning person, the statement \"If James is an earlymorning person, then he is a latenight person\" is vacuously true."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "113_342",
+        "premises": [
+            "Roversi is an Italian surname.",
+            "Alba Roversi uses Roversi as a surname.",
+            "Paolo Roversi uses Roversi as a surname.",
+            "Roberto Roversi uses Roversi as a surname.",
+            "Paolo Roversi is a photographer.",
+            "A photographer is a professional or an amateur."
+        ],
+        "question": [
+            "There are no photographers using an Italian surname."
+        ],
+        "premises_gt_fol": [
+            "ItalianName(roversi) ∧ Surname(roversi)",
+            "UseAsSurname(albaRoversi, roversi)",
+            "UseAsSurname(paoloRoversi, roversi)",
+            "UseAsSurname(robertoRoversi, roversi)",
+            "Photographer(paoloRoversi)",
+            "∀x (Photographer(x) → Professional(x) ⊕ Amateur(x))"
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "Paolo Roversi is a photographer.",
+            "Paolo Roversi uses Roversi as a surname.",
+            "Roversi is an Italian surname.",
+            "Therefore, there is at least one photographer using an Italian surname.",
+            "Hence, the conclusion that there are no photographers using an Italian surname is false."
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "reasoning_content": "Alright, let's break this down step by step. I need to determine whether the conclusion \"There are no photographers using an Italian surname\" is true or false based on the given premises.\n\nFirst, I'll list out the premises to get a clear picture:\n\n1. Roversi is an Italian surname.\n2. Alba Roversi uses Roversi as a surname.\n3. Paolo Roversi uses Roversi as a surname.\n4. Roberto Roversi uses Roversi as a surname.\n5. Paolo Roversi is a photographer.\n6. A photographer is a professional or an amateur.\n\nNow, looking at the conclusion, it states that there are no photographers using an Italian surname. To assess this, I need to see if the premises provide any information that directly or indirectly supports or contradicts this conclusion.\n\nStarting with premise 5: Paolo Roversi is a photographer. From premise 4, we know that Paolo Roversi uses the Roversi surname, which according to premise 1 is Italian. Therefore, Paolo Roversi is a photographer who uses an Italian surname.\n\nThis directly contradicts the conclusion because it provides an example of a photographer (Paolo Roversi) using an Italian surname (Roversi). \n\nAdditionally, premises 2 and 3 also mention other individuals using the Roversi surname, but since premise 5 specifically mentions Paolo Roversi, who is a photographer, this is the key point to focus on.\n\nPremise 6 tells us that photographers are either professionals or amateurs, which doesn't affect the conclusion about using an Italian surname.\n\nPutting it all together, the premises clearly show that at least one photographer (Paolo Roversi) uses an Italian surname. Therefore, the conclusion that there are no photographers using an Italian surname must be false.",
+        "content": "1) Paolo Roversi is a photographer. \n2) Paolo Roversi uses Roversi as a surname. \n3) Roversi is an Italian surname. \n4) Therefore, there is at least one photographer using an Italian surname. \n5) Hence, the conclusion that there are no photographers using an Italian surname is false.\n\nAnswer: (B) False",
+        "filter_reasoning_steps": [
+            "Paolo Roversi is a photographer.",
+            "Paolo Roversi uses Roversi as a surname.",
+            "Roversi is an Italian surname.",
+            null,
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) roversi is an italian surname.",
+                "fol": "italiansurname(roversi)",
+                "tptp": "italiansurname(roversi)"
+            },
+            {
+                "ref": "(2) alba roversi uses roversi as a surname.",
+                "fol": "surname(alba, roversi)",
+                "tptp": "surname(alba, roversi)"
+            },
+            {
+                "ref": "(3) paolo roversi uses roversi as a surname.",
+                "fol": "surname(paolo, roversi)",
+                "tptp": "surname(paolo, roversi)"
+            },
+            {
+                "ref": "(4) roberto roversi uses roversi as a surname.",
+                "fol": "surname(roberto, roversi)",
+                "tptp": "surname(roberto, roversi)"
+            },
+            {
+                "ref": "(5) paolo roversi is a photographer.",
+                "fol": "photographer(paolo)",
+                "tptp": "photographer(paolo)"
+            },
+            {
+                "ref": "(6) a photographer is a professional or an amateur.",
+                "fol": "∀x (photographer(x) → professional(x) ∨ amateur(x))",
+                "tptp": "![X]: (photographer(X) => professional(X) | amateur(X))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(4) there are no photographers using an italian surname.",
+            "fol": "¬∃x (photographer(x) ∧ ∃y (surname(x, y) ∧ italiansurname(y)))",
+            "tptp": "~?[X]: (photographer(X) & ?[Y]: (surname(X, Y) & italiansurname(Y)))"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) paolo roversi is a photographer.",
+                "fol": "photographer(paolo)",
+                "tptp": "photographer(paolo)"
+            },
+            {
+                "ref": "(2) paolo roversi uses roversi as a surname.",
+                "fol": "surname(paolo, roversi)",
+                "tptp": "surname(paolo, roversi)"
+            },
+            {
+                "ref": "(3) roversi is an italian surname.",
+                "fol": "italiansurname(roversi)",
+                "tptp": "italiansurname(roversi)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Paolo Roversi is a photographer.",
+            "Paolo Roversi uses Roversi as a surname.",
+            "Roversi is an Italian surname."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "7_17",
+        "premises": [
+            "Six, seven and eight are real numbers.",
+            "If a real number equals another real number added by one, the first number is larger.",
+            "If the number x is larger than the number y, then y is not larger than x.",
+            "Seven equals six plus one.",
+            "Eight equals seven plus one.",
+            "Two is positive.",
+            "If a number is positive, then the double of it is also positive.",
+            "Eight is the double of four.",
+            "Four is the double of two."
+        ],
+        "question": [
+            "Eight is larger than seven."
+        ],
+        "premises_gt_fol": [
+            "RealNum(num6) ∧ RealNum(num7) ∧ RealNum(num8)",
+            "∀x ∀y ((RealNum(x) ∧ RealNum(y) ∧ IsSuccessorOf(x, y)) → Larger(x, y))",
+            "∀x ∀y (Larger(x, y) → ¬Larger(y, x))",
+            "∃y(IsSuccessorOf(y, num6) ∧ Equals(num7, y))",
+            "∃y(IsSuccessorOf(y, num7) ∧ Equals(num8, y))",
+            "Positive(num2)",
+            "∀x ∀y ((Positive(x) ∧ IsDouble(y, x)) → Positive(y))",
+            "IsDouble(num8, num4)",
+            "IsDouble(num4, num2)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Seven equals six plus one.",
+            "If a real number equals another real number added by one, the first number is larger.",
+            "Therefore, seven is larger than six.",
+            "Eight equals seven plus one.",
+            "Therefore, eight is larger than seven.",
+            "The conclusion states that eight is larger than seven.",
+            "The premises support the conclusion."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Alright, let's break this down step by step. So, the premises are about real numbers and their relationships. First, we know that six, seven, and eight are real numbers. Then, there's a rule that if one real number is equal to another plus one, the first is larger. \n\nLooking at the specific statements, seven is six plus one, so seven is larger than six. Similarly, eight is seven plus one, making eight larger than seven. Then, it's given that two is positive. From the rule, if a number is positive, its double is also positive. Since two is positive, doubling it gives four, so four is positive. \n\nContinuing, eight is the double of four because eight divided by two is four. And four is the double of two because four divided by two is two. So, putting it all together, since seven is larger than six, and eight is larger than seven, it follows that eight is indeed larger than seven. The conclusion seems solid based on the premises provided.",
+        "content": "1) Seven equals six plus one.  \n2) If a real number equals another real number added by one, the first number is larger.  \n3) Therefore, seven is larger than six.  \n4) Eight equals seven plus one.  \n5) If a real number equals another real number added by one, the first number is larger.  \n6) Therefore, eight is larger than seven.  \n7) The conclusion states that eight is larger than seven.  \n8) The premises support the conclusion.  \n\nAnswer:  \n(A) True",
+        "filter_reasoning_steps": [
+            "Seven equals six plus one.",
+            "If a real number equals another real number added by one, the first number is larger.",
+            null,
+            "Eight equals seven plus one.",
+            null,
+            null,
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) six, seven and eight are real numbers.",
+                "fol": "realnumber(six) ∧ realnumber(seven) ∧ realnumber(eight)",
+                "tptp": "realnumber(six) & realnumber(seven) & realnumber(eight)"
+            },
+            {
+                "ref": "(2) if a real number equals another real number added by one, the first number is larger.",
+                "fol": "∀x ∀y ((realnumber(x) ∧ realnumber(y) ∧ equals(x, add(y, one))) → larger(x, y))",
+                "tptp": "![X]: ![Y]: ((realnumber(X) & realnumber(Y) & equals(X, add(Y, one))) => larger(X, Y))"
+            },
+            {
+                "ref": "(3) if the number x is larger than the number y, then y is not larger than x.",
+                "fol": "∀x ∀y (larger(x, y) → ¬larger(y, x))",
+                "tptp": "![X]: ![Y]: (larger(X, Y) => ~larger(Y, X))"
+            },
+            {
+                "ref": "(4) seven equals six plus one.",
+                "fol": "equals(seven, add(six, one))",
+                "tptp": "equals(seven, add(six, one))"
+            },
+            {
+                "ref": "(5) eight equals seven plus one.",
+                "fol": "equals(eight, add(seven, one))",
+                "tptp": "equals(eight, add(seven, one))"
+            },
+            {
+                "ref": "(6) two is positive.",
+                "fol": "positive(two)",
+                "tptp": "positive(two)"
+            },
+            {
+                "ref": "(7) if a number is positive, then the double of it is also positive.",
+                "fol": "∀x (positive(x) → positive(double(x)))",
+                "tptp": "![X]: (positive(X) => positive(double(X)))"
+            },
+            {
+                "ref": "(8) eight is the double of four.",
+                "fol": "equals(eight, double(four))",
+                "tptp": "equals(eight, double(four))"
+            },
+            {
+                "ref": "(9) four is the double of two.",
+                "fol": "equals(four, double(two))",
+                "tptp": "equals(four, double(two))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(4) eight is larger than seven.",
+            "fol": "larger(eight, seven)",
+            "tptp": "larger(eight, seven)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) seven equals six plus one.",
+                "fol": "equals(seven, add(six, one))",
+                "tptp": "equals(seven, add(six, one))"
+            },
+            {
+                "ref": "(2) if a real number equals another real number added by one, the first number is larger.",
+                "fol": "∀x ∀y ((realnumber(x) ∧ realnumber(y) ∧ equals(x, add(y, one))) → larger(x, y))",
+                "tptp": "![X]: ![Y]: ((realnumber(X) & realnumber(Y) & equals(X, add(Y, one))) => larger(X, Y))"
+            },
+            {
+                "ref": "(3) eight equals seven plus one.",
+                "fol": "equals(eight, add(seven, one))",
+                "tptp": "equals(eight, add(seven, one))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Seven equals six plus one.",
+            "If a real number equals another real number added by one, the first number is larger.",
+            "Eight equals seven plus one."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": false,
+        "cate": "T3",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "449_1293",
+        "premises": [
+            "Animals who need large territory travel far.",
+            "Every animal that eats a lot needs a large territory.",
+            "If something is a big animal, then it will eat a lot.",
+            "Bears are big animals.",
+            "Larry is a big animal."
+        ],
+        "question": [
+            "Larry is not a bear and does not travel far."
+        ],
+        "premises_gt_fol": [
+            "∀x (Animal(x) ∧ Need(x, largeTerritory) → TravelFar(x))",
+            "∀x (EatALot(x) → Need(x, largeTerritory))",
+            "∀x (Big(x) ∧ Animal(x) → EatALot(x))",
+            "∀x (Bear(x) → Big(x) ∧ Animal(x))",
+            "Big(larry) ∧ Animal(larry)"
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "Premise 3: If something is a big animal, then it will eat a lot.",
+            "Premise 5: Larry is a big animal.",
+            "Therefore, Larry eats a lot.",
+            "Premise 2: Every animal that eats a lot needs a large territory.",
+            "Therefore, Larry needs a large territory.",
+            "Premise 1: Animals who need large territory travel far.",
+            "Therefore, Larry travels far.",
+            "Conclusion: Larry does not travel far.",
+            "(Contradiction from step"
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "reasoning_content": "Alright, let's tackle this problem step by step. First, I'll try to understand the premises and see how they relate to the conclusion. The premises are:\n\n1. Animals who need large territory travel far.\n2. Every animal that eats a lot needs a large territory.\n3. If something is a big animal, then it will eat a lot.\n4. Bears are big animals.\n5. Larry is a big animal.\n\nThe conclusion we need to evaluate is: \"Larry is not a bear and does not travel far.\"\n\nLet me break down each premise and see how they connect.\n\nPremise 3 says that if something is a big animal, it will eat a lot. Larry is a big animal according to premise 5. So, applying modus ponens here, we can conclude that Larry eats a lot.\n\nPremise 2 states that every animal that eats a lot needs a large territory. Since we've established that Larry eats a lot, it follows that Larry needs a large territory. \n\nPremise 1 tells us that animals who need large territory travel far. Therefore, since Larry needs a large territory, he must travel far.\n\nNow, looking at the conclusion: \"Larry is not a bear and does not travel far.\" From our deductions, we know that Larry is a big animal and he does travel far. However, premise 4 mentions that bears are big animals, but it doesn't specify whether only bears are big animals or if there are other big animals. So, Larry could potentially be a bear or another big animal.\n\nIf Larry were a bear, then the first part of the conclusion (\"Larry is not a bear\") would be false. But since we don't have information that Larry is not a bear, we can't definitively say he isn't. However, the second part of the conclusion says he doesn't travel far, which contradicts our earlier deduction that he does travel far.\n\nTherefore, the conclusion that \"Larry is not a bear and does not travel far\" is false because we've established that Larry does travel far. The first part of the conclusion might be true or false depending on whether Larry is a bear, but the second part is definitely false based on the premises.",
+        "content": "1) Premise 3: If something is a big animal, then it will eat a lot.\n2) Premise 5: Larry is a big animal.\n3) Therefore, Larry eats a lot.\n4) Premise 2: Every animal that eats a lot needs a large territory.\n5) Therefore, Larry needs a large territory.\n6) Premise 1: Animals who need large territory travel far.\n7) Therefore, Larry travels far.\n8) Conclusion: Larry does not travel far. (Contradiction from step 7)\nAnswer:\n(B) False",
+        "filter_reasoning_steps": [
+            "Premise 3: If something is a big animal, then it will eat a lot.",
+            "Premise 5: Larry is a big animal.",
+            null,
+            "Premise 2: Every animal that eats a lot needs a large territory.",
+            null,
+            "Premise 1: Animals who need large territory travel far.",
+            null,
+            null,
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) animals who need large territory travel far.",
+                "fol": "∀x (needlargeterritory(x) → travelfar(x))",
+                "tptp": "![X]: (needlargeterritory(X) => travelfar(X))"
+            },
+            {
+                "ref": "(2) every animal that eats a lot needs a large territory.",
+                "fol": "∀x (eatalot(x) → needlargeterritory(x))",
+                "tptp": "![X]: (eatalot(X) => needlargeterritory(X))"
+            },
+            {
+                "ref": "(3) if something is a big animal, then it will eat a lot.",
+                "fol": "∀x (biganimal(x) → eatalot(x))",
+                "tptp": "![X]: (biganimal(X) => eatalot(X))"
+            },
+            {
+                "ref": "(4) bears are big animals.",
+                "fol": "∀x (bear(x) → biganimal(x))",
+                "tptp": "![X]: (bear(X) => biganimal(X))"
+            },
+            {
+                "ref": "(5) larry is a big animal.",
+                "fol": "biganimal(larry)",
+                "tptp": "biganimal(larry)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(5) larry is not a bear and does not travel far.",
+            "fol": "¬bear(larry) ∧ ¬travelfar(larry)",
+            "tptp": "~bear(larry) & ~travelfar(larry)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) premise 3: if something is a big animal, then it will eat a lot.",
+                "fol": "∀x (biganimal(x) → eatalot(x))",
+                "tptp": "![X]: (biganimal(X) => eatalot(X))"
+            },
+            {
+                "ref": "(2) premise 5: larry is a big animal.",
+                "fol": "biganimal(larry)",
+                "tptp": "biganimal(larry)"
+            },
+            {
+                "ref": "(3) premise 2: every animal that eats a lot needs a large territory.",
+                "fol": "∀x (eatalot(x) → needlargeterritory(x))",
+                "tptp": "![X]: (eatalot(X) => needlargeterritory(X))"
+            },
+            {
+                "ref": "(4) premise 1: animals who need large territory travel far.",
+                "fol": "∀x (needlargeterritory(x) → travelfar(x))",
+                "tptp": "![X]: (needlargeterritory(X) => travelfar(X))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Premise 3: If something is a big animal, then it will eat a lot.",
+            "Premise 5: Larry is a big animal.",
+            "Premise 2: Every animal that eats a lot needs a large territory.",
+            "Premise 1: Animals who need large territory travel far."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "484_1416",
+        "premises": [
+            "No songs are visuals. ",
+            "All folk songs are songs. ",
+            "All videos are visuals. ",
+            "All movies are videos.",
+            "All sci-fi movies are movies.",
+            "Inception is a sci-fi movie.",
+            "Mac is neither a folk song nor a sci-fi movie."
+        ],
+        "question": [
+            "Inception is not a folk song."
+        ],
+        "premises_gt_fol": [
+            "∀x (Song(x) → ¬Visual(x))",
+            "∀x (FolkSong(x) → Song(x))",
+            "∀x (Video(x) → Visual(x))",
+            "∀x (Movie(x) → Video(x))",
+            "∀x (ScifiMovie(x) → Movie(x))",
+            "ScifiMovie(inception)",
+            "¬FolkSong(mac) ∧ ¬ScifiMovie(mac)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "All scifi movies are movies.",
+            "Inception is a scifi movie.",
+            "Therefore, Inception is a movie.",
+            "All movies are videos.",
+            "Therefore, Inception is a video.",
+            "All videos are visuals.",
+            "Therefore, Inception is a visual.",
+            "No songs are visuals.",
+            "Since Inception is a visual, it cannot be a song.",
+            "All folk songs are songs.",
+            "Therefore, Inception cannot be a folk song."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Alright, let's try to figure out whether the conclusion that \"Inception is not a folk song\" is true or false based on the given premises. \n\nFirst, I'll list out all the premises to make sure I don't miss anything:\n\n1. No songs are visuals.\n2. All folk songs are songs.\n3. All videos are visuals.\n4. All movies are videos.\n5. All sci-fi movies are movies.\n6. Inception is a sci-fi movie.\n7. Mac is neither a folk song nor a sci-fi movie.\n\nThe conclusion we're evaluating is: Inception is not a folk song.\n\nOkay, let's break this down step by step.\n\nStarting with premise 2: All folk songs are songs. That means if something is a folk song, it must also be a song. But from premise 1, no songs are visuals. So if a song is a folk song, it can't be a visual. \n\nPremise 3 says all videos are visuals. So, anything that's a video must be a visual. Premise 4 tells us all movies are videos, so movies are a subset of videos, which in turn are visuals. \n\nPremise 5 says all sci-fi movies are movies. Since movies are videos and videos are visuals, sci-fi movies are also visuals. Premise 6 states that Inception is a sci-fi movie, so Inception must be a video, hence a visual.\n\nNow, let's think about Inception. It's a sci-fi movie, so it's a video and a visual. From premise 2, if Inception were a folk song, it would have to be a song. But from premise 1, no songs are visuals, and since Inception is a visual, it can't be a song. Therefore, Inception can't be a folk song because folk songs are a subset of songs, which can't be visuals.\n\nAdditionally, premise 7 tells us that Mac is neither a folk song nor a sci-fi movie. This reinforces that Inception, being a sci-fi movie, isn't a folk song. \n\nSo putting it all together, Inception being a sci-fi movie means it's a video and a visual. Since no songs (and thus no folk songs) are visuals, Inception can't be a folktale song. Therefore, the conclusion that Inception is not a folk song holds true.",
+        "content": "1. All sci-fi movies are movies.\n2. Inception is a sci-fi movie.\n3. Therefore, Inception is a movie.\n4. All movies are videos.\n5. Therefore, Inception is a video.\n6. All videos are visuals.\n7. Therefore, Inception is a visual.\n8. No songs are visuals.\n9. Since Inception is a visual, it cannot be a song.\n10. All folk songs are songs.\n11. Therefore, Inception cannot be a folk song.\n\nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "All scifi movies are movies.",
+            "Inception is a scifi movie.",
+            null,
+            "All movies are videos.",
+            null,
+            "All videos are visuals.",
+            null,
+            "No songs are visuals.",
+            "Since Inception is a visual, it cannot be a song.",
+            "All folk songs are songs.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) no songs are visuals.",
+                "fol": "¬∃x (song(x) ∧ visual(x))",
+                "tptp": "~?[X]: (song(X) & visual(X))"
+            },
+            {
+                "ref": "(2) all folk songs are songs.",
+                "fol": "∀x (folksong(x) → song(x))",
+                "tptp": "![X]: (folksong(X) => song(X))"
+            },
+            {
+                "ref": "(3) all videos are visuals.",
+                "fol": "∀x (video(x) → visual(x))",
+                "tptp": "![X]: (video(X) => visual(X))"
+            },
+            {
+                "ref": "(4) all movies are videos.",
+                "fol": "∀x (movie(x) → video(x))",
+                "tptp": "![X]: (movie(X) => video(X))"
+            },
+            {
+                "ref": "(5) all sci-fi movies are movies.",
+                "fol": "∀x (scifimovie(x) → movie(x))",
+                "tptp": "![X]: (scifimovie(X) => movie(X))"
+            },
+            {
+                "ref": "(6) inception is a sci-fi movie.",
+                "fol": "scifimovie(inception)",
+                "tptp": "scifimovie(inception)"
+            },
+            {
+                "ref": "(7) mac is neither a folk song nor a sci-fi movie.",
+                "fol": "¬(folksong(mac) ∨ scifimovie(mac))",
+                "tptp": "~(folksong(mac) | scifimovie(mac))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(8) inception is not a folk song.",
+            "fol": "¬folksong(inception)",
+            "tptp": "~folksong(inception)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) all scifi movies are movies.",
+                "fol": "∀x (scifimovie(x) → movie(x))",
+                "tptp": "![X]: (scifimovie(X) => movie(X))"
+            },
+            {
+                "ref": "(2) inception is a scifi movie.",
+                "fol": "scifimovie(inception)",
+                "tptp": "scifimovie(inception)"
+            },
+            {
+                "ref": "(3) all movies are videos.",
+                "fol": "∀x (movie(x) → video(x))",
+                "tptp": "![X]: (movie(X) => video(X))"
+            },
+            {
+                "ref": "(4) all videos are visuals.",
+                "fol": "∀x (video(x) → visual(x))",
+                "tptp": "![X]: (video(X) => visual(X))"
+            },
+            {
+                "ref": "(5) no songs are visuals.",
+                "fol": "¬∃x (song(x) ∧ visual(x))",
+                "tptp": "~?[X]: (song(X) & visual(X))"
+            },
+            {
+                "ref": "(6) since inception is a visual, it cannot be a song.",
+                "fol": "visual(inception) → ¬song(inception)",
+                "tptp": "visual(inception) => ~song(inception)"
+            },
+            {
+                "ref": "(7) all folk songs are songs.",
+                "fol": "∀x (folksong(x) → song(x))",
+                "tptp": "![X]: (folksong(X) => song(X))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "All scifi movies are movies.",
+            "Inception is a scifi movie.",
+            "All movies are videos.",
+            "All videos are visuals.",
+            "No songs are visuals.",
+            "Since Inception is a visual, it cannot be a song.",
+            "All folk songs are songs."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "141_415",
+        "premises": [
+            "TS Leda was a good passenger and cargo vessel.",
+            "TS Leda was a Norwegian vessel that was built with stabilizers.",
+            "Stabilizers are mechanical devices found only on ships with powerful steam turbine engines.",
+            "To be a good passenger and cargo vessel, ships must be quiet and good at sea.",
+            "Some ships that are quiet and good at sea have powerful steam turbine engines.",
+            "Vessels are ships."
+        ],
+        "question": [
+            "TS Leda was not a Norwegian vessel."
+        ],
+        "premises_gt_fol": [
+            "∀x (TSLeda(x) → ((Passenger(x) ∧ Vessel(x)) ∧ (Cargo(x) ∧ Vessel(x)))",
+            "∀x (TSLeda(x) → (Norweigian(x) ∧ Vessel(x) ∧ Stabilizers(x)))",
+            "∀x (Stabilizers(x) → MechanicalDevice(x) ∧ OnlyOnShips(x) ∧ PowerfulSteamTurbine(x))",
+            "∀x ((Passenger(x) ∧ Vessel(x)) ∧ (Cargo(x) ∧ Vessel(x)) → (Quiet(x) ∧ GoodAt(x, sea)))",
+            "∃x (Quiet(x) ∧ GoodAt(x, sea) ∧ PowerfulSteamTurbine(x))",
+            "∀x (Ship(x) → Vessel(x))"
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "TS Leda was a good passenger and cargo vessel.",
+            "Vessels are ships.",
+            "TS Leda was a Norwegian vessel that was built with stabilizers.",
+            "Stabilizers are mechanical devices found only on ships with powerful steam turbine engines.",
+            "To be a good passenger and cargo vessel, ships must be quiet and good at sea.",
+            "Some ships that are quiet and good at sea have powerful steam turbine engines.",
+            "TS Leda has stabilizers.",
+            "it has a powerful steam turbine engine.",
+            "Being a good passenger and cargo vessel implies being quiet and good at sea.",
+            "Therefore, TS Leda is quiet and good at sea.",
+            "The premises do not contradict TS Leda being a Norwegian vessel.",
+            "The conclusion that TS Leda was not a Norwegian vessel is false."
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, I need to determine whether the conclusion \"TS Leda was not a Norwegian vessel\" is true or false based on the given premises. Let me break down the premises step by step.\n\nFirst, it's stated that \"TS Leda was a good passenger and cargo vessel.\" So, TS Leda is a vessel. \n\nNext, the premises mention that \"TS Leda was a Norwegian vessel that was built with stabilizers.\" So, it's directly stated that TS Leda is a Norwegian vessel. This seems to support the conclusion that it is a Norwegian vessel, which would make the conclusion false.\n\nHowever, let me check the other premises to see if there's any conflicting information. \n\nIt says that \"stabilizers are mechanical devices found only on ships with powerful steam turbine engines.\" So, having stabilizers means the vessel has a powerful steam turbine engine.\n\nThen, it states that \"to be a good passenger and cargo vessel, ships must be quiet and good at sea.\" So, good passenger and cargo vessels are quiet and good at sea.\n\nAdditionally, \"some ships that are quiet and good at sea have powerful steam turbine engines.\" So, being quiet and good at sea is a sufficient but not necessary condition for having a powerful steam turbine engine.\n\nPutting it all together: TS Leda is a good passenger and cargo vessel, so it must be quiet and good at sea. It also has stabilizers, which means it has a powerful steam turbine engine. But the premises don't contradict the fact that it's a Norwegian vessel built with stabilizers. In fact, that's directly stated.\n\nTherefore, the conclusion that TS Leda was not a Norwegian vessel is false because the premises explicitly say it is a Norwegian vessel.",
+        "content": "1) TS Leda was a good passenger and cargo vessel.\n2) Vessels are ships.\n3) TS Leda was a Norwegian vessel that was built with stabilizers.\n4) Stabilizers are mechanical devices found only on ships with powerful steam turbine engines.\n5) To be a good passenger and cargo vessel, ships must be quiet and good at sea.\n6) Some ships that are quiet and good at sea have powerful steam turbine engines.\n7) TS Leda has stabilizers, so it has a powerful steam turbine engine.\n8) Being a good passenger and cargo vessel implies being quiet and good at sea.\n9) Therefore, TS Leda is quiet and good at sea.\n10) The premises do not contradict TS Leda being a Norwegian vessel.\n11) The conclusion that TS Leda was not a Norwegian vessel is false.\n\nAnswer:\n(B) False",
+        "filter_reasoning_steps": [
+            "TS Leda was a good passenger and cargo vessel.",
+            "Vessels are ships.",
+            "TS Leda was a Norwegian vessel that was built with stabilizers.",
+            "Stabilizers are mechanical devices found only on ships with powerful steam turbine engines.",
+            "To be a good passenger and cargo vessel, ships must be quiet and good at sea.",
+            "Some ships that are quiet and good at sea have powerful steam turbine engines.",
+            "TS Leda has stabilizers.",
+            "it has a powerful steam turbine engine.",
+            "Being a good passenger and cargo vessel implies being quiet and good at sea.",
+            null,
+            null,
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) ts leda was a good passenger and cargo vessel.",
+                "fol": "goodpassengercargovessel(ts_leda)",
+                "tptp": "goodpassengercargovessel(ts_leda)"
+            },
+            {
+                "ref": "(2) ts leda was a norwegian vessel that was built with stabilizers.",
+                "fol": "norwegian(ts_leda) ∧ builtwithstabilizers(ts_leda)",
+                "tptp": "norwegian(ts_leda) & builtwithstabilizers(ts_leda)"
+            },
+            {
+                "ref": "(3) stabilizers are mechanical devices found only on ships with powerful steam turbine engines.",
+                "fol": "∀x (stabilizers(x) → (ship(x) ∧ powerfulsteamturbineengine(x)))",
+                "tptp": "![X]: (stabilizers(X) => (ship(X) & powerfulsteamturbineengine(X)))"
+            },
+            {
+                "ref": "(4) to be a good passenger and cargo vessel, ships must be quiet and good at sea.",
+                "fol": "∀x ((goodpassengercargovessel(x) → (quiet(x) ∧ goodatsea(x))))",
+                "tptp": "![X]: ((goodpassengercargovessel(X) => (quiet(X) & goodatsea(X))))"
+            },
+            {
+                "ref": "(5) some ships that are quiet and good at sea have powerful steam turbine engines.",
+                "fol": "∃x ((quiet(x) ∧ goodatsea(x)) ∧ powerfulsteamturbineengine(x))",
+                "tptp": "?[X]: ((quiet(X) & goodatsea(X)) & powerfulsteamturbineengine(X))"
+            },
+            {
+                "ref": "(6) vessels are ships.",
+                "fol": "∀x (vessel(x) → ship(x))",
+                "tptp": "![X]: (vessel(X) => ship(X))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(10) ts leda was not a norwegian vessel.",
+            "fol": "¬norwegian(ts_leda)",
+            "tptp": "~norwegian(ts_leda)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) ts leda was a good passenger and cargo vessel.",
+                "fol": "goodpassengercargovessel(ts_leda)",
+                "tptp": "goodpassengercargovessel(ts_leda)"
+            },
+            {
+                "ref": "(2) vessels are ships.",
+                "fol": "∀x (vessel(x) → ship(x))",
+                "tptp": "![X]: (vessel(X) => ship(X))"
+            },
+            {
+                "ref": "(3) ts leda was a norwegian vessel that was built with stabilizers.",
+                "fol": "norwegian(ts_leda) ∧ builtwithstabilizers(ts_leda)",
+                "tptp": "norwegian(ts_leda) & builtwithstabilizers(ts_leda)"
+            },
+            {
+                "ref": "(4) stabilizers are mechanical devices found only on ships with powerful steam turbine engines.",
+                "fol": "∀x (stabilizers(x) → (ship(x) ∧ powerfulsteamturbineengine(x)))",
+                "tptp": "![X]: (stabilizers(X) => (ship(X) & powerfulsteamturbineengine(X)))"
+            },
+            {
+                "ref": "(5) to be a good passenger and cargo vessel, ships must be quiet and good at sea.",
+                "fol": "∀x ((goodpassengercargovessel(x) → (quiet(x) ∧ goodatsea(x))))",
+                "tptp": "![X]: ((goodpassengercargovessel(X) => (quiet(X) & goodatsea(X))))"
+            },
+            {
+                "ref": "(6) some ships that are quiet and good at sea have powerful steam turbine engines.",
+                "fol": "∃x ((quiet(x) ∧ goodatsea(x)) ∧ powerfulsteamturbineengine(x))",
+                "tptp": "?[X]: ((quiet(X) & goodatsea(X)) & powerfulsteamturbineengine(X))"
+            },
+            {
+                "ref": "(7) ts leda has stabilizers.",
+                "fol": "builtwithstabilizers(ts_leda)",
+                "tptp": "builtwithstabilizers(ts_leda)"
+            },
+            {
+                "ref": "(8) it has a powerful steam turbine engine.",
+                "fol": "powerfulsteamturbineengine(ts_leda)",
+                "tptp": "powerfulsteamturbineengine(ts_leda)"
+            },
+            {
+                "ref": "(9) being a good passenger and cargo vessel implies being quiet and good at sea.",
+                "fol": "∀x ((goodpassengercargovessel(x) → (quiet(x) ∧ goodatsea(x))))",
+                "tptp": "![X]: ((goodpassengercargovessel(X) => (quiet(X) & goodatsea(X))))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "TS Leda was a good passenger and cargo vessel.",
+            "Vessels are ships.",
+            "TS Leda was a Norwegian vessel that was built with stabilizers.",
+            "Stabilizers are mechanical devices found only on ships with powerful steam turbine engines.",
+            "To be a good passenger and cargo vessel, ships must be quiet and good at sea.",
+            "Some ships that are quiet and good at sea have powerful steam turbine engines.",
+            "TS Leda has stabilizers.",
+            "it has a powerful steam turbine engine.",
+            "Being a good passenger and cargo vessel implies being quiet and good at sea."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "Unknown",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T2",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    }
+]

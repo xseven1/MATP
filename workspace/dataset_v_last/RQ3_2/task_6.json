@@ -1,0 +1,192 @@
+{
+    "idx": "4hop_Composed_random_noadj_example22_example7",
+    "premises": [
+        "Everything that is a grimpus or a numpus or a jompus is a wumpus and a brimpus and a rompus.",
+        "Everything that is a numpus or a lempus or a shumpus is a sterpus.",
+        "Every lorpus is a numpus.",
+        "Every rompus is a sterpus.",
+        "Everything that is a grimpus, a numpus, or a jompus is a shumpus.",
+        "Each dumpus is a yumpus.",
+        "Every lorpus is a sterpus.",
+        "Brimpuses are yumpuses.",
+        "Every dumpus is a lorpus.",
+        "Wren is a sterpus.",
+        "Wren is a dumpus."
+    ],
+    "question": [
+        "Wren is a wumpus."
+    ],
+    "label": 1,
+    "reasoning_steps": [
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus.",
+        "Every lorpus is a numpus."
+    ],
+    "reasoning_answer": -1,
+    "premise:_fol": [
+        {
+            "ref": "(1) everything that is a grimpus or a numpus or a jompus is a wumpus and a brimpus and a rompus.",
+            "fol": "∀x ((grimpus(x) ∨ numpus(x) ∨ jompus(x)) → (wumpus(x) ∧ brimpus(x) ∧ rompus(x)))",
+            "tptp": "![X]: ((grimpus(X) | numpus(X) | jompus(X)) => (wumpus(X) & brimpus(X) & rompus(X)))"
+        },
+        {
+            "ref": "(2) everything that is a numpus or a lempus or a shumpus is a sterpus.",
+            "fol": "∀x ((numpus(x) ∨ lempus(x) ∨ shumpus(x)) → sterpus(x))",
+            "tptp": "![X]: ((numpus(X) | lempus(X) | shumpus(X)) => sterpus(X))"
+        },
+        {
+            "ref": "(3) every lorpus is a numpus.",
+            "fol": "∀x (lorpus(x) → numpus(x))",
+            "tptp": "![X]: (lorpus(X) => numpus(X))"
+        },
+        {
+            "ref": "(4) every rompus is a sterpus.",
+            "fol": "∀x (rompus(x) → sterpus(x))",
+            "tptp": "![X]: (rompus(X) => sterpus(X))"
+        },
+        {
+            "ref": "(5) everything that is a grimpus, a numpus, or a jompus is a shumpus.",
+            "fol": "∀x ((grimpus(x) ∨ numpus(x) ∨ jompus(x)) → shumpus(x))",
+            "tptp": "![X]: ((grimpus(X) | numpus(X) | jompus(X)) => shumpus(X))"
+        },
+        {
+            "ref": "(6) each dumpus is a yumpus.",
+            "fol": "∀x (dumpus(x) → yumpus(x))",
+            "tptp": "![X]: (dumpus(X) => yumpus(X))"
+        },
+        {
+            "ref": "(7) every lorpus is a sterpus.",
+            "fol": "∀x (lorpus(x) → sterpus(x))",
+            "tptp": "![X]: (lorpus(X) => sterpus(X))"
+        },
+        {
+            "ref": "(8) brimpuses are yumpuses.",
+            "fol": "∀x (brimpus(x) → yumpus(x))",
+            "tptp": "![X]: (brimpus(X) => yumpus(X))"
+        },
+        {
+            "ref": "(9) every dumpus is a lorpus.",
+            "fol": "∀x (dumpus(x) → lorpus(x))",
+            "tptp": "![X]: (dumpus(X) => lorpus(X))"
+        },
+        {
+            "ref": "(10) wren is a sterpus.",
+            "fol": "sterpus(wren)",
+            "tptp": "sterpus(wren)"
+        },
+        {
+            "ref": "(11) wren is a dumpus.",
+            "fol": "dumpus(wren)",
+            "tptp": "dumpus(wren)"
+        }
+    ],
+    "conclusion:_fol": [
+        {
+            "ref": "(1) every lorpus is a numpus.",
+            "fol": "∀x (lorpus(x) → numpus(x))",
+            "tptp": "![X]: (lorpus(X) => numpus(X))"
+        },
+        {
+            "ref": "(2) wren is a wumpus.",
+            "fol": "wumpus(wren)",
+            "tptp": "wumpus(wren)"
+        }
+    ],
+    "AnswerCorrect": false,
+    "step_correctness_label": [
+        "True"
+    ],
+    "has_valid_proof_path_label": false,
+    "cate": "F1",
+    "filter_reasoning_steps": [
+        "Every lorpus is a numpus."
+    ],
+    "step_correctness_label_manual_annotation": [
+        "True"
+    ]
+}

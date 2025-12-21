@@ -1,0 +1,187 @@
+{
+    "idx": "ProofWriter_AttNoneg-OWA-D5-1003_Q5", 
+    "from_auther": "I'm sorry, I made a wrong quote in the paper. I will correct it in the next time.",
+    "premises": [
+        "Anne is big.",
+        "Anne is blue.",
+        "Anne is rough.",
+        "Bob is cold.",
+        "Bob is green.",
+        "Bob is rough.",
+        "Bob is white.",
+        "Dave is blue.",
+        "Dave is white.",
+        "Harry is young.",
+        "If Bob is big then Bob is white.",
+        "Young people are white.",
+        "Cold, young people are rough.",
+        "If Anne is green and Anne is young then Anne is white.",
+        "White, big people are blue.",
+        "All blue people are green.",
+        "If someone is young and white then they are big.",
+        "Blue people are cold."
+    ],
+    "question": [
+        "Harry is big."
+    ],
+    "label": 1,
+    "reasoning_steps": [
+        "Anne is big.",
+        "Anne is blue.",
+        "Anne is rough.",
+        "If Anne is green and Anne is young then Anne is white.",
+        "If Anne is white then Anne is big.",
+        "There is evidence to conclude that Anne is big."
+    ],
+    "reasoning_answer": 1,
+    "mistake_steps": [],
+    "filter_reasoning_steps": [
+        "Anne is big.",
+        "Anne is blue.",
+        "Anne is rough.",
+        "If Anne is green and Anne is young then Anne is white.",
+        "If Anne is white then Anne is big.",
+        null
+    ],
+    "premise:_fol": [
+        {
+            "ref": "(1) anne is big.",
+            "fol": "big(anne)",
+            "tptp": "big(anne)"
+        },
+        {
+            "ref": "(2) anne is blue.",
+            "fol": "blue(anne)",
+            "tptp": "blue(anne)"
+        },
+        {
+            "ref": "(3) anne is rough.",
+            "fol": "rough(anne)",
+            "tptp": "rough(anne)"
+        },
+        {
+            "ref": "(4) bob is cold.",
+            "fol": "cold(bob)",
+            "tptp": "cold(bob)"
+        },
+        {
+            "ref": "(5) bob is green.",
+            "fol": "green(bob)",
+            "tptp": "green(bob)"
+        },
+        {
+            "ref": "(6) bob is rough.",
+            "fol": "rough(bob)",
+            "tptp": "rough(bob)"
+        },
+        {
+            "ref": "(7) bob is white.",
+            "fol": "white(bob)",
+            "tptp": "white(bob)"
+        },
+        {
+            "ref": "(8) dave is blue.",
+            "fol": "blue(dave)",
+            "tptp": "blue(dave)"
+        },
+        {
+            "ref": "(9) dave is white.",
+            "fol": "white(dave)",
+            "tptp": "white(dave)"
+        },
+        {
+            "ref": "(10) harry is young.",
+            "fol": "young(harry)",
+            "tptp": "young(harry)"
+        },
+        {
+            "ref": "(11) if bob is big then bob is white.",
+            "fol": "big(bob) → white(bob)",
+            "tptp": "big(bob) => white(bob)"
+        },
+        {
+            "ref": "(12) young people are white.",
+            "fol": "∀x (young(x) → white(x))",
+            "tptp": "![X]: (young(X) => white(X))"
+        },
+        {
+            "ref": "(13) cold, young people are rough.",
+            "fol": "∀x ((cold(x) ∧ young(x)) → rough(x))",
+            "tptp": "![X]: ((cold(X) & young(X)) => rough(X))"
+        },
+        {
+            "ref": "(14) if anne is green and anne is young then anne is white.",
+            "fol": "(green(anne) ∧ young(anne)) → white(anne)",
+            "tptp": "(green(anne) & young(anne)) => white(anne)"
+        },
+        {
+            "ref": "(15) white, big people are blue.",
+            "fol": "∀x ((white(x) ∧ big(x)) → blue(x))",
+            "tptp": "![X]: ((white(X) & big(X)) => blue(X))"
+        },
+        {
+            "ref": "(16) all blue people are green.",
+            "fol": "∀x (blue(x) → green(x))",
+            "tptp": "![X]: (blue(X) => green(X))"
+        },
+        {
+            "ref": "(17) if someone is young and white then they are big.",
+            "fol": "∀x ((young(x) ∧ white(x)) → big(x))",
+            "tptp": "![X]: ((young(X) & white(X)) => big(X))"
+        },
+        {
+            "ref": "(18) blue people are cold.",
+            "fol": "∀x (blue(x) → cold(x))",
+            "tptp": "![X]: (blue(X) => cold(X))"
+        }
+    ],
+    "conclusion:_fol": [
+        {
+            "ref": "(1) anne is big.",
+            "fol": "big(anne)",
+            "tptp": "big(anne)"
+        },
+        {
+            "ref": "(2) anne is blue.",
+            "fol": "blue(anne)",
+            "tptp": "blue(anne)"
+        },
+        {
+            "ref": "(3) anne is rough.",
+            "fol": "rough(anne)",
+            "tptp": "rough(anne)"
+        },
+        {
+            "ref": "(4) if anne is green and anne is young then anne is white.",
+            "fol": "(green(anne) ∧ young(anne)) → white(anne)",
+            "tptp": "(green(anne) & young(anne)) => white(anne)"
+        },
+        {
+            "ref": "(5) if anne is white then anne is big.",
+            "fol": "white(anne) → big(anne)",
+            "tptp": "white(anne) => big(anne)"
+        },
+        {
+            "ref": "(6) harry is big.",
+            "fol": "big(harry)",
+            "tptp": "big(harry)"
+        }
+    ],
+    "AnswerCorrect": true,
+    "step_correctness_label": [
+        "True",
+        "True",
+        "True",
+        "True",
+        "True"
+    ],
+    "step_valid_label": [
+        "Valid",
+        "Valid",
+        "Valid",
+        "Valid",
+        "Unvalid"
+    ],
+    "has_valid_proof_path_label": false,
+    "cate": "T3"
+}

@@ -1,0 +1,79 @@
+Parse the premises and the conclusions into first-order logic formulars.
+
+### Rules
+1. Each natural language sentence must correspond to a single FOL formula.  
+2. Use the following FOL syntax:  
+   - logical conjunction of expr1 and expr2: expr1 ∧ expr2
+   - logical disjunction of expr1 and expr2: expr1 ∨ expr2
+   - logical exclusive disjunction of expr1 and expr2: expr1 ⊕ expr2
+   - logical negation of expr1: ¬expr1
+   - expr1 implies expr2: expr1 → expr2
+   - expr1 if and only if expr2: expr1 ↔ expr2
+   - logical universal quantification: ∀x (expr)
+   - logical existential quantification: ∃x (expr)
+3. Every formula must explicitly include quantifiers (∀x or ∃x) where applicable.  
+4. Minimize the number of predicates while ensuring correct representation.  
+   - Before introducing a new predicate, check if an existing one can be reused.
+   - Use consistent predicates across similar contexts.  
+   - Ensure synonymous sentences map to the same predicates.  
+5. When an existential entity reappears with new properties, all properties (both old and new) should be conjoined within the scope of a single existential quantifier into the later formula.
+   - Step i: “There exists a person Tom who is a teacher.” → “∃x (Person(x) ∧ Name(x, tom) ∧ Teacher(x))”
+   - Step i+j: “Tom is kind.” → ∃x (Person(x) ∧ Name(x, tom) ∧ Teacher(x) ∧ Kind(x))
+6. Ensure the formula precisely represents the sentence’s meaning without omitting or adding information.  
+7. Do not introduce unnecessary symbols (e.g., =, +, etc.) or special characters.  
+8. The phrase "either... or..." must be translated as an exclusive disjunction (XOR, ⊕), meaning exactly one of the two conditions must hold, but not both.
+   - NL: "Either Mary or Susan has influenza."
+   - FOL: "Influenza(mary) ⊕ Influenza(susan)"
+
+### Output Format
+Premises:
+fol-formula ::: (index) reference.
+Conclusions:
+fol-formula ::: (index) reference
+
+### Examples
+------
+Premises:
+(1) All people who regularly drink coffee are dependent on caffeine. 
+(2) People either regularly drink coffee or joke about being addicted to caffeine. 
+(3) No one who jokes about being addicted to caffeine is unaware that caffeine is a drug. 
+(4) Rina is either a student and unaware that caffeine is a drug, or neither a student nor unaware that caffeine is a drug. 
+(5) If Rina is not a person dependent on caffeine and a student, then Rina is either a person dependent on caffeine and a student, or neither a person dependent on caffeine nor a student.
+Conclusions:
+(1) Rina is either a person who jokes about being addicted to caffeine or is unaware that caffeine is a drug.
+(2) If Rina is either a person who jokes about being addicted to caffeine and a person who is unaware that caffeine is a drug, or neither a person who jokes about being addicted to caffeine nor a person who is unaware that caffeine is a drug, then Rina jokes about being addicted to caffeine and regularly drinks coffee.
+###
+Premises:
+∀x (Drinks(x) → Dependent(x)) ::: (1) All people who regularly drink coffee are dependent on caffeine.
+∀x (Drinks(x) ⊕ Jokes(x)) ::: (2) People either regularly drink coffee or joke about being addicted to caffeine.
+∀x (Jokes(x) → ¬Unaware(x)) ::: (3) No one who jokes about being addicted to caffeine is unaware that caffeine is a drug. 
+(Student(rina) ∧ Unaware(rina)) ⊕ ¬(Student(rina) ∨ Unaware(rina)) ::: (4) Rina is either a student and unaware that caffeine is a drug, or neither a student nor unaware that caffeine is a drug. 
+¬(Dependent(rina) ∧ Student(rina)) → (Dependent(rina) ∧ Student(rina)) ⊕ ¬(Dependent(rina) ∨ Student(rina)) ::: (5) If Rina is not a person dependent on caffeine and a student, then Rina is either a person dependent on caffeine and a student, or neither a person dependent on caffeine nor a student.
+Conclusions:
+Jokes(rina) ⊕ Unaware(rina) ::: (1) Rina is either a person who jokes about being addicted to caffeine or is unaware that caffeine is a drug.
+((Jokes(rina) ∧ Unaware(rina)) ⊕ ¬(Jokes(rina) ∨ Unaware(rina))) → (Jokes(rina) ∧ Drinks(rina)) ::: (2) If Rina is either a person who jokes about being addicted to caffeine and a person who is unaware that caffeine is a drug, or neither a person who jokes about being addicted to caffeine nor a person who is unaware that caffeine is a drug, then Rina jokes about being addicted to caffeine and regularly drinks coffee.
+------
+Premises:
+(1) Miroslav Venhoda was a Czech choral conductor who specialized in the performance of Renaissance and Baroque music. 
+(2) Any choral conductor is a musician. 
+(3) Some musicians love music. 
+(4) Miroslav Venhoda published a book in 1946 called Method of Studying Gregorian Chant.
+Conclusions:
+(1) Miroslav Venhoda loved music.
+(2) A Czech person wrote a book in 1946.
+(3) No choral conductor specialized in the performance of Renaissance.
+###
+Premises:
+Czech(miroslav) ∧ ChoralConductor(miroslav) ∧ Specialize(miroslav, renaissance) ∧ Specialize(miroslav, baroque) ::: (1) Miroslav Venhoda was a Czech choral conductor who specialized in the performance of Renaissance and Baroque music.
+∀x (ChoralConductor(x) → Musician(x)) ::: (2) Any choral conductor is a musician.
+∃x (Musician(x) ∧ Love(x, music)) ::: (3) Some musicians love music.
+Book(methodOfStudyingGregorianChant) ∧ Author(miroslav, methodOfStudyingGregorianChant) ∧ Publish(methodOfStudyingGregorianChant, year1946) ::: (4) Miroslav Venhoda published a book in 1946 called Method of Studying Gregorian Chant.
+Conclusions:
+Love(miroslav, music) ::: (1) Miroslav Venhoda loved music.
+∃y ∃x (Czech(x) ∧ Author(x, y) ∧ Book(y) ∧ Publish(y, year1946)) ::: (2) A Czech person wrote a book in 1946.
+¬∃x (ChoralConductor(x) ∧ Specialize(x, renaissance)) ::: (3) No choral conductor specialized in the performance of Renaissance.
+------
+### Your Task
+Return first-order logic formulars with NO other texts.
+[instruction]
+###

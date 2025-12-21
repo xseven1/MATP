@@ -1,0 +1,4164 @@
+[
+    {
+        "idx": "4hop_ProofsOnly_random_noadj_example55_example0",
+        "premises": [
+            "Each vumpus is snowy.",
+            "Each rompus is a lorpus.",
+            "Every wumpus is not amenable.",
+            "Each numpus is an impus.",
+            "Gorpuses are hot.",
+            "Numpuses are liquid.",
+            "Each shumpus is bright.",
+            "Numpuses are vumpuses.",
+            "Each impus is not loud.",
+            "Zumpuses are blue.",
+            "Lorpuses are nervous.",
+            "Rompuses are fast.",
+            "Wumpuses are jompuses.",
+            "Rompuses are zumpuses.",
+            "Impuses are rompuses.",
+            "Zumpuses are gorpuses.",
+            "Every impus is a shumpus.",
+            "Zumpuses are brimpuses.",
+            "Sally is a wumpus.",
+            "Sally is a numpus."
+        ],
+        "question": [
+            "Sally is blue."
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Sally is a numpus.",
+            "Each numpus is an impus.",
+            "Sally is an impus.",
+            "Each impus is a rompus.",
+            "Sally is a rompus.",
+            "Rompuses are zumpuses.",
+            "Sally is a zumpus.",
+            "Zumpuses are blue.",
+            "Therefore, Sally is blue."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, let's start by listing out all the premises and then see how they connect to the conclusion that Sally is blue.\n\nFirst, Sally is a wumpus and a numpus. From the premises, numpuses are vumpuses. So Sally, being a numpus, is also a vumpus. Each vumpus is snowy, but I'm not sure how that helps yet.\n\nNext, numpuses are liquid, but again, not directly relevant. Since Sally is a numpus, which is an impus (because each numpus is an impus). Wait, the premises say \"Each numpus is an impus.\" So Sally is an impus. Then, each impus is a rompus (since \"Impuses are rompuses\"). So Sally is a rompus.\n\nNow, rompuses are zumpuses (\"Rompuses are zumpuses\"). So Sally is a zumpus. Then, zumpuses are blue. Therefore, Sally, being a zumpus, must be blue. That seems straightforward.\n\nLet me check if there's any conflicting information. The premises also mention that every wumpus is a jompus, but Sally is a wumpus, so she's a jompus. However, I don't see how that affects her being blue. Also, zumpuses are gorpuses and brimpuses, but being gorpuses (which are hot) and brimpuses doesn't contradict the color blue. So the chain seems solid: numpus → impus → rompus → zumpus → blue. Therefore, the conclusion that Sally is blue should be true.",
+        "content": "Thoughts:\nSally is a numpus.\nEach numpus is an impus.\nSally is an impus.\nEach impus is a rompus.\nSally is a rompus.\nRompuses are zumpuses.\nSally is a zumpus.\nZumpuses are blue.\nTherefore, Sally is blue.\nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "Sally is a numpus.",
+            "Each numpus is an impus.",
+            "Sally is an impus.",
+            "Each impus is a rompus.",
+            "Sally is a rompus.",
+            "Rompuses are zumpuses.",
+            "Sally is a zumpus.",
+            "Zumpuses are blue.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) each vumpus is snowy.",
+                "fol": "∀x (vumpus(x) → snowy(x))",
+                "tptp": "![X]: (vumpus(X) => snowy(X))"
+            },
+            {
+                "ref": "(2) each rompus is a lorpus.",
+                "fol": "∀x (rompus(x) → lorpus(x))",
+                "tptp": "![X]: (rompus(X) => lorpus(X))"
+            },
+            {
+                "ref": "(3) every wumpus is not amenable.",
+                "fol": "∀x (wumpus(x) → ¬amenable(x))",
+                "tptp": "![X]: (wumpus(X) => ~amenable(X))"
+            },
+            {
+                "ref": "(4) each numpus is an impus.",
+                "fol": "∀x (numpus(x) → impus(x))",
+                "tptp": "![X]: (numpus(X) => impus(X))"
+            },
+            {
+                "ref": "(5) gorpuses are hot.",
+                "fol": "∀x (gorpus(x) → hot(x))",
+                "tptp": "![X]: (gorpus(X) => hot(X))"
+            },
+            {
+                "ref": "(6) numpuses are liquid.",
+                "fol": "∀x (numpus(x) → liquid(x))",
+                "tptp": "![X]: (numpus(X) => liquid(X))"
+            },
+            {
+                "ref": "(7) each shumpus is bright.",
+                "fol": "∀x (shumpus(x) → bright(x))",
+                "tptp": "![X]: (shumpus(X) => bright(X))"
+            },
+            {
+                "ref": "(8) numpuses are vumpuses.",
+                "fol": "∀x (numpus(x) → vumpus(x))",
+                "tptp": "![X]: (numpus(X) => vumpus(X))"
+            },
+            {
+                "ref": "(9) each impus is not loud.",
+                "fol": "∀x (impus(x) → ¬loud(x))",
+                "tptp": "![X]: (impus(X) => ~loud(X))"
+            },
+            {
+                "ref": "(10) zumpuses are blue.",
+                "fol": "∀x (zumpus(x) → blue(x))",
+                "tptp": "![X]: (zumpus(X) => blue(X))"
+            },
+            {
+                "ref": "(11) lorpuses are nervous.",
+                "fol": "∀x (lorpus(x) → nervous(x))",
+                "tptp": "![X]: (lorpus(X) => nervous(X))"
+            },
+            {
+                "ref": "(12) rompuses are fast.",
+                "fol": "∀x (rompus(x) → fast(x))",
+                "tptp": "![X]: (rompus(X) => fast(X))"
+            },
+            {
+                "ref": "(13) wumpuses are jompuses.",
+                "fol": "∀x (wumpus(x) → jompus(x))",
+                "tptp": "![X]: (wumpus(X) => jompus(X))"
+            },
+            {
+                "ref": "(14) rompuses are zumpuses.",
+                "fol": "∀x (rompus(x) → zumpus(x))",
+                "tptp": "![X]: (rompus(X) => zumpus(X))"
+            },
+            {
+                "ref": "(15) impuses are rompuses.",
+                "fol": "∀x (impus(x) → rompus(x))",
+                "tptp": "![X]: (impus(X) => rompus(X))"
+            },
+            {
+                "ref": "(16) zumpuses are gorpuses.",
+                "fol": "∀x (zumpus(x) → gorpus(x))",
+                "tptp": "![X]: (zumpus(X) => gorpus(X))"
+            },
+            {
+                "ref": "(17) every impus is a shumpus.",
+                "fol": "∀x (impus(x) → shumpus(x))",
+                "tptp": "![X]: (impus(X) => shumpus(X))"
+            },
+            {
+                "ref": "(18) zumpuses are brimpuses.",
+                "fol": "∀x (zumpus(x) → brimpus(x))",
+                "tptp": "![X]: (zumpus(X) => brimpus(X))"
+            },
+            {
+                "ref": "(19) sally is a wumpus.",
+                "fol": "wumpus(sally)",
+                "tptp": "wumpus(sally)"
+            },
+            {
+                "ref": "(20) sally is a numpus.",
+                "fol": "numpus(sally)",
+                "tptp": "numpus(sally)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(9) sally is blue.",
+            "fol": "blue(sally)",
+            "tptp": "blue(sally)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) sally is a numpus.",
+                "fol": "numpus(sally)",
+                "tptp": "numpus(sally)"
+            },
+            {
+                "ref": "(2) each numpus is an impus.",
+                "fol": "∀x (numpus(x) → impus(x))",
+                "tptp": "![X]: (numpus(X) => impus(X))"
+            },
+            {
+                "ref": "(3) sally is an impus.",
+                "fol": "impus(sally)",
+                "tptp": "impus(sally)"
+            },
+            {
+                "ref": "(4) each impus is a rompus.",
+                "fol": "∀x (impus(x) → rompus(x))",
+                "tptp": "![X]: (impus(X) => rompus(X))"
+            },
+            {
+                "ref": "(5) sally is a rompus.",
+                "fol": "rompus(sally)",
+                "tptp": "rompus(sally)"
+            },
+            {
+                "ref": "(6) rompuses are zumpuses.",
+                "fol": "∀x (rompus(x) → zumpus(x))",
+                "tptp": "![X]: (rompus(X) => zumpus(X))"
+            },
+            {
+                "ref": "(7) sally is a zumpus.",
+                "fol": "zumpus(sally)",
+                "tptp": "zumpus(sally)"
+            },
+            {
+                "ref": "(8) zumpuses are blue.",
+                "fol": "∀x (zumpus(x) → blue(x))",
+                "tptp": "![X]: (zumpus(X) => blue(X))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Sally is a numpus.",
+            "Each numpus is an impus.",
+            "Sally is an impus.",
+            "Each impus is a rompus.",
+            "Sally is a rompus.",
+            "Rompuses are zumpuses.",
+            "Sally is a zumpus.",
+            "Zumpuses are blue."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "4hop_ProofsOnly_random_noadj_example53_example",
+        "premises": [
+            "Sterpuses are impuses.",
+            "Shumpuses are not transparent.",
+            "Shumpuses are rompuses.",
+            "Each dumpus is a lempus.",
+            "Each shumpus is a lorpus.",
+            "Gorpuses are sunny.",
+            "Dumpuses are amenable.",
+            "Lorpuses are bright.",
+            "Zumpuses are vumpuses.",
+            "Sterpuses are zumpuses.",
+            "Rompuses are sterpuses.",
+            "Every rompus is a gorpus.",
+            "Rompuses are not brown.",
+            "Zumpuses are jompuses.",
+            "Zumpuses are spicy.",
+            "Impuses are large.",
+            "Jompuses are fruity.",
+            "Each sterpus is metallic.",
+            "Polly is a shumpus.",
+            "Polly is a dumpus."
+        ],
+        "question": [
+            "Polly is spicy."
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Polly is a shumpus.",
+            "Shumpuses are rompuses.",
+            "Polly is a rompus.",
+            "Rompuses are sterpuses.",
+            "Polly is a sterpus.",
+            "Sterpuses are zumpuses.",
+            "Polly is a zumpus.",
+            "Zumpuses are spicy.",
+            "Therefore, Polly is spicy."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, let's try to figure out whether Polly is spicy based on the given premises.\n\nFirst, let's list out all the premises to see how they connect. \n\nPolly is a shumpus and a dumpus. Shumpuses are rompuses. Each shumpus is a lorpus. Rompuses are sterpuses, and every rompus is a gorpus. Also, sterpuses are zumpuses. Zumpuses are jompuses, and jompuses are fruity. Additionally, zumpuses are spicy. \n\nWait, let's break this down step by step. \n\nStarting with Polly being a shumpus. Since shumpuses are rompuses, Polly is a rompus. Then, rompuses are sterpuses, so Polly is a sterpus. Sterpuses are zumpuses, so Polly is a zumpus. Zumpuses are spicy according to one premise. Therefore, Polly being a zumpus would mean she is spicy. \n\nLet me check again. The chain seems to be: shumpus → rompus → sterpus → zumpus → spicy. Each step is directly stated. There's no conflicting information here. Also, other premises about dumpuses and lorpuses might not affect this chain. The conclusion is that Polly is spicy, which aligns with the premises. So the answer should be True.",
+        "content": "Thoughts:\nPolly is a shumpus.\nShumpuses are rompuses.\nPolly is a rompus.\nRompuses are sterpuses.\nPolly is a sterpus.\nSterpuses are zumpuses.\nPolly is a zumpus.\nZumpuses are spicy.\nTherefore, Polly is spicy.\nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "Polly is a shumpus.",
+            "Shumpuses are rompuses.",
+            "Polly is a rompus.",
+            "Rompuses are sterpuses.",
+            "Polly is a sterpus.",
+            "Sterpuses are zumpuses.",
+            "Polly is a zumpus.",
+            "Zumpuses are spicy.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) sterpuses are impuses.",
+                "fol": "∀x (sterpus(x) → impus(x))",
+                "tptp": "![X]: (sterpus(X) => impus(X))"
+            },
+            {
+                "ref": "(2) shumpuses are not transparent.",
+                "fol": "∀x (shumpus(x) → ¬transparent(x))",
+                "tptp": "![X]: (shumpus(X) => ~transparent(X))"
+            },
+            {
+                "ref": "(3) shumpuses are rompuses.",
+                "fol": "∀x (shumpus(x) → rompus(x))",
+                "tptp": "![X]: (shumpus(X) => rompus(X))"
+            },
+            {
+                "ref": "(4) each dumpus is a lempus.",
+                "fol": "∀x (dumpus(x) → lempus(x))",
+                "tptp": "![X]: (dumpus(X) => lempus(X))"
+            },
+            {
+                "ref": "(5) each shumpus is a lorpus.",
+                "fol": "∀x (shumpus(x) → lorpus(x))",
+                "tptp": "![X]: (shumpus(X) => lorpus(X))"
+            },
+            {
+                "ref": "(6) gorpuses are sunny.",
+                "fol": "∀x (gorpus(x) → sunny(x))",
+                "tptp": "![X]: (gorpus(X) => sunny(X))"
+            },
+            {
+                "ref": "(7) dumpuses are amenable.",
+                "fol": "∀x (dumpus(x) → amenable(x))",
+                "tptp": "![X]: (dumpus(X) => amenable(X))"
+            },
+            {
+                "ref": "(8) lorpuses are bright.",
+                "fol": "∀x (lorpus(x) → bright(x))",
+                "tptp": "![X]: (lorpus(X) => bright(X))"
+            },
+            {
+                "ref": "(9) zumpuses are vumpuses.",
+                "fol": "∀x (zumpus(x) → vumpus(x))",
+                "tptp": "![X]: (zumpus(X) => vumpus(X))"
+            },
+            {
+                "ref": "(10) sterpuses are zumpuses.",
+                "fol": "∀x (sterpus(x) → zumpus(x))",
+                "tptp": "![X]: (sterpus(X) => zumpus(X))"
+            },
+            {
+                "ref": "(11) rompuses are sterpuses.",
+                "fol": "∀x (rompus(x) → sterpus(x))",
+                "tptp": "![X]: (rompus(X) => sterpus(X))"
+            },
+            {
+                "ref": "(12) every rompus is a gorpus.",
+                "fol": "∀x (rompus(x) → gorpus(x))",
+                "tptp": "![X]: (rompus(X) => gorpus(X))"
+            },
+            {
+                "ref": "(13) rompuses are not brown.",
+                "fol": "∀x (rompus(x) → ¬brown(x))",
+                "tptp": "![X]: (rompus(X) => ~brown(X))"
+            },
+            {
+                "ref": "(14) zumpuses are jompuses.",
+                "fol": "∀x (zumpus(x) → jompus(x))",
+                "tptp": "![X]: (zumpus(X) => jompus(X))"
+            },
+            {
+                "ref": "(15) zumpuses are spicy.",
+                "fol": "∀x (zumpus(x) → spicy(x))",
+                "tptp": "![X]: (zumpus(X) => spicy(X))"
+            },
+            {
+                "ref": "(16) impuses are large.",
+                "fol": "∀x (impus(x) → large(x))",
+                "tptp": "![X]: (impus(X) => large(X))"
+            },
+            {
+                "ref": "(17) jompuses are fruity.",
+                "fol": "∀x (jompus(x) → fruity(x))",
+                "tptp": "![X]: (jompus(X) => fruity(X))"
+            },
+            {
+                "ref": "(18) each sterpus is metallic.",
+                "fol": "∀x (sterpus(x) → metallic(x))",
+                "tptp": "![X]: (sterpus(X) => metallic(X))"
+            },
+            {
+                "ref": "(19) polly is a shumpus.",
+                "fol": "shumpus(polly)",
+                "tptp": "shumpus(polly)"
+            },
+            {
+                "ref": "(20) polly is a dumpus.",
+                "fol": "dumpus(polly)",
+                "tptp": "dumpus(polly)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(9) polly is spicy.",
+            "fol": "spicy(polly)",
+            "tptp": "spicy(polly)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) polly is a shumpus.",
+                "fol": "shumpus(polly)",
+                "tptp": "shumpus(polly)"
+            },
+            {
+                "ref": "(2) shumpuses are rompuses.",
+                "fol": "∀x (shumpus(x) → rompus(x))",
+                "tptp": "![X]: (shumpus(X) => rompus(X))"
+            },
+            {
+                "ref": "(3) polly is a rompus.",
+                "fol": "rompus(polly)",
+                "tptp": "rompus(polly)"
+            },
+            {
+                "ref": "(4) rompuses are sterpuses.",
+                "fol": "∀x (rompus(x) → sterpus(x))",
+                "tptp": "![X]: (rompus(X) => sterpus(X))"
+            },
+            {
+                "ref": "(5) polly is a sterpus.",
+                "fol": "sterpus(polly)",
+                "tptp": "sterpus(polly)"
+            },
+            {
+                "ref": "(6) sterpuses are zumpuses.",
+                "fol": "∀x (sterpus(x) → zumpus(x))",
+                "tptp": "![X]: (sterpus(X) => zumpus(X))"
+            },
+            {
+                "ref": "(7) polly is a zumpus.",
+                "fol": "zumpus(polly)",
+                "tptp": "zumpus(polly)"
+            },
+            {
+                "ref": "(8) zumpuses are spicy.",
+                "fol": "∀x (zumpus(x) → spicy(x))",
+                "tptp": "![X]: (zumpus(X) => spicy(X))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Polly is a shumpus.",
+            "Shumpuses are rompuses.",
+            "Polly is a rompus.",
+            "Rompuses are sterpuses.",
+            "Polly is a sterpus.",
+            "Sterpuses are zumpuses.",
+            "Polly is a zumpus.",
+            "Zumpuses are spicy."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "4hop_Composed_random_noadj_example96_example7",
+        "premises": [
+            "Everything that is a lempus, a zumpus, or a vumpus is a jompus, an impus, and a grimpus.",
+            "Jompuses are numpuses.",
+            "Grimpuses are wumpuses.",
+            "Lorpuses are numpuses.",
+            "Everything that is a lempus, a zumpus, or a vumpus is a rompus.",
+            "Grimpuses are rompuses.",
+            "Impuses are gorpuses.",
+            "Everything that is a sterpus or a vumpus or a dumpus is a numpus.",
+            "Impuses are numpuses.",
+            "Alex is a tumpus, a wumpus, and a yumpus.",
+            "Alex is a lorpus and a grimpus and a vumpus."
+        ],
+        "question": [
+            "Alex is a gorpus."
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Alex is a vumpus.",
+            "Everything that is a lempus, zumpus, or vumpus is a jompus, impus, and grimpus.",
+            "Alex is an impus.",
+            "Impuses are gorpuses.",
+            "Alex is a gorpus.",
+            "The conclusion states Alex is a gorpus, which is directly supported by the premises."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, let's tackle this problem step by step. First, I need to understand the premises and see how they connect to the conclusion that Alex is a gorpus.\n\nStarting with the given premises:\n\n1. Everything that is a lempus, zumpus, or vumpus is a jompus, impus, and grimpus.\n2. Jompuses are numpuses.\n3. Grimpuses are wumpuses.\n4. Lorpuses are numpuses.\n5. Everything that is a lempus, zumpus, or vumpus is a rompus.\n6. Grimpuses are rompuses.\n7. Impuses are gorpuses.\n8. Everything that is a sterpus, vumpus, or dumpus is a numpus.\n9. Impuses are numpuses.\n10. Alex is a tumpus, wumpus, yumpus, lorpus, grimpus, and vumpus.\n\nThe conclusion is that Alex is a gorpus.\n\nLet me break down what each premise tells us about Alex.\n\nFrom premise 10: Alex is a lorpus, grimpus, and vumpus. Let's look at each of these.\n\nFirst, Alex is a lorpus. Premise 4 says lorpuses are numpuses. So Alex is a numpus. But how does that relate to gorpus?\n\nNext, Alex is a grimpus. Premise 3 states that grimpuses are wumpuses. But Alex is already a wumpus (from premise 10), so that's consistent. Also, premise 6 says grimpuses are rompuses. So Alex is a rompus.\n\nAlex is also a vumpus. From premise 1, since Alex is a vumpus, he must be a jompus, impus, and grimpus. Wait, but we already know he's a grimpus. So this adds that he's a jompus and impus. \n\nFrom premise 2, jompuses are numpuses. So Alex being a jompus makes him a numpus again. But he's already a numpus via lorpus, so that's redundant but okay.\n\nFrom premise 1, Alex is an impus. Premise 7 says impuses are gorpuses. So if Alex is an impus, then he must be a gorpus. Because \"gorpuses\" is the plural, but the conclusion is \"gorpus\" (singular). So if impus implies gorpus, then Alex being an impus means he's a gorpus. That seems direct.\n\nLet me check if there's any conflicting info. Wait, premise 9 says impuses are numpuses. So Alex is a numpus through multiple paths (lorpus, jompus, impus). But the key here is that being an impus (from premise 1) leads to being a gorpus (premise 7). Since there's no premise stating that being a gorpus is incompatible with anything else Alex is, this should hold.\n\nSo the chain is: Alex is a vumpus → impus (premise 1) → gorpus (premise 7). Therefore, the conclusion that Alex is a gorpus should be true.\n\nBut wait, let me make sure there's no step I missed. Let's go through each relevant premise again:\n\n- Alex is a vumpus (premise 10).\n- From premise 1: vumpus → jompus, impus, grimpus. So Alex is impus.\n- From premise 7: impus → gorpus. Therefore, Alex is a gorpus.\n\nThat's straightforward. Are there any other premises that affect this? Let's check premise 8: sterpus, vumpus, or dumpus → numpus. Alex is a vumpus, so he's a numpus here as well, but that's not directly relevant to gorpus. Premise 9 says impuses are numpuses, which again is redundant here.\n\nSo the key steps are Alex being a vumpus leading to impus, which leads to gorpus. Therefore, the conclusion is true.",
+        "content": "Thoughts:\nAlex is a vumpus.\nEverything that is a lempus, zumpus, or vumpus is a jompus, impus, and grimpus.\nAlex is an impus.\nImpuses are gorpuses.\nAlex is a gorpus.\nThe conclusion states Alex is a gorpus, which is directly supported by the premises.\nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "Alex is a vumpus.",
+            "Everything that is a lempus, zumpus, or vumpus is a jompus, impus, and grimpus.",
+            "Alex is an impus.",
+            "Impuses are gorpuses.",
+            "Alex is a gorpus.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) everything that is a lempus, a zumpus, or a vumpus is a jompus, an impus, and a grimpus.",
+                "fol": "∀x ((lempus(x) ∨ zumpus(x) ∨ vumpus(x)) → (jompus(x) ∧ impus(x) ∧ grimpus(x)))",
+                "tptp": "![X]: ((lempus(X) | zumpus(X) | vumpus(X)) => (jompus(X) & impus(X) & grimpus(X)))"
+            },
+            {
+                "ref": "(2) jompuses are numpuses.",
+                "fol": "∀x (jompus(x) → numpus(x))",
+                "tptp": "![X]: (jompus(X) => numpus(X))"
+            },
+            {
+                "ref": "(3) grimpuses are wumpuses.",
+                "fol": "∀x (grimpus(x) → wumpus(x))",
+                "tptp": "![X]: (grimpus(X) => wumpus(X))"
+            },
+            {
+                "ref": "(4) lorpuses are numpuses.",
+                "fol": "∀x (lorpus(x) → numpus(x))",
+                "tptp": "![X]: (lorpus(X) => numpus(X))"
+            },
+            {
+                "ref": "(5) everything that is a lempus, a zumpus, or a vumpus is a rompus.",
+                "fol": "∀x ((lempus(x) ∨ zumpus(x) ∨ vumpus(x)) → rompus(x))",
+                "tptp": "![X]: ((lempus(X) | zumpus(X) | vumpus(X)) => rompus(X))"
+            },
+            {
+                "ref": "(6) grimpuses are rompuses.",
+                "fol": "∀x (grimpus(x) → rompus(x))",
+                "tptp": "![X]: (grimpus(X) => rompus(X))"
+            },
+            {
+                "ref": "(7) impuses are gorpuses.",
+                "fol": "∀x (impus(x) → gorpus(x))",
+                "tptp": "![X]: (impus(X) => gorpus(X))"
+            },
+            {
+                "ref": "(8) everything that is a sterpus or a vumpus or a dumpus is a numpus.",
+                "fol": "∀x ((sterpus(x) ∨ vumpus(x) ∨ dumpus(x)) → numpus(x))",
+                "tptp": "![X]: ((sterpus(X) | vumpus(X) | dumpus(X)) => numpus(X))"
+            },
+            {
+                "ref": "(9) impuses are numpuses.",
+                "fol": "∀x (impus(x) → numpus(x))",
+                "tptp": "![X]: (impus(X) => numpus(X))"
+            },
+            {
+                "ref": "(10) alex is a tumpus, a wumpus, and a yumpus.",
+                "fol": "tumpus(alex) ∧ wumpus(alex) ∧ yumpus(alex)",
+                "tptp": "tumpus(alex) & wumpus(alex) & yumpus(alex)"
+            },
+            {
+                "ref": "(11) alex is a lorpus and a grimpus and a vumpus.",
+                "fol": "lorpus(alex) ∧ grimpus(alex) ∧ vumpus(alex)",
+                "tptp": "lorpus(alex) & grimpus(alex) & vumpus(alex)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(6) alex is a gorpus.",
+            "fol": "gorpus(alex)",
+            "tptp": "gorpus(alex)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) alex is a vumpus.",
+                "fol": "vumpus(alex)",
+                "tptp": "vumpus(alex)"
+            },
+            {
+                "ref": "(2) everything that is a lempus, zumpus, or vumpus is a jompus, impus, and grimpus.",
+                "fol": "∀x ((lempus(x) ∨ zumpus(x) ∨ vumpus(x)) → (jompus(x) ∧ impus(x) ∧ grimpus(x)))",
+                "tptp": "![X]: ((lempus(X) | zumpus(X) | vumpus(X)) => (jompus(X) & impus(X) & grimpus(X)))"
+            },
+            {
+                "ref": "(3) alex is an impus.",
+                "fol": "impus(alex)",
+                "tptp": "impus(alex)"
+            },
+            {
+                "ref": "(4) impuses are gorpuses.",
+                "fol": "∀x (impus(x) → gorpus(x))",
+                "tptp": "![X]: (impus(X) => gorpus(X))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Alex is a vumpus.",
+            "Everything that is a lempus, zumpus, or vumpus is a jompus, impus, and grimpus.",
+            "Alex is an impus.",
+            "Impuses are gorpuses."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "4hop_Composed_random_noadj_example35_example0",
+        "premises": [
+            "Everything that is a lempus or a vumpus or a grimpus is a gorpus.",
+            "Every brimpus is a grimpus.",
+            "Everything that is a lempus, a tumpus, or a numpus is a grimpus.",
+            "Each zumpus is a grimpus.",
+            "Everything that is a lempus, a tumpus, or a numpus is a zumpus.",
+            "Dumpuses are vumpuses.",
+            "Each dumpus is a lempus.",
+            "Zumpuses are dumpuses and wumpuses and brimpuses.",
+            "Fae is a sterpus.",
+            "Fae is a dumpus."
+        ],
+        "question": [
+            "Fae is a wumpus."
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Fae is a dumpus.",
+            "Each dumpus is a lempus.",
+            "Fae is a lempus.",
+            "Everything that is a lempus, a tumpus, or a numpus is a zumpus.",
+            "Fae is a zumpus.",
+            "Zumpuses are dumpuses and wumpuses and brimpuses.",
+            "Fae is a wumpus."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, let's tackle this problem step by step. The goal is to determine whether the conclusion \"Fae is a wumpus\" is true based on the given premises. Let me start by listing out all the premises and then see how they connect.\n\nFirst, let's parse each premise:\n\n1. Everything that is a lempus or a vumpus or a grimpus is a gorpus.\n2. Every brimpus is a grimpus.\n3. Everything that is a lempus, a tumpus, or a numpus is a grimpus.\n4. Each zumpus is a grimpus.\n5. Everything that is a lempus, a tumpus, or a numpus is a zumpus.\n6. Dumpuses are vumpuses.\n7. Each dumpus is a lempus.\n8. Zumpuses are dumpuses and wumpuses and brimpuses.\n9. Fae is a sterpus.\n10. Fae is a dumpus.\n\nThe conclusion is that Fae is a wumpus. \n\nStarting with Fae: Premises 9 and 10 say Fae is a sterpus and a dumpus. But the conclusion is about being a wumpus, so let's focus on premise 10 first. \n\nFrom premise 10, Fae is a dumpus. Now, premise 6 states that dumpuses are vumpuses. So, Fae is a vumpus. \n\nNext, premise 7 says each dumpus is a lempus. So, Fae is a lempus. \n\nNow, looking at premise 5: Everything that is a lempus, tumpus, or numpus is a zumpus. Since Fae is a lempus, she must be a zumpus. \n\nPremise 8 states that zumpuses are dumpuses, wumpuses, and brimpuses. Therefore, if Fae is a zumpus, she must be all three: dumpus, wumpus, and brimpus. \n\nSo, from being a zumpus (due to being a lempus via premise 5 and 7), Fae must be a wumpus as per premise 8. \n\nWait, let me check each step again. \n\nFae is a dumpus (premise 10). Dumpus is a lempus (premise 7), so Fae is a lempus. Then, premise 5: lempus → zumpus. So Fae is a zumpus. Then, premise 8: zumpus → dumpus, wumpus, brimpus. Therefore, being a zumpus implies being a wumpus. Hence, Fae is a wumpus. \n\nAdditionally, other premises might not be necessary here. For example, premise 6 says dumpus → vumpus, but that's not directly needed for the conclusion. The key steps are dumpus → lempus → zumpus → wumpus. \n\nI don't see any contradictions here. Each step logically follows. Therefore, the conclusion should be true.",
+        "content": "Thoughts:\nFae is a dumpus.\nEach dumpus is a lempus.\nFae is a lempus.\nEverything that is a lempus, a tumpus, or a numpus is a zumpus.\nFae is a zumpus.\nZumpuses are dumpuses and wumpuses and brimpuses.\nFae is a wumpus.\nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "Fae is a dumpus.",
+            "Each dumpus is a lempus.",
+            "Fae is a lempus.",
+            "Everything that is a lempus, a tumpus, or a numpus is a zumpus.",
+            "Fae is a zumpus.",
+            "Zumpuses are dumpuses and wumpuses and brimpuses.",
+            "Fae is a wumpus."
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) everything that is a lempus or a vumpus or a grimpus is a gorpus.",
+                "fol": "∀x ((lempus(x) ∨ vumpus(x) ∨ grimpus(x)) → gorpus(x))",
+                "tptp": "![X]: ((lempus(X) | vumpus(X) | grimpus(X)) => gorpus(X))"
+            },
+            {
+                "ref": "(2) every brimpus is a grimpus.",
+                "fol": "∀x (brimpus(x) → grimpus(x))",
+                "tptp": "![X]: (brimpus(X) => grimpus(X))"
+            },
+            {
+                "ref": "(3) everything that is a lempus, a tumpus, or a numpus is a grimpus.",
+                "fol": "∀x ((lempus(x) ∨ tumpus(x) ∨ numpus(x)) → grimpus(x))",
+                "tptp": "![X]: ((lempus(X) | tumpus(X) | numpus(X)) => grimpus(X))"
+            },
+            {
+                "ref": "(4) each zumpus is a grimpus.",
+                "fol": "∀x (zumpus(x) → grimpus(x))",
+                "tptp": "![X]: (zumpus(X) => grimpus(X))"
+            },
+            {
+                "ref": "(5) everything that is a lempus, a tumpus, or a numpus is a zumpus.",
+                "fol": "∀x ((lempus(x) ∨ tumpus(x) ∨ numpus(x)) → zumpus(x))",
+                "tptp": "![X]: ((lempus(X) | tumpus(X) | numpus(X)) => zumpus(X))"
+            },
+            {
+                "ref": "(6) dumpuses are vumpuses.",
+                "fol": "∀x (dumpus(x) → vumpus(x))",
+                "tptp": "![X]: (dumpus(X) => vumpus(X))"
+            },
+            {
+                "ref": "(7) each dumpus is a lempus.",
+                "fol": "∀x (dumpus(x) → lempus(x))",
+                "tptp": "![X]: (dumpus(X) => lempus(X))"
+            },
+            {
+                "ref": "(8) zumpuses are dumpuses and wumpuses and brimpuses.",
+                "fol": "∀x (zumpus(x) → (dumpus(x) ∧ wumpus(x) ∧ brimpus(x)))",
+                "tptp": "![X]: (zumpus(X) => (dumpus(X) & wumpus(X) & brimpus(X)))"
+            },
+            {
+                "ref": "(9) fae is a sterpus.",
+                "fol": "sterpus(fae)",
+                "tptp": "sterpus(fae)"
+            },
+            {
+                "ref": "(10) fae is a dumpus.",
+                "fol": "dumpus(fae)",
+                "tptp": "dumpus(fae)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(8) fae is a wumpus.",
+            "fol": "wumpus(fae)",
+            "tptp": "wumpus(fae)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) fae is a dumpus.",
+                "fol": "dumpus(fae)",
+                "tptp": "dumpus(fae)"
+            },
+            {
+                "ref": "(2) each dumpus is a lempus.",
+                "fol": "∀x (dumpus(x) → lempus(x))",
+                "tptp": "![X]: (dumpus(X) => lempus(X))"
+            },
+            {
+                "ref": "(3) fae is a lempus.",
+                "fol": "lempus(fae)",
+                "tptp": "lempus(fae)"
+            },
+            {
+                "ref": "(4) everything that is a lempus, a tumpus, or a numpus is a zumpus.",
+                "fol": "∀x ((lempus(x) ∨ tumpus(x) ∨ numpus(x)) → zumpus(x))",
+                "tptp": "![X]: ((lempus(X) | tumpus(X) | numpus(X)) => zumpus(X))"
+            },
+            {
+                "ref": "(5) fae is a zumpus.",
+                "fol": "zumpus(fae)",
+                "tptp": "zumpus(fae)"
+            },
+            {
+                "ref": "(6) zumpuses are dumpuses and wumpuses and brimpuses.",
+                "fol": "∀x (zumpus(x) → (dumpus(x) ∧ wumpus(x) ∧ brimpus(x)))",
+                "tptp": "![X]: (zumpus(X) => (dumpus(X) & wumpus(X) & brimpus(X)))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Fae is a dumpus.",
+            "Each dumpus is a lempus.",
+            "Fae is a lempus.",
+            "Everything that is a lempus, a tumpus, or a numpus is a zumpus.",
+            "Fae is a zumpus.",
+            "Zumpuses are dumpuses and wumpuses and brimpuses."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "4hop_Composed_random_noadj_example48_example",
+        "premises": [
+            "Gorpuses are numpuses.",
+            "Zumpuses are vumpuses.",
+            "Each zumpus is a rompus.",
+            "Gorpuses are jompuses.",
+            "Everything that is a vumpus, a dumpus, or a numpus is a lempus.",
+            "Everything that is a tumpus or a vumpus or a lorpus is a gorpus and a brimpus and a wumpus.",
+            "Gorpuses are zumpuses.",
+            "Brimpuses are jompuses.",
+            "Everything that is a tumpus or a vumpus or a lorpus is a jompus.",
+            "Rex is a jompus.",
+            "Rex is a gorpus."
+        ],
+        "question": [
+            "Rex is a wumpus."
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Gorpuses are zumpuses.",
+            "Rex is a gorpus.",
+            "Rex is a zumpus.",
+            "Zumpuses are vumpuses.",
+            "Rex is a vumpus.",
+            "Everything that is a tumpus or a vumpus or a lorpus is a gorpus and a brimpus and a wumpus.",
+            "Rex is a wumpus.",
+            "There is evidence to conclude that Rex is a wumpus."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, let's tackle this problem step by step. The premises are a bit complex with all these made-up terms, so I need to parse them carefully.\n\nFirst, the premises state that Gorpuses are numpuses. Then, Zumpuses are vumpuses. Each zumpus is a rompus. Gorpuses are jompuses. There's a statement that everything that is a vumpus, dumpus, or numpus is a lempus. Another premise says that everything that is a tumpus, vumpus, or lorpus is a gorpus, brimpus, and wumpus. Then, Gorpuses are zumpuses. Brimpuses are jompuses. Everything that is a tumpus, vumpus, or lorpus is a jompus. Rex is a jompus and a gorpus. The conclusion is that Rex is a wumpus.\n\nLet me start by listing all the given information and see how they connect. Since Rex is a gorpus, and gorpuses are zumpuses, that means Rex is a zumpus. Because each zumpus is a rompus, but I'm not sure if that's relevant. Zumpuses are vumpuses, so Rex being a zumpus makes him a vumpus. \n\nNow, looking at the premise about tumpus, vumpus, or lorpus being a gorpus, brimpus, and wumpus. Since Rex is a vumpus (from being a zumpus), then according to this premise, Rex should be a gorpus, brimpus, and wumpus. But wait, Rex is already a gorpus, so that checks out. So if he's a vumpus, then he must be a wumpus. That seems to directly lead to the conclusion.\n\nBut let me verify each step again. Rex is a gorpus. Gorpuses are zumpuses, so Rex is a zumpus. Zumpuses are vumpuses, so Rex is a vumpus. Then, the premise says anything that is a tumpus, vumpus, or lorpus is a gorpus, brimpus, and wumpus. Since Rex is a vumpus, he falls into that category. Therefore, Rex must be a wumpus. That confirms the conclusion is true.\n\nWait, but there's another part: Everything that is a tumpus, vumpus, or lorpus is a jompus. Rex is a jompus already, so that's consistent. Also, since he's a gorpus and a jompus, but the key here is the premise linking vumpus to wumpus. So yes, the conclusion that Rex is a wumpus should be true.",
+        "content": "Thoughts:\nGorpuses are zumpuses.\nRex is a gorpus.\nRex is a zumpus.\nZumpuses are vumpuses.\nRex is a vumpus.\nEverything that is a tumpus or a vumpus or a lorpus is a gorpus and a brimpus and a wumpus.\nRex is a vumpus.\nRex is a wumpus.\nThere is evidence to conclude that Rex is a wumpus.\nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "Gorpuses are zumpuses.",
+            "Rex is a gorpus.",
+            "Rex is a zumpus.",
+            "Zumpuses are vumpuses.",
+            "Rex is a vumpus.",
+            "Everything that is a tumpus or a vumpus or a lorpus is a gorpus and a brimpus and a wumpus.",
+            "Rex is a wumpus.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) gorpuses are numpuses.",
+                "fol": "∀x (gorpus(x) → numpus(x))",
+                "tptp": "![X]: (gorpus(X) => numpus(X))"
+            },
+            {
+                "ref": "(2) zumpuses are vumpuses.",
+                "fol": "∀x (zumpus(x) → vumpus(x))",
+                "tptp": "![X]: (zumpus(X) => vumpus(X))"
+            },
+            {
+                "ref": "(3) each zumpus is a rompus.",
+                "fol": "∀x (zumpus(x) → rompus(x))",
+                "tptp": "![X]: (zumpus(X) => rompus(X))"
+            },
+            {
+                "ref": "(4) gorpuses are jompuses.",
+                "fol": "∀x (gorpus(x) → jompus(x))",
+                "tptp": "![X]: (gorpus(X) => jompus(X))"
+            },
+            {
+                "ref": "(5) everything that is a vumpus, a dumpus, or a numpus is a lempus.",
+                "fol": "∀x ((vumpus(x) ∨ dumpus(x) ∨ numpus(x)) → lempus(x))",
+                "tptp": "![X]: ((vumpus(X) | dumpus(X) | numpus(X)) => lempus(X))"
+            },
+            {
+                "ref": "(6) everything that is a tumpus or a vumpus or a lorpus is a gorpus and a brimpus and a wumpus.",
+                "fol": "∀x ((tumpus(x) ∨ vumpus(x) ∨ lorpus(x)) → (gorpus(x) ∧ brimpus(x) ∧ wumpus(x)))",
+                "tptp": "![X]: ((tumpus(X) | vumpus(X) | lorpus(X)) => (gorpus(X) & brimpus(X) & wumpus(X)))"
+            },
+            {
+                "ref": "(7) gorpuses are zumpuses.",
+                "fol": "∀x (gorpus(x) → zumpus(x))",
+                "tptp": "![X]: (gorpus(X) => zumpus(X))"
+            },
+            {
+                "ref": "(8) brimpuses are jompuses.",
+                "fol": "∀x (brimpus(x) → jompus(x))",
+                "tptp": "![X]: (brimpus(X) => jompus(X))"
+            },
+            {
+                "ref": "(9) everything that is a tumpus or a vumpus or a lorpus is a jompus.",
+                "fol": "∀x ((tumpus(x) ∨ vumpus(x) ∨ lorpus(x)) → jompus(x))",
+                "tptp": "![X]: ((tumpus(X) | vumpus(X) | lorpus(X)) => jompus(X))"
+            },
+            {
+                "ref": "(10) rex is a jompus.",
+                "fol": "jompus(rex)",
+                "tptp": "jompus(rex)"
+            },
+            {
+                "ref": "(11) rex is a gorpus.",
+                "fol": "gorpus(rex)",
+                "tptp": "gorpus(rex)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(8) rex is a wumpus.",
+            "fol": "wumpus(rex)",
+            "tptp": "wumpus(rex)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) gorpuses are zumpuses.",
+                "fol": "∀x (gorpus(x) → zumpus(x))",
+                "tptp": "![X]: (gorpus(X) => zumpus(X))"
+            },
+            {
+                "ref": "(2) rex is a gorpus.",
+                "fol": "gorpus(rex)",
+                "tptp": "gorpus(rex)"
+            },
+            {
+                "ref": "(3) rex is a zumpus.",
+                "fol": "zumpus(rex)",
+                "tptp": "zumpus(rex)"
+            },
+            {
+                "ref": "(4) zumpuses are vumpuses.",
+                "fol": "∀x (zumpus(x) → vumpus(x))",
+                "tptp": "![X]: (zumpus(X) => vumpus(X))"
+            },
+            {
+                "ref": "(5) rex is a vumpus.",
+                "fol": "vumpus(rex)",
+                "tptp": "vumpus(rex)"
+            },
+            {
+                "ref": "(6) everything that is a tumpus or a vumpus or a lorpus is a gorpus and a brimpus and a wumpus.",
+                "fol": "∀x ((tumpus(x) ∨ vumpus(x) ∨ lorpus(x)) → (gorpus(x) ∧ brimpus(x) ∧ wumpus(x)))",
+                "tptp": "![X]: ((tumpus(X) | vumpus(X) | lorpus(X)) => (gorpus(X) & brimpus(X) & wumpus(X)))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Gorpuses are zumpuses.",
+            "Rex is a gorpus.",
+            "Rex is a zumpus.",
+            "Zumpuses are vumpuses.",
+            "Rex is a vumpus.",
+            "Everything that is a tumpus or a vumpus or a lorpus is a gorpus and a brimpus and a wumpus."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "4hop_ProofsOnly_random_noadj_example17_example3",
+        "premises": [
+            "Each vumpus is a rompus.",
+            "Wumpuses are dumpuses.",
+            "Each grimpus is luminous.",
+            "Each gorpus is brown.",
+            "Vumpuses are overcast.",
+            "Every brimpus is a zumpus.",
+            "Every brimpus is moderate.",
+            "Every dumpus is large.",
+            "Every gorpus is a grimpus.",
+            "Wumpuses are numpuses.",
+            "Numpuses are not cold.",
+            "Numpuses are sterpuses.",
+            "Wumpuses are not opaque.",
+            "Each zumpus is nervous.",
+            "Every gorpus is a tumpus.",
+            "Sterpuses are earthy.",
+            "Every brimpus is a wumpus.",
+            "Every numpus is a gorpus.",
+            "Alex is a vumpus.",
+            "Alex is a brimpus."
+        ],
+        "question": [
+            "Alex is brown."
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Alex is a brimpus.",
+            "Every brimpus is a wumpus.",
+            "Wumpuses are numpuses.",
+            "Every numpus is a gorpus.",
+            "Each gorpus is brown.",
+            "Alex is a gorpus through the chain.",
+            "Therefore, Alex is brown.",
+            "There is a direct path to the conclusion."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, let's tackle this problem step by step. First, I need to parse all the premises provided and see how they connect to the conclusion that \"Alex is brown.\" \n\nStarting with the premises:\n\n1. Each vumpus is a rompus.\n2. Wumpuses are dumpuses.\n3. Each grimpus is luminous.\n4. Each gorpus is brown.\n5. Vumpuses are overcast.\n6. Every brimpus is a zumpus.\n7. Every brimpus is moderate.\n8. Every dumpus is large.\n9. Every gorpus is a grimpus.\n10. Wumpuses are numpuses.\n11. Numpuses are not cold.\n12. Numpuses are sterpuses.\n13. Wumpuses are not opaque.\n14. Each zumpus is nervous.\n15. Every gorpus is a tumpus.\n16. Sterpuses are earthy.\n17. Every brimpus is a wumpus.\n18. Every numpus is a gorpus.\n19. Alex is a vumpus.\n20. Alex is a brimpus.\n\nThe conclusion is that Alex is brown. \n\nSo, I need to trace the properties of Alex through the premises. Let's start with Alex being a vumpus and a brimpus. \n\nFrom premise 20, Alex is a brimpus. Premise 17 says every brimpus is a wumpus, so Alex is a wumpus. Then, premise 2 states wumpuses are dumpuses, so Alex is a dumpus. Premise 8 says every dumpus is large, but that's not directly relevant here. \n\nPremise 10 mentions that wumpuses are numpuses, so since Alex is a wumpus, he's also a numpus. Then premise 18 states every numpus is a gorpus. Therefore, Alex is a gorpus. \n\nLooking at premise 4, each gorpus is brown. Since Alex is a gorpus, it follows that Alex must be brown. \n\nWait, let me check again to ensure there are no contradictions or missing steps. Let's retrace:\n\nAlex is a brimpus (premise 20) → brimpus is a wumpus (17) → wumpus is a numpus (10) → numpus is a gorpus (18) → gorpus is brown (4). That seems straightforward. \n\nIs there any other premise that could affect this? For example, premise 9 says every gorpus is a grimpus, and premise 3 says grimpus are luminous. But the conclusion is about being brown, which is directly covered by premise 4. \n\nAlso, Alex being a vumpus (premise 19) might not directly impact the conclusion here because the chain from brimpus to gorpus already establishes he's a gorpus. However, let's check if there's any conflicting information. Premise 1 says each vumpus is a rompus, but that doesn't relate to being brown. \n\nSo the key path is Alex → brimpus → wumpus → numpus → gorpus → brown. Therefore, the conclusion that Alex is brown should be true.",
+        "content": "Thoughts:\nAlex is a brimpus. \nEvery brimpus is a wumpus. \nWumpuses are numpuses. \nEvery numpus is a gorpus. \nEach gorpus is brown. \nAlex is a gorpus through the chain. \nTherefore, Alex is brown. \nThere is a direct path to the conclusion.\nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "Alex is a brimpus.",
+            "Every brimpus is a wumpus.",
+            "Wumpuses are numpuses.",
+            "Every numpus is a gorpus.",
+            "Each gorpus is brown.",
+            "Alex is a gorpus through the chain.",
+            null,
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) each vumpus is a rompus.",
+                "fol": "∀x (vumpus(x) → rompus(x))",
+                "tptp": "![X]: (vumpus(X) => rompus(X))"
+            },
+            {
+                "ref": "(2) wumpuses are dumpuses.",
+                "fol": "∀x (wumpus(x) → dumpus(x))",
+                "tptp": "![X]: (wumpus(X) => dumpus(X))"
+            },
+            {
+                "ref": "(3) each grimpus is luminous.",
+                "fol": "∀x (grimpus(x) → luminous(x))",
+                "tptp": "![X]: (grimpus(X) => luminous(X))"
+            },
+            {
+                "ref": "(4) each gorpus is brown.",
+                "fol": "∀x (gorpus(x) → brown(x))",
+                "tptp": "![X]: (gorpus(X) => brown(X))"
+            },
+            {
+                "ref": "(5) vumpuses are overcast.",
+                "fol": "∀x (vumpus(x) → overcast(x))",
+                "tptp": "![X]: (vumpus(X) => overcast(X))"
+            },
+            {
+                "ref": "(6) every brimpus is a zumpus.",
+                "fol": "∀x (brimpus(x) → zumpus(x))",
+                "tptp": "![X]: (brimpus(X) => zumpus(X))"
+            },
+            {
+                "ref": "(7) every brimpus is moderate.",
+                "fol": "∀x (brimpus(x) → moderate(x))",
+                "tptp": "![X]: (brimpus(X) => moderate(X))"
+            },
+            {
+                "ref": "(8) every dumpus is large.",
+                "fol": "∀x (dumpus(x) → large(x))",
+                "tptp": "![X]: (dumpus(X) => large(X))"
+            },
+            {
+                "ref": "(9) every gorpus is a grimpus.",
+                "fol": "∀x (gorpus(x) → grimpus(x))",
+                "tptp": "![X]: (gorpus(X) => grimpus(X))"
+            },
+            {
+                "ref": "(10) wumpuses are numpuses.",
+                "fol": "∀x (wumpus(x) → numpus(x))",
+                "tptp": "![X]: (wumpus(X) => numpus(X))"
+            },
+            {
+                "ref": "(11) numpuses are not cold.",
+                "fol": "∀x (numpus(x) → ¬cold(x))",
+                "tptp": "![X]: (numpus(X) => ~cold(X))"
+            },
+            {
+                "ref": "(12) numpuses are sterpuses.",
+                "fol": "∀x (numpus(x) → sterpus(x))",
+                "tptp": "![X]: (numpus(X) => sterpus(X))"
+            },
+            {
+                "ref": "(13) wumpuses are not opaque.",
+                "fol": "∀x (wumpus(x) → ¬opaque(x))",
+                "tptp": "![X]: (wumpus(X) => ~opaque(X))"
+            },
+            {
+                "ref": "(14) each zumpus is nervous.",
+                "fol": "∀x (zumpus(x) → nervous(x))",
+                "tptp": "![X]: (zumpus(X) => nervous(X))"
+            },
+            {
+                "ref": "(15) every gorpus is a tumpus.",
+                "fol": "∀x (gorpus(x) → tumpus(x))",
+                "tptp": "![X]: (gorpus(X) => tumpus(X))"
+            },
+            {
+                "ref": "(16) sterpuses are earthy.",
+                "fol": "∀x (sterpus(x) → earthy(x))",
+                "tptp": "![X]: (sterpus(X) => earthy(X))"
+            },
+            {
+                "ref": "(17) every brimpus is a wumpus.",
+                "fol": "∀x (brimpus(x) → wumpus(x))",
+                "tptp": "![X]: (brimpus(X) => wumpus(X))"
+            },
+            {
+                "ref": "(18) every numpus is a gorpus.",
+                "fol": "∀x (numpus(x) → gorpus(x))",
+                "tptp": "![X]: (numpus(X) => gorpus(X))"
+            },
+            {
+                "ref": "(19) alex is a vumpus.",
+                "fol": "vumpus(alex)",
+                "tptp": "vumpus(alex)"
+            },
+            {
+                "ref": "(20) alex is a brimpus.",
+                "fol": "brimpus(alex)",
+                "tptp": "brimpus(alex)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(7) alex is brown.",
+            "fol": "brown(alex)",
+            "tptp": "brown(alex)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) alex is a brimpus.",
+                "fol": "brimpus(alex)",
+                "tptp": "brimpus(alex)"
+            },
+            {
+                "ref": "(2) every brimpus is a wumpus.",
+                "fol": "∀x (brimpus(x) → wumpus(x))",
+                "tptp": "![X]: (brimpus(X) => wumpus(X))"
+            },
+            {
+                "ref": "(3) wumpuses are numpuses.",
+                "fol": "∀x (wumpus(x) → numpus(x))",
+                "tptp": "![X]: (wumpus(X) => numpus(X))"
+            },
+            {
+                "ref": "(4) every numpus is a gorpus.",
+                "fol": "∀x (numpus(x) → gorpus(x))",
+                "tptp": "![X]: (numpus(X) => gorpus(X))"
+            },
+            {
+                "ref": "(5) each gorpus is brown.",
+                "fol": "∀x (gorpus(x) → brown(x))",
+                "tptp": "![X]: (gorpus(X) => brown(X))"
+            },
+            {
+                "ref": "(6) alex is a gorpus through the chain.",
+                "fol": "gorpus(alex)",
+                "tptp": "gorpus(alex)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Alex is a brimpus.",
+            "Every brimpus is a wumpus.",
+            "Wumpuses are numpuses.",
+            "Every numpus is a gorpus.",
+            "Each gorpus is brown.",
+            "Alex is a gorpus through the chain."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "4hop_Composed_random_noadj_example95_example1",
+        "premises": [
+            "Each lorpus is a numpus.",
+            "Every jompus is a yumpus.",
+            "Impuses are grimpuses.",
+            "Alex is a dumpus.",
+            "Alex is a numpus.",
+            "Every zumpus is a shumpus.",
+            "Everything that is a numpus and a brimpus and a dumpus is a gorpus.",
+            "Each wumpus is a lorpus, a lempus, and a jompus.",
+            "Everything that is a brimpus and a shumpus and a tumpus is a yumpus.",
+            "Alex is a brimpus.",
+            "Jompuses are tumpuses.",
+            "Everything that is a brimpus, a shumpus, and a tumpus is a wumpus.",
+            "Impuses are brimpuses.",
+            "Wumpuses are numpuses.",
+            "Alex is a dumpus.",
+            "Alex is an impus.",
+            "Alex is a zumpus.",
+            "Alex is a jompus."
+        ],
+        "question": [
+            "Alex is a lempus."
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Alex is a jompus.",
+            "Jompuses are tumpuses.",
+            "Alex is a tumpus.",
+            "Alex is a zumpus.",
+            "Every zumpus is a shumpus.",
+            "Alex is a shumpus.",
+            "Alex is a brimpus.",
+            "Everything that is a brimpus, shumpus, and tumpus is a wumpus.",
+            "Alex is a wumpus.",
+            "Each wumpus is a lempus, a lorpus, and a jompus.",
+            "Alex is a lempus."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, let's start by listing all the premises to see what we know. \n\nFirst, Alex is a dumpus, numpus, brimpus, impus, zumpus, and jompus. Also, each lorpus is a numpus. Every jompus is a yumpus. Impuses are grimpuses. Every zumpus is a shumpus. So Alex being a zumpus means he's a shumpus.\n\nSince Alex is a jompus, and jompuses are tumpuses, Alex must be a tumpus. Then, looking at the premise: Everything that is a brimpus, shumpus, and tumpus is a yumpus. Wait, but Alex is a brimpus, shumpus (from zumpus), and tumpus (from jompus), so Alex is a yumpus. But every jompus is already a yumpus, so that checks out.\n\nNext, the premise: Everything that is a numpus, brimpus, and dumpus is a gorpus. Alex is all three (numpus, brimpus, dumpus), so Alex is a gorpus. Not sure if that's relevant here.\n\nNow, the conclusion is whether Alex is a lempus. Looking at the premises related to lempus: Each wumpus is a lorpus, a lempus, and a jompus. So if Alex is a wumpus, then he must be a lempus. So the question is, is Alex a wumpus?\n\nTo check if Alex is a wumpus: The premise says \"Everything that is a brimpus, shumpus, and tumpus is a wumpus.\" Alex is a brimpus (given), shumpus (as a zumpus), and tumpus (as a jompus). Therefore, Alex meets all three conditions, so he is a wumpus. Since each wumpus is a lempus, Alex must be a lempus. Therefore, the conclusion is true.",
+        "content": "Thoughts:\nAlex is a jompus.\nJompuses are tumpuses.\nAlex is a tumpus.\nAlex is a zumpus.\nEvery zumpus is a shumpus.\nAlex is a shumpus.\nAlex is a brimpus.\nEverything that is a brimpus, shumpus, and tumpus is a wumpus.\nAlex is a wumpus.\nEach wumpus is a lempus, a lorpus, and a jompus.\nAlex is a lempus.\nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "Alex is a jompus.",
+            "Jompuses are tumpuses.",
+            "Alex is a tumpus.",
+            "Alex is a zumpus.",
+            "Every zumpus is a shumpus.",
+            "Alex is a shumpus.",
+            "Alex is a brimpus.",
+            "Everything that is a brimpus, shumpus, and tumpus is a wumpus.",
+            "Alex is a wumpus.",
+            "Each wumpus is a lempus, a lorpus, and a jompus.",
+            "Alex is a lempus."
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) each lorpus is a numpus.",
+                "fol": "∀x (lorpus(x) → numpus(x))",
+                "tptp": "![X]: (lorpus(X) => numpus(X))"
+            },
+            {
+                "ref": "(2) every jompus is a yumpus.",
+                "fol": "∀x (jompus(x) → yumpus(x))",
+                "tptp": "![X]: (jompus(X) => yumpus(X))"
+            },
+            {
+                "ref": "(3) impuses are grimpuses.",
+                "fol": "∀x (impus(x) → grimpus(x))",
+                "tptp": "![X]: (impus(X) => grimpus(X))"
+            },
+            {
+                "ref": "(4) alex is a dumpus.",
+                "fol": "dumpus(alex)",
+                "tptp": "dumpus(alex)"
+            },
+            {
+                "ref": "(5) alex is a numpus.",
+                "fol": "numpus(alex)",
+                "tptp": "numpus(alex)"
+            },
+            {
+                "ref": "(6) every zumpus is a shumpus.",
+                "fol": "∀x (zumpus(x) → shumpus(x))",
+                "tptp": "![X]: (zumpus(X) => shumpus(X))"
+            },
+            {
+                "ref": "(7) everything that is a numpus and a brimpus and a dumpus is a gorpus.",
+                "fol": "∀x ((numpus(x) ∧ brimpus(x) ∧ dumpus(x)) → gorpus(x))",
+                "tptp": "![X]: ((numpus(X) & brimpus(X) & dumpus(X)) => gorpus(X))"
+            },
+            {
+                "ref": "(8) each wumpus is a lorpus, a lempus, and a jompus.",
+                "fol": "∀x (wumpus(x) → (lorpus(x) ∧ lempus(x) ∧ jompus(x)))",
+                "tptp": "![X]: (wumpus(X) => (lorpus(X) & lempus(X) & jompus(X)))"
+            },
+            {
+                "ref": "(9) everything that is a brimpus and a shumpus and a tumpus is a yumpus.",
+                "fol": "∀x ((brimpus(x) ∧ shumpus(x) ∧ tumpus(x)) → yumpus(x))",
+                "tptp": "![X]: ((brimpus(X) & shumpus(X) & tumpus(X)) => yumpus(X))"
+            },
+            {
+                "ref": "(10) alex is a brimpus.",
+                "fol": "brimpus(alex)",
+                "tptp": "brimpus(alex)"
+            },
+            {
+                "ref": "(11) jompuses are tumpuses.",
+                "fol": "∀x (jompus(x) → tumpus(x))",
+                "tptp": "![X]: (jompus(X) => tumpus(X))"
+            },
+            {
+                "ref": "(12) everything that is a brimpus, a shumpus, and a tumpus is a wumpus.",
+                "fol": "∀x ((brimpus(x) ∧ shumpus(x) ∧ tumpus(x)) → wumpus(x))",
+                "tptp": "![X]: ((brimpus(X) & shumpus(X) & tumpus(X)) => wumpus(X))"
+            },
+            {
+                "ref": "(13) impuses are brimpuses.",
+                "fol": "∀x (impus(x) → brimpus(x))",
+                "tptp": "![X]: (impus(X) => brimpus(X))"
+            },
+            {
+                "ref": "(14) wumpuses are numpuses.",
+                "fol": "∀x (wumpus(x) → numpus(x))",
+                "tptp": "![X]: (wumpus(X) => numpus(X))"
+            },
+            {
+                "ref": "(15) alex is a dumpus.",
+                "fol": "dumpus(alex)",
+                "tptp": "dumpus(alex)"
+            },
+            {
+                "ref": "(16) alex is an impus.",
+                "fol": "impus(alex)",
+                "tptp": "impus(alex)"
+            },
+            {
+                "ref": "(17) alex is a zumpus.",
+                "fol": "zumpus(alex)",
+                "tptp": "zumpus(alex)"
+            },
+            {
+                "ref": "(18) alex is a jompus.",
+                "fol": "jompus(alex)",
+                "tptp": "jompus(alex)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(12) alex is a lempus.",
+            "fol": "lempus(alex)",
+            "tptp": "lempus(alex)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) alex is a jompus.",
+                "fol": "jompus(alex)",
+                "tptp": "jompus(alex)"
+            },
+            {
+                "ref": "(2) jompuses are tumpuses.",
+                "fol": "∀x (jompus(x) → tumpus(x))",
+                "tptp": "![X]: (jompus(X) => tumpus(X))"
+            },
+            {
+                "ref": "(3) alex is a tumpus.",
+                "fol": "tumpus(alex)",
+                "tptp": "tumpus(alex)"
+            },
+            {
+                "ref": "(4) alex is a zumpus.",
+                "fol": "zumpus(alex)",
+                "tptp": "zumpus(alex)"
+            },
+            {
+                "ref": "(5) every zumpus is a shumpus.",
+                "fol": "∀x (zumpus(x) → shumpus(x))",
+                "tptp": "![X]: (zumpus(X) => shumpus(X))"
+            },
+            {
+                "ref": "(6) alex is a shumpus.",
+                "fol": "shumpus(alex)",
+                "tptp": "shumpus(alex)"
+            },
+            {
+                "ref": "(7) alex is a brimpus.",
+                "fol": "brimpus(alex)",
+                "tptp": "brimpus(alex)"
+            },
+            {
+                "ref": "(8) everything that is a brimpus, shumpus, and tumpus is a wumpus.",
+                "fol": "∀x ((brimpus(x) ∧ shumpus(x) ∧ tumpus(x)) → wumpus(x))",
+                "tptp": "![X]: ((brimpus(X) & shumpus(X) & tumpus(X)) => wumpus(X))"
+            },
+            {
+                "ref": "(9) alex is a wumpus.",
+                "fol": "wumpus(alex)",
+                "tptp": "wumpus(alex)"
+            },
+            {
+                "ref": "(10) each wumpus is a lempus, a lorpus, and a jompus.",
+                "fol": "∀x (wumpus(x) → (lempus(x) ∧ lorpus(x) ∧ jompus(x)))",
+                "tptp": "![X]: (wumpus(X) => (lempus(X) & lorpus(X) & jompus(X)))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Alex is a jompus.",
+            "Jompuses are tumpuses.",
+            "Alex is a tumpus.",
+            "Alex is a zumpus.",
+            "Every zumpus is a shumpus.",
+            "Alex is a shumpus.",
+            "Alex is a brimpus.",
+            "Everything that is a brimpus, shumpus, and tumpus is a wumpus.",
+            "Alex is a wumpus.",
+            "Each wumpus is a lempus, a lorpus, and a jompus."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "4hop_ProofsOnly_random_noadj_example17_example4",
+        "premises": [
+            "Lorpuses are yumpuses.",
+            "Shumpuses are lempuses.",
+            "Lorpuses are opaque.",
+            "Brimpuses are not rainy.",
+            "Each jompus is cold.",
+            "Numpuses are grimpuses.",
+            "Lorpuses are shumpuses.",
+            "Each dumpus is a brimpus.",
+            "Jompuses are sterpuses.",
+            "Shumpuses are impuses.",
+            "Every dumpus is melodic.",
+            "Each impus is kind.",
+            "Grimpuses are bright.",
+            "Each numpus is a dumpus.",
+            "Numpuses are liquid.",
+            "Each dumpus is a lorpus.",
+            "Every shumpus is not small.",
+            "Each yumpus is feisty.",
+            "Sam is a numpus.",
+            "Sam is a jompus."
+        ],
+        "question": [
+            "Sam is not small."
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Sam is a numpus.",
+            "Each numpus is a dumpus.",
+            "Sam is a dumpus.",
+            "Every dumpus is a lorpus.",
+            "Sam is a lorpus.",
+            "Lorpuses are shumpuses.",
+            "Sam is a shumpus.",
+            "Every shumpus is not small.",
+            "Sam is not small."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, let's tackle this problem step by step. The premises are a bit complex with all these made-up terms, but I'll try to break them down.\n\nFirst, let's list out the premises related to Sam. Sam is a numpus and a jompus. From the premises: \"Each numpus is a dumpus.\" So since Sam is a numpus, he must be a dumpus. Then, \"Every dumpus is a lorpus.\" So Sam is a lorpus. \n\nNext, \"Lorpuses are shumpuses.\" So Sam, being a lorpus, is also a shumpus. Another premise says \"Every shumpus is not small.\" That directly implies that Sam, as a shumpus, is not small. \n\nWait, let me check if there's any conflicting information. Also, since Sam is a jompus, the premise says \"Each jompus is cold,\" but that doesn't affect the conclusion about being small. The key steps seem to be numpus → dumpus → lorpus → shumpus, and shumpuses are not small. So the conclusion that Sam is not small should follow. No premises contradict this. Therefore, the conclusion is true.",
+        "content": "Thoughts:\nSam is a numpus.\nEach numpus is a dumpus.\nSam is a dumpus.\nEvery dumpus is a lorpus.\nSam is a lorpus.\nLorpuses are shumpuses.\nSam is a shumpus.\nEvery shumpus is not small.\nSam is not small.\nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "Sam is a numpus.",
+            "Each numpus is a dumpus.",
+            "Sam is a dumpus.",
+            "Every dumpus is a lorpus.",
+            "Sam is a lorpus.",
+            "Lorpuses are shumpuses.",
+            "Sam is a shumpus.",
+            "Every shumpus is not small.",
+            "Sam is not small."
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) lorpuses are yumpuses.",
+                "fol": "∀x (lorpus(x) → yumpus(x))",
+                "tptp": "![X]: (lorpus(X) => yumpus(X))"
+            },
+            {
+                "ref": "(2) shumpuses are lempuses.",
+                "fol": "∀x (shumpus(x) → lempus(x))",
+                "tptp": "![X]: (shumpus(X) => lempus(X))"
+            },
+            {
+                "ref": "(3) lorpuses are opaque.",
+                "fol": "∀x (lorpus(x) → opaque(x))",
+                "tptp": "![X]: (lorpus(X) => opaque(X))"
+            },
+            {
+                "ref": "(4) brimpuses are not rainy.",
+                "fol": "∀x (brimpus(x) → ¬rainy(x))",
+                "tptp": "![X]: (brimpus(X) => ~rainy(X))"
+            },
+            {
+                "ref": "(5) each jompus is cold.",
+                "fol": "∀x (jompus(x) → cold(x))",
+                "tptp": "![X]: (jompus(X) => cold(X))"
+            },
+            {
+                "ref": "(6) numpuses are grimpuses.",
+                "fol": "∀x (numpus(x) → grimpus(x))",
+                "tptp": "![X]: (numpus(X) => grimpus(X))"
+            },
+            {
+                "ref": "(7) lorpuses are shumpuses.",
+                "fol": "∀x (lorpus(x) → shumpus(x))",
+                "tptp": "![X]: (lorpus(X) => shumpus(X))"
+            },
+            {
+                "ref": "(8) each dumpus is a brimpus.",
+                "fol": "∀x (dumpus(x) → brimpus(x))",
+                "tptp": "![X]: (dumpus(X) => brimpus(X))"
+            },
+            {
+                "ref": "(9) jompuses are sterpuses.",
+                "fol": "∀x (jompus(x) → sterpus(x))",
+                "tptp": "![X]: (jompus(X) => sterpus(X))"
+            },
+            {
+                "ref": "(10) shumpuses are impuses.",
+                "fol": "∀x (shumpus(x) → impus(x))",
+                "tptp": "![X]: (shumpus(X) => impus(X))"
+            },
+            {
+                "ref": "(11) every dumpus is melodic.",
+                "fol": "∀x (dumpus(x) → melodic(x))",
+                "tptp": "![X]: (dumpus(X) => melodic(X))"
+            },
+            {
+                "ref": "(12) each impus is kind.",
+                "fol": "∀x (impus(x) → kind(x))",
+                "tptp": "![X]: (impus(X) => kind(X))"
+            },
+            {
+                "ref": "(13) grimpuses are bright.",
+                "fol": "∀x (grimpus(x) → bright(x))",
+                "tptp": "![X]: (grimpus(X) => bright(X))"
+            },
+            {
+                "ref": "(14) each numpus is a dumpus.",
+                "fol": "∀x (numpus(x) → dumpus(x))",
+                "tptp": "![X]: (numpus(X) => dumpus(X))"
+            },
+            {
+                "ref": "(15) numpuses are liquid.",
+                "fol": "∀x (numpus(x) → liquid(x))",
+                "tptp": "![X]: (numpus(X) => liquid(X))"
+            },
+            {
+                "ref": "(16) each dumpus is a lorpus.",
+                "fol": "∀x (dumpus(x) → lorpus(x))",
+                "tptp": "![X]: (dumpus(X) => lorpus(X))"
+            },
+            {
+                "ref": "(17) every shumpus is not small.",
+                "fol": "∀x (shumpus(x) → ¬small(x))",
+                "tptp": "![X]: (shumpus(X) => ~small(X))"
+            },
+            {
+                "ref": "(18) each yumpus is feisty.",
+                "fol": "∀x (yumpus(x) → feisty(x))",
+                "tptp": "![X]: (yumpus(X) => feisty(X))"
+            },
+            {
+                "ref": "(19) sam is a numpus.",
+                "fol": "numpus(sam)",
+                "tptp": "numpus(sam)"
+            },
+            {
+                "ref": "(20) sam is a jompus.",
+                "fol": "jompus(sam)",
+                "tptp": "jompus(sam)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(10) sam is not small.",
+            "fol": "¬small(sam)",
+            "tptp": "~small(sam)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) sam is a numpus.",
+                "fol": "numpus(sam)",
+                "tptp": "numpus(sam)"
+            },
+            {
+                "ref": "(2) each numpus is a dumpus.",
+                "fol": "∀x (numpus(x) → dumpus(x))",
+                "tptp": "![X]: (numpus(X) => dumpus(X))"
+            },
+            {
+                "ref": "(3) sam is a dumpus.",
+                "fol": "dumpus(sam)",
+                "tptp": "dumpus(sam)"
+            },
+            {
+                "ref": "(4) every dumpus is a lorpus.",
+                "fol": "∀x (dumpus(x) → lorpus(x))",
+                "tptp": "![X]: (dumpus(X) => lorpus(X))"
+            },
+            {
+                "ref": "(5) sam is a lorpus.",
+                "fol": "lorpus(sam)",
+                "tptp": "lorpus(sam)"
+            },
+            {
+                "ref": "(6) lorpuses are shumpuses.",
+                "fol": "∀x (lorpus(x) → shumpus(x))",
+                "tptp": "![X]: (lorpus(X) => shumpus(X))"
+            },
+            {
+                "ref": "(7) sam is a shumpus.",
+                "fol": "shumpus(sam)",
+                "tptp": "shumpus(sam)"
+            },
+            {
+                "ref": "(8) every shumpus is not small.",
+                "fol": "∀x (shumpus(x) → ¬small(x))",
+                "tptp": "![X]: (shumpus(X) => ~small(X))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Sam is a numpus.",
+            "Each numpus is a dumpus.",
+            "Sam is a dumpus.",
+            "Every dumpus is a lorpus.",
+            "Sam is a lorpus.",
+            "Lorpuses are shumpuses.",
+            "Sam is a shumpus.",
+            "Every shumpus is not small."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "4hop_Composed_random_noadj_example91_example5",
+        "premises": [
+            "Lempuses are gorpuses.",
+            "Each lorpus is a sterpus.",
+            "Everything that is a wumpus, a lempus, or a brimpus is a jompus.",
+            "Everything that is a lorpus, a lempus, or a yumpus is a rompus.",
+            "Everything that is a lorpus or a lempus or a yumpus is a vumpus.",
+            "Everything that is a shumpus, a sterpus, or a zumpus is a brimpus.",
+            "Rompuses are lempuses, shumpuses, and lorpuses.",
+            "Every rompus is a zumpus.",
+            "Max is a wumpus.",
+            "Max is a lempus."
+        ],
+        "question": [
+            "Max is an impus or a grimpus or a shumpus."
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Lempuses are gorpuses.",
+            "Max is a lempus and a wumpus.",
+            "Everything that is a wumpus, a lempus, or a brimpus is a jompus.",
+            "Max is a jompus.",
+            "Everything that is a lorpus, a lempus, or a yumpus is a rompus.",
+            "Max is a lempus.",
+            "Max is a rompus.",
+            "Every rompus is a zumpus.",
+            "Max is a zumpus.",
+            "Rompuses are lempuses, shumpuses, and lorpuses.",
+            "Max being a rompus implies Max is a shumpus.",
+            "Since Max is a shumpus, the conclusion \"Max is a shumpus\" is part of the disjunction."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, let's try to work through this problem step by step. The premises are a bit complex with all these made-up terms, so I need to be careful to follow each one logically.\n\nFirst, the premises start by stating that \"Lempuses are gorpuses.\" So any lempus is also a gorpus. Then, \"Each lorpus is a sterpus.\" So lorpus implies sterpus. \n\nNext, \"Everything that is a wumpus, a lempus, or a brimpus is a jompus.\" So if something is any of those three, it's a jompus. Similarly, \"Everything that is a lorpus, a lempus, or a yumpus is a rompus.\" So lorpus, lempus, yumpus → rompus. Then, \"Everything that is a lorpus or a lempus or a yumpus is a vumpus.\" So those three also make it a vumpus.\n\nThen there's \"Everything that is a shumpus, a sterpus, or a zumpus is a brimpus.\" So shumpus/sterpus/zumpus → brimpus. \n\n\"Rompuses are lempuses, shumpuses, and lorpuses.\" Wait, that's a bit confusing. So if something is a rompus, then it's all three: lempus, shumpus, and lorpus. Then \"Every rompus is a zumpus.\" So rompus → zumpus.\n\nMax is given as a wumpus and a lempus. The conclusion is that Max is an impus, grimpus, or shumpus.\n\nStarting with Max: since Max is a wumpus and a lempus. From the third premise, since Max is a wumpus or lempus (he's both), he's a jompus. Also, since he's a lempus (and from premise 4, lempus is part of the group lorpus/lempus/yumpus), he is a rompus. From premise 4, being a lempus makes him a rompus. Then, since he's a rompus, according to premise 7, rompuses are lempuses, shumpuses, and lorpuses. Therefore, Max is a shumpus. So that would directly make Max a shumpus, which is one of the options in the conclusion (impus, grimpus, shumpus). Therefore, the conclusion \"Max is an impus or a grimpus or a shumpus\" would be true because he is a shumpus.\n\nWait, let me check again. Premise 7 says \"Rompuses are lempuses, shumpuses, and lorpuses.\" So if Max is a rompus (from being a lempus, via premise 4), then he must be a shumpus. Therefore, Max is a shumpus. The conclusion is that he's an impus or grimpus or shumpus. Since he's a shumpus, the conclusion holds. So the answer should be True.",
+        "content": "Thoughts:\nLempuses are gorpuses.\nMax is a lempus and a wumpus.\nEverything that is a wumpus, a lempus, or a brimpus is a jompus.\nMax is a jompus.\nEverything that is a lorpus, a lempus, or a yumpus is a rompus.\nMax is a lempus, so Max is a rompus.\nEvery rompus is a zumpus.\nMax is a zumpus.\nRompuses are lempuses, shumpuses, and lorpuses.\nMax being a rompus implies Max is a shumpus.\nSince Max is a shumpus, the conclusion \"Max is a shumpus\" is part of the disjunction.\nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "Lempuses are gorpuses.",
+            "Max is a lempus and a wumpus.",
+            "Everything that is a wumpus, a lempus, or a brimpus is a jompus.",
+            "Max is a jompus.",
+            "Everything that is a lorpus, a lempus, or a yumpus is a rompus.",
+            "Max is a lempus.",
+            "Max is a rompus.",
+            "Every rompus is a zumpus.",
+            "Max is a zumpus.",
+            "Rompuses are lempuses, shumpuses, and lorpuses.",
+            "Max being a rompus implies Max is a shumpus.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) lempuses are gorpuses.",
+                "fol": "∀x (lempus(x) → gorpus(x))",
+                "tptp": "![X]: (lempus(X) => gorpus(X))"
+            },
+            {
+                "ref": "(2) each lorpus is a sterpus.",
+                "fol": "∀x (lorpus(x) → sterpus(x))",
+                "tptp": "![X]: (lorpus(X) => sterpus(X))"
+            },
+            {
+                "ref": "(3) everything that is a wumpus, a lempus, or a brimpus is a jompus.",
+                "fol": "∀x ((wumpus(x) ∨ lempus(x) ∨ brimpus(x)) → jompus(x))",
+                "tptp": "![X]: ((wumpus(X) | lempus(X) | brimpus(X)) => jompus(X))"
+            },
+            {
+                "ref": "(4) everything that is a lorpus, a lempus, or a yumpus is a rompus.",
+                "fol": "∀x ((lorpus(x) ∨ lempus(x) ∨ yumpus(x)) → rompus(x))",
+                "tptp": "![X]: ((lorpus(X) | lempus(X) | yumpus(X)) => rompus(X))"
+            },
+            {
+                "ref": "(5) everything that is a lorpus or a lempus or a yumpus is a vumpus.",
+                "fol": "∀x ((lorpus(x) ∨ lempus(x) ∨ yumpus(x)) → vumpus(x))",
+                "tptp": "![X]: ((lorpus(X) | lempus(X) | yumpus(X)) => vumpus(X))"
+            },
+            {
+                "ref": "(6) everything that is a shumpus, a sterpus, or a zumpus is a brimpus.",
+                "fol": "∀x ((shumpus(x) ∨ sterpus(x) ∨ zumpus(x)) → brimpus(x))",
+                "tptp": "![X]: ((shumpus(X) | sterpus(X) | zumpus(X)) => brimpus(X))"
+            },
+            {
+                "ref": "(7) rompuses are lempuses, shumpuses, and lorpuses.",
+                "fol": "∀x (rompus(x) → (lempus(x) ∧ shumpus(x) ∧ lorpus(x)))",
+                "tptp": "![X]: (rompus(X) => (lempus(X) & shumpus(X) & lorpus(X)))"
+            },
+            {
+                "ref": "(8) every rompus is a zumpus.",
+                "fol": "∀x (rompus(x) → zumpus(x))",
+                "tptp": "![X]: (rompus(X) => zumpus(X))"
+            },
+            {
+                "ref": "(9) max is a wumpus.",
+                "fol": "wumpus(max)",
+                "tptp": "wumpus(max)"
+            },
+            {
+                "ref": "(10) max is a lempus.",
+                "fol": "lempus(max)",
+                "tptp": "lempus(max)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(12) max is an impus or a grimpus or a shumpus.",
+            "fol": "impus(max) ∨ grimpus(max) ∨ shumpus(max)",
+            "tptp": "impus(max) | grimpus(max) | shumpus(max)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) lempuses are gorpuses.",
+                "fol": "∀x (lempus(x) → gorpus(x))",
+                "tptp": "![X]: (lempus(X) => gorpus(X))"
+            },
+            {
+                "ref": "(2) max is a lempus and a wumpus.",
+                "fol": "lempus(max) ∧ wumpus(max)",
+                "tptp": "lempus(max) & wumpus(max)"
+            },
+            {
+                "ref": "(3) everything that is a wumpus, a lempus, or a brimpus is a jompus.",
+                "fol": "∀x ((wumpus(x) ∨ lempus(x) ∨ brimpus(x)) → jompus(x))",
+                "tptp": "![X]: ((wumpus(X) | lempus(X) | brimpus(X)) => jompus(X))"
+            },
+            {
+                "ref": "(4) max is a jompus.",
+                "fol": "jompus(max)",
+                "tptp": "jompus(max)"
+            },
+            {
+                "ref": "(5) everything that is a lorpus, a lempus, or a yumpus is a rompus.",
+                "fol": "∀x ((lorpus(x) ∨ lempus(x) ∨ yumpus(x)) → rompus(x))",
+                "tptp": "![X]: ((lorpus(X) | lempus(X) | yumpus(X)) => rompus(X))"
+            },
+            {
+                "ref": "(6) max is a lempus.",
+                "fol": "lempus(max)",
+                "tptp": "lempus(max)"
+            },
+            {
+                "ref": "(7) max is a rompus.",
+                "fol": "rompus(max)",
+                "tptp": "rompus(max)"
+            },
+            {
+                "ref": "(8) every rompus is a zumpus.",
+                "fol": "∀x (rompus(x) → zumpus(x))",
+                "tptp": "![X]: (rompus(X) => zumpus(X))"
+            },
+            {
+                "ref": "(9) max is a zumpus.",
+                "fol": "zumpus(max)",
+                "tptp": "zumpus(max)"
+            },
+            {
+                "ref": "(10) rompuses are lempuses, shumpuses, and lorpuses.",
+                "fol": "∀x (rompus(x) → (lempus(x) ∧ shumpus(x) ∧ lorpus(x)))",
+                "tptp": "![X]: (rompus(X) => (lempus(X) & shumpus(X) & lorpus(X)))"
+            },
+            {
+                "ref": "(11) max being a rompus implies max is a shumpus.",
+                "fol": "rompus(max) → shumpus(max)",
+                "tptp": "rompus(max) => shumpus(max)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Lempuses are gorpuses.",
+            "Max is a lempus and a wumpus.",
+            "Everything that is a wumpus, a lempus, or a brimpus is a jompus.",
+            "Max is a jompus.",
+            "Everything that is a lorpus, a lempus, or a yumpus is a rompus.",
+            "Max is a lempus.",
+            "Max is a rompus.",
+            "Every rompus is a zumpus.",
+            "Max is a zumpus.",
+            "Rompuses are lempuses, shumpuses, and lorpuses.",
+            "Max being a rompus implies Max is a shumpus."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "4hop_ProofsOnly_random_noadj_example10_example0",
+        "premises": [
+            "Each dumpus is not brown.",
+            "Lempuses are fruity.",
+            "Gorpuses are transparent.",
+            "Lempuses are grimpuses.",
+            "Shumpuses are sterpuses.",
+            "Every shumpus is a zumpus.",
+            "Every gorpus is a yumpus.",
+            "Every zumpus is a wumpus.",
+            "Gorpuses are shumpuses.",
+            "Jompuses are temperate.",
+            "Tumpuses are spicy.",
+            "Every grimpus is happy.",
+            "Wumpuses are angry.",
+            "Zumpuses are not rainy.",
+            "Each grimpus is a numpus.",
+            "Each shumpus is large.",
+            "Jompuses are vumpuses.",
+            "Yumpuses are muffled.",
+            "Every lempus is a tumpus.",
+            "Every sterpus is moderate.",
+            "Grimpuses are dumpuses.",
+            "Every zumpus is a lempus.",
+            "Stella is a shumpus.",
+            "Stella is a jompus."
+        ],
+        "question": [
+            "Stella is happy."
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Stella is a shumpus.",
+            "Every shumpus is a zumpus.",
+            "Stella is a zumpus.",
+            "Every zumpus is a lempus.",
+            "Stella is a lempus.",
+            "Lempuses are grimpuses.",
+            "Stella is a grimpus.",
+            "Every grimpus is happy.",
+            "Stella is happy."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, let's try to figure out whether the conclusion \"Stella is happy\" is true based on the given premises. I need to follow the rules and only use the premises provided, step by step.\n\nFirst, I'll start by listing all the premises and see how they connect. The conclusion is about Stella being happy. Since Stella is a shumpus and a jompus, I need to trace the relationships from there.\n\nThe premises say that every shumpus is a zumpus. Stella is a shumpus, so Stella is a zumpus. Then, every zumpus is a wumpus. So Stella is a wumpus. Wumpuses are angry, but that doesn't directly relate to happiness yet. Wait, maybe there's another path.\n\nAnother premise: Gorpuses are shumpuses. But Stella is already a shumpus. Not sure if that's relevant. Let me check other connections. Every zumpus is a lempus. Since Stella is a zumpus (from shumpus -> zumpus), Stella is also a lempus. Lempuses are fruity and grimpuses. So Stella is a lempus, which is a grimpus. Each grimpus is a numpus, but more importantly, every grimpus is happy. Wait, there's a premise that says \"Every grimpus is happy.\" So if Stella is a grimpus, then she's happy.\n\nLet me trace that again. Stella is a shumpus -> zumpus (because every shumpus is a zumpus). Then, every zumpus is a lempus. So Stella is a lempus. Lempuses are grimpuses (another premise states \"Lempuses are grimpuses\"). Therefore, Stella is a grimpus. Since every grimpus is happy, Stella must be happy. That seems to check out.\n\nBut wait, are there any conflicting premises? Let's double-check. The premises also mention that grimpuses are dumpuses. Each dumpus is not brown. But that doesn't affect happiness. So the key steps are: Stella is shumpus -> zumpus -> lempus -> grimpus. Then, since every grimpus is happy, Stella is happy. Therefore, the conclusion is true.",
+        "content": "Thoughts:\nStella is a shumpus.\nEvery shumpus is a zumpus.\nStella is a zumpus.\nEvery zumpus is a lempus.\nStella is a lempus.\nLempuses are grimpuses.\nStella is a grimpus.\nEvery grimpus is happy.\nStella is happy.\nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "Stella is a shumpus.",
+            "Every shumpus is a zumpus.",
+            "Stella is a zumpus.",
+            "Every zumpus is a lempus.",
+            "Stella is a lempus.",
+            "Lempuses are grimpuses.",
+            "Stella is a grimpus.",
+            "Every grimpus is happy.",
+            "Stella is happy."
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) each dumpus is not brown.",
+                "fol": "∀x (dumpus(x) → ¬brown(x))",
+                "tptp": "![X]: (dumpus(X) => ~brown(X))"
+            },
+            {
+                "ref": "(2) lempuses are fruity.",
+                "fol": "∀x (lempus(x) → fruity(x))",
+                "tptp": "![X]: (lempus(X) => fruity(X))"
+            },
+            {
+                "ref": "(3) gorpuses are transparent.",
+                "fol": "∀x (gorpus(x) → transparent(x))",
+                "tptp": "![X]: (gorpus(X) => transparent(X))"
+            },
+            {
+                "ref": "(4) lempuses are grimpuses.",
+                "fol": "∀x (lempus(x) → grimpus(x))",
+                "tptp": "![X]: (lempus(X) => grimpus(X))"
+            },
+            {
+                "ref": "(5) shumpuses are sterpuses.",
+                "fol": "∀x (shumpus(x) → sterpus(x))",
+                "tptp": "![X]: (shumpus(X) => sterpus(X))"
+            },
+            {
+                "ref": "(6) every shumpus is a zumpus.",
+                "fol": "∀x (shumpus(x) → zumpus(x))",
+                "tptp": "![X]: (shumpus(X) => zumpus(X))"
+            },
+            {
+                "ref": "(7) every gorpus is a yumpus.",
+                "fol": "∀x (gorpus(x) → yumpus(x))",
+                "tptp": "![X]: (gorpus(X) => yumpus(X))"
+            },
+            {
+                "ref": "(8) every zumpus is a wumpus.",
+                "fol": "∀x (zumpus(x) → wumpus(x))",
+                "tptp": "![X]: (zumpus(X) => wumpus(X))"
+            },
+            {
+                "ref": "(9) gorpuses are shumpuses.",
+                "fol": "∀x (gorpus(x) → shumpus(x))",
+                "tptp": "![X]: (gorpus(X) => shumpus(X))"
+            },
+            {
+                "ref": "(10) jompuses are temperate.",
+                "fol": "∀x (jompus(x) → temperate(x))",
+                "tptp": "![X]: (jompus(X) => temperate(X))"
+            },
+            {
+                "ref": "(11) tumpuses are spicy.",
+                "fol": "∀x (tumpus(x) → spicy(x))",
+                "tptp": "![X]: (tumpus(X) => spicy(X))"
+            },
+            {
+                "ref": "(12) every grimpus is happy.",
+                "fol": "∀x (grimpus(x) → happy(x))",
+                "tptp": "![X]: (grimpus(X) => happy(X))"
+            },
+            {
+                "ref": "(13) wumpuses are angry.",
+                "fol": "∀x (wumpus(x) → angry(x))",
+                "tptp": "![X]: (wumpus(X) => angry(X))"
+            },
+            {
+                "ref": "(14) zumpuses are not rainy.",
+                "fol": "∀x (zumpus(x) → ¬rainy(x))",
+                "tptp": "![X]: (zumpus(X) => ~rainy(X))"
+            },
+            {
+                "ref": "(15) each grimpus is a numpus.",
+                "fol": "∀x (grimpus(x) → numpus(x))",
+                "tptp": "![X]: (grimpus(X) => numpus(X))"
+            },
+            {
+                "ref": "(16) each shumpus is large.",
+                "fol": "∀x (shumpus(x) → large(x))",
+                "tptp": "![X]: (shumpus(X) => large(X))"
+            },
+            {
+                "ref": "(17) jompuses are vumpuses.",
+                "fol": "∀x (jompus(x) → vumpus(x))",
+                "tptp": "![X]: (jompus(X) => vumpus(X))"
+            },
+            {
+                "ref": "(18) yumpuses are muffled.",
+                "fol": "∀x (yumpus(x) → muffled(x))",
+                "tptp": "![X]: (yumpus(X) => muffled(X))"
+            },
+            {
+                "ref": "(19) every lempus is a tumpus.",
+                "fol": "∀x (lempus(x) → tumpus(x))",
+                "tptp": "![X]: (lempus(X) => tumpus(X))"
+            },
+            {
+                "ref": "(20) every sterpus is moderate.",
+                "fol": "∀x (sterpus(x) → moderate(x))",
+                "tptp": "![X]: (sterpus(X) => moderate(X))"
+            },
+            {
+                "ref": "(21) grimpuses are dumpuses.",
+                "fol": "∀x (grimpus(x) → dumpus(x))",
+                "tptp": "![X]: (grimpus(X) => dumpus(X))"
+            },
+            {
+                "ref": "(22) every zumpus is a lempus.",
+                "fol": "∀x (zumpus(x) → lempus(x))",
+                "tptp": "![X]: (zumpus(X) => lempus(X))"
+            },
+            {
+                "ref": "(23) stella is a shumpus.",
+                "fol": "shumpus(stella)",
+                "tptp": "shumpus(stella)"
+            },
+            {
+                "ref": "(24) stella is a jompus.",
+                "fol": "jompus(stella)",
+                "tptp": "jompus(stella)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(10) stella is happy.",
+            "fol": "happy(stella)",
+            "tptp": "happy(stella)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) stella is a shumpus.",
+                "fol": "shumpus(stella)",
+                "tptp": "shumpus(stella)"
+            },
+            {
+                "ref": "(2) every shumpus is a zumpus.",
+                "fol": "∀x (shumpus(x) → zumpus(x))",
+                "tptp": "![X]: (shumpus(X) => zumpus(X))"
+            },
+            {
+                "ref": "(3) stella is a zumpus.",
+                "fol": "zumpus(stella)",
+                "tptp": "zumpus(stella)"
+            },
+            {
+                "ref": "(4) every zumpus is a lempus.",
+                "fol": "∀x (zumpus(x) → lempus(x))",
+                "tptp": "![X]: (zumpus(X) => lempus(X))"
+            },
+            {
+                "ref": "(5) stella is a lempus.",
+                "fol": "lempus(stella)",
+                "tptp": "lempus(stella)"
+            },
+            {
+                "ref": "(6) lempuses are grimpuses.",
+                "fol": "∀x (lempus(x) → grimpus(x))",
+                "tptp": "![X]: (lempus(X) => grimpus(X))"
+            },
+            {
+                "ref": "(7) stella is a grimpus.",
+                "fol": "grimpus(stella)",
+                "tptp": "grimpus(stella)"
+            },
+            {
+                "ref": "(8) every grimpus is happy.",
+                "fol": "∀x (grimpus(x) → happy(x))",
+                "tptp": "![X]: (grimpus(X) => happy(X))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Stella is a shumpus.",
+            "Every shumpus is a zumpus.",
+            "Stella is a zumpus.",
+            "Every zumpus is a lempus.",
+            "Stella is a lempus.",
+            "Lempuses are grimpuses.",
+            "Stella is a grimpus.",
+            "Every grimpus is happy."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "4hop_ProofsOnly_random_noadj_example11_example7",
+        "premises": [
+            "Wumpuses are zumpuses.",
+            "Each sterpus is floral.",
+            "Each gorpus is an impus.",
+            "Numpuses are shumpuses.",
+            "Shumpuses are not rainy.",
+            "Each impus is a dumpus.",
+            "Every lorpus is a gorpus.",
+            "Each numpus is dull.",
+            "Zumpuses are cold.",
+            "Wumpuses are lorpuses.",
+            "Brimpuses are mean.",
+            "Each lorpus is a brimpus.",
+            "Impuses are not opaque.",
+            "Every gorpus is orange.",
+            "Every rompus is sweet.",
+            "Every impus is a vumpus.",
+            "Every wumpus is discordant.",
+            "Sterpuses are lempuses.",
+            "Each gorpus is a rompus.",
+            "Every lorpus is slow.",
+            "Dumpuses are happy.",
+            "Every numpus is a wumpus.",
+            "Max is a sterpus.",
+            "Max is a wumpus."
+        ],
+        "question": [
+            "Max is not opaque."
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Max is a sterpus and a wumpus.",
+            "Wumpuses are lorpuses.",
+            "Every lorpus is a gorpus.",
+            "Each gorpus is an impus.",
+            "Impuses are not opaque.",
+            "Since Max is a gorpus, he is an impus.",
+            "As an impus, Max is not opaque.",
+            "The conclusion directly follows from the premises."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, let's try to work through this problem step by step. The premises are a bit complex with a lot of terms, so I need to break them down carefully.\n\nFirst, the conclusion is that \"Max is not opaque.\" So, I need to see if the premises support this. Let's start by listing all the relevant premises about Max and any terms connected to him.\n\nMax is a sterpus and a wumpus. From the premises: \"Each sterpus is floral.\" That's probably not directly relevant. Then, \"Wumpuses are lorpuses.\" So, since Max is a wumpus, he is also a lorpus. \n\nNext, \"Every lorpus is a gorpus.\" So Max, being a lorpus, is a gorpus. Then, \"Each gorpus is an impus.\" Therefore, Max is an impus. \n\nNow, \"Each impus is a dumpus.\" So Max is a dumpus. Then, \"Impuses are not opaque.\" Wait, that's a key point. If Max is an impus, then he is not opaque. That directly leads to the conclusion. \n\nBut let me check if there are any other paths or conflicting premises. Let's verify the chain again. Max is a sterpus and a wumpus. As a wumpus, he is a lorpus. Lorpus leads to gorpus, which leads to impus. Impus leads to dumpus. But the critical premise is \"Impuses are not opaque.\" So since Max is an impus, he must not be opaque. \n\nAre there any other premises that might affect this? Let's see. For example, \"Each gorpus is orange,\" but color might not matter here. \"Every gorpus is a rompus\" and \"Every rompus is sweet,\" but again, that's not related to opacity. The key path is Max → wumpus → lorpus → gorpus → impus. Then, since impuses are not opaque, Max is not opaque. \n\nI don't see any premises that contradict this. The conclusion should follow directly from these steps. Therefore, the answer should be True, meaning \"Max is not opaque\" is correct.",
+        "content": "Thoughts:\nMax is a sterpus and a wumpus.  \nWumpuses are lorpuses.  \nEvery lorpus is a gorpus.  \nEach gorpus is an impus.  \nImpuses are not opaque.  \nSince Max is a gorpus, he is an impus.  \nAs an impus, Max is not opaque.  \nThe conclusion directly follows from the premises.  \nAnswer:  \n(A) True",
+        "filter_reasoning_steps": [
+            "Max is a sterpus and a wumpus.",
+            "Wumpuses are lorpuses.",
+            "Every lorpus is a gorpus.",
+            "Each gorpus is an impus.",
+            "Impuses are not opaque.",
+            "Since Max is a gorpus, he is an impus.",
+            "As an impus, Max is not opaque.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) wumpuses are zumpuses.",
+                "fol": "∀x (wumpus(x) → zumpus(x))",
+                "tptp": "![X]: (wumpus(X) => zumpus(X))"
+            },
+            {
+                "ref": "(2) each sterpus is floral.",
+                "fol": "∀x (sterpus(x) → floral(x))",
+                "tptp": "![X]: (sterpus(X) => floral(X))"
+            },
+            {
+                "ref": "(3) each gorpus is an impus.",
+                "fol": "∀x (gorpus(x) → impus(x))",
+                "tptp": "![X]: (gorpus(X) => impus(X))"
+            },
+            {
+                "ref": "(4) numpuses are shumpuses.",
+                "fol": "∀x (numpus(x) → shumpus(x))",
+                "tptp": "![X]: (numpus(X) => shumpus(X))"
+            },
+            {
+                "ref": "(5) shumpuses are not rainy.",
+                "fol": "∀x (shumpus(x) → ¬rainy(x))",
+                "tptp": "![X]: (shumpus(X) => ~rainy(X))"
+            },
+            {
+                "ref": "(6) each impus is a dumpus.",
+                "fol": "∀x (impus(x) → dumpus(x))",
+                "tptp": "![X]: (impus(X) => dumpus(X))"
+            },
+            {
+                "ref": "(7) every lorpus is a gorpus.",
+                "fol": "∀x (lorpus(x) → gorpus(x))",
+                "tptp": "![X]: (lorpus(X) => gorpus(X))"
+            },
+            {
+                "ref": "(8) each numpus is dull.",
+                "fol": "∀x (numpus(x) → dull(x))",
+                "tptp": "![X]: (numpus(X) => dull(X))"
+            },
+            {
+                "ref": "(9) zumpuses are cold.",
+                "fol": "∀x (zumpus(x) → cold(x))",
+                "tptp": "![X]: (zumpus(X) => cold(X))"
+            },
+            {
+                "ref": "(10) wumpuses are lorpuses.",
+                "fol": "∀x (wumpus(x) → lorpus(x))",
+                "tptp": "![X]: (wumpus(X) => lorpus(X))"
+            },
+            {
+                "ref": "(11) brimpuses are mean.",
+                "fol": "∀x (brimpus(x) → mean(x))",
+                "tptp": "![X]: (brimpus(X) => mean(X))"
+            },
+            {
+                "ref": "(12) each lorpus is a brimpus.",
+                "fol": "∀x (lorpus(x) → brimpus(x))",
+                "tptp": "![X]: (lorpus(X) => brimpus(X))"
+            },
+            {
+                "ref": "(13) impuses are not opaque.",
+                "fol": "∀x (impus(x) → ¬opaque(x))",
+                "tptp": "![X]: (impus(X) => ~opaque(X))"
+            },
+            {
+                "ref": "(14) every gorpus is orange.",
+                "fol": "∀x (gorpus(x) → orange(x))",
+                "tptp": "![X]: (gorpus(X) => orange(X))"
+            },
+            {
+                "ref": "(15) every rompus is sweet.",
+                "fol": "∀x (rompus(x) → sweet(x))",
+                "tptp": "![X]: (rompus(X) => sweet(X))"
+            },
+            {
+                "ref": "(16) every impus is a vumpus.",
+                "fol": "∀x (impus(x) → vumpus(x))",
+                "tptp": "![X]: (impus(X) => vumpus(X))"
+            },
+            {
+                "ref": "(17) every wumpus is discordant.",
+                "fol": "∀x (wumpus(x) → discordant(x))",
+                "tptp": "![X]: (wumpus(X) => discordant(X))"
+            },
+            {
+                "ref": "(18) sterpuses are lempuses.",
+                "fol": "∀x (sterpus(x) → lempus(x))",
+                "tptp": "![X]: (sterpus(X) => lempus(X))"
+            },
+            {
+                "ref": "(19) each gorpus is a rompus.",
+                "fol": "∀x (gorpus(x) → rompus(x))",
+                "tptp": "![X]: (gorpus(X) => rompus(X))"
+            },
+            {
+                "ref": "(20) every lorpus is slow.",
+                "fol": "∀x (lorpus(x) → slow(x))",
+                "tptp": "![X]: (lorpus(X) => slow(X))"
+            },
+            {
+                "ref": "(21) dumpuses are happy.",
+                "fol": "∀x (dumpus(x) → happy(x))",
+                "tptp": "![X]: (dumpus(X) => happy(X))"
+            },
+            {
+                "ref": "(22) every numpus is a wumpus.",
+                "fol": "∀x (numpus(x) → wumpus(x))",
+                "tptp": "![X]: (numpus(X) => wumpus(X))"
+            },
+            {
+                "ref": "(23) max is a sterpus.",
+                "fol": "sterpus(max)",
+                "tptp": "sterpus(max)"
+            },
+            {
+                "ref": "(24) max is a wumpus.",
+                "fol": "wumpus(max)",
+                "tptp": "wumpus(max)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(8) max is not opaque.",
+            "fol": "¬opaque(max)",
+            "tptp": "~opaque(max)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) max is a sterpus and a wumpus.",
+                "fol": "sterpus(max) ∧ wumpus(max)",
+                "tptp": "sterpus(max) & wumpus(max)"
+            },
+            {
+                "ref": "(2) wumpuses are lorpuses.",
+                "fol": "∀x (wumpus(x) → lorpus(x))",
+                "tptp": "![X]: (wumpus(X) => lorpus(X))"
+            },
+            {
+                "ref": "(3) every lorpus is a gorpus.",
+                "fol": "∀x (lorpus(x) → gorpus(x))",
+                "tptp": "![X]: (lorpus(X) => gorpus(X))"
+            },
+            {
+                "ref": "(4) each gorpus is an impus.",
+                "fol": "∀x (gorpus(x) → impus(x))",
+                "tptp": "![X]: (gorpus(X) => impus(X))"
+            },
+            {
+                "ref": "(5) impuses are not opaque.",
+                "fol": "∀x (impus(x) → ¬opaque(x))",
+                "tptp": "![X]: (impus(X) => ~opaque(X))"
+            },
+            {
+                "ref": "(6) since max is a gorpus, he is an impus.",
+                "fol": "gorpus(max) → impus(max)",
+                "tptp": "gorpus(max) => impus(max)"
+            },
+            {
+                "ref": "(7) as an impus, max is not opaque.",
+                "fol": "impus(max) → ¬opaque(max)",
+                "tptp": "impus(max) => ~opaque(max)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Max is a sterpus and a wumpus.",
+            "Wumpuses are lorpuses.",
+            "Every lorpus is a gorpus.",
+            "Each gorpus is an impus.",
+            "Impuses are not opaque.",
+            "Since Max is a gorpus, he is an impus.",
+            "As an impus, Max is not opaque."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "4hop_OOD_Composed_random_noadj_example35_example",
+        "premises": [
+            "Yumpuses are brimpuses.",
+            "Everything that is a jompus and a grimpus and a tumpus is a rompus.",
+            "Everything that is a lorpus or a zumpus or an impus is a wumpus and a lempus and a yumpus.",
+            "Everything that is a brimpus, an impus, or a shumpus is a dumpus.",
+            "Wren is a jompus.",
+            "Wren is a sterpus.",
+            "Everything that is a jompus and a sterpus and a dumpus is a gorpus.",
+            "Everything that is a lorpus or a zumpus or an impus is a shumpus.",
+            "Everything that is a jompus and a grimpus and a tumpus is an impus.",
+            "Wumpuses are rompuses.",
+            "Wren is a dumpus.",
+            "Wren is a shumpus.",
+            "Wren is a jompus.",
+            "Wren is a grimpus.",
+            "Wren is a tumpus."
+        ],
+        "question": [
+            "Wren is a lempus."
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Wren is a jompus, grimpus, and tumpus.",
+            "Everything that is a jompus and a grimpus and a tumpus is an impus.",
+            "Wren is an impus.",
+            "Everything that is a lorpus or a zumpus or an impus is a wumpus and a lempus and a yumpus.",
+            "Therefore, Wren is a lempus.",
+            "The conclusion follows directly from the premises."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, let's tackle this step by step. The premises are a bit complex with all these made-up terms, but let's break them down one by one.\n\nFirst, the conclusion is that Wren is a lempus. So I need to see if the premises support that.\n\nStarting with what Wren is: Wren is a jompus, sterpus, dumpus, shumpus, grimpus, and tumpus. Let's note all of these.\n\nLooking at the premises, one says \"Everything that is a jompus and a grimpus and a tumpus is a rompus.\" Since Wren is all three (jompus, grimpus, tumpus), that means Wren is a rompus.\n\nAnother premise states \"Everything that is a jompus and a grimpus and a tumpus is an impus.\" So Wren is also an impus.\n\nThen there's \"Everything that is a lorpus or a zumpus or an impus is a shumpus.\" Since Wren is an impus, he must be a shumpus. Wait, but the premises already say Wren is a shumpus, so that checks out.\n\nAnother premise: \"Everything that is a lorpus or a zumpus or an impus is a wumpus and a lempus and a yumpus.\" Since Wren is an impus, this would make him a wumpus, lempus, and yumpus. But wait, the conclusion is about being a lempus, so if this holds, then Wren is a lempus, making the conclusion true.\n\nBut let's confirm each step. Let's verify if Wren is indeed an impus. The premise says \"Everything that is a jompus and a grimpus and a tumpus is an impus.\" Wren is all three, so yes, he's an impus.\n\nThen, the premise about being a lorpus, zumpus, or impus leading to being a wumpus, lempus, and yumpus. Since Wren is an impus, he must be all three. Therefore, he's a lempus. That directly supports the conclusion.\n\nBut wait, let's check if there's any conflicting information. Another premise says \"Everything that is a lorpus or a zumpus or an impus is a shumpus.\" Which we already have as true. Also, \"Yumpuses are brimpuses.\" If Wren is a yumpus (from the previous step), then he's a brimpus. Then another premise: \"Everything that is a brimpus, an impus, or a shumpus is a dumpus.\" Wren is a brimpus (as a yumpus) and also a shumpus and impus, so he's a dumpus, which matches the given that Wren is a dumpus.\n\nAnother premise: \"Everything that is a jompus and a sterpus and a dumpus is a gorpus.\" Wren is all three, so he's a gorpus, but that's not directly relevant to the conclusion.\n\nThe key step is that being an impus leads to being a lempus via the premise \"Everything that is a lorpus or a zumpus or an impus is a wumpus and a lempus and a yumpus.\" Therefore, Wren is a lempus. So the conclusion should be true.",
+        "content": "Thoughts:\nWren is a jompus, grimpus, and tumpus. \nEverything that is a jompus and a grimpus and a tumpus is an impus. \nWren is an impus. \nEverything that is a lorpus or a zumpus or an impus is a wumpus and a lempus and a yumpus. \nWren is an impus. \nTherefore, Wren is a lempus. \nThe conclusion follows directly from the premises.\nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "Wren is a jompus, grimpus, and tumpus.",
+            "Everything that is a jompus and a grimpus and a tumpus is an impus.",
+            "Wren is an impus.",
+            "Everything that is a lorpus or a zumpus or an impus is a wumpus and a lempus and a yumpus.",
+            null,
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) yumpuses are brimpuses.",
+                "fol": "∀x (yumpus(x) → brimpus(x))",
+                "tptp": "![X]: (yumpus(X) => brimpus(X))"
+            },
+            {
+                "ref": "(2) everything that is a jompus and a grimpus and a tumpus is a rompus.",
+                "fol": "∀x ((jompus(x) ∧ grimpus(x) ∧ tumpus(x)) → rompus(x))",
+                "tptp": "![X]: ((jompus(X) & grimpus(X) & tumpus(X)) => rompus(X))"
+            },
+            {
+                "ref": "(3) everything that is a lorpus or a zumpus or an impus is a wumpus and a lempus and a yumpus.",
+                "fol": "∀x ((lorpus(x) ∨ zumpus(x) ∨ impus(x)) → (wumpus(x) ∧ lempus(x) ∧ yumpus(x)))",
+                "tptp": "![X]: ((lorpus(X) | zumpus(X) | impus(X)) => (wumpus(X) & lempus(X) & yumpus(X)))"
+            },
+            {
+                "ref": "(4) everything that is a brimpus, an impus, or a shumpus is a dumpus.",
+                "fol": "∀x ((brimpus(x) ∨ impus(x) ∨ shumpus(x)) → dumpus(x))",
+                "tptp": "![X]: ((brimpus(X) | impus(X) | shumpus(X)) => dumpus(X))"
+            },
+            {
+                "ref": "(5) wren is a jompus.",
+                "fol": "jompus(wren)",
+                "tptp": "jompus(wren)"
+            },
+            {
+                "ref": "(6) wren is a sterpus.",
+                "fol": "sterpus(wren)",
+                "tptp": "sterpus(wren)"
+            },
+            {
+                "ref": "(7) everything that is a jompus and a sterpus and a dumpus is a gorpus.",
+                "fol": "∀x ((jompus(x) ∧ sterpus(x) ∧ dumpus(x)) → gorpus(x))",
+                "tptp": "![X]: ((jompus(X) & sterpus(X) & dumpus(X)) => gorpus(X))"
+            },
+            {
+                "ref": "(8) everything that is a lorpus or a zumpus or an impus is a shumpus.",
+                "fol": "∀x ((lorpus(x) ∨ zumpus(x) ∨ impus(x)) → shumpus(x))",
+                "tptp": "![X]: ((lorpus(X) | zumpus(X) | impus(X)) => shumpus(X))"
+            },
+            {
+                "ref": "(9) everything that is a jompus and a grimpus and a tumpus is an impus.",
+                "fol": "∀x ((jompus(x) ∧ grimpus(x) ∧ tumpus(x)) → impus(x))",
+                "tptp": "![X]: ((jompus(X) & grimpus(X) & tumpus(X)) => impus(X))"
+            },
+            {
+                "ref": "(10) wumpuses are rompuses.",
+                "fol": "∀x (wumpus(x) → rompus(x))",
+                "tptp": "![X]: (wumpus(X) => rompus(X))"
+            },
+            {
+                "ref": "(11) wren is a dumpus.",
+                "fol": "dumpus(wren)",
+                "tptp": "dumpus(wren)"
+            },
+            {
+                "ref": "(12) wren is a shumpus.",
+                "fol": "shumpus(wren)",
+                "tptp": "shumpus(wren)"
+            },
+            {
+                "ref": "(13) wren is a jompus.",
+                "fol": "jompus(wren)",
+                "tptp": "jompus(wren)"
+            },
+            {
+                "ref": "(14) wren is a grimpus.",
+                "fol": "grimpus(wren)",
+                "tptp": "grimpus(wren)"
+            },
+            {
+                "ref": "(15) wren is a tumpus.",
+                "fol": "tumpus(wren)",
+                "tptp": "tumpus(wren)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(5) wren is a lempus.",
+            "fol": "lempus(wren)",
+            "tptp": "lempus(wren)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) wren is a jompus, grimpus, and tumpus.",
+                "fol": "jompus(wren) ∧ grimpus(wren) ∧ tumpus(wren)",
+                "tptp": "jompus(wren) & grimpus(wren) & tumpus(wren)"
+            },
+            {
+                "ref": "(2) everything that is a jompus and a grimpus and a tumpus is an impus.",
+                "fol": "∀x ((jompus(x) ∧ grimpus(x) ∧ tumpus(x)) → impus(x))",
+                "tptp": "![X]: ((jompus(X) & grimpus(X) & tumpus(X)) => impus(X))"
+            },
+            {
+                "ref": "(3) wren is an impus.",
+                "fol": "impus(wren)",
+                "tptp": "impus(wren)"
+            },
+            {
+                "ref": "(4) everything that is a lorpus or a zumpus or an impus is a wumpus and a lempus and a yumpus.",
+                "fol": "∀x ((lorpus(x) ∨ zumpus(x) ∨ impus(x)) → (wumpus(x) ∧ lempus(x) ∧ yumpus(x)))",
+                "tptp": "![X]: ((lorpus(X) | zumpus(X) | impus(X)) => (wumpus(X) & lempus(X) & yumpus(X)))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Wren is a jompus, grimpus, and tumpus.",
+            "Everything that is a jompus and a grimpus and a tumpus is an impus.",
+            "Wren is an impus.",
+            "Everything that is a lorpus or a zumpus or an impus is a wumpus and a lempus and a yumpus."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "4hop_Composed_random_noadj_example8_example4",
+        "premises": [
+            "Every impus is a brimpus.",
+            "Each jompus is a lempus.",
+            "Every wumpus is a numpus.",
+            "Zumpuses are jompuses.",
+            "Jompuses are zumpuses, sterpuses, and impuses.",
+            "Rompuses are gorpuses.",
+            "Sterpuses are gorpuses.",
+            "Jompuses are brimpuses.",
+            "Jompuses are numpuses.",
+            "Sterpuses are tumpuses.",
+            "Each zumpus is a lorpus.",
+            "Fae is a lempus, a dumpus, and a shumpus.",
+            "Fae is a rompus, Fae is not a numpus, and Fae is a sterpus."
+        ],
+        "question": [
+            "Fae is not a jompus."
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Jompuses are numpuses (Premise\n.",
+            "Fae is not a numpus (Premise).",
+            "If Fae were a jompus, she would be a numpus (from Premise\n.",
+            "This contradicts Fae not being a numpus.",
+            "Therefore, Fae cannot be a jompus.",
+            "Conclusion is supported by direct contradiction if assumed false."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, let's tackle this problem step by step. The premises are a bit complex with all these different terms, so I need to parse them carefully.\n\nFirst, the conclusion is \"Fae is not a jompus.\" I need to check if that's true based on the given premises. Let me list out all the premises related to Fae and the categories mentioned.\n\nStarting with Fae's attributes: Fae is a lempus, dumpus, shumpus, rompus, not a numpus, and a sterpus. Also, there are other category relationships given. Let me note them down:\n\n1. Every impus is a brimpus.\n2. Each jompus is a lempus.\n3. Every wumpus is a numpus.\n4. Zumpuses are jompuses.\n5. Jompuses are zumpuses, sterpuses, and impuses.\n6. Rompuses are gorpuses.\n7. Sterpuses are gorpuses.\n8. Jompuses are brimpuses.\n9. Jompuses are numpuses.\n10. Sterpuses are tumpuses.\n11. Each zumpus is a lorpus.\n12. Fae is a lempus, dumpus, shumpus, rompus, not a numpus, and a sterpus.\n\nNow, the conclusion is about Fae not being a jompus. Let's see if Fae's attributes conflict with being a jompus.\n\nFrom premise 9: Jompuses are numpuses. So if Fae were a jompus, then Fae would be a numpus. However, one of the premises states that Fae is not a numpus. That directly contradicts the requirement for being a jompus. Therefore, Fae cannot be a jompus because being a jompus would require Fae to be a numpus, which she is not.\n\nAdditionally, let's check other premises to see if there's any other path. Premise 5 says Jompuses are sterpuses. Fae is a sterpus, so that part is compatible. But since being a jompus requires being a numpus (premise 9) and Fae isn't a numpus, that's the key contradiction. No other premises seem to override this. So the conclusion that Fae is not a jompus must be true.",
+        "content": "Thoughts:\nJompuses are numpuses (Premise 9).\nFae is not a numpus (Premise).\nIf Fae were a jompus, she would be a numpus (from Premise 9).\nThis contradicts Fae not being a numpus.\nTherefore, Fae cannot be a jompus.\nConclusion is supported by direct contradiction if assumed false.\n\nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "Jompuses are numpuses (Premise\n.",
+            "Fae is not a numpus (Premise).",
+            "If Fae were a jompus, she would be a numpus (from Premise\n.",
+            null,
+            null,
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) every impus is a brimpus.",
+                "fol": "∀x (impus(x) → brimpus(x))",
+                "tptp": "![X]: (impus(X) => brimpus(X))"
+            },
+            {
+                "ref": "(2) each jompus is a lempus.",
+                "fol": "∀x (jompus(x) → lempus(x))",
+                "tptp": "![X]: (jompus(X) => lempus(X))"
+            },
+            {
+                "ref": "(3) every wumpus is a numpus.",
+                "fol": "∀x (wumpus(x) → numpus(x))",
+                "tptp": "![X]: (wumpus(X) => numpus(X))"
+            },
+            {
+                "ref": "(4) zumpuses are jompuses.",
+                "fol": "∀x (zumpus(x) → jompus(x))",
+                "tptp": "![X]: (zumpus(X) => jompus(X))"
+            },
+            {
+                "ref": "(5) jompuses are zumpuses, sterpuses, and impuses.",
+                "fol": "∀x (jompus(x) → (zumpus(x) ∧ sterpus(x) ∧ impus(x)))",
+                "tptp": "![X]: (jompus(X) => (zumpus(X) & sterpus(X) & impus(X)))"
+            },
+            {
+                "ref": "(6) rompuses are gorpuses.",
+                "fol": "∀x (rompus(x) → gorpus(x))",
+                "tptp": "![X]: (rompus(X) => gorpus(X))"
+            },
+            {
+                "ref": "(7) sterpuses are gorpuses.",
+                "fol": "∀x (sterpus(x) → gorpus(x))",
+                "tptp": "![X]: (sterpus(X) => gorpus(X))"
+            },
+            {
+                "ref": "(8) jompuses are brimpuses.",
+                "fol": "∀x (jompus(x) → brimpus(x))",
+                "tptp": "![X]: (jompus(X) => brimpus(X))"
+            },
+            {
+                "ref": "(9) jompuses are numpuses.",
+                "fol": "∀x (jompus(x) → numpus(x))",
+                "tptp": "![X]: (jompus(X) => numpus(X))"
+            },
+            {
+                "ref": "(10) sterpuses are tumpuses.",
+                "fol": "∀x (sterpus(x) → tumpus(x))",
+                "tptp": "![X]: (sterpus(X) => tumpus(X))"
+            },
+            {
+                "ref": "(11) each zumpus is a lorpus.",
+                "fol": "∀x (zumpus(x) → lorpus(x))",
+                "tptp": "![X]: (zumpus(X) => lorpus(X))"
+            },
+            {
+                "ref": "(12) fae is a lempus, a dumpus, and a shumpus.",
+                "fol": "lempus(fae) ∧ dumpus(fae) ∧ shumpus(fae)",
+                "tptp": "lempus(fae) & dumpus(fae) & shumpus(fae)"
+            },
+            {
+                "ref": "(13) fae is a rompus, fae is not a numpus, and fae is a sterpus.",
+                "fol": "rompus(fae) ∧ ¬numpus(fae) ∧ sterpus(fae)",
+                "tptp": "rompus(fae) & ~numpus(fae) & sterpus(fae)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(4) fae is not a jompus.",
+            "fol": "¬jompus(fae)",
+            "tptp": "~jompus(fae)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) jompuses are numpuses.",
+                "fol": "∀x (jompus(x) → numpus(x))",
+                "tptp": "![X]: (jompus(X) => numpus(X))"
+            },
+            {
+                "ref": "(2) fae is not a numpus.",
+                "fol": "¬numpus(fae)",
+                "tptp": "~numpus(fae)"
+            },
+            {
+                "ref": "(3) if fae were a jompus, she would be a numpus.",
+                "fol": "jompus(fae) → numpus(fae)",
+                "tptp": "jompus(fae) => numpus(fae)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Jompuses are numpuses (Premise\n.",
+            "Fae is not a numpus (Premise).",
+            "If Fae were a jompus, she would be a numpus (from Premise\n."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "4hop_ProofsOnly_random_noadj_example49_example1",
+        "premises": [
+            "Numpuses are loud.",
+            "Brimpuses are sterpuses.",
+            "Each vumpus is sweet.",
+            "Grimpuses are dull.",
+            "Each zumpus is fast.",
+            "Every brimpus is a grimpus.",
+            "Sterpuses are zumpuses.",
+            "Sterpuses are large.",
+            "Every gorpus is a shumpus.",
+            "Every shumpus is a wumpus.",
+            "Gorpuses are not cold.",
+            "Each vumpus is a dumpus.",
+            "Lorpuses are happy.",
+            "Each wumpus is fruity.",
+            "Each lorpus is a brimpus.",
+            "Lorpuses are numpuses.",
+            "Yumpuses are blue.",
+            "Every shumpus is metallic.",
+            "Gorpuses are yumpuses.",
+            "Shumpuses are lorpuses.",
+            "Every sterpus is a jompus.",
+            "Brimpuses are not rainy.",
+            "Sally is a vumpus.",
+            "Sally is a gorpus."
+        ],
+        "question": [
+            "Sally is not rainy."
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Sally is a gorpus.",
+            "Every gorpus is a shumpus.",
+            "Every shumpus is a wumpus.",
+            "Shumpuses are lorpuses.",
+            "Lorpuses are brimpuses.",
+            "Brimpuses are not rainy.",
+            "Sally is a brimpus.",
+            "Brimpuses are not rainy implies Sally is not rainy."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, let's start breaking down these premises step by step. The conclusion we need to verify is whether \"Sally is not rainy.\"\n\nFirst, Sally is a vumpus and a gorpus. From the premises, every gorpus is a shumpus, and every shumpus is a wumpus. So Sally being a gorpus means she's a shumpus and then a wumpus. Also, shumpuses are lorpuses. So Sally is a lorpus.\n\nNow, lorpuses are happy, but more importantly, each lorpus is a brimpus. So Sally, as a lorpus, is a brimpus. The premises state that brimpuses are sterpuses and also that every brimpus is a grimpus. Wait, the premises say \"Brimpuses are sterpuses\" and \"Every brimpus is a grimpus.\" So Sally, being a brimpus, is both a sterpus and a grimpus.\n\nLooking at the sterpuses: sterpuses are zumpuses and large. Also, every sterpus is a jompus. But maybe more relevantly, sterpuses are zumpuses, which are fast. However, the key point here is the premise that brimpuses are not rainy. Since Sally is a brimpus, and brimpuses are not rainy, that directly applies to her. Therefore, Sally is not rainy.\n\nLet me check if there's any conflicting information. Let's trace again: Sally is a gorpus → shumpus → wumpus. Shumpuses are lorpuses → lorpus → brimpus. Brimpus → not rainy. So yes, the conclusion follows directly. There's no mention of Sally being an exception to the brimpus rule, so the conclusion should hold.",
+        "content": "Thoughts:\nSally is a gorpus.  \nEvery gorpus is a shumpus.  \nEvery shumpus is a wumpus.  \nShumpuses are lorpuses.  \nLorpuses are brimpuses.  \nBrimpuses are not rainy.  \nSally is a brimpus.  \nBrimpuses are not rainy implies Sally is not rainy.  \nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "Sally is a gorpus.",
+            "Every gorpus is a shumpus.",
+            "Every shumpus is a wumpus.",
+            "Shumpuses are lorpuses.",
+            "Lorpuses are brimpuses.",
+            "Brimpuses are not rainy.",
+            "Sally is a brimpus.",
+            "Brimpuses are not rainy implies Sally is not rainy."
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) numpuses are loud.",
+                "fol": "∀x (numpus(x) → loud(x))",
+                "tptp": "![X]: (numpus(X) => loud(X))"
+            },
+            {
+                "ref": "(2) brimpuses are sterpuses.",
+                "fol": "∀x (brimpus(x) → sterpus(x))",
+                "tptp": "![X]: (brimpus(X) => sterpus(X))"
+            },
+            {
+                "ref": "(3) each vumpus is sweet.",
+                "fol": "∀x (vumpus(x) → sweet(x))",
+                "tptp": "![X]: (vumpus(X) => sweet(X))"
+            },
+            {
+                "ref": "(4) grimpuses are dull.",
+                "fol": "∀x (grimpus(x) → dull(x))",
+                "tptp": "![X]: (grimpus(X) => dull(X))"
+            },
+            {
+                "ref": "(5) each zumpus is fast.",
+                "fol": "∀x (zumpus(x) → fast(x))",
+                "tptp": "![X]: (zumpus(X) => fast(X))"
+            },
+            {
+                "ref": "(6) every brimpus is a grimpus.",
+                "fol": "∀x (brimpus(x) → grimpus(x))",
+                "tptp": "![X]: (brimpus(X) => grimpus(X))"
+            },
+            {
+                "ref": "(7) sterpuses are zumpuses.",
+                "fol": "∀x (sterpus(x) → zumpus(x))",
+                "tptp": "![X]: (sterpus(X) => zumpus(X))"
+            },
+            {
+                "ref": "(8) sterpuses are large.",
+                "fol": "∀x (sterpus(x) → large(x))",
+                "tptp": "![X]: (sterpus(X) => large(X))"
+            },
+            {
+                "ref": "(9) every gorpus is a shumpus.",
+                "fol": "∀x (gorpus(x) → shumpus(x))",
+                "tptp": "![X]: (gorpus(X) => shumpus(X))"
+            },
+            {
+                "ref": "(10) every shumpus is a wumpus.",
+                "fol": "∀x (shumpus(x) → wumpus(x))",
+                "tptp": "![X]: (shumpus(X) => wumpus(X))"
+            },
+            {
+                "ref": "(11) gorpuses are not cold.",
+                "fol": "∀x (gorpus(x) → ¬cold(x))",
+                "tptp": "![X]: (gorpus(X) => ~cold(X))"
+            },
+            {
+                "ref": "(12) each vumpus is a dumpus.",
+                "fol": "∀x (vumpus(x) → dumpus(x))",
+                "tptp": "![X]: (vumpus(X) => dumpus(X))"
+            },
+            {
+                "ref": "(13) lorpuses are happy.",
+                "fol": "∀x (lorpus(x) → happy(x))",
+                "tptp": "![X]: (lorpus(X) => happy(X))"
+            },
+            {
+                "ref": "(14) each wumpus is fruity.",
+                "fol": "∀x (wumpus(x) → fruity(x))",
+                "tptp": "![X]: (wumpus(X) => fruity(X))"
+            },
+            {
+                "ref": "(15) each lorpus is a brimpus.",
+                "fol": "∀x (lorpus(x) → brimpus(x))",
+                "tptp": "![X]: (lorpus(X) => brimpus(X))"
+            },
+            {
+                "ref": "(16) lorpuses are numpuses.",
+                "fol": "∀x (lorpus(x) → numpus(x))",
+                "tptp": "![X]: (lorpus(X) => numpus(X))"
+            },
+            {
+                "ref": "(17) yumpuses are blue.",
+                "fol": "∀x (yumpus(x) → blue(x))",
+                "tptp": "![X]: (yumpus(X) => blue(X))"
+            },
+            {
+                "ref": "(18) every shumpus is metallic.",
+                "fol": "∀x (shumpus(x) → metallic(x))",
+                "tptp": "![X]: (shumpus(X) => metallic(X))"
+            },
+            {
+                "ref": "(19) gorpuses are yumpuses.",
+                "fol": "∀x (gorpus(x) → yumpus(x))",
+                "tptp": "![X]: (gorpus(X) => yumpus(X))"
+            },
+            {
+                "ref": "(20) shumpuses are lorpuses.",
+                "fol": "∀x (shumpus(x) → lorpus(x))",
+                "tptp": "![X]: (shumpus(X) => lorpus(X))"
+            },
+            {
+                "ref": "(21) every sterpus is a jompus.",
+                "fol": "∀x (sterpus(x) → jompus(x))",
+                "tptp": "![X]: (sterpus(X) => jompus(X))"
+            },
+            {
+                "ref": "(22) brimpuses are not rainy.",
+                "fol": "∀x (brimpus(x) → ¬rainy(x))",
+                "tptp": "![X]: (brimpus(X) => ~rainy(X))"
+            },
+            {
+                "ref": "(23) sally is a vumpus.",
+                "fol": "vumpus(sally)",
+                "tptp": "vumpus(sally)"
+            },
+            {
+                "ref": "(24) sally is a gorpus.",
+                "fol": "gorpus(sally)",
+                "tptp": "gorpus(sally)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(9) sally is not rainy.",
+            "fol": "¬rainy(sally)",
+            "tptp": "~rainy(sally)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) sally is a gorpus.",
+                "fol": "gorpus(sally)",
+                "tptp": "gorpus(sally)"
+            },
+            {
+                "ref": "(2) every gorpus is a shumpus.",
+                "fol": "∀x (gorpus(x) → shumpus(x))",
+                "tptp": "![X]: (gorpus(X) => shumpus(X))"
+            },
+            {
+                "ref": "(3) every shumpus is a wumpus.",
+                "fol": "∀x (shumpus(x) → wumpus(x))",
+                "tptp": "![X]: (shumpus(X) => wumpus(X))"
+            },
+            {
+                "ref": "(4) shumpuses are lorpuses.",
+                "fol": "∀x (shumpus(x) → lorpus(x))",
+                "tptp": "![X]: (shumpus(X) => lorpus(X))"
+            },
+            {
+                "ref": "(5) lorpuses are brimpuses.",
+                "fol": "∀x (lorpus(x) → brimpus(x))",
+                "tptp": "![X]: (lorpus(X) => brimpus(X))"
+            },
+            {
+                "ref": "(6) brimpuses are not rainy.",
+                "fol": "∀x (brimpus(x) → ¬rainy(x))",
+                "tptp": "![X]: (brimpus(X) => ~rainy(X))"
+            },
+            {
+                "ref": "(7) sally is a brimpus.",
+                "fol": "brimpus(sally)",
+                "tptp": "brimpus(sally)"
+            },
+            {
+                "ref": "(8) brimpuses are not rainy implies sally is not rainy.",
+                "fol": "(∀x (brimpus(x) → ¬rainy(x))) → ¬rainy(sally)",
+                "tptp": "(![X]: (brimpus(X) => ~rainy(X))) => ~rainy(sally)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Sally is a gorpus.",
+            "Every gorpus is a shumpus.",
+            "Every shumpus is a wumpus.",
+            "Shumpuses are lorpuses.",
+            "Lorpuses are brimpuses.",
+            "Brimpuses are not rainy.",
+            "Sally is a brimpus.",
+            "Brimpuses are not rainy implies Sally is not rainy."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "4hop_ProofsOnly_random_noadj_example49_example0",
+        "premises": [
+            "Each jompus is a dumpus.",
+            "Shumpuses are not transparent.",
+            "Every jompus is a wumpus.",
+            "Every shumpus is a sterpus.",
+            "Lorpuses are yumpuses.",
+            "Each jompus is luminous.",
+            "Zumpuses are jompuses.",
+            "Lorpuses are not dull.",
+            "Gorpuses are lempuses.",
+            "Sterpuses are windy.",
+            "Brimpuses are nervous.",
+            "Every wumpus is not amenable.",
+            "Zumpuses are brimpuses.",
+            "Shumpuses are lorpuses.",
+            "Every yumpus is moderate.",
+            "Each zumpus is not discordant.",
+            "Gorpuses are bitter.",
+            "Each lorpus is a zumpus.",
+            "Rex is a shumpus.",
+            "Rex is a gorpus."
+        ],
+        "question": [
+            "Rex is luminous."
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Rex is a shumpus.",
+            "Shumpuses are lorpuses.",
+            "Each lorpus is a zumpus.",
+            "Rex is a zumpus.",
+            "Zumpuses are jompuses.",
+            "Each jompus is luminous.",
+            "Rex is a jompus.",
+            "Rex is luminous.",
+            "There is evidence to conclude Rex is luminous."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, let's tackle this problem step by step. First, I need to look at the premises and see how they connect to the conclusion that Rex is luminous.\n\nStarting with Rex: The premises say Rex is a shumpus and a gorpus. Let's break down each of these. \n\nFirst, Rex is a shumpus. From the premises, every shumpus is a sterpus, and shumpuses are lorpuses. Also, shumpuses are not transparent, but transparency might not be relevant here. Then, since shumpuses are lorpuses, and each lorpus is a zumpus. So Rex, being a shumpus, is a lorpus, and thus a zumpus. \n\nAdditionally, zumpuses are jompuses. Each jompus is a dumpus, a wumpus, and luminous. So if Rex is a zumpus, then he's a jompus, which makes him luminous. That seems straightforward. \n\nBut wait, Rex is also a gorpus. The premises state that gorpuses are lempuses. However, I don't see any other information about lempuses affecting the chain we already have. Since being a gorpus (and thus a lempus) doesn't conflict with the previous deductions, Rex being a shumpus leads to him being a zumpus, hence a jompus, hence luminous. \n\nLet me check if there's any conflicting information. For example, if something being a gorpus would negate being a jompus, but the premises don't state that. So even though Rex is a gorpus, since he's a shumpus, the chain through shumpus → lorpus → zumpus → jompus → luminous still holds. Therefore, the conclusion that Rex is luminous should be true.",
+        "content": "Thoughts:\nRex is a shumpus.\nShumpuses are lorpuses.\nEach lorpus is a zumpus.\nRex is a zumpus.\nZumpuses are jompuses.\nEach jompus is luminous.\nRex is a jompus.\nRex is luminous.\nThere is evidence to conclude Rex is luminous.\nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "Rex is a shumpus.",
+            "Shumpuses are lorpuses.",
+            "Each lorpus is a zumpus.",
+            "Rex is a zumpus.",
+            "Zumpuses are jompuses.",
+            "Each jompus is luminous.",
+            "Rex is a jompus.",
+            "Rex is luminous.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) each jompus is a dumpus.",
+                "fol": "∀x (jompus(x) → dumpus(x))",
+                "tptp": "![X]: (jompus(X) => dumpus(X))"
+            },
+            {
+                "ref": "(2) shumpuses are not transparent.",
+                "fol": "∀x (shumpus(x) → ¬transparent(x))",
+                "tptp": "![X]: (shumpus(X) => ~transparent(X))"
+            },
+            {
+                "ref": "(3) every jompus is a wumpus.",
+                "fol": "∀x (jompus(x) → wumpus(x))",
+                "tptp": "![X]: (jompus(X) => wumpus(X))"
+            },
+            {
+                "ref": "(4) every shumpus is a sterpus.",
+                "fol": "∀x (shumpus(x) → sterpus(x))",
+                "tptp": "![X]: (shumpus(X) => sterpus(X))"
+            },
+            {
+                "ref": "(5) lorpuses are yumpuses.",
+                "fol": "∀x (lorpus(x) → yumpus(x))",
+                "tptp": "![X]: (lorpus(X) => yumpus(X))"
+            },
+            {
+                "ref": "(6) each jompus is luminous.",
+                "fol": "∀x (jompus(x) → luminous(x))",
+                "tptp": "![X]: (jompus(X) => luminous(X))"
+            },
+            {
+                "ref": "(7) zumpuses are jompuses.",
+                "fol": "∀x (zumpus(x) → jompus(x))",
+                "tptp": "![X]: (zumpus(X) => jompus(X))"
+            },
+            {
+                "ref": "(8) lorpuses are not dull.",
+                "fol": "∀x (lorpus(x) → ¬dull(x))",
+                "tptp": "![X]: (lorpus(X) => ~dull(X))"
+            },
+            {
+                "ref": "(9) gorpuses are lempuses.",
+                "fol": "∀x (gorpus(x) → lempus(x))",
+                "tptp": "![X]: (gorpus(X) => lempus(X))"
+            },
+            {
+                "ref": "(10) sterpuses are windy.",
+                "fol": "∀x (sterpus(x) → windy(x))",
+                "tptp": "![X]: (sterpus(X) => windy(X))"
+            },
+            {
+                "ref": "(11) brimpuses are nervous.",
+                "fol": "∀x (brimpus(x) → nervous(x))",
+                "tptp": "![X]: (brimpus(X) => nervous(X))"
+            },
+            {
+                "ref": "(12) every wumpus is not amenable.",
+                "fol": "∀x (wumpus(x) → ¬amenable(x))",
+                "tptp": "![X]: (wumpus(X) => ~amenable(X))"
+            },
+            {
+                "ref": "(13) zumpuses are brimpuses.",
+                "fol": "∀x (zumpus(x) → brimpus(x))",
+                "tptp": "![X]: (zumpus(X) => brimpus(X))"
+            },
+            {
+                "ref": "(14) shumpuses are lorpuses.",
+                "fol": "∀x (shumpus(x) → lorpus(x))",
+                "tptp": "![X]: (shumpus(X) => lorpus(X))"
+            },
+            {
+                "ref": "(15) every yumpus is moderate.",
+                "fol": "∀x (yumpus(x) → moderate(x))",
+                "tptp": "![X]: (yumpus(X) => moderate(X))"
+            },
+            {
+                "ref": "(16) each zumpus is not discordant.",
+                "fol": "∀x (zumpus(x) → ¬discordant(x))",
+                "tptp": "![X]: (zumpus(X) => ~discordant(X))"
+            },
+            {
+                "ref": "(17) gorpuses are bitter.",
+                "fol": "∀x (gorpus(x) → bitter(x))",
+                "tptp": "![X]: (gorpus(X) => bitter(X))"
+            },
+            {
+                "ref": "(18) each lorpus is a zumpus.",
+                "fol": "∀x (lorpus(x) → zumpus(x))",
+                "tptp": "![X]: (lorpus(X) => zumpus(X))"
+            },
+            {
+                "ref": "(19) rex is a shumpus.",
+                "fol": "shumpus(rex)",
+                "tptp": "shumpus(rex)"
+            },
+            {
+                "ref": "(20) rex is a gorpus.",
+                "fol": "gorpus(rex)",
+                "tptp": "gorpus(rex)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(9) rex is luminous.",
+            "fol": "luminous(rex)",
+            "tptp": "luminous(rex)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) rex is a shumpus.",
+                "fol": "shumpus(rex)",
+                "tptp": "shumpus(rex)"
+            },
+            {
+                "ref": "(2) shumpuses are lorpuses.",
+                "fol": "∀x (shumpus(x) → lorpus(x))",
+                "tptp": "![X]: (shumpus(X) => lorpus(X))"
+            },
+            {
+                "ref": "(3) each lorpus is a zumpus.",
+                "fol": "∀x (lorpus(x) → zumpus(x))",
+                "tptp": "![X]: (lorpus(X) => zumpus(X))"
+            },
+            {
+                "ref": "(4) rex is a zumpus.",
+                "fol": "zumpus(rex)",
+                "tptp": "zumpus(rex)"
+            },
+            {
+                "ref": "(5) zumpuses are jompuses.",
+                "fol": "∀x (zumpus(x) → jompus(x))",
+                "tptp": "![X]: (zumpus(X) => jompus(X))"
+            },
+            {
+                "ref": "(6) each jompus is luminous.",
+                "fol": "∀x (jompus(x) → luminous(x))",
+                "tptp": "![X]: (jompus(X) => luminous(X))"
+            },
+            {
+                "ref": "(7) rex is a jompus.",
+                "fol": "jompus(rex)",
+                "tptp": "jompus(rex)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Rex is a shumpus.",
+            "Shumpuses are lorpuses.",
+            "Each lorpus is a zumpus.",
+            "Rex is a zumpus.",
+            "Zumpuses are jompuses.",
+            "Each jompus is luminous.",
+            "Rex is a jompus."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "4hop_ProofsOnly_random_noadj_example17_example7",
+        "premises": [
+            "Yumpuses are slow.",
+            "Vumpuses are yumpuses.",
+            "Each tumpus is metallic.",
+            "Vumpuses are impuses.",
+            "Every dumpus is brown.",
+            "Impuses are dumpuses.",
+            "Each zumpus is not temperate.",
+            "Each dumpus is a jompus.",
+            "Dumpuses are tumpuses.",
+            "Each vumpus is earthy.",
+            "Every brimpus is not dull.",
+            "Each shumpus is a brimpus.",
+            "Shumpuses are happy.",
+            "Wumpuses are amenable.",
+            "Shumpuses are vumpuses.",
+            "Zumpuses are rompuses.",
+            "Impuses are wumpuses.",
+            "Impuses are small.",
+            "Sam is a shumpus.",
+            "Sam is a zumpus."
+        ],
+        "question": [
+            "Sam is brown."
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Sam is a shumpus.",
+            "Shumpuses are vumpuses.",
+            "Sam is a vumpus.",
+            "Vumpuses are impuses.",
+            "Sam is an impus.",
+            "Impuses are dumpuses.",
+            "Sam is a dumpus.",
+            "Every dumpus is brown.",
+            "Sam is brown.",
+            "There is evidence to conclude Sam is brown."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, let's try to figure out if the conclusion \"Sam is brown\" is true based on the given premises. \n\nFirst, let's list out the premises related to Sam. Sam is a shumpus and a zumpus. Now, looking at the shumpus-related premises: Shumpuses are vumpuses, and shumpuses are happy. Also, shumpuses are brimpuses. Brimpuses are not dull. But how does this connect to being brown?\n\nNow, let's track Sam's chain. Since Sam is a shumpus, and shumpuses are vumpuses, then Sam is a vumpus. Vumpuses are yumpuses, and yumpuses are slow. Also, vumpuses are impuses. Impuses are dumpuses. Every dumpus is brown. So, if Sam is a dumpus, then he must be brown. Let's verify this step by step.\n\nStarting with Sam being a shumpus. Shumpuses are vumpuses (premise: \"Shumpuses are vumpuses.\"). So Sam is a vumpus. Then, \"Vumpuses are impuses\" (premise), so Sam is an impus. Next, \"Impuses are dumpuses\" (another premise). Therefore, Sam is a dumpus. The next premise states \"Every dumpus is brown.\" Therefore, since Sam is a dumpus, he must be brown. \n\nWait, let me check if there's any conflicting information. The premises also say \"Each zumpus is not temperate,\" but that doesn't affect the color. Also, \"Sam is a zumpus,\" but being a zumpus doesn't directly relate to being brown here. The key chain is shumpus → vumpus → impus → dumpus → brown. That seems straightforward. \n\nAre there any other premises that might affect this? \"Impuses are wumpuses,\" but wumpuses are amenable. However, the chain from impus to dumpus is solid. So even if impuses are also wumpuses, the fact that impuses are dumpuses (and dumpuses are brown) holds. \n\nTherefore, the conclusion that Sam is brown should be true. Let me double-check each step again:\n\n1. Sam is a shumpus → shumpuses are vumpuses → Sam is a vumpus.\n2. Vumpuses are impuses → Sam is an impus.\n3. Impuses are dumpuses → Sam is a dumpus.\n4. Every dumpus is brown → Sam is brown.\n\nYes, each step follows directly from the premises without any contradictions. So the conclusion is true.",
+        "content": "Thoughts:\nSam is a shumpus.\nShumpuses are vumpuses.\nSam is a vumpus.\nVumpuses are impuses.\nSam is an impus.\nImpuses are dumpuses.\nSam is a dumpus.\nEvery dumpus is brown.\nSam is brown.\nThere is evidence to conclude Sam is brown.\n\nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "Sam is a shumpus.",
+            "Shumpuses are vumpuses.",
+            "Sam is a vumpus.",
+            "Vumpuses are impuses.",
+            "Sam is an impus.",
+            "Impuses are dumpuses.",
+            "Sam is a dumpus.",
+            "Every dumpus is brown.",
+            "Sam is brown.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) yumpuses are slow.",
+                "fol": "∀x (yumpus(x) → slow(x))",
+                "tptp": "![X]: (yumpus(X) => slow(X))"
+            },
+            {
+                "ref": "(2) vumpuses are yumpuses.",
+                "fol": "∀x (vumpus(x) → yumpus(x))",
+                "tptp": "![X]: (vumpus(X) => yumpus(X))"
+            },
+            {
+                "ref": "(3) each tumpus is metallic.",
+                "fol": "∀x (tumpus(x) → metallic(x))",
+                "tptp": "![X]: (tumpus(X) => metallic(X))"
+            },
+            {
+                "ref": "(4) vumpuses are impuses.",
+                "fol": "∀x (vumpus(x) → impus(x))",
+                "tptp": "![X]: (vumpus(X) => impus(X))"
+            },
+            {
+                "ref": "(5) every dumpus is brown.",
+                "fol": "∀x (dumpus(x) → brown(x))",
+                "tptp": "![X]: (dumpus(X) => brown(X))"
+            },
+            {
+                "ref": "(6) impuses are dumpuses.",
+                "fol": "∀x (impus(x) → dumpus(x))",
+                "tptp": "![X]: (impus(X) => dumpus(X))"
+            },
+            {
+                "ref": "(7) each zumpus is not temperate.",
+                "fol": "∀x (zumpus(x) → ¬temperate(x))",
+                "tptp": "![X]: (zumpus(X) => ~temperate(X))"
+            },
+            {
+                "ref": "(8) each dumpus is a jompus.",
+                "fol": "∀x (dumpus(x) → jompus(x))",
+                "tptp": "![X]: (dumpus(X) => jompus(X))"
+            },
+            {
+                "ref": "(9) dumpuses are tumpuses.",
+                "fol": "∀x (dumpus(x) → tumpus(x))",
+                "tptp": "![X]: (dumpus(X) => tumpus(X))"
+            },
+            {
+                "ref": "(10) each vumpus is earthy.",
+                "fol": "∀x (vumpus(x) → earthy(x))",
+                "tptp": "![X]: (vumpus(X) => earthy(X))"
+            },
+            {
+                "ref": "(11) every brimpus is not dull.",
+                "fol": "∀x (brimpus(x) → ¬dull(x))",
+                "tptp": "![X]: (brimpus(X) => ~dull(X))"
+            },
+            {
+                "ref": "(12) each shumpus is a brimpus.",
+                "fol": "∀x (shumpus(x) → brimpus(x))",
+                "tptp": "![X]: (shumpus(X) => brimpus(X))"
+            },
+            {
+                "ref": "(13) shumpuses are happy.",
+                "fol": "∀x (shumpus(x) → happy(x))",
+                "tptp": "![X]: (shumpus(X) => happy(X))"
+            },
+            {
+                "ref": "(14) wumpuses are amenable.",
+                "fol": "∀x (wumpus(x) → amenable(x))",
+                "tptp": "![X]: (wumpus(X) => amenable(X))"
+            },
+            {
+                "ref": "(15) shumpuses are vumpuses.",
+                "fol": "∀x (shumpus(x) → vumpus(x))",
+                "tptp": "![X]: (shumpus(X) => vumpus(X))"
+            },
+            {
+                "ref": "(16) zumpuses are rompuses.",
+                "fol": "∀x (zumpus(x) → rompus(x))",
+                "tptp": "![X]: (zumpus(X) => rompus(X))"
+            },
+            {
+                "ref": "(17) impuses are wumpuses.",
+                "fol": "∀x (impus(x) → wumpus(x))",
+                "tptp": "![X]: (impus(X) => wumpus(X))"
+            },
+            {
+                "ref": "(18) impuses are small.",
+                "fol": "∀x (impus(x) → small(x))",
+                "tptp": "![X]: (impus(X) => small(X))"
+            },
+            {
+                "ref": "(19) sam is a shumpus.",
+                "fol": "shumpus(sam)",
+                "tptp": "shumpus(sam)"
+            },
+            {
+                "ref": "(20) sam is a zumpus.",
+                "fol": "zumpus(sam)",
+                "tptp": "zumpus(sam)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(10) sam is brown.",
+            "fol": "brown(sam)",
+            "tptp": "brown(sam)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) sam is a shumpus.",
+                "fol": "shumpus(sam)",
+                "tptp": "shumpus(sam)"
+            },
+            {
+                "ref": "(2) shumpuses are vumpuses.",
+                "fol": "∀x (shumpus(x) → vumpus(x))",
+                "tptp": "![X]: (shumpus(X) => vumpus(X))"
+            },
+            {
+                "ref": "(3) sam is a vumpus.",
+                "fol": "vumpus(sam)",
+                "tptp": "vumpus(sam)"
+            },
+            {
+                "ref": "(4) vumpuses are impuses.",
+                "fol": "∀x (vumpus(x) → impus(x))",
+                "tptp": "![X]: (vumpus(X) => impus(X))"
+            },
+            {
+                "ref": "(5) sam is an impus.",
+                "fol": "impus(sam)",
+                "tptp": "impus(sam)"
+            },
+            {
+                "ref": "(6) impuses are dumpuses.",
+                "fol": "∀x (impus(x) → dumpus(x))",
+                "tptp": "![X]: (impus(X) => dumpus(X))"
+            },
+            {
+                "ref": "(7) sam is a dumpus.",
+                "fol": "dumpus(sam)",
+                "tptp": "dumpus(sam)"
+            },
+            {
+                "ref": "(8) every dumpus is brown.",
+                "fol": "∀x (dumpus(x) → brown(x))",
+                "tptp": "![X]: (dumpus(X) => brown(X))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Sam is a shumpus.",
+            "Shumpuses are vumpuses.",
+            "Sam is a vumpus.",
+            "Vumpuses are impuses.",
+            "Sam is an impus.",
+            "Impuses are dumpuses.",
+            "Sam is a dumpus.",
+            "Every dumpus is brown."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "4hop_Composed_random_noadj_example22_example0",
+        "premises": [
+            "Everything that is a zumpus or a numpus or a lorpus is a gorpus, a jompus, and a yumpus.",
+            "Each zumpus is a sterpus.",
+            "Each gorpus is an impus.",
+            "Everything that is an impus, a numpus, or a brimpus is a dumpus.",
+            "Everything that is a zumpus, a numpus, or a lorpus is a shumpus.",
+            "Each tumpus is a numpus and a zumpus and a grimpus.",
+            "Grimpuses are rompuses.",
+            "Tumpuses are sterpuses.",
+            "Jompuses are sterpuses.",
+            "Rex is a lempus.",
+            "Rex is a tumpus."
+        ],
+        "question": [
+            "Rex is a yumpus."
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Rex is a tumpus.",
+            "Each tumpus is a numpus and a zumpus and a grimpus.",
+            "Rex is a numpus.",
+            "Everything that is a zumpus or a numpus or a lorpus is a gorpus, a jompus, and a yumpus.",
+            "Rex is a yumpus."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, let's try to figure this out. The premises are a bit complicated with all these made-up terms, but I'll take it step by step.\n\nFirst, the conclusion is that Rex is a yumpus. So I need to see if the premises support that.\n\nStarting with the given premises:\n\n1. Everything that is a zumpus or a numpus or a lorpus is a gorpus, a jompus, and a yumpus. So if something is any of those three (zumpus, numpus, lorpus), then it must also be a gorpus, jompus, and yumpus.\n\n2. Each zumpus is a sterpus. So zumpus implies sterpus.\n\n3. Each gorpus is an impus. So gorpus → impus.\n\n4. Everything that is an impus, a numpus, or a brimpus is a dumpus. So impus ∨ numpus ∨ brimpus → dumpus.\n\n5. Everything that is a zumpus, a numpus, or a lorpus is a shumpus. So those three → shumpus.\n\n6. Each tumpus is a numpus and a zumpus and a grimpus. So tumpus → numpus ∧ zumpus ∧ grimpus.\n\n7. Grimpuses are rompuses. So grimpus → rompus.\n\n8. Tumpuses are sterpuses. So tumpus → sterpus.\n\n9. Jompuses are sterpuses. Jompus → sterpus.\n\n10. Rex is a lempus. And Rex is a tumpus.\n\nSo, Rex is a tumpus. From premise 6, since tumpus is a numpus, zumpus, and grimpus. Therefore, Rex is a numpus, zumpus, and grimpus.\n\nFrom premise 1: since Rex is a numpus (because tumpus → numpus), then by premise 1, he must be a gorpus, jompus, and yumpus. Wait, premise 1 says that if something is a zumpus, numpus, or lorpus, then it's a gorpus, jompus, and yumpus. So since Rex is a numpus (and also a zumpus, but either way), he falls into that category. So he must be a yumpus. That directly leads to the conclusion that Rex is a yumpus.\n\nLet me check if there's anything contradicting this. Let's see:\n\nFrom premise 6: tumpus → numpus. So Rex is a numpus. Then premise 1 applies, making him a yumpus. So conclusion is true.\n\nI don't see any premises that would negate this. So the answer should be True.",
+        "content": "Thoughts:\nRex is a tumpus.\nEach tumpus is a numpus and a zumpus and a grimpus.\nRex is a numpus.\nEverything that is a zumpus or a numpus or a lorpus is a gorpus, a jompus, and a yumpus.\nRex is a numpus, so Rex is a yumpus.\nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "Rex is a tumpus.",
+            "Each tumpus is a numpus and a zumpus and a grimpus.",
+            "Rex is a numpus.",
+            "Everything that is a zumpus or a numpus or a lorpus is a gorpus, a jompus, and a yumpus.",
+            "Rex is a yumpus."
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1)",
+                "fol": "∀x ((zumpus(x) ∨ numpus(x) ∨ lorpus(x)) → (gorpus(x) ∧ jompus(x) ∧ yumpus(x)))",
+                "tptp": "![X]: ((zumpus(X) | numpus(X) | lorpus(X)) => (gorpus(X) & jompus(X) & yumpus(X)))"
+            },
+            {
+                "ref": "(2)",
+                "fol": "∀x (zumpus(x) → sterpus(x))",
+                "tptp": "![X]: (zumpus(X) => sterpus(X))"
+            },
+            {
+                "ref": "(3)",
+                "fol": "∀x (gorpus(x) → impus(x))",
+                "tptp": "![X]: (gorpus(X) => impus(X))"
+            },
+            {
+                "ref": "(4)",
+                "fol": "∀x ((impus(x) ∨ numpus(x) ∨ brimpus(x)) → dumpus(x))",
+                "tptp": "![X]: ((impus(X) | numpus(X) | brimpus(X)) => dumpus(X))"
+            },
+            {
+                "ref": "(5)",
+                "fol": "∀x ((zumpus(x) ∨ numpus(x) ∨ lorpus(x)) → shumpus(x))",
+                "tptp": "![X]: ((zumpus(X) | numpus(X) | lorpus(X)) => shumpus(X))"
+            },
+            {
+                "ref": "(6)",
+                "fol": "∀x (tumpus(x) → (numpus(x) ∧ zumpus(x) ∧ grimpus(x)))",
+                "tptp": "![X]: (tumpus(X) => (numpus(X) & zumpus(X) & grimpus(X)))"
+            },
+            {
+                "ref": "(7)",
+                "fol": "∀x (grimpus(x) → rompus(x))",
+                "tptp": "![X]: (grimpus(X) => rompus(X))"
+            },
+            {
+                "ref": "(8)",
+                "fol": "∀x (tumpus(x) → sterpus(x))",
+                "tptp": "![X]: (tumpus(X) => sterpus(X))"
+            },
+            {
+                "ref": "(9)",
+                "fol": "∀x (jompus(x) → sterpus(x))",
+                "tptp": "![X]: (jompus(X) => sterpus(X))"
+            },
+            {
+                "ref": "(10)",
+                "fol": "lempus(rex)",
+                "tptp": "lempus(rex)"
+            },
+            {
+                "ref": "(11)",
+                "fol": "tumpus(rex)",
+                "tptp": "tumpus(rex)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(6)",
+            "fol": "yumpus(rex)",
+            "tptp": "yumpus(rex)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1)",
+                "fol": "tumpus(rex)",
+                "tptp": "tumpus(rex)"
+            },
+            {
+                "ref": "(2)",
+                "fol": "∀x (tumpus(x) → (numpus(x) ∧ zumpus(x) ∧ grimpus(x)))",
+                "tptp": "![X]: (tumpus(X) => (numpus(X) & zumpus(X) & grimpus(X)))"
+            },
+            {
+                "ref": "(3)",
+                "fol": "numpus(rex)",
+                "tptp": "numpus(rex)"
+            },
+            {
+                "ref": "(4)",
+                "fol": "∀x ((zumpus(x) ∨ numpus(x) ∨ lorpus(x)) → (gorpus(x) ∧ jompus(x) ∧ yumpus(x)))",
+                "tptp": "![X]: ((zumpus(X) | numpus(X) | lorpus(X)) => (gorpus(X) & jompus(X) & yumpus(X)))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Rex is a tumpus.",
+            "Each tumpus is a numpus and a zumpus and a grimpus.",
+            "Rex is a numpus.",
+            "Everything that is a zumpus or a numpus or a lorpus is a gorpus, a jompus, and a yumpus."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "4hop_ProofsOnly_random_noadj_example16_example0",
+        "premises": [
+            "Every shumpus is spicy.",
+            "Vumpuses are grimpuses.",
+            "Numpuses are happy.",
+            "Shumpuses are vumpuses.",
+            "Lorpuses are red.",
+            "Rompuses are not slow.",
+            "Each lempus is a zumpus.",
+            "Impuses are jompuses.",
+            "Every grimpus is a lorpus.",
+            "Every lempus is not temperate.",
+            "Grimpuses are metallic.",
+            "Grimpuses are numpuses.",
+            "Vumpuses are not amenable.",
+            "Brimpuses are bright.",
+            "Numpuses are gorpuses.",
+            "Each numpus is a rompus.",
+            "Vumpuses are sterpuses.",
+            "Impuses are not muffled.",
+            "Shumpuses are brimpuses.",
+            "Lempuses are shumpuses.",
+            "Every sterpus is opaque.",
+            "Every zumpus is floral.",
+            "Alex is an impus.",
+            "Alex is a lempus."
+        ],
+        "question": [
+            "Alex is metallic."
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Alex is a lempus.",
+            "Each lempus is a zumpus.",
+            "Alex is a zumpus.",
+            "Each lempus is a shumpus.",
+            "Alex is a shumpus.",
+            "Shumpuses are vumpuses.",
+            "Alex is a vumpus.",
+            "Vumpuses are grimpuses.",
+            "Alex is a grimpus.",
+            "Grimpuses are metallic.",
+            "Alex is metallic.",
+            "There is evidence to conclude Alex is metallic."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, let's start by looking at the premises and the conclusion. The conclusion is that Alex is metallic. \n\nFirst, Alex is an impus and a lempus. The premises say that each lempus is a zumpus. So Alex being a lempus makes him a zumpus. Also, every lempus is not temperate, but that might not be relevant here.\n\nNext, each lempus is a zumpus, so Alex is a zumpus. Then, since every zumpus is floral, Alex is floral. Wait, but the conclusion is about being metallic. Let's see other connections.\n\nLooking at impuses: they are jompuses. But I don't see a direct link from jompuses to metallic. However, let's check the shumpus line. Shumpuses are vumpuses, and vumpuses are grimpuses. Since Alex is a lempus and lempuses are shumpuses (from \"Lempuses are shumpuses\"), then Alex is a shumpus. Shumpus → vumpus → grimpus. \n\nGrimpuses are metallic. So if Alex is a grimpus, he is metallic. Let's verify the path. \n\nAlex is a lempus → lempuses are shumpuses → shumpuses are vumpuses → vumpuses are grimpuses. So Alex is a grimpus. Since grimpuses are metallic, Alex must be metallic. \n\nAdditionally, shumpuses are brimpuses (bright), but that's separate. The key path is lempus → shumpus → vumpus → grimpus → metallic. So the conclusion should be true.",
+        "content": "Thoughts:\nAlex is a lempus.\nEach lempus is a zumpus.\nAlex is a zumpus.\nEach lempus is a shumpus.\nAlex is a shumpus.\nShumpuses are vumpuses.\nAlex is a vumpus.\nVumpuses are grimpuses.\nAlex is a grimpus.\nGrimpuses are metallic.\nAlex is metallic.\nThere is evidence to conclude Alex is metallic.\nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "Alex is a lempus.",
+            "Each lempus is a zumpus.",
+            "Alex is a zumpus.",
+            "Each lempus is a shumpus.",
+            "Alex is a shumpus.",
+            "Shumpuses are vumpuses.",
+            "Alex is a vumpus.",
+            "Vumpuses are grimpuses.",
+            "Alex is a grimpus.",
+            "Grimpuses are metallic.",
+            "Alex is metallic.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) every shumpus is spicy.",
+                "fol": "∀x (shumpus(x) → spicy(x))",
+                "tptp": "![X]: (shumpus(X) => spicy(X))"
+            },
+            {
+                "ref": "(2) vumpuses are grimpuses.",
+                "fol": "∀x (vumpus(x) → grimpus(x))",
+                "tptp": "![X]: (vumpus(X) => grimpus(X))"
+            },
+            {
+                "ref": "(3) numpuses are happy.",
+                "fol": "∀x (numpus(x) → happy(x))",
+                "tptp": "![X]: (numpus(X) => happy(X))"
+            },
+            {
+                "ref": "(4) shumpuses are vumpuses.",
+                "fol": "∀x (shumpus(x) → vumpus(x))",
+                "tptp": "![X]: (shumpus(X) => vumpus(X))"
+            },
+            {
+                "ref": "(5) lorpuses are red.",
+                "fol": "∀x (lorpus(x) → red(x))",
+                "tptp": "![X]: (lorpus(X) => red(X))"
+            },
+            {
+                "ref": "(6) rompuses are not slow.",
+                "fol": "∀x (rompus(x) → ¬slow(x))",
+                "tptp": "![X]: (rompus(X) => ~slow(X))"
+            },
+            {
+                "ref": "(7) each lempus is a zumpus.",
+                "fol": "∀x (lempus(x) → zumpus(x))",
+                "tptp": "![X]: (lempus(X) => zumpus(X))"
+            },
+            {
+                "ref": "(8) impuses are jompuses.",
+                "fol": "∀x (impus(x) → jompus(x))",
+                "tptp": "![X]: (impus(X) => jompus(X))"
+            },
+            {
+                "ref": "(9) every grimpus is a lorpus.",
+                "fol": "∀x (grimpus(x) → lorpus(x))",
+                "tptp": "![X]: (grimpus(X) => lorpus(X))"
+            },
+            {
+                "ref": "(10) every lempus is not temperate.",
+                "fol": "∀x (lempus(x) → ¬temperate(x))",
+                "tptp": "![X]: (lempus(X) => ~temperate(X))"
+            },
+            {
+                "ref": "(11) grimpuses are metallic.",
+                "fol": "∀x (grimpus(x) → metallic(x))",
+                "tptp": "![X]: (grimpus(X) => metallic(X))"
+            },
+            {
+                "ref": "(12) grimpuses are numpuses.",
+                "fol": "∀x (grimpus(x) → numpus(x))",
+                "tptp": "![X]: (grimpus(X) => numpus(X))"
+            },
+            {
+                "ref": "(13) vumpuses are not amenable.",
+                "fol": "∀x (vumpus(x) → ¬amenable(x))",
+                "tptp": "![X]: (vumpus(X) => ~amenable(X))"
+            },
+            {
+                "ref": "(14) brimpuses are bright.",
+                "fol": "∀x (brimpus(x) → bright(x))",
+                "tptp": "![X]: (brimpus(X) => bright(X))"
+            },
+            {
+                "ref": "(15) numpuses are gorpuses.",
+                "fol": "∀x (numpus(x) → gorpus(x))",
+                "tptp": "![X]: (numpus(X) => gorpus(X))"
+            },
+            {
+                "ref": "(16) each numpus is a rompus.",
+                "fol": "∀x (numpus(x) → rompus(x))",
+                "tptp": "![X]: (numpus(X) => rompus(X))"
+            },
+            {
+                "ref": "(17) vumpuses are sterpuses.",
+                "fol": "∀x (vumpus(x) → sterpus(x))",
+                "tptp": "![X]: (vumpus(X) => sterpus(X))"
+            },
+            {
+                "ref": "(18) impuses are not muffled.",
+                "fol": "∀x (impus(x) → ¬muffled(x))",
+                "tptp": "![X]: (impus(X) => ~muffled(X))"
+            },
+            {
+                "ref": "(19) shumpuses are brimpuses.",
+                "fol": "∀x (shumpus(x) → brimpus(x))",
+                "tptp": "![X]: (shumpus(X) => brimpus(X))"
+            },
+            {
+                "ref": "(20) lempuses are shumpuses.",
+                "fol": "∀x (lempus(x) → shumpus(x))",
+                "tptp": "![X]: (lempus(X) => shumpus(X))"
+            },
+            {
+                "ref": "(21) every sterpus is opaque.",
+                "fol": "∀x (sterpus(x) → opaque(x))",
+                "tptp": "![X]: (sterpus(X) => opaque(X))"
+            },
+            {
+                "ref": "(22) every zumpus is floral.",
+                "fol": "∀x (zumpus(x) → floral(x))",
+                "tptp": "![X]: (zumpus(X) => floral(X))"
+            },
+            {
+                "ref": "(23) alex is an impus.",
+                "fol": "impus(alex)",
+                "tptp": "impus(alex)"
+            },
+            {
+                "ref": "(24) alex is a lempus.",
+                "fol": "lempus(alex)",
+                "tptp": "lempus(alex)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(12) alex is metallic.",
+            "fol": "metallic(alex)",
+            "tptp": "metallic(alex)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) alex is a lempus.",
+                "fol": "lempus(alex)",
+                "tptp": "lempus(alex)"
+            },
+            {
+                "ref": "(2) each lempus is a zumpus.",
+                "fol": "∀x (lempus(x) → zumpus(x))",
+                "tptp": "![X]: (lempus(X) => zumpus(X))"
+            },
+            {
+                "ref": "(3) alex is a zumpus.",
+                "fol": "zumpus(alex)",
+                "tptp": "zumpus(alex)"
+            },
+            {
+                "ref": "(4) each lempus is a shumpus.",
+                "fol": "∀x (lempus(x) → shumpus(x))",
+                "tptp": "![X]: (lempus(X) => shumpus(X))"
+            },
+            {
+                "ref": "(5) alex is a shumpus.",
+                "fol": "shumpus(alex)",
+                "tptp": "shumpus(alex)"
+            },
+            {
+                "ref": "(6) shumpuses are vumpuses.",
+                "fol": "∀x (shumpus(x) → vumpus(x))",
+                "tptp": "![X]: (shumpus(X) => vumpus(X))"
+            },
+            {
+                "ref": "(7) alex is a vumpus.",
+                "fol": "vumpus(alex)",
+                "tptp": "vumpus(alex)"
+            },
+            {
+                "ref": "(8) vumpuses are grimpuses.",
+                "fol": "∀x (vumpus(x) → grimpus(x))",
+                "tptp": "![X]: (vumpus(X) => grimpus(X))"
+            },
+            {
+                "ref": "(9) alex is a grimpus.",
+                "fol": "grimpus(alex)",
+                "tptp": "grimpus(alex)"
+            },
+            {
+                "ref": "(10) grimpuses are metallic.",
+                "fol": "∀x (grimpus(x) → metallic(x))",
+                "tptp": "![X]: (grimpus(X) => metallic(X))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Alex is a lempus.",
+            "Each lempus is a zumpus.",
+            "Alex is a zumpus.",
+            "Each lempus is a shumpus.",
+            "Alex is a shumpus.",
+            "Shumpuses are vumpuses.",
+            "Alex is a vumpus.",
+            "Vumpuses are grimpuses.",
+            "Alex is a grimpus.",
+            "Grimpuses are metallic."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "4hop_Composed_random_noadj_example29_example5",
+        "premises": [
+            "Dumpuses are numpuses.",
+            "Everything that is a grimpus, a jompus, or a yumpus is a gorpus, a dumpus, and a lorpus.",
+            "Everything that is a grimpus or a jompus or a yumpus is a numpus.",
+            "Every zumpus is a shumpus.",
+            "Everything that is a grimpus, a sterpus, or a shumpus is a numpus.",
+            "Each gorpus is a wumpus.",
+            "Each lorpus is a rompus.",
+            "Each lorpus is a jompus and a lempus and a zumpus.",
+            "Lempuses are brimpuses.",
+            "Alex is a numpus.",
+            "Alex is a grimpus."
+        ],
+        "question": [
+            "Alex is a jompus."
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Alex is a grimpus.",
+            "Everything that is a grimpus, jompus, or yumpus is a gorpus, dumpus, and lorpus.",
+            "Alex is a gorpus, dumpus, and lorpus.",
+            "Each lorpus is a jompus, lempus, and zumpus.",
+            "Alex is a lorpus.",
+            "Therefore, Alex is a jompus.",
+            "The premises directly establish that Alex is a jompus through his classification as a lorpus."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, let's start by breaking down the premises and seeing how they connect to the conclusion that Alex is a jompus.\n\nFirst, the premises mention several categories: dumpuses, numpuses, grimpus, jompus, yumpus, gorpus, lorpus, zumpus, shumpus, sterpus, wumpus, rompus, lempus, zumpus, and brimpuses. Alex is stated to be a numpus and a grimpus. The conclusion is whether Alex is a jompus.\n\nLet's list out the relevant premises step by step. \n\n1. \"Dumpuses are numpuses.\" So if something is a dumpus, it's a numpus. But not sure if the reverse is true.\n\n2. \"Everything that is a grimpus, a jompus, or a yumpus is a gorpus, a dumpus, and a lorpus.\" So if Alex is a grimpus (which he is), then he must be a gorpus, dumpus, and lorpus. Wait, but the conclusion is whether he's a jompus. But since he's already a grimpus, this premise says that grimpus implies being a gorpus, dumpus, and lorpus. So Alex is a gorpus, dumpus, and lorpus. \n\n3. \"Everything that is a grimpus or a jompus or a yumpus is a numpus.\" Well, Alex is a grimpus, so he's a numpus, which matches the given premise that Alex is a numpus. So that's consistent.\n\n4. \"Every zumpus is a shumpus.\" Not sure how this connects yet.\n\n5. \"Everything that is a grimpus, a sterpus, or a shumpus is a numpus.\" Again, Alex being a grimpus already makes him a numpus, which we know.\n\n6. \"Each gorpus is a wumpus.\" Since Alex is a gorpus (from premise 2), he must be a wumpus.\n\n7. \"Each lorpus is a rompus.\" From premise 2, Alex is a lorpus, so he's a rompus.\n\n8. \"Each lorpus is a jompus and a lempus and a zumpus.\" Wait, this is key. If Alex is a lorpus (from premise 2), then he must be a jompus, a lempus, and a zumpus. So if Alex is a lorpus, then he is a jompus. Therefore, this would directly lead to the conclusion that Alex is a jompus. \n\nBut let's check for contradictions or other premises that might affect this. \n\nAlso, \"Lempuses are brimpuses.\" So since Alex is a lempus (from being a lorpus), he is a brimpus. Not sure if that's relevant here.\n\nAnother point: \"Each lorpus is a jompus and a lempus and a zumpus.\" So lorpus → jompus. Since Alex is a lorpus (from premise 2), he must be a jompus. Therefore, the conclusion would be true. \n\nWait, but let's confirm each step. \n\nPremise 2 says that being a grimpus (which Alex is) implies being a gorpus, dumpus, and lorpus. So Alex is a lorpus. \n\nPremise 8 says that each lorpus is a jompus. Therefore, Alex is a jompus. \n\nSo the conclusion \"Alex is a jompus\" would be true. But wait, the answer options are (A) True or (B) False. So the conclusion here is presented, and if the premises support it, the answer is (A) True. \n\nWait, but let me check if there are any other premises that might contradict this. For example, maybe Alex being a lorpus and a zumpus (from premise 8) would lead to other classifications. \n\nFrom premise 8, being a lorpus makes Alex a zumpus. Then, from premise 4, every zumpus is a shumpus. So Alex is a shumpus. Then premise 5 says that grimpus, sterpus, or shumpus are numpuses. Since Alex is a shumpus, he's a numpus, which he already is. \n\nBut none of that contradicts the conclusion. So the key steps are:\n\n- Alex is a grimpus. \n- Therefore, by premise 2, he is a lorpus. \n- By premise 8, being a lorpus makes him a jompus. \n\nThus, the conclusion is true. \n\nBut wait, let me check if there are any other premises that could affect this. For example, the premises about lempuses and zumpuses don't affect the conclusion here. The conclusion hinges on Alex being a lorpus and thus a jompus. \n\nSo the answer should be (A) True. \n\nBut let me recheck the premises again to ensure I didn't miss anything. \n\nPremise 2: \"Everything that is a grimpus, a jompus, or a yumpus is a gorpus, a dumpus, and a lorpus.\" So if Alex is a grimpus, he must be a gorpus, dumpus, and lorpus. \n\nPremise 8: \"Each lorpus is a jompus and a lempus and a zumpus.\" So if Alex is a lorpus, he must be a jompus. Therefore, the conclusion is true. \n\nYes, that seems correct. Therefore, the answer is (A) True.",
+        "content": "Thoughts:\nAlex is a grimpus.\nEverything that is a grimpus, jompus, or yumpus is a gorpus, dumpus, and lorpus.\nAlex is a gorpus, dumpus, and lorpus.\nEach lorpus is a jompus, lempus, and zumpus.\nAlex is a lorpus.\nTherefore, Alex is a jompus.\nThe premises directly establish that Alex is a jompus through his classification as a lorpus.\nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "Alex is a grimpus.",
+            "Everything that is a grimpus, jompus, or yumpus is a gorpus, dumpus, and lorpus.",
+            "Alex is a gorpus, dumpus, and lorpus.",
+            "Each lorpus is a jompus, lempus, and zumpus.",
+            "Alex is a lorpus.",
+            null,
+            "The premises directly establish that Alex is a jompus through his classification as a lorpus."
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) dumpuses are numpuses.",
+                "fol": "∀x (dumpus(x) → numpus(x))",
+                "tptp": "![X]: (dumpus(X) => numpus(X))"
+            },
+            {
+                "ref": "(2) everything that is a grimpus, a jompus, or a yumpus is a gorpus, a dumpus, and a lorpus.",
+                "fol": "∀x ((grimpus(x) ∨ jompus(x) ∨ yumpus(x)) → (gorpus(x) ∧ dumpus(x) ∧ lorpus(x)))",
+                "tptp": "![X]: ((grimpus(X) | jompus(X) | yumpus(X)) => (gorpus(X) & dumpus(X) & lorpus(X)))"
+            },
+            {
+                "ref": "(3) everything that is a grimpus or a jompus or a yumpus is a numpus.",
+                "fol": "∀x ((grimpus(x) ∨ jompus(x) ∨ yumpus(x)) → numpus(x))",
+                "tptp": "![X]: ((grimpus(X) | jompus(X) | yumpus(X)) => numpus(X))"
+            },
+            {
+                "ref": "(4) every zumpus is a shumpus.",
+                "fol": "∀x (zumpus(x) → shumpus(x))",
+                "tptp": "![X]: (zumpus(X) => shumpus(X))"
+            },
+            {
+                "ref": "(5) everything that is a grimpus, a sterpus, or a shumpus is a numpus.",
+                "fol": "∀x ((grimpus(x) ∨ sterpus(x) ∨ shumpus(x)) → numpus(x))",
+                "tptp": "![X]: ((grimpus(X) | sterpus(X) | shumpus(X)) => numpus(X))"
+            },
+            {
+                "ref": "(6) each gorpus is a wumpus.",
+                "fol": "∀x (gorpus(x) → wumpus(x))",
+                "tptp": "![X]: (gorpus(X) => wumpus(X))"
+            },
+            {
+                "ref": "(7) each lorpus is a rompus.",
+                "fol": "∀x (lorpus(x) → rompus(x))",
+                "tptp": "![X]: (lorpus(X) => rompus(X))"
+            },
+            {
+                "ref": "(8) each lorpus is a jompus and a lempus and a zumpus.",
+                "fol": "∀x (lorpus(x) → (jompus(x) ∧ lempus(x) ∧ zumpus(x)))",
+                "tptp": "![X]: (lorpus(X) => (jompus(X) & lempus(X) & zumpus(X)))"
+            },
+            {
+                "ref": "(9) lempuses are brimpuses.",
+                "fol": "∀x (lempus(x) → brimpus(x))",
+                "tptp": "![X]: (lempus(X) => brimpus(X))"
+            },
+            {
+                "ref": "(10) alex is a numpus.",
+                "fol": "numpus(alex)",
+                "tptp": "numpus(alex)"
+            },
+            {
+                "ref": "(11) alex is a grimpus.",
+                "fol": "grimpus(alex)",
+                "tptp": "grimpus(alex)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(7) alex is a jompus.",
+            "fol": "jompus(alex)",
+            "tptp": "jompus(alex)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) alex is a grimpus.",
+                "fol": "grimpus(alex)",
+                "tptp": "grimpus(alex)"
+            },
+            {
+                "ref": "(2) everything that is a grimpus, jompus, or yumpus is a gorpus, dumpus, and lorpus.",
+                "fol": "∀x ((grimpus(x) ∨ jompus(x) ∨ yumpus(x)) → (gorpus(x) ∧ dumpus(x) ∧ lorpus(x)))",
+                "tptp": "![X]: ((grimpus(X) | jompus(X) | yumpus(X)) => (gorpus(X) & dumpus(X) & lorpus(X)))"
+            },
+            {
+                "ref": "(3) alex is a gorpus, dumpus, and lorpus.",
+                "fol": "gorpus(alex) ∧ dumpus(alex) ∧ lorpus(alex)",
+                "tptp": "gorpus(alex) & dumpus(alex) & lorpus(alex)"
+            },
+            {
+                "ref": "(4) each lorpus is a jompus, lempus, and zumpus.",
+                "fol": "∀x (lorpus(x) → (jompus(x) ∧ lempus(x) ∧ zumpus(x)))",
+                "tptp": "![X]: (lorpus(X) => (jompus(X) & lempus(X) & zumpus(X)))"
+            },
+            {
+                "ref": "(5) alex is a lorpus.",
+                "fol": "lorpus(alex)",
+                "tptp": "lorpus(alex)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Alex is a grimpus.",
+            "Everything that is a grimpus, jompus, or yumpus is a gorpus, dumpus, and lorpus.",
+            "Alex is a gorpus, dumpus, and lorpus.",
+            "Each lorpus is a jompus, lempus, and zumpus.",
+            "Alex is a lorpus."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "4hop_OOD_Composed_random_noadj_example30_example",
+        "premises": [
+            "Gorpuses are lempuses.",
+            "Every brimpus is a tumpus.",
+            "Each grimpus is a numpus.",
+            "Each gorpus is a jompus and a zumpus and a grimpus.",
+            "Everything that is a jompus or an impus or a lempus is a tumpus.",
+            "Shumpuses are lorpuses.",
+            "Vumpuses are impuses.",
+            "Each zumpus is a wumpus.",
+            "Every vumpus is a brimpus and a shumpus and a gorpus.",
+            "Fae is a numpus.",
+            "Fae is a vumpus."
+        ],
+        "question": [
+            "Fae is a shumpus or a jompus or a rompus."
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Fae is a vumpus.",
+            "Every vumpus is a shumpus and a gorpus.",
+            "Fae is a shumpus.",
+            "Each gorpus is a jompus.",
+            "Fae is a gorpus.",
+            "Fae is a jompus.",
+            "The conclusion states Fae is a shumpus or a jompus or a rompus.",
+            "At least \"shumpus\" and \"jompus\" are true for Fae.",
+            "The conclusion is true if any of the disjuncts are true."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, let's try to figure this out. The premises are a bit complex with all these made-up terms, but I'll take it step by step.\n\nFirst, let's list out the premises:\n\n1. Gorpuses are lempuses.\n2. Every brimpus is a tumpus.\n3. Each grimpus is a numpus.\n4. Each gorpus is a jompus and a zumpus and a grimpus.\n5. Everything that is a jompus or an impus or a lempus is a tumpus.\n6. Shumpuses are lorpuses.\n7. Vumpuses are impuses.\n8. Each zumpus is a wumpus.\n9. Every vumpus is a brimpus and a shumpus and a gorpus.\n10. Fae is a numpus.\n11. Fae is a vumpus.\n\nThe conclusion is: Fae is a shumpus or a jompus or a rompus.\n\nSo, I need to see if Fae being a shumpus, jompus, or rompus follows from the premises.\n\nStarting with Fae being a vumpus (premise 11). From premise 9, every vumpus is a brimpus, shumpus, and gorpus. So Fae is a brimpus, shumpus, and gorpus. That directly gives us that Fae is a shumpus. Therefore, the first part of the conclusion (shumpus) is true. Since the conclusion is a disjunction (OR), even if the other parts (jompus or rompus) are false, the entire conclusion is true because one part is true. But let's check if the others hold as well, just to confirm.\n\nAlso, since Fae is a gorpus (from premise 9), premise 4 says each gorpus is a jompus, zumpus, and grimpus. Therefore, Fae is a jompus. So Fae is both a shumpus and a jompus. So the conclusion's first two parts are true. Rompus isn't mentioned anywhere in the premises, so there's no info on that. But since at least shumpus and jompus are true, the conclusion \"shumpus OR jompus OR rompus\" is definitely true. Therefore, the answer should be (A) True.\n\nWait, but let me double-check. The premises say Fae is a vumpus, which makes her a shumpus (premise 9). Also, being a gorpus (from premise 9) leads to being a jompus (premise 4). So both shumpus and jompus are true for Fae. Therefore, the conclusion is true because at least one of the disjuncts is true. The presence of 'rompus' doesn't matter here. So the answer is True.",
+        "content": "Thoughts:\nFae is a vumpus.\nEvery vumpus is a shumpus and a gorpus.\nFae is a shumpus.\nEach gorpus is a jompus.\nFae is a gorpus.\nFae is a jompus.\nThe conclusion states Fae is a shumpus or a jompus or a rompus.\nAt least \"shumpus\" and \"jompus\" are true for Fae.\nThe conclusion is true if any of the disjuncts are true.\nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "Fae is a vumpus.",
+            "Every vumpus is a shumpus and a gorpus.",
+            "Fae is a shumpus.",
+            "Each gorpus is a jompus.",
+            "Fae is a gorpus.",
+            "Fae is a jompus.",
+            null,
+            "At least \"shumpus\" and \"jompus\" are true for Fae.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) gorpuses are lempuses.",
+                "fol": "∀x (gorpus(x) → lempus(x))",
+                "tptp": "![X]: (gorpus(X) => lempus(X))"
+            },
+            {
+                "ref": "(2) every brimpus is a tumpus.",
+                "fol": "∀x (brimpus(x) → tumpus(x))",
+                "tptp": "![X]: (brimpus(X) => tumpus(X))"
+            },
+            {
+                "ref": "(3) each grimpus is a numpus.",
+                "fol": "∀x (grimpus(x) → numpus(x))",
+                "tptp": "![X]: (grimpus(X) => numpus(X))"
+            },
+            {
+                "ref": "(4) each gorpus is a jompus and a zumpus and a grimpus.",
+                "fol": "∀x (gorpus(x) → (jompus(x) ∧ zumpus(x) ∧ grimpus(x)))",
+                "tptp": "![X]: (gorpus(X) => (jompus(X) & zumpus(X) & grimpus(X)))"
+            },
+            {
+                "ref": "(5) everything that is a jompus or an impus or a lempus is a tumpus.",
+                "fol": "∀x ((jompus(x) ∨ impus(x) ∨ lempus(x)) → tumpus(x))",
+                "tptp": "![X]: ((jompus(X) | impus(X) | lempus(X)) => tumpus(X))"
+            },
+            {
+                "ref": "(6) shumpuses are lorpuses.",
+                "fol": "∀x (shumpus(x) → lorpus(x))",
+                "tptp": "![X]: (shumpus(X) => lorpus(X))"
+            },
+            {
+                "ref": "(7) vumpuses are impuses.",
+                "fol": "∀x (vumpus(x) → impus(x))",
+                "tptp": "![X]: (vumpus(X) => impus(X))"
+            },
+            {
+                "ref": "(8) each zumpus is a wumpus.",
+                "fol": "∀x (zumpus(x) → wumpus(x))",
+                "tptp": "![X]: (zumpus(X) => wumpus(X))"
+            },
+            {
+                "ref": "(9) every vumpus is a brimpus and a shumpus and a gorpus.",
+                "fol": "∀x (vumpus(x) → (brimpus(x) ∧ shumpus(x) ∧ gorpus(x)))",
+                "tptp": "![X]: (vumpus(X) => (brimpus(X) & shumpus(X) & gorpus(X)))"
+            },
+            {
+                "ref": "(10) fae is a numpus.",
+                "fol": "numpus(fae)",
+                "tptp": "numpus(fae)"
+            },
+            {
+                "ref": "(11) fae is a vumpus.",
+                "fol": "vumpus(fae)",
+                "tptp": "vumpus(fae)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(8) fae is a shumpus or a jompus or a rompus.",
+            "fol": "shumpus(fae) ∨ jompus(fae) ∨ rompus(fae)",
+            "tptp": "shumpus(fae) | jompus(fae) | rompus(fae)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) fae is a vumpus.",
+                "fol": "vumpus(fae)",
+                "tptp": "vumpus(fae)"
+            },
+            {
+                "ref": "(2) every vumpus is a shumpus and a gorpus.",
+                "fol": "∀x (vumpus(x) → (shumpus(x) ∧ gorpus(x)))",
+                "tptp": "![X]: (vumpus(X) => (shumpus(X) & gorpus(X)))"
+            },
+            {
+                "ref": "(3) fae is a shumpus.",
+                "fol": "shumpus(fae)",
+                "tptp": "shumpus(fae)"
+            },
+            {
+                "ref": "(4) each gorpus is a jompus.",
+                "fol": "∀x (gorpus(x) → jompus(x))",
+                "tptp": "![X]: (gorpus(X) => jompus(X))"
+            },
+            {
+                "ref": "(5) fae is a gorpus.",
+                "fol": "gorpus(fae)",
+                "tptp": "gorpus(fae)"
+            },
+            {
+                "ref": "(6) fae is a jompus.",
+                "fol": "jompus(fae)",
+                "tptp": "jompus(fae)"
+            },
+            {
+                "ref": "(7) at least \"shumpus\" and \"jompus\" are true for fae.",
+                "fol": "shumpus(fae) ∧ jompus(fae)",
+                "tptp": "shumpus(fae) & jompus(fae)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Fae is a vumpus.",
+            "Every vumpus is a shumpus and a gorpus.",
+            "Fae is a shumpus.",
+            "Each gorpus is a jompus.",
+            "Fae is a gorpus.",
+            "Fae is a jompus.",
+            "At least \"shumpus\" and \"jompus\" are true for Fae."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    }
+]

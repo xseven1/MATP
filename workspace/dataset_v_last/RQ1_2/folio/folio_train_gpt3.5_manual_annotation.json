@@ -1,0 +1,2995 @@
+[
+    {
+        "idx": "7_17",
+        "premises": [
+            "Six, seven and eight are real numbers.",
+            "If a real number equals another real number added by one, the first number is larger.",
+            "If the number x is larger than the number y, then y is not larger than x.",
+            "Seven equals six plus one.",
+            "Eight equals seven plus one.",
+            "Two is positive.",
+            "If a number is positive, then the double of it is also positive.",
+            "Eight is the double of four.",
+            "Four is the double of two."
+        ],
+        "question": [
+            "Eight is larger than seven."
+        ],
+        "premises_gt_fol": [
+            "RealNum(num6) ∧ RealNum(num7) ∧ RealNum(num8)",
+            "∀x ∀y ((RealNum(x) ∧ RealNum(y) ∧ IsSuccessorOf(x, y)) → Larger(x, y))",
+            "∀x ∀y (Larger(x, y) → ¬Larger(y, x))",
+            "∃y(IsSuccessorOf(y, num6) ∧ Equals(num7, y))",
+            "∃y(IsSuccessorOf(y, num7) ∧ Equals(num8, y))",
+            "Positive(num2)",
+            "∀x ∀y ((Positive(x) ∧ IsDouble(y, x)) → Positive(y))",
+            "IsDouble(num8, num4)",
+            "IsDouble(num4, num2)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Six, seven, and eight are real numbers.",
+            "Seven equals six plus one.",
+            "Eight equals seven plus one.",
+            "If a real number equals another real number added by one, the first number is larger.",
+            "If the number x is larger than the number y, then y is not larger than x.",
+            "Two is positive.",
+            "If a number is positive, then the double of it is also positive.",
+            "Four is the double of two.",
+            "Eight is the double of four.",
+            "There is evidence to conclude that eight is larger than seven."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "Six, seven, and eight are real numbers.",
+            "Seven equals six plus one.",
+            "Eight equals seven plus one.",
+            "If a real number equals another real number added by one, the first number is larger.",
+            "If the number x is larger than the number y, then y is not larger than x.",
+            "Two is positive.",
+            "If a number is positive, then the double of it is also positive.",
+            "Four is the double of two.",
+            "Eight is the double of four.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1)",
+                "fol": "realnumber(six) ∧ realnumber(seven) ∧ realnumber(eight)",
+                "tptp": "realnumber(six) & realnumber(seven) & realnumber(eight)"
+            },
+            {
+                "ref": "(2)",
+                "fol": "∀x ∀y ((realnumber(x) ∧ realnumber(y) ∧ equals(x, add(y, one))) → larger(x, y))",
+                "tptp": "![X]: ![Y]: ((realnumber(X) & realnumber(Y) & equals(X, add(Y, one))) => larger(X, Y))"
+            },
+            {
+                "ref": "(3)",
+                "fol": "∀x ∀y (larger(x, y) → ¬larger(y, x))",
+                "tptp": "![X]: ![Y]: (larger(X, Y) => ~larger(Y, X))"
+            },
+            {
+                "ref": "(4)",
+                "fol": "equals(seven, add(six, one))",
+                "tptp": "equals(seven, add(six, one))"
+            },
+            {
+                "ref": "(5)",
+                "fol": "equals(eight, add(seven, one))",
+                "tptp": "equals(eight, add(seven, one))"
+            },
+            {
+                "ref": "(6)",
+                "fol": "positive(two)",
+                "tptp": "positive(two)"
+            },
+            {
+                "ref": "(7)",
+                "fol": "∀x (positive(x) → positive(double(x)))",
+                "tptp": "![X]: (positive(X) => positive(double(X)))"
+            },
+            {
+                "ref": "(8)",
+                "fol": "equals(eight, double(four))",
+                "tptp": "equals(eight, double(four))"
+            },
+            {
+                "ref": "(9)",
+                "fol": "equals(four, double(two))",
+                "tptp": "equals(four, double(two))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(10)",
+            "fol": "larger(eight, seven)",
+            "tptp": "larger(eight, seven)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1)",
+                "fol": "realnumber(six) ∧ realnumber(seven) ∧ realnumber(eight)",
+                "tptp": "realnumber(six) & realnumber(seven) & realnumber(eight)"
+            },
+            {
+                "ref": "(2)",
+                "fol": "equals(seven, add(six, one))",
+                "tptp": "equals(seven, add(six, one))"
+            },
+            {
+                "ref": "(3)",
+                "fol": "equals(eight, add(seven, one))",
+                "tptp": "equals(eight, add(seven, one))"
+            },
+            {
+                "ref": "(4)",
+                "fol": "∀x ∀y ((realnumber(x) ∧ realnumber(y) ∧ equals(x, add(y, one))) → larger(x, y))",
+                "tptp": "![X]: ![Y]: ((realnumber(X) & realnumber(Y) & equals(X, add(Y, one))) => larger(X, Y))"
+            },
+            {
+                "ref": "(5)",
+                "fol": "∀x ∀y (larger(x, y) → ¬larger(y, x))",
+                "tptp": "![X]: ![Y]: (larger(X, Y) => ~larger(Y, X))"
+            },
+            {
+                "ref": "(6)",
+                "fol": "positive(two)",
+                "tptp": "positive(two)"
+            },
+            {
+                "ref": "(7)",
+                "fol": "∀x (positive(x) → positive(double(x)))",
+                "tptp": "![X]: (positive(X) => positive(double(X)))"
+            },
+            {
+                "ref": "(8)",
+                "fol": "equals(four, double(two))",
+                "tptp": "equals(four, double(two))"
+            },
+            {
+                "ref": "(9)",
+                "fol": "equals(eight, double(four))",
+                "tptp": "equals(eight, double(four))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Six, seven, and eight are real numbers.",
+            "Seven equals six plus one.",
+            "Eight equals seven plus one.",
+            "If a real number equals another real number added by one, the first number is larger.",
+            "If the number x is larger than the number y, then y is not larger than x.",
+            "Two is positive.",
+            "If a number is positive, then the double of it is also positive.",
+            "Four is the double of two.",
+            "Eight is the double of four."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "170_490",
+        "premises": [
+            "The Mona Lisa is a world's best-known painting.",
+            "The Mona Lisa is a portrait painted by Leonardo da Vinci.",
+            "Leonardo da Vinci was a scientist and painter.",
+            "Painting genres can be history, portrait, animal, landscape, and still life."
+        ],
+        "question": [
+            "No world's best-known artworks are portraits."
+        ],
+        "premises_gt_fol": [
+            "Painting(monaLisa) ∧ TheWorldsBestKnown(monaLisa)",
+            "PaintedBy(monaLisa, leonardodaVinci) ∧ Portrait(monaLisa)",
+            "Scientist(leonardodaVinci) ∧ Painter(leonardodaVinci)",
+            "∀x (Painting(x) → (History(x) ∨ Portrait(x) ∨ Animal(x) ∨ Landscape(x) ∨ StillLife(x)))"
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "The Mona Lisa is a world's best-known painting.",
+            "The Mona Lisa is a portrait painted by Leonardo da Vinci.",
+            "Leonardo da Vinci was a scientist and painter.",
+            "The Mona Lisa falls under the portrait genre.",
+            "Painting genres include history, portrait, animal, landscape, and still life.",
+            "The conclusion states that no world's best-known artworks are portraits.",
+            "There is no direct evidence or rule provided in the premises to support the conclusion.",
+            "The Mona Lisa being a portrait does not automatically disqualify it from being a world's best-known artwork.",
+            "The conclusion is not supported by the given premises."
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "The Mona Lisa is a world's best-known painting.",
+            "The Mona Lisa is a portrait painted by Leonardo da Vinci.",
+            "Leonardo da Vinci was a scientist and painter.",
+            "The Mona Lisa falls under the portrait genre.",
+            "Painting genres include history, portrait, animal, landscape, and still life.",
+            null,
+            null,
+            "The Mona Lisa being a portrait does not automatically disqualify it from being a world's best-known artwork.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) the mona lisa is a world's best-known painting.",
+                "fol": "bestknown(monalisa) ∧ painting(monalisa)",
+                "tptp": "bestknown(monalisa) & painting(monalisa)"
+            },
+            {
+                "ref": "(2) the mona lisa is a portrait painted by leonardo da vinci.",
+                "fol": "portrait(monalisa) ∧ paintedby(monalisa, leonardo)",
+                "tptp": "portrait(monalisa) & paintedby(monalisa, leonardo)"
+            },
+            {
+                "ref": "(3) leonardo da vinci was a scientist and painter.",
+                "fol": "scientist(leonardo) ∧ painter(leonardo)",
+                "tptp": "scientist(leonardo) & painter(leonardo)"
+            },
+            {
+                "ref": "(4) painting genres can be history, portrait, animal, landscape, and still life.",
+                "fol": "∀x (genre(x) ↔ (history(x) ∨ portrait(x) ∨ animal(x) ∨ landscape(x) ∨ stilllife(x)))",
+                "tptp": "![X]: (genre(X) <=> (history(X) | portrait(X) | animal(X) | landscape(X) | stilllife(X)))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(7) no world's best-known artworks are portraits.",
+            "fol": "¬∃x (bestknown(x) ∧ portrait(x))",
+            "tptp": "~?[X]: (bestknown(X) & portrait(X))"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) the mona lisa is a world's best-known painting.",
+                "fol": "bestknown(monalisa) ∧ painting(monalisa)",
+                "tptp": "bestknown(monalisa) & painting(monalisa)"
+            },
+            {
+                "ref": "(2) the mona lisa is a portrait painted by leonardo da vinci.",
+                "fol": "portrait(monalisa) ∧ paintedby(monalisa, leonardo)",
+                "tptp": "portrait(monalisa) & paintedby(monalisa, leonardo)"
+            },
+            {
+                "ref": "(3) leonardo da vinci was a scientist and painter.",
+                "fol": "scientist(leonardo) ∧ painter(leonardo)",
+                "tptp": "scientist(leonardo) & painter(leonardo)"
+            },
+            {
+                "ref": "(4) the mona lisa falls under the portrait genre.",
+                "fol": "portrait(monalisa) ∧ genre(monalisa)",
+                "tptp": "portrait(monalisa) & genre(monalisa)"
+            },
+            {
+                "ref": "(5) painting genres include history, portrait, animal, landscape, and still life.",
+                "fol": "∀x (genre(x) ↔ (history(x) ∨ portrait(x) ∨ animal(x) ∨ landscape(x) ∨ stilllife(x)))",
+                "tptp": "![X]: (genre(X) <=> (history(X) | portrait(X) | animal(X) | landscape(X) | stilllife(X)))"
+            },
+            {
+                "ref": "(6) the mona lisa being a portrait does not automatically disqualify it from being a world's best-known artwork.",
+                "fol": "portrait(monalisa) → ¬¬bestknown(monalisa)",
+                "tptp": "portrait(monalisa) => ~~bestknown(monalisa)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "The Mona Lisa is a world's best-known painting.",
+            "The Mona Lisa is a portrait painted by Leonardo da Vinci.",
+            "Leonardo da Vinci was a scientist and painter.",
+            "The Mona Lisa falls under the portrait genre.",
+            "Painting genres include history, portrait, animal, landscape, and still life.",
+            "The Mona Lisa being a portrait does not automatically disqualify it from being a world's best-known artwork."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "42_121",
+        "premises": [
+            "James Cocks was a British lawyer.",
+            "James Cocks was a Whig politician who sat in the House of Commons.",
+            "A British is a European.",
+            "Any lawyer is familiar with laws.",
+            "Some Whigs speak French."
+        ],
+        "question": [
+            "Some European was familiar with laws."
+        ],
+        "premises_gt_fol": [
+            "British(james) ∧ Lawyer(james)",
+            "Whig(james) ∧ Politician(james) ∧ SatInHouseOfCommons(james)",
+            "∀x (British(x) → European(x))",
+            "∀x (Lawyer(x) → FamiliarWithLaws(x))",
+            "∃x ∃y (Whig(x) ∧ SpeakFrench(x)) ∧ (¬(x=y)) ∧ (Whig(y) ∧ SpeakFrench(y))"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "James Cocks was a British lawyer.",
+            "James Cocks was a Whig politician who sat in the House of Commons.",
+            "A British is a European.",
+            "Any lawyer is familiar with laws.",
+            "There is no direct link between being a Whig politician and being familiar with laws.",
+            "There is no direct link between being a Whig politician and being European.",
+            "There is no direct link between being British and being familiar with laws.",
+            "There is no direct link between being British and being European.",
+            "There is no direct link between being a lawyer and being European.",
+            "There is no direct link between being a lawyer and being a Whig politician.",
+            "Some Whigs speak French.",
+            "There is no direct link between speaking French and being familiar with laws.",
+            "There is no direct link between speaking French and being European.",
+            "There is no direct link between speaking French and being a lawyer.",
+            "There is no direct link between speaking French and being British.",
+            "There is no direct evidence to conclude that some European was familiar with laws."
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "James Cocks was a British lawyer.",
+            "James Cocks was a Whig politician who sat in the House of Commons.",
+            "A British is a European.",
+            "Any lawyer is familiar with laws.",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            "Some Whigs speak French.",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) james cocks was a british lawyer.",
+                "fol": "british(james) ∧ lawyer(james)",
+                "tptp": "british(james) & lawyer(james)"
+            },
+            {
+                "ref": "(2) james cocks was a whig politician who sat in the house of commons.",
+                "fol": "whig(james) ∧ politician(james) ∧ satinhouseofcommons(james)",
+                "tptp": "whig(james) & politician(james) & satinhouseofcommons(james)"
+            },
+            {
+                "ref": "(3) a british is a european.",
+                "fol": "∀x (british(x) → european(x))",
+                "tptp": "![X]: (british(X) => european(X))"
+            },
+            {
+                "ref": "(4) any lawyer is familiar with laws.",
+                "fol": "∀x (lawyer(x) → familiarwithlaws(x))",
+                "tptp": "![X]: (lawyer(X) => familiarwithlaws(X))"
+            },
+            {
+                "ref": "(5) some whigs speak french.",
+                "fol": "∃x (whig(x) ∧ speak(x, french))",
+                "tptp": "?[X]: (whig(X) & speak(X, french))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(6) some european was familiar with laws.",
+            "fol": "∃x (european(x) ∧ familiarwithlaws(x))",
+            "tptp": "?[X]: (european(X) & familiarwithlaws(X))"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) james cocks was a british lawyer.",
+                "fol": "british(james) ∧ lawyer(james)",
+                "tptp": "british(james) & lawyer(james)"
+            },
+            {
+                "ref": "(2) james cocks was a whig politician who sat in the house of commons.",
+                "fol": "whig(james) ∧ politician(james) ∧ satinhouseofcommons(james)",
+                "tptp": "whig(james) & politician(james) & satinhouseofcommons(james)"
+            },
+            {
+                "ref": "(3) a british is a european.",
+                "fol": "∀x (british(x) → european(x))",
+                "tptp": "![X]: (british(X) => european(X))"
+            },
+            {
+                "ref": "(4) any lawyer is familiar with laws.",
+                "fol": "∀x (lawyer(x) → familiarwithlaws(x))",
+                "tptp": "![X]: (lawyer(X) => familiarwithlaws(X))"
+            },
+            {
+                "ref": "(5) some whigs speak french.",
+                "fol": "∃x (whig(x) ∧ speak(x, french))",
+                "tptp": "?[X]: (whig(X) & speak(X, french))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "James Cocks was a British lawyer.",
+            "James Cocks was a Whig politician who sat in the House of Commons.",
+            "A British is a European.",
+            "Any lawyer is familiar with laws.",
+            "Some Whigs speak French."
+        ],
+        "AnswerCorrect": false,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "F1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "444_1279",
+        "premises": [
+            "All birds have wings.",
+            "Animals with wings aren't reptiles.",
+            "Some animals that fly are birds.",
+            "If something is an iguana, then it is a reptile. Simeng: All iguanas are reptiles. ",
+            "John is either both an iguana and a bird, or he is neither. ",
+            "John is an animal. "
+        ],
+        "question": [
+            "John is an animal that can fly and John is a bird."
+        ],
+        "premises_gt_fol": [
+            "∀x (Bird(x) → ∃y ∃z (¬(y=z) ∧ Wing(y) ∧ Wing(z) ∧ Have(x, y) ∧ Have(x, z)))",
+            "∀x (Animal(x) ∧ (∃y ∃z (¬(y=z) ∧ Wing(y) ∧ Wing(z) ∧ Have(x, y) ∧ Have(x, z))) → ¬Reptile(x))",
+            "∃x (Animal(x) ∧ Fly(x) ∧ Bird(x))",
+            "∀x (Iguana(x) → Reptile(x))",
+            "¬(Iguana(john) ⊕ Bird(john))",
+            "Animal(john)"
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "All birds have wings.",
+            "Animals with wings aren't reptiles.",
+            "Some animals that fly are birds.",
+            "If something is an iguana, then it is a reptile. Simeng: All iguanas are reptiles.",
+            "John is either both an iguana and a bird, or he is neither.",
+            "If John is an iguana, then he is a reptile.",
+            "If John is a bird, then he can fly.",
+            "If John is an iguana, then he is not a bird.",
+            "If John is a bird, then he is not an iguana.",
+            "John is an animal.",
+            "John is not an iguana.",
+            "John is not a reptile.",
+            "John is an animal that can fly and John is a bird."
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "All birds have wings.",
+            "Animals with wings aren't reptiles.",
+            "Some animals that fly are birds.",
+            "If something is an iguana, then it is a reptile. Simeng: All iguanas are reptiles.",
+            "John is either both an iguana and a bird, or he is neither.",
+            "If John is an iguana, then he is a reptile.",
+            "If John is a bird, then he can fly.",
+            "If John is an iguana, then he is not a bird.",
+            "If John is a bird, then he is not an iguana.",
+            "John is an animal.",
+            "John is not an iguana.",
+            "John is not a reptile.",
+            "John is an animal that can fly and John is a bird."
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) all birds have wings.",
+                "fol": "∀x (bird(x) → wings(x))",
+                "tptp": "![X]: (bird(X) => wings(X))"
+            },
+            {
+                "ref": "(2) animals with wings aren't reptiles.",
+                "fol": "∀x (wings(x) → ¬reptile(x))",
+                "tptp": "![X]: (wings(X) => ~reptile(X))"
+            },
+            {
+                "ref": "(3) some animals that fly are birds.",
+                "fol": "∃x (fly(x) ∧ bird(x))",
+                "tptp": "?[X]: (fly(X) & bird(X))"
+            },
+            {
+                "ref": "(4) if something is an iguana, then it is a reptile.",
+                "fol": "∀x (iguana(x) → reptile(x))",
+                "tptp": "![X]: (iguana(X) => reptile(X))"
+            },
+            {
+                "ref": "(5) john is either both an iguana and a bird, or he is neither.",
+                "fol": "(iguana(john) ∧ bird(john)) ⊕ ¬(iguana(john) ∨ bird(john))",
+                "tptp": "((~((iguana(john) & bird(john))) & (~(iguana(john) | bird(john)))) | (((iguana(john) & bird(john))) & ~(~(iguana(john) | bird(john)))))"
+            },
+            {
+                "ref": "(6) john is an animal.",
+                "fol": "animal(john)",
+                "tptp": "animal(john)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(14) john is an animal that can fly and john is a bird.",
+            "fol": "fly(john) ∧ bird(john)",
+            "tptp": "fly(john) & bird(john)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) all birds have wings.",
+                "fol": "∀x (bird(x) → wings(x))",
+                "tptp": "![X]: (bird(X) => wings(X))"
+            },
+            {
+                "ref": "(2) animals with wings aren't reptiles.",
+                "fol": "∀x (wings(x) → ¬reptile(x))",
+                "tptp": "![X]: (wings(X) => ~reptile(X))"
+            },
+            {
+                "ref": "(3) some animals that fly are birds.",
+                "fol": "∃x (fly(x) ∧ bird(x))",
+                "tptp": "?[X]: (fly(X) & bird(X))"
+            },
+            {
+                "ref": "(4) if something is an iguana, then it is a reptile.",
+                "fol": "∀x (iguana(x) → reptile(x))",
+                "tptp": "![X]: (iguana(X) => reptile(X))"
+            },
+            {
+                "ref": "(5) john is either both an iguana and a bird, or he is neither.",
+                "fol": "(iguana(john) ∧ bird(john)) ⊕ ¬(iguana(john) ∨ bird(john))",
+                "tptp": "((~((iguana(john) & bird(john))) & (~(iguana(john) | bird(john)))) | (((iguana(john) & bird(john))) & ~(~(iguana(john) | bird(john)))))"
+            },
+            {
+                "ref": "(6) if john is an iguana, then he is a reptile.",
+                "fol": "iguana(john) → reptile(john)",
+                "tptp": "iguana(john) => reptile(john)"
+            },
+            {
+                "ref": "(7) if john is a bird, then he can fly.",
+                "fol": "bird(john) → fly(john)",
+                "tptp": "bird(john) => fly(john)"
+            },
+            {
+                "ref": "(8) if john is an iguana, then he is not a bird.",
+                "fol": "iguana(john) → ¬bird(john)",
+                "tptp": "iguana(john) => ~bird(john)"
+            },
+            {
+                "ref": "(9) if john is a bird, then he is not an iguana.",
+                "fol": "bird(john) → ¬iguana(john)",
+                "tptp": "bird(john) => ~iguana(john)"
+            },
+            {
+                "ref": "(10) john is an animal.",
+                "fol": "animal(john)",
+                "tptp": "animal(john)"
+            },
+            {
+                "ref": "(11) john is not an iguana.",
+                "fol": "¬iguana(john)",
+                "tptp": "~iguana(john)"
+            },
+            {
+                "ref": "(12) john is not a reptile.",
+                "fol": "¬reptile(john)",
+                "tptp": "~reptile(john)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "All birds have wings.",
+            "Animals with wings aren't reptiles.",
+            "Some animals that fly are birds.",
+            "If something is an iguana, then it is a reptile. Simeng: All iguanas are reptiles.",
+            "John is either both an iguana and a bird, or he is neither.",
+            "If John is an iguana, then he is a reptile.",
+            "If John is a bird, then he can fly.",
+            "If John is an iguana, then he is not a bird.",
+            "If John is a bird, then he is not an iguana.",
+            "John is an animal.",
+            "John is not an iguana.",
+            "John is not a reptile."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "Unknown"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T2",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "Unknown"
+        ]
+    },
+    {
+        "idx": "312_777",
+        "premises": [
+            "To have the authorization to study in the United States as a foreigner, you must be enrolled in an academic program.",
+            "Those who are enrolled in an academic program can not work full-time.",
+            "Every who studies in the United States as a foreigner has the authorization to study in the U.S.",
+            "All PhD graduate can work full-time. ",
+            "If Tom does not study in the United States as a foreigner, he is enrolled in an academic program."
+        ],
+        "question": [
+            "Tom is not a PhD graduate."
+        ],
+        "premises_gt_fol": [
+            "∀x (Have(x, authorization, studyIn, unitedStates) → EnrolledIn(x, academicProgram))",
+            "∀x (EnrolledIn(x, academicProgram) → ¬Work(x, fullTime))",
+            "∀x (StudyIn(x, unitedStates) → Have(x, authorization, studyIn, unitedStates))",
+            "∀x (PhDGraduate(x) → Work(x, fullTime))",
+            "¬StudyIn(x, unitedStates) → EnrolledIn(x, academicProgram)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "To study in the United States as a foreigner, one must be enrolled in an academic program.",
+            "Those enrolled in an academic program cannot work full-time.",
+            "Those who study in the United States as a foreigner have the authorization to study in the U.S.",
+            "All PhD graduates can work full-time.",
+            "If Tom does not study in the United States as a foreigner, he is enrolled in an academic program.",
+            "If Tom is enrolled in an academic program, he cannot work full-time.",
+            "If Tom cannot work full-time, he is not a PhD graduate.",
+            "There is evidence to conclude that Tom is not a PhD graduate."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "To study in the United States as a foreigner, one must be enrolled in an academic program.",
+            "Those enrolled in an academic program cannot work full-time.",
+            "Those who study in the United States as a foreigner have the authorization to study in the U.S.",
+            "All PhD graduates can work full-time.",
+            "If Tom does not study in the United States as a foreigner, he is enrolled in an academic program.",
+            "If Tom is enrolled in an academic program, he cannot work full-time.",
+            "If Tom cannot work full-time, he is not a PhD graduate.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) to have the authorization to study in the united states as a foreigner, you must be enrolled in an academic program.",
+                "fol": "∀x (authorization(x) → enrolled(x))",
+                "tptp": "![X]: (authorization(X) => enrolled(X))"
+            },
+            {
+                "ref": "(2) those who are enrolled in an academic program can not work full-time.",
+                "fol": "∀x (enrolled(x) → ¬workfulltime(x))",
+                "tptp": "![X]: (enrolled(X) => ~workfulltime(X))"
+            },
+            {
+                "ref": "(3) every who studies in the united states as a foreigner has the authorization to study in the u.s.",
+                "fol": "∀x (studiesinus(x) → authorization(x))",
+                "tptp": "![X]: (studiesinus(X) => authorization(X))"
+            },
+            {
+                "ref": "(4) all phd graduate can work full-time.",
+                "fol": "∀x (phdgraduate(x) → workfulltime(x))",
+                "tptp": "![X]: (phdgraduate(X) => workfulltime(X))"
+            },
+            {
+                "ref": "(5) if tom does not study in the united states as a foreigner, he is enrolled in an academic program.",
+                "fol": "¬studiesinus(tom) → enrolled(tom)",
+                "tptp": "~studiesinus(tom) => enrolled(tom)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(8) tom is not a phd graduate.",
+            "fol": "¬phdgraduate(tom)",
+            "tptp": "~phdgraduate(tom)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) to study in the united states as a foreigner, one must be enrolled in an academic program.",
+                "fol": "∀x (studiesinus(x) → enrolled(x))",
+                "tptp": "![X]: (studiesinus(X) => enrolled(X))"
+            },
+            {
+                "ref": "(2) those enrolled in an academic program cannot work full-time.",
+                "fol": "∀x (enrolled(x) → ¬workfulltime(x))",
+                "tptp": "![X]: (enrolled(X) => ~workfulltime(X))"
+            },
+            {
+                "ref": "(3) those who study in the united states as a foreigner have the authorization to study in the u.s.",
+                "fol": "∀x (studiesinus(x) → authorization(x))",
+                "tptp": "![X]: (studiesinus(X) => authorization(X))"
+            },
+            {
+                "ref": "(4) all phd graduates can work full-time.",
+                "fol": "∀x (phdgraduate(x) → workfulltime(x))",
+                "tptp": "![X]: (phdgraduate(X) => workfulltime(X))"
+            },
+            {
+                "ref": "(5) if tom does not study in the united states as a foreigner, he is enrolled in an academic program.",
+                "fol": "¬studiesinus(tom) → enrolled(tom)",
+                "tptp": "~studiesinus(tom) => enrolled(tom)"
+            },
+            {
+                "ref": "(6) if tom is enrolled in an academic program, he cannot work full-time.",
+                "fol": "enrolled(tom) → ¬workfulltime(tom)",
+                "tptp": "enrolled(tom) => ~workfulltime(tom)"
+            },
+            {
+                "ref": "(7) if tom cannot work full-time, he is not a phd graduate.",
+                "fol": "¬workfulltime(tom) → ¬phdgraduate(tom)",
+                "tptp": "~workfulltime(tom) => ~phdgraduate(tom)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "To study in the United States as a foreigner, one must be enrolled in an academic program.",
+            "Those enrolled in an academic program cannot work full-time.",
+            "Those who study in the United States as a foreigner have the authorization to study in the U.S.",
+            "All PhD graduates can work full-time.",
+            "If Tom does not study in the United States as a foreigner, he is enrolled in an academic program.",
+            "If Tom is enrolled in an academic program, he cannot work full-time.",
+            "If Tom cannot work full-time, he is not a PhD graduate."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "82_249",
+        "premises": [
+            "Lawton Park is a neighborhood in Seattle. ",
+            "All citizens of Lawton Park use the zip code 98199. ",
+            "Tom is a citizen of Lawton Park.",
+            "Daniel uses the zip code 98199. "
+        ],
+        "question": [
+            "Tom uses the zip code 98199."
+        ],
+        "premises_gt_fol": [
+            "NeighbourhoodIn(lawtonPark, seattle)",
+            "∀x (Residentof(x, lawtonPark) → UseZipCode(x, num98199))",
+            "ResidentOf(tom, lawtonPark)",
+            "UseZipCode(daniel, num98199)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Lawton Park is a neighborhood in Seattle.",
+            "All citizens of Lawton Park use the zip code 98199.",
+            "Tom is a citizen of Lawton Park.",
+            "Daniel uses the zip code 98199.",
+            "There is no direct evidence linking Tom to using the zip code 98199.",
+            "It is possible that Tom uses a different zip code.",
+            "The premises do not provide a direct link between Tom and the zip code 98199.",
+            "Conclusion:",
+            "(B) False"
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "Lawton Park is a neighborhood in Seattle.",
+            "All citizens of Lawton Park use the zip code 98199.",
+            "Tom is a citizen of Lawton Park.",
+            "Daniel uses the zip code 98199.",
+            null,
+            "It is possible that Tom uses a different zip code.",
+            "The premises do not provide a direct link between Tom and the zip code 98199.",
+            null,
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) lawton park is a neighborhood in seattle.",
+                "fol": "neighborhood(lawtonpark) ∧ in(lawtonpark, seattle)",
+                "tptp": "neighborhood(lawtonpark) & in(lawtonpark, seattle)"
+            },
+            {
+                "ref": "(2) all citizens of lawton park use the zip code 98199.",
+                "fol": "∀x (citizen(x, lawtonpark) → usezipcode(x, 98199))",
+                "tptp": "![X]: (citizen(X, lawtonpark) => usezipcode(X, 98199))"
+            },
+            {
+                "ref": "(3) tom is a citizen of lawton park.",
+                "fol": "citizen(tom, lawtonpark)",
+                "tptp": "citizen(tom, lawtonpark)"
+            },
+            {
+                "ref": "(4) daniel uses the zip code 98199.",
+                "fol": "usezipcode(daniel, 98199)",
+                "tptp": "usezipcode(daniel, 98199)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(7) tom uses the zip code 98199.",
+            "fol": "usezipcode(tom, 98199)",
+            "tptp": "usezipcode(tom, 98199)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) lawton park is a neighborhood in seattle.",
+                "fol": "neighborhood(lawtonpark) ∧ in(lawtonpark, seattle)",
+                "tptp": "neighborhood(lawtonpark) & in(lawtonpark, seattle)"
+            },
+            {
+                "ref": "(2) all citizens of lawton park use the zip code 98199.",
+                "fol": "∀x (citizen(x, lawtonpark) → usezipcode(x, 98199))",
+                "tptp": "![X]: (citizen(X, lawtonpark) => usezipcode(X, 98199))"
+            },
+            {
+                "ref": "(3) tom is a citizen of lawton park.",
+                "fol": "citizen(tom, lawtonpark)",
+                "tptp": "citizen(tom, lawtonpark)"
+            },
+            {
+                "ref": "(4) daniel uses the zip code 98199.",
+                "fol": "usezipcode(daniel, 98199)",
+                "tptp": "usezipcode(daniel, 98199)"
+            },
+            {
+                "ref": "(5) it is possible that tom uses a different zip code.",
+                "fol": "∃x (citizen(tom, lawtonpark) ∧ ¬usezipcode(tom, 98199))",
+                "tptp": "?[X]: (citizen(tom, lawtonpark) & ~usezipcode(tom, 98199))"
+            },
+            {
+                "ref": "(6) the premises do not provide a direct link between tom and the zip code 98199.",
+                "fol": "¬(citizen(tom, lawtonpark) → usezipcode(tom, 98199))",
+                "tptp": "~(citizen(tom, lawtonpark) => usezipcode(tom, 98199))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Lawton Park is a neighborhood in Seattle.",
+            "All citizens of Lawton Park use the zip code 98199.",
+            "Tom is a citizen of Lawton Park.",
+            "Daniel uses the zip code 98199.",
+            "It is possible that Tom uses a different zip code.",
+            "The premises do not provide a direct link between Tom and the zip code 98199."
+        ],
+        "AnswerCorrect": false,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "False",
+            "False"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "F2",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "False",
+            "False"
+        ]
+    },
+    {
+        "idx": "181_521",
+        "premises": [
+            "American superheroes come from either the DC Universe or Marvel Universe.",
+            "Captain America is one of America's top-ten favorite superheroes",
+            "Captain America does not come from the DC Universe.",
+            "America's top-ten favorite superheroes speak English.",
+            "Some superheroes speak both English and Spanish. "
+        ],
+        "question": [
+            "Captain America does not speak English."
+        ],
+        "premises_gt_fol": [
+            "∀x (Superhero(x) ∧ American(x) → ComeFrom(x, dCUniverse) ⊕ ComeFrom(x, marvelUniverse)) ",
+            "American(captainAmerica) ∧ TopTenFavorite(captainAmerica) ∧ Superhero(captainAmerica) ",
+            "¬ComeFrom(captainAmerica, dCUniverse)",
+            "∀x (American(x) ∧ TopTenFavorite(x) ∧ Superhero(x)  → Speak(x, english)) ",
+            "∃x (Superhero(x) → (Speak(x, english) ∧ Speak(x, spanish)))"
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "Captain America is one of America's top-ten favorite superheroes.",
+            "Captain America does not come from the DC Universe.",
+            "America's top-ten favorite superheroes speak English.",
+            "If Captain America does not come from the DC Universe and is one of America's top-ten favorite superheroes, then he comes from the Marvel Universe.",
+            "Superheroes from the Marvel Universe speak English.",
+            "There is no evidence to suggest that Captain America does not speak English.",
+            "Conclusion: Captain America speaks English."
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "Captain America is one of America's top-ten favorite superheroes.",
+            "Captain America does not come from the DC Universe.",
+            "America's top-ten favorite superheroes speak English.",
+            "If Captain America does not come from the DC Universe and is one of America's top-ten favorite superheroes, then he comes from the Marvel Universe.",
+            "Superheroes from the Marvel Universe speak English.",
+            null,
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) american superheroes come from either the dc universe or marvel universe.",
+                "fol": "∀x (americansuperhero(x) → (fromdc(x) ⊕ frommarvel(x)))",
+                "tptp": "![X]: (americansuperhero(X) => (((~(fromdc(X)) & (frommarvel(X))) | ((fromdc(X)) & ~(frommarvel(X))))))"
+            },
+            {
+                "ref": "(2) captain america is one of america's top-ten favorite superheroes.",
+                "fol": "toptenfavorite(captainamerica)",
+                "tptp": "toptenfavorite(captainamerica)"
+            },
+            {
+                "ref": "(3) captain america does not come from the dc universe.",
+                "fol": "¬fromdc(captainamerica)",
+                "tptp": "~fromdc(captainamerica)"
+            },
+            {
+                "ref": "(4) america's top-ten favorite superheroes speak english.",
+                "fol": "∀x (toptenfavorite(x) → speakenglish(x))",
+                "tptp": "![X]: (toptenfavorite(X) => speakenglish(X))"
+            },
+            {
+                "ref": "(5) some superheroes speak both english and spanish.",
+                "fol": "∃x (speakenglish(x) ∧ speakspanish(x))",
+                "tptp": "?[X]: (speakenglish(X) & speakspanish(X))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(6) captain america does not speak english.",
+            "fol": "¬speakenglish(captainamerica)",
+            "tptp": "~speakenglish(captainamerica)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) captain america is one of america's top-ten favorite superheroes.",
+                "fol": "toptenfavorite(captainamerica)",
+                "tptp": "toptenfavorite(captainamerica)"
+            },
+            {
+                "ref": "(2) captain america does not come from the dc universe.",
+                "fol": "¬fromdc(captainamerica)",
+                "tptp": "~fromdc(captainamerica)"
+            },
+            {
+                "ref": "(3) america's top-ten favorite superheroes speak english.",
+                "fol": "∀x (toptenfavorite(x) → speakenglish(x))",
+                "tptp": "![X]: (toptenfavorite(X) => speakenglish(X))"
+            },
+            {
+                "ref": "(4) if captain america does not come from the dc universe and is one of america's top-ten favorite superheroes, then he comes from the marvel universe.",
+                "fol": "(¬fromdc(captainamerica) ∧ toptenfavorite(captainamerica)) → frommarvel(captainamerica)",
+                "tptp": "(~fromdc(captainamerica) & toptenfavorite(captainamerica)) => frommarvel(captainamerica)"
+            },
+            {
+                "ref": "(5) superheroes from the marvel universe speak english.",
+                "fol": "∀x (frommarvel(x) → speakenglish(x))",
+                "tptp": "![X]: (frommarvel(X) => speakenglish(X))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Captain America is one of America's top-ten favorite superheroes.",
+            "Captain America does not come from the DC Universe.",
+            "America's top-ten favorite superheroes speak English.",
+            "If Captain America does not come from the DC Universe and is one of America's top-ten favorite superheroes, then he comes from the Marvel Universe.",
+            "Superheroes from the Marvel Universe speak English."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "Unknown",
+            "Unknown"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T2",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "Unknown",
+            "Unknown"
+        ]
+    },
+    {
+        "idx": "431_1230",
+        "premises": [
+            "No Boeing-737 plane has more than 300 seats. ",
+            "All of the planes acquired by Delta in this batch are Boeing-737. ",
+            "Planes either have more than 300 seats or have a capacity of 100 passengers. ",
+            "All planes with a capacity of 100 passengers are scheduled for a short-distance flight. ",
+            "All planes with a capacity of 100 passengers are produced before 2010. ",
+            "Jake32 is either a Boeing-737 plane or a plane acquired by Delta in this batch.",
+            "T10 is either both a Boeing-737 plane and acquired by Delta in this batch, or it is neither."
+        ],
+        "question": [
+            "Jake32 is neither produced before 2010 nor scheduled for a short-distance flight."
+        ],
+        "premises_gt_fol": [
+            "∀x (Plane(x) ∧ Boeing737(x) → (¬∃y(GreaterThan(y, num300) ∧ EquippedWithSeats(x,y)))",
+            "∀x (Plane(x) ∧ AcquiredBy(x, delta) → Boeing737(x))",
+            "∀x (Plane(x) → ((∃y(GreaterThan(y, num300) ∧ EquippedWithSeats(x,y))) ⊕ (∃y(Equals(y, num100) ∧ EquippedWithSeats(x,y))))",
+            "∀x (Plane(x) ∧ ∃y(Equals(y, num100) ∧ EquippedWithSeats(x,y)) → ScheduledFor(x, shortdistanceflight))",
+            "∀x (Plane(x) ∧ ∃y(Equals(y, num100) ∧ EquippedWithSeats(x,y)) → ∃z(Before(z, yr2010) ∧ Produced(x, z))",
+            "(Boeing737(jake32) ∧ Plane(jake32)) ⊕ (AcquiredByDeltaInThisBatch(jake32) ∧ Plane(jake32))",
+            "¬((Boeing737(t10) ∧ Plane(t10)) ⊕ (AcquiredByDeltaInThisBatch(t10) ∧ Plane(t10)))"
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "No Boeing-737 plane has more than 300 seats.",
+            "All planes acquired by Delta in this batch are Boeing-737.",
+            "Planes either have more than 300 seats or have a capacity of 100 passengers.",
+            "All planes with a capacity of 100 passengers are scheduled for a short-distance flight.",
+            "All planes with a capacity of 100 passengers are produced before 2010.",
+            "If a plane is a Boeing-737 and acquired by Delta in this batch, it has a capacity of 100 passengers.",
+            "Jake32 is either a Boeing-737 plane or a plane acquired by Delta in this batch.",
+            "T10 is either both a Boeing-737 plane and acquired by Delta in this batch, or it is neither.",
+            "If T10 is a Boeing-737 plane and acquired by Delta in this batch, it has a capacity of 100 passengers.",
+            "If T10 is a Boeing-737 plane and acquired by Delta in this batch, it is scheduled for a short-distance flight.",
+            "If T10 is a Boeing-737 plane and acquired by Delta in this batch, it is produced before 2010.",
+            "If T10 is neither a Boeing-737 plane nor acquired by Delta in this batch, it is not produced before 2010 or scheduled for a short-distance flight.",
+            "There is evidence to conclude that Jake32 is neither produced before 2010 nor scheduled for a short-distance flight."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "No Boeing-737 plane has more than 300 seats.",
+            "All planes acquired by Delta in this batch are Boeing-737.",
+            "Planes either have more than 300 seats or have a capacity of 100 passengers.",
+            "All planes with a capacity of 100 passengers are scheduled for a short-distance flight.",
+            "All planes with a capacity of 100 passengers are produced before 2010.",
+            "If a plane is a Boeing-737 and acquired by Delta in this batch, it has a capacity of 100 passengers.",
+            "Jake32 is either a Boeing-737 plane or a plane acquired by Delta in this batch.",
+            "T10 is either both a Boeing-737 plane and acquired by Delta in this batch, or it is neither.",
+            "If T10 is a Boeing-737 plane and acquired by Delta in this batch, it has a capacity of 100 passengers.",
+            "If T10 is a Boeing-737 plane and acquired by Delta in this batch, it is scheduled for a short-distance flight.",
+            "If T10 is a Boeing-737 plane and acquired by Delta in this batch, it is produced before 2010.",
+            "If T10 is neither a Boeing-737 plane nor acquired by Delta in this batch, it is not produced before 2010 or scheduled for a short-distance flight.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) no boeing-737 plane has more than 300 seats.",
+                "fol": "¬∃x (boeing737(x) ∧ morethan300seats(x))",
+                "tptp": "~?[X]: (boeing737(X) & morethan300seats(X))"
+            },
+            {
+                "ref": "(2) all of the planes acquired by delta in this batch are boeing-737.",
+                "fol": "∀x (acquiredbydelta(x) → boeing737(x))",
+                "tptp": "![X]: (acquiredbydelta(X) => boeing737(X))"
+            },
+            {
+                "ref": "(3) planes either have more than 300 seats or have a capacity of 100 passengers.",
+                "fol": "∀x (morethan300seats(x) ⊕ capacity100(x))",
+                "tptp": "![X]: (((~(morethan300seats(X)) & (capacity100(X))) | ((morethan300seats(X)) & ~(capacity100(X)))))"
+            },
+            {
+                "ref": "(4) all planes with a capacity of 100 passengers are scheduled for a short-distance flight.",
+                "fol": "∀x (capacity100(x) → shortdistanceflight(x))",
+                "tptp": "![X]: (capacity100(X) => shortdistanceflight(X))"
+            },
+            {
+                "ref": "(5) all planes with a capacity of 100 passengers are produced before 2010.",
+                "fol": "∀x (capacity100(x) → producedbefore2010(x))",
+                "tptp": "![X]: (capacity100(X) => producedbefore2010(X))"
+            },
+            {
+                "ref": "(6) jake32 is either a boeing-737 plane or a plane acquired by delta in this batch.",
+                "fol": "boeing737(jake32) ⊕ acquiredbydelta(jake32)",
+                "tptp": "((~(boeing737(jake32)) & (acquiredbydelta(jake32))) | ((boeing737(jake32)) & ~(acquiredbydelta(jake32))))"
+            },
+            {
+                "ref": "(7) t10 is either both a boeing-737 plane and acquired by delta in this batch, or it is neither.",
+                "fol": "(boeing737(t10) ∧ acquiredbydelta(t10)) ⊕ ¬(boeing737(t10) ∨ acquiredbydelta(t10))",
+                "tptp": "((~((boeing737(t10) & acquiredbydelta(t10))) & (~(boeing737(t10) | acquiredbydelta(t10)))) | (((boeing737(t10) & acquiredbydelta(t10))) & ~(~(boeing737(t10) | acquiredbydelta(t10)))))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(13) jake32 is neither produced before 2010 nor scheduled for a short-distance flight.",
+            "fol": "¬producedbefore2010(jake32) ∧ ¬shortdistanceflight(jake32)",
+            "tptp": "~producedbefore2010(jake32) & ~shortdistanceflight(jake32)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) no boeing-737 plane has more than 300 seats.",
+                "fol": "¬∃x (boeing737(x) ∧ morethan300seats(x))",
+                "tptp": "~?[X]: (boeing737(X) & morethan300seats(X))"
+            },
+            {
+                "ref": "(2) all planes acquired by delta in this batch are boeing-737.",
+                "fol": "∀x (acquiredbydelta(x) → boeing737(x))",
+                "tptp": "![X]: (acquiredbydelta(X) => boeing737(X))"
+            },
+            {
+                "ref": "(3) planes either have more than 300 seats or have a capacity of 100 passengers.",
+                "fol": "∀x (morethan300seats(x) ⊕ capacity100(x))",
+                "tptp": "![X]: (((~(morethan300seats(X)) & (capacity100(X))) | ((morethan300seats(X)) & ~(capacity100(X)))))"
+            },
+            {
+                "ref": "(4) all planes with a capacity of 100 passengers are scheduled for a short-distance flight.",
+                "fol": "∀x (capacity100(x) → shortdistanceflight(x))",
+                "tptp": "![X]: (capacity100(X) => shortdistanceflight(X))"
+            },
+            {
+                "ref": "(5) all planes with a capacity of 100 passengers are produced before 2010.",
+                "fol": "∀x (capacity100(x) → producedbefore2010(x))",
+                "tptp": "![X]: (capacity100(X) => producedbefore2010(X))"
+            },
+            {
+                "ref": "(6) if a plane is a boeing-737 and acquired by delta in this batch, it has a capacity of 100 passengers.",
+                "fol": "∀x ((boeing737(x) ∧ acquiredbydelta(x)) → capacity100(x))",
+                "tptp": "![X]: ((boeing737(X) & acquiredbydelta(X)) => capacity100(X))"
+            },
+            {
+                "ref": "(7) jake32 is either a boeing-737 plane or a plane acquired by delta in this batch.",
+                "fol": "boeing737(jake32) ⊕ acquiredbydelta(jake32)",
+                "tptp": "((~(boeing737(jake32)) & (acquiredbydelta(jake32))) | ((boeing737(jake32)) & ~(acquiredbydelta(jake32))))"
+            },
+            {
+                "ref": "(8) t10 is either both a boeing-737 plane and acquired by delta in this batch, or it is neither.",
+                "fol": "(boeing737(t10) ∧ acquiredbydelta(t10)) ⊕ ¬(boeing737(t10) ∨ acquiredbydelta(t10))",
+                "tptp": "((~((boeing737(t10) & acquiredbydelta(t10))) & (~(boeing737(t10) | acquiredbydelta(t10)))) | (((boeing737(t10) & acquiredbydelta(t10))) & ~(~(boeing737(t10) | acquiredbydelta(t10)))))"
+            },
+            {
+                "ref": "(9) if t10 is a boeing-737 plane and acquired by delta in this batch, it has a capacity of 100 passengers.",
+                "fol": "(boeing737(t10) ∧ acquiredbydelta(t10)) → capacity100(t10)",
+                "tptp": "(boeing737(t10) & acquiredbydelta(t10)) => capacity100(t10)"
+            },
+            {
+                "ref": "(10) if t10 is a boeing-737 plane and acquired by delta in this batch, it is scheduled for a short-distance flight.",
+                "fol": "(boeing737(t10) ∧ acquiredbydelta(t10)) → shortdistanceflight(t10)",
+                "tptp": "(boeing737(t10) & acquiredbydelta(t10)) => shortdistanceflight(t10)"
+            },
+            {
+                "ref": "(11) if t10 is a boeing-737 plane and acquired by delta in this batch, it is produced before 2010.",
+                "fol": "(boeing737(t10) ∧ acquiredbydelta(t10)) → producedbefore2010(t10)",
+                "tptp": "(boeing737(t10) & acquiredbydelta(t10)) => producedbefore2010(t10)"
+            },
+            {
+                "ref": "(12) if t10 is neither a boeing-737 plane nor acquired by delta in this batch, it is not produced before 2010 or scheduled for a short-distance flight.",
+                "fol": "¬(boeing737(t10) ∨ acquiredbydelta(t10)) → (¬producedbefore2010(t10) ∨ ¬shortdistanceflight(t10))",
+                "tptp": "~(boeing737(t10) | acquiredbydelta(t10)) => (~producedbefore2010(t10) | ~shortdistanceflight(t10))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "No Boeing-737 plane has more than 300 seats.",
+            "All planes acquired by Delta in this batch are Boeing-737.",
+            "Planes either have more than 300 seats or have a capacity of 100 passengers.",
+            "All planes with a capacity of 100 passengers are scheduled for a short-distance flight.",
+            "All planes with a capacity of 100 passengers are produced before 2010.",
+            "If a plane is a Boeing-737 and acquired by Delta in this batch, it has a capacity of 100 passengers.",
+            "Jake32 is either a Boeing-737 plane or a plane acquired by Delta in this batch.",
+            "T10 is either both a Boeing-737 plane and acquired by Delta in this batch, or it is neither.",
+            "If T10 is a Boeing-737 plane and acquired by Delta in this batch, it has a capacity of 100 passengers.",
+            "If T10 is a Boeing-737 plane and acquired by Delta in this batch, it is scheduled for a short-distance flight.",
+            "If T10 is a Boeing-737 plane and acquired by Delta in this batch, it is produced before 2010.",
+            "If T10 is neither a Boeing-737 plane nor acquired by Delta in this batch, it is not produced before 2010 or scheduled for a short-distance flight."
+        ],
+        "AnswerCorrect": false,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "Unknown"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "F2",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "Unknown"
+        ]
+    },
+    {
+        "idx": "206_591",
+        "premises": [
+            "China is one of the BRICS, and its economy is emerging.",
+            "If someone is from China, then they are from a country of BRICS.",
+            "India is one of the BRICS, and its economy is emerging.",
+            "If someone is from India, then they are in a country of BRICS.",
+            "All people from China are Chinese people.",
+            "All people from India are Indian people.",
+            "There is a person from India."
+        ],
+        "question": [
+            "There is an Indian people from BRICS."
+        ],
+        "premises_gt_fol": [
+            "∃x (BRIC(x) ∧ ¬(x=china) ∧ BRIC(china) ∧ Emerging(chinaEconomy))",
+            "∀x (From(x, china) → From(x, bric))",
+            "BRIC(india) ∧ Emerging(indiaEconomy)",
+            "∀x (From(x, india) → From(x, bric))",
+            "∀x (From(x, china) → Chinese(x))",
+            "∀x (From(x, india) → Indian(x))",
+            "∃x (From(x, india))"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "China is one of the BRICS, and its economy is emerging.",
+            "If someone is from China, then they are from a country of BRICS.",
+            "India is one of the BRICS, and its economy is emerging.",
+            "If someone is from India, then they are in a country of BRICS.",
+            "All people from China are Chinese people.",
+            "All people from India are Indian people.",
+            "There is a person from India.",
+            "Since the conclusion states \"There is an Indian people from BRICS,\" it is not directly supported by the premises."
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "China is one of the BRICS, and its economy is emerging.",
+            "If someone is from China, then they are from a country of BRICS.",
+            "India is one of the BRICS, and its economy is emerging.",
+            "If someone is from India, then they are in a country of BRICS.",
+            "All people from China are Chinese people.",
+            "All people from India are Indian people.",
+            null,
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) china is one of the brics, and its economy is emerging.",
+                "fol": "brics(china) ∧ emergingeconomy(china)",
+                "tptp": "brics(china) & emergingeconomy(china)"
+            },
+            {
+                "ref": "(2) if someone is from china, then they are from a country of brics.",
+                "fol": "∀x (from(x, china) → frombrics(x))",
+                "tptp": "![X]: (from(X, china) => frombrics(X))"
+            },
+            {
+                "ref": "(3) india is one of the brics, and its economy is emerging.",
+                "fol": "brics(india) ∧ emergingeconomy(india)",
+                "tptp": "brics(india) & emergingeconomy(india)"
+            },
+            {
+                "ref": "(4) if someone is from india, then they are in a country of brics.",
+                "fol": "∀x (from(x, india) → frombrics(x))",
+                "tptp": "![X]: (from(X, india) => frombrics(X))"
+            },
+            {
+                "ref": "(5) all people from china are chinese people.",
+                "fol": "∀x (from(x, china) → chinese(x))",
+                "tptp": "![X]: (from(X, china) => chinese(X))"
+            },
+            {
+                "ref": "(6) all people from india are indian people.",
+                "fol": "∀x (from(x, india) → indian(x))",
+                "tptp": "![X]: (from(X, india) => indian(X))"
+            },
+            {
+                "ref": "(7) there is a person from india.",
+                "fol": "∃x (from(x, india))",
+                "tptp": "?[X]: (from(X, india))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(7) there is an indian people from brics.",
+            "fol": "∃x (indian(x) ∧ frombrics(x))",
+            "tptp": "?[X]: (indian(X) & frombrics(X))"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) china is one of the brics, and its economy is emerging.",
+                "fol": "brics(china) ∧ emergingeconomy(china)",
+                "tptp": "brics(china) & emergingeconomy(china)"
+            },
+            {
+                "ref": "(2) if someone is from china, then they are from a country of brics.",
+                "fol": "∀x (from(x, china) → frombrics(x))",
+                "tptp": "![X]: (from(X, china) => frombrics(X))"
+            },
+            {
+                "ref": "(3) india is one of the brics, and its economy is emerging.",
+                "fol": "brics(india) ∧ emergingeconomy(india)",
+                "tptp": "brics(india) & emergingeconomy(india)"
+            },
+            {
+                "ref": "(4) if someone is from india, then they are in a country of brics.",
+                "fol": "∀x (from(x, india) → frombrics(x))",
+                "tptp": "![X]: (from(X, india) => frombrics(X))"
+            },
+            {
+                "ref": "(5) all people from china are chinese people.",
+                "fol": "∀x (from(x, china) → chinese(x))",
+                "tptp": "![X]: (from(X, china) => chinese(X))"
+            },
+            {
+                "ref": "(6) all people from india are indian people.",
+                "fol": "∀x (from(x, india) → indian(x))",
+                "tptp": "![X]: (from(X, india) => indian(X))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "China is one of the BRICS, and its economy is emerging.",
+            "If someone is from China, then they are from a country of BRICS.",
+            "India is one of the BRICS, and its economy is emerging.",
+            "If someone is from India, then they are in a country of BRICS.",
+            "All people from China are Chinese people.",
+            "All people from India are Indian people."
+        ],
+        "AnswerCorrect": false,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": false,
+        "cate": "F1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "110_334",
+        "premises": [
+            "St Johnstone is a Scottish team.",
+            "St Johnstone is part of the Scottish Premiership league.",
+            "If a team is part of the league, it has joined the league.",
+            "St Johnstone and Minsk are different teams.",
+            "For two teams, either one team wins, or the other team wins.",
+            "Minsk won against St Johnstone."
+        ],
+        "question": [
+            "St Johnstone won against Minsk."
+        ],
+        "premises_gt_fol": [
+            "Scottish(stJohnstone) ∧ Team(stJohnstone)",
+            "PartOf(stJohnstone, scottishPremiership) ∧ League(scottishPremiership)",
+            "∀x ∀y (Team(x) ∧ League(y) ∧ PartOf(x, y) → Joined(x, y))",
+            "¬(misnk=stJohnstone)",
+            "∀x ∀y (¬(x=y) → WonAgainst(x, y) ⊕ WonAgainst(y, x))",
+            "WonAgainst(minsk, stJohnstone)"
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "St Johnstone is a Scottish team.",
+            "St Johnstone is part of the Scottish Premiership league.",
+            "If a team is part of the league, it has joined the league.",
+            "St Johnstone and Minsk are different teams.",
+            "For two teams, either one team wins, or the other team wins.",
+            "Minsk won against St Johnstone.",
+            "Based on the premise that for two teams, either one team wins, or the other team wins, and the fact that Minsk won against St Johnstone, it logically follows that St Johnstone did not win against Minsk.",
+            "The conclusion \"St Johnstone won against Minsk\" is False."
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "St Johnstone is a Scottish team.",
+            "St Johnstone is part of the Scottish Premiership league.",
+            "If a team is part of the league, it has joined the league.",
+            "St Johnstone and Minsk are different teams.",
+            "For two teams, either one team wins, or the other team wins.",
+            "Minsk won against St Johnstone.",
+            "Based on the premise that for two teams, either one team wins, or the other team wins, and the fact that Minsk won against St Johnstone, it logically follows that St Johnstone did not win against Minsk.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1)",
+                "fol": "scottish(st_johnstone)",
+                "tptp": "scottish(st_johnstone)"
+            },
+            {
+                "ref": "(2)",
+                "fol": "partof(st_johnstone, scottish_premiership)",
+                "tptp": "partof(st_johnstone, scottish_premiership)"
+            },
+            {
+                "ref": "(3)",
+                "fol": "∀x (partof(x, league) → joined(x, league))",
+                "tptp": "![X]: (partof(X, league) => joined(X, league))"
+            },
+            {
+                "ref": "(4)",
+                "fol": "st_johnstone ≠ minsk",
+                "tptp": "st_johnstone != minsk"
+            },
+            {
+                "ref": "(5)",
+                "fol": "∀x ∀y (x ≠ y → (win(x, y) ⊕ win(y, x)))",
+                "tptp": "![X]: ![Y]: (X != Y => (((~(win(X, Y)) & (win(Y, X))) | ((win(X, Y)) & ~(win(Y, X))))))"
+            },
+            {
+                "ref": "(6)",
+                "fol": "win(minsk, st_johnstone)",
+                "tptp": "win(minsk, st_johnstone)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(8)",
+            "fol": "win(st_johnstone, minsk)",
+            "tptp": "win(st_johnstone, minsk)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1)",
+                "fol": "scottish(st_johnstone)",
+                "tptp": "scottish(st_johnstone)"
+            },
+            {
+                "ref": "(2)",
+                "fol": "partof(st_johnstone, scottish_premiership)",
+                "tptp": "partof(st_johnstone, scottish_premiership)"
+            },
+            {
+                "ref": "(3)",
+                "fol": "∀x (partof(x, league) → joined(x, league))",
+                "tptp": "![X]: (partof(X, league) => joined(X, league))"
+            },
+            {
+                "ref": "(5)",
+                "fol": "∀x ∀y (x ≠ y → (win(x, y) ⊕ win(y, x)))",
+                "tptp": "![X]: ![Y]: (X != Y => (((~(win(X, Y)) & (win(Y, X))) | ((win(X, Y)) & ~(win(Y, X))))))"
+            },
+            {
+                "ref": "(6)",
+                "fol": "win(minsk, st_johnstone)",
+                "tptp": "win(minsk, st_johnstone)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "St Johnstone is a Scottish team.",
+            "St Johnstone is part of the Scottish Premiership league.",
+            "If a team is part of the league, it has joined the league.",
+            "St Johnstone and Minsk are different teams.",
+            "For two teams, either one team wins, or the other team wins."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": false,
+        "cate": "T3",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "423_1198",
+        "premises": [
+            "Everyone at the business conference is either an investor or an entrepreneur.",
+            "None of those at the business conference who enjoy the opportunity of starting a business prefer a planned economy. ",
+            "All entrepreneurs at the business conference enjoy the opportunity of starting a business. ",
+            "Everyone at the business conference who enjoys state ownership of means of production prefers a planned economy. ",
+            "Everyone at the business conference who is an ardent communist prefers state ownership of the means of production.",
+            "Ho is at the business conference and prefers state ownership of the means of production. "
+        ],
+        "question": [
+            "Ho is an investor or is not an ardent communist."
+        ],
+        "premises_gt_fol": [
+            "∀x (At(x, businessConference) → (Investor(x) ⊕ Entrepreneur(x)))",
+            "∀x ((At(x, businessConference) ∧ Enjoy(x, opportunityOfStartingOwnBusiness)) → ¬Prefer(x, plannedEconomy))",
+            "∀x ((At(x, businessConference) ∧ Entrepreneur(x)) → Enjoy(x, opportunityOfStartingOwnBusiness))",
+            "∀x ((At(x, businessConference) ∧ Enjoy(x, stateOwnershipOfMeansOfProduction)) → Prefer(x, plannedEconomy))",
+            "∀x ((At(x, businessConference) ∧ ArdentCommunist(x)) → Prefer(x, stateOwnershipOfMeansOfProduction))",
+            "At(ho, businessConference) ∧ Prefer(ho, stateOwnershipOfMeansOfProduction)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Everyone at the business conference who enjoys state ownership of means of production prefers a planned economy.",
+            "Everyone at the business conference who is an ardent communist prefers state ownership of the means of production.",
+            "Therefore, everyone at the business conference who is an ardent communist prefers a planned economy.",
+            "Everyone at the business conference who enjoys the opportunity of starting a business does not prefer a planned economy.",
+            "All entrepreneurs at the business conference enjoy the opportunity of starting a business.",
+            "Therefore, all entrepreneurs at the business conference do not prefer a planned economy.",
+            "Everyone at the business conference is either an investor or an entrepreneur.",
+            "Therefore, everyone at the business conference who is not an entrepreneur is an investor.",
+            "Ho prefers state ownership of the means of production and is at the business conference.",
+            "Therefore, Ho is an ardent communist.",
+            "Ho is an ardent communist and prefers state ownership of the means of production.",
+            "Therefore, Ho prefers a planned economy.",
+            "Ho prefers state ownership of the means of production and prefers a planned economy.",
+            "Therefore, Ho is not an entrepreneur.",
+            "Ho is not an entrepreneur and everyone at the business conference who is not an entrepreneur is an investor.",
+            "Therefore, Ho is an investor."
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "Everyone at the business conference who enjoys state ownership of means of production prefers a planned economy.",
+            "Everyone at the business conference who is an ardent communist prefers state ownership of the means of production.",
+            null,
+            "Everyone at the business conference who enjoys the opportunity of starting a business does not prefer a planned economy.",
+            "All entrepreneurs at the business conference enjoy the opportunity of starting a business.",
+            null,
+            "Everyone at the business conference is either an investor or an entrepreneur.",
+            null,
+            "Ho prefers state ownership of the means of production and is at the business conference.",
+            null,
+            "Ho is an ardent communist and prefers state ownership of the means of production.",
+            null,
+            "Ho prefers state ownership of the means of production and prefers a planned economy.",
+            null,
+            "Ho is not an entrepreneur and everyone at the business conference who is not an entrepreneur is an investor.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1)",
+                "fol": "∀x (atconference(x) → investor(x) ⊕ entrepreneur(x))",
+                "tptp": "![X]: (((~(atconference(X) => investor(X)) & (entrepreneur(X))) | ((atconference(X) => investor(X)) & ~(entrepreneur(X)))))"
+            },
+            {
+                "ref": "(2)",
+                "fol": "∀x ((atconference(x) ∧ enjoysstartingbusiness(x)) → ¬prefersplannedeconomy(x))",
+                "tptp": "![X]: ((atconference(X) & enjoysstartingbusiness(X)) => ~prefersplannedeconomy(X))"
+            },
+            {
+                "ref": "(3)",
+                "fol": "∀x ((atconference(x) ∧ entrepreneur(x)) → enjoysstartingbusiness(x))",
+                "tptp": "![X]: ((atconference(X) & entrepreneur(X)) => enjoysstartingbusiness(X))"
+            },
+            {
+                "ref": "(4)",
+                "fol": "∀x ((atconference(x) ∧ enjoysstateownership(x)) → prefersplannedeconomy(x))",
+                "tptp": "![X]: ((atconference(X) & enjoysstateownership(X)) => prefersplannedeconomy(X))"
+            },
+            {
+                "ref": "(5)",
+                "fol": "∀x ((atconference(x) ∧ ardentcommunist(x)) → enjoysstateownership(x))",
+                "tptp": "![X]: ((atconference(X) & ardentcommunist(X)) => enjoysstateownership(X))"
+            },
+            {
+                "ref": "(6)",
+                "fol": "atconference(ho) ∧ prefersstateownership(ho)",
+                "tptp": "atconference(ho) & prefersstateownership(ho)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(10)",
+            "fol": "investor(ho) ∨ ¬ardentcommunist(ho)",
+            "tptp": "investor(ho) | ~ardentcommunist(ho)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1)",
+                "fol": "∀x ((atconference(x) ∧ enjoysstateownership(x)) → prefersplannedeconomy(x))",
+                "tptp": "![X]: ((atconference(X) & enjoysstateownership(X)) => prefersplannedeconomy(X))"
+            },
+            {
+                "ref": "(2)",
+                "fol": "∀x ((atconference(x) ∧ ardentcommunist(x)) → enjoysstateownership(x))",
+                "tptp": "![X]: ((atconference(X) & ardentcommunist(X)) => enjoysstateownership(X))"
+            },
+            {
+                "ref": "(3)",
+                "fol": "∀x ((atconference(x) ∧ enjoysstartingbusiness(x)) → ¬prefersplannedeconomy(x))",
+                "tptp": "![X]: ((atconference(X) & enjoysstartingbusiness(X)) => ~prefersplannedeconomy(X))"
+            },
+            {
+                "ref": "(4)",
+                "fol": "∀x ((atconference(x) ∧ entrepreneur(x)) → enjoysstartingbusiness(x))",
+                "tptp": "![X]: ((atconference(X) & entrepreneur(X)) => enjoysstartingbusiness(X))"
+            },
+            {
+                "ref": "(5)",
+                "fol": "∀x (atconference(x) → investor(x) ⊕ entrepreneur(x))",
+                "tptp": "![X]: (((~(atconference(X) => investor(X)) & (entrepreneur(X))) | ((atconference(X) => investor(X)) & ~(entrepreneur(X)))))"
+            },
+            {
+                "ref": "(6)",
+                "fol": "prefersstateownership(ho) ∧ atconference(ho)",
+                "tptp": "prefersstateownership(ho) & atconference(ho)"
+            },
+            {
+                "ref": "(7)",
+                "fol": "ardentcommunist(ho) ∧ prefersstateownership(ho)",
+                "tptp": "ardentcommunist(ho) & prefersstateownership(ho)"
+            },
+            {
+                "ref": "(8)",
+                "fol": "prefersstateownership(ho) ∧ prefersplannedeconomy(ho)",
+                "tptp": "prefersstateownership(ho) & prefersplannedeconomy(ho)"
+            },
+            {
+                "ref": "(9)",
+                "fol": "¬entrepreneur(ho) ∧ ∀x ((atconference(x) ∧ ¬entrepreneur(x)) → investor(x))",
+                "tptp": "~entrepreneur(ho) & ![X]: ((atconference(X) & ~entrepreneur(X)) => investor(X))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Everyone at the business conference who enjoys state ownership of means of production prefers a planned economy.",
+            "Everyone at the business conference who is an ardent communist prefers state ownership of the means of production.",
+            "Everyone at the business conference who enjoys the opportunity of starting a business does not prefer a planned economy.",
+            "All entrepreneurs at the business conference enjoy the opportunity of starting a business.",
+            "Everyone at the business conference is either an investor or an entrepreneur.",
+            "Ho prefers state ownership of the means of production and is at the business conference.",
+            "Ho is an ardent communist and prefers state ownership of the means of production.",
+            "Ho prefers state ownership of the means of production and prefers a planned economy.",
+            "Ho is not an entrepreneur and everyone at the business conference who is not an entrepreneur is an investor."
+        ],
+        "AnswerCorrect": false,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "Unknown",
+            "Unknown",
+            "Unknown"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "F2",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "31_90",
+        "premises": [
+            "Naive cynicism was proposed by Justin Kruger and a colleague.",
+            "Thomas Gilovich is a colleague of Justin Kruger. ",
+            "Naive cynicism is a philosophy of mind."
+        ],
+        "question": [
+            "Justin Kruger proposed a philosophy of mind."
+        ],
+        "premises_gt_fol": [
+            "Proposed(justinKruger, naiveCynicism) ∧ ∃y (colleagueOfJustinKruger(y) ∧ Proposed(y, naiveCynicism))",
+            "Colleagues(thomasGilovich, justinKruger)",
+            "PhilosophyOfMind(naiveCynicism)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Naive cynicism was proposed by Justin Kruger and a colleague.",
+            "Thomas Gilovich is a colleague of Justin Kruger.",
+            "Naive cynicism is a philosophy of mind.",
+            "Justin Kruger proposed a philosophy of mind.",
+            "The conclusion matches the premises."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "Naive cynicism was proposed by Justin Kruger and a colleague.",
+            "Thomas Gilovich is a colleague of Justin Kruger.",
+            "Naive cynicism is a philosophy of mind.",
+            "Justin Kruger proposed a philosophy of mind.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) naive cynicism was proposed by justin kruger and a colleague.",
+                "fol": "proposed(naivecynicism, justinkruger) ∧ ∃x (colleague(x, justinkruger) ∧ proposed(naivecynicism, x))",
+                "tptp": "proposed(naivecynicism, justinkruger) & ?[X]: (colleague(X, justinkruger) & proposed(naivecynicism, X))"
+            },
+            {
+                "ref": "(2) thomas gilovich is a colleague of justin kruger.",
+                "fol": "colleague(thomasgilovich, justinkruger)",
+                "tptp": "colleague(thomasgilovich, justinkruger)"
+            },
+            {
+                "ref": "(3) naive cynicism is a philosophy of mind.",
+                "fol": "philosophyofmind(naivecynicism)",
+                "tptp": "philosophyofmind(naivecynicism)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(5) justin kruger proposed a philosophy of mind.",
+            "fol": "∃x (proposed(x, justinkruger) ∧ philosophyofmind(x))",
+            "tptp": "?[X]: (proposed(X, justinkruger) & philosophyofmind(X))"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) naive cynicism was proposed by justin kruger and a colleague.",
+                "fol": "proposed(naivecynicism, justinkruger) ∧ ∃x (colleague(x, justinkruger) ∧ proposed(naivecynicism, x))",
+                "tptp": "proposed(naivecynicism, justinkruger) & ?[X]: (colleague(X, justinkruger) & proposed(naivecynicism, X))"
+            },
+            {
+                "ref": "(2) thomas gilovich is a colleague of justin kruger.",
+                "fol": "colleague(thomasgilovich, justinkruger)",
+                "tptp": "colleague(thomasgilovich, justinkruger)"
+            },
+            {
+                "ref": "(3) naive cynicism is a philosophy of mind.",
+                "fol": "philosophyofmind(naivecynicism)",
+                "tptp": "philosophyofmind(naivecynicism)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Naive cynicism was proposed by Justin Kruger and a colleague.",
+            "Thomas Gilovich is a colleague of Justin Kruger.",
+            "Naive cynicism is a philosophy of mind."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "5_12",
+        "premises": [
+            "Peter Parker is either a superhero or a civilian.",
+            "The Hulk is a destroyer.",
+            "The Hulk wakes up when he is angry.",
+            "If the Hulk wakes up, then he will break a bridge.",
+            "Thor is a god.",
+            "Thor will break a bridge when he is happy.",
+            "A god is not a destroyer.",
+            "Peter Parker wears a uniform when he is a superhero.",
+            "Peter Parker is not a civilian if a destroyer is breaking a bridge.",
+            "If Thor is happy, the Hulk is angry."
+        ],
+        "question": [
+            "If Thor is happy, then Peter Parker wears a uniform."
+        ],
+        "premises_gt_fol": [
+            "Superhero(peterParker) ⊕ Civilian(peterParker)",
+            "Destroyer(theHulk)",
+            "Angry(theHulk) → WakesUp(theHulk)",
+            "WakesUp(theHulk) → Breaks(theHulk, bridge)",
+            "God(thor)",
+            "Happy(thor) → Breaks(thor, bridge)",
+            "∀x (God(x) → ¬Destroyer(x))",
+            "Superhero(peter) → Wears(peter, uniform)",
+            "∀x ((Destroyer(x) ∧ Breaks(x,bridge)) → ¬Civilian(peter))",
+            "Happy(thor) → Angry(theHulk)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Peter Parker is either a superhero or a civilian.",
+            "Peter Parker wears a uniform when he is a superhero.",
+            "If Peter Parker is not a civilian, then he is a superhero.",
+            "If Peter Parker wears a uniform, then he is a superhero.",
+            "If a destroyer is breaking a bridge, then Peter Parker is not a civilian.",
+            "If Peter Parker is not a civilian, then he wears a uniform.",
+            "If the Hulk wakes up, he will break a bridge.",
+            "If the Hulk is angry, he wakes up.",
+            "If the Hulk is angry, a bridge will break.",
+            "If Thor is happy, the Hulk is angry.",
+            "If the Hulk is angry, Peter Parker wears a uniform.",
+            "If Thor is happy, then Peter Parker wears a uniform.",
+            "There is evidence to conclude that if Thor is happy, then Peter Parker wears a uniform."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "Peter Parker is either a superhero or a civilian.",
+            "Peter Parker wears a uniform when he is a superhero.",
+            "If Peter Parker is not a civilian, then he is a superhero.",
+            "If Peter Parker wears a uniform, then he is a superhero.",
+            "If a destroyer is breaking a bridge, then Peter Parker is not a civilian.",
+            "If Peter Parker is not a civilian, then he wears a uniform.",
+            "If the Hulk wakes up, he will break a bridge.",
+            "If the Hulk is angry, he wakes up.",
+            "If the Hulk is angry, a bridge will break.",
+            "If Thor is happy, the Hulk is angry.",
+            "If the Hulk is angry, Peter Parker wears a uniform.",
+            "If Thor is happy, then Peter Parker wears a uniform.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1)",
+                "fol": "superhero(peter) ⊕ civilian(peter)",
+                "tptp": "((~(superhero(peter)) & (civilian(peter))) | ((superhero(peter)) & ~(civilian(peter))))"
+            },
+            {
+                "ref": "(2)",
+                "fol": "destroyer(hulk)",
+                "tptp": "destroyer(hulk)"
+            },
+            {
+                "ref": "(3)",
+                "fol": "angry(hulk) → wakeup(hulk)",
+                "tptp": "angry(hulk) => wakeup(hulk)"
+            },
+            {
+                "ref": "(4)",
+                "fol": "wakeup(hulk) → breakbridge(hulk)",
+                "tptp": "wakeup(hulk) => breakbridge(hulk)"
+            },
+            {
+                "ref": "(5)",
+                "fol": "god(thor)",
+                "tptp": "god(thor)"
+            },
+            {
+                "ref": "(6)",
+                "fol": "happy(thor) → breakbridge(thor)",
+                "tptp": "happy(thor) => breakbridge(thor)"
+            },
+            {
+                "ref": "(7)",
+                "fol": "∀x (god(x) → ¬destroyer(x))",
+                "tptp": "![X]: (god(X) => ~destroyer(X))"
+            },
+            {
+                "ref": "(8)",
+                "fol": "superhero(peter) → wearsuniform(peter)",
+                "tptp": "superhero(peter) => wearsuniform(peter)"
+            },
+            {
+                "ref": "(9)",
+                "fol": "∀x (destroyer(x) ∧ breakbridge(x) → ¬civilian(peter))",
+                "tptp": "![X]: (destroyer(X) & breakbridge(X) => ~civilian(peter))"
+            },
+            {
+                "ref": "(10)",
+                "fol": "happy(thor) → angry(hulk)",
+                "tptp": "happy(thor) => angry(hulk)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(13)",
+            "fol": "happy(thor) → wearsuniform(peter)",
+            "tptp": "happy(thor) => wearsuniform(peter)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1)",
+                "fol": "superhero(peter) ⊕ civilian(peter)",
+                "tptp": "((~(superhero(peter)) & (civilian(peter))) | ((superhero(peter)) & ~(civilian(peter))))"
+            },
+            {
+                "ref": "(2)",
+                "fol": "superhero(peter) → wearsuniform(peter)",
+                "tptp": "superhero(peter) => wearsuniform(peter)"
+            },
+            {
+                "ref": "(3)",
+                "fol": "¬civilian(peter) → superhero(peter)",
+                "tptp": "~civilian(peter) => superhero(peter)"
+            },
+            {
+                "ref": "(4)",
+                "fol": "wearsuniform(peter) → superhero(peter)",
+                "tptp": "wearsuniform(peter) => superhero(peter)"
+            },
+            {
+                "ref": "(5)",
+                "fol": "destroyer(x) ∧ breakbridge(x) → ¬civilian(peter)",
+                "tptp": "destroyer(X) & breakbridge(X) => ~civilian(peter)"
+            },
+            {
+                "ref": "(6)",
+                "fol": "¬civilian(peter) → wearsuniform(peter)",
+                "tptp": "~civilian(peter) => wearsuniform(peter)"
+            },
+            {
+                "ref": "(7)",
+                "fol": "wakeup(hulk) → breakbridge(hulk)",
+                "tptp": "wakeup(hulk) => breakbridge(hulk)"
+            },
+            {
+                "ref": "(8)",
+                "fol": "angry(hulk) → wakeup(hulk)",
+                "tptp": "angry(hulk) => wakeup(hulk)"
+            },
+            {
+                "ref": "(9)",
+                "fol": "angry(hulk) → ∃x (breakbridge(x))",
+                "tptp": "angry(hulk) => ?[X]: (breakbridge(X))"
+            },
+            {
+                "ref": "(10)",
+                "fol": "happy(thor) → angry(hulk)",
+                "tptp": "happy(thor) => angry(hulk)"
+            },
+            {
+                "ref": "(11)",
+                "fol": "angry(hulk) → wearsuniform(peter)",
+                "tptp": "angry(hulk) => wearsuniform(peter)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Peter Parker is either a superhero or a civilian.",
+            "Peter Parker wears a uniform when he is a superhero.",
+            "If Peter Parker is not a civilian, then he is a superhero.",
+            "If Peter Parker wears a uniform, then he is a superhero.",
+            "If a destroyer is breaking a bridge, then Peter Parker is not a civilian.",
+            "If Peter Parker is not a civilian, then he wears a uniform.",
+            "If the Hulk wakes up, he will break a bridge.",
+            "If the Hulk is angry, he wakes up.",
+            "If the Hulk is angry, a bridge will break.",
+            "If Thor is happy, the Hulk is angry.",
+            "If the Hulk is angry, Peter Parker wears a uniform."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "Unknown",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T2",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "Unknown",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "14_39",
+        "premises": [
+            "The USS Salem is a heavy cruiser built for the United States Navy.",
+            "The last heavy cruiser to enter service was the USS Salem.",
+            "The USS Salem is a museum ship.",
+            "Museum ships are open to the public.",
+            "The USS Salem served in the Atlantic and Mediterranean."
+        ],
+        "question": [
+            "There is a museum ship open to the public that served in the Mediterranean."
+        ],
+        "premises_gt_fol": [
+            "HeavyCruiser(usssalem) ∧ BuiltFor(usssalem, unitedstatesnavy)",
+            "LastHeavyCruiserToEnterService(usssalem)",
+            "MuseumShip(usssalem)",
+            "∀x (MuseumShip(x) → OpenToPublic(x))",
+            "ServedIn(usssalem, atlantic) ∧ ServedIn(usssalem, mediterranean)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "The USS Salem is a heavy cruiser built for the United States Navy.",
+            "The last heavy cruiser to enter service was the USS Salem.",
+            "The USS Salem is a museum ship.",
+            "Museum ships are open to the public.",
+            "The USS Salem served in the Atlantic and Mediterranean.",
+            "The USS Salem, being a heavy cruiser and a museum ship, is open to the public.",
+            "The USS Salem, being a heavy cruiser that served in the Mediterranean, is open to the public.",
+            "There is a museum ship open to the public that served in the Mediterranean."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "The USS Salem is a heavy cruiser built for the United States Navy.",
+            "The last heavy cruiser to enter service was the USS Salem.",
+            "The USS Salem is a museum ship.",
+            "Museum ships are open to the public.",
+            "The USS Salem served in the Atlantic and Mediterranean.",
+            "The USS Salem, being a heavy cruiser and a museum ship, is open to the public.",
+            "The USS Salem, being a heavy cruiser that served in the Mediterranean, is open to the public.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) the uss salem is a heavy cruiser built for the united states navy.",
+                "fol": "heavycruiser(usssalem) ∧ builtfor(usssalem, usnavy)",
+                "tptp": "heavycruiser(usssalem) & builtfor(usssalem, usnavy)"
+            },
+            {
+                "ref": "(2) the last heavy cruiser to enter service was the uss salem.",
+                "fol": "lastheavycruiser(usssalem) ∧ enterservice(usssalem)",
+                "tptp": "lastheavycruiser(usssalem) & enterservice(usssalem)"
+            },
+            {
+                "ref": "(3) the uss salem is a museum ship.",
+                "fol": "museumship(usssalem)",
+                "tptp": "museumship(usssalem)"
+            },
+            {
+                "ref": "(4) museum ships are open to the public.",
+                "fol": "∀x (museumship(x) → opentopublic(x))",
+                "tptp": "![X]: (museumship(X) => opentopublic(X))"
+            },
+            {
+                "ref": "(5) the uss salem served in the atlantic and mediterranean.",
+                "fol": "servedin(usssalem, atlantic) ∧ servedin(usssalem, mediterranean)",
+                "tptp": "servedin(usssalem, atlantic) & servedin(usssalem, mediterranean)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(8) there is a museum ship open to the public that served in the mediterranean.",
+            "fol": "∃x (museumship(x) ∧ opentopublic(x) ∧ servedin(x, mediterranean))",
+            "tptp": "?[X]: (museumship(X) & opentopublic(X) & servedin(X, mediterranean))"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) the uss salem is a heavy cruiser built for the united states navy.",
+                "fol": "heavycruiser(usssalem) ∧ builtfor(usssalem, usnavy)",
+                "tptp": "heavycruiser(usssalem) & builtfor(usssalem, usnavy)"
+            },
+            {
+                "ref": "(2) the last heavy cruiser to enter service was the uss salem.",
+                "fol": "lastheavycruiser(usssalem) ∧ enterservice(usssalem)",
+                "tptp": "lastheavycruiser(usssalem) & enterservice(usssalem)"
+            },
+            {
+                "ref": "(3) the uss salem is a museum ship.",
+                "fol": "museumship(usssalem)",
+                "tptp": "museumship(usssalem)"
+            },
+            {
+                "ref": "(4) museum ships are open to the public.",
+                "fol": "∀x (museumship(x) → opentopublic(x))",
+                "tptp": "![X]: (museumship(X) => opentopublic(X))"
+            },
+            {
+                "ref": "(5) the uss salem served in the atlantic and mediterranean.",
+                "fol": "servedin(usssalem, atlantic) ∧ servedin(usssalem, mediterranean)",
+                "tptp": "servedin(usssalem, atlantic) & servedin(usssalem, mediterranean)"
+            },
+            {
+                "ref": "(6) the uss salem, being a heavy cruiser and a museum ship, is open to the public.",
+                "fol": "(heavycruiser(usssalem) ∧ museumship(usssalem)) → opentopublic(usssalem)",
+                "tptp": "(heavycruiser(usssalem) & museumship(usssalem)) => opentopublic(usssalem)"
+            },
+            {
+                "ref": "(7) the uss salem, being a heavy cruiser that served in the mediterranean, is open to the public.",
+                "fol": "(heavycruiser(usssalem) ∧ servedin(usssalem, mediterranean)) → opentopublic(usssalem)",
+                "tptp": "(heavycruiser(usssalem) & servedin(usssalem, mediterranean)) => opentopublic(usssalem)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "The USS Salem is a heavy cruiser built for the United States Navy.",
+            "The last heavy cruiser to enter service was the USS Salem.",
+            "The USS Salem is a museum ship.",
+            "Museum ships are open to the public.",
+            "The USS Salem served in the Atlantic and Mediterranean.",
+            "The USS Salem, being a heavy cruiser and a museum ship, is open to the public.",
+            "The USS Salem, being a heavy cruiser that served in the Mediterranean, is open to the public."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "267_711",
+        "premises": [
+            "All juvenile delinquents have committed a crime.",
+            "Some juvenile delinquents are products of broken homes."
+        ],
+        "question": [
+            "Some people who have committed a crime are products of broken homes."
+        ],
+        "premises_gt_fol": [
+            "∀x (JuvenileDelinquent(x) → Commited(x, crime))",
+            "∃x ∃y (JuvenileDelinquent(x) ∧ JuvenileDelinquent(y) ∧ ProductOf(x, brokenHome) ∧ ProductOf(y, brokenHome) ∧ ¬(x=y))"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "All juvenile delinquents have committed a crime.",
+            "Some juvenile delinquents are products of broken homes.",
+            "If someone is a juvenile delinquent, then they have committed a crime.",
+            "If someone is a product of a broken home, it does not necessarily mean they have committed a crime.",
+            "There is no direct link established between being a product of a broken home and committing a crime.",
+            "The conclusion \"Some people who have committed a crime are products of broken homes\" cannot be definitively inferred from the premises."
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "All juvenile delinquents have committed a crime.",
+            "Some juvenile delinquents are products of broken homes.",
+            "If someone is a juvenile delinquent, then they have committed a crime.",
+            null,
+            null,
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) all juvenile delinquents have committed a crime.",
+                "fol": "∀x (juveniledelinquent(x) → committedcrime(x))",
+                "tptp": "![X]: (juveniledelinquent(X) => committedcrime(X))"
+            },
+            {
+                "ref": "(2) some juvenile delinquents are products of broken homes.",
+                "fol": "∃x (juveniledelinquent(x) ∧ productofbrokenhome(x))",
+                "tptp": "?[X]: (juveniledelinquent(X) & productofbrokenhome(X))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(4) some people who have committed a crime are products of broken homes.",
+            "fol": "∃x (committedcrime(x) ∧ productofbrokenhome(x))",
+            "tptp": "?[X]: (committedcrime(X) & productofbrokenhome(X))"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) all juvenile delinquents have committed a crime.",
+                "fol": "∀x (juveniledelinquent(x) → committedcrime(x))",
+                "tptp": "![X]: (juveniledelinquent(X) => committedcrime(X))"
+            },
+            {
+                "ref": "(2) some juvenile delinquents are products of broken homes.",
+                "fol": "∃x (juveniledelinquent(x) ∧ productofbrokenhome(x))",
+                "tptp": "?[X]: (juveniledelinquent(X) & productofbrokenhome(X))"
+            },
+            {
+                "ref": "(3) if someone is a juvenile delinquent, then they have committed a crime.",
+                "fol": "∀x (juveniledelinquent(x) → committedcrime(x))",
+                "tptp": "![X]: (juveniledelinquent(X) => committedcrime(X))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "All juvenile delinquents have committed a crime.",
+            "Some juvenile delinquents are products of broken homes.",
+            "If someone is a juvenile delinquent, then they have committed a crime."
+        ],
+        "AnswerCorrect": false,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "F1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "221_626",
+        "premises": [
+            "Ernest Pohl was a Polish football player. ",
+            "A football player in the Polish First Division has scored over 180 goals. ",
+            "Ernest Pohl scored more than 180 goals in the Polish First Division. ",
+            "Górnik Zabrze's stadium was named after a soccer player from Ruda Śląska. ",
+            "Ernest Pohl is from Ruda Śląska. "
+        ],
+        "question": [
+            "Ernest Pohl has not scored more than 180 goals."
+        ],
+        "premises_gt_fol": [
+            "Polish(ernestPohl) ∧ FootballPlayer(ernestPohl)",
+            "∃x (FootballPlayer(x) ∧ In(x, polishFirstDivision) ∧ ScoredOver(x, 180Goals))",
+            "In(ernestPohl, polishFirstDivision) ∧ ScoredOver(ernestPohl, 180Goals)",
+            "∃x ∃y (GornikZabrzes(x) ∧ Stadium(x) ∧ NamedAfter(x, y) ∧ SoccerPlayer(y) ∧ From(y, rudaŚląska))",
+            "From(ernestPohl, rudaŚląska))"
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "Ernest Pohl was a Polish football player.",
+            "A football player in the Polish First Division has scored over 180 goals.",
+            "Ernest Pohl scored more than 180 goals in the Polish First Division.",
+            "There is no direct evidence or reasoning provided to support the conclusion that Ernest Pohl has not scored more than 180 goals.",
+            "Based on the premises, Ernest Pohl being a Polish football player and scoring over 180 goals in the Polish First Division, it is likely that Ernest Pohl has scored more than 180 goals.",
+            "Conclusion:",
+            "(B) False"
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "Ernest Pohl was a Polish football player.",
+            "A football player in the Polish First Division has scored over 180 goals.",
+            "Ernest Pohl scored more than 180 goals in the Polish First Division.",
+            null,
+            "Based on the premises, Ernest Pohl being a Polish football player and scoring over 180 goals in the Polish First Division, it is likely that Ernest Pohl has scored more than 180 goals.",
+            null,
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) ernest pohl was a polish football player.",
+                "fol": "polish(ernest) ∧ footballplayer(ernest)",
+                "tptp": "polish(ernest) & footballplayer(ernest)"
+            },
+            {
+                "ref": "(2) a football player in the polish first division has scored over 180 goals.",
+                "fol": "∃x (footballplayer(x) ∧ inpolishfirstdivision(x) ∧ scoredover180goals(x))",
+                "tptp": "?[X]: (footballplayer(X) & inpolishfirstdivision(X) & scoredover180goals(X))"
+            },
+            {
+                "ref": "(3) ernest pohl scored more than 180 goals in the polish first division.",
+                "fol": "scoredover180goals(ernest) ∧ inpolishfirstdivision(ernest)",
+                "tptp": "scoredover180goals(ernest) & inpolishfirstdivision(ernest)"
+            },
+            {
+                "ref": "(4) górnik zabrze's stadium was named after a soccer player from ruda śląska.",
+                "fol": "∃x (soccerplayer(x) ∧ from(x, rudaslaska) ∧ namedafter(x, gornikzabrzestadium))",
+                "tptp": "?[X]: (soccerplayer(X) & from(X, rudaslaska) & namedafter(X, gornikzabrzestadium))"
+            },
+            {
+                "ref": "(5) ernest pohl is from ruda śląska.",
+                "fol": "from(ernest, rudaslaska)",
+                "tptp": "from(ernest, rudaslaska)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(5) ernest pohl has not scored more than 180 goals.",
+            "fol": "¬scoredover180goals(ernest)",
+            "tptp": "~scoredover180goals(ernest)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) ernest pohl was a polish football player.",
+                "fol": "polish(ernest) ∧ footballplayer(ernest)",
+                "tptp": "polish(ernest) & footballplayer(ernest)"
+            },
+            {
+                "ref": "(2) a football player in the polish first division has scored over 180 goals.",
+                "fol": "∃x (footballplayer(x) ∧ inpolishfirstdivision(x) ∧ scoredover180goals(x))",
+                "tptp": "?[X]: (footballplayer(X) & inpolishfirstdivision(X) & scoredover180goals(X))"
+            },
+            {
+                "ref": "(3) ernest pohl scored more than 180 goals in the polish first division.",
+                "fol": "scoredover180goals(ernest) ∧ inpolishfirstdivision(ernest)",
+                "tptp": "scoredover180goals(ernest) & inpolishfirstdivision(ernest)"
+            },
+            {
+                "ref": "(4) based on the premises, ernest pohl being a polish football player and scoring over 180 goals in the polish first division, it is likely that ernest pohl has scored more than 180 goals.",
+                "fol": "(polish(ernest) ∧ footballplayer(ernest) ∧ scoredover180goals(ernest) ∧ inpolishfirstdivision(ernest)) → scoredover180goals(ernest)",
+                "tptp": "(polish(ernest) & footballplayer(ernest) & scoredover180goals(ernest) & inpolishfirstdivision(ernest)) => scoredover180goals(ernest)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Ernest Pohl was a Polish football player.",
+            "A football player in the Polish First Division has scored over 180 goals.",
+            "Ernest Pohl scored more than 180 goals in the Polish First Division.",
+            "Based on the premises, Ernest Pohl being a Polish football player and scoring over 180 goals in the Polish First Division, it is likely that Ernest Pohl has scored more than 180 goals."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "453_1305",
+        "premises": [
+            "No birds are ectothermic.",
+            "All penguins are birds.",
+            "An animal is ectothermic or endothermic.",
+            "All endothermic animals produce heat within the body.",
+            "Ron and Henry are both animals.",
+            "Ron is not a bird and does not produce heat with the body. ",
+            "Henry is not a cat and does not produce heat with the body. "
+        ],
+        "question": [
+            "Either Henry is a penguin or Henry is endothermic."
+        ],
+        "premises_gt_fol": [
+            "∀x (Bird(x) → ¬Ectothermic(x))",
+            "∀x (Penguin(x) → Bird(x))",
+            "∀x (Animal(x) → Ectothermic(x) ∨ Endothermic(x))",
+            "∀x (Endothermic(x) → ProduceWithIn(x, heat, body))",
+            "Animal(ron) ∧ Animal(henry)",
+            "¬Bird(ron) ∧ ¬ProduceWithIn(ron, heat, body)",
+            "¬Cat(henry) ∧ ¬ProduceWithIn(henry, heat, body)"
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "No birds are ectothermic.",
+            "All penguins are birds.",
+            "An animal is ectothermic or endothermic.",
+            "All endothermic animals produce heat within the body.",
+            "Ron is an animal and is not a bird.",
+            "Ron does not produce heat within the body.",
+            "Henry is an animal and is not a cat.",
+            "Henry does not produce heat within the body.",
+            "If an animal is not a bird and does not produce heat within the body, it is ectothermic.",
+            "Ron is ectothermic.",
+            "If an animal is not a cat and does not produce heat within the body, it is ectothermic.",
+            "Henry is ectothermic.",
+            "Henry is ectothermic.",
+            "The conclusion is False."
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "No birds are ectothermic.",
+            "All penguins are birds.",
+            "An animal is ectothermic or endothermic.",
+            "All endothermic animals produce heat within the body.",
+            "Ron is an animal and is not a bird.",
+            "Ron does not produce heat within the body.",
+            "Henry is an animal and is not a cat.",
+            "Henry does not produce heat within the body.",
+            "If an animal is not a bird and does not produce heat within the body, it is ectothermic.",
+            "Ron is ectothermic.",
+            "If an animal is not a cat and does not produce heat within the body, it is ectothermic.",
+            "Henry is ectothermic.",
+            null,
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) no birds are ectothermic.",
+                "fol": "∀x (bird(x) → ¬ectothermic(x))",
+                "tptp": "![X]: (bird(X) => ~ectothermic(X))"
+            },
+            {
+                "ref": "(2) all penguins are birds.",
+                "fol": "∀x (penguin(x) → bird(x))",
+                "tptp": "![X]: (penguin(X) => bird(X))"
+            },
+            {
+                "ref": "(3) an animal is ectothermic or endothermic.",
+                "fol": "∀x (ectothermic(x) ∨ endothermic(x))",
+                "tptp": "![X]: (ectothermic(X) | endothermic(X))"
+            },
+            {
+                "ref": "(4) all endothermic animals produce heat within the body.",
+                "fol": "∀x (endothermic(x) → produceheat(x))",
+                "tptp": "![X]: (endothermic(X) => produceheat(X))"
+            },
+            {
+                "ref": "(5) ron and henry are both animals.",
+                "fol": "animal(ron) ∧ animal(henry)",
+                "tptp": "animal(ron) & animal(henry)"
+            },
+            {
+                "ref": "(6) ron is not a bird and does not produce heat with the body.",
+                "fol": "¬bird(ron) ∧ ¬produceheat(ron)",
+                "tptp": "~bird(ron) & ~produceheat(ron)"
+            },
+            {
+                "ref": "(7) henry is not a cat and does not produce heat with the body.",
+                "fol": "¬cat(henry) ∧ ¬produceheat(henry)",
+                "tptp": "~cat(henry) & ~produceheat(henry)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(13) either henry is a penguin or henry is endothermic.",
+            "fol": "penguin(henry) ⊕ endothermic(henry)",
+            "tptp": "((~(penguin(henry)) & (endothermic(henry))) | ((penguin(henry)) & ~(endothermic(henry))))"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) no birds are ectothermic.",
+                "fol": "∀x (bird(x) → ¬ectothermic(x))",
+                "tptp": "![X]: (bird(X) => ~ectothermic(X))"
+            },
+            {
+                "ref": "(2) all penguins are birds.",
+                "fol": "∀x (penguin(x) → bird(x))",
+                "tptp": "![X]: (penguin(X) => bird(X))"
+            },
+            {
+                "ref": "(3) an animal is ectothermic or endothermic.",
+                "fol": "∀x (ectothermic(x) ∨ endothermic(x))",
+                "tptp": "![X]: (ectothermic(X) | endothermic(X))"
+            },
+            {
+                "ref": "(4) all endothermic animals produce heat within the body.",
+                "fol": "∀x (endothermic(x) → produceheat(x))",
+                "tptp": "![X]: (endothermic(X) => produceheat(X))"
+            },
+            {
+                "ref": "(5) ron is an animal and is not a bird.",
+                "fol": "animal(ron) ∧ ¬bird(ron)",
+                "tptp": "animal(ron) & ~bird(ron)"
+            },
+            {
+                "ref": "(6) ron does not produce heat within the body.",
+                "fol": "¬produceheat(ron)",
+                "tptp": "~produceheat(ron)"
+            },
+            {
+                "ref": "(7) henry is an animal and is not a cat.",
+                "fol": "animal(henry) ∧ ¬cat(henry)",
+                "tptp": "animal(henry) & ~cat(henry)"
+            },
+            {
+                "ref": "(8) henry does not produce heat within the body.",
+                "fol": "¬produceheat(henry)",
+                "tptp": "~produceheat(henry)"
+            },
+            {
+                "ref": "(9) if an animal is not a bird and does not produce heat within the body, it is ectothermic.",
+                "fol": "∀x (¬bird(x) ∧ ¬produceheat(x) → ectothermic(x))",
+                "tptp": "![X]: (~bird(X) & ~produceheat(X) => ectothermic(X))"
+            },
+            {
+                "ref": "(10) ron is ectothermic.",
+                "fol": "ectothermic(ron)",
+                "tptp": "ectothermic(ron)"
+            },
+            {
+                "ref": "(11) if an animal is not a cat and does not produce heat within the body, it is ectothermic.",
+                "fol": "∀x (¬cat(x) ∧ ¬produceheat(x) → ectothermic(x))",
+                "tptp": "![X]: (~cat(X) & ~produceheat(X) => ectothermic(X))"
+            },
+            {
+                "ref": "(12) henry is ectothermic.",
+                "fol": "ectothermic(henry)",
+                "tptp": "ectothermic(henry)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "No birds are ectothermic.",
+            "All penguins are birds.",
+            "An animal is ectothermic or endothermic.",
+            "All endothermic animals produce heat within the body.",
+            "Ron is an animal and is not a bird.",
+            "Ron does not produce heat within the body.",
+            "Henry is an animal and is not a cat.",
+            "Henry does not produce heat within the body.",
+            "If an animal is not a bird and does not produce heat within the body, it is ectothermic.",
+            "Ron is ectothermic.",
+            "If an animal is not a cat and does not produce heat within the body, it is ectothermic.",
+            "Henry is ectothermic."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "415_1168",
+        "premises": [
+            "All books written by Neil Gaiman have sold more than one thousand copies.",
+            "Some books that have won Hugo Awards are written by Neil Gaiman.",
+            "Tomas has read all books written by Tolkien. ",
+            "Either Tomas has read Hamlet, or it has sold more than one thousand copies.",
+            "Hamlet has either sold more than one thousand copies or it is written by Neil Gaiman."
+        ],
+        "question": [
+            "If Hamlet has either won a Hugo Award and is written by Tolkien, or neither has won a Hugo Award nor is written by Tolkien, then Hamlet has neither won a Hugo Award nor is written by Neil Gaiman."
+        ],
+        "premises_gt_fol": [
+            "∀x ((Book(x) ∧ WrittenBy(x, neilGaiman)) → ∃y (MoreThan(y, num1000) ∧ SoldCopies(x, y)))",
+            "∃x ∃y (Book(x) ∧ Win(x, hugoAward) ∧ WrittenBy(x, neilGaiman) ∧ (¬(x=y)) ∧ Book(y) ∧ Win(y, hugoAward) ∧ WrittenBy(y, neilGaiman))",
+            "∀x ((Book(x) ∧ WrittenBy(x, tolkien)) → ReadBy(x, tomas))",
+            "ReadBy(hamlet, tomas) ⊕ (∃y (MoreThan(y, num1000) ∧ SoldCopies(hamlet, y)))",
+            "∃y (MoreThan(y, num1000) ∧ SoldCopies(hamlet, y)) ⊕ WrittenBy(hamlet, neilGaiman)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "All books written by Neil Gaiman have sold more than one thousand copies.",
+            "Some books that have won Hugo Awards are written by Neil Gaiman.",
+            "If a book has won a Hugo Award, it is not necessarily written by Neil Gaiman.",
+            "Tomas has read all books written by Tolkien.",
+            "Either Tomas has read Hamlet, or it has sold more than one thousand copies.",
+            "Hamlet has either sold more than one thousand copies or it is written by Neil Gaiman.",
+            "If Hamlet is written by Neil Gaiman, it has sold more than one thousand copies.",
+            "If Hamlet has won a Hugo Award, it is not necessarily written by Tolkien.",
+            "If Hamlet is written by Tolkien, it has not necessarily won a Hugo Award.",
+            "If Hamlet has won a Hugo Award and is written by Tolkien, then it is not written by Neil Gaiman.",
+            "If Hamlet has neither won a Hugo Award nor is written by Tolkien, then it is not written by Neil Gaiman.",
+            "If Hamlet has either won a Hugo Award and is written by Tolkien, or neither has won a Hugo Award nor is written by Tolkien, then Hamlet has neither won a Hugo Award nor is written by Neil Gaiman."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "All books written by Neil Gaiman have sold more than one thousand copies.",
+            "Some books that have won Hugo Awards are written by Neil Gaiman.",
+            null,
+            "Tomas has read all books written by Tolkien.",
+            "Either Tomas has read Hamlet, or it has sold more than one thousand copies.",
+            "Hamlet has either sold more than one thousand copies or it is written by Neil Gaiman.",
+            "If Hamlet is written by Neil Gaiman, it has sold more than one thousand copies.",
+            null,
+            null,
+            "If Hamlet has won a Hugo Award and is written by Tolkien, then it is not written by Neil Gaiman.",
+            "If Hamlet has neither won a Hugo Award nor is written by Tolkien, then it is not written by Neil Gaiman.",
+            "If Hamlet has either won a Hugo Award and is written by Tolkien, or neither has won a Hugo Award nor is written by Tolkien, then Hamlet has neither won a Hugo Award nor is written by Neil Gaiman."
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) all books written by neil gaiman have sold more than one thousand copies.",
+                "fol": "∀x ((writtenby(x, neilgaiman) → soldmorethanthousand(x)))",
+                "tptp": "![X]: ((writtenby(X, neilgaiman) => soldmorethanthousand(X)))"
+            },
+            {
+                "ref": "(2) some books that have won hugo awards are written by neil gaiman.",
+                "fol": "∃x ((wonhugo(x) ∧ writtenby(x, neilgaiman)))",
+                "tptp": "?[X]: ((wonhugo(X) & writtenby(X, neilgaiman)))"
+            },
+            {
+                "ref": "(3) tomas has read all books written by tolkien.",
+                "fol": "∀x ((writtenby(x, tolkien) → read(tomas, x)))",
+                "tptp": "![X]: ((writtenby(X, tolkien) => read(tomas, X)))"
+            },
+            {
+                "ref": "(4) either tomas has read hamlet, or it has sold more than one thousand copies.",
+                "fol": "read(tomas, hamlet) ⊕ soldmorethanthousand(hamlet)",
+                "tptp": "((~(read(tomas, hamlet)) & (soldmorethanthousand(hamlet))) | ((read(tomas, hamlet)) & ~(soldmorethanthousand(hamlet))))"
+            },
+            {
+                "ref": "(5) hamlet has either sold more than one thousand copies or it is written by neil gaiman.",
+                "fol": "soldmorethanthousand(hamlet) ⊕ writtenby(hamlet, neilgaiman)",
+                "tptp": "((~(soldmorethanthousand(hamlet)) & (writtenby(hamlet, neilgaiman))) | ((soldmorethanthousand(hamlet)) & ~(writtenby(hamlet, neilgaiman))))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(10) if hamlet has either won a hugo award and is written by tolkien, or neither has won a hugo award nor is written by tolkien, then hamlet has neither won a hugo award nor is written by neil gaiman.",
+            "fol": "((wonhugo(hamlet) ∧ writtenby(hamlet, tolkien)) ⊕ ¬(wonhugo(hamlet) ∨ writtenby(hamlet, tolkien))) → ¬(wonhugo(hamlet) ∨ writtenby(hamlet, neilgaiman))",
+            "tptp": "(((~((wonhugo(hamlet) & writtenby(hamlet, tolkien))) & (~(wonhugo(hamlet) | writtenby(hamlet, tolkien)))) | (((wonhugo(hamlet) & writtenby(hamlet, tolkien))) & ~(~(wonhugo(hamlet) | writtenby(hamlet, tolkien)))))) => ~(wonhugo(hamlet) | writtenby(hamlet, neilgaiman))"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) all books written by neil gaiman have sold more than one thousand copies.",
+                "fol": "∀x ((writtenby(x, neilgaiman) → soldmorethanthousand(x)))",
+                "tptp": "![X]: ((writtenby(X, neilgaiman) => soldmorethanthousand(X)))"
+            },
+            {
+                "ref": "(2) some books that have won hugo awards are written by neil gaiman.",
+                "fol": "∃x ((wonhugo(x) ∧ writtenby(x, neilgaiman)))",
+                "tptp": "?[X]: ((wonhugo(X) & writtenby(X, neilgaiman)))"
+            },
+            {
+                "ref": "(3) tomas has read all books written by tolkien.",
+                "fol": "∀x ((writtenby(x, tolkien) → read(tomas, x)))",
+                "tptp": "![X]: ((writtenby(X, tolkien) => read(tomas, X)))"
+            },
+            {
+                "ref": "(4) either tomas has read hamlet, or it has sold more than one thousand copies.",
+                "fol": "read(tomas, hamlet) ⊕ soldmorethanthousand(hamlet)",
+                "tptp": "((~(read(tomas, hamlet)) & (soldmorethanthousand(hamlet))) | ((read(tomas, hamlet)) & ~(soldmorethanthousand(hamlet))))"
+            },
+            {
+                "ref": "(5) hamlet has either sold more than one thousand copies or it is written by neil gaiman.",
+                "fol": "soldmorethanthousand(hamlet) ⊕ writtenby(hamlet, neilgaiman)",
+                "tptp": "((~(soldmorethanthousand(hamlet)) & (writtenby(hamlet, neilgaiman))) | ((soldmorethanthousand(hamlet)) & ~(writtenby(hamlet, neilgaiman))))"
+            },
+            {
+                "ref": "(6) if hamlet is written by neil gaiman, it has sold more than one thousand copies.",
+                "fol": "writtenby(hamlet, neilgaiman) → soldmorethanthousand(hamlet)",
+                "tptp": "writtenby(hamlet, neilgaiman) => soldmorethanthousand(hamlet)"
+            },
+            {
+                "ref": "(7) if hamlet has won a hugo award and is written by tolkien, then it is not written by neil gaiman.",
+                "fol": "(wonhugo(hamlet) ∧ writtenby(hamlet, tolkien)) → ¬writtenby(hamlet, neilgaiman)",
+                "tptp": "(wonhugo(hamlet) & writtenby(hamlet, tolkien)) => ~writtenby(hamlet, neilgaiman)"
+            },
+            {
+                "ref": "(8) if hamlet has neither won a hugo award nor is written by tolkien, then it is not written by neil gaiman.",
+                "fol": "¬(wonhugo(hamlet) ∨ writtenby(hamlet, tolkien)) → ¬writtenby(hamlet, neilgaiman)",
+                "tptp": "~(wonhugo(hamlet) | writtenby(hamlet, tolkien)) => ~writtenby(hamlet, neilgaiman)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "All books written by Neil Gaiman have sold more than one thousand copies.",
+            "Some books that have won Hugo Awards are written by Neil Gaiman.",
+            "Tomas has read all books written by Tolkien.",
+            "Either Tomas has read Hamlet, or it has sold more than one thousand copies.",
+            "Hamlet has either sold more than one thousand copies or it is written by Neil Gaiman.",
+            "If Hamlet is written by Neil Gaiman, it has sold more than one thousand copies.",
+            "If Hamlet has won a Hugo Award and is written by Tolkien, then it is not written by Neil Gaiman.",
+            "If Hamlet has neither won a Hugo Award nor is written by Tolkien, then it is not written by Neil Gaiman."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "30_87",
+        "premises": [
+            "EndGame is a movie released in 2006.",
+            "EndGame was set in Washington.",
+            "EndGame was filmed outside of Washington.",
+            "Some movies are filmed in New York.",
+            "Andy Chang directed EndGame.",
+            "Andy Chang is from Hong Kong."
+        ],
+        "question": [
+            "EndGame was not directed by someone from Hong Kong."
+        ],
+        "premises_gt_fol": [
+            "Movie(endGame) ∧ Released(endGame, yr2006)",
+            "SetIn(endGame, washington)",
+            "¬(FilmedIn(endGame, washington))",
+            "∃x∃y(FilmedIn(x, newYork) ∧ (¬(x=y)) ∧ FilmedIn(y, newYork))",
+            "Directed(andyChang, endGame)",
+            "From(andyChang, hongKong)"
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "EndGame is a movie released in 2006.",
+            "EndGame was set in Washington.",
+            "EndGame was filmed outside of Washington.",
+            "Andy Chang directed EndGame.",
+            "Andy Chang is from Hong Kong.",
+            "There is no direct evidence linking the director's nationality to the filming location.",
+            "There is no direct evidence linking the director's nationality to the setting of the movie.",
+            "There is no direct evidence linking the director's nationality to the release year of the movie.",
+            "There is no direct evidence to support the conclusion that \"EndGame was not directed by someone from Hong Kong.\""
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "EndGame is a movie released in 2006.",
+            "EndGame was set in Washington.",
+            "EndGame was filmed outside of Washington.",
+            "Andy Chang directed EndGame.",
+            "Andy Chang is from Hong Kong.",
+            null,
+            null,
+            null,
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) endgame is a movie released in 2006.",
+                "fol": "movie(endgame) ∧ released(endgame, year2006)",
+                "tptp": "movie(endgame) & released(endgame, year2006)"
+            },
+            {
+                "ref": "(2) endgame was set in washington.",
+                "fol": "setin(endgame, washington)",
+                "tptp": "setin(endgame, washington)"
+            },
+            {
+                "ref": "(3) endgame was filmed outside of washington.",
+                "fol": "filmedoutside(endgame, washington)",
+                "tptp": "filmedoutside(endgame, washington)"
+            },
+            {
+                "ref": "(4) some movies are filmed in new york.",
+                "fol": "∃x (movie(x) ∧ filmedin(x, newyork))",
+                "tptp": "?[X]: (movie(X) & filmedin(X, newyork))"
+            },
+            {
+                "ref": "(5) andy chang directed endgame.",
+                "fol": "directedby(endgame, andychang)",
+                "tptp": "directedby(endgame, andychang)"
+            },
+            {
+                "ref": "(6) andy chang is from hong kong.",
+                "fol": "from(andychang, hongkong)",
+                "tptp": "from(andychang, hongkong)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(6) endgame was not directed by someone from hong kong.",
+            "fol": "¬∃x (directedby(endgame, x) ∧ from(x, hongkong))",
+            "tptp": "~?[X]: (directedby(endgame, X) & from(X, hongkong))"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) endgame is a movie released in 2006.",
+                "fol": "movie(endgame) ∧ released(endgame, year2006)",
+                "tptp": "movie(endgame) & released(endgame, year2006)"
+            },
+            {
+                "ref": "(2) endgame was set in washington.",
+                "fol": "setin(endgame, washington)",
+                "tptp": "setin(endgame, washington)"
+            },
+            {
+                "ref": "(3) endgame was filmed outside of washington.",
+                "fol": "filmedoutside(endgame, washington)",
+                "tptp": "filmedoutside(endgame, washington)"
+            },
+            {
+                "ref": "(4) andy chang directed endgame.",
+                "fol": "directedby(endgame, andychang)",
+                "tptp": "directedby(endgame, andychang)"
+            },
+            {
+                "ref": "(5) andy chang is from hong kong.",
+                "fol": "from(andychang, hongkong)",
+                "tptp": "from(andychang, hongkong)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "EndGame is a movie released in 2006.",
+            "EndGame was set in Washington.",
+            "EndGame was filmed outside of Washington.",
+            "Andy Chang directed EndGame.",
+            "Andy Chang is from Hong Kong."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "12_32",
+        "premises": [
+            "The Croton River watershed is the drainage basin of the Croton River.",
+            "The Croton River is in southwestern New York.",
+            "Water from the Croton River watershed flows to the Bronx.",
+            "The Bronx is in New York."
+        ],
+        "question": [
+            "Water from the Croton River watershed flows to somewhere in New York."
+        ],
+        "premises_gt_fol": [
+            "DrainageBasinOf(crotonRiverWatershed, crotonRiver)",
+            "In(crotonRiver, southwesternNewYork)",
+            "∀x ((Water(x) ∧ In(x, crotonRiverWatershed)) → FlowsTo(x, bronx))",
+            "In(bronx, newYork)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "The Croton River watershed is the drainage basin of the Croton River.",
+            "The Croton River is in southwestern New York.",
+            "Water from the Croton River watershed flows to the Bronx.",
+            "The Bronx is in New York.",
+            "Water from the Croton River watershed flows to the Bronx, which is in New York.",
+            "Water from the Croton River watershed flows to somewhere in New York.",
+            "There is evidence to conclude that water from the Croton River watershed flows to somewhere in New York."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "The Croton River watershed is the drainage basin of the Croton River.",
+            "The Croton River is in southwestern New York.",
+            "Water from the Croton River watershed flows to the Bronx.",
+            "The Bronx is in New York.",
+            "Water from the Croton River watershed flows to the Bronx, which is in New York.",
+            "Water from the Croton River watershed flows to somewhere in New York.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) the croton river watershed is the drainage basin of the croton river.",
+                "fol": "drainagebasin(crotonriverwatershed, crotonriver)",
+                "tptp": "drainagebasin(crotonriverwatershed, crotonriver)"
+            },
+            {
+                "ref": "(2) the croton river is in southwestern new york.",
+                "fol": "location(crotonriver, southwesternnewyork)",
+                "tptp": "location(crotonriver, southwesternnewyork)"
+            },
+            {
+                "ref": "(3) water from the croton river watershed flows to the bronx.",
+                "fol": "flowsto(crotonriverwatershed, bronx)",
+                "tptp": "flowsto(crotonriverwatershed, bronx)"
+            },
+            {
+                "ref": "(4) the bronx is in new york.",
+                "fol": "location(bronx, newyork)",
+                "tptp": "location(bronx, newyork)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(7) water from the croton river watershed flows to somewhere in new york.",
+            "fol": "∃x (flowsto(crotonriverwatershed, x) ∧ location(x, newyork))",
+            "tptp": "?[X]: (flowsto(crotonriverwatershed, X) & location(X, newyork))"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) the croton river watershed is the drainage basin of the croton river.",
+                "fol": "drainagebasin(crotonriverwatershed, crotonriver)",
+                "tptp": "drainagebasin(crotonriverwatershed, crotonriver)"
+            },
+            {
+                "ref": "(2) the croton river is in southwestern new york.",
+                "fol": "location(crotonriver, southwesternnewyork)",
+                "tptp": "location(crotonriver, southwesternnewyork)"
+            },
+            {
+                "ref": "(3) water from the croton river watershed flows to the bronx.",
+                "fol": "flowsto(crotonriverwatershed, bronx)",
+                "tptp": "flowsto(crotonriverwatershed, bronx)"
+            },
+            {
+                "ref": "(4) the bronx is in new york.",
+                "fol": "location(bronx, newyork)",
+                "tptp": "location(bronx, newyork)"
+            },
+            {
+                "ref": "(5) water from the croton river watershed flows to the bronx, which is in new york.",
+                "fol": "flowsto(crotonriverwatershed, bronx) ∧ location(bronx, newyork)",
+                "tptp": "flowsto(crotonriverwatershed, bronx) & location(bronx, newyork)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "The Croton River watershed is the drainage basin of the Croton River.",
+            "The Croton River is in southwestern New York.",
+            "Water from the Croton River watershed flows to the Bronx.",
+            "The Bronx is in New York.",
+            "Water from the Croton River watershed flows to the Bronx, which is in New York."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    }
+]

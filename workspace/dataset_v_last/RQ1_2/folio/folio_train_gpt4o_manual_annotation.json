@@ -1,0 +1,2910 @@
+[
+    {
+        "idx": "170_490",
+        "premises": [
+            "The Mona Lisa is a world's best-known painting.",
+            "The Mona Lisa is a portrait painted by Leonardo da Vinci.",
+            "Leonardo da Vinci was a scientist and painter.",
+            "Painting genres can be history, portrait, animal, landscape, and still life."
+        ],
+        "question": [
+            "No world's best-known artworks are portraits."
+        ],
+        "premises_gt_fol": [
+            "Painting(monaLisa) ∧ TheWorldsBestKnown(monaLisa)",
+            "PaintedBy(monaLisa, leonardodaVinci) ∧ Portrait(monaLisa)",
+            "Scientist(leonardodaVinci) ∧ Painter(leonardodaVinci)",
+            "∀x (Painting(x) → (History(x) ∨ Portrait(x) ∨ Animal(x) ∨ Landscape(x) ∨ StillLife(x)))"
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "The Mona Lisa is a world's best-known painting.  ",
+            "The Mona Lisa is a portrait.  ",
+            "The Mona Lisa is a portrait painted by Leonardo da Vinci.  ",
+            "The conclusion states that no world's best-known artworks are portraits.  ",
+            "The Mona Lisa is both a world's best-known artwork and a portrait.  ",
+            "There is a contradiction between the conclusion and the premises.  ",
+            "The premises provide evidence that at least one world's best-known artwork is a portrait.  ",
+            "The conclusion is not supported by the premises.  "
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "The Mona Lisa is a world's best-known painting.  ",
+            "The Mona Lisa is a portrait.  ",
+            "The Mona Lisa is a portrait painted by Leonardo da Vinci.  ",
+            null,
+            "The Mona Lisa is both a world's best-known artwork and a portrait.  ",
+            null,
+            null,
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) the mona lisa is a world's best-known painting.",
+                "fol": "bestknown(monalisa) ∧ painting(monalisa)",
+                "tptp": "bestknown(monalisa) & painting(monalisa)"
+            },
+            {
+                "ref": "(2) the mona lisa is a portrait painted by leonardo da vinci.",
+                "fol": "portrait(monalisa) ∧ paintedby(monalisa, leonardo)",
+                "tptp": "portrait(monalisa) & paintedby(monalisa, leonardo)"
+            },
+            {
+                "ref": "(3) leonardo da vinci was a scientist and painter.",
+                "fol": "scientist(leonardo) ∧ painter(leonardo)",
+                "tptp": "scientist(leonardo) & painter(leonardo)"
+            },
+            {
+                "ref": "(4) painting genres can be history, portrait, animal, landscape, and still life.",
+                "fol": "∀x (paintinggenre(x) → (history(x) ∨ portrait(x) ∨ animal(x) ∨ landscape(x) ∨ stilllife(x)))",
+                "tptp": "![X]: (paintinggenre(X) => (history(X) | portrait(X) | animal(X) | landscape(X) | stilllife(X)))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(5) no world's best-known artworks are portraits.",
+            "fol": "¬∃x (bestknown(x) ∧ portrait(x))",
+            "tptp": "~?[X]: (bestknown(X) & portrait(X))"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) the mona lisa is a world's best-known painting.",
+                "fol": "bestknown(monalisa) ∧ painting(monalisa)",
+                "tptp": "bestknown(monalisa) & painting(monalisa)"
+            },
+            {
+                "ref": "(2) the mona lisa is a portrait.",
+                "fol": "portrait(monalisa)",
+                "tptp": "portrait(monalisa)"
+            },
+            {
+                "ref": "(3) the mona lisa is a portrait painted by leonardo da vinci.",
+                "fol": "portrait(monalisa) ∧ paintedby(monalisa, leonardo)",
+                "tptp": "portrait(monalisa) & paintedby(monalisa, leonardo)"
+            },
+            {
+                "ref": "(4) the mona lisa is both a world's best-known artwork and a portrait.",
+                "fol": "bestknown(monalisa) ∧ portrait(monalisa)",
+                "tptp": "bestknown(monalisa) & portrait(monalisa)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "The Mona Lisa is a world's best-known painting.  ",
+            "The Mona Lisa is a portrait.  ",
+            "The Mona Lisa is a portrait painted by Leonardo da Vinci.  ",
+            "The Mona Lisa is both a world's best-known artwork and a portrait.  "
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "207_592",
+        "premises": [
+            "TOra is a GUI.",
+            "GUIs are software.",
+            "Software can be free or paid.",
+            "Paid Software is not under the GNU General Public License.",
+            "TOra is under the GNU General Public License."
+        ],
+        "question": [
+            "TOra is a paid software."
+        ],
+        "premises_gt_fol": [
+            "GUI(tora)",
+            "∀x (GUI(x) → Software(x))",
+            "∀x (Software(x) → Free(x) ⊕ Paid(x))",
+            "∀x (Paid(x) ∧ Software(x) → ¬UnderGNULicense(x))",
+            "UnderGNULicense(tora)"
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "TOra is a GUI.  ",
+            "GUIs are software.  ",
+            "Software can be free or paid.  ",
+            "TOra is under the GNU General Public License.  ",
+            "Paid Software is not under the GNU General Public License.  ",
+            "Since TOra is under the GNU General Public License, it cannot be paid software.  ",
+            "There is evidence to conclude that TOra is not paid software.  "
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "TOra is a GUI.  ",
+            "GUIs are software.  ",
+            "Software can be free or paid.  ",
+            "TOra is under the GNU General Public License.  ",
+            "Paid Software is not under the GNU General Public License.  ",
+            "Since TOra is under the GNU General Public License, it cannot be paid software.  ",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) tora is a gui.",
+                "fol": "gui(tora)",
+                "tptp": "gui(tora)"
+            },
+            {
+                "ref": "(2) guis are software.",
+                "fol": "∀x (gui(x) → software(x))",
+                "tptp": "![X]: (gui(X) => software(X))"
+            },
+            {
+                "ref": "(3) software can be free or paid.",
+                "fol": "∀x (software(x) → free(x) ⊕ paid(x))",
+                "tptp": "![X]: (((~(software(X) => free(X)) & (paid(X))) | ((software(X) => free(X)) & ~(paid(X)))))"
+            },
+            {
+                "ref": "(4) paid software is not under the gnu general public license.",
+                "fol": "∀x (paid(x) → ¬gnu(x))",
+                "tptp": "![X]: (paid(X) => ~gnu(X))"
+            },
+            {
+                "ref": "(5) tora is under the gnu general public license.",
+                "fol": "gnu(tora)",
+                "tptp": "gnu(tora)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(7) tora is a paid software.",
+            "fol": "paid(tora)",
+            "tptp": "paid(tora)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) tora is a gui.",
+                "fol": "gui(tora)",
+                "tptp": "gui(tora)"
+            },
+            {
+                "ref": "(2) guis are software.",
+                "fol": "∀x (gui(x) → software(x))",
+                "tptp": "![X]: (gui(X) => software(X))"
+            },
+            {
+                "ref": "(3) software can be free or paid.",
+                "fol": "∀x (software(x) → free(x) ⊕ paid(x))",
+                "tptp": "![X]: (((~(software(X) => free(X)) & (paid(X))) | ((software(X) => free(X)) & ~(paid(X)))))"
+            },
+            {
+                "ref": "(4) tora is under the gnu general public license.",
+                "fol": "gnu(tora)",
+                "tptp": "gnu(tora)"
+            },
+            {
+                "ref": "(5) paid software is not under the gnu general public license.",
+                "fol": "∀x (paid(x) → ¬gnu(x))",
+                "tptp": "![X]: (paid(X) => ~gnu(X))"
+            },
+            {
+                "ref": "(6) since tora is under the gnu general public license, it cannot be paid software.",
+                "fol": "gnu(tora) → ¬paid(tora)",
+                "tptp": "gnu(tora) => ~paid(tora)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "TOra is a GUI.  ",
+            "GUIs are software.  ",
+            "Software can be free or paid.  ",
+            "TOra is under the GNU General Public License.  ",
+            "Paid Software is not under the GNU General Public License.  ",
+            "Since TOra is under the GNU General Public License, it cannot be paid software.  "
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "396_1079",
+        "premises": [
+            "A neuroimaging technique is either an invasive neuroimaging technique or a noninvasive neuroimaging technique. ",
+            "All noninvasive neuroimaging techniques provide a spatial resolution of brains.",
+            "If a technique provides a spatial resolution of brains, then it is a measurement of brain activity. ",
+            "All measurements of brain activity are used by neuroscience researchers.",
+            "FMRI is either a measurement of brain activity or a noninvasive neuroimaging technique.",
+            "FMRI is a neuroimaging technique."
+        ],
+        "question": [
+            "If fMRI is not an invasive neuroimaging technique used by neuroscience researchers, then fMRI is neither a noninvasive neuroimaging technique nor provides a spatial resolution of brains."
+        ],
+        "premises_gt_fol": [
+            "∀x (NeuroimagingTechnique(x) → (Invasive(x) ⊕ Noninvasive(x))) ",
+            "∀x (Noninvasive(x) → Provides(x, spatialResolutionOfBrains))",
+            "∀x (Provides(x, spatialResolutionOfBrains) → Measure(x, brainActivity))",
+            "∀x (Measure(x, brainActivity) → UsedBy(x, neuroscienceResearchers))",
+            "Measure(fMRI, brainActivity) ⊕ Noninvasive(fMRI)",
+            "NeuroimagingTechnique(fMRI)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "A neuroimaging technique is either an invasive neuroimaging technique or a noninvasive neuroimaging technique.  ",
+            "FMRI is a neuroimaging technique.  ",
+            "FMRI is either a measurement of brain activity or a noninvasive neuroimaging technique.  ",
+            "All noninvasive neuroimaging techniques provide a spatial resolution of brains.  ",
+            "If a technique provides a spatial resolution of brains, then it is a measurement of brain activity.  ",
+            "All measurements of brain activity are used by neuroscience researchers.  ",
+            "If fMRI is not an invasive neuroimaging technique, it must be a noninvasive neuroimaging technique.  ",
+            "If fMRI is a noninvasive neuroimaging technique, it provides a spatial resolution of brains.  ",
+            "If fMRI provides a spatial resolution of brains, it is a measurement of brain activity.  ",
+            "If fMRI is a measurement of brain activity, it is used by neuroscience researchers.  ",
+            "If fMRI is not an invasive neuroimaging technique, it is used by neuroscience researchers.  ",
+            "The conclusion states that if fMRI is not an invasive neuroimaging technique used by neuroscience researchers, then fMRI is neither a noninvasive neuroimaging technique nor provides a spatial resolution of brains.  ",
+            "This contradicts the premises, as if fMRI is not invasive, it must be noninvasive and provide spatial resolution.  ",
+            "There is evidence to conclude that the conclusion is false.  "
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "A neuroimaging technique is either an invasive neuroimaging technique or a noninvasive neuroimaging technique.  ",
+            "FMRI is a neuroimaging technique.  ",
+            "FMRI is either a measurement of brain activity or a noninvasive neuroimaging technique.  ",
+            "All noninvasive neuroimaging techniques provide a spatial resolution of brains.  ",
+            "If a technique provides a spatial resolution of brains, then it is a measurement of brain activity.  ",
+            "All measurements of brain activity are used by neuroscience researchers.  ",
+            "If fMRI is not an invasive neuroimaging technique, it must be a noninvasive neuroimaging technique.  ",
+            "If fMRI is a noninvasive neuroimaging technique, it provides a spatial resolution of brains.  ",
+            "If fMRI provides a spatial resolution of brains, it is a measurement of brain activity.  ",
+            "If fMRI is a measurement of brain activity, it is used by neuroscience researchers.  ",
+            "If fMRI is not an invasive neuroimaging technique, it is used by neuroscience researchers.  ",
+            null,
+            null,
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) a neuroimaging technique is either an invasive neuroimaging technique or a noninvasive neuroimaging technique.",
+                "fol": "∀x (neuroimagingtechnique(x) → invasive(x) ⊕ noninvasive(x))",
+                "tptp": "![X]: (((~(neuroimagingtechnique(X) => invasive(X)) & (noninvasive(X))) | ((neuroimagingtechnique(X) => invasive(X)) & ~(noninvasive(X)))))"
+            },
+            {
+                "ref": "(2) all noninvasive neuroimaging techniques provide a spatial resolution of brains.",
+                "fol": "∀x (noninvasive(x) → spatialresolution(x))",
+                "tptp": "![X]: (noninvasive(X) => spatialresolution(X))"
+            },
+            {
+                "ref": "(3) if a technique provides a spatial resolution of brains, then it is a measurement of brain activity.",
+                "fol": "∀x (spatialresolution(x) → measurement(x))",
+                "tptp": "![X]: (spatialresolution(X) => measurement(X))"
+            },
+            {
+                "ref": "(4) all measurements of brain activity are used by neuroscience researchers.",
+                "fol": "∀x (measurement(x) → usedbyneuroscience(x))",
+                "tptp": "![X]: (measurement(X) => usedbyneuroscience(X))"
+            },
+            {
+                "ref": "(5) fmri is either a measurement of brain activity or a noninvasive neuroimaging technique.",
+                "fol": "measurement(fmri) ⊕ noninvasive(fmri)",
+                "tptp": "((~(measurement(fmri)) & (noninvasive(fmri))) | ((measurement(fmri)) & ~(noninvasive(fmri))))"
+            },
+            {
+                "ref": "(6) fmri is a neuroimaging technique.",
+                "fol": "neuroimagingtechnique(fmri)",
+                "tptp": "neuroimagingtechnique(fmri)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(12) if fmri is not an invasive neuroimaging technique used by neuroscience researchers, then fmri is neither a noninvasive neuroimaging technique nor provides a spatial resolution of brains.",
+            "fol": "¬(invasive(fmri) ∧ usedbyneuroscience(fmri)) → ¬(noninvasive(fmri) ∨ spatialresolution(fmri))",
+            "tptp": "~(invasive(fmri) & usedbyneuroscience(fmri)) => ~(noninvasive(fmri) | spatialresolution(fmri))"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) a neuroimaging technique is either an invasive neuroimaging technique or a noninvasive neuroimaging technique.",
+                "fol": "∀x (neuroimagingtechnique(x) → invasive(x) ⊕ noninvasive(x))",
+                "tptp": "![X]: (((~(neuroimagingtechnique(X) => invasive(X)) & (noninvasive(X))) | ((neuroimagingtechnique(X) => invasive(X)) & ~(noninvasive(X)))))"
+            },
+            {
+                "ref": "(2) fmri is a neuroimaging technique.",
+                "fol": "neuroimagingtechnique(fmri)",
+                "tptp": "neuroimagingtechnique(fmri)"
+            },
+            {
+                "ref": "(3) fmri is either a measurement of brain activity or a noninvasive neuroimaging technique.",
+                "fol": "measurement(fmri) ⊕ noninvasive(fmri)",
+                "tptp": "((~(measurement(fmri)) & (noninvasive(fmri))) | ((measurement(fmri)) & ~(noninvasive(fmri))))"
+            },
+            {
+                "ref": "(4) all noninvasive neuroimaging techniques provide a spatial resolution of brains.",
+                "fol": "∀x (noninvasive(x) → spatialresolution(x))",
+                "tptp": "![X]: (noninvasive(X) => spatialresolution(X))"
+            },
+            {
+                "ref": "(5) if a technique provides a spatial resolution of brains, then it is a measurement of brain activity.",
+                "fol": "∀x (spatialresolution(x) → measurement(x))",
+                "tptp": "![X]: (spatialresolution(X) => measurement(X))"
+            },
+            {
+                "ref": "(6) all measurements of brain activity are used by neuroscience researchers.",
+                "fol": "∀x (measurement(x) → usedbyneuroscience(x))",
+                "tptp": "![X]: (measurement(X) => usedbyneuroscience(X))"
+            },
+            {
+                "ref": "(7) if fmri is not an invasive neuroimaging technique, it must be a noninvasive neuroimaging technique.",
+                "fol": "¬invasive(fmri) → noninvasive(fmri)",
+                "tptp": "~invasive(fmri) => noninvasive(fmri)"
+            },
+            {
+                "ref": "(8) if fmri is a noninvasive neuroimaging technique, it provides a spatial resolution of brains.",
+                "fol": "noninvasive(fmri) → spatialresolution(fmri)",
+                "tptp": "noninvasive(fmri) => spatialresolution(fmri)"
+            },
+            {
+                "ref": "(9) if fmri provides a spatial resolution of brains, it is a measurement of brain activity.",
+                "fol": "spatialresolution(fmri) → measurement(fmri)",
+                "tptp": "spatialresolution(fmri) => measurement(fmri)"
+            },
+            {
+                "ref": "(10) if fmri is a measurement of brain activity, it is used by neuroscience researchers.",
+                "fol": "measurement(fmri) → usedbyneuroscience(fmri)",
+                "tptp": "measurement(fmri) => usedbyneuroscience(fmri)"
+            },
+            {
+                "ref": "(11) if fmri is not an invasive neuroimaging technique, it is used by neuroscience researchers.",
+                "fol": "¬invasive(fmri) → usedbyneuroscience(fmri)",
+                "tptp": "~invasive(fmri) => usedbyneuroscience(fmri)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "A neuroimaging technique is either an invasive neuroimaging technique or a noninvasive neuroimaging technique.  ",
+            "FMRI is a neuroimaging technique.  ",
+            "FMRI is either a measurement of brain activity or a noninvasive neuroimaging technique.  ",
+            "All noninvasive neuroimaging techniques provide a spatial resolution of brains.  ",
+            "If a technique provides a spatial resolution of brains, then it is a measurement of brain activity.  ",
+            "All measurements of brain activity are used by neuroscience researchers.  ",
+            "If fMRI is not an invasive neuroimaging technique, it must be a noninvasive neuroimaging technique.  ",
+            "If fMRI is a noninvasive neuroimaging technique, it provides a spatial resolution of brains.  ",
+            "If fMRI provides a spatial resolution of brains, it is a measurement of brain activity.  ",
+            "If fMRI is a measurement of brain activity, it is used by neuroscience researchers.  ",
+            "If fMRI is not an invasive neuroimaging technique, it is used by neuroscience researchers.  "
+        ],
+        "AnswerCorrect": false,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "F1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "316_797",
+        "premises": [
+            "There are no mansion houses in an urban area.",
+            "All skyscrapers are in urban areas.",
+            "Every creepy haunted house is a mansion house.",
+            "Every terrifying building on Halloween is a creepy haunted house.",
+            "The LaLaurie House is a creepy haunted house or a terrifying building on Halloween."
+        ],
+        "question": [
+            "If the LaLaurie House is either a skyscraper or a mansion house, then it is neither a creepy haunted house nor a terrifying building on Halloween."
+        ],
+        "premises_gt_fol": [
+            "∀x (InUrbanArea(x) → ¬MansionHouse(x))",
+            "∀x (Skyscraper(x) → InUrbanArea(x))",
+            "∀x (CreepyHauntedHouse(x) → MansionHouse(x))",
+            "∀x (TerrifyingBuilding(x) ∧ OnHalloween(x) → CreepyHauntedHouse(x))",
+            "CreepyHauntedHouse(laLaurieHouse) ∨ TerrifyingBuilding(laLaurieHouse) ∧ OnHalloween(laLaurieHouse)"
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "There are no mansion houses in an urban area.",
+            "All skyscrapers are in urban areas.",
+            "Every creepy haunted house is a mansion house.",
+            "Every terrifying building on Halloween is a creepy haunted house.",
+            "The LaLaurie House is a creepy haunted house or a terrifying building on Halloween.",
+            "If the LaLaurie House is a creepy haunted house, then it is a mansion house.",
+            "If the LaLaurie House is a terrifying building on Halloween, then it is a creepy haunted house, and thus a mansion house.",
+            "If the LaLaurie House is a mansion house, it cannot be in an urban area.",
+            "If the LaLaurie House is a skyscraper, it must be in an urban area.",
+            "If the LaLaurie House is either a skyscraper or a mansion house, it cannot be both a creepy haunted house and a terrifying building on Halloween.",
+            "The LaLaurie House cannot be a skyscraper because it would contradict being a mansion house.",
+            "The LaLaurie House cannot be a mansion house and a skyscraper simultaneously.",
+            "There is evidence to conclude that if the LaLaurie House is either a skyscraper or a mansion house, then it is neither a creepy haunted house nor a terrifying building on Halloween."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "There are no mansion houses in an urban area.",
+            "All skyscrapers are in urban areas.",
+            "Every creepy haunted house is a mansion house.",
+            "Every terrifying building on Halloween is a creepy haunted house.",
+            "The LaLaurie House is a creepy haunted house or a terrifying building on Halloween.",
+            "If the LaLaurie House is a creepy haunted house, then it is a mansion house.",
+            "If the LaLaurie House is a terrifying building on Halloween, then it is a creepy haunted house, and thus a mansion house.",
+            "If the LaLaurie House is a mansion house, it cannot be in an urban area.",
+            "If the LaLaurie House is a skyscraper, it must be in an urban area.",
+            "If the LaLaurie House is either a skyscraper or a mansion house, it cannot be both a creepy haunted house and a terrifying building on Halloween.",
+            null,
+            "The LaLaurie House cannot be a mansion house and a skyscraper simultaneously.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) there are no mansion houses in an urban area.",
+                "fol": "¬∃x (mansionhouse(x) ∧ urbanarea(x))",
+                "tptp": "~?[X]: (mansionhouse(X) & urbanarea(X))"
+            },
+            {
+                "ref": "(2) all skyscrapers are in urban areas.",
+                "fol": "∀x (skyscraper(x) → urbanarea(x))",
+                "tptp": "![X]: (skyscraper(X) => urbanarea(X))"
+            },
+            {
+                "ref": "(3) every creepy haunted house is a mansion house.",
+                "fol": "∀x (creepyhauntedhouse(x) → mansionhouse(x))",
+                "tptp": "![X]: (creepyhauntedhouse(X) => mansionhouse(X))"
+            },
+            {
+                "ref": "(4) every terrifying building on halloween is a creepy haunted house.",
+                "fol": "∀x (terrifyingbuildingonhalloween(x) → creepyhauntedhouse(x))",
+                "tptp": "![X]: (terrifyingbuildingonhalloween(X) => creepyhauntedhouse(X))"
+            },
+            {
+                "ref": "(5) the lalaurie house is a creepy haunted house or a terrifying building on halloween.",
+                "fol": "creepyhauntedhouse(lalaurie) ∨ terrifyingbuildingonhalloween(lalaurie)",
+                "tptp": "creepyhauntedhouse(lalaurie) | terrifyingbuildingonhalloween(lalaurie)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(12) if the lalaurie house is either a skyscraper or a mansion house, then it is neither a creepy haunted house nor a terrifying building on halloween.",
+            "fol": "(skyscraper(lalaurie) ⊕ mansionhouse(lalaurie)) → ¬(creepyhauntedhouse(lalaurie) ∨ terrifyingbuildingonhalloween(lalaurie))",
+            "tptp": "(((~(skyscraper(lalaurie)) & (mansionhouse(lalaurie))) | ((skyscraper(lalaurie)) & ~(mansionhouse(lalaurie))))) => ~(creepyhauntedhouse(lalaurie) | terrifyingbuildingonhalloween(lalaurie))"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) there are no mansion houses in an urban area.",
+                "fol": "¬∃x (mansionhouse(x) ∧ urbanarea(x))",
+                "tptp": "~?[X]: (mansionhouse(X) & urbanarea(X))"
+            },
+            {
+                "ref": "(2) all skyscrapers are in urban areas.",
+                "fol": "∀x (skyscraper(x) → urbanarea(x))",
+                "tptp": "![X]: (skyscraper(X) => urbanarea(X))"
+            },
+            {
+                "ref": "(3) every creepy haunted house is a mansion house.",
+                "fol": "∀x (creepyhauntedhouse(x) → mansionhouse(x))",
+                "tptp": "![X]: (creepyhauntedhouse(X) => mansionhouse(X))"
+            },
+            {
+                "ref": "(4) every terrifying building on halloween is a creepy haunted house.",
+                "fol": "∀x (terrifyingbuildingonhalloween(x) → creepyhauntedhouse(x))",
+                "tptp": "![X]: (terrifyingbuildingonhalloween(X) => creepyhauntedhouse(X))"
+            },
+            {
+                "ref": "(5) the lalaurie house is a creepy haunted house or a terrifying building on halloween.",
+                "fol": "creepyhauntedhouse(lalaurie) ∨ terrifyingbuildingonhalloween(lalaurie)",
+                "tptp": "creepyhauntedhouse(lalaurie) | terrifyingbuildingonhalloween(lalaurie)"
+            },
+            {
+                "ref": "(6) if the lalaurie house is a creepy haunted house, then it is a mansion house.",
+                "fol": "creepyhauntedhouse(lalaurie) → mansionhouse(lalaurie)",
+                "tptp": "creepyhauntedhouse(lalaurie) => mansionhouse(lalaurie)"
+            },
+            {
+                "ref": "(7) if the lalaurie house is a terrifying building on halloween, then it is a creepy haunted house, and thus a mansion house.",
+                "fol": "terrifyingbuildingonhalloween(lalaurie) → (creepyhauntedhouse(lalaurie) ∧ mansionhouse(lalaurie))",
+                "tptp": "terrifyingbuildingonhalloween(lalaurie) => (creepyhauntedhouse(lalaurie) & mansionhouse(lalaurie))"
+            },
+            {
+                "ref": "(8) if the lalaurie house is a mansion house, it cannot be in an urban area.",
+                "fol": "mansionhouse(lalaurie) → ¬urbanarea(lalaurie)",
+                "tptp": "mansionhouse(lalaurie) => ~urbanarea(lalaurie)"
+            },
+            {
+                "ref": "(9) if the lalaurie house is a skyscraper, it must be in an urban area.",
+                "fol": "skyscraper(lalaurie) → urbanarea(lalaurie)",
+                "tptp": "skyscraper(lalaurie) => urbanarea(lalaurie)"
+            },
+            {
+                "ref": "(10) if the lalaurie house is either a skyscraper or a mansion house, it cannot be both a creepy haunted house and a terrifying building on halloween.",
+                "fol": "(skyscraper(lalaurie) ⊕ mansionhouse(lalaurie)) → ¬(creepyhauntedhouse(lalaurie) ∧ terrifyingbuildingonhalloween(lalaurie))",
+                "tptp": "(((~(skyscraper(lalaurie)) & (mansionhouse(lalaurie))) | ((skyscraper(lalaurie)) & ~(mansionhouse(lalaurie))))) => ~(creepyhauntedhouse(lalaurie) & terrifyingbuildingonhalloween(lalaurie))"
+            },
+            {
+                "ref": "(11) the lalaurie house cannot be a mansion house and a skyscraper simultaneously.",
+                "fol": "¬(mansionhouse(lalaurie) ∧ skyscraper(lalaurie))",
+                "tptp": "~(mansionhouse(lalaurie) & skyscraper(lalaurie))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "There are no mansion houses in an urban area.",
+            "All skyscrapers are in urban areas.",
+            "Every creepy haunted house is a mansion house.",
+            "Every terrifying building on Halloween is a creepy haunted house.",
+            "The LaLaurie House is a creepy haunted house or a terrifying building on Halloween.",
+            "If the LaLaurie House is a creepy haunted house, then it is a mansion house.",
+            "If the LaLaurie House is a terrifying building on Halloween, then it is a creepy haunted house, and thus a mansion house.",
+            "If the LaLaurie House is a mansion house, it cannot be in an urban area.",
+            "If the LaLaurie House is a skyscraper, it must be in an urban area.",
+            "If the LaLaurie House is either a skyscraper or a mansion house, it cannot be both a creepy haunted house and a terrifying building on Halloween.",
+            "The LaLaurie House cannot be a mansion house and a skyscraper simultaneously."
+        ],
+        "AnswerCorrect": false,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "Unknown",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "F2",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "Unknown",
+            "True"
+        ]
+    },
+    {
+        "idx": "7_17",
+        "premises": [
+            "Six, seven and eight are real numbers.",
+            "If a real number equals another real number added by one, the first number is larger.",
+            "If the number x is larger than the number y, then y is not larger than x.",
+            "Seven equals six plus one.",
+            "Eight equals seven plus one.",
+            "Two is positive.",
+            "If a number is positive, then the double of it is also positive.",
+            "Eight is the double of four.",
+            "Four is the double of two."
+        ],
+        "question": [
+            "Eight is larger than seven."
+        ],
+        "premises_gt_fol": [
+            "RealNum(num6) ∧ RealNum(num7) ∧ RealNum(num8)",
+            "∀x ∀y ((RealNum(x) ∧ RealNum(y) ∧ IsSuccessorOf(x, y)) → Larger(x, y))",
+            "∀x ∀y (Larger(x, y) → ¬Larger(y, x))",
+            "∃y(IsSuccessorOf(y, num6) ∧ Equals(num7, y))",
+            "∃y(IsSuccessorOf(y, num7) ∧ Equals(num8, y))",
+            "Positive(num2)",
+            "∀x ∀y ((Positive(x) ∧ IsDouble(y, x)) → Positive(y))",
+            "IsDouble(num8, num4)",
+            "IsDouble(num4, num2)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Six, seven, and eight are real numbers.",
+            "Seven equals six plus one.",
+            "According to the premises, if a real number equals another real number added by one, the first number is larger.",
+            "Therefore, seven is larger than six.",
+            "Eight equals seven plus one.",
+            "Applying the same premise, eight is larger than seven.",
+            "There is evidence to conclude that eight is larger than seven."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "Six, seven, and eight are real numbers.",
+            "Seven equals six plus one.",
+            "According to the premises, if a real number equals another real number added by one, the first number is larger.",
+            null,
+            "Eight equals seven plus one.",
+            "Applying the same premise, eight is larger than seven.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) six, seven and eight are real numbers.",
+                "fol": "real(6) ∧ real(7) ∧ real(8)",
+                "tptp": "real(6) & real(7) & real(8)"
+            },
+            {
+                "ref": "(2) if a real number equals another real number added by one, the first number is larger.",
+                "fol": "∀x ∀y ((real(x) ∧ real(y) ∧ equals(x, add(y, 1))) → larger(x, y))",
+                "tptp": "![X]: ![Y]: ((real(X) & real(Y) & equals(X, add(Y, 1))) => larger(X, Y))"
+            },
+            {
+                "ref": "(3) if the number x is larger than the number y, then y is not larger than x.",
+                "fol": "∀x ∀y (larger(x, y) → ¬larger(y, x))",
+                "tptp": "![X]: ![Y]: (larger(X, Y) => ~larger(Y, X))"
+            },
+            {
+                "ref": "(4) seven equals six plus one.",
+                "fol": "equals(7, add(6, 1))",
+                "tptp": "equals(7, add(6, 1))"
+            },
+            {
+                "ref": "(5) eight equals seven plus one.",
+                "fol": "equals(8, add(7, 1))",
+                "tptp": "equals(8, add(7, 1))"
+            },
+            {
+                "ref": "(6) two is positive.",
+                "fol": "positive(2)",
+                "tptp": "positive(2)"
+            },
+            {
+                "ref": "(7) if a number is positive, then the double of it is also positive.",
+                "fol": "∀x (positive(x) → positive(double(x)))",
+                "tptp": "![X]: (positive(X) => positive(double(X)))"
+            },
+            {
+                "ref": "(8) eight is the double of four.",
+                "fol": "equals(8, double(4))",
+                "tptp": "equals(8, double(4))"
+            },
+            {
+                "ref": "(9) four is the double of two.",
+                "fol": "equals(4, double(2))",
+                "tptp": "equals(4, double(2))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(6) eight is larger than seven.",
+            "fol": "larger(8, 7)",
+            "tptp": "larger(8, 7)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) six, seven, and eight are real numbers.",
+                "fol": "real(6) ∧ real(7) ∧ real(8)",
+                "tptp": "real(6) & real(7) & real(8)"
+            },
+            {
+                "ref": "(2) seven equals six plus one.",
+                "fol": "equals(7, add(6, 1))",
+                "tptp": "equals(7, add(6, 1))"
+            },
+            {
+                "ref": "(3) according to the premises, if a real number equals another real number added by one, the first number is larger.",
+                "fol": "∀x ∀y ((real(x) ∧ real(y) ∧ equals(x, add(y, 1))) → larger(x, y))",
+                "tptp": "![X]: ![Y]: ((real(X) & real(Y) & equals(X, add(Y, 1))) => larger(X, Y))"
+            },
+            {
+                "ref": "(4) eight equals seven plus one.",
+                "fol": "equals(8, add(7, 1))",
+                "tptp": "equals(8, add(7, 1))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Six, seven, and eight are real numbers.",
+            "Seven equals six plus one.",
+            "According to the premises, if a real number equals another real number added by one, the first number is larger.",
+            "Eight equals seven plus one."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "411_1154",
+        "premises": [
+            "If a game is one of the top-3 best selling video-games, then it is multiplatform.",
+            "If a game has sold more than 100 million copies, then it is one of the top-3 best-selling video games.",
+            "Some games that support Windows are developed by Nintendo.",
+            "All multiplatform games can be played on a wide range of devices.",
+            "Pokemon Diamond version is neither developed by Nintendo nor can be played on a wide range of devices."
+        ],
+        "question": [
+            "If Pokemon Diamond version either supports Windows or has sold more than 100 million copies, then Pokemon Diamond version either is both multiplatform and one of the top-3 best selling video games, or is neither multiplatform nor one of the top-3 best selling video games."
+        ],
+        "premises_gt_fol": [
+            "∀x (ATop3BestSellingVideoGame(x) → Multiplatform(x))",
+            "∀x (SoldMoreThan100MillionCopies(x) → ATop3BestSellingVideoGame(x))",
+            "∃x ((SupportsWindows(x) ∧ AGameDevelopedByNintendo(x)))",
+            "∀x (Multiplatform(x) → CanBePlayedOnAWideRangeOfDevices(x))",
+            "¬(DevelopedByNintendo(PokemonDiamond) ∨ CanBePlayedOnAWideRangeOfDevices(PokemonDiamond))"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "If a game has sold more than 100 million copies, then it is one of the top-3 best-selling video games.",
+            "If a game is one of the top-3 best selling video-games, then it is multiplatform.",
+            "All multiplatform games can be played on a wide range of devices.",
+            "Pokemon Diamond version cannot be played on a wide range of devices.",
+            "Therefore, Pokemon Diamond version is not multiplatform.",
+            "Since Pokemon Diamond version is not multiplatform, it is not one of the top-3 best selling video games.",
+            "If Pokemon Diamond version has sold more than 100 million copies, it would be one of the top-3 best selling video games, which contradicts the fact that it is not multiplatform.",
+            "Therefore, Pokemon Diamond version has not sold more than 100 million copies.",
+            "If Pokemon Diamond version supports Windows, it does not necessarily mean it is multiplatform or one of the top-3 best selling video games.",
+            "Thus, if Pokemon Diamond version either supports Windows or has sold more than 100 million copies, it is neither multiplatform nor one of the top-3 best selling video games.",
+            "There is evidence to conclude that the conclusion is true."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "If a game has sold more than 100 million copies, then it is one of the top-3 best-selling video games.",
+            "If a game is one of the top-3 best selling video-games, then it is multiplatform.",
+            "All multiplatform games can be played on a wide range of devices.",
+            "Pokemon Diamond version cannot be played on a wide range of devices.",
+            null,
+            "Since Pokemon Diamond version is not multiplatform, it is not one of the top-3 best selling video games.",
+            null,
+            null,
+            null,
+            "Thus, if Pokemon Diamond version either supports Windows or has sold more than 100 million copies, it is neither multiplatform nor one of the top-3 best selling video games.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) if a game is one of the top-3 best selling video-games, then it is multiplatform.",
+                "fol": "∀x (top3(x) → multiplatform(x))",
+                "tptp": "![X]: (top3(X) => multiplatform(X))"
+            },
+            {
+                "ref": "(2) if a game has sold more than 100 million copies, then it is one of the top-3 best-selling video games.",
+                "fol": "∀x (sold100m(x) → top3(x))",
+                "tptp": "![X]: (sold100m(X) => top3(X))"
+            },
+            {
+                "ref": "(3) some games that support windows are developed by nintendo.",
+                "fol": "∃x (supportswindows(x) ∧ developedbynintendo(x))",
+                "tptp": "?[X]: (supportswindows(X) & developedbynintendo(X))"
+            },
+            {
+                "ref": "(4) all multiplatform games can be played on a wide range of devices.",
+                "fol": "∀x (multiplatform(x) → widerangedevices(x))",
+                "tptp": "![X]: (multiplatform(X) => widerangedevices(X))"
+            },
+            {
+                "ref": "(5) pokemon diamond version is neither developed by nintendo nor can be played on a wide range of devices.",
+                "fol": "¬(developedbynintendo(pokemondiamond) ∨ widerangedevices(pokemondiamond))",
+                "tptp": "~(developedbynintendo(pokemondiamond) | widerangedevices(pokemondiamond))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(7) if pokemon diamond version either supports windows or has sold more than 100 million copies, then pokemon diamond version either is both multiplatform and one of the top-3 best selling video games, or is neither multiplatform nor one of the top-3 best selling video games.",
+            "fol": "(supportswindows(pokemondiamond) ⊕ sold100m(pokemondiamond)) → ((multiplatform(pokemondiamond) ∧ top3(pokemondiamond)) ⊕ ¬(multiplatform(pokemondiamond) ∨ top3(pokemondiamond)))",
+            "tptp": "(((~(supportswindows(pokemondiamond)) & (sold100m(pokemondiamond))) | ((supportswindows(pokemondiamond)) & ~(sold100m(pokemondiamond))))) => (((~((multiplatform(pokemondiamond) & top3(pokemondiamond))) & (~(multiplatform(pokemondiamond) | top3(pokemondiamond)))) | (((multiplatform(pokemondiamond) & top3(pokemondiamond))) & ~(~(multiplatform(pokemondiamond) | top3(pokemondiamond))))))"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) if a game has sold more than 100 million copies, then it is one of the top-3 best-selling video games.",
+                "fol": "∀x (sold100m(x) → top3(x))",
+                "tptp": "![X]: (sold100m(X) => top3(X))"
+            },
+            {
+                "ref": "(2) if a game is one of the top-3 best selling video-games, then it is multiplatform.",
+                "fol": "∀x (top3(x) → multiplatform(x))",
+                "tptp": "![X]: (top3(X) => multiplatform(X))"
+            },
+            {
+                "ref": "(3) all multiplatform games can be played on a wide range of devices.",
+                "fol": "∀x (multiplatform(x) → widerangedevices(x))",
+                "tptp": "![X]: (multiplatform(X) => widerangedevices(X))"
+            },
+            {
+                "ref": "(4) pokemon diamond version cannot be played on a wide range of devices.",
+                "fol": "¬widerangedevices(pokemondiamond)",
+                "tptp": "~widerangedevices(pokemondiamond)"
+            },
+            {
+                "ref": "(5) since pokemon diamond version is not multiplatform, it is not one of the top-3 best selling video games.",
+                "fol": "¬multiplatform(pokemondiamond) → ¬top3(pokemondiamond)",
+                "tptp": "~multiplatform(pokemondiamond) => ~top3(pokemondiamond)"
+            },
+            {
+                "ref": "(6) thus, if pokemon diamond version either supports windows or has sold more than 100 million copies, it is neither multiplatform nor one of the top-3 best selling video games.",
+                "fol": "(supportswindows(pokemondiamond) ⊕ sold100m(pokemondiamond)) → ¬(multiplatform(pokemondiamond) ∨ top3(pokemondiamond))",
+                "tptp": "(((~(supportswindows(pokemondiamond)) & (sold100m(pokemondiamond))) | ((supportswindows(pokemondiamond)) & ~(sold100m(pokemondiamond))))) => ~(multiplatform(pokemondiamond) | top3(pokemondiamond))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "If a game has sold more than 100 million copies, then it is one of the top-3 best-selling video games.",
+            "If a game is one of the top-3 best selling video-games, then it is multiplatform.",
+            "All multiplatform games can be played on a wide range of devices.",
+            "Pokemon Diamond version cannot be played on a wide range of devices.",
+            "Since Pokemon Diamond version is not multiplatform, it is not one of the top-3 best selling video games.",
+            "Thus, if Pokemon Diamond version either supports Windows or has sold more than 100 million copies, it is neither multiplatform nor one of the top-3 best selling video games."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "93_284",
+        "premises": [
+            "Roy Richardson was a cricketer who played for Sint Maarten, a constituent country.",
+            "Roy Richardson was a right-handed batsman and medium-pace bowler.",
+            "Roy Richardson was old when he debuted in cricket.",
+            "Sherville Huggins dismissed Roy Richardson."
+        ],
+        "question": [
+            "No right-handed medium-pace bowlers were playing for Sint Maarten."
+        ],
+        "premises_gt_fol": [
+            "Cricketeer(royRichardson) ∧ PlaysFor(royRichardson, sintMaarten) ∧ ConstituentCountry(sintMaarten)",
+            "RightHanded(royRichardson) ∧ Batsman(royRichardson) ∧ MediumPaceBowler(royRichardson)",
+            "OldAtDebut(royRichardson)",
+            "Dismisses(shervilleHuggins, royRichardson)"
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "Roy Richardson was a cricketer who played for Sint Maarten.",
+            "Roy Richardson was a right-handed batsman and medium-pace bowler.",
+            "Roy Richardson was playing for Sint Maarten as a right-handed medium-pace bowler.",
+            "The conclusion states that no right-handed medium-pace bowlers were playing for Sint Maarten.",
+            "There is a contradiction between the premises and the conclusion.",
+            "Roy Richardson, being a right-handed medium-pace bowler, was indeed playing for Sint Maarten.",
+            "There is evidence to conclude that the statement in the conclusion is false."
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "Roy Richardson was a cricketer who played for Sint Maarten.",
+            "Roy Richardson was a right-handed batsman and medium-pace bowler.",
+            "Roy Richardson was playing for Sint Maarten as a right-handed medium-pace bowler.",
+            null,
+            null,
+            "Roy Richardson, being a right-handed medium-pace bowler, was indeed playing for Sint Maarten.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) roy richardson was a cricketer who played for sint maarten, a constituent country.",
+                "fol": "cricketer(roy) ∧ playedfor(roy, sintmaarten) ∧ constituentcountry(sintmaarten)",
+                "tptp": "cricketer(roy) & playedfor(roy, sintmaarten) & constituentcountry(sintmaarten)"
+            },
+            {
+                "ref": "(2) roy richardson was a right-handed batsman and medium-pace bowler.",
+                "fol": "righthandedbatsman(roy) ∧ mediumpacebowler(roy)",
+                "tptp": "righthandedbatsman(roy) & mediumpacebowler(roy)"
+            },
+            {
+                "ref": "(3) roy richardson was old when he debuted in cricket.",
+                "fol": "old(roy) ∧ debutedincricket(roy)",
+                "tptp": "old(roy) & debutedincricket(roy)"
+            },
+            {
+                "ref": "(4) sherville huggins dismissed roy richardson.",
+                "fol": "dismissed(sherville, roy)",
+                "tptp": "dismissed(sherville, roy)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(5) no right-handed medium-pace bowlers were playing for sint maarten.",
+            "fol": "¬∃x (righthandedbatsman(x) ∧ mediumpacebowler(x) ∧ playedfor(x, sintmaarten))",
+            "tptp": "~?[X]: (righthandedbatsman(X) & mediumpacebowler(X) & playedfor(X, sintmaarten))"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) roy richardson was a cricketer who played for sint maarten.",
+                "fol": "cricketer(roy) ∧ playedfor(roy, sintmaarten)",
+                "tptp": "cricketer(roy) & playedfor(roy, sintmaarten)"
+            },
+            {
+                "ref": "(2) roy richardson was a right-handed batsman and medium-pace bowler.",
+                "fol": "righthandedbatsman(roy) ∧ mediumpacebowler(roy)",
+                "tptp": "righthandedbatsman(roy) & mediumpacebowler(roy)"
+            },
+            {
+                "ref": "(3) roy richardson was playing for sint maarten as a right-handed medium-pace bowler.",
+                "fol": "playedfor(roy, sintmaarten) ∧ righthandedbatsman(roy) ∧ mediumpacebowler(roy)",
+                "tptp": "playedfor(roy, sintmaarten) & righthandedbatsman(roy) & mediumpacebowler(roy)"
+            },
+            {
+                "ref": "(4) roy richardson, being a right-handed medium-pace bowler, was indeed playing for sint maarten.",
+                "fol": "righthandedbatsman(roy) ∧ mediumpacebowler(roy) ∧ playedfor(roy, sintmaarten)",
+                "tptp": "righthandedbatsman(roy) & mediumpacebowler(roy) & playedfor(roy, sintmaarten)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Roy Richardson was a cricketer who played for Sint Maarten.",
+            "Roy Richardson was a right-handed batsman and medium-pace bowler.",
+            "Roy Richardson was playing for Sint Maarten as a right-handed medium-pace bowler.",
+            "Roy Richardson, being a right-handed medium-pace bowler, was indeed playing for Sint Maarten."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "449_1293",
+        "premises": [
+            "Animals who need large territory travel far.",
+            "Every animal that eats a lot needs a large territory.",
+            "If something is a big animal, then it will eat a lot.",
+            "Bears are big animals.",
+            "Larry is a big animal."
+        ],
+        "question": [
+            "Larry is not a bear and does not travel far."
+        ],
+        "premises_gt_fol": [
+            "∀x (Animal(x) ∧ Need(x, largeTerritory) → TravelFar(x))",
+            "∀x (EatALot(x) → Need(x, largeTerritory))",
+            "∀x (Big(x) ∧ Animal(x) → EatALot(x))",
+            "∀x (Bear(x) → Big(x) ∧ Animal(x))",
+            "Big(larry) ∧ Animal(larry)"
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "Animals who need large territory travel far.",
+            "Every animal that eats a lot needs a large territory.",
+            "If something is a big animal, then it will eat a lot.",
+            "Bears are big animals.",
+            "Larry is a big animal.",
+            "Since Larry is a big animal, Larry will eat a lot.",
+            "Since Larry eats a lot, Larry needs a large territory.",
+            "Since Larry needs a large territory, Larry will travel far.",
+            "There is no information connecting Larry to being a bear.",
+            "There is evidence to conclude that Larry travels far.",
+            "There is no evidence to conclude that Larry is a bear."
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "Animals who need large territory travel far.",
+            "Every animal that eats a lot needs a large territory.",
+            "If something is a big animal, then it will eat a lot.",
+            "Bears are big animals.",
+            "Larry is a big animal.",
+            "Since Larry is a big animal, Larry will eat a lot.",
+            "Since Larry eats a lot, Larry needs a large territory.",
+            "Since Larry needs a large territory, Larry will travel far.",
+            null,
+            null,
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) animals who need large territory travel far.",
+                "fol": "∀x (needlargeterritory(x) → travelfar(x))",
+                "tptp": "![X]: (needlargeterritory(X) => travelfar(X))"
+            },
+            {
+                "ref": "(2) every animal that eats a lot needs a large territory.",
+                "fol": "∀x (eatalot(x) → needlargeterritory(x))",
+                "tptp": "![X]: (eatalot(X) => needlargeterritory(X))"
+            },
+            {
+                "ref": "(3) if something is a big animal, then it will eat a lot.",
+                "fol": "∀x (biganimal(x) → eatalot(x))",
+                "tptp": "![X]: (biganimal(X) => eatalot(X))"
+            },
+            {
+                "ref": "(4) bears are big animals.",
+                "fol": "∀x (bear(x) → biganimal(x))",
+                "tptp": "![X]: (bear(X) => biganimal(X))"
+            },
+            {
+                "ref": "(5) larry is a big animal.",
+                "fol": "biganimal(larry)",
+                "tptp": "biganimal(larry)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(9) larry is not a bear and does not travel far.",
+            "fol": "¬bear(larry) ∧ ¬travelfar(larry)",
+            "tptp": "~bear(larry) & ~travelfar(larry)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) animals who need large territory travel far.",
+                "fol": "∀x (needlargeterritory(x) → travelfar(x))",
+                "tptp": "![X]: (needlargeterritory(X) => travelfar(X))"
+            },
+            {
+                "ref": "(2) every animal that eats a lot needs a large territory.",
+                "fol": "∀x (eatalot(x) → needlargeterritory(x))",
+                "tptp": "![X]: (eatalot(X) => needlargeterritory(X))"
+            },
+            {
+                "ref": "(3) if something is a big animal, then it will eat a lot.",
+                "fol": "∀x (biganimal(x) → eatalot(x))",
+                "tptp": "![X]: (biganimal(X) => eatalot(X))"
+            },
+            {
+                "ref": "(4) bears are big animals.",
+                "fol": "∀x (bear(x) → biganimal(x))",
+                "tptp": "![X]: (bear(X) => biganimal(X))"
+            },
+            {
+                "ref": "(5) larry is a big animal.",
+                "fol": "biganimal(larry)",
+                "tptp": "biganimal(larry)"
+            },
+            {
+                "ref": "(6) since larry is a big animal, larry will eat a lot.",
+                "fol": "biganimal(larry) → eatalot(larry)",
+                "tptp": "biganimal(larry) => eatalot(larry)"
+            },
+            {
+                "ref": "(7) since larry eats a lot, larry needs a large territory.",
+                "fol": "eatalot(larry) → needlargeterritory(larry)",
+                "tptp": "eatalot(larry) => needlargeterritory(larry)"
+            },
+            {
+                "ref": "(8) since larry needs a large territory, larry will travel far.",
+                "fol": "needlargeterritory(larry) → travelfar(larry)",
+                "tptp": "needlargeterritory(larry) => travelfar(larry)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Animals who need large territory travel far.",
+            "Every animal that eats a lot needs a large territory.",
+            "If something is a big animal, then it will eat a lot.",
+            "Bears are big animals.",
+            "Larry is a big animal.",
+            "Since Larry is a big animal, Larry will eat a lot.",
+            "Since Larry eats a lot, Larry needs a large territory.",
+            "Since Larry needs a large territory, Larry will travel far."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "13_35",
+        "premises": [
+            "System 7 is a UK-based electronic dance music band.",
+            "Steve Hillage and Miquette Giraudy formed System 7.",
+            "Steve Hillage and Miquette Giraudy are former members of the band Gong.",
+            "Electric dance music bands are bands.",
+            "System 7 has released several club singles.",
+            "Club singles are not singles."
+        ],
+        "question": [
+            "System 7 was formed by former members of Gong."
+        ],
+        "premises_gt_fol": [
+            "BasedIn(system7, uk) ∧ ElectronicDanceMusicBand(system7)",
+            "Form(stevehillage, system7) ∧ Form(miquettegiraudy, system7)",
+            "FormerMemberOf(stevehillage, gong) ∧ FormerMemberOf(miquettegiraudy, gong)",
+            "∀x (ElectronicDanceMusicBand(x) → Band(x))",
+            "∃x (ClubSingle(x) ∧ Release(system7, x))",
+            "∀x (ClubSingle(x) → ¬Single(x))"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "System 7 is a UK-based electronic dance music band.",
+            "Steve Hillage and Miquette Giraudy formed System 7.",
+            "Steve Hillage and Miquette Giraudy are former members of the band Gong.",
+            "The premise states that System 7 was formed by Steve Hillage and Miquette Giraudy.",
+            "Since Steve Hillage and Miquette Giraudy are former members of Gong, System 7 was formed by former members of Gong.",
+            "There is evidence to conclude that System 7 was formed by former members of Gong."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "System 7 is a UK-based electronic dance music band.",
+            "Steve Hillage and Miquette Giraudy formed System 7.",
+            "Steve Hillage and Miquette Giraudy are former members of the band Gong.",
+            "The premise states that System 7 was formed by Steve Hillage and Miquette Giraudy.",
+            "Since Steve Hillage and Miquette Giraudy are former members of Gong, System 7 was formed by former members of Gong.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) system 7 is a uk-based electronic dance music band.",
+                "fol": "ukbased(system7) ∧ electronicdancemusicband(system7)",
+                "tptp": "ukbased(system7) & electronicdancemusicband(system7)"
+            },
+            {
+                "ref": "(2) steve hillage and miquette giraudy formed system 7.",
+                "fol": "formedby(system7, stevehillage) ∧ formedby(system7, miquettegiraudy)",
+                "tptp": "formedby(system7, stevehillage) & formedby(system7, miquettegiraudy)"
+            },
+            {
+                "ref": "(3) steve hillage and miquette giraudy are former members of the band gong.",
+                "fol": "formermember(stevehillage, gong) ∧ formermember(miquettegiraudy, gong)",
+                "tptp": "formermember(stevehillage, gong) & formermember(miquettegiraudy, gong)"
+            },
+            {
+                "ref": "(4) electric dance music bands are bands.",
+                "fol": "∀x (electronicdancemusicband(x) → band(x))",
+                "tptp": "![X]: (electronicdancemusicband(X) => band(X))"
+            },
+            {
+                "ref": "(5) system 7 has released several club singles.",
+                "fol": "released(system7, severalclubsingles)",
+                "tptp": "released(system7, severalclubsingles)"
+            },
+            {
+                "ref": "(6) club singles are not singles.",
+                "fol": "∀x (clubsingle(x) → ¬single(x))",
+                "tptp": "![X]: (clubsingle(X) => ~single(X))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(6) system 7 was formed by former members of gong.",
+            "fol": "formedby(system7, stevehillage) ∧ formedby(system7, miquettegiraudy) ∧ formermember(stevehillage, gong) ∧ formermember(miquettegiraudy, gong)",
+            "tptp": "formedby(system7, stevehillage) & formedby(system7, miquettegiraudy) & formermember(stevehillage, gong) & formermember(miquettegiraudy, gong)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) system 7 is a uk-based electronic dance music band.",
+                "fol": "ukbased(system7) ∧ electronicdancemusicband(system7)",
+                "tptp": "ukbased(system7) & electronicdancemusicband(system7)"
+            },
+            {
+                "ref": "(2) steve hillage and miquette giraudy formed system 7.",
+                "fol": "formedby(system7, stevehillage) ∧ formedby(system7, miquettegiraudy)",
+                "tptp": "formedby(system7, stevehillage) & formedby(system7, miquettegiraudy)"
+            },
+            {
+                "ref": "(3) steve hillage and miquette giraudy are former members of the band gong.",
+                "fol": "formermember(stevehillage, gong) ∧ formermember(miquettegiraudy, gong)",
+                "tptp": "formermember(stevehillage, gong) & formermember(miquettegiraudy, gong)"
+            },
+            {
+                "ref": "(4) the premise states that system 7 was formed by steve hillage and miquette giraudy.",
+                "fol": "formedby(system7, stevehillage) ∧ formedby(system7, miquettegiraudy)",
+                "tptp": "formedby(system7, stevehillage) & formedby(system7, miquettegiraudy)"
+            },
+            {
+                "ref": "(5) since steve hillage and miquette giraudy are former members of gong, system 7 was formed by former members of gong.",
+                "fol": "(formermember(stevehillage, gong) ∧ formermember(miquettegiraudy, gong)) → (formedby(system7, stevehillage) ∧ formedby(system7, miquettegiraudy))",
+                "tptp": "(formermember(stevehillage, gong) & formermember(miquettegiraudy, gong)) => (formedby(system7, stevehillage) & formedby(system7, miquettegiraudy))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "System 7 is a UK-based electronic dance music band.",
+            "Steve Hillage and Miquette Giraudy formed System 7.",
+            "Steve Hillage and Miquette Giraudy are former members of the band Gong.",
+            "The premise states that System 7 was formed by Steve Hillage and Miquette Giraudy.",
+            "Since Steve Hillage and Miquette Giraudy are former members of Gong, System 7 was formed by former members of Gong."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "428_1215",
+        "premises": [
+            "All devices belonging to the company are connected to Google Home. ",
+            "All devices with the company logo belong to the company. ",
+            "Each device either has the company logo or belongs to employees. ",
+            "All of the devices belonging to employees can be connected to the company's wifi. ",
+            "All of the devices connected to Google Home are controlled by managers. ",
+            "All of the devices that connect to the company's wifi are easy to operate. ",
+            "All of the devices that are easy to operate were produced after a new CTO is appointed. ",
+            "ModelXX was not produced after a new CTO was appointed."
+        ],
+        "question": [
+            "ModelXX is controlled by managers."
+        ],
+        "premises_gt_fol": [
+            "∀x ((Devices(x) ∧ BelongTo(x, company)) → ConnectTo(x, googleHome))",
+            "∀x ((Devices(x) ∧ With(x, companyLogo)) → BelongTo(x, company))",
+            "∀x ((Devices(x) → (With(x, companyLogo) ⊕ BelongTo(x, employee)))",
+            "∀x ((Devices(x) ∧ BelongTo(x, employee)) → CanBeConnectedTo(x, wifi))",
+            "∀x ((Devices(x) ∧ ConnectTo(x, googleHome)) → ControlledBy(x, manager))",
+            "∀x ((Devices(x) ∧ CanBeConnectedTo(x, wifi)) → EasyToOperate(x))",
+            "∀x ((Devices(x) ∧ EasyToOperate(x)) → ProducedAfterNewCTOAppointed(x, company))",
+            "Devices(modelXX) ∧ (¬ProducedAfterNewCTOAppointed(modelXX, company))"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "All devices belonging to the company are connected to Google Home.  ",
+            "All devices connected to Google Home are controlled by managers.  ",
+            "ModelXX was not produced after a new CTO was appointed.  ",
+            "All devices that are easy to operate were produced after a new CTO is appointed.  ",
+            "ModelXX is not easy to operate.  ",
+            "All devices that connect to the company's wifi are easy to operate.  ",
+            "ModelXX does not connect to the company's wifi.  ",
+            "Each device either has the company logo or belongs to employees.  ",
+            "If ModelXX belongs to the company, it would be connected to Google Home.  ",
+            "If ModelXX is connected to Google Home, it would be controlled by managers.  ",
+            "ModelXX is not easy to operate, so it does not connect to the company's wifi.  ",
+            "ModelXX is not controlled by managers because it is not connected to Google Home.  ",
+            "There is no evidence to conclude that ModelXX is controlled by managers.  "
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "All devices belonging to the company are connected to Google Home.  ",
+            "All devices connected to Google Home are controlled by managers.  ",
+            "ModelXX was not produced after a new CTO was appointed.  ",
+            "All devices that are easy to operate were produced after a new CTO is appointed.  ",
+            "ModelXX is not easy to operate.  ",
+            "All devices that connect to the company's wifi are easy to operate.  ",
+            "ModelXX does not connect to the company's wifi.  ",
+            "Each device either has the company logo or belongs to employees.  ",
+            "If ModelXX belongs to the company, it would be connected to Google Home.  ",
+            "If ModelXX is connected to Google Home, it would be controlled by managers.  ",
+            "ModelXX is not easy to operate, so it does not connect to the company's wifi.  ",
+            "ModelXX is not controlled by managers because it is not connected to Google Home.  ",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1)",
+                "fol": "∀x (belongcompany(x) → connectedgooglehome(x))",
+                "tptp": "![X]: (belongcompany(X) => connectedgooglehome(X))"
+            },
+            {
+                "ref": "(2)",
+                "fol": "∀x (companylogo(x) → belongcompany(x))",
+                "tptp": "![X]: (companylogo(X) => belongcompany(X))"
+            },
+            {
+                "ref": "(3)",
+                "fol": "∀x (companylogo(x) ⊕ belongemployees(x))",
+                "tptp": "![X]: (((~(companylogo(X)) & (belongemployees(X))) | ((companylogo(X)) & ~(belongemployees(X)))))"
+            },
+            {
+                "ref": "(4)",
+                "fol": "∀x (belongemployees(x) → connectcompanywifi(x))",
+                "tptp": "![X]: (belongemployees(X) => connectcompanywifi(X))"
+            },
+            {
+                "ref": "(5)",
+                "fol": "∀x (connectedgooglehome(x) → controlledmanagers(x))",
+                "tptp": "![X]: (connectedgooglehome(X) => controlledmanagers(X))"
+            },
+            {
+                "ref": "(6)",
+                "fol": "∀x (connectcompanywifi(x) → easyoperate(x))",
+                "tptp": "![X]: (connectcompanywifi(X) => easyoperate(X))"
+            },
+            {
+                "ref": "(7)",
+                "fol": "∀x (easyoperate(x) → producedaftercto(x))",
+                "tptp": "![X]: (easyoperate(X) => producedaftercto(X))"
+            },
+            {
+                "ref": "(8)",
+                "fol": "¬producedaftercto(modelxx)",
+                "tptp": "~producedaftercto(modelxx)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(13)",
+            "fol": "controlledmanagers(modelxx)",
+            "tptp": "controlledmanagers(modelxx)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1)",
+                "fol": "∀x (belongcompany(x) → connectedgooglehome(x))",
+                "tptp": "![X]: (belongcompany(X) => connectedgooglehome(X))"
+            },
+            {
+                "ref": "(2)",
+                "fol": "∀x (connectedgooglehome(x) → controlledmanagers(x))",
+                "tptp": "![X]: (connectedgooglehome(X) => controlledmanagers(X))"
+            },
+            {
+                "ref": "(3)",
+                "fol": "¬producedaftercto(modelxx)",
+                "tptp": "~producedaftercto(modelxx)"
+            },
+            {
+                "ref": "(4)",
+                "fol": "∀x (easyoperate(x) → producedaftercto(x))",
+                "tptp": "![X]: (easyoperate(X) => producedaftercto(X))"
+            },
+            {
+                "ref": "(5)",
+                "fol": "¬easyoperate(modelxx)",
+                "tptp": "~easyoperate(modelxx)"
+            },
+            {
+                "ref": "(6)",
+                "fol": "∀x (connectcompanywifi(x) → easyoperate(x))",
+                "tptp": "![X]: (connectcompanywifi(X) => easyoperate(X))"
+            },
+            {
+                "ref": "(7)",
+                "fol": "¬connectcompanywifi(modelxx)",
+                "tptp": "~connectcompanywifi(modelxx)"
+            },
+            {
+                "ref": "(8)",
+                "fol": "∀x (companylogo(x) ⊕ belongemployees(x))",
+                "tptp": "![X]: (((~(companylogo(X)) & (belongemployees(X))) | ((companylogo(X)) & ~(belongemployees(X)))))"
+            },
+            {
+                "ref": "(9)",
+                "fol": "belongcompany(modelxx) → connectedgooglehome(modelxx)",
+                "tptp": "belongcompany(modelxx) => connectedgooglehome(modelxx)"
+            },
+            {
+                "ref": "(10)",
+                "fol": "connectedgooglehome(modelxx) → controlledmanagers(modelxx)",
+                "tptp": "connectedgooglehome(modelxx) => controlledmanagers(modelxx)"
+            },
+            {
+                "ref": "(11)",
+                "fol": "¬easyoperate(modelxx) → ¬connectcompanywifi(modelxx)",
+                "tptp": "~easyoperate(modelxx) => ~connectcompanywifi(modelxx)"
+            },
+            {
+                "ref": "(12)",
+                "fol": "¬connectedgooglehome(modelxx) → ¬controlledmanagers(modelxx)",
+                "tptp": "~connectedgooglehome(modelxx) => ~controlledmanagers(modelxx)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "All devices belonging to the company are connected to Google Home.  ",
+            "All devices connected to Google Home are controlled by managers.  ",
+            "ModelXX was not produced after a new CTO was appointed.  ",
+            "All devices that are easy to operate were produced after a new CTO is appointed.  ",
+            "ModelXX is not easy to operate.  ",
+            "All devices that connect to the company's wifi are easy to operate.  ",
+            "ModelXX does not connect to the company's wifi.  ",
+            "Each device either has the company logo or belongs to employees.  ",
+            "If ModelXX belongs to the company, it would be connected to Google Home.  ",
+            "If ModelXX is connected to Google Home, it would be controlled by managers.  ",
+            "ModelXX is not easy to operate, so it does not connect to the company's wifi.  ",
+            "ModelXX is not controlled by managers because it is not connected to Google Home.  "
+        ],
+        "AnswerCorrect": false,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": false,
+        "cate": "F1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "27_77",
+        "premises": [
+            "Xiufeng, Xiangshan, Diecai, Qixing are districts in the city of Guilin.",
+            "Yangshuo is not a district in Guilin. "
+        ],
+        "question": [
+            "Xiangshan and Diecai are districts in the same city."
+        ],
+        "premises_gt_fol": [
+            "DistrictIn(xiufeng, guilin) ∧ DistrictIn(xiangshan, guilin) ∧ DistrictIn(diecai, guilin) ∧ DistrictIn(qixing, guilin) ∧ City(guilin)",
+            "¬DistrictIn(yangshuo, guilin)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Xiufeng, Xiangshan, Diecai, and Qixing are districts in the city of Guilin.",
+            "Xiangshan is a district in Guilin.",
+            "Diecai is a district in Guilin.",
+            "Both Xiangshan and Diecai are districts in the city of Guilin.",
+            "If two places are districts in the same city, they are districts in the same city.",
+            "Xiangshan and Diecai are districts in the same city.",
+            "There is evidence to conclude that Xiangshan and Diecai are districts in the same city."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "Xiufeng, Xiangshan, Diecai, and Qixing are districts in the city of Guilin.",
+            "Xiangshan is a district in Guilin.",
+            "Diecai is a district in Guilin.",
+            "Both Xiangshan and Diecai are districts in the city of Guilin.",
+            "If two places are districts in the same city, they are districts in the same city.",
+            "Xiangshan and Diecai are districts in the same city.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) xiufeng, xiangshan, diecai, qixing are districts in the city of guilin.",
+                "fol": "district(xiufeng, guilin) ∧ district(xiangshan, guilin) ∧ district(diecai, guilin) ∧ district(qixing, guilin)",
+                "tptp": "district(xiufeng, guilin) & district(xiangshan, guilin) & district(diecai, guilin) & district(qixing, guilin)"
+            },
+            {
+                "ref": "(2) yangshuo is not a district in guilin.",
+                "fol": "¬district(yangshuo, guilin)",
+                "tptp": "~district(yangshuo, guilin)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(7) xiangshan and diecai are districts in the same city.",
+            "fol": "district(xiangshan, guilin) ∧ district(diecai, guilin)",
+            "tptp": "district(xiangshan, guilin) & district(diecai, guilin)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) xiufeng, xiangshan, diecai, and qixing are districts in the city of guilin.",
+                "fol": "district(xiufeng, guilin) ∧ district(xiangshan, guilin) ∧ district(diecai, guilin) ∧ district(qixing, guilin)",
+                "tptp": "district(xiufeng, guilin) & district(xiangshan, guilin) & district(diecai, guilin) & district(qixing, guilin)"
+            },
+            {
+                "ref": "(2) xiangshan is a district in guilin.",
+                "fol": "district(xiangshan, guilin)",
+                "tptp": "district(xiangshan, guilin)"
+            },
+            {
+                "ref": "(3) diecai is a district in guilin.",
+                "fol": "district(diecai, guilin)",
+                "tptp": "district(diecai, guilin)"
+            },
+            {
+                "ref": "(5) if two places are districts in the same city, they are districts in the same city.",
+                "fol": "∀x ∀y (district(x, city) ∧ district(y, city) → district(x, city) ∧ district(y, city))",
+                "tptp": "![X]: ![Y]: (district(X, city) & district(Y, city) => district(X, city) & district(Y, city))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Xiufeng, Xiangshan, Diecai, and Qixing are districts in the city of Guilin.",
+            "Xiangshan is a district in Guilin.",
+            "Diecai is a district in Guilin.",
+            "Both Xiangshan and Diecai are districts in the city of Guilin."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "6_15",
+        "premises": [
+            "Boves is a railway station located in France. ",
+            "The preceding station of Boves is Longueau.",
+            "The preceding station of Dommartin is Boves.",
+            "France is a European country.",
+            "Dommartin is situated on the Paris–Lille railway. ",
+            "Any two contiguous stations are on the same railway.",
+            "Boves is served by regional TER Hauts-de-France trains.",
+            "If place A is located in place B and place B is located in place C, then place A is located in place C.",
+            "If place A precedes place B and place B precedes place C, then place A precedes place C."
+        ],
+        "question": [
+            "Boves is not in Europe."
+        ],
+        "premises_gt_fol": [
+            "RailwayStation(boves) ∧ In(boves, france)",
+            "Precede(longueau, boves)",
+            "Precede(boves, dommartin)",
+            "In(france, europe)",
+            "SituatedOn(dommartin, pairsLille)",
+            "∀x ∀y ∀z ((SituatedOn(x, z) ∧ (Precede(x, y) ∨ Precede(y, x)) → SituatedOn(y, z))",
+            "Serve(boves, hautsDeFrance)",
+            "∀x ∀y ∀z ((In(x, y) ∧ In(y, z)) → In(x, z))",
+            "∀x ∀y ∀z ((Precede(x, y) ∧ Precede(y, z)) → Precede(x, z))"
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "Boves is a railway station located in France.  ",
+            "France is a European country.  ",
+            "If place A is located in place B and place B is located in place C, then place A is located in place C.  ",
+            "Boves is located in France, and France is located in Europe.  ",
+            "Therefore, Boves is located in Europe.  ",
+            "There is evidence to conclude that Boves is in Europe.  "
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "Boves is a railway station located in France.  ",
+            "France is a European country.  ",
+            "If place A is located in place B and place B is located in place C, then place A is located in place C.  ",
+            "Boves is located in France, and France is located in Europe.  ",
+            null,
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) boves is a railway station located in france.",
+                "fol": "railwaystation(boves) ∧ locatedin(boves, france)",
+                "tptp": "railwaystation(boves) & locatedin(boves, france)"
+            },
+            {
+                "ref": "(2) the preceding station of boves is longueau.",
+                "fol": "precedes(boves, longueau)",
+                "tptp": "precedes(boves, longueau)"
+            },
+            {
+                "ref": "(3) the preceding station of dommartin is boves.",
+                "fol": "precedes(dommartin, boves)",
+                "tptp": "precedes(dommartin, boves)"
+            },
+            {
+                "ref": "(4) france is a european country.",
+                "fol": "locatedin(france, europe)",
+                "tptp": "locatedin(france, europe)"
+            },
+            {
+                "ref": "(5) dommartin is situated on the paris–lille railway.",
+                "fol": "situatedon(dommartin, parislillerailway)",
+                "tptp": "situatedon(dommartin, parislillerailway)"
+            },
+            {
+                "ref": "(6) any two contiguous stations are on the same railway.",
+                "fol": "∀x ∀y (contiguous(x, y) → samerailway(x, y))",
+                "tptp": "![X]: ![Y]: (contiguous(X, Y) => samerailway(X, Y))"
+            },
+            {
+                "ref": "(7) boves is served by regional ter hauts-de-france trains.",
+                "fol": "servedby(boves, terhautsdefrance)",
+                "tptp": "servedby(boves, terhautsdefrance)"
+            },
+            {
+                "ref": "(8) if place a is located in place b and place b is located in place c, then place a is located in place c.",
+                "fol": "∀a ∀b ∀c ((locatedin(a, b) ∧ locatedin(b, c)) → locatedin(a, c))",
+                "tptp": "![A]: ![B]: ![C]: ((locatedin(A, B) & locatedin(B, C)) => locatedin(A, C))"
+            },
+            {
+                "ref": "(9) if place a precedes place b and place b precedes place c, then place a precedes place c.",
+                "fol": "∀a ∀b ∀c ((precedes(a, b) ∧ precedes(b, c)) → precedes(a, c))",
+                "tptp": "![A]: ![B]: ![C]: ((precedes(A, B) & precedes(B, C)) => precedes(A, C))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(5) boves is not in europe.",
+            "fol": "¬locatedin(boves, europe)",
+            "tptp": "~locatedin(boves, europe)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) boves is a railway station located in france.",
+                "fol": "railwaystation(boves) ∧ locatedin(boves, france)",
+                "tptp": "railwaystation(boves) & locatedin(boves, france)"
+            },
+            {
+                "ref": "(2) france is a european country.",
+                "fol": "locatedin(france, europe)",
+                "tptp": "locatedin(france, europe)"
+            },
+            {
+                "ref": "(3) if place a is located in place b and place b is located in place c, then place a is located in place c.",
+                "fol": "∀a ∀b ∀c ((locatedin(a, b) ∧ locatedin(b, c)) → locatedin(a, c))",
+                "tptp": "![A]: ![B]: ![C]: ((locatedin(A, B) & locatedin(B, C)) => locatedin(A, C))"
+            },
+            {
+                "ref": "(4) boves is located in france, and france is located in europe.",
+                "fol": "locatedin(boves, france) ∧ locatedin(france, europe)",
+                "tptp": "locatedin(boves, france) & locatedin(france, europe)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Boves is a railway station located in France.  ",
+            "France is a European country.  ",
+            "If place A is located in place B and place B is located in place C, then place A is located in place C.  ",
+            "Boves is located in France, and France is located in Europe.  "
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "63_187",
+        "premises": [
+            "All students who attend in person have registered for the conference. ",
+            "Students either attend the conference in person or remotely. ",
+            "No students from China attend the conference remotely. ",
+            "James attends the conference, but he does not attend the conference remotely.",
+            "Jack attends the conference, and he is a student from China."
+        ],
+        "question": [
+            "Jack attends the conference in person."
+        ],
+        "premises_gt_fol": [
+            "∀x (AttendInPerson(x) → Registered(x))",
+            "∀x (Attend(x) → (AttendInPerson(x) ⊕ AttendRemotely(x)))",
+            "∀x ((Attend(x) ∧ FromChina(x)) → ¬AttendRemotely(x))",
+            "Attend(james) ∧ (¬AttendRemotely(james))",
+            "FromChina(jack) ∧ Attend(jack)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Students either attend the conference in person or remotely.  ",
+            "No students from China attend the conference remotely.  ",
+            "Jack is a student from China.  ",
+            "Jack attends the conference.  ",
+            "Since Jack is a student from China, he cannot attend the conference remotely.  ",
+            "Therefore, Jack must attend the conference in person.  ",
+            "There is evidence to conclude that Jack attends the conference in person.  "
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "Students either attend the conference in person or remotely.  ",
+            "No students from China attend the conference remotely.  ",
+            "Jack is a student from China.  ",
+            "Jack attends the conference.  ",
+            "Since Jack is a student from China, he cannot attend the conference remotely.  ",
+            null,
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) all students who attend in person have registered for the conference.",
+                "fol": "∀x ((student(x) ∧ attendinperson(x)) → registered(x))",
+                "tptp": "![X]: ((student(X) & attendinperson(X)) => registered(X))"
+            },
+            {
+                "ref": "(2) students either attend the conference in person or remotely.",
+                "fol": "∀x (attendinperson(x) ⊕ attendremotely(x))",
+                "tptp": "![X]: (((~(attendinperson(X)) & (attendremotely(X))) | ((attendinperson(X)) & ~(attendremotely(X)))))"
+            },
+            {
+                "ref": "(3) no students from china attend the conference remotely.",
+                "fol": "∀x (student(x) ∧ fromchina(x) → ¬attendremotely(x))",
+                "tptp": "![X]: (student(X) & fromchina(X) => ~attendremotely(X))"
+            },
+            {
+                "ref": "(4) james attends the conference, but he does not attend the conference remotely.",
+                "fol": "attend(james) ∧ ¬attendremotely(james)",
+                "tptp": "attend(james) & ~attendremotely(james)"
+            },
+            {
+                "ref": "(5) jack attends the conference, and he is a student from china.",
+                "fol": "attend(jack) ∧ student(jack) ∧ fromchina(jack)",
+                "tptp": "attend(jack) & student(jack) & fromchina(jack)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(6) jack attends the conference in person.",
+            "fol": "attendinperson(jack)",
+            "tptp": "attendinperson(jack)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) students either attend the conference in person or remotely.",
+                "fol": "∀x (attendinperson(x) ⊕ attendremotely(x))",
+                "tptp": "![X]: (((~(attendinperson(X)) & (attendremotely(X))) | ((attendinperson(X)) & ~(attendremotely(X)))))"
+            },
+            {
+                "ref": "(2) no students from china attend the conference remotely.",
+                "fol": "∀x (student(x) ∧ fromchina(x) → ¬attendremotely(x))",
+                "tptp": "![X]: (student(X) & fromchina(X) => ~attendremotely(X))"
+            },
+            {
+                "ref": "(3) jack is a student from china.",
+                "fol": "student(jack) ∧ fromchina(jack)",
+                "tptp": "student(jack) & fromchina(jack)"
+            },
+            {
+                "ref": "(4) jack attends the conference.",
+                "fol": "attend(jack)",
+                "tptp": "attend(jack)"
+            },
+            {
+                "ref": "(5) since jack is a student from china, he cannot attend the conference remotely.",
+                "fol": "fromchina(jack) → ¬attendremotely(jack)",
+                "tptp": "fromchina(jack) => ~attendremotely(jack)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Students either attend the conference in person or remotely.  ",
+            "No students from China attend the conference remotely.  ",
+            "Jack is a student from China.  ",
+            "Jack attends the conference.  ",
+            "Since Jack is a student from China, he cannot attend the conference remotely.  "
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "123_367",
+        "premises": [
+            "Businesses are either sanctioned or unsanctioned.",
+            "Sanctioned businesses are limited.",
+            "Unsanctioned businesses are free.",
+            "The Crude Oil Data Exchange is a business that isn't free."
+        ],
+        "question": [
+            "Crude Oil Data Exchange is sanctioned."
+        ],
+        "premises_gt_fol": [
+            "∀x (Buisness(x) → Sanctioned(x) ⊕ ¬Sanctioned(x))",
+            "∀x (Buisness(x) ∧ Sanctioned(x) → Limited(x))",
+            "∀x (Buisness(x) ∧ ¬Sanctioned(x) → Free(x))",
+            "Buisness(crudeOilDataExchange) ∧ ¬Free(crudeOilDataExchange)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Businesses are either sanctioned or unsanctioned.",
+            "Sanctioned businesses are limited.",
+            "Unsanctioned businesses are free.",
+            "The Crude Oil Data Exchange is a business that isn't free.",
+            "If a business isn't free, it cannot be unsanctioned.",
+            "Therefore, the Crude Oil Data Exchange cannot be unsanctioned.",
+            "Since the Crude Oil Data Exchange is not unsanctioned, it must be sanctioned.",
+            "There is evidence to conclude that the Crude Oil Data Exchange is sanctioned."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "Businesses are either sanctioned or unsanctioned.",
+            "Sanctioned businesses are limited.",
+            "Unsanctioned businesses are free.",
+            "The Crude Oil Data Exchange is a business that isn't free.",
+            "If a business isn't free, it cannot be unsanctioned.",
+            null,
+            "Since the Crude Oil Data Exchange is not unsanctioned, it must be sanctioned.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) businesses are either sanctioned or unsanctioned.",
+                "fol": "∀x (business(x) → sanctioned(x) ⊕ unsanctioned(x))",
+                "tptp": "![X]: (((~(business(X) => sanctioned(X)) & (unsanctioned(X))) | ((business(X) => sanctioned(X)) & ~(unsanctioned(X)))))"
+            },
+            {
+                "ref": "(2) sanctioned businesses are limited.",
+                "fol": "∀x (sanctioned(x) → limited(x))",
+                "tptp": "![X]: (sanctioned(X) => limited(X))"
+            },
+            {
+                "ref": "(3) unsanctioned businesses are free.",
+                "fol": "∀x (unsanctioned(x) → free(x))",
+                "tptp": "![X]: (unsanctioned(X) => free(X))"
+            },
+            {
+                "ref": "(4) the crude oil data exchange is a business that isn't free.",
+                "fol": "business(crudeoildataexchange) ∧ ¬free(crudeoildataexchange)",
+                "tptp": "business(crudeoildataexchange) & ~free(crudeoildataexchange)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(7) crude oil data exchange is sanctioned.",
+            "fol": "sanctioned(crudeoildataexchange)",
+            "tptp": "sanctioned(crudeoildataexchange)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) businesses are either sanctioned or unsanctioned.",
+                "fol": "∀x (business(x) → sanctioned(x) ⊕ unsanctioned(x))",
+                "tptp": "![X]: (((~(business(X) => sanctioned(X)) & (unsanctioned(X))) | ((business(X) => sanctioned(X)) & ~(unsanctioned(X)))))"
+            },
+            {
+                "ref": "(2) sanctioned businesses are limited.",
+                "fol": "∀x (sanctioned(x) → limited(x))",
+                "tptp": "![X]: (sanctioned(X) => limited(X))"
+            },
+            {
+                "ref": "(3) unsanctioned businesses are free.",
+                "fol": "∀x (unsanctioned(x) → free(x))",
+                "tptp": "![X]: (unsanctioned(X) => free(X))"
+            },
+            {
+                "ref": "(4) the crude oil data exchange is a business that isn't free.",
+                "fol": "business(crudeoildataexchange) ∧ ¬free(crudeoildataexchange)",
+                "tptp": "business(crudeoildataexchange) & ~free(crudeoildataexchange)"
+            },
+            {
+                "ref": "(5) if a business isn't free, it cannot be unsanctioned.",
+                "fol": "∀x (¬free(x) → ¬unsanctioned(x))",
+                "tptp": "![X]: (~free(X) => ~unsanctioned(X))"
+            },
+            {
+                "ref": "(6) since the crude oil data exchange is not unsanctioned, it must be sanctioned.",
+                "fol": "¬unsanctioned(crudeoildataexchange) → sanctioned(crudeoildataexchange)",
+                "tptp": "~unsanctioned(crudeoildataexchange) => sanctioned(crudeoildataexchange)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Businesses are either sanctioned or unsanctioned.",
+            "Sanctioned businesses are limited.",
+            "Unsanctioned businesses are free.",
+            "The Crude Oil Data Exchange is a business that isn't free.",
+            "If a business isn't free, it cannot be unsanctioned.",
+            "Since the Crude Oil Data Exchange is not unsanctioned, it must be sanctioned."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "303_747",
+        "premises": [
+            "Jerry should not worry about things outside of his control.",
+            "All traffic is outside of my control."
+        ],
+        "question": [
+            "Jerry should not worry about traffic."
+        ],
+        "premises_gt_fol": [
+            "∀x (OutsideOfControl(x) → ¬ShouldWorry(jerry, x))",
+            "∀x (Traffic(x) → OutsideControl(x))"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Jerry should not worry about things outside of his control.  ",
+            "All traffic is outside of my control.  ",
+            "Traffic is outside of Jerry's control.  ",
+            "Jerry should not worry about traffic because it is outside of his control.  ",
+            "There is evidence to conclude that Jerry should not worry about traffic.  "
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "Jerry should not worry about things outside of his control.  ",
+            "All traffic is outside of my control.  ",
+            "Traffic is outside of Jerry's control.  ",
+            "Jerry should not worry about traffic because it is outside of his control.  ",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) jerry should not worry about things outside of his control.",
+                "fol": "∀x (outsidecontrol(x) → ¬worry(jerry, x))",
+                "tptp": "![X]: (outsidecontrol(X) => ~worry(jerry, X))"
+            },
+            {
+                "ref": "(2) all traffic is outside of my control.",
+                "fol": "∀x (traffic(x) → outsidecontrol(x))",
+                "tptp": "![X]: (traffic(X) => outsidecontrol(X))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(5) jerry should not worry about traffic.",
+            "fol": "∀x (traffic(x) → ¬worry(jerry, x))",
+            "tptp": "![X]: (traffic(X) => ~worry(jerry, X))"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) jerry should not worry about things outside of his control.",
+                "fol": "∀x (outsidecontrol(x) → ¬worry(jerry, x))",
+                "tptp": "![X]: (outsidecontrol(X) => ~worry(jerry, X))"
+            },
+            {
+                "ref": "(2) all traffic is outside of my control.",
+                "fol": "∀x (traffic(x) → outsidecontrol(x))",
+                "tptp": "![X]: (traffic(X) => outsidecontrol(X))"
+            },
+            {
+                "ref": "(3) traffic is outside of jerry's control.",
+                "fol": "∀x (traffic(x) → outsidecontrol(jerry, x))",
+                "tptp": "![X]: (traffic(X) => outsidecontrol(jerry, X))"
+            },
+            {
+                "ref": "(4) jerry should not worry about traffic because it is outside of his control.",
+                "fol": "∀x ((traffic(x) ∧ outsidecontrol(jerry, x)) → ¬worry(jerry, x))",
+                "tptp": "![X]: ((traffic(X) & outsidecontrol(jerry, X)) => ~worry(jerry, X))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Jerry should not worry about things outside of his control.  ",
+            "All traffic is outside of my control.  ",
+            "Traffic is outside of Jerry's control.  ",
+            "Jerry should not worry about traffic because it is outside of his control.  "
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "Unknown",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T2",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "Unknown",
+            "True"
+        ]
+    },
+    {
+        "idx": "465_1343",
+        "premises": [
+            "Everyone who took the bar exam can read. ",
+            "All lawyers took the bar exam. ",
+            "Everyone who took the bar exam is knowledgeable about criminal procedures. ",
+            "All people who got a score of 180 on the LSAT can read. ",
+            "No elephants can read. ",
+            "If Mike can not read or is not an elephant, then Mike either took the bar exam or can read. "
+        ],
+        "question": [
+            "Mike did not take the bar exam and is not both knowledgeable about criminal procedures and someone who got 180 on the LSAT."
+        ],
+        "premises_gt_fol": [
+            "∀x (Take(x, barExam) → CanRead(x))",
+            "∀x (Lawyer(x) → Take(x, barExam))",
+            "∀x (Take(x, barExam) → KnowledgeableAbout(x, criminalProceeder))",
+            "∀x (GetOn(x, scoreOf180, lSAT) → CanRead(x))",
+            "∀x (Elephant(x) → ¬CanRead(x))",
+            "¬(CanRead(mike) ∧ Elephant(mike)) → Take(mike, barExam) ⊕ CanRead(mike)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Everyone who took the bar exam can read.",
+            "All lawyers took the bar exam.",
+            "Everyone who took the bar exam is knowledgeable about criminal procedures.",
+            "No elephants can read.",
+            "If Mike cannot read or is not an elephant, then Mike either took the bar exam or can read.",
+            "If Mike did not take the bar exam, then he cannot be knowledgeable about criminal procedures.",
+            "If Mike is not knowledgeable about criminal procedures, he did not take the bar exam.",
+            "If Mike got a score of 180 on the LSAT, then he can read.",
+            "If Mike did not take the bar exam, he is not knowledgeable about criminal procedures.",
+            "The conclusion states Mike did not take the bar exam and is not both knowledgeable about criminal procedures and someone who got 180 on the LSAT.",
+            "If Mike did not take the bar exam, he is not knowledgeable about criminal procedures.",
+            "There is evidence to conclude that Mike did not take the bar exam and is not knowledgeable about criminal procedures."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "Everyone who took the bar exam can read.",
+            "All lawyers took the bar exam.",
+            "Everyone who took the bar exam is knowledgeable about criminal procedures.",
+            "No elephants can read.",
+            "If Mike cannot read or is not an elephant, then Mike either took the bar exam or can read.",
+            "If Mike did not take the bar exam, then he cannot be knowledgeable about criminal procedures.",
+            "If Mike is not knowledgeable about criminal procedures, he did not take the bar exam.",
+            "If Mike got a score of 180 on the LSAT, then he can read.",
+            "If Mike did not take the bar exam, he is not knowledgeable about criminal procedures.",
+            null,
+            null,
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) everyone who took the bar exam can read.",
+                "fol": "∀x (tookbarexam(x) → canread(x))",
+                "tptp": "![X]: (tookbarexam(X) => canread(X))"
+            },
+            {
+                "ref": "(2) all lawyers took the bar exam.",
+                "fol": "∀x (lawyer(x) → tookbarexam(x))",
+                "tptp": "![X]: (lawyer(X) => tookbarexam(X))"
+            },
+            {
+                "ref": "(3) everyone who took the bar exam is knowledgeable about criminal procedures.",
+                "fol": "∀x (tookbarexam(x) → knowledgeable(x, criminalprocedures))",
+                "tptp": "![X]: (tookbarexam(X) => knowledgeable(X, criminalprocedures))"
+            },
+            {
+                "ref": "(4) all people who got a score of 180 on the lsat can read.",
+                "fol": "∀x (score180lsat(x) → canread(x))",
+                "tptp": "![X]: (score180lsat(X) => canread(X))"
+            },
+            {
+                "ref": "(5) no elephants can read.",
+                "fol": "∀x (elephant(x) → ¬canread(x))",
+                "tptp": "![X]: (elephant(X) => ~canread(X))"
+            },
+            {
+                "ref": "(6) if mike can not read or is not an elephant, then mike either took the bar exam or can read.",
+                "fol": "(¬canread(mike) ∨ ¬elephant(mike)) → (tookbarexam(mike) ⊕ canread(mike))",
+                "tptp": "(~canread(mike) | ~elephant(mike)) => (((~(tookbarexam(mike)) & (canread(mike))) | ((tookbarexam(mike)) & ~(canread(mike)))))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(10) mike did not take the bar exam and is not both knowledgeable about criminal procedures and someone who got 180 on the lsat.",
+            "fol": "¬(tookbarexam(mike) ∧ (knowledgeable(mike, criminalprocedures) ∧ score180lsat(mike)))",
+            "tptp": "~(tookbarexam(mike) & (knowledgeable(mike, criminalprocedures) & score180lsat(mike)))"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) everyone who took the bar exam can read.",
+                "fol": "∀x (tookbarexam(x) → canread(x))",
+                "tptp": "![X]: (tookbarexam(X) => canread(X))"
+            },
+            {
+                "ref": "(2) all lawyers took the bar exam.",
+                "fol": "∀x (lawyer(x) → tookbarexam(x))",
+                "tptp": "![X]: (lawyer(X) => tookbarexam(X))"
+            },
+            {
+                "ref": "(3) everyone who took the bar exam is knowledgeable about criminal procedures.",
+                "fol": "∀x (tookbarexam(x) → knowledgeable(x, criminalprocedures))",
+                "tptp": "![X]: (tookbarexam(X) => knowledgeable(X, criminalprocedures))"
+            },
+            {
+                "ref": "(4) no elephants can read.",
+                "fol": "∀x (elephant(x) → ¬canread(x))",
+                "tptp": "![X]: (elephant(X) => ~canread(X))"
+            },
+            {
+                "ref": "(5) if mike cannot read or is not an elephant, then mike either took the bar exam or can read.",
+                "fol": "(¬canread(mike) ∨ ¬elephant(mike)) → (tookbarexam(mike) ⊕ canread(mike))",
+                "tptp": "(~canread(mike) | ~elephant(mike)) => (((~(tookbarexam(mike)) & (canread(mike))) | ((tookbarexam(mike)) & ~(canread(mike)))))"
+            },
+            {
+                "ref": "(6) if mike did not take the bar exam, then he cannot be knowledgeable about criminal procedures.",
+                "fol": "¬tookbarexam(mike) → ¬knowledgeable(mike, criminalprocedures)",
+                "tptp": "~tookbarexam(mike) => ~knowledgeable(mike, criminalprocedures)"
+            },
+            {
+                "ref": "(7) if mike is not knowledgeable about criminal procedures, he did not take the bar exam.",
+                "fol": "¬knowledgeable(mike, criminalprocedures) → ¬tookbarexam(mike)",
+                "tptp": "~knowledgeable(mike, criminalprocedures) => ~tookbarexam(mike)"
+            },
+            {
+                "ref": "(8) if mike got a score of 180 on the lsat, then he can read.",
+                "fol": "score180lsat(mike) → canread(mike)",
+                "tptp": "score180lsat(mike) => canread(mike)"
+            },
+            {
+                "ref": "(9) if mike did not take the bar exam, he is not knowledgeable about criminal procedures.",
+                "fol": "¬tookbarexam(mike) → ¬knowledgeable(mike, criminalprocedures)",
+                "tptp": "~tookbarexam(mike) => ~knowledgeable(mike, criminalprocedures)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Everyone who took the bar exam can read.",
+            "All lawyers took the bar exam.",
+            "Everyone who took the bar exam is knowledgeable about criminal procedures.",
+            "No elephants can read.",
+            "If Mike cannot read or is not an elephant, then Mike either took the bar exam or can read.",
+            "If Mike did not take the bar exam, then he cannot be knowledgeable about criminal procedures.",
+            "If Mike is not knowledgeable about criminal procedures, he did not take the bar exam.",
+            "If Mike got a score of 180 on the LSAT, then he can read.",
+            "If Mike did not take the bar exam, he is not knowledgeable about criminal procedures."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "Unknown",
+            "True",
+            "True",
+            "Unknown"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T2",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "Unknown",
+            "True",
+            "True",
+            "Unknown"
+        ]
+    },
+    {
+        "idx": "339_890",
+        "premises": [
+            "No professional tennis umpires are professional tennis players.",
+            "If you are a World Tour player, then you are a professional tennis player.",
+            "All Grand Slam champions are World Tour players.",
+            "All Grand Slam umpires are professional tennis umpires.",
+            "Nadal is a World Tour player or a Grand Slam champion"
+        ],
+        "question": [
+            "Nadal is neither a Grand Slam umpire nor a professional tennis umpire."
+        ],
+        "premises_gt_fol": [
+            "∀x (ProfessionalTennisUmpire(x) → ¬ProfessionalTennisPlayer(x))",
+            "∀x (WorldTourPlayer(x) → ProfessionalTennisPlayer(x))",
+            "∀x (GrandSlamChampion(x) → WorldTourPlayer(x))",
+            "∀x (GrandSlamUmpire(x) → ProfessionalTennisUmpire(x))",
+            "WorldTourPlayer(nadal) ∨ GrandSlamChampion(nadal)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "No professional tennis umpires are professional tennis players.  ",
+            "If you are a World Tour player, then you are a professional tennis player.  ",
+            "All Grand Slam champions are World Tour players.  ",
+            "Nadal is a World Tour player or a Grand Slam champion.  ",
+            "If Nadal is a World Tour player, then Nadal is a professional tennis player.  ",
+            "If Nadal is a Grand Slam champion, then Nadal is a World Tour player and thus a professional tennis player.  ",
+            "Nadal cannot be a professional tennis umpire because he is a professional tennis player.  ",
+            "All Grand Slam umpires are professional tennis umpires.  ",
+            "Nadal cannot be a Grand Slam umpire because he is a professional tennis player.  ",
+            "There is evidence to conclude that Nadal is neither a Grand Slam umpire nor a professional tennis umpire.  "
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "No professional tennis umpires are professional tennis players.  ",
+            "If you are a World Tour player, then you are a professional tennis player.  ",
+            "All Grand Slam champions are World Tour players.  ",
+            "Nadal is a World Tour player or a Grand Slam champion.  ",
+            "If Nadal is a World Tour player, then Nadal is a professional tennis player.  ",
+            "If Nadal is a Grand Slam champion, then Nadal is a World Tour player and thus a professional tennis player.  ",
+            "Nadal cannot be a professional tennis umpire because he is a professional tennis player.  ",
+            "All Grand Slam umpires are professional tennis umpires.  ",
+            "Nadal cannot be a Grand Slam umpire because he is a professional tennis player.  ",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) no professional tennis umpires are professional tennis players.",
+                "fol": "¬∃x (professionalumpire(x) ∧ professionalplayer(x))",
+                "tptp": "~?[X]: (professionalumpire(X) & professionalplayer(X))"
+            },
+            {
+                "ref": "(2) if you are a world tour player, then you are a professional tennis player.",
+                "fol": "∀x (worldtourplayer(x) → professionalplayer(x))",
+                "tptp": "![X]: (worldtourplayer(X) => professionalplayer(X))"
+            },
+            {
+                "ref": "(3) all grand slam champions are world tour players.",
+                "fol": "∀x (grandslamchampion(x) → worldtourplayer(x))",
+                "tptp": "![X]: (grandslamchampion(X) => worldtourplayer(X))"
+            },
+            {
+                "ref": "(4) all grand slam umpires are professional tennis umpires.",
+                "fol": "∀x (grandslamumpire(x) → professionalumpire(x))",
+                "tptp": "![X]: (grandslamumpire(X) => professionalumpire(X))"
+            },
+            {
+                "ref": "(5) nadal is a world tour player or a grand slam champion.",
+                "fol": "worldtourplayer(nadal) ∨ grandslamchampion(nadal)",
+                "tptp": "worldtourplayer(nadal) | grandslamchampion(nadal)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(10) nadal is neither a grand slam umpire nor a professional tennis umpire.",
+            "fol": "¬grandslamumpire(nadal) ∧ ¬professionalumpire(nadal)",
+            "tptp": "~grandslamumpire(nadal) & ~professionalumpire(nadal)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) no professional tennis umpires are professional tennis players.",
+                "fol": "¬∃x (professionalumpire(x) ∧ professionalplayer(x))",
+                "tptp": "~?[X]: (professionalumpire(X) & professionalplayer(X))"
+            },
+            {
+                "ref": "(2) if you are a world tour player, then you are a professional tennis player.",
+                "fol": "∀x (worldtourplayer(x) → professionalplayer(x))",
+                "tptp": "![X]: (worldtourplayer(X) => professionalplayer(X))"
+            },
+            {
+                "ref": "(3) all grand slam champions are world tour players.",
+                "fol": "∀x (grandslamchampion(x) → worldtourplayer(x))",
+                "tptp": "![X]: (grandslamchampion(X) => worldtourplayer(X))"
+            },
+            {
+                "ref": "(4) nadal is a world tour player or a grand slam champion.",
+                "fol": "worldtourplayer(nadal) ∨ grandslamchampion(nadal)",
+                "tptp": "worldtourplayer(nadal) | grandslamchampion(nadal)"
+            },
+            {
+                "ref": "(5) if nadal is a world tour player, then nadal is a professional tennis player.",
+                "fol": "worldtourplayer(nadal) → professionalplayer(nadal)",
+                "tptp": "worldtourplayer(nadal) => professionalplayer(nadal)"
+            },
+            {
+                "ref": "(6) if nadal is a grand slam champion, then nadal is a world tour player and thus a professional tennis player.",
+                "fol": "grandslamchampion(nadal) → (worldtourplayer(nadal) ∧ professionalplayer(nadal))",
+                "tptp": "grandslamchampion(nadal) => (worldtourplayer(nadal) & professionalplayer(nadal))"
+            },
+            {
+                "ref": "(7) nadal cannot be a professional tennis umpire because he is a professional tennis player.",
+                "fol": "¬professionalumpire(nadal)",
+                "tptp": "~professionalumpire(nadal)"
+            },
+            {
+                "ref": "(8) all grand slam umpires are professional tennis umpires.",
+                "fol": "∀x (grandslamumpire(x) → professionalumpire(x))",
+                "tptp": "![X]: (grandslamumpire(X) => professionalumpire(X))"
+            },
+            {
+                "ref": "(9) nadal cannot be a grand slam umpire because he is a professional tennis player.",
+                "fol": "¬grandslamumpire(nadal)",
+                "tptp": "~grandslamumpire(nadal)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "No professional tennis umpires are professional tennis players.  ",
+            "If you are a World Tour player, then you are a professional tennis player.  ",
+            "All Grand Slam champions are World Tour players.  ",
+            "Nadal is a World Tour player or a Grand Slam champion.  ",
+            "If Nadal is a World Tour player, then Nadal is a professional tennis player.  ",
+            "If Nadal is a Grand Slam champion, then Nadal is a World Tour player and thus a professional tennis player.  ",
+            "Nadal cannot be a professional tennis umpire because he is a professional tennis player.  ",
+            "All Grand Slam umpires are professional tennis umpires.  ",
+            "Nadal cannot be a Grand Slam umpire because he is a professional tennis player.  "
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "342_901",
+        "premises": [
+            "All sports cars are loud.",
+            "No loud cars are electric.",
+            "If a car is a Ferrari, then it is a sports car.",
+            "All cars made in Maranello are Ferraris.",
+            "The Toyota Prius is made in Maranello or is a loud car, or both."
+        ],
+        "question": [
+            "The Toyota Prius is not an electric car."
+        ],
+        "premises_gt_fol": [
+            "∀x (SportsCar(x) → LoudCar(x))",
+            "∀x (LoudCar(x) → ¬ElectricCar(x))",
+            "∀x (Ferrari(x) → SportsCar(x))",
+            "∀x ((Car(x) ∧ MadeIn(x, maranello)) → Ferrari(x))",
+            "(Car(toyotaPrius) ∧ MadeIn(toyotaPrius, maranello)) ∨ LoudCar(toyotaPrius)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "All sports cars are loud.",
+            "No loud cars are electric.",
+            "If a car is a Ferrari, then it is a sports car.",
+            "All cars made in Maranello are Ferraris.",
+            "The Toyota Prius is made in Maranello or is a loud car, or both.",
+            "If the Toyota Prius is made in Maranello, then it is a Ferrari.",
+            "If the Toyota Prius is a Ferrari, then it is a sports car.",
+            "If the Toyota Prius is a sports car, then it is loud.",
+            "If the Toyota Prius is loud, then it is not electric.",
+            "There is evidence to conclude that the Toyota Prius is not an electric car."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "All sports cars are loud.",
+            "No loud cars are electric.",
+            "If a car is a Ferrari, then it is a sports car.",
+            "All cars made in Maranello are Ferraris.",
+            "The Toyota Prius is made in Maranello or is a loud car, or both.",
+            "If the Toyota Prius is made in Maranello, then it is a Ferrari.",
+            "If the Toyota Prius is a Ferrari, then it is a sports car.",
+            "If the Toyota Prius is a sports car, then it is loud.",
+            "If the Toyota Prius is loud, then it is not electric.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) all sports cars are loud.",
+                "fol": "∀x (sportscar(x) → loud(x))",
+                "tptp": "![X]: (sportscar(X) => loud(X))"
+            },
+            {
+                "ref": "(2) no loud cars are electric.",
+                "fol": "∀x (loud(x) → ¬electric(x))",
+                "tptp": "![X]: (loud(X) => ~electric(X))"
+            },
+            {
+                "ref": "(3) if a car is a ferrari, then it is a sports car.",
+                "fol": "∀x (ferrari(x) → sportscar(x))",
+                "tptp": "![X]: (ferrari(X) => sportscar(X))"
+            },
+            {
+                "ref": "(4) all cars made in maranello are ferraris.",
+                "fol": "∀x (madeinmaranello(x) → ferrari(x))",
+                "tptp": "![X]: (madeinmaranello(X) => ferrari(X))"
+            },
+            {
+                "ref": "(5) the toyota prius is made in maranello or is a loud car, or both.",
+                "fol": "madeinmaranello(toyotaprius) ∨ loud(toyotaprius)",
+                "tptp": "madeinmaranello(toyotaprius) | loud(toyotaprius)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(10) the toyota prius is not an electric car.",
+            "fol": "¬electric(toyotaprius)",
+            "tptp": "~electric(toyotaprius)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) all sports cars are loud.",
+                "fol": "∀x (sportscar(x) → loud(x))",
+                "tptp": "![X]: (sportscar(X) => loud(X))"
+            },
+            {
+                "ref": "(2) no loud cars are electric.",
+                "fol": "∀x (loud(x) → ¬electric(x))",
+                "tptp": "![X]: (loud(X) => ~electric(X))"
+            },
+            {
+                "ref": "(3) if a car is a ferrari, then it is a sports car.",
+                "fol": "∀x (ferrari(x) → sportscar(x))",
+                "tptp": "![X]: (ferrari(X) => sportscar(X))"
+            },
+            {
+                "ref": "(4) all cars made in maranello are ferraris.",
+                "fol": "∀x (madeinmaranello(x) → ferrari(x))",
+                "tptp": "![X]: (madeinmaranello(X) => ferrari(X))"
+            },
+            {
+                "ref": "(5) the toyota prius is made in maranello or is a loud car, or both.",
+                "fol": "madeinmaranello(toyotaprius) ∨ loud(toyotaprius)",
+                "tptp": "madeinmaranello(toyotaprius) | loud(toyotaprius)"
+            },
+            {
+                "ref": "(6) if the toyota prius is made in maranello, then it is a ferrari.",
+                "fol": "madeinmaranello(toyotaprius) → ferrari(toyotaprius)",
+                "tptp": "madeinmaranello(toyotaprius) => ferrari(toyotaprius)"
+            },
+            {
+                "ref": "(7) if the toyota prius is a ferrari, then it is a sports car.",
+                "fol": "ferrari(toyotaprius) → sportscar(toyotaprius)",
+                "tptp": "ferrari(toyotaprius) => sportscar(toyotaprius)"
+            },
+            {
+                "ref": "(8) if the toyota prius is a sports car, then it is loud.",
+                "fol": "sportscar(toyotaprius) → loud(toyotaprius)",
+                "tptp": "sportscar(toyotaprius) => loud(toyotaprius)"
+            },
+            {
+                "ref": "(9) if the toyota prius is loud, then it is not electric.",
+                "fol": "loud(toyotaprius) → ¬electric(toyotaprius)",
+                "tptp": "loud(toyotaprius) => ~electric(toyotaprius)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "All sports cars are loud.",
+            "No loud cars are electric.",
+            "If a car is a Ferrari, then it is a sports car.",
+            "All cars made in Maranello are Ferraris.",
+            "The Toyota Prius is made in Maranello or is a loud car, or both.",
+            "If the Toyota Prius is made in Maranello, then it is a Ferrari.",
+            "If the Toyota Prius is a Ferrari, then it is a sports car.",
+            "If the Toyota Prius is a sports car, then it is loud.",
+            "If the Toyota Prius is loud, then it is not electric."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "42_121",
+        "premises": [
+            "James Cocks was a British lawyer.",
+            "James Cocks was a Whig politician who sat in the House of Commons.",
+            "A British is a European.",
+            "Any lawyer is familiar with laws.",
+            "Some Whigs speak French."
+        ],
+        "question": [
+            "Some European was familiar with laws."
+        ],
+        "premises_gt_fol": [
+            "British(james) ∧ Lawyer(james)",
+            "Whig(james) ∧ Politician(james) ∧ SatInHouseOfCommons(james)",
+            "∀x (British(x) → European(x))",
+            "∀x (Lawyer(x) → FamiliarWithLaws(x))",
+            "∃x ∃y (Whig(x) ∧ SpeakFrench(x)) ∧ (¬(x=y)) ∧ (Whig(y) ∧ SpeakFrench(y))"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "James Cocks was a British lawyer.",
+            "A British is a European.",
+            "James Cocks was a European.",
+            "Any lawyer is familiar with laws.",
+            "James Cocks was familiar with laws.",
+            "James Cocks was a European and was familiar with laws.",
+            "There is evidence to conclude that some European was familiar with laws."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "James Cocks was a British lawyer.",
+            "A British is a European.",
+            "James Cocks was a European.",
+            "Any lawyer is familiar with laws.",
+            "James Cocks was familiar with laws.",
+            "James Cocks was a European and was familiar with laws.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) james cocks was a british lawyer.",
+                "fol": "british(james) ∧ lawyer(james)",
+                "tptp": "british(james) & lawyer(james)"
+            },
+            {
+                "ref": "(2) james cocks was a whig politician who sat in the house of commons.",
+                "fol": "whig(james) ∧ politician(james) ∧ sitinhouseofcommons(james)",
+                "tptp": "whig(james) & politician(james) & sitinhouseofcommons(james)"
+            },
+            {
+                "ref": "(3) a british is a european.",
+                "fol": "∀x (british(x) → european(x))",
+                "tptp": "![X]: (british(X) => european(X))"
+            },
+            {
+                "ref": "(4) any lawyer is familiar with laws.",
+                "fol": "∀x (lawyer(x) → familiarwithlaws(x))",
+                "tptp": "![X]: (lawyer(X) => familiarwithlaws(X))"
+            },
+            {
+                "ref": "(5) some whigs speak french.",
+                "fol": "∃x (whig(x) ∧ speak(x, french))",
+                "tptp": "?[X]: (whig(X) & speak(X, french))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(7) some european was familiar with laws.",
+            "fol": "∃x (european(x) ∧ familiarwithlaws(x))",
+            "tptp": "?[X]: (european(X) & familiarwithlaws(X))"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) james cocks was a british lawyer.",
+                "fol": "british(james) ∧ lawyer(james)",
+                "tptp": "british(james) & lawyer(james)"
+            },
+            {
+                "ref": "(2) a british is a european.",
+                "fol": "∀x (british(x) → european(x))",
+                "tptp": "![X]: (british(X) => european(X))"
+            },
+            {
+                "ref": "(3) james cocks was a european.",
+                "fol": "european(james)",
+                "tptp": "european(james)"
+            },
+            {
+                "ref": "(4) any lawyer is familiar with laws.",
+                "fol": "∀x (lawyer(x) → familiarwithlaws(x))",
+                "tptp": "![X]: (lawyer(X) => familiarwithlaws(X))"
+            },
+            {
+                "ref": "(5) james cocks was familiar with laws.",
+                "fol": "familiarwithlaws(james)",
+                "tptp": "familiarwithlaws(james)"
+            },
+            {
+                "ref": "(6) james cocks was a european and was familiar with laws.",
+                "fol": "european(james) ∧ familiarwithlaws(james)",
+                "tptp": "european(james) & familiarwithlaws(james)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "James Cocks was a British lawyer.",
+            "A British is a European.",
+            "James Cocks was a European.",
+            "Any lawyer is familiar with laws.",
+            "James Cocks was familiar with laws.",
+            "James Cocks was a European and was familiar with laws."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "469_1356",
+        "premises": [
+            "All members of the university faculty are professors.",
+            "All principal investigators are members of the university faculty.",
+            "No professor is also an undergraduate student.",
+            "Anyone pursuing a bachelor's degree is an undergraduate student.",
+            "Leon is not pursuing a bachelor's degree, and he is not a principal investigator.",
+            "If Leon is not pursuing a bachelor's degree, then he is a professor."
+        ],
+        "question": [
+            "If leon is not a principal investigator, then Leon is an undergraduate student."
+        ],
+        "premises_gt_fol": [
+            "∀x (MemberOf(x, universityFaculty) → Professor(x))",
+            "∀x (PrincipalInvestigator(x) → MemberOf(x, universityFaculty))",
+            "∀x (Professor(x) → ¬UndergraduateStudent(x))",
+            "∀x (Pursuing(x, bachelor) → UndergraduateStudent(x))",
+            "¬(Pursuing(leon, bachelor) ⊕ PrincipalInvestigator(leon))",
+            "¬Pursuing(leon, bachelor) → Professor(leon)"
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "Leon is not pursuing a bachelor's degree.",
+            "Anyone pursuing a bachelor's degree is an undergraduate student.",
+            "Leon is not pursuing a bachelor's degree, so he is not an undergraduate student.",
+            "Leon is not a principal investigator.",
+            "All principal investigators are members of the university faculty.",
+            "Leon is not a principal investigator, so he is not a member of the university faculty.",
+            "All members of the university faculty are professors.",
+            "If Leon is not pursuing a bachelor's degree, then he is a professor.",
+            "Leon is not pursuing a bachelor's degree, so he is a professor.",
+            "No professor is also an undergraduate student.",
+            "Since Leon is a professor, he cannot be an undergraduate student.",
+            "There is evidence to conclude that if Leon is not a principal investigator, then Leon is not an undergraduate student."
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "Leon is not pursuing a bachelor's degree.",
+            "Anyone pursuing a bachelor's degree is an undergraduate student.",
+            "Leon is not pursuing a bachelor's degree, so he is not an undergraduate student.",
+            "Leon is not a principal investigator.",
+            "All principal investigators are members of the university faculty.",
+            "Leon is not a principal investigator, so he is not a member of the university faculty.",
+            "All members of the university faculty are professors.",
+            "If Leon is not pursuing a bachelor's degree, then he is a professor.",
+            "Leon is not pursuing a bachelor's degree, so he is a professor.",
+            "No professor is also an undergraduate student.",
+            "Since Leon is a professor, he cannot be an undergraduate student.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) all members of the university faculty are professors.",
+                "fol": "∀x (faculty(x) → professor(x))",
+                "tptp": "![X]: (faculty(X) => professor(X))"
+            },
+            {
+                "ref": "(2) all principal investigators are members of the university faculty.",
+                "fol": "∀x (investigator(x) → faculty(x))",
+                "tptp": "![X]: (investigator(X) => faculty(X))"
+            },
+            {
+                "ref": "(3) no professor is also an undergraduate student.",
+                "fol": "∀x (professor(x) → ¬undergraduate(x))",
+                "tptp": "![X]: (professor(X) => ~undergraduate(X))"
+            },
+            {
+                "ref": "(4) anyone pursuing a bachelor's degree is an undergraduate student.",
+                "fol": "∀x (pursuingbachelors(x) → undergraduate(x))",
+                "tptp": "![X]: (pursuingbachelors(X) => undergraduate(X))"
+            },
+            {
+                "ref": "(5) leon is not pursuing a bachelor's degree, and he is not a principal investigator.",
+                "fol": "¬pursuingbachelors(leon) ∧ ¬investigator(leon)",
+                "tptp": "~pursuingbachelors(leon) & ~investigator(leon)"
+            },
+            {
+                "ref": "(6) if leon is not pursuing a bachelor's degree, then he is a professor.",
+                "fol": "¬pursuingbachelors(leon) → professor(leon)",
+                "tptp": "~pursuingbachelors(leon) => professor(leon)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(12) if leon is not a principal investigator, then leon is an undergraduate student.",
+            "fol": "¬investigator(leon) → undergraduate(leon)",
+            "tptp": "~investigator(leon) => undergraduate(leon)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) leon is not pursuing a bachelor's degree.",
+                "fol": "¬pursuingbachelors(leon)",
+                "tptp": "~pursuingbachelors(leon)"
+            },
+            {
+                "ref": "(2) anyone pursuing a bachelor's degree is an undergraduate student.",
+                "fol": "∀x (pursuingbachelors(x) → undergraduate(x))",
+                "tptp": "![X]: (pursuingbachelors(X) => undergraduate(X))"
+            },
+            {
+                "ref": "(3) leon is not pursuing a bachelor's degree, so he is not an undergraduate student.",
+                "fol": "¬pursuingbachelors(leon) → ¬undergraduate(leon)",
+                "tptp": "~pursuingbachelors(leon) => ~undergraduate(leon)"
+            },
+            {
+                "ref": "(4) leon is not a principal investigator.",
+                "fol": "¬investigator(leon)",
+                "tptp": "~investigator(leon)"
+            },
+            {
+                "ref": "(5) all principal investigators are members of the university faculty.",
+                "fol": "∀x (investigator(x) → faculty(x))",
+                "tptp": "![X]: (investigator(X) => faculty(X))"
+            },
+            {
+                "ref": "(6) leon is not a principal investigator, so he is not a member of the university faculty.",
+                "fol": "¬investigator(leon) → ¬faculty(leon)",
+                "tptp": "~investigator(leon) => ~faculty(leon)"
+            },
+            {
+                "ref": "(7) all members of the university faculty are professors.",
+                "fol": "∀x (faculty(x) → professor(x))",
+                "tptp": "![X]: (faculty(X) => professor(X))"
+            },
+            {
+                "ref": "(8) if leon is not pursuing a bachelor's degree, then he is a professor.",
+                "fol": "¬pursuingbachelors(leon) → professor(leon)",
+                "tptp": "~pursuingbachelors(leon) => professor(leon)"
+            },
+            {
+                "ref": "(9) leon is not pursuing a bachelor's degree, so he is a professor.",
+                "fol": "¬pursuingbachelors(leon) → professor(leon)",
+                "tptp": "~pursuingbachelors(leon) => professor(leon)"
+            },
+            {
+                "ref": "(10) no professor is also an undergraduate student.",
+                "fol": "∀x (professor(x) → ¬undergraduate(x))",
+                "tptp": "![X]: (professor(X) => ~undergraduate(X))"
+            },
+            {
+                "ref": "(11) since leon is a professor, he cannot be an undergraduate student.",
+                "fol": "professor(leon) → ¬undergraduate(leon)",
+                "tptp": "professor(leon) => ~undergraduate(leon)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Leon is not pursuing a bachelor's degree.",
+            "Anyone pursuing a bachelor's degree is an undergraduate student.",
+            "Leon is not pursuing a bachelor's degree, so he is not an undergraduate student.",
+            "Leon is not a principal investigator.",
+            "All principal investigators are members of the university faculty.",
+            "Leon is not a principal investigator, so he is not a member of the university faculty.",
+            "All members of the university faculty are professors.",
+            "If Leon is not pursuing a bachelor's degree, then he is a professor.",
+            "Leon is not pursuing a bachelor's degree, so he is a professor.",
+            "No professor is also an undergraduate student.",
+            "Since Leon is a professor, he cannot be an undergraduate student."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "Unknown",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T2",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "Unknown",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    }
+]

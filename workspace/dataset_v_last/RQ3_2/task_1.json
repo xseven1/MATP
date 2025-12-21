@@ -1,0 +1,164 @@
+{
+    "idx": "ProofWriter_RelNeg-OWA-D5-226_Q3",
+    "premises": [
+        "The bear is not big.",
+        "The bear needs the squirrel.",
+        "The dog is nice.",
+        "The dog sees the tiger.",
+        "The squirrel sees the bear.",
+        "The squirrel sees the tiger.",
+        "The tiger eats the dog.",
+        "The tiger is green.",
+        "The tiger needs the bear.",
+        "The tiger sees the squirrel.",
+        "If someone eats the dog then the dog needs the bear.",
+        "If someone eats the bear then they eat the tiger.",
+        "If someone needs the tiger and they see the dog then they eat the tiger.",
+        "If someone is nice and they need the bear then they eat the bear.",
+        "If someone sees the dog then they eat the squirrel.",
+        "If someone needs the tiger and the tiger eats the bear then they eat the squirrel.",
+        "If someone eats the tiger then the tiger eats the bear."
+    ],
+    "question": [
+        "The dog needs the bear."
+    ],
+    "label": 1,
+    "reasoning_steps": [
+        "The tiger eats the dog.  ",
+        "If someone eats the dog then the dog needs the bear.  ",
+        "The dog eats the dog.  ",
+        "The dog needs the bear.  ",
+        "There is evidence to conclude that the dog needs the bear.  "
+    ],
+    "reasoning_answer": 1,
+    "mistake_steps": [],
+    "filter_reasoning_steps": [
+        "The tiger eats the dog.  ",
+        "If someone eats the dog then the dog needs the bear.  ",
+        "The dog eats the dog.  ",
+        null,
+        null
+    ],
+    "premise:_fol": [
+        {
+            "ref": "(1) the bear is not big.",
+            "fol": "¬big(bear)",
+            "tptp": "~big(bear)"
+        },
+        {
+            "ref": "(2) the bear needs the squirrel.",
+            "fol": "needs(bear, squirrel)",
+            "tptp": "needs(bear, squirrel)"
+        },
+        {
+            "ref": "(3) the dog is nice.",
+            "fol": "nice(dog)",
+            "tptp": "nice(dog)"
+        },
+        {
+            "ref": "(4) the dog sees the tiger.",
+            "fol": "sees(dog, tiger)",
+            "tptp": "sees(dog, tiger)"
+        },
+        {
+            "ref": "(5) the squirrel sees the bear.",
+            "fol": "sees(squirrel, bear)",
+            "tptp": "sees(squirrel, bear)"
+        },
+        {
+            "ref": "(6) the squirrel sees the tiger.",
+            "fol": "sees(squirrel, tiger)",
+            "tptp": "sees(squirrel, tiger)"
+        },
+        {
+            "ref": "(7) the tiger eats the dog.",
+            "fol": "eats(tiger, dog)",
+            "tptp": "eats(tiger, dog)"
+        },
+        {
+            "ref": "(8) the tiger is green.",
+            "fol": "green(tiger)",
+            "tptp": "green(tiger)"
+        },
+        {
+            "ref": "(9) the tiger needs the bear.",
+            "fol": "needs(tiger, bear)",
+            "tptp": "needs(tiger, bear)"
+        },
+        {
+            "ref": "(10) the tiger sees the squirrel.",
+            "fol": "sees(tiger, squirrel)",
+            "tptp": "sees(tiger, squirrel)"
+        },
+        {
+            "ref": "(11) if someone eats the dog then the dog needs the bear.",
+            "fol": "∀x (eats(x, dog) → needs(dog, bear))",
+            "tptp": "![X]: (eats(X, dog) => needs(dog, bear))"
+        },
+        {
+            "ref": "(12) if someone eats the bear then they eat the tiger.",
+            "fol": "∀x (eats(x, bear) → eats(x, tiger))",
+            "tptp": "![X]: (eats(X, bear) => eats(X, tiger))"
+        },
+        {
+            "ref": "(13) if someone needs the tiger and they see the dog then they eat the tiger.",
+            "fol": "∀x ((needs(x, tiger) ∧ sees(x, dog)) → eats(x, tiger))",
+            "tptp": "![X]: ((needs(X, tiger) & sees(X, dog)) => eats(X, tiger))"
+        },
+        {
+            "ref": "(14) if someone is nice and they need the bear then they eat the bear.",
+            "fol": "∀x ((nice(x) ∧ needs(x, bear)) → eats(x, bear))",
+            "tptp": "![X]: ((nice(X) & needs(X, bear)) => eats(X, bear))"
+        },
+        {
+            "ref": "(15) if someone sees the dog then they eat the squirrel.",
+            "fol": "∀x (sees(x, dog) → eats(x, squirrel))",
+            "tptp": "![X]: (sees(X, dog) => eats(X, squirrel))"
+        },
+        {
+            "ref": "(16) if someone needs the tiger and the tiger eats the bear then they eat the squirrel.",
+            "fol": "∀x ((needs(x, tiger) ∧ eats(tiger, bear)) → eats(x, squirrel))",
+            "tptp": "![X]: ((needs(X, tiger) & eats(tiger, bear)) => eats(X, squirrel))"
+        },
+        {
+            "ref": "(17) if someone eats the tiger then the tiger eats the bear.",
+            "fol": "∀x (eats(x, tiger) → eats(tiger, bear))",
+            "tptp": "![X]: (eats(X, tiger) => eats(tiger, bear))"
+        }
+    ],
+    "conclusion:_fol": [
+        {
+            "ref": "(1) the tiger eats the dog.",
+            "fol": "eats(tiger, dog)",
+            "tptp": "eats(tiger, dog)"
+        },
+        {
+            "ref": "(2) if someone eats the dog then the dog needs the bear.",
+            "fol": "∀x (eats(x, dog) → needs(dog, bear))",
+            "tptp": "![X]: (eats(X, dog) => needs(dog, bear))"
+        },
+        {
+            "ref": "(3) the dog eats the dog.",
+            "fol": "eats(dog, dog)",
+            "tptp": "eats(dog, dog)"
+        },
+        {
+            "ref": "(4) the dog needs the bear.",
+            "fol": "needs(dog, bear)",
+            "tptp": "needs(dog, bear)"
+        }
+    ],
+    "AnswerCorrect": true,
+    "step_correctness_label": [
+        "True",
+        "True",
+        "Unknown"
+    ],
+    "step_valid_label": [
+        "Valid",
+        "Valid",
+        "Unvalid"
+    ],
+    "has_valid_proof_path_label": true,
+    "cate": "T2"
+}

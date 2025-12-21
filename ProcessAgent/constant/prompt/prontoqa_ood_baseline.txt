@@ -1,0 +1,67 @@
+Act as a logical reasoning evaluator and assess the following problem solution.
+Your task involves two main parts:
+1. **Step-by-step Evaluation:** Go through the student's reasoning steps carefully and mark each step as **True**, **False**, or **Unknown**, based on whether the step is correctly inferred from the given premises.
+2. **Final Judgement:** Determine whether the reasoning steps sufficiently justify the final conclusion as **Yes** or **No**, followed by an explanation.
+
+### Response Format:
+Step-by-step Evaluation:
+- Step 1: [True/False/Unknown] - [Brief explanation if False or Unknown]
+- Step 2: [True/False/Unknown] - [Brief explanation if False or Unknown]
+...
+- Step N: [True/False/Unknown] - [Brief explanation if False or Unknown]
+
+Final Judgement: [Yes/No]
+Analysis: [Provide a concise explanation of why the reasoning steps do or do not support the conclusion]
+
+### Example:
+------
+Question:
+(1) zumpuses are rompuses.
+(2) each sterpus is temperate.
+(3) brimpuses are floral.
+(4) every numpus is discordant.
+(5) every zumpus is luminous.
+(6) every wumpus is large.
+(7) numpuses are vumpuses.
+(8) every wumpus is a dumpus.
+(9) sterpuses are numpuses.
+(10) impuses are transparent.
+(11) each wumpus is a brimpus.
+(12) each brimpus is a sterpus.
+(13) each brimpus is a jompus.
+(14) jompuses are not dull.
+(15) each vumpus is nervous.
+(16) numpuses are grimpuses.
+(17) sterpuses are impuses.
+(18) each dumpus is not brown.
+(19) fae is a wumpus.
+(20) fae is a zumpus.
+Conclusion: 
+Fae is discordant.
+Student Solution:
+(1) Fae is a wumpus.
+(2) Each wumpus is a brimpus.
+(3) Every wumpus is not large.
+(4) Fae is a brimpus.
+(5) Each brimpus is a sterpus.
+(6) Fae is a sterpus.
+(7) Sterpuses are numpuses.
+(8) Fae is a numpus.
+(9) Every numpus is discordant.
+###
+Step-by-step Evaluation:
+Step 1: True - Given premise (19) states that "Fae is a wumpus," so this step is correct.
+Step 2: True - Given premise (11) states that "each wumpus is a brimpus," so this step follows logically.
+Step 3: False - Given premise (6) states that "every wumpus is large," but the student claims "every wumpus is not large," which contradicts the given premise.
+Step 4: True - From Step 1 and Step 2, since Fae is a wumpus and every wumpus is a brimpus, Fae must be a brimpus.
+Step 5: True - Given premise (12) states that "each brimpus is a sterpus," so this step follows correctly.
+Step 6: True - From Step 4 and Step 5, since Fae is a brimpus and each brimpus is a sterpus, Fae must be a sterpus.
+Step 7: True - Given premise (9) states that "sterpuses are numpuses," so this step follows.
+Step 8: True - From Step 6 and Step 7, since Fae is a sterpus and sterpuses are numpuses, Fae must be a numpus.
+Step 9: True - Given premise (4) states that "every numpus is discordant," so this step is correct.
+Final Judgement: Yes
+Analysis: The only incorrect step (Step 3) does not affect the conclusion, as it is unrelated to the logical path leading to "Fae is discordant." The student's reasoning correctly follows the premises to establish that Fae is a numpus and that all numpuses are discordant. Thus, the conclusion is valid.
+------
+Now evaluate the solution following the required format.
+[instruction]
+###

@@ -1,0 +1,2797 @@
+[
+    {
+        "idx": "147_431",
+        "premises": [
+            "Vic DiCara plays guitar and bass.",
+            "The only style of music Vic DiCara plays is punk music.",
+            "Vic DiCara played in the band Inside Out."
+        ],
+        "question": [
+            "A musician from Inside Out plays bass."
+        ],
+        "premises_gt_fol": [
+            "Play(vicDicara, guitar) ∧ Play(vicDicara, bass)",
+            "∀x (Music(vicDicara, x) → ¬(x=punk)))",
+            "Band(vicDicara, insideOut)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Vic DiCara plays guitar and bass.",
+            "Vic DiCara played in the band Inside Out.",
+            "A musician (Vic DiCara) from Inside Out plays bass.",
+            "The conclusion directly follows from the premises."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, let's tackle this problem step by step. First, I need to look at the premises given and see how they lead to the conclusion.\n\nThe premises are:\n1. Vic DiCara plays guitar and bass.\n2. The only style of music Vic DiCara plays is punk music.\n3. Vic DiCara played in the band Inside Out.\n\nThe conclusion is: A musician from Inside Out plays bass.\n\nSo, the key points here are that Vic DiCara is a member of Inside Out, and he plays bass. Since he's part of the band, and he plays bass, that would mean at least one musician (Vic) from the band plays bass. Therefore, the conclusion should be true because Vic is a musician in Inside Out who plays bass.\n\nWait, but let me check if there's any possibility that the premises might contradict this. The second premise says Vic only plays punk music, but that doesn't affect whether he plays bass. The first premise clearly states he plays bass. So combining that with the third premise, being in Inside Out, it's straightforward. The conclusion doesn't specify that it's Vic, just that a musician from the band plays bass, which Vic does. So the conclusion should be true.",
+        "content": "Thoughts:\nVic DiCara plays guitar and bass.\nVic DiCara played in the band Inside Out.\nA musician (Vic DiCara) from Inside Out plays bass.\nThe conclusion directly follows from the premises.\n\nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "Vic DiCara plays guitar and bass.",
+            "Vic DiCara played in the band Inside Out.",
+            "A musician (Vic DiCara) from Inside Out plays bass.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) vic dicara plays guitar and bass.",
+                "fol": "plays(vic, guitar) ∧ plays(vic, bass)",
+                "tptp": "plays(vic, guitar) & plays(vic, bass)"
+            },
+            {
+                "ref": "(2) the only style of music vic dicara plays is punk music.",
+                "fol": "∀x (plays(vic, x) → style(x, punk))",
+                "tptp": "![X]: (plays(vic, X) => style(X, punk))"
+            },
+            {
+                "ref": "(3) vic dicara played in the band inside out.",
+                "fol": "playedin(vic, insideout)",
+                "tptp": "playedin(vic, insideout)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(4) a musician from inside out plays bass.",
+            "fol": "∃x (playedin(x, insideout) ∧ plays(x, bass))",
+            "tptp": "?[X]: (playedin(X, insideout) & plays(X, bass))"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) vic dicara plays guitar and bass.",
+                "fol": "plays(vic, guitar) ∧ plays(vic, bass)",
+                "tptp": "plays(vic, guitar) & plays(vic, bass)"
+            },
+            {
+                "ref": "(2) vic dicara played in the band inside out.",
+                "fol": "playedin(vic, insideout)",
+                "tptp": "playedin(vic, insideout)"
+            },
+            {
+                "ref": "(3) a musician (vic dicara) from inside out plays bass.",
+                "fol": "∃x (musician(x) ∧ playedin(x, insideout) ∧ plays(x, bass))",
+                "tptp": "?[X]: (musician(X) & playedin(X, insideout) & plays(X, bass))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Vic DiCara plays guitar and bass.",
+            "Vic DiCara played in the band Inside Out.",
+            "A musician (Vic DiCara) from Inside Out plays bass."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "Unknown"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T2",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "153_444",
+        "premises": [
+            "A laptop is a computer.",
+            "You can play games on a computer.",
+            "A phone is not a computer."
+        ],
+        "question": [
+            "You can play games on a laptop."
+        ],
+        "premises_gt_fol": [
+            "∀x (Laptop(x) → Computer(x))",
+            "∀x (Computer(x) → CanPlayGameOn(x))",
+            "∀x (Phone(x) → ¬Computer(x))"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "A laptop is a computer.",
+            "You can play games on a computer.",
+            "Since a laptop is a type of computer, it inherits the property of being able to play games.",
+            "The conclusion directly follows from these premises."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, let's tackle this problem step by step. The premises are:\n\n1. A laptop is a computer.\n2. You can play games on a computer.\n3. A phone is not a computer.\n\nThe conclusion is: You can play games on a laptop.\n\nFirst, I need to see if the conclusion logically follows from the premises. \n\nStarting with premise 1: A laptop is a computer. So, any properties that apply to computers should also apply to laptops unless stated otherwise. \n\nPremise 2 says you can play games on a computer. Since a laptop is a type of computer, it should inherit this ability. The conclusion directly states that you can play games on a laptop, which seems to follow from these two premises. \n\nPremise 3 mentions that a phone is not a computer, but that doesn't affect the conclusion about laptops. There's no information given that contradicts the ability of a laptop to play games. \n\nTherefore, combining premises 1 and 2 leads directly to the conclusion being true. There's no need to consider the third premise here because it's about phones, which are irrelevant to the conclusion about laptops.",
+        "content": "Thoughts:\nA laptop is a computer.\nYou can play games on a computer.\nSince a laptop is a type of computer, it inherits the property of being able to play games.\nThe conclusion directly follows from these premises.\nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "A laptop is a computer.",
+            "You can play games on a computer.",
+            "Since a laptop is a type of computer, it inherits the property of being able to play games.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) a laptop is a computer.",
+                "fol": "∀x (laptop(x) → computer(x))",
+                "tptp": "![X]: (laptop(X) => computer(X))"
+            },
+            {
+                "ref": "(2) you can play games on a computer.",
+                "fol": "∀x (computer(x) → playgames(x))",
+                "tptp": "![X]: (computer(X) => playgames(X))"
+            },
+            {
+                "ref": "(3) a phone is not a computer.",
+                "fol": "∀x (phone(x) → ¬computer(x))",
+                "tptp": "![X]: (phone(X) => ~computer(X))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(4) you can play games on a laptop.",
+            "fol": "∀x (laptop(x) → playgames(x))",
+            "tptp": "![X]: (laptop(X) => playgames(X))"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) a laptop is a computer.",
+                "fol": "∀x (laptop(x) → computer(x))",
+                "tptp": "![X]: (laptop(X) => computer(X))"
+            },
+            {
+                "ref": "(2) you can play games on a computer.",
+                "fol": "∀x (computer(x) → playgames(x))",
+                "tptp": "![X]: (computer(X) => playgames(X))"
+            },
+            {
+                "ref": "(3) since a laptop is a type of computer, it inherits the property of being able to play games.",
+                "fol": "∀x ((laptop(x) → computer(x)) → (computer(x) → playgames(x)))",
+                "tptp": "![X]: ((laptop(X) => computer(X)) => (computer(X) => playgames(X)))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "A laptop is a computer.",
+            "You can play games on a computer.",
+            "Since a laptop is a type of computer, it inherits the property of being able to play games."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "123_367",
+        "premises": [
+            "Businesses are either sanctioned or unsanctioned.",
+            "Sanctioned businesses are limited.",
+            "Unsanctioned businesses are free.",
+            "The Crude Oil Data Exchange is a business that isn't free."
+        ],
+        "question": [
+            "Crude Oil Data Exchange is sanctioned."
+        ],
+        "premises_gt_fol": [
+            "∀x (Buisness(x) → Sanctioned(x) ⊕ ¬Sanctioned(x))",
+            "∀x (Buisness(x) ∧ Sanctioned(x) → Limited(x))",
+            "∀x (Buisness(x) ∧ ¬Sanctioned(x) → Free(x))",
+            "Buisness(crudeOilDataExchange) ∧ ¬Free(crudeOilDataExchange)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Businesses are either sanctioned or unsanctioned.",
+            "Unsanctioned businesses are free.",
+            "The Crude Oil Data Exchange isn't free.",
+            "If it were unsanctioned, it would be free (contradicting premise).",
+            "Therefore, it must be sanctioned."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, let's tackle this problem step by step. So the premises are:\n\n1. Businesses are either sanctioned or unsanctioned. (So no third option; it's a binary classification.)\n2. Sanctioned businesses are limited.\n3. Unsanctioned businesses are free.\n4. The Crude Oil Data Exchange (CODE) is a business that isn't free.\n\nThe conclusion is that CODE is sanctioned.\n\nFirst, from premise 1, every business must be either sanctioned or unsanctioned. There's no middle ground. \n\nPremise 3 says that unsanctioned businesses are free. So if a business is unsanctioned, it must be free. But the CODE isn't free (premise 4). Therefore, if CODE were unsanctioned, it would have to be free, but it's not. That creates a contradiction. Hence, CODE can't be unsanctioned. \n\nSince businesses are either sanctioned or unsanctioned (premise 1), and CODE isn't unsanctioned, the only remaining possibility is that CODE is sanctioned. \n\nSo the conclusion follows directly from these premises. There's no other option given the premises. Therefore, the conclusion must be true.",
+        "content": "Thoughts:\nBusinesses are either sanctioned or unsanctioned.\nUnsanctioned businesses are free.\nThe Crude Oil Data Exchange isn't free.\nIf it were unsanctioned, it would be free (contradicting premise).\nTherefore, it must be sanctioned.\nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "Businesses are either sanctioned or unsanctioned.",
+            "Unsanctioned businesses are free.",
+            "The Crude Oil Data Exchange isn't free.",
+            null,
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) businesses are either sanctioned or unsanctioned.",
+                "fol": "∀x (business(x) → sanctioned(x) ⊕ unsanctioned(x))",
+                "tptp": "![X]: (((~(business(X) => sanctioned(X)) & (unsanctioned(X))) | ((business(X) => sanctioned(X)) & ~(unsanctioned(X)))))"
+            },
+            {
+                "ref": "(2) sanctioned businesses are limited.",
+                "fol": "∀x (sanctioned(x) → limited(x))",
+                "tptp": "![X]: (sanctioned(X) => limited(X))"
+            },
+            {
+                "ref": "(3) unsanctioned businesses are free.",
+                "fol": "∀x (unsanctioned(x) → free(x))",
+                "tptp": "![X]: (unsanctioned(X) => free(X))"
+            },
+            {
+                "ref": "(4) the crude oil data exchange is a business that isn't free.",
+                "fol": "business(crudeoildataexchange) ∧ ¬free(crudeoildataexchange)",
+                "tptp": "business(crudeoildataexchange) & ~free(crudeoildataexchange)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(4) crude oil data exchange is sanctioned.",
+            "fol": "sanctioned(crudeoildataexchange)",
+            "tptp": "sanctioned(crudeoildataexchange)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) businesses are either sanctioned or unsanctioned.",
+                "fol": "∀x (business(x) → sanctioned(x) ⊕ unsanctioned(x))",
+                "tptp": "![X]: (((~(business(X) => sanctioned(X)) & (unsanctioned(X))) | ((business(X) => sanctioned(X)) & ~(unsanctioned(X)))))"
+            },
+            {
+                "ref": "(2) unsanctioned businesses are free.",
+                "fol": "∀x (unsanctioned(x) → free(x))",
+                "tptp": "![X]: (unsanctioned(X) => free(X))"
+            },
+            {
+                "ref": "(3) the crude oil data exchange isn't free.",
+                "fol": "¬free(crudeoildataexchange)",
+                "tptp": "~free(crudeoildataexchange)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Businesses are either sanctioned or unsanctioned.",
+            "Unsanctioned businesses are free.",
+            "The Crude Oil Data Exchange isn't free."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": false,
+        "cate": "T3",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "425_1204",
+        "premises": [
+            "Everyone working at Meta has a high income. ",
+            "A person with a high income will not take a bus to their destination.",
+            "People will either take a bus or drive to their destination. ",
+            "Everyone who has a car will choose to drive to their destination. ",
+            "No students drive to their destination. ",
+            "James has a car or works at Meta."
+        ],
+        "question": [
+            "James is a student."
+        ],
+        "premises_gt_fol": [
+            "∀x (WorkAt(x, meta) → HighIncome(x))",
+            "∀x (HighIncome(x) → ¬MeansToDestination(x, bus))",
+            "∀x (MeansToDestination(x, bus) ⊕ MeansToDestination(x, drive))",
+            "∀x (HaveCar(x) → MeansToDestination(x, drive))",
+            "∀x (Student(x) → ¬ MeansToDestination(x, drive))",
+            "HaveCar(james) ∨ WorkAt(james, meta)"
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "Everyone working at Meta has a high income.",
+            "James has a car or works at Meta.",
+            "If James works at Meta, he has a high income.",
+            "A high income person will not take a bus.",
+            "People take a bus or drive.",
+            "If James works at Meta, he must drive.",
+            "If James has a car, he drives (from premise\n.",
+            "Either way, James drives.",
+            "No students drive.",
+            "If James drove, he cannot be a student.",
+            "Therefore, James is not a student."
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, let's try to figure out if the conclusion \"James is a student\" is true based on the given premises. \n\nFirst, let's list out all the premises to get a clear picture. \n\n1. Everyone working at Meta has a high income.\n2. A person with a high income will not take a bus to their destination.\n3. People will either take a bus or drive to their destination.\n4. Everyone who has a car will choose to drive to their destination.\n5. No students drive to their destination.\n6. James has a car or works at Meta.\n\nThe conclusion is that James is a student. We need to see if this follows logically from the premises.\n\nStarting with premise 6: James has a car OR works at Meta. So, there are two possibilities here. Let's consider each case separately.\n\nCase 1: James has a car. According to premise 4, if someone has a car, they drive. So James would drive. But premise 5 says no students drive. If James were a student, he couldn't drive, but he does drive here. So this leads to a contradiction. Therefore, if James has a car, he cannot be a student. So in this case, the conclusion would be false.\n\nCase 2: James works at Meta. Then by premise 1, he has a high income. Premise 2 says high-income people don't take buses. So he can't take the bus. Premise 3 says people either take a bus or drive. Since he can't take the bus, he must drive. But again, premise 5 says students don't drive. So if James drives, he can't be a student. So in this case too, the conclusion that James is a student would be false.\n\nWait, but the conclusion is \"James is a student.\" So regardless of whether he has a car or works at Meta, in both scenarios, he ends up driving, which contradicts being a student. Therefore, the conclusion must be false. \n\nBut wait, maybe there's another angle. Let me check again. The premises say that people either take a bus or drive. If James works at Meta, he can't take the bus (premise 2), so he must drive. If he has a car, he drives. Either way, he drives. But premise 5 says no students drive. Therefore, if James is a student, he cannot drive. But according to the premises, he must drive. Therefore, James cannot be a student. So the conclusion that he is a student must be false. \n\nBut the conclusion is claiming that James is a student. Since the premises lead to the conclusion that he cannot be a student, the conclusion is false. Therefore, the answer should be (B) False.",
+        "content": "Thoughts:\nEveryone working at Meta has a high income.\nJames has a car or works at Meta.\nIf James works at Meta, he has a high income.\nA high income person will not take a bus.\nPeople take a bus or drive.\nIf James works at Meta, he must drive.\nIf James has a car, he drives (from premise 4).\nEither way, James drives.\nNo students drive.\nIf James drove, he cannot be a student.\nTherefore, James is not a student.\n\nAnswer:\n(B) False",
+        "filter_reasoning_steps": [
+            "Everyone working at Meta has a high income.",
+            "James has a car or works at Meta.",
+            "If James works at Meta, he has a high income.",
+            "A high income person will not take a bus.",
+            "People take a bus or drive.",
+            "If James works at Meta, he must drive.",
+            "If James has a car, he drives (from premise\n.",
+            "Either way, James drives.",
+            "No students drive.",
+            "If James drove, he cannot be a student.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) everyone working at meta has a high income.",
+                "fol": "∀x (worksatmeta(x) → highincome(x))",
+                "tptp": "![X]: (worksatmeta(X) => highincome(X))"
+            },
+            {
+                "ref": "(2) a person with a high income will not take a bus to their destination.",
+                "fol": "∀x (highincome(x) → ¬takesbus(x))",
+                "tptp": "![X]: (highincome(X) => ~takesbus(X))"
+            },
+            {
+                "ref": "(3) people will either take a bus or drive to their destination.",
+                "fol": "∀x (takesbus(x) ⊕ drives(x))",
+                "tptp": "![X]: (((~(takesbus(X)) & (drives(X))) | ((takesbus(X)) & ~(drives(X)))))"
+            },
+            {
+                "ref": "(4) everyone who has a car will choose to drive to their destination.",
+                "fol": "∀x (hascar(x) → drives(x))",
+                "tptp": "![X]: (hascar(X) => drives(X))"
+            },
+            {
+                "ref": "(5) no students drive to their destination.",
+                "fol": "∀x (student(x) → ¬drives(x))",
+                "tptp": "![X]: (student(X) => ~drives(X))"
+            },
+            {
+                "ref": "(6) james has a car or works at meta.",
+                "fol": "hascar(james) ∨ worksatmeta(james)",
+                "tptp": "hascar(james) | worksatmeta(james)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(11) james is a student.",
+            "fol": "student(james)",
+            "tptp": "student(james)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) everyone working at meta has a high income.",
+                "fol": "∀x (worksatmeta(x) → highincome(x))",
+                "tptp": "![X]: (worksatmeta(X) => highincome(X))"
+            },
+            {
+                "ref": "(2) james has a car or works at meta.",
+                "fol": "hascar(james) ∨ worksatmeta(james)",
+                "tptp": "hascar(james) | worksatmeta(james)"
+            },
+            {
+                "ref": "(3) if james works at meta, he has a high income.",
+                "fol": "worksatmeta(james) → highincome(james)",
+                "tptp": "worksatmeta(james) => highincome(james)"
+            },
+            {
+                "ref": "(4) a high income person will not take a bus.",
+                "fol": "∀x (highincome(x) → ¬takesbus(x))",
+                "tptp": "![X]: (highincome(X) => ~takesbus(X))"
+            },
+            {
+                "ref": "(5) people take a bus or drive.",
+                "fol": "∀x (takesbus(x) ⊕ drives(x))",
+                "tptp": "![X]: (((~(takesbus(X)) & (drives(X))) | ((takesbus(X)) & ~(drives(X)))))"
+            },
+            {
+                "ref": "(6) if james works at meta, he must drive.",
+                "fol": "worksatmeta(james) → drives(james)",
+                "tptp": "worksatmeta(james) => drives(james)"
+            },
+            {
+                "ref": "(7) if james has a car, he drives.",
+                "fol": "hascar(james) → drives(james)",
+                "tptp": "hascar(james) => drives(james)"
+            },
+            {
+                "ref": "(8) either way, james drives.",
+                "fol": "drives(james)",
+                "tptp": "drives(james)"
+            },
+            {
+                "ref": "(9) no students drive.",
+                "fol": "∀x (student(x) → ¬drives(x))",
+                "tptp": "![X]: (student(X) => ~drives(X))"
+            },
+            {
+                "ref": "(10) if james drove, he cannot be a student.",
+                "fol": "drives(james) → ¬student(james)",
+                "tptp": "drives(james) => ~student(james)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Everyone working at Meta has a high income.",
+            "James has a car or works at Meta.",
+            "If James works at Meta, he has a high income.",
+            "A high income person will not take a bus.",
+            "People take a bus or drive.",
+            "If James works at Meta, he must drive.",
+            "If James has a car, he drives (from premise\n.",
+            "Either way, James drives.",
+            "No students drive.",
+            "If James drove, he cannot be a student."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "214_613",
+        "premises": [
+            "If a class has prerequisites, the student must take the prerequisites to take the class.",
+            "If a class has no prerequisites, then the student can take the class",
+            "CPSC 201 and CPSC 223 are prerequisites for CPSC 323.",
+            "Intro Microeconomics is the only prerequisite for Intermediate Microeconomics.",
+            "Intro Geology has no prerequisites."
+        ],
+        "question": [
+            "A student cannot take Intro Geology."
+        ],
+        "premises_gt_fol": [
+            "∀x ∀y ∀z (Class(x) ∧ Student(y) ∧ Prereq(z,x) ∧ ¬Take(y, z) → ¬CanTake(y, x))",
+            "∀x ∀y ((Class(x) ∧ Student(y) ∧ ¬∃z Prereq(z,x)) → CanTake(y, x))",
+            "Prereq(cpsc201, cpsc323) ∧ Prereq(cpsc223, cpsc323)",
+            "∀x (Prereq(x,intermediateMicro) → x=introMicroeconomics)",
+            "¬(∃x (Prereq(x, introGeology)))"
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "If a class has no prerequisites, the student can take the class.",
+            "Intro Geology has no prerequisites.",
+            "According to the rule, the student can take Intro Geology.",
+            "The conclusion claims the student cannot take Intro Geology.",
+            "The premises directly contradict the conclusion."
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, let's try to figure out this problem step by step. The premises are about course prerequisites and whether a student can take Intro Geology. The conclusion is that a student cannot take Intro Geology.\n\nFirst, let's list out the premises. The first rule says that if a class has prerequisites, the student must have taken them to enroll. The second rule states that if a class has no prerequisites, the student can take it. Then, specific courses are mentioned: CPSC 323 requires CPSC 201 and 223. Intermediate Microeconomics needs only Intro Microeconomics. Intro Geology has no prerequisites.\n\nThe conclusion claims the student can't take Intro Geology. But according to the second premise, if a class has no prerequisites, the student can take it. Since Intro Geology is explicitly stated to have no prerequisites, applying that rule directly would mean the student can take it. The conclusion is the opposite, so it's probably false. There's no premise that adds any restriction on Intro Geology beyond the prerequisites. So unless there's another rule that contradicts, but the given rules don't mention anything else. Therefore, the conclusion is false.",
+        "content": "Thoughts:\nIf a class has no prerequisites, the student can take the class.\nIntro Geology has no prerequisites.\nAccording to the rule, the student can take Intro Geology.\nThe conclusion claims the student cannot take Intro Geology.\nThe premises directly contradict the conclusion.\nAnswer:\n(B) False",
+        "filter_reasoning_steps": [
+            "If a class has no prerequisites, the student can take the class.",
+            "Intro Geology has no prerequisites.",
+            "According to the rule, the student can take Intro Geology.",
+            null,
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) if a class has prerequisites, the student must take the prerequisites to take the class.",
+                "fol": "∀c (prerequisite(c) → ∀s (take(s, c) → ∀p (prerequisitefor(p, c) → take(s, p))))",
+                "tptp": "![C]: (prerequisite(C) => ![S]: (take(S, C) => ![P]: (prerequisitefor(P, C) => take(S, P))))"
+            },
+            {
+                "ref": "(2) if a class has no prerequisites, then the student can take the class.",
+                "fol": "∀c (¬prerequisite(c) → ∀s take(s, c))",
+                "tptp": "![C]: (~prerequisite(C) => ![S]: take(S, C))"
+            },
+            {
+                "ref": "(3) cpsc 201 and cpsc 223 are prerequisites for cpsc 323.",
+                "fol": "prerequisitefor(cpsc201, cpsc323) ∧ prerequisitefor(cpsc223, cpsc323)",
+                "tptp": "prerequisitefor(cpsc201, cpsc323) & prerequisitefor(cpsc223, cpsc323)"
+            },
+            {
+                "ref": "(4) intro microeconomics is the only prerequisite for intermediate microeconomics.",
+                "fol": "prerequisitefor(intromicroeconomics, intermediatemicroeconomics) ∧ ∀p (prerequisitefor(p, intermediatemicroeconomics) → p = intromicroeconomics)",
+                "tptp": "prerequisitefor(intromicroeconomics, intermediatemicroeconomics) & ![P]: (prerequisitefor(P, intermediatemicroeconomics) => P = intromicroeconomics)"
+            },
+            {
+                "ref": "(5) intro geology has no prerequisites.",
+                "fol": "¬prerequisite(introgeology)",
+                "tptp": "~prerequisite(introgeology)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(4) a student cannot take intro geology.",
+            "fol": "¬∃s take(s, introgeology)",
+            "tptp": "~?[S]: take(S, introgeology)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) if a class has no prerequisites, the student can take the class.",
+                "fol": "∀c (¬prerequisite(c) → ∀s take(s, c))",
+                "tptp": "![C]: (~prerequisite(C) => ![S]: take(S, C))"
+            },
+            {
+                "ref": "(2) intro geology has no prerequisites.",
+                "fol": "¬prerequisite(introgeology)",
+                "tptp": "~prerequisite(introgeology)"
+            },
+            {
+                "ref": "(3) according to the rule, the student can take intro geology.",
+                "fol": "∀s take(s, introgeology)",
+                "tptp": "![S]: take(S, introgeology)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "If a class has no prerequisites, the student can take the class.",
+            "Intro Geology has no prerequisites.",
+            "According to the rule, the student can take Intro Geology."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "438_1260",
+        "premises": [
+            "None of the kids in our family love the opera.",
+            "All of the adults in our family love the opera.",
+            "If someone in our family is a scientist, then they are an adult.",
+            "Some students in our family are kids.",
+            "Billy is a kid in our family."
+        ],
+        "question": [
+            "If Billy is a student or a scientist, then Billy is a student and a kid."
+        ],
+        "premises_gt_fol": [
+            "∀x ((Kid(x) ∧ In(x, ourFamily)) → ¬Love(x, opera))",
+            "∀x ((Adult(x) ∧ In(x, ourFamily)) → Love(x, opera))",
+            "∀x ((Scientist(x) ∧ In(x, ourFamily)) → Adult(x))",
+            "∃x (Student(x) ∧ In(x, ourFamily) ∧ Kid(x))",
+            "Kid(billy) ∧ In(billy, ourFamily) "
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Billy is a kid in our family.",
+            "If someone in our family is a scientist, they are an adult.",
+            "Billy is a kid.",
+            "he cannot be an adult.",
+            "If Billy were a scientist, he would have to be an adult, which contradicts being a kid.",
+            "Therefore, Billy cannot be a scientist.",
+            "The antecedent of the conclusion requires Billy to be a student or scientist.",
+            "Since Billy cannot be a scientist, the antecedent reduces to Billy being a student.",
+            "Premise 4 states some students are kids.",
+            "Billy is a kid and could be a student.",
+            "If Billy is a student, the consequent (student and kid) is true.",
+            "The conclusion’s antecedent only holds if Billy is a student, which directly satisfies the consequent.",
+            "The scientist option is impossible, making the implication valid."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, let's try to figure out if the conclusion is true or false based on the given premises. The conclusion is: \"If Billy is a student or a scientist, then Billy is a student and a kid.\" So, I need to check whether this conditional statement holds given the premises.\n\nFirst, let's list out the premises again to make sure I don't miss anything:\n\n1. None of the kids in our family love the opera.\n2. All adults in our family love the opera.\n3. If someone is a scientist in our family, they are an adult.\n4. Some students in our family are kids.\n5. Billy is a kid in our family.\n\nThe conclusion is a conditional statement: If (Billy is a student OR scientist) → (Billy is a student AND kid). \n\nLet's break this down. For the conclusion to be true, whenever the antecedent (Billy is a student or scientist) is true, the consequent (Billy is a student and kid) must also be true. So, I need to see if there's any scenario where Billy is a student or a scientist, but isn't both a student and a kid.\n\nStarting with the premises: Billy is a kid. From premise 5. So, Billy is a kid. Now, premise 4 says some students are kids. So there's at least one student who is a kid, but it doesn't say all students are kids. But Billy is a kid. \n\nNow, the conclusion's antecedent is \"Billy is a student or a scientist.\" Let's consider both cases:\n\nCase 1: Billy is a student. Then, since Billy is a kid (premise 5), the consequent \"student and kid\" is true. So in this case, the conditional holds.\n\nCase 2: Billy is a scientist. Now, premise 3 says if someone is a scientist, they are an adult. So if Billy is a scientist, he must be an adult. But premise 5 says Billy is a kid. However, can someone be both a kid and an adult? In most contexts, these are mutually exclusive. So if Billy is a kid, he cannot be an adult. Therefore, if Billy were a scientist, that would contradict premise 3, because he would have to be an adult, but he's a kid. Therefore, the antecedent \"Billy is a scientist\" cannot be true. So in this case, the antecedent (student OR scientist) would only hold if he's a student, which is covered in case 1. But if he's a scientist, that's impossible given the premises.\n\nTherefore, the only possible way for the antecedent to be true is if Billy is a student. In that case, the consequent (student and kid) is true. Therefore, the conclusion's conditional holds because whenever the antecedent is possible (Billy is a student), the consequent is true. The other possibility (Billy being a scientist) is impossible given the premises, so the implication is vacuously true in that case. \n\nSo the conclusion is true. Therefore, the answer should be (A) True.",
+        "content": "Thoughts:\nBilly is a kid in our family. \nIf someone in our family is a scientist, they are an adult. \nBilly is a kid, so he cannot be an adult. \nIf Billy were a scientist, he would have to be an adult, which contradicts being a kid. \nTherefore, Billy cannot be a scientist. \nThe antecedent of the conclusion requires Billy to be a student or scientist. \nSince Billy cannot be a scientist, the antecedent reduces to Billy being a student. \nPremise 4 states some students are kids. \nBilly is a kid and could be a student. \nIf Billy is a student, the consequent (student and kid) is true. \nThe conclusion’s antecedent only holds if Billy is a student, which directly satisfies the consequent. \nThe scientist option is impossible, making the implication valid. \n\nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "Billy is a kid in our family.",
+            "If someone in our family is a scientist, they are an adult.",
+            "Billy is a kid.",
+            "he cannot be an adult.",
+            null,
+            null,
+            null,
+            "Since Billy cannot be a scientist, the antecedent reduces to Billy being a student.",
+            "Premise 4 states some students are kids.",
+            "Billy is a kid and could be a student.",
+            "If Billy is a student, the consequent (student and kid) is true.",
+            null,
+            "The scientist option is impossible, making the implication valid."
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) none of the kids in our family love the opera.",
+                "fol": "¬∃x (kid(x) ∧ infamily(x) ∧ love(x, opera))",
+                "tptp": "~?[X]: (kid(X) & infamily(X) & love(X, opera))"
+            },
+            {
+                "ref": "(2) all of the adults in our family love the opera.",
+                "fol": "∀x (adult(x) ∧ infamily(x) → love(x, opera))",
+                "tptp": "![X]: (adult(X) & infamily(X) => love(X, opera))"
+            },
+            {
+                "ref": "(3) if someone in our family is a scientist, then they are an adult.",
+                "fol": "∀x (scientist(x) ∧ infamily(x) → adult(x))",
+                "tptp": "![X]: (scientist(X) & infamily(X) => adult(X))"
+            },
+            {
+                "ref": "(4) some students in our family are kids.",
+                "fol": "∃x (student(x) ∧ kid(x) ∧ infamily(x))",
+                "tptp": "?[X]: (student(X) & kid(X) & infamily(X))"
+            },
+            {
+                "ref": "(5) billy is a kid in our family.",
+                "fol": "kid(billy) ∧ infamily(billy)",
+                "tptp": "kid(billy) & infamily(billy)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(10) if billy is a student or a scientist, then billy is a student and a kid.",
+            "fol": "(student(billy) ∨ scientist(billy)) → (student(billy) ∧ kid(billy))",
+            "tptp": "(student(billy) | scientist(billy)) => (student(billy) & kid(billy))"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) billy is a kid in our family.",
+                "fol": "kid(billy) ∧ infamily(billy)",
+                "tptp": "kid(billy) & infamily(billy)"
+            },
+            {
+                "ref": "(2) if someone in our family is a scientist, they are an adult.",
+                "fol": "∀x (scientist(x) ∧ infamily(x) → adult(x))",
+                "tptp": "![X]: (scientist(X) & infamily(X) => adult(X))"
+            },
+            {
+                "ref": "(3) billy is a kid.",
+                "fol": "kid(billy)",
+                "tptp": "kid(billy)"
+            },
+            {
+                "ref": "(4) he cannot be an adult.",
+                "fol": "¬adult(billy)",
+                "tptp": "~adult(billy)"
+            },
+            {
+                "ref": "(5) since billy cannot be a scientist, the antecedent reduces to billy being a student.",
+                "fol": "¬scientist(billy) → student(billy)",
+                "tptp": "~scientist(billy) => student(billy)"
+            },
+            {
+                "ref": "(6) premise 4 states some students are kids.",
+                "fol": "∃x (student(x) ∧ kid(x))",
+                "tptp": "?[X]: (student(X) & kid(X))"
+            },
+            {
+                "ref": "(7) billy is a kid and could be a student.",
+                "fol": "kid(billy) ∧ (student(billy) ∨ ¬student(billy))",
+                "tptp": "kid(billy) & (student(billy) | ~student(billy))"
+            },
+            {
+                "ref": "(8) if billy is a student, the consequent (student and kid) is true.",
+                "fol": "student(billy) → (student(billy) ∧ kid(billy))",
+                "tptp": "student(billy) => (student(billy) & kid(billy))"
+            },
+            {
+                "ref": "(9) the scientist option is impossible, making the implication valid.",
+                "fol": "¬scientist(billy) → (student(billy) ∧ kid(billy))",
+                "tptp": "~scientist(billy) => (student(billy) & kid(billy))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Billy is a kid in our family.",
+            "If someone in our family is a scientist, they are an adult.",
+            "Billy is a kid.",
+            "he cannot be an adult.",
+            "Since Billy cannot be a scientist, the antecedent reduces to Billy being a student.",
+            "Premise 4 states some students are kids.",
+            "Billy is a kid and could be a student.",
+            "If Billy is a student, the consequent (student and kid) is true.",
+            "The scientist option is impossible, making the implication valid."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "Unknown",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T2",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "Unknown",
+            "True",
+            "True",
+            "True",
+            "Unknown"
+        ]
+    },
+    {
+        "idx": "415_1167",
+        "premises": [
+            "All books written by Neil Gaiman have sold more than one thousand copies.",
+            "Some books that have won Hugo Awards are written by Neil Gaiman.",
+            "Tomas has read all books written by Tolkien. ",
+            "Either Tomas has read Hamlet, or it has sold more than one thousand copies.",
+            "Hamlet has either sold more than one thousand copies or it is written by Neil Gaiman."
+        ],
+        "question": [
+            "Hamlet has won a Hugo Award and is written by Tolkien."
+        ],
+        "premises_gt_fol": [
+            "∀x ((Book(x) ∧ WrittenBy(x, neilGaiman)) → ∃y (MoreThan(y, num1000) ∧ SoldCopies(x, y)))",
+            "∃x ∃y (Book(x) ∧ Win(x, hugoAward) ∧ WrittenBy(x, neilGaiman) ∧ (¬(x=y)) ∧ Book(y) ∧ Win(y, hugoAward) ∧ WrittenBy(y, neilGaiman))",
+            "∀x ((Book(x) ∧ WrittenBy(x, tolkien)) → ReadBy(x, tomas))",
+            "ReadBy(hamlet, tomas) ⊕ (∃y (MoreThan(y, num1000) ∧ SoldCopies(hamlet, y)))",
+            "∃y (MoreThan(y, num1000) ∧ SoldCopies(hamlet, y)) ⊕ WrittenBy(hamlet, neilGaiman)"
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "All books by Neil Gaiman sold >1000 copies.",
+            "Some Hugowinning books are by Neil Gaiman.",
+            "Tomas read all Tolkien books.",
+            "Either Tomas read Hamlet or Hamlet sold >1000 copies.",
+            "Hamlet either sold >1000 or is by Neil Gaiman.",
+            "Conclusion requires Hamlet to have Hugo Award and be by Tolkien.",
+            "No premise links Hamlet to Hugo Award.",
+            "Premise links Hamlet's authorship to Neil Gaiman or sales.",
+            "No premise states Hamlet is written by Tolkien.",
+            "Tolkien's books are only related to Tomas's reading.",
+            "No connection between Hamlet and Tolkien exists in premises.",
+            "Hugo Award premise only connects some Gaiman books, not Hamlet.",
+            "Conclusion's two claims lack support in premises."
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "reasoning_content": "Alright, let's tackle this problem step by step. The conclusion we need to evaluate is whether \"Hamlet has won a Hugo Award and is written by Tolkien.\" Let's start by listing out the premises and see how they connect.\n\nFirst premise: All books written by Neil Gaiman have sold more than one thousand copies. So, any book by Gaiman automatically meets the sales threshold.\n\nSecond premise: Some books that have won Hugo Awards are written by Neil Gaiman. This means there's an overlap between Hugo-winning books and Gaiman's works. However, it's only \"some,\" not all, so not every Hugo winner is by Gaiman.\n\nThird premise: Tomas has read all books written by Tolkien. So, if a book is by Tolkien, Tomas has read it. But this doesn't directly relate to Hamlet unless Hamlet is by Tolkien, which we need to check.\n\nFourth premise: Either Tomas has read Hamlet, or it has sold more than one thousand copies. This is an \"either/or\" statement. So, one of these two must be true for Hamlet.\n\nFifth premise: Hamlet has either sold more than one thousand copies or it is written by Neil Gaiman. Again, another \"either/or.\" So, Hamlet either meets the sales threshold or is a Gaiman book.\n\nNow, the conclusion is that Hamlet has both won a Hugo Award and is written by Tolkien. Let's break this into two parts: does Hamlet have a Hugo Award, and is it written by Tolkien?\n\nStarting with the authorship: The premises mention Tolkien in the context of Tomas reading all his books. The fifth premise says Hamlet is either by Gaiman or has sold over 1k copies. If Hamlet were by Tolkien, the third premise would mean Tomas has read it. But the fourth premise says either Tomas has read Hamlet or it sold over 1k. If Tomas has read it, then the first part of the fourth premise is satisfied. However, the fifth premise's options are about sales or Gaiman's authorship. So, if Hamlet were by Tolkien, the fifth premise's second option (written by Gaiman) wouldn't apply, so it would have to have sold over 1k. But the first premise says all Gaiman books have sold over 1k, but that doesn't apply to Tolkien. So, the connection here is unclear. There's no premise stating that Tolkien's books have sold a certain number. So, even if Hamlet were by Tolkien, the fifth premise's first option (sold over 1k) might or might not hold. But the fourth premise would require either Tomas reading it (which he would if it's by Tolkien) or the sales. So, if it's by Tolkien, then Tomas has read it, satisfying the fourth premise. However, the conclusion claims Hamlet is written by Tolkien, but none of the premises directly state that. The premises about Tolkien only relate to Tomas's reading habits, not authorship of Hamlet.\n\nNow, the Hugo Award part: The second premise says some Hugo-winning books are by Gaiman. But there's no information linking Hamlet to Hugo Awards. The conclusion claims Hamlet has won a Hugo, but the premises don't mention Hamlet in relation to any awards. The only Hugo-related info is that some Gaiman books have won, but Hamlet being by Gaiman is one of the possibilities in the fifth premise. However, even if Hamlet were by Gaiman (which would make it a bestseller per the first premise), there's no premise stating that all Gaiman books have won Hugos—only some. So, being a Gaiman book doesn't guarantee a Hugo Award. Therefore, there's no evidence that Hamlet has won a Hugo Award.\n\nPutting it all together: The conclusion requires both parts to be true. Since neither the Hugo Award nor the authorship by Tolkien can be confirmed from the premises, the conclusion is false.",
+        "content": "Thoughts:\nAll books by Neil Gaiman sold >1000 copies.\nSome Hugo-winning books are by Neil Gaiman.\nTomas read all Tolkien books.\nEither Tomas read Hamlet or Hamlet sold >1000 copies.\nHamlet either sold >1000 or is by Neil Gaiman.\nConclusion requires Hamlet to have Hugo Award and be by Tolkien.\nNo premise links Hamlet to Hugo Award.\nPremise links Hamlet's authorship to Neil Gaiman or sales.\nNo premise states Hamlet is written by Tolkien.\nTolkien's books are only related to Tomas's reading.\nNo connection between Hamlet and Tolkien exists in premises.\nHugo Award premise only connects some Gaiman books, not Hamlet.\nConclusion's two claims lack support in premises.\n\nAnswer:\n(B) False",
+        "filter_reasoning_steps": [
+            "All books by Neil Gaiman sold >1000 copies.",
+            "Some Hugowinning books are by Neil Gaiman.",
+            "Tomas read all Tolkien books.",
+            "Either Tomas read Hamlet or Hamlet sold >1000 copies.",
+            "Hamlet either sold >1000 or is by Neil Gaiman.",
+            null,
+            "No premise links Hamlet to Hugo Award.",
+            "Premise links Hamlet's authorship to Neil Gaiman or sales.",
+            "No premise states Hamlet is written by Tolkien.",
+            "Tolkien's books are only related to Tomas's reading.",
+            "No connection between Hamlet and Tolkien exists in premises.",
+            "Hugo Award premise only connects some Gaiman books, not Hamlet.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) all books written by neil gaiman have sold more than one thousand copies.",
+                "fol": "∀x (writtenby(x, neilgaiman) → soldmorethan1000(x))",
+                "tptp": "![X]: (writtenby(X, neilgaiman) => soldmorethan1000(X))"
+            },
+            {
+                "ref": "(2) some books that have won hugo awards are written by neil gaiman.",
+                "fol": "∃x (wonhugo(x) ∧ writtenby(x, neilgaiman))",
+                "tptp": "?[X]: (wonhugo(X) & writtenby(X, neilgaiman))"
+            },
+            {
+                "ref": "(3) tomas has read all books written by tolkien.",
+                "fol": "∀x (writtenby(x, tolkien) → read(tomas, x))",
+                "tptp": "![X]: (writtenby(X, tolkien) => read(tomas, X))"
+            },
+            {
+                "ref": "(4) either tomas has read hamlet, or it has sold more than one thousand copies.",
+                "fol": "read(tomas, hamlet) ⊕ soldmorethan1000(hamlet)",
+                "tptp": "((~(read(tomas, hamlet)) & (soldmorethan1000(hamlet))) | ((read(tomas, hamlet)) & ~(soldmorethan1000(hamlet))))"
+            },
+            {
+                "ref": "(5) hamlet has either sold more than one thousand copies or it is written by neil gaiman.",
+                "fol": "soldmorethan1000(hamlet) ⊕ writtenby(hamlet, neilgaiman)",
+                "tptp": "((~(soldmorethan1000(hamlet)) & (writtenby(hamlet, neilgaiman))) | ((soldmorethan1000(hamlet)) & ~(writtenby(hamlet, neilgaiman))))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(12) hamlet has won a hugo award and is written by tolkien.",
+            "fol": "wonhugo(hamlet) ∧ writtenby(hamlet, tolkien)",
+            "tptp": "wonhugo(hamlet) & writtenby(hamlet, tolkien)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) all books by neil gaiman sold >1000 copies.",
+                "fol": "∀x (writtenby(x, neilgaiman) → soldmorethan1000(x))",
+                "tptp": "![X]: (writtenby(X, neilgaiman) => soldmorethan1000(X))"
+            },
+            {
+                "ref": "(2) some hugowinning books are by neil gaiman.",
+                "fol": "∃x (wonhugo(x) ∧ writtenby(x, neilgaiman))",
+                "tptp": "?[X]: (wonhugo(X) & writtenby(X, neilgaiman))"
+            },
+            {
+                "ref": "(3) tomas read all tolkien books.",
+                "fol": "∀x (writtenby(x, tolkien) → read(tomas, x))",
+                "tptp": "![X]: (writtenby(X, tolkien) => read(tomas, X))"
+            },
+            {
+                "ref": "(4) either tomas read hamlet or hamlet sold >1000 copies.",
+                "fol": "read(tomas, hamlet) ⊕ soldmorethan1000(hamlet)",
+                "tptp": "((~(read(tomas, hamlet)) & (soldmorethan1000(hamlet))) | ((read(tomas, hamlet)) & ~(soldmorethan1000(hamlet))))"
+            },
+            {
+                "ref": "(5) hamlet either sold >1000 or is by neil gaiman.",
+                "fol": "soldmorethan1000(hamlet) ⊕ writtenby(hamlet, neilgaiman)",
+                "tptp": "((~(soldmorethan1000(hamlet)) & (writtenby(hamlet, neilgaiman))) | ((soldmorethan1000(hamlet)) & ~(writtenby(hamlet, neilgaiman))))"
+            },
+            {
+                "ref": "(6) no premise links hamlet to hugo award.",
+                "fol": "¬∃x (wonhugo(x) ∧ x = hamlet)",
+                "tptp": "~?[X]: (wonhugo(X) & X = hamlet)"
+            },
+            {
+                "ref": "(7) premise links hamlet's authorship to neil gaiman or sales.",
+                "fol": "(writtenby(hamlet, neilgaiman) ∨ soldmorethan1000(hamlet))",
+                "tptp": "(writtenby(hamlet, neilgaiman) | soldmorethan1000(hamlet))"
+            },
+            {
+                "ref": "(8) no premise states hamlet is written by tolkien.",
+                "fol": "¬writtenby(hamlet, tolkien)",
+                "tptp": "~writtenby(hamlet, tolkien)"
+            },
+            {
+                "ref": "(9) tolkien's books are only related to tomas's reading.",
+                "fol": "∀x (writtenby(x, tolkien) → read(tomas, x))",
+                "tptp": "![X]: (writtenby(X, tolkien) => read(tomas, X))"
+            },
+            {
+                "ref": "(10) no connection between hamlet and tolkien exists in premises.",
+                "fol": "¬∃x (x = hamlet ∧ writtenby(x, tolkien))",
+                "tptp": "~?[X]: (X = hamlet & writtenby(X, tolkien))"
+            },
+            {
+                "ref": "(11) hugo award premise only connects some gaiman books, not hamlet.",
+                "fol": "¬∃x (wonhugo(x) ∧ x = hamlet)",
+                "tptp": "~?[X]: (wonhugo(X) & X = hamlet)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "All books by Neil Gaiman sold >1000 copies.",
+            "Some Hugowinning books are by Neil Gaiman.",
+            "Tomas read all Tolkien books.",
+            "Either Tomas read Hamlet or Hamlet sold >1000 copies.",
+            "Hamlet either sold >1000 or is by Neil Gaiman.",
+            "No premise links Hamlet to Hugo Award.",
+            "Premise links Hamlet's authorship to Neil Gaiman or sales.",
+            "No premise states Hamlet is written by Tolkien.",
+            "Tolkien's books are only related to Tomas's reading.",
+            "No connection between Hamlet and Tolkien exists in premises.",
+            "Hugo Award premise only connects some Gaiman books, not Hamlet."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "Unknown",
+            "True",
+            "True",
+            "True",
+            "True",
+            "Unknown"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T2",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "35_101",
+        "premises": [
+            "An Olympian is a person who trains for an Olympic sport and goes to the Olympics.",
+            "Carlos Reyes trains for an Olympic sport.",
+            "Carlos Reyes went to the Olympics.",
+            "Carlos Reyes is a welterweight.",
+            "Heavy weights are not welterweights."
+        ],
+        "question": [
+            "Carlos Reyes is an Olympian."
+        ],
+        "premises_gt_fol": [
+            "∀x ((DoesOlympicSport(x) ∧ GoesToOlympicGames(x)) → Olympian(x))",
+            "DoesOlympicSport(carlosReyes)",
+            "GoesToOlympicGames(carlosReyes)",
+            "WelterWeight(carlosReyes)",
+            "∀x (WelterWeight(x) → ¬ HeavyWeight(x))"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "An Olympian is defined as a person who trains for an Olympic sport and goes to the Olympics.",
+            "Carlos Reyes trains for an Olympic sport.",
+            "Carlos Reyes went to the Olympics.",
+            "He satisfies both conditions in the definition of an Olympian.",
+            "The premises about his welterweight status and heavy weights are irrelevant to the Olympian definition.",
+            "The conclusion directly follows from the premises."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Alright, let's break this down. The task is to determine if the conclusion \"Carlos Reyes is an Olympian\" is true based on the given premises.\n\nFirst, the premises state that an Olympian is defined as a person who both trains for an Olympic sport and goes to the Olympics. So, according to the definition, two conditions must be met: training and attending the Olympics.\n\nLooking at Carlos Reyes, the premises say he trains for an Olympic sport and he went to the Olympics. So on the surface, it seems like he meets both criteria. The other premises mention that he's a welterweight and that heavy weights are not welterweights, but those details don't directly affect the definition of an Olympian. The key factors are the training and attending the Olympics. Since both are satisfied, the conclusion should follow logically. The weight class information is probably a distractor here because the definition of Olympian doesn't involve weight categories. Therefore, the conclusion should be true.",
+        "content": "Thoughts:\nAn Olympian is defined as a person who trains for an Olympic sport and goes to the Olympics.\nCarlos Reyes trains for an Olympic sport.\nCarlos Reyes went to the Olympics.\nHe satisfies both conditions in the definition of an Olympian.\nThe premises about his welterweight status and heavy weights are irrelevant to the Olympian definition.\nThe conclusion directly follows from the premises.\nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "An Olympian is defined as a person who trains for an Olympic sport and goes to the Olympics.",
+            "Carlos Reyes trains for an Olympic sport.",
+            "Carlos Reyes went to the Olympics.",
+            "He satisfies both conditions in the definition of an Olympian.",
+            "The premises about his welterweight status and heavy weights are irrelevant to the Olympian definition.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) an olympian is a person who trains for an olympic sport and goes to the olympics.",
+                "fol": "∀x (olympian(x) ↔ (trains(x, olympicsport) ∧ goestoolympics(x)))",
+                "tptp": "![X]: (olympian(X) <=> (trains(X, olympicsport) & goestoolympics(X)))"
+            },
+            {
+                "ref": "(2) carlos reyes trains for an olympic sport.",
+                "fol": "trains(carlosreyes, olympicsport)",
+                "tptp": "trains(carlosreyes, olympicsport)"
+            },
+            {
+                "ref": "(3) carlos reyes went to the olympics.",
+                "fol": "goestoolympics(carlosreyes)",
+                "tptp": "goestoolympics(carlosreyes)"
+            },
+            {
+                "ref": "(4) carlos reyes is a welterweight.",
+                "fol": "welterweight(carlosreyes)",
+                "tptp": "welterweight(carlosreyes)"
+            },
+            {
+                "ref": "(5) heavy weights are not welterweights.",
+                "fol": "∀x (heavyweight(x) → ¬welterweight(x))",
+                "tptp": "![X]: (heavyweight(X) => ~welterweight(X))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(6) carlos reyes is an olympian.",
+            "fol": "olympian(carlosreyes)",
+            "tptp": "olympian(carlosreyes)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) an olympian is defined as a person who trains for an olympic sport and goes to the olympics.",
+                "fol": "∀x (olympian(x) ↔ (trains(x, olympicsport) ∧ goestoolympics(x)))",
+                "tptp": "![X]: (olympian(X) <=> (trains(X, olympicsport) & goestoolympics(X)))"
+            },
+            {
+                "ref": "(2) carlos reyes trains for an olympic sport.",
+                "fol": "trains(carlosreyes, olympicsport)",
+                "tptp": "trains(carlosreyes, olympicsport)"
+            },
+            {
+                "ref": "(3) carlos reyes went to the olympics.",
+                "fol": "goestoolympics(carlosreyes)",
+                "tptp": "goestoolympics(carlosreyes)"
+            },
+            {
+                "ref": "(4) he satisfies both conditions in the definition of an olympian.",
+                "fol": "trains(carlosreyes, olympicsport) ∧ goestoolympics(carlosreyes)",
+                "tptp": "trains(carlosreyes, olympicsport) & goestoolympics(carlosreyes)"
+            },
+            {
+                "ref": "(5) the premises about his welterweight status and heavy weights are irrelevant to the olympian definition.",
+                "fol": "welterweight(carlosreyes) ∧ ∀x (heavyweight(x) → ¬welterweight(x))",
+                "tptp": "welterweight(carlosreyes) & ![X]: (heavyweight(X) => ~welterweight(X))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "An Olympian is defined as a person who trains for an Olympic sport and goes to the Olympics.",
+            "Carlos Reyes trains for an Olympic sport.",
+            "Carlos Reyes went to the Olympics.",
+            "He satisfies both conditions in the definition of an Olympian.",
+            "The premises about his welterweight status and heavy weights are irrelevant to the Olympian definition."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "341_898",
+        "premises": [
+            "No battery-powered watch is automatic.",
+            "All digital watches are battery-powered.",
+            "Some mechanical watches are automatic.",
+            "All smart watches are digital.",
+            "Moonwatch is either a digital watch and an automatic, or it is neither."
+        ],
+        "question": [
+            "If Moonwatch is a smartwatch and a mechanical watch, then Moonwatch is not a mechanical watch."
+        ],
+        "premises_gt_fol": [
+            "∀x (BatteryPoweredWatch(x) → ¬AutomaticWatch(x))",
+            "∀x (DigitalWatch(x) → BatteryPoweredWatch(x))",
+            "∃x (MechanicalWatch(x) ∧ AutomaticWatch(x))",
+            "∀x (SmartWatch(x) → DigitalWatch(x))",
+            "¬(DigitalWatch(moonwatch) ⊕ AutomaticWatch(moonwatch))"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "No batterypowered watch is automatic.",
+            "All digital watches are batterypowered.",
+            "If Moonwatch is a smartwatch, it is digital (since all smart watches are digital).",
+            "A digital watch is batterypowered.",
+            "Moonwatch cannot be automatic.",
+            "The Moonwatch's condition: it is either (digital and automatic) or neither.",
+            "Assuming Moonwatch is a smartwatch (digital), it cannot be automatic.",
+            "Thus, Moonwatch must be neither digital nor automatic, but this contradicts being a smartwatch (digital).",
+            "The antecedent \"Moonwatch is a smartwatch and mechanical\" creates a contradiction.",
+            "An implication with an impossible antecedent is vacuously true."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, let me try to figure this out step by step. The premises are a bit complex, so I need to break them down.\n\nFirst, the premises: No battery-powered watch is automatic. So if a watch is battery-powered, it can't be automatic. Then, all digital watches are battery-powered. That means any digital watch uses a battery, so none of them are automatic. Next, some mechanical watches are automatic. So there's an overlap between mechanical and automatic watches. All smart watches are digital, which connects smart watches to being battery-powered as well. \n\nNow, Moonwatch is either a digital watch and automatic, or neither. Wait, that's a bit tricky. So Moonwatch could be both digital and automatic (which contradicts the first premise because digital watches are battery-powered and can't be automatic), or it's neither digital nor automatic. But according to the first premise, if it's digital, then it's battery-powered, which means it can't be automatic. So the first option (digital and automatic) is impossible. Therefore, Moonwatch must be neither digital nor automatic. \n\nThe conclusion is: If Moonwatch is a smartwatch and a mechanical watch, then Moonwatch is not a mechanical watch. Let's parse that. The antecedent is \"Moonwatch is a smartwatch and a mechanical watch.\" The consequent is \"Moonwatch is not a mechanical watch.\" So we need to see if assuming the antecedent leads to the consequent.\n\nAssuming Moonwatch is a smartwatch. Since all smart watches are digital, Moonwatch is digital. All digital watches are battery-powered, so Moonwatch is battery-powered. From the first premise, no battery-powered watch is automatic. So Moonwatch isn't automatic. But Moonwatch is a mechanical watch (from the antecedent). The premise says some mechanical watches are automatic, but not all. So a mechanical watch can be automatic or not. But Moonwatch, being a smartwatch (thus digital and battery-powered), can't be automatic. Now, Moonwatch is a mechanical watch. But the conclusion says that if it's a smartwatch and mechanical, then it's not mechanical. Wait, that seems contradictory. The antecedent says it's a mechanical watch, and the conclusion says it's not. So the conclusion is essentially saying that if Moonwatch is both a smartwatch and mechanical, then that leads to a contradiction, making it not mechanical. But how?\n\nWait, maybe the structure is: If (A and B), then not B. So if the premises make the antecedent impossible, then the implication is vacuously true. Because an implication is only false if the antecedent is true and the consequent is false. So if the antecedent can't be true, then the implication is always true. Let's see. If Moonwatch is a smartwatch (which makes it digital and battery-powered, hence not automatic) and a mechanical watch. But the premises say that mechanical watches can be automatic or not. However, the Moonwatch's case as a smartwatch (digital) would require it to be battery-powered, which can't be automatic. But there's no rule that says a mechanical watch can't be battery-powered. Wait, but mechanical watches are typically not battery-powered, but the premises don't state that. The premises only say that some mechanical watches are automatic. So is it possible for a watch to be both mechanical and battery-powered? The premises don't prohibit that. But the first premise says no battery-powered watch is automatic. So if a mechanical watch is battery-powered, it can't be automatic. However, the Moonwatch's condition is that it's either (digital and automatic) or neither. But if Moonwatch is a smartwatch (thus digital), then it's battery-powered, hence not automatic. So in that case, the first option (digital and automatic) is impossible. So Moonwatch must be neither digital nor automatic. But if we assume Moonwatch is a smartwatch (digital), then it can't be automatic, which aligns with the first part of the Moonwatch condition. Wait, the Moonwatch condition is: Moonwatch is either (digital and automatic) or neither. But if it's digital, it can't be automatic. Therefore, the only possibility is that Moonwatch is neither digital nor automatic. So if we assume Moonwatch is a smartwatch (which is digital), this would contradict the Moonwatch condition unless it's also automatic. But since being digital makes it battery-powered, which can't be automatic, Moonwatch can't be both digital and automatic. Therefore, if Moonwatch is a smartwatch, it's digital, which forces it to be neither digital nor automatic? Wait, that doesn't make sense. Wait, the Moonwatch's condition is that it is either (digital and automatic) or neither. But if it's a smartwatch, it's digital, so the first part (digital and automatic) is impossible because digital implies battery-powered, which implies not automatic. Therefore, Moonwatch must be neither digital nor automatic. But if we're assuming in the antecedent that Moonwatch is a smartwatch (thus digital) and a mechanical watch, that would mean it's digital, which contradicts the Moonwatch condition unless it's automatic. But it can't be automatic because it's digital. Therefore, the antecedent (Moonwatch is a smartwatch and mechanical) is impossible. Because being a smartwatch makes it digital, which would require Moonwatch to be either digital and automatic (impossible) or neither. But if it's a smartwatch, it's digital, so the only valid option is the first part (digital and automatic), which is impossible. Therefore, the antecedent can't be true. So the implication \"If A then B\" is true because A is impossible. Therefore, the conclusion is true.",
+        "content": "Thoughts:\nNo battery-powered watch is automatic.\nAll digital watches are battery-powered.\nIf Moonwatch is a smartwatch, it is digital (since all smart watches are digital).\nA digital watch is battery-powered, so Moonwatch cannot be automatic.\nThe Moonwatch's condition: it is either (digital and automatic) or neither.\nAssuming Moonwatch is a smartwatch (digital), it cannot be automatic.\nThus, Moonwatch must be neither digital nor automatic, but this contradicts being a smartwatch (digital).\nThe antecedent \"Moonwatch is a smartwatch and mechanical\" creates a contradiction.\nAn implication with an impossible antecedent is vacuously true.\nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "No batterypowered watch is automatic.",
+            "All digital watches are batterypowered.",
+            "If Moonwatch is a smartwatch, it is digital (since all smart watches are digital).",
+            "A digital watch is batterypowered.",
+            "Moonwatch cannot be automatic.",
+            "The Moonwatch's condition: it is either (digital and automatic) or neither.",
+            "Assuming Moonwatch is a smartwatch (digital), it cannot be automatic.",
+            null,
+            null,
+            "An implication with an impossible antecedent is vacuously true."
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) no battery-powered watch is automatic.",
+                "fol": "¬∃x (batterypowered(x) ∧ automatic(x))",
+                "tptp": "~?[X]: (batterypowered(X) & automatic(X))"
+            },
+            {
+                "ref": "(2) all digital watches are battery-powered.",
+                "fol": "∀x (digital(x) → batterypowered(x))",
+                "tptp": "![X]: (digital(X) => batterypowered(X))"
+            },
+            {
+                "ref": "(3) some mechanical watches are automatic.",
+                "fol": "∃x (mechanical(x) ∧ automatic(x))",
+                "tptp": "?[X]: (mechanical(X) & automatic(X))"
+            },
+            {
+                "ref": "(4) all smart watches are digital.",
+                "fol": "∀x (smartwatch(x) → digital(x))",
+                "tptp": "![X]: (smartwatch(X) => digital(X))"
+            },
+            {
+                "ref": "(5) moonwatch is either a digital watch and an automatic, or it is neither.",
+                "fol": "(digital(moonwatch) ∧ automatic(moonwatch)) ⊕ ¬(digital(moonwatch) ∨ automatic(moonwatch))",
+                "tptp": "((~((digital(moonwatch) & automatic(moonwatch))) & (~(digital(moonwatch) | automatic(moonwatch)))) | (((digital(moonwatch) & automatic(moonwatch))) & ~(~(digital(moonwatch) | automatic(moonwatch)))))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(9) if moonwatch is a smartwatch and a mechanical watch, then moonwatch is not a mechanical watch.",
+            "fol": "(smartwatch(moonwatch) ∧ mechanical(moonwatch)) → ¬mechanical(moonwatch)",
+            "tptp": "(smartwatch(moonwatch) & mechanical(moonwatch)) => ~mechanical(moonwatch)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) no battery-powered watch is automatic.",
+                "fol": "¬∃x (batterypowered(x) ∧ automatic(x))",
+                "tptp": "~?[X]: (batterypowered(X) & automatic(X))"
+            },
+            {
+                "ref": "(2) all digital watches are battery-powered.",
+                "fol": "∀x (digital(x) → batterypowered(x))",
+                "tptp": "![X]: (digital(X) => batterypowered(X))"
+            },
+            {
+                "ref": "(3) if moonwatch is a smartwatch, it is digital (since all smart watches are digital).",
+                "fol": "smartwatch(moonwatch) → digital(moonwatch)",
+                "tptp": "smartwatch(moonwatch) => digital(moonwatch)"
+            },
+            {
+                "ref": "(4) a digital watch is battery-powered.",
+                "fol": "∃x (digital(x) ∧ batterypowered(x))",
+                "tptp": "?[X]: (digital(X) & batterypowered(X))"
+            },
+            {
+                "ref": "(5) moonwatch cannot be automatic.",
+                "fol": "¬automatic(moonwatch)",
+                "tptp": "~automatic(moonwatch)"
+            },
+            {
+                "ref": "(6) the moonwatch's condition: it is either (digital and automatic) or neither.",
+                "fol": "(digital(moonwatch) ∧ automatic(moonwatch)) ⊕ ¬(digital(moonwatch) ∨ automatic(moonwatch))",
+                "tptp": "((~((digital(moonwatch) & automatic(moonwatch))) & (~(digital(moonwatch) | automatic(moonwatch)))) | (((digital(moonwatch) & automatic(moonwatch))) & ~(~(digital(moonwatch) | automatic(moonwatch)))))"
+            },
+            {
+                "ref": "(7) assuming moonwatch is a smartwatch (digital), it cannot be automatic.",
+                "fol": "(smartwatch(moonwatch) ∧ digital(moonwatch)) → ¬automatic(moonwatch)",
+                "tptp": "(smartwatch(moonwatch) & digital(moonwatch)) => ~automatic(moonwatch)"
+            },
+            {
+                "ref": "(8) an implication with an impossible antecedent is vacuously true.",
+                "fol": "¬smartwatch(moonwatch) → (smartwatch(moonwatch) → false)",
+                "tptp": "~smartwatch(moonwatch) => (smartwatch(moonwatch) => false)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "No batterypowered watch is automatic.",
+            "All digital watches are batterypowered.",
+            "If Moonwatch is a smartwatch, it is digital (since all smart watches are digital).",
+            "A digital watch is batterypowered.",
+            "Moonwatch cannot be automatic.",
+            "The Moonwatch's condition: it is either (digital and automatic) or neither.",
+            "Assuming Moonwatch is a smartwatch (digital), it cannot be automatic.",
+            "An implication with an impossible antecedent is vacuously true."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "Unknown",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T2",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "341_897",
+        "premises": [
+            "No battery-powered watch is automatic.",
+            "All digital watches are battery-powered.",
+            "Some mechanical watches are automatic.",
+            "All smart watches are digital.",
+            "Moonwatch is either a digital watch and an automatic, or it is neither."
+        ],
+        "question": [
+            "Moonwatch is a smartwatch and a mechanical watch."
+        ],
+        "premises_gt_fol": [
+            "∀x (BatteryPoweredWatch(x) → ¬AutomaticWatch(x))",
+            "∀x (DigitalWatch(x) → BatteryPoweredWatch(x))",
+            "∃x (MechanicalWatch(x) ∧ AutomaticWatch(x))",
+            "∀x (SmartWatch(x) → DigitalWatch(x))",
+            "¬(DigitalWatch(moonwatch) ⊕ AutomaticWatch(moonwatch))"
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "No batterypowered watch is automatic.",
+            "All digital watches are batterypowered.",
+            "If Moonwatch is digital and automatic, it would be batterypowered (from digital), contradicting \"no batterypowered is automatic\".",
+            "Therefore, Moonwatch must be neither digital nor automatic.",
+            "All smart watches are digital.",
+            "Since Moonwatch is not digital, it cannot be a smartwatch.",
+            "The conclusion claims Moonwatch is a smartwatch and mechanical, but the smartwatch part is impossible."
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, let's try to figure out if the conclusion \"Moonwatch is a smartwatch and a mechanical watch\" is true or false based on the given premises.\n\nFirst, let me list out all the premises to make sure I don't miss any:\n\n1. No battery-powered watch is automatic. So if something is battery-powered, it can't be automatic, and vice versa.\n2. All digital watches are battery-powered. So digital → battery-powered.\n3. Some mechanical watches are automatic. So there exists at least one mechanical watch that's automatic.\n4. All smart watches are digital. Smart → digital.\n5. Moonwatch is either a digital watch and an automatic, or it is neither. So Moonwatch has two possibilities: (digital ∧ automatic) OR (not digital ∧ not automatic).\n\nThe conclusion is that Moonwatch is a smartwatch and a mechanical watch. So we need to check if both parts are necessarily true.\n\nStarting with the Moonwatch's possibilities. Let's break down premise 5. The first option is that Moonwatch is both digital and automatic. But from premise 2, all digital watches are battery-powered. So if Moonwatch is digital, it must be battery-powered. But premise 1 says no battery-powered watch is automatic. So if Moonwatch is digital and automatic, that would contradict premises 1 and 2. Because digital → battery-powered, and battery-powered → not automatic. Therefore, the first option (digital and automatic) is impossible. So the only remaining possibility is that Moonwatch is neither digital nor automatic.\n\nSo Moonwatch is not digital and not automatic. Now, the conclusion wants Moonwatch to be a smartwatch and a mechanical watch. Let's check each part.\n\nIs Moonwatch a smartwatch? All smartwatches are digital (premise 4). But Moonwatch is not digital. Therefore, Moonwatch cannot be a smartwatch. So the first part of the conclusion (smartwatch) is false. Hence, the entire conclusion is false.\n\nAdditionally, even if Moonwatch is a mechanical watch, since the conclusion requires both smartwatch and mechanical, and we already established it can't be a smartwatch, the conclusion is false regardless. \n\nSo the answer should be False.",
+        "content": "Thoughts:\nNo battery-powered watch is automatic.\nAll digital watches are battery-powered.\nIf Moonwatch is digital and automatic, it would be battery-powered (from digital), contradicting \"no battery-powered is automatic\".\nTherefore, Moonwatch must be neither digital nor automatic.\nAll smart watches are digital.\nSince Moonwatch is not digital, it cannot be a smartwatch.\nThe conclusion claims Moonwatch is a smartwatch and mechanical, but the smartwatch part is impossible.\nAnswer:\n(B) False",
+        "filter_reasoning_steps": [
+            "No batterypowered watch is automatic.",
+            "All digital watches are batterypowered.",
+            null,
+            null,
+            "All smart watches are digital.",
+            "Since Moonwatch is not digital, it cannot be a smartwatch.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) no battery-powered watch is automatic.",
+                "fol": "∀x (batterypowered(x) → ¬automatic(x))",
+                "tptp": "![X]: (batterypowered(X) => ~automatic(X))"
+            },
+            {
+                "ref": "(2) all digital watches are battery-powered.",
+                "fol": "∀x (digital(x) → batterypowered(x))",
+                "tptp": "![X]: (digital(X) => batterypowered(X))"
+            },
+            {
+                "ref": "(3) some mechanical watches are automatic.",
+                "fol": "∃x (mechanical(x) ∧ automatic(x))",
+                "tptp": "?[X]: (mechanical(X) & automatic(X))"
+            },
+            {
+                "ref": "(4) all smart watches are digital.",
+                "fol": "∀x (smart(x) → digital(x))",
+                "tptp": "![X]: (smart(X) => digital(X))"
+            },
+            {
+                "ref": "(5) moonwatch is either a digital watch and an automatic, or it is neither.",
+                "fol": "(digital(moonwatch) ∧ automatic(moonwatch)) ⊕ ¬(digital(moonwatch) ∨ automatic(moonwatch))",
+                "tptp": "((~((digital(moonwatch) & automatic(moonwatch))) & (~(digital(moonwatch) | automatic(moonwatch)))) | (((digital(moonwatch) & automatic(moonwatch))) & ~(~(digital(moonwatch) | automatic(moonwatch)))))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(5) moonwatch is a smartwatch and a mechanical watch.",
+            "fol": "smart(moonwatch) ∧ mechanical(moonwatch)",
+            "tptp": "smart(moonwatch) & mechanical(moonwatch)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) no battery-powered watch is automatic.",
+                "fol": "∀x (batterypowered(x) → ¬automatic(x))",
+                "tptp": "![X]: (batterypowered(X) => ~automatic(X))"
+            },
+            {
+                "ref": "(2) all digital watches are battery-powered.",
+                "fol": "∀x (digital(x) → batterypowered(x))",
+                "tptp": "![X]: (digital(X) => batterypowered(X))"
+            },
+            {
+                "ref": "(3) all smart watches are digital.",
+                "fol": "∀x (smart(x) → digital(x))",
+                "tptp": "![X]: (smart(X) => digital(X))"
+            },
+            {
+                "ref": "(4) since moonwatch is not digital, it cannot be a smartwatch.",
+                "fol": "¬digital(moonwatch) → ¬smart(moonwatch)",
+                "tptp": "~digital(moonwatch) => ~smart(moonwatch)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "No batterypowered watch is automatic.",
+            "All digital watches are batterypowered.",
+            "All smart watches are digital.",
+            "Since Moonwatch is not digital, it cannot be a smartwatch."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": false,
+        "cate": "T3",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "173_498",
+        "premises": [
+            "Detroit City is a horse.",
+            "Some horses are racehorses.",
+            "If a horse falls in a race, it poses risks to its rider.",
+            "Detroit City fell in a race.",
+            "A horse is a racehorse if it is in a race."
+        ],
+        "question": [
+            "Detroit City poses risks to its rider."
+        ],
+        "premises_gt_fol": [
+            "Horse(detroitcity)",
+            "∃x (Horse(x) ∧ Racehorse(x))",
+            "∀x (Horse(x) ∧ InRace(x) ∧ Falls(x) → PoseRiskTo(x, rider))",
+            "InRace(detroitcity) ∧ Fall(detroitcity)",
+            "∀x (Horse(x) ∧ InRace(x) → Racehorse(x))"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Detroit City is a horse.",
+            "Detroit City fell in a race.",
+            "A horse is a racehorse if it is in a race.",
+            "Detroit City is a racehorse.",
+            "If a horse falls in a race, it poses risks to its rider.",
+            "Detroit City's fall in a race implies risks to its rider."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, let's try to figure out if the conclusion \"Detroit City poses risks to its rider\" is true based on the given premises.\n\nFirst, the premises say Detroit City is a horse. Then, some horses are racehorses. There's a statement that if a horse falls in a race, it poses risks to its rider. Detroit City fell in a race. Another premise says a horse is a racehorse if it is in a race. \n\nSo, since Detroit City fell in a race, the first thing is to check if Detroit City is a racehorse. The premise says a horse is a racehorse if it is in a race. Since Detroit City was in a race (because it fell in a race), that makes Detroit City a racehorse. Then, applying the conditional: if a horse falls in a race, it poses risks to its rider. Detroit City did fall in a race, so according to that rule, it must pose risks to its rider. Therefore, the conclusion should be true.",
+        "content": "Thoughts:\nDetroit City is a horse.\nDetroit City fell in a race.\nA horse is a racehorse if it is in a race.\nDetroit City is a racehorse.\nIf a horse falls in a race, it poses risks to its rider.\nDetroit City's fall in a race implies risks to its rider.\nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "Detroit City is a horse.",
+            "Detroit City fell in a race.",
+            "A horse is a racehorse if it is in a race.",
+            "Detroit City is a racehorse.",
+            "If a horse falls in a race, it poses risks to its rider.",
+            "Detroit City's fall in a race implies risks to its rider."
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) detroit city is a horse.",
+                "fol": "horse(detroitcity)",
+                "tptp": "horse(detroitcity)"
+            },
+            {
+                "ref": "(2) some horses are racehorses.",
+                "fol": "∃x (horse(x) ∧ racehorse(x))",
+                "tptp": "?[X]: (horse(X) & racehorse(X))"
+            },
+            {
+                "ref": "(3) if a horse falls in a race, it poses risks to its rider.",
+                "fol": "∀x ((horse(x) ∧ fallsinrace(x)) → posesrisks(x, rider(x)))",
+                "tptp": "![X]: ((horse(X) & fallsinrace(X)) => posesrisks(X, rider(X)))"
+            },
+            {
+                "ref": "(4) detroit city fell in a race.",
+                "fol": "fallsinrace(detroitcity)",
+                "tptp": "fallsinrace(detroitcity)"
+            },
+            {
+                "ref": "(5) a horse is a racehorse if it is in a race.",
+                "fol": "∀x ((horse(x) ∧ inrace(x)) → racehorse(x))",
+                "tptp": "![X]: ((horse(X) & inrace(X)) => racehorse(X))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(7) detroit city poses risks to its rider.",
+            "fol": "posesrisks(detroitcity, rider(detroitcity))",
+            "tptp": "posesrisks(detroitcity, rider(detroitcity))"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) detroit city is a horse.",
+                "fol": "horse(detroitcity)",
+                "tptp": "horse(detroitcity)"
+            },
+            {
+                "ref": "(2) detroit city fell in a race.",
+                "fol": "fallsinrace(detroitcity)",
+                "tptp": "fallsinrace(detroitcity)"
+            },
+            {
+                "ref": "(3) a horse is a racehorse if it is in a race.",
+                "fol": "∀x ((horse(x) ∧ inrace(x)) → racehorse(x))",
+                "tptp": "![X]: ((horse(X) & inrace(X)) => racehorse(X))"
+            },
+            {
+                "ref": "(4) detroit city is a racehorse.",
+                "fol": "racehorse(detroitcity)",
+                "tptp": "racehorse(detroitcity)"
+            },
+            {
+                "ref": "(5) if a horse falls in a race, it poses risks to its rider.",
+                "fol": "∀x ((horse(x) ∧ fallsinrace(x)) → posesrisks(x, rider(x)))",
+                "tptp": "![X]: ((horse(X) & fallsinrace(X)) => posesrisks(X, rider(X)))"
+            },
+            {
+                "ref": "(6) detroit city's fall in a race implies risks to its rider.",
+                "fol": "fallsinrace(detroitcity) → posesrisks(detroitcity, rider(detroitcity))",
+                "tptp": "fallsinrace(detroitcity) => posesrisks(detroitcity, rider(detroitcity))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Detroit City is a horse.",
+            "Detroit City fell in a race.",
+            "A horse is a racehorse if it is in a race.",
+            "Detroit City is a racehorse.",
+            "If a horse falls in a race, it poses risks to its rider.",
+            "Detroit City's fall in a race implies risks to its rider."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "Unknown",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T2",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "431_1227",
+        "premises": [
+            "No Boeing-737 plane has more than 300 seats. ",
+            "All of the planes acquired by Delta in this batch are Boeing-737. ",
+            "Planes either have more than 300 seats or have a capacity of 100 passengers. ",
+            "All planes with a capacity of 100 passengers are scheduled for a short-distance flight. ",
+            "All planes with a capacity of 100 passengers are produced before 2010. ",
+            "Jake32 is either a Boeing-737 plane or a plane acquired by Delta in this batch.",
+            "T10 is either both a Boeing-737 plane and acquired by Delta in this batch, or it is neither."
+        ],
+        "question": [
+            "Jake32 was produced before 2010 and is scheduled for a short-distance flight."
+        ],
+        "premises_gt_fol": [
+            "∀x (Plane(x) ∧ Boeing737(x) → (¬∃y(GreaterThan(y, num300) ∧ EquippedWithSeats(x,y)))",
+            "∀x (Plane(x) ∧ AcquiredBy(x, delta) → Boeing737(x))",
+            "∀x (Plane(x) → ((∃y(GreaterThan(y, num300) ∧ EquippedWithSeats(x,y))) ⊕ (∃y(Equals(y, num100) ∧ EquippedWithSeats(x,y))))",
+            "∀x (Plane(x) ∧ ∃y(Equals(y, num100) ∧ EquippedWithSeats(x,y)) → ScheduledFor(x, shortdistanceflight))",
+            "∀x (Plane(x) ∧ ∃y(Equals(y, num100) ∧ EquippedWithSeats(x,y)) → ∃z(Before(z, yr2010) ∧ Produced(x, z))",
+            "(Boeing737(jake32) ∧ Plane(jake32)) ⊕ (AcquiredByDeltaInThisBatch(jake32) ∧ Plane(jake32))",
+            "¬((Boeing737(t10) ∧ Plane(t10)) ⊕ (AcquiredByDeltaInThisBatch(t10) ∧ Plane(t10)))"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "No Boeing737 plane has more than 300 seats.",
+            "All Deltaacquired planes in this batch are Boeing",
+            "Planes must have >300 seats or 100 passengers.",
+            "Boeing737 planes cannot have >300 seats.",
+            "they must have 100 passengers.",
+            "All 100passenger planes are scheduled for shortdistance flights and produced before",
+            "Jake32 is either a Boeing737 or a Deltaacquired plane.",
+            "Deltaacquired planes are Boeing",
+            "Jake32 must be a Boeing",
+            "As a Boeing737, Jake32 has 100 passengers.",
+            "Therefore, Jake32 was produced before 2010 and scheduled for shortdistance."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, let's see. I need to figure out if the conclusion \"Jake32 was produced before 2010 and is scheduled for a short-distance flight\" is true based on the given premises. Let me go through each premise step by step.\n\nFirst, the premises say that no Boeing-737 plane has more than 300 seats. So any Boeing-737 must have 300 or fewer seats. Then, all planes acquired by Delta in this batch are Boeing-737. So Delta's new planes are all 737s.\n\nNext, planes either have more than 300 seats or a capacity of 100 passengers. Since Boeing-737s can't have more than 300 seats, they must have 100 passengers. Because the premise says it's one or the other. So any Boeing-737 would fall into the 100 passengers category.\n\nThen, all planes with 100 passengers are scheduled for short-distance flights and produced before 2010. So if a plane has 100 passengers, it must meet both those conditions.\n\nNow, Jake32 is either a Boeing-737 or a Delta-acquired plane. But Delta's acquired planes are all Boeing-737s. So Jake32 is a Boeing-737 in either case. Because if it's acquired by Delta, it's a 737. If it's a 737, then regardless of Delta, it's a 737. So Jake32 must be a 737. Therefore, Jake32 has 100 passengers. Which means it was produced before 2010 and scheduled for short-distance. So the conclusion is true.\n\nWait, but what about the T10 premise? The conclusion is about Jake32, so maybe T10 is a distraction. The key is Jake32's classification. Since Jake32 is either a Boeing-737 or a Delta-acquired plane (which are all Boeing-737s), Jake32 must be a Boeing-737. Therefore, it must have 100 passengers, leading to both conclusions. So the answer should be True.",
+        "content": "Thoughts:\nNo Boeing-737 plane has more than 300 seats.\nAll Delta-acquired planes in this batch are Boeing-737.\nPlanes must have >300 seats or 100 passengers.\nBoeing-737 planes cannot have >300 seats, so they must have 100 passengers.\nAll 100-passenger planes are scheduled for short-distance flights and produced before 2010.\nJake32 is either a Boeing-737 or a Delta-acquired plane.\nDelta-acquired planes are Boeing-737, so Jake32 must be a Boeing-737.\nAs a Boeing-737, Jake32 has 100 passengers.\nTherefore, Jake32 was produced before 2010 and scheduled for short-distance.\nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "No Boeing737 plane has more than 300 seats.",
+            "All Deltaacquired planes in this batch are Boeing",
+            "Planes must have >300 seats or 100 passengers.",
+            "Boeing737 planes cannot have >300 seats.",
+            "they must have 100 passengers.",
+            "All 100passenger planes are scheduled for shortdistance flights and produced before",
+            "Jake32 is either a Boeing737 or a Deltaacquired plane.",
+            "Deltaacquired planes are Boeing",
+            "Jake32 must be a Boeing",
+            "As a Boeing737, Jake32 has 100 passengers.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) no boeing-737 plane has more than 300 seats.",
+                "fol": "¬∃x (boeing737(x) ∧ morethan300seats(x))",
+                "tptp": "~?[X]: (boeing737(X) & morethan300seats(X))"
+            },
+            {
+                "ref": "(2) all of the planes acquired by delta in this batch are boeing-737.",
+                "fol": "∀x (acquiredbydelta(x) → boeing737(x))",
+                "tptp": "![X]: (acquiredbydelta(X) => boeing737(X))"
+            },
+            {
+                "ref": "(3) planes either have more than 300 seats or have a capacity of 100 passengers.",
+                "fol": "∀x (morethan300seats(x) ⊕ capacity100(x))",
+                "tptp": "![X]: (((~(morethan300seats(X)) & (capacity100(X))) | ((morethan300seats(X)) & ~(capacity100(X)))))"
+            },
+            {
+                "ref": "(4) all planes with a capacity of 100 passengers are scheduled for a short-distance flight.",
+                "fol": "∀x (capacity100(x) → shortdistanceflight(x))",
+                "tptp": "![X]: (capacity100(X) => shortdistanceflight(X))"
+            },
+            {
+                "ref": "(5) all planes with a capacity of 100 passengers are produced before 2010.",
+                "fol": "∀x (capacity100(x) → producedbefore2010(x))",
+                "tptp": "![X]: (capacity100(X) => producedbefore2010(X))"
+            },
+            {
+                "ref": "(6) jake32 is either a boeing-737 plane or a plane acquired by delta in this batch.",
+                "fol": "boeing737(jake32) ⊕ acquiredbydelta(jake32)",
+                "tptp": "((~(boeing737(jake32)) & (acquiredbydelta(jake32))) | ((boeing737(jake32)) & ~(acquiredbydelta(jake32))))"
+            },
+            {
+                "ref": "(7) t10 is either both a boeing-737 plane and acquired by delta in this batch, or it is neither.",
+                "fol": "(boeing737(t10) ∧ acquiredbydelta(t10)) ⊕ ¬(boeing737(t10) ∨ acquiredbydelta(t10))",
+                "tptp": "((~((boeing737(t10) & acquiredbydelta(t10))) & (~(boeing737(t10) | acquiredbydelta(t10)))) | (((boeing737(t10) & acquiredbydelta(t10))) & ~(~(boeing737(t10) | acquiredbydelta(t10)))))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(11) jake32 was produced before 2010 and is scheduled for a short-distance flight.",
+            "fol": "(capacity100(jake32) → (producedbefore2010(jake32) ∧ shortdistanceflight(jake32)))",
+            "tptp": "(capacity100(jake32) => (producedbefore2010(jake32) & shortdistanceflight(jake32)))"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) no boeing737 plane has more than 300 seats.",
+                "fol": "¬∃x (boeing737(x) ∧ morethan300seats(x))",
+                "tptp": "~?[X]: (boeing737(X) & morethan300seats(X))"
+            },
+            {
+                "ref": "(2) all deltaacquired planes in this batch are boeing.",
+                "fol": "∀x (acquiredbydelta(x) → boeing737(x))",
+                "tptp": "![X]: (acquiredbydelta(X) => boeing737(X))"
+            },
+            {
+                "ref": "(3) planes must have >300 seats or 100 passengers.",
+                "fol": "∀x (morethan300seats(x) ⊕ capacity100(x))",
+                "tptp": "![X]: (((~(morethan300seats(X)) & (capacity100(X))) | ((morethan300seats(X)) & ~(capacity100(X)))))"
+            },
+            {
+                "ref": "(4) boeing737 planes cannot have >300 seats.",
+                "fol": "¬∃x (boeing737(x) ∧ morethan300seats(x))",
+                "tptp": "~?[X]: (boeing737(X) & morethan300seats(X))"
+            },
+            {
+                "ref": "(5) they must have 100 passengers.",
+                "fol": "∀x (boeing737(x) → capacity100(x))",
+                "tptp": "![X]: (boeing737(X) => capacity100(X))"
+            },
+            {
+                "ref": "(6) all 100passenger planes are scheduled for shortdistance flights and produced before.",
+                "fol": "∀x (capacity100(x) → (shortdistanceflight(x) ∧ producedbefore2010(x)))",
+                "tptp": "![X]: (capacity100(X) => (shortdistanceflight(X) & producedbefore2010(X)))"
+            },
+            {
+                "ref": "(7) jake32 is either a boeing737 or a deltaacquired plane.",
+                "fol": "boeing737(jake32) ⊕ acquiredbydelta(jake32)",
+                "tptp": "((~(boeing737(jake32)) & (acquiredbydelta(jake32))) | ((boeing737(jake32)) & ~(acquiredbydelta(jake32))))"
+            },
+            {
+                "ref": "(8) deltaacquired planes are boeing.",
+                "fol": "∀x (acquiredbydelta(x) → boeing737(x))",
+                "tptp": "![X]: (acquiredbydelta(X) => boeing737(X))"
+            },
+            {
+                "ref": "(9) jake32 must be a boeing.",
+                "fol": "boeing737(jake32)",
+                "tptp": "boeing737(jake32)"
+            },
+            {
+                "ref": "(10) as a boeing737, jake32 has 100 passengers.",
+                "fol": "boeing737(jake32) → capacity100(jake32)",
+                "tptp": "boeing737(jake32) => capacity100(jake32)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "No Boeing737 plane has more than 300 seats.",
+            "All Deltaacquired planes in this batch are Boeing",
+            "Planes must have >300 seats or 100 passengers.",
+            "Boeing737 planes cannot have >300 seats.",
+            "they must have 100 passengers.",
+            "All 100passenger planes are scheduled for shortdistance flights and produced before",
+            "Jake32 is either a Boeing737 or a Deltaacquired plane.",
+            "Deltaacquired planes are Boeing",
+            "Jake32 must be a Boeing",
+            "As a Boeing737, Jake32 has 100 passengers."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "440_1265",
+        "premises": [
+            "All tigers are cats.",
+            "No cats are dogs.",
+            "All Bengal tigers are tigers.",
+            "All huskies are dogs.",
+            "Fido is either a Bengal tiger or a cat."
+        ],
+        "question": [
+            "Fido is not a husky."
+        ],
+        "premises_gt_fol": [
+            "∀x (Tiger(x) → Cat(x))",
+            "∀x (Cat(x) → ¬Dog(x))",
+            "∀x (BengalTiger(x) → Tiger(x))",
+            "∀x (Husky(x) → Dog(x))",
+            "BengalTiger(fido) ⊕ Cat(fido)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "All tigers are cats.",
+            "No cats are dogs.",
+            "All Bengal tigers are tigers.",
+            "All huskies are dogs.",
+            "Fido is either a Bengal tiger or a cat.",
+            "If Fido is a Bengal tiger, then Fido is a tiger (since all Bengal tigers are tigers).",
+            "Tigers are cats (as all tigers are cats).",
+            "Cats are not dogs (no cats are dogs).",
+            "Huskies are dogs (all huskies are dogs).",
+            "If Fido is a cat, then Fido is not a dog.",
+            "In either case (Bengal tiger or cat), Fido is not a dog.",
+            "Since huskies are dogs, Fido cannot be a husky.",
+            "The conclusion follows logically from the premises."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, let's try to figure out if Fido is not a husky based on the given premises. Let me start by listing out all the premises first to understand the relationships.\n\nFirst, all tigers are cats. So if something is a tiger, it's definitely a cat. Then, no cats are dogs. That means cats and dogs are completely separate categories; nothing can be both a cat and a dog. Next, all Bengal tigers are tigers. So Bengal tigers are a subset of tigers, which in turn are a subset of cats. \n\nAll huskies are dogs. So any husky is part of the dog group. Now, Fido is either a Bengal tiger or a cat. The conclusion is that Fido is not a husky. \n\nLet me break down Fido's possible identities. If Fido is a Bengal tiger, then since Bengal tigers are tigers, and tigers are cats, Fido is a cat. Since no cats are dogs, Fido can't be a dog. Huskies are dogs, so if Fido isn't a dog, he can't be a husky. \n\nAlternatively, if Fido is a cat (the other option), then again, cats aren't dogs. So whether Fido is a Bengal tiger or a regular cat, in either case, he's a cat, which means he's not a dog. Since all huskies are dogs, Fido can't be a husky. \n\nWait, but wait. What if Fido was a cat that's also a husky? But the premise says no cats are dogs. Since huskies are dogs, being a husky would make Fido a dog, which contradicts the premise. So in either case, Fido is a cat (either through being a Bengal tiger or directly a cat), and thus can't be a husky. \n\nSo the conclusion that Fido is not a husky should be true.",
+        "content": "Thoughts:\nAll tigers are cats.\nNo cats are dogs.\nAll Bengal tigers are tigers.\nAll huskies are dogs.\nFido is either a Bengal tiger or a cat.\nIf Fido is a Bengal tiger, then Fido is a tiger (since all Bengal tigers are tigers).\nTigers are cats (as all tigers are cats).\nCats are not dogs (no cats are dogs).\nHuskies are dogs (all huskies are dogs).\nIf Fido is a cat, then Fido is not a dog.\nIn either case (Bengal tiger or cat), Fido is not a dog.\nSince huskies are dogs, Fido cannot be a husky.\nThe conclusion follows logically from the premises.\n\nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "All tigers are cats.",
+            "No cats are dogs.",
+            "All Bengal tigers are tigers.",
+            "All huskies are dogs.",
+            "Fido is either a Bengal tiger or a cat.",
+            "If Fido is a Bengal tiger, then Fido is a tiger (since all Bengal tigers are tigers).",
+            "Tigers are cats (as all tigers are cats).",
+            "Cats are not dogs (no cats are dogs).",
+            "Huskies are dogs (all huskies are dogs).",
+            "If Fido is a cat, then Fido is not a dog.",
+            "In either case (Bengal tiger or cat), Fido is not a dog.",
+            "Since huskies are dogs, Fido cannot be a husky.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) all tigers are cats.",
+                "fol": "∀x (tiger(x) → cat(x))",
+                "tptp": "![X]: (tiger(X) => cat(X))"
+            },
+            {
+                "ref": "(2) no cats are dogs.",
+                "fol": "∀x (cat(x) → ¬dog(x))",
+                "tptp": "![X]: (cat(X) => ~dog(X))"
+            },
+            {
+                "ref": "(3) all bengal tigers are tigers.",
+                "fol": "∀x (bengaltiger(x) → tiger(x))",
+                "tptp": "![X]: (bengaltiger(X) => tiger(X))"
+            },
+            {
+                "ref": "(4) all huskies are dogs.",
+                "fol": "∀x (husky(x) → dog(x))",
+                "tptp": "![X]: (husky(X) => dog(X))"
+            },
+            {
+                "ref": "(5) fido is either a bengal tiger or a cat.",
+                "fol": "bengaltiger(fido) ⊕ cat(fido)",
+                "tptp": "((~(bengaltiger(fido)) & (cat(fido))) | ((bengaltiger(fido)) & ~(cat(fido))))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(13) fido is not a husky.",
+            "fol": "¬husky(fido)",
+            "tptp": "~husky(fido)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) all tigers are cats.",
+                "fol": "∀x (tiger(x) → cat(x))",
+                "tptp": "![X]: (tiger(X) => cat(X))"
+            },
+            {
+                "ref": "(2) no cats are dogs.",
+                "fol": "∀x (cat(x) → ¬dog(x))",
+                "tptp": "![X]: (cat(X) => ~dog(X))"
+            },
+            {
+                "ref": "(3) all bengal tigers are tigers.",
+                "fol": "∀x (bengaltiger(x) → tiger(x))",
+                "tptp": "![X]: (bengaltiger(X) => tiger(X))"
+            },
+            {
+                "ref": "(4) all huskies are dogs.",
+                "fol": "∀x (husky(x) → dog(x))",
+                "tptp": "![X]: (husky(X) => dog(X))"
+            },
+            {
+                "ref": "(5) fido is either a bengal tiger or a cat.",
+                "fol": "bengaltiger(fido) ⊕ cat(fido)",
+                "tptp": "((~(bengaltiger(fido)) & (cat(fido))) | ((bengaltiger(fido)) & ~(cat(fido))))"
+            },
+            {
+                "ref": "(6) if fido is a bengal tiger, then fido is a tiger.",
+                "fol": "bengaltiger(fido) → tiger(fido)",
+                "tptp": "bengaltiger(fido) => tiger(fido)"
+            },
+            {
+                "ref": "(7) tigers are cats.",
+                "fol": "∀x (tiger(x) → cat(x))",
+                "tptp": "![X]: (tiger(X) => cat(X))"
+            },
+            {
+                "ref": "(8) cats are not dogs.",
+                "fol": "∀x (cat(x) → ¬dog(x))",
+                "tptp": "![X]: (cat(X) => ~dog(X))"
+            },
+            {
+                "ref": "(9) huskies are dogs.",
+                "fol": "∀x (husky(x) → dog(x))",
+                "tptp": "![X]: (husky(X) => dog(X))"
+            },
+            {
+                "ref": "(10) if fido is a cat, then fido is not a dog.",
+                "fol": "cat(fido) → ¬dog(fido)",
+                "tptp": "cat(fido) => ~dog(fido)"
+            },
+            {
+                "ref": "(11) in either case (bengal tiger or cat), fido is not a dog.",
+                "fol": "(bengaltiger(fido) ⊕ cat(fido)) → ¬dog(fido)",
+                "tptp": "(((~(bengaltiger(fido)) & (cat(fido))) | ((bengaltiger(fido)) & ~(cat(fido))))) => ~dog(fido)"
+            },
+            {
+                "ref": "(12) since huskies are dogs, fido cannot be a husky.",
+                "fol": "husky(fido) → dog(fido)",
+                "tptp": "husky(fido) => dog(fido)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "All tigers are cats.",
+            "No cats are dogs.",
+            "All Bengal tigers are tigers.",
+            "All huskies are dogs.",
+            "Fido is either a Bengal tiger or a cat.",
+            "If Fido is a Bengal tiger, then Fido is a tiger (since all Bengal tigers are tigers).",
+            "Tigers are cats (as all tigers are cats).",
+            "Cats are not dogs (no cats are dogs).",
+            "Huskies are dogs (all huskies are dogs).",
+            "If Fido is a cat, then Fido is not a dog.",
+            "In either case (Bengal tiger or cat), Fido is not a dog.",
+            "Since huskies are dogs, Fido cannot be a husky."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "440_1264",
+        "premises": [
+            "All tigers are cats.",
+            "No cats are dogs.",
+            "All Bengal tigers are tigers.",
+            "All huskies are dogs.",
+            "Fido is either a Bengal tiger or a cat."
+        ],
+        "question": [
+            "Fido is a husky animal."
+        ],
+        "premises_gt_fol": [
+            "∀x (Tiger(x) → Cat(x))",
+            "∀x (Cat(x) → ¬Dog(x))",
+            "∀x (BengalTiger(x) → Tiger(x))",
+            "∀x (Husky(x) → Dog(x))",
+            "BengalTiger(fido) ⊕ Cat(fido)"
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "All tigers are cats.",
+            "No cats are dogs.",
+            "All Bengal tigers are tigers.",
+            "Fido is either a Bengal tiger or a cat.",
+            "If Fido is a Bengal tiger, he is a tiger and thus a cat.",
+            "If Fido is a cat, he is a cat.",
+            "In either case, Fido is a cat.",
+            "Huskies are dogs.",
+            "Therefore, Fido cannot be a husky.",
+            "The conclusion claims Fido is a husky.",
+            "The premises contradict the conclusion."
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, let's see. The premises are:\n\n1. All tigers are cats.\n2. No cats are dogs.\n3. All Bengal tigers are tigers.\n4. All huskies are dogs.\n5. Fido is either a Bengal tiger or a cat.\n\nConclusion: Fido is a husky animal.\n\nI need to determine if the conclusion is true or false based on the premises.\n\nFirst, let's break down the premises. All tigers are cats, so any tiger is also a cat. Then, no cats are dogs, which means cats and dogs are completely separate groups. Bengal tigers are a subset of tigers, so they're also cats. Huskies are a type of dog. \n\nNow, Fido is either a Bengal tiger or a cat. If Fido is a Bengal tiger, then according to premise 3, he's a tiger, and premise 1 makes him a cat. If he's a cat, then he's directly a cat. Either way, Fido is a cat. \n\nPremise 2 says no cats are dogs. Since huskies are dogs (premise 4), and Fido is a cat, he can't be a husky. Because if he were a husky, he'd be a dog, but cats can't be dogs. Therefore, the conclusion that Fido is a husky must be false.\n\nWait, but what if Fido is a Bengal tiger, which is a tiger, thus a cat. So in both cases, Fido is a cat, not a dog. Huskies are dogs, so Fido can't be a husky. Therefore, the conclusion is false.",
+        "content": "Thoughts:\nAll tigers are cats.\nNo cats are dogs.\nAll Bengal tigers are tigers.\nFido is either a Bengal tiger or a cat.\nIf Fido is a Bengal tiger, he is a tiger and thus a cat.\nIf Fido is a cat, he is a cat.\nIn either case, Fido is a cat.\nNo cats are dogs.\nHuskies are dogs.\nTherefore, Fido cannot be a husky.\nThe conclusion claims Fido is a husky.\nThe premises contradict the conclusion.\nAnswer:\n(B) False",
+        "filter_reasoning_steps": [
+            "All tigers are cats.",
+            "No cats are dogs.",
+            "All Bengal tigers are tigers.",
+            "Fido is either a Bengal tiger or a cat.",
+            "If Fido is a Bengal tiger, he is a tiger and thus a cat.",
+            "If Fido is a cat, he is a cat.",
+            "In either case, Fido is a cat.",
+            "Huskies are dogs.",
+            null,
+            null,
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) all tigers are cats.",
+                "fol": "∀x (tiger(x) → cat(x))",
+                "tptp": "![X]: (tiger(X) => cat(X))"
+            },
+            {
+                "ref": "(2) no cats are dogs.",
+                "fol": "∀x (cat(x) → ¬dog(x))",
+                "tptp": "![X]: (cat(X) => ~dog(X))"
+            },
+            {
+                "ref": "(3) all bengal tigers are tigers.",
+                "fol": "∀x (bengaltiger(x) → tiger(x))",
+                "tptp": "![X]: (bengaltiger(X) => tiger(X))"
+            },
+            {
+                "ref": "(4) all huskies are dogs.",
+                "fol": "∀x (husky(x) → dog(x))",
+                "tptp": "![X]: (husky(X) => dog(X))"
+            },
+            {
+                "ref": "(5) fido is either a bengal tiger or a cat.",
+                "fol": "bengaltiger(fido) ⊕ cat(fido)",
+                "tptp": "((~(bengaltiger(fido)) & (cat(fido))) | ((bengaltiger(fido)) & ~(cat(fido))))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(9) fido is a husky animal.",
+            "fol": "husky(fido)",
+            "tptp": "husky(fido)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) all tigers are cats.",
+                "fol": "∀x (tiger(x) → cat(x))",
+                "tptp": "![X]: (tiger(X) => cat(X))"
+            },
+            {
+                "ref": "(2) no cats are dogs.",
+                "fol": "∀x (cat(x) → ¬dog(x))",
+                "tptp": "![X]: (cat(X) => ~dog(X))"
+            },
+            {
+                "ref": "(3) all bengal tigers are tigers.",
+                "fol": "∀x (bengaltiger(x) → tiger(x))",
+                "tptp": "![X]: (bengaltiger(X) => tiger(X))"
+            },
+            {
+                "ref": "(4) fido is either a bengal tiger or a cat.",
+                "fol": "bengaltiger(fido) ⊕ cat(fido)",
+                "tptp": "((~(bengaltiger(fido)) & (cat(fido))) | ((bengaltiger(fido)) & ~(cat(fido))))"
+            },
+            {
+                "ref": "(5) if fido is a bengal tiger, he is a tiger and thus a cat.",
+                "fol": "bengaltiger(fido) → (tiger(fido) ∧ cat(fido))",
+                "tptp": "bengaltiger(fido) => (tiger(fido) & cat(fido))"
+            },
+            {
+                "ref": "(6) if fido is a cat, he is a cat.",
+                "fol": "cat(fido) → cat(fido)",
+                "tptp": "cat(fido) => cat(fido)"
+            },
+            {
+                "ref": "(7) in either case, fido is a cat.",
+                "fol": "(bengaltiger(fido) ⊕ cat(fido)) → cat(fido)",
+                "tptp": "(((~(bengaltiger(fido)) & (cat(fido))) | ((bengaltiger(fido)) & ~(cat(fido))))) => cat(fido)"
+            },
+            {
+                "ref": "(8) huskies are dogs.",
+                "fol": "∀x (husky(x) → dog(x))",
+                "tptp": "![X]: (husky(X) => dog(X))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "All tigers are cats.",
+            "No cats are dogs.",
+            "All Bengal tigers are tigers.",
+            "Fido is either a Bengal tiger or a cat.",
+            "If Fido is a Bengal tiger, he is a tiger and thus a cat.",
+            "If Fido is a cat, he is a cat.",
+            "In either case, Fido is a cat.",
+            "Huskies are dogs."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "428_1217",
+        "premises": [
+            "All devices belonging to the company are connected to Google Home. ",
+            "All devices with the company logo belong to the company. ",
+            "Each device either has the company logo or belongs to employees. ",
+            "All of the devices belonging to employees can be connected to the company's wifi. ",
+            "All of the devices connected to Google Home are controlled by managers. ",
+            "All of the devices that connect to the company's wifi are easy to operate. ",
+            "All of the devices that are easy to operate were produced after a new CTO is appointed. ",
+            "ModelXX was not produced after a new CTO was appointed."
+        ],
+        "question": [
+            "ModelXX is not with the company logo, and managers do not control it."
+        ],
+        "premises_gt_fol": [
+            "∀x ((Devices(x) ∧ BelongTo(x, company)) → ConnectTo(x, googleHome))",
+            "∀x ((Devices(x) ∧ With(x, companyLogo)) → BelongTo(x, company))",
+            "∀x ((Devices(x) → (With(x, companyLogo) ⊕ BelongTo(x, employee)))",
+            "∀x ((Devices(x) ∧ BelongTo(x, employee)) → CanBeConnectedTo(x, wifi))",
+            "∀x ((Devices(x) ∧ ConnectTo(x, googleHome)) → ControlledBy(x, manager))",
+            "∀x ((Devices(x) ∧ CanBeConnectedTo(x, wifi)) → EasyToOperate(x))",
+            "∀x ((Devices(x) ∧ EasyToOperate(x)) → ProducedAfterNewCTOAppointed(x, company))",
+            "Devices(modelXX) ∧ (¬ProducedAfterNewCTOAppointed(modelXX, company))"
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "ModelXX was not produced after a new CTO was appointed.",
+            "If something was not produced after a new CTO, then it is not easy to operate.",
+            "ModelXX is not easy to operate.",
+            "If something is not easy to operate, then it does not connect to the company's wifi.",
+            "ModelXX does not connect to the company's wifi.",
+            "If a device belongs to employees, it can connect to the company's wifi.",
+            "Since ModelXX cannot connect to wifi, it does not belong to employees.",
+            "Each device either has the company logo or belongs to employees.",
+            "ModelXX must have the company logo.",
+            "If a device has the company logo, it belongs to the company.",
+            "Company devices are connected to Google Home.",
+            "Devices connected to Google Home are controlled by managers.",
+            "ModelXX is controlled by managers.",
+            "The conclusion claims ModelXX is not with the company logo and managers do not control it, but premises contradict this."
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, let's tackle this problem step by step. First, I need to understand the premises and see how they lead to the conclusion. The conclusion is that ModelXX is not with the company logo, and managers do not control it.\n\nStarting with the premises:\n\n1. All company devices are connected to Google Home.\n2. Devices with the company logo belong to the company.\n3. Each device either has the company logo or belongs to employees.\n4. All employee devices can connect to the company's wifi.\n5. Devices connected to Google Home are controlled by managers.\n6. Devices on the company's wifi are easy to operate.\n7. Easy to operate devices were produced after the new CTO.\n8. ModelXX was not produced after the new CTO.\n\nSo, the conclusion is two parts: ModelXX doesn't have the company logo, and managers don't control it. Let's break it down.\n\nFirst, ModelXX wasn't produced after the new CTO. From premise 7, if a device is easy to operate, it was produced after the CTO. The contrapositive would be: if a device wasn't produced after the CTO, then it's not easy to operate. Since ModelXX wasn't, it's not easy to operate.\n\nNow, from premise 6, devices on company wifi are easy to operate. Again, contrapositive: if a device isn't easy to operate, it's not on the company wifi. So ModelXX isn't on the wifi. Premise 4 says all employee devices can connect to wifi. So if ModelXX is an employee device, it can connect to wifi. But since it's not on wifi (because not easy to operate), maybe ModelXX isn't an employee device. Wait, premise 3 says each device is either company logo (thus company) or belongs to employees. If ModelXX isn't on wifi, which is required for employee devices, then perhaps ModelXX must be a company device? But wait, company devices are connected to Google Home (premise 1), which are controlled by managers (premise 5). But if ModelXX is a company device, it would be connected to Google Home, hence controlled by managers. But the conclusion says managers don't control it. That seems contradictory.\n\nWait, maybe I'm getting tangled here. Let's retrace. ModelXX isn't easy to operate (because not produced after CTO). Therefore, it's not on the company wifi (from premise 6). Employee devices can connect to wifi (premise 4), but ModelXX can't. So ModelXX can't be an employee device. Therefore, according to premise 3, it must have the company logo (since all devices are either company logo or employee). But if it has the company logo, then it's a company device (premise 2), which connects to Google Home (premise 1) and thus is controlled by managers (premise 5). But the conclusion says ModelXX is not with the company logo and not controlled by managers. So there's a contradiction here.\n\nWait, but that can't be. So where's the mistake? Let me check again. Premise 3 says each device either has the company logo (thus belongs to company) or belongs to employees. So if ModelXX isn't on wifi (because not easy to operate, which is required for employee devices), then ModelXX can't be an employee device. Therefore, it must be a company device (has the logo). But then it's connected to Google Home, so managers control it. But the conclusion says both that it's not with the logo and managers don't control it. So according to premises, that's not possible. Therefore, the conclusion should be false? Wait, but the conclusion claims both parts. Let me check again.\n\nWait, maybe there's another angle. Since ModelXX isn't easy to operate (premise 7 and 8), it's not on wifi (from premise 6). If it's not on wifi, then it's not an employee device (since employee devices can connect to wifi, but perhaps they don't have to? Wait, premise 4 says all employee devices can connect to wifi, but maybe some employee devices are not connected. Wait, no. Premise 4 states \"All of the devices belonging to employees can be connected to the company's wifi.\" Does that mean they are connected, or they have the capability? The wording is \"can be connected\", which might mean they have the ability, not necessarily that they are connected. So maybe an employee device could be not connected, but still belong to an employee. So ModelXX could be an employee device that isn't connected to wifi, but premise 3 says devices are either company logo or employee. So if ModelXX is an employee device, it doesn't have the company logo, and the conclusion's first part (not with company logo) would be true. But if it's an employee device, then it's not connected to Google Home (since company devices are connected to Google Home). But premise 5 says devices connected to Google Home are controlled by managers. So if ModelXX isn't connected to Google Home, then managers don't control it. So in that case, the conclusion would be true: ModelXX is not with company logo (since it's an employee device) and managers don't control it (since it's not connected to Google Home).\n\nBut wait, how do we know if ModelXX is an employee device? Because premise 3 says each device is either company (has logo) or employee. Since ModelXX can't be on wifi (because it's not easy to operate), and employee devices can be on wifi, but not necessarily have to be. So ModelXX could be an employee device that's not connected to wifi. Therefore, it's allowed. Then, since ModelXX is an employee device, it doesn't have the company logo (first part of conclusion is true). Since employee devices are not necessarily connected to Google Home (only company devices are), ModelXX isn't connected to Google Home, so managers don't control it (second part true). Therefore, conclusion is true.\n\nBut wait, the premises: company devices are connected to Google Home. So if ModelXX is a company device (has logo), it's connected to Google Home and thus controlled by managers. But the conclusion says ModelXX is not with logo and not controlled by managers. So if ModelXX is a company device, conclusion is false. If it's an employee device, conclusion is true. So how to determine which it is.\n\nSince ModelXX isn't easy to operate (from premise 7 and 8), it's not on wifi (premise 6). Employee devices can connect to wifi (premise 4), but maybe they don't have to. So if ModelXX is an employee device, it's possible it's not on wifi, but that's allowed. So in that case, ModelXX is an employee device (no logo), not connected to Google Home, so not controlled by managers. Therefore, conclusion holds.\n\nBut how do we know if ModelXX is a company device or employee device? Because premise 3 says every device is either company logo (company) or employee. So if ModelXX is not an employee device, it must have the company logo. But if it's a company device, then it's connected to Google Home (premise 1), which means it's controlled by managers (premise 5). But the conclusion claims it's not controlled by managers, so if ModelXX is a company device, the conclusion is false.\n\nSo the crux is: Is ModelXX a company device or employee device? Since ModelXX is not on wifi (because not easy to operate), but employee devices can be on wifi (but don't have to be). Therefore, ModelXX could be an employee device not on wifi. Therefore, the conclusion would be true. However, another path: if ModelXX were a company device, it would be connected to Google Home (premise 1), hence controlled by managers (premise 5). But since ModelXX wasn't produced after the CTO, which is required for easy to operate devices (premise 7), and company devices are connected to Google Home (premise 1), which are controlled by managers (premise 5). But being connected to Google Home doesn't directly relate to being easy to operate. The easy to operate comes from being on wifi (premise 6). So company devices are on Google Home, which may or may not be easy to operate. Wait, premise 6 says devices connected to wifi are easy to operate, but company devices are connected to Google Home, not necessarily to wifi. So the company devices (with logo) are on Google Home, which are controlled by managers, but their ease of operation isn't addressed unless they're on wifi. So maybe company devices (connected to Google Home) aren't necessarily easy to operate. But ModelXX is not easy to operate because it wasn't produced after the CTO. So if ModelXX is a company device, it's connected to Google Home (controlled by managers), but since it's not easy to operate, which is only required for wifi devices. So perhaps the company devices can be not easy to operate. Therefore, being a company device doesn't conflict with ModelXX not being easy to operate. Wait, but the only way a device is easy to operate is if it's on wifi (premise 6). Company devices are on Google Home, not necessarily on wifi. So their ease of operation isn't determined. But premise 7 says all easy to operate devices were produced after CTO. So if a device is not easy to operate, it could be either not on wifi (company or employee) or on wifi but produced before. But since ModelXX wasn't, it's not easy to operate regardless. So ModelXX could be a company device (connected to Google Home, controlled by managers) that's not easy to operate, which is allowed. But then the conclusion would be false. Alternatively, if ModelXX is an employee device (no logo), not on wifi, so not easy to operate, and not connected to Google Home, so not controlled by managers. Then conclusion is true.\n\nSo the problem is that there are two possibilities, but according to the premises, which is it?\n\nWait, premise 3 says each device is either company (has logo) or employee. ModelXX must be one or the other. If ModelXX is a company device (has logo), then it's connected to Google Home (premise 1), so controlled by managers (premise 5). But conclusion says it's not controlled by managers, which would be false. If ModelXX is an employee device (no logo), then it can connect to wifi (premise 4), but it's not required to. Since ModelXX isn't on wifi (because not easy to operate), it's allowed. Therefore, as an employee device, it's not connected to Google Home, so managers don't control it. Therefore, the conclusion would be true.\n\nBut how do we determine which one ModelXX is? The key is that if ModelXX were a company device (has logo), then it would be connected to Google Home and controlled by managers, but the conclusion says it's not controlled by managers. So the only way for the conclusion to hold is if ModelXX is an employee device (no logo). But how can we prove that?\n\nSince ModelXX is not easy to operate (because not produced after CTO), which means it's not on wifi (premise 6). Now, employee devices can connect to wifi (premise 4), but if ModelXX is an employee device, it's allowed to not be on wifi. Therefore, ModelXX being an employee device is possible. Therefore, the conclusion's two parts (no logo and not controlled by managers) would hold.\n\nBut wait, premise 3 says each device is either company (logo) or employee. So ModelXX must be in one category. If it's an employee device, then the conclusion is correct. If it's a company device, conclusion is wrong. How do we know which?\n\nWait, perhaps there's another angle. If ModelXX is a company device (has logo), then it's connected to Google Home (premise 1), so controlled by managers (premise 5). But according to premise 7, devices connected to Google Home are controlled by managers. So if ModelXX is a company device, then it's controlled by managers, which contradicts the conclusion. Therefore, to make the conclusion true, ModelXX must be an employee device. Therefore, the conclusion would be true.\n\nBut how do we prove that ModelXX is an employee device? Because if it were a company device, it would be connected to Google Home, which would make the second part of the conclusion false. But the premises don't explicitly state that ModelXX isn't a company device. So the argument is that since ModelXX isn't on wifi (because not easy to operate), and employee devices can be on wifi (but not required), perhaps ModelXX is an employee device. However, company devices aren't required to be on wifi either. Company devices are connected to Google Home, which is a different network. So company devices can be not on wifi, but they are connected to Google Home. So if ModelXX were a company device, it would be connected to Google Home, hence controlled by managers, but the conclusion says managers don't control it. Therefore, ModelXX cannot be a company device. Therefore, it must be an employee device (no logo), hence not connected to Google Home, so not controlled by managers. Therefore, conclusion is true.\n\nSo the key steps are:\n\n1. ModelXX wasn't produced after new CTO → Not easy to operate (premise 7).\n2. Not easy to operate → Not connected to company wifi (premise 6).\n3. If ModelXX were a company device (has logo), it's connected to Google Home (premise 1) → controlled by managers (premise 5), which contradicts the conclusion's second part.\n4. Therefore, ModelXX must be an employee device (no logo).\n5. As an employee device, not connected to Google Home → not controlled by managers.\n6. Therefore, conclusion is true.\n\nWait, but step 3 is an assumption. How do we know that ModelXX isn't a company device? Because if it were, the conclusion's second part would be false, but the premises don't directly prevent that. Wait, but the conclusion says \"ModelXX is not with the company logo, and managers do not control it.\" To prove this, we need to show both parts. \n\nThe only way both parts hold is if ModelXX is an employee device. So the reasoning is that if ModelXX were a company device, then it would be controlled by managers (contradicting the conclusion), so it must be an employee device. Therefore, the first part (no logo) is true, and the second part (not controlled by managers) is also true.\n\nBut is there a way to derive this from premises without assuming?\n\nLet me try formalizing:\n\nPremises:\n\n1. All company devices → connected to Google Home. (C → GH)\n2. Devices with logo → company. (L → C)\n3. All devices are either L or belong to employees. (D → L ∨ E)\n4. Employee devices → can connect to wifi. (E → W)\n5. GH connected → controlled by managers. (GH → M)\n6. Wifi connected → easy to operate. (W → EZ)\n7. EZ → produced after CTO. (EZ → PCTO)\n8. ModelXX → ¬PCTO\n\nConclusion: ¬L ∧ ¬M (ModelXX has no logo and isn't controlled by managers)\n\nFrom 8 and 7 contrapositive: ¬PCTO → ¬EZ. So ModelXX is ¬EZ.\n\nFrom 6 contrapositive: ¬EZ → ¬W. So ModelXX is not on wifi.\n\nFrom 4: E → W. Contrapositive: ¬W → ¬E. So ModelXX is not an employee device. Therefore, from premise 3 (D → L ∨ E), and ¬E, ModelXX must be L. So ModelXX has the logo. Then from premise 2, L → C. So ModelXX is a company device. Then from premise 1, C → GH. So ModelXX is connected to GH. From premise 5, GH → M. Therefore, ModelXX is controlled by managers. Therefore, the conclusion ¬L ∧ ¬M is false.\n\nWait, this contradicts the previous reasoning. So what's the mistake here?\n\nWait, premise 4 says \"All of the devices belonging to employees can be connected to the company's wifi.\" Which translates to E → can connect to W. But does \"can be connected\" mean that they are connected, or that they have the capability? If it's capability, then ¬W (not connected) doesn't imply ¬E. Because an employee device can have the capability but not be connected. So premise 4 is E → ◇W (possible to connect), not E → W (must connect). Therefore, the contrapositive of premise 4 isn't ¬W → ¬E. Because \"can be connected\" doesn't mean they are connected. Therefore, the earlier step where ¬W leads to ¬E is incorrect.\n\nThis is a key point. If premise 4 is \"All employee devices can be connected to wifi\" (meaning they have the capability, not necessarily that they are connected), then ¬W (not connected) doesn't imply that the device isn't an employee device. So ModelXX could be an employee device that's not connected to wifi. Therefore, the previous conclusion was wrong because it assumed that ¬W → ¬E, which isn't valid.\n\nTherefore, correcting that:\n\nFrom premise 8 and 7: ModelXX is ¬PCTO → ¬EZ.\n\nFrom premise 6 contrapositive: ¬EZ → ¬W. So ModelXX is not connected to wifi.\n\nBut premise 4 is E → can connect to wifi, which doesn't mean E → W. So ¬W doesn't imply ¬E. So ModelXX could be an employee device that's not connected to wifi. Therefore, from premise 3, since ModelXX is either L or E, and ¬W doesn't affect E, we can't conclude ModelXX is L. Therefore, ModelXX could be E (employee) without logo, and not connected to wifi. Therefore, it's an employee device, so ¬L. Since it's not connected to GH (company devices are), then ¬GH, so ¬M (from premise 5, GH → M). Therefore, conclusion holds.\n\nAlternatively, if ModelXX is L (company device), then it's connected to GH → M, but that contradicts the conclusion's ¬M. But how do we know ModelXX isn't L?\n\nBecause if ModelXX is L, then it's a company device (premise 2), connected to GH (premise 1), thus M (premise 5). But the conclusion says ¬M, so that's impossible. Therefore, ModelXX can't be L, so must be E. Therefore, ¬L holds. And since E devices aren't necessarily connected to GH, then ¬GH → ¬M. So conclusion holds.\n\nBut how do we formally derive that ModelXX is E?\n\nFrom premise 3: every device is L ∨ E. If ModelXX were L, then it's C, connected to GH, hence M. But conclusion requires ¬M, so ModelXX can't be L. Therefore, ModelXX must be E. Therefore, ¬L ∧ ¬M holds.\n\nThis is the key. So formal steps:\n\n1. ModelXX is not PCTO (premise 8).\n2. From premise 7, EZ → PCTO. Contrapositive: ¬PCTO → ¬EZ. Therefore, ModelXX is ¬EZ.\n3. From premise 6, W → EZ. Contrapositive: ¬EZ → ¬W. So ModelXX is ¬W.\n4. Now, premise 4: E → can connect to W (but this doesn't mean E → W, so ¬W doesn't imply ¬E.\n5. Premise 3: ModelXX is L ∨ E.\n6. Assume ModelXX is L. Then from premise 2, L → C. From premise 1, C → GH. From premise 5, GH → M. Therefore, ModelXX is M. But conclusion requires ¬M. Therefore, ModelXX cannot be L.\n7. Therefore, ModelXX must be E (employee device). So ¬L.\n8. As an employee device, is it connected to GH? Premise 1 says all company devices are connected to GH. Employee devices are not mentioned. So E → ¬GH? Not necessarily. But premise 5 says GH → M. So unless ModelXX is connected to GH, it's not M. But since ModelXX is E, it's not a company device, so not necessarily connected to GH. Therefore, ModelXX is not connected to GH → ¬M. Therefore, conclusion's ¬M holds.\n\nThus, the conclusion is true.",
+        "content": "Thoughts:\nModelXX was not produced after a new CTO was appointed.\nIf something was not produced after a new CTO, then it is not easy to operate.\nModelXX is not easy to operate.\nIf something is not easy to operate, then it does not connect to the company's wifi.\nModelXX does not connect to the company's wifi.\nIf a device belongs to employees, it can connect to the company's wifi.\nSince ModelXX cannot connect to wifi, it does not belong to employees.\nEach device either has the company logo or belongs to employees.\nModelXX must have the company logo.\nIf a device has the company logo, it belongs to the company.\nCompany devices are connected to Google Home.\nDevices connected to Google Home are controlled by managers.\nModelXX is controlled by managers.\nThe conclusion claims ModelXX is not with the company logo and managers do not control it, but premises contradict this.\nAnswer:\n(B) False",
+        "filter_reasoning_steps": [
+            "ModelXX was not produced after a new CTO was appointed.",
+            "If something was not produced after a new CTO, then it is not easy to operate.",
+            "ModelXX is not easy to operate.",
+            "If something is not easy to operate, then it does not connect to the company's wifi.",
+            "ModelXX does not connect to the company's wifi.",
+            "If a device belongs to employees, it can connect to the company's wifi.",
+            "Since ModelXX cannot connect to wifi, it does not belong to employees.",
+            "Each device either has the company logo or belongs to employees.",
+            "ModelXX must have the company logo.",
+            "If a device has the company logo, it belongs to the company.",
+            "Company devices are connected to Google Home.",
+            "Devices connected to Google Home are controlled by managers.",
+            "ModelXX is controlled by managers.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) all devices belonging to the company are connected to google home.",
+                "fol": "∀x (belongcompany(x) → connectgooglehome(x))",
+                "tptp": "![X]: (belongcompany(X) => connectgooglehome(X))"
+            },
+            {
+                "ref": "(2) all devices with the company logo belong to the company.",
+                "fol": "∀x (companylogo(x) → belongcompany(x))",
+                "tptp": "![X]: (companylogo(X) => belongcompany(X))"
+            },
+            {
+                "ref": "(3) each device either has the company logo or belongs to employees.",
+                "fol": "∀x (companylogo(x) ⊕ belongemployees(x))",
+                "tptp": "![X]: (((~(companylogo(X)) & (belongemployees(X))) | ((companylogo(X)) & ~(belongemployees(X)))))"
+            },
+            {
+                "ref": "(4) all of the devices belonging to employees can be connected to the company's wifi.",
+                "fol": "∀x (belongemployees(x) → connectcompanywifi(x))",
+                "tptp": "![X]: (belongemployees(X) => connectcompanywifi(X))"
+            },
+            {
+                "ref": "(5) all of the devices connected to google home are controlled by managers.",
+                "fol": "∀x (connectgooglehome(x) → controlledbymanagers(x))",
+                "tptp": "![X]: (connectgooglehome(X) => controlledbymanagers(X))"
+            },
+            {
+                "ref": "(6) all of the devices that connect to the company's wifi are easy to operate.",
+                "fol": "∀x (connectcompanywifi(x) → easytooperate(x))",
+                "tptp": "![X]: (connectcompanywifi(X) => easytooperate(X))"
+            },
+            {
+                "ref": "(7) all of the devices that are easy to operate were produced after a new cto is appointed.",
+                "fol": "∀x (easytooperate(x) → producedaftercto(x))",
+                "tptp": "![X]: (easytooperate(X) => producedaftercto(X))"
+            },
+            {
+                "ref": "(8) modelxx was not produced after a new cto was appointed.",
+                "fol": "¬producedaftercto(modelxx)",
+                "tptp": "~producedaftercto(modelxx)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(14) modelxx is not with the company logo, and managers do not control it.",
+            "fol": "¬companylogo(modelxx) ∧ ¬controlledbymanagers(modelxx)",
+            "tptp": "~companylogo(modelxx) & ~controlledbymanagers(modelxx)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) modelxx was not produced after a new cto was appointed.",
+                "fol": "¬producedaftercto(modelxx)",
+                "tptp": "~producedaftercto(modelxx)"
+            },
+            {
+                "ref": "(2) if something was not produced after a new cto, then it is not easy to operate.",
+                "fol": "∀x (¬producedaftercto(x) → ¬easytooperate(x))",
+                "tptp": "![X]: (~producedaftercto(X) => ~easytooperate(X))"
+            },
+            {
+                "ref": "(3) modelxx is not easy to operate.",
+                "fol": "¬easytooperate(modelxx)",
+                "tptp": "~easytooperate(modelxx)"
+            },
+            {
+                "ref": "(4) if something is not easy to operate, then it does not connect to the company's wifi.",
+                "fol": "∀x (¬easytooperate(x) → ¬connectcompanywifi(x))",
+                "tptp": "![X]: (~easytooperate(X) => ~connectcompanywifi(X))"
+            },
+            {
+                "ref": "(5) modelxx does not connect to the company's wifi.",
+                "fol": "¬connectcompanywifi(modelxx)",
+                "tptp": "~connectcompanywifi(modelxx)"
+            },
+            {
+                "ref": "(6) if a device belongs to employees, it can connect to the company's wifi.",
+                "fol": "∀x (belongemployees(x) → connectcompanywifi(x))",
+                "tptp": "![X]: (belongemployees(X) => connectcompanywifi(X))"
+            },
+            {
+                "ref": "(7) since modelxx cannot connect to wifi, it does not belong to employees.",
+                "fol": "¬connectcompanywifi(modelxx) → ¬belongemployees(modelxx)",
+                "tptp": "~connectcompanywifi(modelxx) => ~belongemployees(modelxx)"
+            },
+            {
+                "ref": "(8) each device either has the company logo or belongs to employees.",
+                "fol": "∀x (companylogo(x) ⊕ belongemployees(x))",
+                "tptp": "![X]: (((~(companylogo(X)) & (belongemployees(X))) | ((companylogo(X)) & ~(belongemployees(X)))))"
+            },
+            {
+                "ref": "(9) modelxx must have the company logo.",
+                "fol": "companylogo(modelxx)",
+                "tptp": "companylogo(modelxx)"
+            },
+            {
+                "ref": "(10) if a device has the company logo, it belongs to the company.",
+                "fol": "∀x (companylogo(x) → belongcompany(x))",
+                "tptp": "![X]: (companylogo(X) => belongcompany(X))"
+            },
+            {
+                "ref": "(11) company devices are connected to google home.",
+                "fol": "∀x (belongcompany(x) → connectgooglehome(x))",
+                "tptp": "![X]: (belongcompany(X) => connectgooglehome(X))"
+            },
+            {
+                "ref": "(12) devices connected to google home are controlled by managers.",
+                "fol": "∀x (connectgooglehome(x) → controlledbymanagers(x))",
+                "tptp": "![X]: (connectgooglehome(X) => controlledbymanagers(X))"
+            },
+            {
+                "ref": "(13) modelxx is controlled by managers.",
+                "fol": "controlledbymanagers(modelxx)",
+                "tptp": "controlledbymanagers(modelxx)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "ModelXX was not produced after a new CTO was appointed.",
+            "If something was not produced after a new CTO, then it is not easy to operate.",
+            "ModelXX is not easy to operate.",
+            "If something is not easy to operate, then it does not connect to the company's wifi.",
+            "ModelXX does not connect to the company's wifi.",
+            "If a device belongs to employees, it can connect to the company's wifi.",
+            "Since ModelXX cannot connect to wifi, it does not belong to employees.",
+            "Each device either has the company logo or belongs to employees.",
+            "ModelXX must have the company logo.",
+            "If a device has the company logo, it belongs to the company.",
+            "Company devices are connected to Google Home.",
+            "Devices connected to Google Home are controlled by managers.",
+            "ModelXX is controlled by managers."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "287_731",
+        "premises": [
+            "Trees are plants. ",
+            "Some living things are trees."
+        ],
+        "question": [
+            "Some living things are plants."
+        ],
+        "premises_gt_fol": [
+            "∀x (Tree(x) → Plant(x))",
+            "∃x ∃y (Living(x) ∧ Living(y) ∧ Tree(x) ∧ Tree(y) ∧ ¬(x=y))"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Trees are plants.",
+            "Some living things are trees.",
+            "All trees are plants implies that those some living things that are trees are also plants.",
+            "Therefore, some living things are plants.",
+            "The conclusion follows from the premises."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, let's tackle this logic problem step by step. The premises given are \"Trees are plants. Some living things are trees.\" And the conclusion to check is \"Some living things are plants.\" \n\nFirst, I need to break down the premises. The first premise states that all trees are plants. That means every member of the category 'trees' is included in the category 'plants'. So, if something is a tree, it's definitely a plant.\n\nThe second premise says that some living things are trees. This is an existential statement—it means there exists at least one living thing that is a tree. Combining this with the first premise, if some living things are trees and all trees are plants, then those particular living things (the ones that are trees) must also be plants. \n\nSo, if some living things are trees, and since all trees are plants, those living things are also plants. Therefore, there must be some living things that are plants. That directly supports the conclusion. \n\nI should check if there are any hidden assumptions or rules I might be missing. The premises are straightforward here. The first is a universal statement, the second is existential. In syllogistic logic, combining a universal and an existential premise in this way typically allows the conclusion that the existential subject (living things) has the predicate (plants) through the middle term (trees). \n\nNo contradictions or additional rules are provided that would affect this inference. So, the conclusion logically follows from the premises. The answer should be true.",
+        "content": "Thoughts:\nTrees are plants.\nSome living things are trees.\nAll trees are plants implies that those some living things that are trees are also plants.\nTherefore, some living things are plants.\nThe conclusion follows from the premises.\nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "Trees are plants.",
+            "Some living things are trees.",
+            "All trees are plants implies that those some living things that are trees are also plants.",
+            null,
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) trees are plants.",
+                "fol": "∀x (tree(x) → plant(x))",
+                "tptp": "![X]: (tree(X) => plant(X))"
+            },
+            {
+                "ref": "(2) some living things are trees.",
+                "fol": "∃x (livingthing(x) ∧ tree(x))",
+                "tptp": "?[X]: (livingthing(X) & tree(X))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(4) some living things are plants.",
+            "fol": "∃x (livingthing(x) ∧ plant(x))",
+            "tptp": "?[X]: (livingthing(X) & plant(X))"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) trees are plants.",
+                "fol": "∀x (tree(x) → plant(x))",
+                "tptp": "![X]: (tree(X) => plant(X))"
+            },
+            {
+                "ref": "(2) some living things are trees.",
+                "fol": "∃x (livingthing(x) ∧ tree(x))",
+                "tptp": "?[X]: (livingthing(X) & tree(X))"
+            },
+            {
+                "ref": "(3) all trees are plants implies that those some living things that are trees are also plants.",
+                "fol": "(∀x (tree(x) → plant(x))) → ∀x ((livingthing(x) ∧ tree(x)) → plant(x))",
+                "tptp": "(![X]: (tree(X) => plant(X))) => ![X]: ((livingthing(X) & tree(X)) => plant(X))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Trees are plants.",
+            "Some living things are trees.",
+            "All trees are plants implies that those some living things that are trees are also plants."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "141_413",
+        "premises": [
+            "TS Leda was a good passenger and cargo vessel.",
+            "TS Leda was a Norwegian vessel that was built with stabilizers.",
+            "Stabilizers are mechanical devices found only on ships with powerful steam turbine engines.",
+            "To be a good passenger and cargo vessel, ships must be quiet and good at sea.",
+            "Some ships that are quiet and good at sea have powerful steam turbine engines.",
+            "Vessels are ships."
+        ],
+        "question": [
+            "TS Leda was quiet and good at sea."
+        ],
+        "premises_gt_fol": [
+            "∀x (TSLeda(x) → ((Passenger(x) ∧ Vessel(x)) ∧ (Cargo(x) ∧ Vessel(x)))",
+            "∀x (TSLeda(x) → (Norweigian(x) ∧ Vessel(x) ∧ Stabilizers(x)))",
+            "∀x (Stabilizers(x) → MechanicalDevice(x) ∧ OnlyOnShips(x) ∧ PowerfulSteamTurbine(x))",
+            "∀x ((Passenger(x) ∧ Vessel(x)) ∧ (Cargo(x) ∧ Vessel(x)) → (Quiet(x) ∧ GoodAt(x, sea)))",
+            "∃x (Quiet(x) ∧ GoodAt(x, sea) ∧ PowerfulSteamTurbine(x))",
+            "∀x (Ship(x) → Vessel(x))"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "TS Leda was a good passenger and cargo vessel.",
+            "To be a good passenger and cargo vessel, ships must be quiet and good at sea.",
+            "If TS Leda meets the criteria of being a good passenger and cargo vessel, it must satisfy the necessary conditions.",
+            "The premise directly states TS Leda was a good passenger and cargo vessel.",
+            "Therefore, TS Leda must have been quiet and good at sea.",
+            "No premises contradict this conclusion."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, let's break this down step by step. The premises are about TS Leda and some conditions related to ships. The conclusion is that TS Leda was quiet and good at sea.\n\nFirst, from the premises: TS Leda was a good passenger and cargo vessel. Another premise says that to be a good passenger and cargo vessel, ships must be quiet and good at sea. So if TS Leda meets the standard of being a good passenger and cargo vessel, then by that rule, it must be quiet and good at sea. That seems straightforward. \n\nBut wait, are there any other conditions or exceptions? Let me check the other premises. TS Leda had stabilizers, which are only found on ships with powerful steam turbine engines. Also, some ships that are quiet and good at sea have powerful steam turbine engines. But the key point here is the direct requirement for being a good passenger and cargo vessel—quiet and good at sea. Since TS Leda is stated to be a good one, that directly implies it meets those two criteria. The presence of stabilizers and steam turbines might be additional information but doesn't contradict the direct link between being a good vessel and being quiet and seaworthy. So the conclusion should follow directly.",
+        "content": "Thoughts:\nTS Leda was a good passenger and cargo vessel.  \nTo be a good passenger and cargo vessel, ships must be quiet and good at sea.  \nIf TS Leda meets the criteria of being a good passenger and cargo vessel, it must satisfy the necessary conditions.  \nThe premise directly states TS Leda was a good passenger and cargo vessel.  \nTherefore, TS Leda must have been quiet and good at sea.  \nNo premises contradict this conclusion.  \nAnswer:  \n(A) True",
+        "filter_reasoning_steps": [
+            "TS Leda was a good passenger and cargo vessel.",
+            "To be a good passenger and cargo vessel, ships must be quiet and good at sea.",
+            "If TS Leda meets the criteria of being a good passenger and cargo vessel, it must satisfy the necessary conditions.",
+            "The premise directly states TS Leda was a good passenger and cargo vessel.",
+            null,
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) ts leda was a good passenger and cargo vessel.",
+                "fol": "goodpassengercargovessel(ts_leda)",
+                "tptp": "goodpassengercargovessel(ts_leda)"
+            },
+            {
+                "ref": "(2) ts leda was a norwegian vessel that was built with stabilizers.",
+                "fol": "norwegian(ts_leda) ∧ builtwithstabilizers(ts_leda)",
+                "tptp": "norwegian(ts_leda) & builtwithstabilizers(ts_leda)"
+            },
+            {
+                "ref": "(3) stabilizers are mechanical devices found only on ships with powerful steam turbine engines.",
+                "fol": "∀x (stabilizers(x) → (ship(x) ∧ powerfulsteamturbineengine(x)))",
+                "tptp": "![X]: (stabilizers(X) => (ship(X) & powerfulsteamturbineengine(X)))"
+            },
+            {
+                "ref": "(4) to be a good passenger and cargo vessel, ships must be quiet and good at sea.",
+                "fol": "∀x ((goodpassengercargovessel(x) → (quiet(x) ∧ goodatsea(x))))",
+                "tptp": "![X]: ((goodpassengercargovessel(X) => (quiet(X) & goodatsea(X))))"
+            },
+            {
+                "ref": "(5) some ships that are quiet and good at sea have powerful steam turbine engines.",
+                "fol": "∃x ((quiet(x) ∧ goodatsea(x)) ∧ powerfulsteamturbineengine(x))",
+                "tptp": "?[X]: ((quiet(X) & goodatsea(X)) & powerfulsteamturbineengine(X))"
+            },
+            {
+                "ref": "(6) vessels are ships.",
+                "fol": "∀x (vessel(x) → ship(x))",
+                "tptp": "![X]: (vessel(X) => ship(X))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(5) ts leda was quiet and good at sea.",
+            "fol": "quiet(ts_leda) ∧ goodatsea(ts_leda)",
+            "tptp": "quiet(ts_leda) & goodatsea(ts_leda)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) ts leda was a good passenger and cargo vessel.",
+                "fol": "goodpassengercargovessel(ts_leda)",
+                "tptp": "goodpassengercargovessel(ts_leda)"
+            },
+            {
+                "ref": "(2) to be a good passenger and cargo vessel, ships must be quiet and good at sea.",
+                "fol": "∀x ((goodpassengercargovessel(x) → (quiet(x) ∧ goodatsea(x))))",
+                "tptp": "![X]: ((goodpassengercargovessel(X) => (quiet(X) & goodatsea(X))))"
+            },
+            {
+                "ref": "(3) if ts leda meets the criteria of being a good passenger and cargo vessel, it must satisfy the necessary conditions.",
+                "fol": "(goodpassengercargovessel(ts_leda) → (quiet(ts_leda) ∧ goodatsea(ts_leda)))",
+                "tptp": "(goodpassengercargovessel(ts_leda) => (quiet(ts_leda) & goodatsea(ts_leda)))"
+            },
+            {
+                "ref": "(4) the premise directly states ts leda was a good passenger and cargo vessel.",
+                "fol": "goodpassengercargovessel(ts_leda)",
+                "tptp": "goodpassengercargovessel(ts_leda)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "TS Leda was a good passenger and cargo vessel.",
+            "To be a good passenger and cargo vessel, ships must be quiet and good at sea.",
+            "If TS Leda meets the criteria of being a good passenger and cargo vessel, it must satisfy the necessary conditions.",
+            "The premise directly states TS Leda was a good passenger and cargo vessel."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "316_792",
+        "premises": [
+            "There are no mansion houses in an urban area.",
+            "All skyscrapers are in urban areas.",
+            "Every creepy haunted house is a mansion house.",
+            "Every terrifying building on Halloween is a creepy haunted house.",
+            "The LaLaurie House is a creepy haunted house or a terrifying building on Halloween."
+        ],
+        "question": [
+            "The LaLaurie House is either a skyscraper or a mansion house."
+        ],
+        "premises_gt_fol": [
+            "∀x (InUrbanArea(x) → ¬MansionHouse(x))",
+            "∀x (Skyscraper(x) → InUrbanArea(x))",
+            "∀x (CreepyHauntedHouse(x) → MansionHouse(x))",
+            "∀x (TerrifyingBuilding(x) ∧ OnHalloween(x) → CreepyHauntedHouse(x))",
+            "CreepyHauntedHouse(laLaurieHouse) ∨ TerrifyingBuilding(laLaurieHouse) ∧ OnHalloween(laLaurieHouse)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "There are no mansion houses in urban areas.",
+            "All skyscrapers are in urban areas.",
+            "Every creepy haunted house is a mansion house.",
+            "Every terrifying building on Halloween is a creepy haunted house.",
+            "The LaLaurie House is a creepy haunted house or a terrifying building on Halloween.",
+            "If the LaLaurie House is a terrifying building on Halloween, it is a creepy haunted house.",
+            "Therefore, the LaLaurie House is a creepy haunted house.",
+            "Since every creepy haunted house is a mansion house, the LaLaurie House is a mansion house.",
+            "Mansion houses cannot be skyscrapers.",
+            "skyscrapers are in urban areas where no mansion houses exist.",
+            "The LaLaurie House must be a mansion house.",
+            "Thus, it satisfies the conclusion of being either a skyscraper or a mansion house."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, let's start breaking this down. The premises are about different types of buildings and their locations. The conclusion is that the LaLaurie House is either a skyscraper or a mansion house.\n\nFirst, the first premise says there are no mansion houses in urban areas. Wait, no, actually, it says \"There are no mansion houses in an urban area.\" So urban areas don't have any mansion houses. Then the second premise states that all skyscrapers are in urban areas. So skyscrapers are only found in urban areas.\n\nNext, every creepy haunted house is a mansion house. So if something is a creepy haunted house, it must be a mansion. Then, every terrifying building on Halloween is a creepy haunted house. So terrifying buildings on Halloween are a subset of creepy haunted houses, which in turn are mansion houses.\n\nThe LaLaurie House is either a creepy haunted house or a terrifying building on Halloween. Let's parse that. If it's a terrifying building on Halloween, then by premise 4, it's a creepy haunted house. So regardless of which part of the \"or\" it is, the LaLaurie House is a creepy haunted house. Because even if it's a terrifying building, that makes it a creepy haunted house. Then, by premise 3, every creepy haunted house is a mansion house. So LaLaurie House must be a mansion house.\n\nNow, the conclusion says it's either a skyscraper or a mansion. Since we've established it's a mansion house, the conclusion is true. But wait, need to check if being a mansion house conflicts with other premises. The first premise says no mansion houses are in urban areas. Skyscrapers are in urban areas. So a mansion house can't be a skyscraper, because skyscrapers are in urban areas and mansions aren't. Therefore, LaLaurie House is a mansion house, which satisfies the \"or\" condition. So conclusion is true.",
+        "content": "Thoughts:\nThere are no mansion houses in urban areas. \nAll skyscrapers are in urban areas. \nEvery creepy haunted house is a mansion house. \nEvery terrifying building on Halloween is a creepy haunted house. \nThe LaLaurie House is a creepy haunted house or a terrifying building on Halloween. \nIf the LaLaurie House is a terrifying building on Halloween, it is a creepy haunted house. \nTherefore, the LaLaurie House is a creepy haunted house. \nSince every creepy haunted house is a mansion house, the LaLaurie House is a mansion house. \nMansion houses cannot be skyscrapers because skyscrapers are in urban areas where no mansion houses exist. \nThe LaLaurie House must be a mansion house. \nThus, it satisfies the conclusion of being either a skyscraper or a mansion house. \nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "There are no mansion houses in urban areas.",
+            "All skyscrapers are in urban areas.",
+            "Every creepy haunted house is a mansion house.",
+            "Every terrifying building on Halloween is a creepy haunted house.",
+            "The LaLaurie House is a creepy haunted house or a terrifying building on Halloween.",
+            "If the LaLaurie House is a terrifying building on Halloween, it is a creepy haunted house.",
+            null,
+            "Since every creepy haunted house is a mansion house, the LaLaurie House is a mansion house.",
+            "Mansion houses cannot be skyscrapers.",
+            "skyscrapers are in urban areas where no mansion houses exist.",
+            "The LaLaurie House must be a mansion house.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) there are no mansion houses in an urban area.",
+                "fol": "¬∃x (mansionhouse(x) ∧ urbanarea(x))",
+                "tptp": "~?[X]: (mansionhouse(X) & urbanarea(X))"
+            },
+            {
+                "ref": "(2) all skyscrapers are in urban areas.",
+                "fol": "∀x (skyscraper(x) → urbanarea(x))",
+                "tptp": "![X]: (skyscraper(X) => urbanarea(X))"
+            },
+            {
+                "ref": "(3) every creepy haunted house is a mansion house.",
+                "fol": "∀x (creepyhauntedhouse(x) → mansionhouse(x))",
+                "tptp": "![X]: (creepyhauntedhouse(X) => mansionhouse(X))"
+            },
+            {
+                "ref": "(4) every terrifying building on halloween is a creepy haunted house.",
+                "fol": "∀x (terrifyingbuildingonhalloween(x) → creepyhauntedhouse(x))",
+                "tptp": "![X]: (terrifyingbuildingonhalloween(X) => creepyhauntedhouse(X))"
+            },
+            {
+                "ref": "(5) the lalaurie house is a creepy haunted house or a terrifying building on halloween.",
+                "fol": "creepyhauntedhouse(lalauriehouse) ∨ terrifyingbuildingonhalloween(lalauriehouse)",
+                "tptp": "creepyhauntedhouse(lalauriehouse) | terrifyingbuildingonhalloween(lalauriehouse)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(11) the lalaurie house is either a skyscraper or a mansion house.",
+            "fol": "skyscraper(lalauriehouse) ∨ mansionhouse(lalauriehouse)",
+            "tptp": "skyscraper(lalauriehouse) | mansionhouse(lalauriehouse)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) there are no mansion houses in urban areas.",
+                "fol": "¬∃x (mansionhouse(x) ∧ urbanarea(x))",
+                "tptp": "~?[X]: (mansionhouse(X) & urbanarea(X))"
+            },
+            {
+                "ref": "(2) all skyscrapers are in urban areas.",
+                "fol": "∀x (skyscraper(x) → urbanarea(x))",
+                "tptp": "![X]: (skyscraper(X) => urbanarea(X))"
+            },
+            {
+                "ref": "(3) every creepy haunted house is a mansion house.",
+                "fol": "∀x (creepyhauntedhouse(x) → mansionhouse(x))",
+                "tptp": "![X]: (creepyhauntedhouse(X) => mansionhouse(X))"
+            },
+            {
+                "ref": "(4) every terrifying building on halloween is a creepy haunted house.",
+                "fol": "∀x (terrifyingbuildingonhalloween(x) → creepyhauntedhouse(x))",
+                "tptp": "![X]: (terrifyingbuildingonhalloween(X) => creepyhauntedhouse(X))"
+            },
+            {
+                "ref": "(5) the lalaurie house is a creepy haunted house or a terrifying building on halloween.",
+                "fol": "creepyhauntedhouse(lalauriehouse) ∨ terrifyingbuildingonhalloween(lalauriehouse)",
+                "tptp": "creepyhauntedhouse(lalauriehouse) | terrifyingbuildingonhalloween(lalauriehouse)"
+            },
+            {
+                "ref": "(6) if the lalaurie house is a terrifying building on halloween, it is a creepy haunted house.",
+                "fol": "terrifyingbuildingonhalloween(lalauriehouse) → creepyhauntedhouse(lalauriehouse)",
+                "tptp": "terrifyingbuildingonhalloween(lalauriehouse) => creepyhauntedhouse(lalauriehouse)"
+            },
+            {
+                "ref": "(7) since every creepy haunted house is a mansion house, the lalaurie house is a mansion house.",
+                "fol": "creepyhauntedhouse(lalauriehouse) → mansionhouse(lalauriehouse)",
+                "tptp": "creepyhauntedhouse(lalauriehouse) => mansionhouse(lalauriehouse)"
+            },
+            {
+                "ref": "(8) mansion houses cannot be skyscrapers.",
+                "fol": "¬∃x (mansionhouse(x) ∧ skyscraper(x))",
+                "tptp": "~?[X]: (mansionhouse(X) & skyscraper(X))"
+            },
+            {
+                "ref": "(9) skyscrapers are in urban areas where no mansion houses exist.",
+                "fol": "∀x (skyscraper(x) → (urbanarea(x) ∧ ¬mansionhouse(x)))",
+                "tptp": "![X]: (skyscraper(X) => (urbanarea(X) & ~mansionhouse(X)))"
+            },
+            {
+                "ref": "(10) the lalaurie house must be a mansion house.",
+                "fol": "mansionhouse(lalauriehouse)",
+                "tptp": "mansionhouse(lalauriehouse)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "There are no mansion houses in urban areas.",
+            "All skyscrapers are in urban areas.",
+            "Every creepy haunted house is a mansion house.",
+            "Every terrifying building on Halloween is a creepy haunted house.",
+            "The LaLaurie House is a creepy haunted house or a terrifying building on Halloween.",
+            "If the LaLaurie House is a terrifying building on Halloween, it is a creepy haunted house.",
+            "Since every creepy haunted house is a mansion house, the LaLaurie House is a mansion house.",
+            "Mansion houses cannot be skyscrapers.",
+            "skyscrapers are in urban areas where no mansion houses exist.",
+            "The LaLaurie House must be a mansion house."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "95_288",
+        "premises": [
+            "DI Ray is a police procedural television series.",
+            "DI Ray was created and written by Maya Sondhi.",
+            "DI Ray was produced by Jed Mercurio.",
+            "Maya Sondhi and Jed Mercurio are both British."
+        ],
+        "question": [
+            "Some Brit produced a television series."
+        ],
+        "premises_gt_fol": [
+            "TelevisionSeries(dIRay) ∧ PoliceProcedural(dIRay)",
+            "Creates(maya, dIRay) ∧ Writes(maya, dIRay)",
+            "Produces(jed, dIRay)",
+            "British(maya) ∧ British(jed) "
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "DI Ray is a police procedural television series.",
+            "DI Ray was produced by Jed Mercurio.",
+            "Jed Mercurio is British.",
+            "A British person (Jed Mercurio) produced a television series (DI Ray).",
+            "The conclusion states \"Some Brit produced a television series.\"",
+            "The premises confirm Jed Mercurio, a Brit, produced DI Ray, a TV series.",
+            "Therefore, the conclusion is supported by the premises."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, let's tackle this problem step by step. First, I need to look at the premises given and see how they lead to the conclusion. The conclusion is \"Some Brit produced a television series.\" \n\nThe premises mention that DI Ray is a police procedural television series. It was created and written by Maya Sondhi and produced by Jed Mercurio. Both Maya Sondhi and Jed Mercurio are British.\n\nSo, the key points here are: DI Ray is a TV series. Jed Mercurio produced it, and he's British. Therefore, since Jed Mercurio is a Brit who produced DI Ray, which is a TV series, that directly supports the conclusion. Even if there were other producers, the fact that at least one Brit (Jed Mercurio) produced a TV series is enough. Maya Sondhi is also British, but her role is as creator and writer, not producer, so that might not directly relate to the production part. However, the premise explicitly states that Jed Mercurio was the producer, which directly ties to the conclusion about someone British producing a TV series. Therefore, the conclusion should be true.",
+        "content": "Thoughts:\nDI Ray is a police procedural television series.\nDI Ray was produced by Jed Mercurio.\nJed Mercurio is British.\nA British person (Jed Mercurio) produced a television series (DI Ray).\nThe conclusion states \"Some Brit produced a television series.\"\nThe premises confirm Jed Mercurio, a Brit, produced DI Ray, a TV series.\nTherefore, the conclusion is supported by the premises.\nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "DI Ray is a police procedural television series.",
+            "DI Ray was produced by Jed Mercurio.",
+            "Jed Mercurio is British.",
+            "A British person (Jed Mercurio) produced a television series (DI Ray).",
+            null,
+            null,
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) di ray is a police procedural television series.",
+                "fol": "policeprocedural(diray) ∧ televisionseries(diray)",
+                "tptp": "policeprocedural(diray) & televisionseries(diray)"
+            },
+            {
+                "ref": "(2) di ray was created and written by maya sondhi.",
+                "fol": "created(diray, mayasondhi) ∧ written(diray, mayasondhi)",
+                "tptp": "created(diray, mayasondhi) & written(diray, mayasondhi)"
+            },
+            {
+                "ref": "(3) di ray was produced by jed mercurio.",
+                "fol": "produced(diray, jedmercurio)",
+                "tptp": "produced(diray, jedmercurio)"
+            },
+            {
+                "ref": "(4) maya sondhi and jed mercurio are both british.",
+                "fol": "british(mayasondhi) ∧ british(jedmercurio)",
+                "tptp": "british(mayasondhi) & british(jedmercurio)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(5) some brit produced a television series.",
+            "fol": "∃x ∃y (british(x) ∧ produced(y, x) ∧ televisionseries(y))",
+            "tptp": "?[X]: ?[Y]: (british(X) & produced(Y, X) & televisionseries(Y))"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) di ray is a police procedural television series.",
+                "fol": "policeprocedural(diray) ∧ televisionseries(diray)",
+                "tptp": "policeprocedural(diray) & televisionseries(diray)"
+            },
+            {
+                "ref": "(2) di ray was produced by jed mercurio.",
+                "fol": "produced(diray, jedmercurio)",
+                "tptp": "produced(diray, jedmercurio)"
+            },
+            {
+                "ref": "(3) jed mercurio is british.",
+                "fol": "british(jedmercurio)",
+                "tptp": "british(jedmercurio)"
+            },
+            {
+                "ref": "(4) a british person (jed mercurio) produced a television series (di ray).",
+                "fol": "british(jedmercurio) ∧ produced(diray, jedmercurio) ∧ televisionseries(diray)",
+                "tptp": "british(jedmercurio) & produced(diray, jedmercurio) & televisionseries(diray)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "DI Ray is a police procedural television series.",
+            "DI Ray was produced by Jed Mercurio.",
+            "Jed Mercurio is British.",
+            "A British person (Jed Mercurio) produced a television series (DI Ray)."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "278_722",
+        "premises": [
+            "The bottle not falling is either standing upright or toppled over. ",
+            "The bottle not falling is not standing upright."
+        ],
+        "question": [
+            "The bottle not falling is toppled over."
+        ],
+        "premises_gt_fol": [
+            "¬Falling(bottle) → (Upright(bottle) ⊕ ToppledOver(bottle))",
+            "¬Falling(bottle) → ¬Upright(bottle)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "The bottle not falling is either standing upright or toppled over.",
+            "The bottle not falling is not standing upright.",
+            "If it is not standing upright, the remaining possibility is toppled over.",
+            "The conclusion matches the remaining possibility."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "Okay, let's try to figure this out. The premises are about a bottle that isn't falling. The first premise says that if the bottle isn't falling, it's either standing upright or toppled over. So those are the two possibilities. The second premise states that the bottle not falling is not standing upright.\n\nSo, from the first premise, the bottle must be in one of those two states. But the second premise eliminates one of them—standing upright. If it's not upright, then the only other option left is toppled over. That seems straightforward. The conclusion is exactly that the bottle is toppled over. Since the premises give an exclusive or (either/or) and rule out one option, the conclusion must be true. I don't see any other possibilities here. The logic follows directly.",
+        "content": "Thoughts:\nThe bottle not falling is either standing upright or toppled over.\nThe bottle not falling is not standing upright.\nIf it is not standing upright, the remaining possibility is toppled over.\nThe conclusion matches the remaining possibility.\nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "The bottle not falling is either standing upright or toppled over.",
+            "The bottle not falling is not standing upright.",
+            "If it is not standing upright, the remaining possibility is toppled over.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) the bottle not falling is either standing upright or toppled over.",
+                "fol": "¬falling(bottle) ↔ (upright(bottle) ⊕ toppled(bottle))",
+                "tptp": "~falling(bottle) <=> (((~(upright(bottle)) & (toppled(bottle))) | ((upright(bottle)) & ~(toppled(bottle)))))"
+            },
+            {
+                "ref": "(2) the bottle not falling is not standing upright.",
+                "fol": "¬falling(bottle) ∧ ¬upright(bottle)",
+                "tptp": "~falling(bottle) & ~upright(bottle)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(4) the bottle not falling is toppled over.",
+            "fol": "¬falling(bottle) ∧ toppled(bottle)",
+            "tptp": "~falling(bottle) & toppled(bottle)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) the bottle not falling is either standing upright or toppled over.",
+                "fol": "¬falling(bottle) ↔ (upright(bottle) ⊕ toppled(bottle))",
+                "tptp": "~falling(bottle) <=> (((~(upright(bottle)) & (toppled(bottle))) | ((upright(bottle)) & ~(toppled(bottle)))))"
+            },
+            {
+                "ref": "(2) the bottle not falling is not standing upright.",
+                "fol": "¬falling(bottle) ∧ ¬upright(bottle)",
+                "tptp": "~falling(bottle) & ~upright(bottle)"
+            },
+            {
+                "ref": "(3) if it is not standing upright, the remaining possibility is toppled over.",
+                "fol": "¬upright(bottle) → toppled(bottle)",
+                "tptp": "~upright(bottle) => toppled(bottle)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "The bottle not falling is either standing upright or toppled over.",
+            "The bottle not falling is not standing upright.",
+            "If it is not standing upright, the remaining possibility is toppled over."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True"
+        ]
+    }
+]

@@ -1,0 +1,1810 @@
+[
+    {
+        "true_fol": "∀x ((Jompus(x) ∨ Impus(x) ∨ Lempus(x)) → Tumpus(x))",
+        "pred_fol": "∀x ((jompus(x) ∨ impus(x) ∨ lempus(x)) → tumpus(x))"
+    },
+    {
+        "true_fol": "∀x (Shumpus(x) → Lorpus(x))",
+        "pred_fol": "∀x (shumpus(x) → lorpus(x))"
+    },
+    {
+        "true_fol": "∀x (Vumpus(x) → (Brimpus(x) ∧ Shumpus(x) ∧ Gorpus(x)))",
+        "pred_fol": "∀x (vumpus(x) → (brimpus(x) ∧ shumpus(x) ∧ gorpus(x)))"
+    },
+    {
+        "true_fol": "∀x ((Yumpus(x) ∧ Brimpus(x) ∧ Dumpus(x)) → Sterpus(x))",
+        "pred_fol": "∀x ((yumpus(x) ∧ brimpus(x) ∧ dumpus(x)) → sterpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Yumpus(x) ∧ Brimpus(x) ∧ Dumpus(x)) → (Grimpus(x) ∧ Jompus(x) ∧ Numpus(x)))",
+        "pred_fol": "∀x ((yumpus(x) ∧ brimpus(x) ∧ dumpus(x)) → (grimpus(x) ∧ jompus(x) ∧ numpus(x)))"
+    },
+    {
+        "true_fol": "∀x ((Yumpus(x) ∧ Shumpus(x) ∧ Zumpus(x)) → Sterpus(x))",
+        "pred_fol": "∀x ((yumpus(x) ∧ shumpus(x) ∧ zumpus(x)) → sterpus(x))"
+    },
+    {
+        "true_fol": "∀x (Numpus(x) → (Yumpus(x) ∧ Vumpus(x) ∧ Tumpus(x)))",
+        "pred_fol": "∀x (numpus(x) → (yumpus(x) ∧ vumpus(x) ∧ tumpus(x)))"
+    },
+    {
+        "true_fol": "∀x (Yumpus(x) → (Grimpus(x) ∧ Wumpus(x) ∧ Lempus(x)))",
+        "pred_fol": "∀x (yumpus(x) → (grimpus(x) ∧ wumpus(x) ∧ lempus(x)))"
+    },
+    {
+        "true_fol": "∀x ((Rompus(x) ∨ Lempus(x) ∨ Dumpus(x)) → Lorpus(x))",
+        "pred_fol": "∀x ((rompus(x) ∨ lempus(x) ∨ dumpus(x)) → lorpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Numpus(x) ∧ Jompus(x) ∧ Lempus(x)) → Lorpus(x))",
+        "pred_fol": "∀x ((numpus(x) ∧ jompus(x) ∧ lempus(x)) → lorpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Numpus(x) ∧ Vumpus(x) ∧ Sterpus(x)) → (Dumpus(x) ∧ Wumpus(x) ∧ Yumpus(x)))",
+        "pred_fol": "∀x ((numpus(x) ∧ vumpus(x) ∧ sterpus(x)) → (dumpus(x) ∧ wumpus(x) ∧ yumpus(x)))"
+    },
+    {
+        "true_fol": "∀x ((Brimpus(x) ∨ Grimpus(x) ∨ Zumpus(x)) → Lorpus(x))",
+        "pred_fol": "∀x ((brimpus(x) ∨ grimpus(x) ∨ zumpus(x)) → lorpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Lempus(x) ∨ Dumpus(x) ∨ Brimpus(x)) → Numpus(x))",
+        "pred_fol": "∀x ((lempus(x) ∨ dumpus(x) ∨ brimpus(x)) → numpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Zumpus(x) ∧ Yumpus(x) ∧ Shumpus(x)) → Lorpus(x))",
+        "pred_fol": "∀x ((zumpus(x) ∧ yumpus(x) ∧ shumpus(x)) → lorpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Zumpus(x) ∧ Brimpus(x) ∧ Lempus(x)) → Numpus(x))",
+        "pred_fol": "∀x ((zumpus(x) ∧ brimpus(x) ∧ lempus(x)) → numpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Gorpus(x) ∨ Sterpus(x) ∨ Lempus(x)) → Shumpus(x))",
+        "pred_fol": "∀x ((gorpus(x) ∨ sterpus(x) ∨ lempus(x)) → shumpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Gorpus(x) ∨ Sterpus(x) ∨ Lempus(x)) → Impus(x))",
+        "pred_fol": "∀x ((gorpus(x) ∨ sterpus(x) ∨ lempus(x)) → impus(x))"
+    },
+    {
+        "true_fol": "Numpus(alex) ∧ Grimpus(alex) ∧ Wumpus(alex)",
+        "pred_fol": "numpus(alex) ∧ grimpus(alex) ∧ wumpus(alex)"
+    },
+    {
+        "true_fol": "∀x ((Vumpus(x) ∨ Jompus(x) ∨ Lorpus(x)) → Wumpus(x))",
+        "pred_fol": "∀x ((vumpus(x) ∨ jompus(x) ∨ lorpus(x)) → wumpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Vumpus(x) ∨ Jompus(x) ∨ Lorpus(x)) → (Sterpus(x) ∧ Lempus(x) ∧ Zumpus(x)))",
+        "pred_fol": "∀x ((vumpus(x) ∨ jompus(x) ∨ lorpus(x)) → (sterpus(x) ∧ lempus(x) ∧ zumpus(x)))"
+    },
+    {
+        "true_fol": "∀x (Lempus(x) → (Zumpus(x) ∧ Numpus(x) ∧ Tumpus(x)))",
+        "pred_fol": "∀x (lempus(x) → (zumpus(x) ∧ numpus(x) ∧ tumpus(x)))"
+    },
+    {
+        "true_fol": "∀x ((Impus(x) ∨ Sterpus(x)) → Jompus(x))",
+        "pred_fol": "∀x ((impus(x) ∨ sterpus(x)) → jompus(x))"
+    },
+    {
+        "true_fol": "∀x ((Yumpus(x) ∨ Lempus(x)) → Vumpus(x))",
+        "pred_fol": "∀x ((yumpus(x) ∨ lempus(x)) → vumpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Impus(x) ∨ Sterpus(x)) → Vumpus(x))",
+        "pred_fol": "∀x ((impus(x) ∨ sterpus(x)) → vumpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Impus(x) ∧ Jompus(x) ∧ Numpus(x)) → Zumpus(x))",
+        "pred_fol": "∀x ((impus(x) ∧ jompus(x) ∧ numpus(x)) → zumpus(x))"
+    },
+    {
+        "true_fol": "∀x (Grimpus(x) → (Lempus(x) ∧ Brimpus(x) ∧ Gorpus(x)))",
+        "pred_fol": "∀x (grimpus(x) → (lempus(x) ∧ brimpus(x) ∧ gorpus(x)))"
+    },
+    {
+        "true_fol": "∀x ((Impus(x) ∧ Brimpus(x) ∧ Sterpus(x)) → (Lempus(x) ∧ Grimpus(x) ∧ Lorpus(x)))",
+        "pred_fol": "∀x ((impus(x) ∧ brimpus(x) ∧ sterpus(x)) → (lempus(x) ∧ grimpus(x) ∧ lorpus(x)))"
+    },
+    {
+        "true_fol": "∀x ((Sterpus(x) ∧ Numpus(x) ∧ Rompus(x)) → Yumpus(x))",
+        "pred_fol": "∀x ((sterpus(x) ∧ numpus(x) ∧ rompus(x)) → yumpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Sterpus(x) ∧ Brimpus(x) ∧ Wumpus(x)) → Jompus(x))",
+        "pred_fol": "∀x ((sterpus(x) ∧ brimpus(x) ∧ wumpus(x)) → jompus(x))"
+    },
+    {
+        "true_fol": "∀x (Dumpus(x) → (Shumpus(x) ∧ Vumpus(x) ∧ Lorpus(x)))",
+        "pred_fol": "∀x (dumpus(x) → (shumpus(x) ∧ vumpus(x) ∧ lorpus(x)))"
+    },
+    {
+        "true_fol": "∀x ((Gorpus(x) ∨ Rompus(x)) → Dumpus(x))",
+        "pred_fol": "∀x ((gorpus(x) ∨ rompus(x)) → dumpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Gorpus(x) ∨ Rompus(x)) → Vumpus(x))",
+        "pred_fol": "∀x ((gorpus(x) ∨ rompus(x)) → vumpus(x))"
+    },
+    {
+        "true_fol": "¬Brimpus(sam)",
+        "pred_fol": "¬brimpus(sam)"
+    },
+    {
+        "true_fol": "∀x ((Jompus(x) ∨ Numpus(x) ∨ Lorpus(x)) → Rompus(x))",
+        "pred_fol": "∀x ((jompus(x) ∨ numpus(x) ∨ lorpus(x)) → rompus(x))"
+    },
+    {
+        "true_fol": "∀x (Tumpus(x) → (Lorpus(x) ∧ Gorpus(x) ∧ Zumpus(x)))",
+        "pred_fol": "∀x (tumpus(x) → (lorpus(x) ∧ gorpus(x) ∧ zumpus(x)))"
+    },
+    {
+        "true_fol": "∀x ((Vumpus(x) ∨ Lorpus(x) ∨ Impus(x)) → Wumpus(x))",
+        "pred_fol": "∀x ((vumpus(x) ∨ lorpus(x) ∨ impus(x)) → wumpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Lempus(x) ∨ Dumpus(x)) → Sterpus(x))",
+        "pred_fol": "∀x ((lempus(x) ∨ dumpus(x)) → sterpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Lempus(x) ∨ Dumpus(x)) → Grimpus(x))",
+        "pred_fol": "∀x ((lempus(x) ∨ dumpus(x)) → grimpus(x))"
+    },
+    {
+        "true_fol": "¬Sterpus(alex)",
+        "pred_fol": "¬sterpus(alex)"
+    },
+    {
+        "true_fol": "∀x ((Brimpus(x) ∨ Shumpus(x)) → Rompus(x))",
+        "pred_fol": "∀x ((brimpus(x) ∨ shumpus(x)) → rompus(x))"
+    },
+    {
+        "true_fol": "∀x ((Brimpus(x) ∨ Shumpus(x)) → Lorpus(x))",
+        "pred_fol": "∀x ((brimpus(x) ∨ shumpus(x)) → lorpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Grimpus(x) ∨ Wumpus(x)) → Rompus(x))",
+        "pred_fol": "∀x ((grimpus(x) ∨ wumpus(x)) → rompus(x))"
+    },
+    {
+        "true_fol": "∀x ((Lorpus(x) ∨ Yumpus(x)) → Sterpus(x))",
+        "pred_fol": "∀x ((lorpus(x) ∨ yumpus(x)) → sterpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Brimpus(x) ∨ Numpus(x)) → Shumpus(x))",
+        "pred_fol": "∀x ((brimpus(x) ∨ numpus(x)) → shumpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Lorpus(x) ∨ Yumpus(x)) → Shumpus(x))",
+        "pred_fol": "∀x ((lorpus(x) ∨ yumpus(x)) → shumpus(x))"
+    },
+    {
+        "true_fol": "∀x (Rompus(x) → Tumpus(x))",
+        "pred_fol": "∀x (rompus(x) → tumpus(x))"
+    },
+    {
+        "true_fol": "∀x (Dumpus(x) → (Rompus(x) ∧ Grimpus(x) ∧ Brimpus(x)))",
+        "pred_fol": "∀x (dumpus(x) → (rompus(x) ∧ grimpus(x) ∧ brimpus(x)))"
+    },
+    {
+        "true_fol": "∀x ((Impus(x) ∨ Sterpus(x) ∨ Numpus(x)) → Lempus(x))",
+        "pred_fol": "∀x ((impus(x) ∨ sterpus(x) ∨ numpus(x)) → lempus(x))"
+    },
+    {
+        "true_fol": "∀x ((Zumpus(x) ∨ Wumpus(x) ∨ Rompus(x)) → Brimpus(x))",
+        "pred_fol": "∀x ((zumpus(x) ∨ wumpus(x) ∨ rompus(x)) → brimpus(x))"
+    },
+    {
+        "true_fol": "∀x (Lempus(x) → Yumpus(x))",
+        "pred_fol": "∀x (lempus(x) → yumpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Zumpus(x) ∨ Wumpus(x) ∨ Rompus(x)) → Tumpus(x))",
+        "pred_fol": "∀x ((zumpus(x) ∨ wumpus(x) ∨ rompus(x)) → tumpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Yumpus(x) ∨ Dumpus(x)) → Shumpus(x))",
+        "pred_fol": "∀x ((yumpus(x) ∨ dumpus(x)) → shumpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Yumpus(x) ∨ Dumpus(x)) → Wumpus(x))",
+        "pred_fol": "∀x ((yumpus(x) ∨ dumpus(x)) → wumpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Vumpus(x) ∨ Brimpus(x)) → Wumpus(x))",
+        "pred_fol": "∀x ((vumpus(x) ∨ brimpus(x)) → wumpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Lorpus(x) ∨ Numpus(x) ∨ Sterpus(x)) → Yumpus(x))",
+        "pred_fol": "∀x ((lorpus(x) ∨ numpus(x) ∨ sterpus(x)) → yumpus(x))"
+    },
+    {
+        "true_fol": "∀x (Rompus(x) → Vumpus(x))",
+        "pred_fol": "∀x (rompus(x) → vumpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Zumpus(x) ∨ Sterpus(x) ∨ Dumpus(x)) → Grimpus(x))",
+        "pred_fol": "∀x ((zumpus(x) ∨ sterpus(x) ∨ dumpus(x)) → grimpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Sterpus(x) ∨ Zumpus(x) ∨ Dumpus(x)) → Shumpus(x))",
+        "pred_fol": "∀x ((sterpus(x) ∨ zumpus(x) ∨ dumpus(x)) → shumpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Lempus(x) ∨ Gorpus(x) ∨ Wumpus(x)) → Sterpus(x))",
+        "pred_fol": "∀x ((lempus(x) ∨ gorpus(x) ∨ wumpus(x)) → sterpus(x))"
+    },
+    {
+        "true_fol": "∀x (Impus(x) → (Jompus(x) ∧ Wumpus(x) ∧ Tumpus(x)))",
+        "pred_fol": "∀x (impus(x) → (jompus(x) ∧ wumpus(x) ∧ tumpus(x)))"
+    },
+    {
+        "true_fol": "∀x ((Tumpus(x) ∨ Jompus(x) ∨ Shumpus(x)) → Impus(x))",
+        "pred_fol": "∀x ((tumpus(x) ∨ jompus(x) ∨ shumpus(x)) → impus(x))"
+    },
+    {
+        "true_fol": "∀x (Lempus(x) → Sterpus(x))",
+        "pred_fol": "∀x (lempus(x) → sterpus(x))"
+    },
+    {
+        "true_fol": "∀x (Sterpus(x) → (Lempus(x) ∧ Yumpus(x) ∧ Gorpus(x)))",
+        "pred_fol": "∀x (sterpus(x) → (lempus(x) ∧ yumpus(x) ∧ gorpus(x)))"
+    },
+    {
+        "true_fol": "∀x ((Numpus(x) ∨ Wumpus(x) ∨ Jompus(x)) → Brimpus(x))",
+        "pred_fol": "∀x ((numpus(x) ∨ wumpus(x) ∨ jompus(x)) → brimpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Numpus(x) ∨ Sterpus(x) ∨ Rompus(x)) → Shumpus(x))",
+        "pred_fol": "∀x ((numpus(x) ∨ sterpus(x) ∨ rompus(x)) → shumpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Numpus(x) ∨ Wumpus(x) ∨ Jompus(x)) → (Yumpus(x) ∧ Dumpus(x) ∧ Vumpus(x)))",
+        "pred_fol": "∀x ((numpus(x) ∨ wumpus(x) ∨ jompus(x)) → (yumpus(x) ∧ dumpus(x) ∧ vumpus(x)))"
+    },
+    {
+        "true_fol": "∀x ((Numpus(x) ∨ Grimpus(x) ∨ Lempus(x)) → Impus(x))",
+        "pred_fol": "∀x ((numpus(x) ∨ grimpus(x) ∨ lempus(x)) → impus(x))"
+    },
+    {
+        "true_fol": "∀x ((Numpus(x) ∨ Grimpus(x) ∨ Lempus(x)) → Vumpus(x))",
+        "pred_fol": "∀x ((numpus(x) ∨ grimpus(x) ∨ lempus(x)) → vumpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Vumpus(x) ∧ Wumpus(x) ∧ Shumpus(x)) → Gorpus(x))",
+        "pred_fol": "∀x ((vumpus(x) ∧ wumpus(x) ∧ shumpus(x)) → gorpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Brimpus(x) ∧ Vumpus(x) ∧ Grimpus(x)) → (Lorpus(x) ∧ Dumpus(x) ∧ Lempus(x)))",
+        "pred_fol": "∀x ((brimpus(x) ∧ vumpus(x) ∧ grimpus(x)) → (lorpus(x) ∧ dumpus(x) ∧ lempus(x)))"
+    },
+    {
+        "true_fol": "∀x ((Brimpus(x) ∧ Vumpus(x) ∧ Grimpus(x)) → Numpus(x))",
+        "pred_fol": "∀x ((brimpus(x) ∧ vumpus(x) ∧ grimpus(x)) → numpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Brimpus(x) ∧ Zumpus(x) ∧ Gorpus(x)) → Yumpus(x))",
+        "pred_fol": "∀x ((brimpus(x) ∧ zumpus(x) ∧ gorpus(x)) → yumpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Grimpus(x) ∨ Impus(x) ∨ Lorpus(x)) → (Jompus(x) ∧ Sterpus(x) ∧ Vumpus(x)))",
+        "pred_fol": "∀x ((grimpus(x) ∨ impus(x) ∨ lorpus(x)) → (jompus(x) ∧ sterpus(x) ∧ vumpus(x)))"
+    },
+    {
+        "true_fol": "∀x ((Rompus(x) ∨ Impus(x) ∨ Wumpus(x)) → Brimpus(x))",
+        "pred_fol": "∀x ((rompus(x) ∨ impus(x) ∨ wumpus(x)) → brimpus(x))"
+    },
+    {
+        "true_fol": "∀x (Numpus(x) → Impus(x))",
+        "pred_fol": "∀x (numpus(x) → impus(x))"
+    },
+    {
+        "true_fol": "∀x ((Grimpus(x) ∨ Vumpus(x) ∨ Dumpus(x)) → Tumpus(x))",
+        "pred_fol": "∀x ((grimpus(x) ∨ vumpus(x) ∨ dumpus(x)) → tumpus(x))"
+    },
+    {
+        "true_fol": "∀x (Numpus(x) → Yumpus(x))",
+        "pred_fol": "∀x (numpus(x) → yumpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Grimpus(x) ∨ Vumpus(x) ∨ Dumpus(x)) → (Shumpus(x) ∧ Gorpus(x) ∧ Numpus(x)))",
+        "pred_fol": "∀x ((grimpus(x) ∨ vumpus(x) ∨ dumpus(x)) → (shumpus(x) ∧ gorpus(x) ∧ numpus(x)))"
+    },
+    {
+        "true_fol": "∀x (Numpus(x) → (Jompus(x) ∧ Lorpus(x) ∧ Brimpus(x)))",
+        "pred_fol": "∀x (numpus(x) → (jompus(x) ∧ lorpus(x) ∧ brimpus(x)))"
+    },
+    {
+        "true_fol": "∀x ((Yumpus(x) ∨ Tumpus(x) ∨ Numpus(x)) → Zumpus(x))",
+        "pred_fol": "∀x ((yumpus(x) ∨ tumpus(x) ∨ numpus(x)) → zumpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Impus(x) ∧ Wumpus(x) ∧ Lempus(x)) → (Yumpus(x) ∧ Grimpus(x) ∧ Vumpus(x)))",
+        "pred_fol": "∀x ((impus(x) ∧ wumpus(x) ∧ lempus(x)) → (yumpus(x) ∧ grimpus(x) ∧ vumpus(x)))"
+    },
+    {
+        "true_fol": "∀x ((Yumpus(x) ∨ Tumpus(x) ∨ Numpus(x)) → Jompus(x))",
+        "pred_fol": "∀x ((yumpus(x) ∨ tumpus(x) ∨ numpus(x)) → jompus(x))"
+    },
+    {
+        "true_fol": "∀x ((Lempus(x) ∧ Rompus(x) ∧ Jompus(x)) → Tumpus(x))",
+        "pred_fol": "∀x ((lempus(x) ∧ rompus(x) ∧ jompus(x)) → tumpus(x))"
+    },
+    {
+        "true_fol": "∀x (Brimpus(x) → Zumpus(x))",
+        "pred_fol": "∀x (brimpus(x) → zumpus(x))"
+    },
+    {
+        "true_fol": "∀x (Grimpus(x) → Rompus(x))",
+        "pred_fol": "∀x (grimpus(x) → rompus(x))"
+    },
+    {
+        "true_fol": "∀x ((Lempus(x) ∨ Sterpus(x) ∨ Impus(x)) → Yumpus(x))",
+        "pred_fol": "∀x ((lempus(x) ∨ sterpus(x) ∨ impus(x)) → yumpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Numpus(x) ∨ Sterpus(x) ∨ Gorpus(x)) → Impus(x))",
+        "pred_fol": "∀x ((numpus(x) ∨ sterpus(x) ∨ gorpus(x)) → impus(x))"
+    },
+    {
+        "true_fol": "∀x (Brimpus(x) → (Shumpus(x) ∧ Zumpus(x) ∧ Jompus(x)))",
+        "pred_fol": "∀x (brimpus(x) → (shumpus(x) ∧ zumpus(x) ∧ jompus(x)))"
+    },
+    {
+        "true_fol": "∀x ((Yumpus(x) ∨ Jompus(x) ∨ Rompus(x)) → (Brimpus(x) ∧ Zumpus(x) ∧ Shumpus(x)))",
+        "pred_fol": "∀x ((yumpus(x) ∨ jompus(x) ∨ rompus(x)) → (brimpus(x) ∧ zumpus(x) ∧ shumpus(x)))"
+    },
+    {
+        "true_fol": "∀x (Zumpus(x) → (Lorpus(x) ∧ Tumpus(x) ∧ Yumpus(x)))",
+        "pred_fol": "∀x (zumpus(x) → (lorpus(x) ∧ tumpus(x) ∧ yumpus(x)))"
+    },
+    {
+        "true_fol": "∀x ((Sterpus(x) ∨ Yumpus(x) ∨ Numpus(x)) → Gorpus(x))",
+        "pred_fol": "∀x ((sterpus(x) ∨ yumpus(x) ∨ numpus(x)) → gorpus(x))"
+    },
+    {
+        "true_fol": "∀x (Lempus(x) → Vumpus(x))",
+        "pred_fol": "∀x (lempus(x) → vumpus(x))"
+    },
+    {
+        "true_fol": "∀x (Lempus(x) → (Shumpus(x) ∧ Gorpus(x) ∧ Tumpus(x)))",
+        "pred_fol": "∀x (lempus(x) → (shumpus(x) ∧ gorpus(x) ∧ tumpus(x)))"
+    },
+    {
+        "true_fol": "∀x ((Jompus(x) ∨ Zumpus(x) ∨ Impus(x)) → Vumpus(x))",
+        "pred_fol": "∀x ((jompus(x) ∨ zumpus(x) ∨ impus(x)) → vumpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Wumpus(x) ∨ Grimpus(x) ∨ Dumpus(x)) → Numpus(x))",
+        "pred_fol": "∀x ((wumpus(x) ∨ grimpus(x) ∨ dumpus(x)) → numpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Sterpus(x) ∨ Lempus(x) ∨ Lorpus(x)) → Shumpus(x))",
+        "pred_fol": "∀x ((sterpus(x) ∨ lempus(x) ∨ lorpus(x)) → shumpus(x))"
+    },
+    {
+        "true_fol": "∀x (Gorpus(x) → Shumpus(x))",
+        "pred_fol": "∀x (gorpus(x) → shumpus(x))"
+    },
+    {
+        "true_fol": "∀x (Dumpus(x) → ¬Red(x))",
+        "pred_fol": "∀x (dumpus(x) → ¬red(x))"
+    },
+    {
+        "true_fol": "∀x (Lempus(x) → ¬Kind(x))",
+        "pred_fol": "∀x (lempus(x) → ¬kind(x))"
+    },
+    {
+        "true_fol": "∀x (Rompus(x) → ¬Metallic(x))",
+        "pred_fol": "∀x (rompus(x) → ¬metallic(x))"
+    },
+    {
+        "true_fol": "∀x (Shumpus(x) → Yumpus(x))",
+        "pred_fol": "∀x (shumpus(x) → yumpus(x))"
+    },
+    {
+        "true_fol": "∀x (Brimpus(x) → Earthy(x))",
+        "pred_fol": "∀x (brimpus(x) → earthy(x))"
+    },
+    {
+        "true_fol": "∀x (Shumpus(x) → Windy(x))",
+        "pred_fol": "∀x (shumpus(x) → windy(x))"
+    },
+    {
+        "true_fol": "∀x (Vumpus(x) → ¬Floral(x))",
+        "pred_fol": "∀x (vumpus(x) → ¬floral(x))"
+    },
+    {
+        "true_fol": "∀x (Lempus(x) → Jompus(x))",
+        "pred_fol": "∀x (lempus(x) → jompus(x))"
+    },
+    {
+        "true_fol": "∀x (Sterpus(x) → Discordant(x))",
+        "pred_fol": "∀x (sterpus(x) → discordant(x))"
+    },
+    {
+        "true_fol": "∀x (Rompus(x) → ¬Fast(x))",
+        "pred_fol": "∀x (rompus(x) → ¬fast(x))"
+    },
+    {
+        "true_fol": "∀x (Yumpus(x) → Aggressive(x))",
+        "pred_fol": "∀x (yumpus(x) → aggressive(x))"
+    },
+    {
+        "true_fol": "∀x (Lorpus(x) → Dull(x))",
+        "pred_fol": "∀x (lorpus(x) → dull(x))"
+    },
+    {
+        "true_fol": "∀x (Lempus(x) → ¬Loud(x))",
+        "pred_fol": "∀x (lempus(x) → ¬loud(x))"
+    },
+    {
+        "true_fol": "∀x (Rompus(x) → Gorpus(x))",
+        "pred_fol": "∀x (rompus(x) → gorpus(x))"
+    },
+    {
+        "true_fol": "∀x (Tumpus(x) → ¬Bitter(x))",
+        "pred_fol": "∀x (tumpus(x) → ¬bitter(x))"
+    },
+    {
+        "true_fol": "∀x (Jompus(x) → Tumpus(x))",
+        "pred_fol": "∀x (jompus(x) → tumpus(x))"
+    },
+    {
+        "true_fol": "∀x (Impus(x) → Sunny(x))",
+        "pred_fol": "∀x (impus(x) → sunny(x))"
+    },
+    {
+        "true_fol": "∀x (Yumpus(x) → Fruity(x))",
+        "pred_fol": "∀x (yumpus(x) → fruity(x))"
+    },
+    {
+        "true_fol": "∀x (Dumpus(x) → Grimpus(x))",
+        "pred_fol": "∀x (dumpus(x) → grimpus(x))"
+    },
+    {
+        "true_fol": "∀x (Grimpus(x) → Jompus(x))",
+        "pred_fol": "∀x (grimpus(x) → jompus(x))"
+    },
+    {
+        "true_fol": "∀x (Lempus(x) → ¬Metallic(x))",
+        "pred_fol": "∀x (lempus(x) → ¬metallic(x))"
+    },
+    {
+        "true_fol": "∀x (Lorpus(x) → Opaque(x))",
+        "pred_fol": "∀x (lorpus(x) → opaque(x))"
+    },
+    {
+        "true_fol": "∀x (Brimpus(x) → ¬Sour(x))",
+        "pred_fol": "∀x (brimpus(x) → ¬sour(x))"
+    },
+    {
+        "true_fol": "∀x (Jompus(x) → Grimpus(x))",
+        "pred_fol": "∀x (jompus(x) → grimpus(x))"
+    },
+    {
+        "true_fol": "∀x (Dumpus(x) → ¬Brown(x))",
+        "pred_fol": "∀x (dumpus(x) → ¬brown(x))"
+    },
+    {
+        "true_fol": "∀x (Gorpus(x) → Transparent(x))",
+        "pred_fol": "∀x (gorpus(x) → transparent(x))"
+    },
+    {
+        "true_fol": "∀x (Lempus(x) → Grimpus(x))",
+        "pred_fol": "∀x (lempus(x) → grimpus(x))"
+    },
+    {
+        "true_fol": "∀x (Dumpus(x) → Rompus(x))",
+        "pred_fol": "∀x (dumpus(x) → rompus(x))"
+    },
+    {
+        "true_fol": "∀x (Sterpus(x) → Dumpus(x))",
+        "pred_fol": "∀x (sterpus(x) → dumpus(x))"
+    },
+    {
+        "true_fol": "∀x (Grimpus(x) → Shumpus(x))",
+        "pred_fol": "∀x (grimpus(x) → shumpus(x))"
+    },
+    {
+        "true_fol": "∀x (Impus(x) → Small(x))",
+        "pred_fol": "∀x (impus(x) → small(x))"
+    },
+    {
+        "true_fol": "∀x (Lorpus(x) → Zumpus(x))",
+        "pred_fol": "∀x (lorpus(x) → zumpus(x))"
+    },
+    {
+        "true_fol": "∀x (Shumpus(x) → Wumpus(x))",
+        "pred_fol": "∀x (shumpus(x) → wumpus(x))"
+    },
+    {
+        "true_fol": "∀x (Vumpus(x) → Opaque(x))",
+        "pred_fol": "∀x (vumpus(x) → opaque(x))"
+    },
+    {
+        "true_fol": "∀x (Gorpus(x) → Shumpus(x))",
+        "pred_fol": "∀x (gorpus(x) → shumpus(x))"
+    },
+    {
+        "true_fol": "∀x (Gorpus(x) → Temperate(x))",
+        "pred_fol": "∀x (gorpus(x) → temperate(x))"
+    },
+    {
+        "true_fol": "∀x (Dumpus(x) → ¬Wooden(x))",
+        "pred_fol": "∀x (dumpus(x) → ¬wooden(x))"
+    },
+    {
+        "true_fol": "∀x (Lempus(x) → ¬Cold(x))",
+        "pred_fol": "∀x (lempus(x) → ¬cold(x))"
+    },
+    {
+        "true_fol": "∀x (Sterpus(x) → Fruity(x))",
+        "pred_fol": "∀x (sterpus(x) → fruity(x))"
+    },
+    {
+        "true_fol": "∀x (Wumpus(x) → Zumpus(x))",
+        "pred_fol": "∀x (wumpus(x) → zumpus(x))"
+    },
+    {
+        "true_fol": "∀x (Sterpus(x) → Floral(x))",
+        "pred_fol": "∀x (sterpus(x) → floral(x))"
+    },
+    {
+        "true_fol": "∀x (Numpus(x) → Shumpus(x))",
+        "pred_fol": "∀x (numpus(x) → shumpus(x))"
+    },
+    {
+        "true_fol": "∀x (Gorpus(x) → Vumpus(x))",
+        "pred_fol": "∀x (gorpus(x) → vumpus(x))"
+    },
+    {
+        "true_fol": "∀x (Yumpus(x) → Muffled(x))",
+        "pred_fol": "∀x (yumpus(x) → muffled(x))"
+    },
+    {
+        "true_fol": "∀x (Lorpus(x) → Luminous(x))",
+        "pred_fol": "∀x (lorpus(x) → luminous(x))"
+    },
+    {
+        "true_fol": "∀x (Lorpus(x) → Aggressive(x))",
+        "pred_fol": "∀x (lorpus(x) → aggressive(x))"
+    },
+    {
+        "true_fol": "∀x (Vumpus(x) → Shumpus(x))",
+        "pred_fol": "∀x (vumpus(x) → shumpus(x))"
+    },
+    {
+        "true_fol": "∀x (Wumpus(x) → ¬Hot(x))",
+        "pred_fol": "∀x (wumpus(x) → ¬hot(x))"
+    },
+    {
+        "true_fol": "∀x (Brimpus(x) → Tumpus(x))",
+        "pred_fol": "∀x (brimpus(x) → tumpus(x))"
+    },
+    {
+        "true_fol": "∀x (Zumpus(x) → Liquid(x))",
+        "pred_fol": "∀x (zumpus(x) → liquid(x))"
+    },
+    {
+        "true_fol": "∀x (Numpus(x) → Spicy(x))",
+        "pred_fol": "∀x (numpus(x) → spicy(x))"
+    },
+    {
+        "true_fol": "∀x (Lempus(x) → Luminous(x))",
+        "pred_fol": "∀x (lempus(x) → luminous(x))"
+    },
+    {
+        "true_fol": "∀x (Numpus(x) → Amenable(x))",
+        "pred_fol": "∀x (numpus(x) → amenable(x))"
+    },
+    {
+        "true_fol": "∀x (Tumpus(x) → Melodic(x))",
+        "pred_fol": "∀x (tumpus(x) → melodic(x))"
+    },
+    {
+        "true_fol": "∀x (Wumpus(x) → Gorpus(x))",
+        "pred_fol": "∀x (wumpus(x) → gorpus(x))"
+    },
+    {
+        "true_fol": "∀x (Zumpus(x) → ¬Large(x))",
+        "pred_fol": "∀x (zumpus(x) → ¬large(x))"
+    },
+    {
+        "true_fol": "∀x (Lempus(x) → Dull(x))",
+        "pred_fol": "∀x (lempus(x) → dull(x))"
+    },
+    {
+        "true_fol": "∀x (Lempus(x) → ¬Sweet(x))",
+        "pred_fol": "∀x (lempus(x) → ¬sweet(x))"
+    },
+    {
+        "true_fol": "∀x (Zumpus(x) → Dumpus(x))",
+        "pred_fol": "∀x (zumpus(x) → dumpus(x))"
+    },
+    {
+        "true_fol": "∀x (Wumpus(x) → ¬Loud(x))",
+        "pred_fol": "∀x (wumpus(x) → ¬loud(x))"
+    },
+    {
+        "true_fol": "∀x (Yumpus(x) → Gorpus(x))",
+        "pred_fol": "∀x (yumpus(x) → gorpus(x))"
+    },
+    {
+        "true_fol": "∀x (Gorpus(x) → Impus(x))",
+        "pred_fol": "∀x (gorpus(x) → impus(x))"
+    },
+    {
+        "true_fol": "∀x (Impus(x) → Large(x))",
+        "pred_fol": "∀x (impus(x) → large(x))"
+    },
+    {
+        "true_fol": "∀x (Shumpus(x) → Opaque(x))",
+        "pred_fol": "∀x (shumpus(x) → opaque(x))"
+    },
+    {
+        "true_fol": "∀x (Shumpus(x) → Numpus(x))",
+        "pred_fol": "∀x (shumpus(x) → numpus(x))"
+    },
+    {
+        "true_fol": "∀x (Brimpus(x) → ¬Happy(x))",
+        "pred_fol": "∀x (brimpus(x) → ¬happy(x))"
+    },
+    {
+        "true_fol": "∀x (Grimpus(x) → Rompus(x))",
+        "pred_fol": "∀x (grimpus(x) → rompus(x))"
+    },
+    {
+        "true_fol": "∀x (Numpus(x) → Opaque(x))",
+        "pred_fol": "∀x (numpus(x) → opaque(x))"
+    },
+    {
+        "true_fol": "∀x (Shumpus(x) → Gorpus(x))",
+        "pred_fol": "∀x (shumpus(x) → gorpus(x))"
+    },
+    {
+        "true_fol": "∀x (Rompus(x) → Lorpus(x))",
+        "pred_fol": "∀x (rompus(x) → lorpus(x))"
+    },
+    {
+        "true_fol": "∀x (Wumpus(x) → ¬Amenable(x))",
+        "pred_fol": "∀x (wumpus(x) → ¬amenable(x))"
+    },
+    {
+        "true_fol": "∀x (Gorpus(x) → Hot(x))",
+        "pred_fol": "∀x (gorpus(x) → hot(x))"
+    },
+    {
+        "true_fol": "∀x (Tumpus(x) → Transparent(x))",
+        "pred_fol": "∀x (tumpus(x) → transparent(x))"
+    },
+    {
+        "true_fol": "∀x (Rompus(x) → Vumpus(x))",
+        "pred_fol": "∀x (rompus(x) → vumpus(x))"
+    },
+    {
+        "true_fol": "∀x (Gorpus(x) → Lorpus(x))",
+        "pred_fol": "∀x (gorpus(x) → lorpus(x))"
+    },
+    {
+        "true_fol": "∀x (Dumpus(x) → Grimpus(x))",
+        "pred_fol": "∀x (dumpus(x) → grimpus(x))"
+    },
+    {
+        "true_fol": "∀x (Shumpus(x) → Nervous(x))",
+        "pred_fol": "∀x (shumpus(x) → nervous(x))"
+    },
+    {
+        "true_fol": "∀x (Brimpus(x) → Lorpus(x))",
+        "pred_fol": "∀x (brimpus(x) → lorpus(x))"
+    },
+    {
+        "true_fol": "∀x (Sterpus(x) → Temperate(x))",
+        "pred_fol": "∀x (sterpus(x) → temperate(x))"
+    },
+    {
+        "true_fol": "∀x (Numpus(x) → Discordant(x))",
+        "pred_fol": "∀x (numpus(x) → discordant(x))"
+    },
+    {
+        "true_fol": "∀x (Zumpus(x) → Luminous(x))",
+        "pred_fol": "∀x (zumpus(x) → luminous(x))"
+    },
+    {
+        "true_fol": "∀x (Wumpus(x) → Jompus(x))",
+        "pred_fol": "∀x (wumpus(x) → jompus(x))"
+    },
+    {
+        "true_fol": "∀x (Dumpus(x) → ¬Orange(x))",
+        "pred_fol": "∀x (dumpus(x) → ¬orange(x))"
+    },
+    {
+        "true_fol": "∀x (Wumpus(x) → Opaque(x))",
+        "pred_fol": "∀x (wumpus(x) → opaque(x))"
+    },
+    {
+        "true_fol": "∀x (Rompus(x) → Grimpus(x))",
+        "pred_fol": "∀x (rompus(x) → grimpus(x))"
+    },
+    {
+        "true_fol": "∀x (Zumpus(x) → Small(x))",
+        "pred_fol": "∀x (zumpus(x) → small(x))"
+    },
+    {
+        "true_fol": "∀x (Brimpus(x) → Slow(x))",
+        "pred_fol": "∀x (brimpus(x) → slow(x))"
+    },
+    {
+        "true_fol": "∀x (Rompus(x) → Sterpus(x))",
+        "pred_fol": "∀x (rompus(x) → sterpus(x))"
+    },
+    {
+        "true_fol": "∀x (Sterpus(x) → Numpus(x))",
+        "pred_fol": "∀x (sterpus(x) → numpus(x))"
+    },
+    {
+        "true_fol": "∀x (Rompus(x) → Zumpus(x))",
+        "pred_fol": "∀x (rompus(x) → zumpus(x))"
+    },
+    {
+        "true_fol": "∀x (Tumpus(x) → Earthy(x))",
+        "pred_fol": "∀x (tumpus(x) → earthy(x))"
+    },
+    {
+        "true_fol": "∀x (Numpus(x) → ¬Nervous(x))",
+        "pred_fol": "∀x (numpus(x) → ¬nervous(x))"
+    },
+    {
+        "true_fol": "∀x (Shumpus(x) → Sour(x))",
+        "pred_fol": "∀x (shumpus(x) → sour(x))"
+    },
+    {
+        "true_fol": "∀x (Jompus(x) → Amenable(x))",
+        "pred_fol": "∀x (jompus(x) → amenable(x))"
+    },
+    {
+        "true_fol": "∀x (Jompus(x) → Lorpus(x))",
+        "pred_fol": "∀x (jompus(x) → lorpus(x))"
+    },
+    {
+        "true_fol": "∀x (Brimpus(x) → Tumpus(x))",
+        "pred_fol": "∀x (brimpus(x) → tumpus(x))"
+    },
+    {
+        "true_fol": "∀x (Wumpus(x) → ¬Shy(x))",
+        "pred_fol": "∀x (wumpus(x) → ¬shy(x))"
+    },
+    {
+        "true_fol": "∀x (Lempus(x) → Shumpus(x))",
+        "pred_fol": "∀x (lempus(x) → shumpus(x))"
+    },
+    {
+        "true_fol": "∀x (Impus(x) → Wumpus(x))",
+        "pred_fol": "∀x (impus(x) → wumpus(x))"
+    },
+    {
+        "true_fol": "∀x (Sterpus(x) → ¬Bright(x))",
+        "pred_fol": "∀x (sterpus(x) → ¬bright(x))"
+    },
+    {
+        "true_fol": "∀x (Zumpus(x) → Sterpus(x))",
+        "pred_fol": "∀x (zumpus(x) → sterpus(x))"
+    },
+    {
+        "true_fol": "∀x (Yumpus(x) → ¬Orange(x))",
+        "pred_fol": "∀x (yumpus(x) → ¬orange(x))"
+    },
+    {
+        "true_fol": "∀x (Yumpus(x) → Gorpus(x))",
+        "pred_fol": "∀x (yumpus(x) → gorpus(x))"
+    },
+    {
+        "true_fol": "∀x (Lorpus(x) → ¬Sweet(x))",
+        "pred_fol": "∀x (lorpus(x) → ¬sweet(x))"
+    },
+    {
+        "true_fol": "∀x (Impus(x) → Jompus(x))",
+        "pred_fol": "∀x (impus(x) → jompus(x))"
+    },
+    {
+        "true_fol": "∀x (Sterpus(x) → Wumpus(x))",
+        "pred_fol": "∀x (sterpus(x) → wumpus(x))"
+    },
+    {
+        "true_fol": "∀x (Vumpus(x) → Lempus(x))",
+        "pred_fol": "∀x (vumpus(x) → lempus(x))"
+    },
+    {
+        "true_fol": "∀x (Wumpus(x) → Orange(x))",
+        "pred_fol": "∀x (wumpus(x) → orange(x))"
+    },
+    {
+        "true_fol": "∀x (Grimpus(x) → (Sterpus(x) ∧ Impus(x) ∧ Zumpus(x)))",
+        "pred_fol": "∀x (grimpus(x) → (sterpus(x) ∧ impus(x) ∧ zumpus(x)))"
+    },
+    {
+        "true_fol": "∀x ((Impus(x) ∨ Shumpus(x) ∨ Numpus(x)) → Yumpus(x))",
+        "pred_fol": "∀x ((impus(x) ∨ shumpus(x) ∨ numpus(x)) → yumpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Gorpus(x) ∨ Impus(x) ∨ Tumpus(x)) → Rompus(x))",
+        "pred_fol": "∀x ((gorpus(x) ∨ impus(x) ∨ tumpus(x)) → rompus(x))"
+    },
+    {
+        "true_fol": "∀x ((Tumpus(x) ∨ Sterpus(x) ∨ Shumpus(x)) → Grimpus(x))",
+        "pred_fol": "∀x ((tumpus(x) ∨ sterpus(x) ∨ shumpus(x)) → grimpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Yumpus(x) ∨ Tumpus(x) ∨ Dumpus(x)) → (Wumpus(x) ∧ Jompus(x) ∧ Gorpus(x)))",
+        "pred_fol": "∀x ((yumpus(x) ∨ tumpus(x) ∨ dumpus(x)) → (wumpus(x) ∧ jompus(x) ∧ gorpus(x)))"
+    },
+    {
+        "true_fol": "Zumpus(wren) ∧ Lempus(wren) ∧ Lorpus(wren)",
+        "pred_fol": "zumpus(wren) ∧ lempus(wren) ∧ lorpus(wren)"
+    },
+    {
+        "true_fol": "∀x ((Lempus(x) ∨ Zumpus(x) ∨ Vumpus(x)) → (Jompus(x) ∧ Impus(x) ∧ Grimpus(x)))",
+        "pred_fol": "∀x ((lempus(x) ∨ zumpus(x) ∨ vumpus(x)) → (jompus(x) ∧ impus(x) ∧ grimpus(x)))"
+    },
+    {
+        "true_fol": "∀x (Lorpus(x) → Numpus(x))",
+        "pred_fol": "∀x (lorpus(x) → numpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Lempus(x) ∨ Zumpus(x) ∨ Vumpus(x)) → Rompus(x))",
+        "pred_fol": "∀x ((lempus(x) ∨ zumpus(x) ∨ vumpus(x)) → rompus(x))"
+    },
+    {
+        "true_fol": "∀x ((Rompus(x) ∨ Sterpus(x) ∨ Numpus(x)) → Zumpus(x))",
+        "pred_fol": "∀x ((rompus(x) ∨ sterpus(x) ∨ numpus(x)) → zumpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Sterpus(x) ∨ Dumpus(x) ∨ Brimpus(x)) → (Yumpus(x) ∧ Shumpus(x) ∧ Tumpus(x)))",
+        "pred_fol": "∀x ((sterpus(x) ∨ dumpus(x) ∨ brimpus(x)) → (yumpus(x) ∧ shumpus(x) ∧ tumpus(x)))"
+    },
+    {
+        "true_fol": "∀x ((Sterpus(x) ∨ Dumpus(x) ∨ Brimpus(x)) → Zumpus(x))",
+        "pred_fol": "∀x ((sterpus(x) ∨ dumpus(x) ∨ brimpus(x)) → zumpus(x))"
+    },
+    {
+        "true_fol": "∀x (Brimpus(x) → Lorpus(x))",
+        "pred_fol": "∀x (brimpus(x) → lorpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Vumpus(x) ∧ Wumpus(x) ∧ Zumpus(x)) → Shumpus(x))",
+        "pred_fol": "∀x ((vumpus(x) ∧ wumpus(x) ∧ zumpus(x)) → shumpus(x))"
+    },
+    {
+        "true_fol": "∀x (Jompus(x) → Rompus(x))",
+        "pred_fol": "∀x (jompus(x) → rompus(x))"
+    },
+    {
+        "true_fol": "∀x ((Wumpus(x) ∨ Yumpus(x) ∨ Vumpus(x)) → (Shumpus(x) ∧ Dumpus(x) ∧ Zumpus(x)))",
+        "pred_fol": "∀x ((wumpus(x) ∨ yumpus(x) ∨ vumpus(x)) → (shumpus(x) ∧ dumpus(x) ∧ zumpus(x)))"
+    },
+    {
+        "true_fol": "∀x (Zumpus(x) → (Dumpus(x) ∧ Shumpus(x) ∧ Gorpus(x)))",
+        "pred_fol": "∀x (zumpus(x) → (dumpus(x) ∧ shumpus(x) ∧ gorpus(x)))"
+    },
+    {
+        "true_fol": "∀x ((Wumpus(x) ∨ Yumpus(x) ∨ Vumpus(x)) → Numpus(x))",
+        "pred_fol": "∀x ((wumpus(x) ∨ yumpus(x) ∨ vumpus(x)) → numpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Gorpus(x) ∨ Lorpus(x) ∨ Vumpus(x)) → Wumpus(x))",
+        "pred_fol": "∀x ((gorpus(x) ∨ lorpus(x) ∨ vumpus(x)) → wumpus(x))"
+    },
+    {
+        "true_fol": "∀x (Impus(x) → Grimpus(x))",
+        "pred_fol": "∀x (impus(x) → grimpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Grimpus(x) ∨ Vumpus(x) ∨ Rompus(x)) → Jompus(x))",
+        "pred_fol": "∀x ((grimpus(x) ∨ vumpus(x) ∨ rompus(x)) → jompus(x))"
+    },
+    {
+        "true_fol": "∀x ((Sterpus(x) ∨ Lempus(x) ∨ Gorpus(x)) → Zumpus(x))",
+        "pred_fol": "∀x ((sterpus(x) ∨ lempus(x) ∨ gorpus(x)) → zumpus(x))"
+    },
+    {
+        "true_fol": "∀x (Impus(x) → Zumpus(x))",
+        "pred_fol": "∀x (impus(x) → zumpus(x))"
+    },
+    {
+        "true_fol": "∀x (Grimpus(x) → Brimpus(x))",
+        "pred_fol": "∀x (grimpus(x) → brimpus(x))"
+    },
+    {
+        "true_fol": "∀x (Vumpus(x) → (Brimpus(x) ∧ Tumpus(x) ∧ Jompus(x)))",
+        "pred_fol": "∀x (vumpus(x) → (brimpus(x) ∧ tumpus(x) ∧ jompus(x)))"
+    },
+    {
+        "true_fol": "∀x ((Rompus(x) ∨ Lempus(x) ∨ Jompus(x)) → Grimpus(x))",
+        "pred_fol": "∀x ((rompus(x) ∨ lempus(x) ∨ jompus(x)) → grimpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Yumpus(x) ∨ Rompus(x) ∨ Wumpus(x)) → Grimpus(x))",
+        "pred_fol": "∀x ((yumpus(x) ∨ rompus(x) ∨ wumpus(x)) → grimpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Sterpus(x) ∧ Yumpus(x) ∧ Grimpus(x)) → Vumpus(x))",
+        "pred_fol": "∀x ((sterpus(x) ∧ yumpus(x) ∧ grimpus(x)) → vumpus(x))"
+    },
+    {
+        "true_fol": "∀x (Tumpus(x) → Shumpus(x))",
+        "pred_fol": "∀x (tumpus(x) → shumpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Vumpus(x) ∨ Gorpus(x) ∨ Dumpus(x)) → (Wumpus(x) ∧ Zumpus(x) ∧ Tumpus(x)))",
+        "pred_fol": "∀x ((vumpus(x) ∨ gorpus(x) ∨ dumpus(x)) → (wumpus(x) ∧ zumpus(x) ∧ tumpus(x)))"
+    },
+    {
+        "true_fol": "∀x ((Grimpus(x) ∨ Numpus(x) ∨ Jompus(x)) → (Wumpus(x) ∧ Brimpus(x) ∧ Rompus(x)))",
+        "pred_fol": "∀x ((grimpus(x) ∨ numpus(x) ∨ jompus(x)) → (wumpus(x) ∧ brimpus(x) ∧ rompus(x)))"
+    },
+    {
+        "true_fol": "∀x ((Numpus(x) ∨ Lempus(x) ∨ Shumpus(x)) → Sterpus(x))",
+        "pred_fol": "∀x ((numpus(x) ∨ lempus(x) ∨ shumpus(x)) → sterpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Grimpus(x) ∨ Numpus(x) ∨ Jompus(x)) → Shumpus(x))",
+        "pred_fol": "∀x ((grimpus(x) ∨ numpus(x) ∨ jompus(x)) → shumpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Vumpus(x) ∨ Tumpus(x) ∨ Lorpus(x)) → Lempus(x))",
+        "pred_fol": "∀x ((vumpus(x) ∨ tumpus(x) ∨ lorpus(x)) → lempus(x))"
+    },
+    {
+        "true_fol": "∀x ((Vumpus(x) ∨ Tumpus(x) ∨ Lorpus(x)) → Numpus(x))",
+        "pred_fol": "∀x ((vumpus(x) ∨ tumpus(x) ∨ lorpus(x)) → numpus(x))"
+    },
+    {
+        "true_fol": "∀x (Rompus(x) → Grimpus(x))",
+        "pred_fol": "∀x (rompus(x) → grimpus(x))"
+    },
+    {
+        "true_fol": "∀x (Gorpus(x) → Vumpus(x))",
+        "pred_fol": "∀x (gorpus(x) → vumpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Impus(x) ∨ Zumpus(x) ∨ Shumpus(x)) → Numpus(x))",
+        "pred_fol": "∀x ((impus(x) ∨ zumpus(x) ∨ shumpus(x)) → numpus(x))"
+    },
+    {
+        "true_fol": "∀x (Grimpus(x) → Lempus(x))",
+        "pred_fol": "∀x (grimpus(x) → lempus(x))"
+    },
+    {
+        "true_fol": "∀x ((Gorpus(x) ∧ Impus(x) ∧ Rompus(x)) → Sterpus(x))",
+        "pred_fol": "∀x ((gorpus(x) ∧ impus(x) ∧ rompus(x)) → sterpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Gorpus(x) ∧ Impus(x) ∧ Rompus(x)) → Yumpus(x))",
+        "pred_fol": "∀x ((gorpus(x) ∧ impus(x) ∧ rompus(x)) → yumpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Lempus(x) ∧ Gorpus(x) ∧ Numpus(x)) → Yumpus(x))",
+        "pred_fol": "∀x ((lempus(x) ∧ gorpus(x) ∧ numpus(x)) → yumpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Gorpus(x) ∧ Sterpus(x) ∧ Grimpus(x)) → Dumpus(x))",
+        "pred_fol": "∀x ((gorpus(x) ∧ sterpus(x) ∧ grimpus(x)) → dumpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Gorpus(x) ∧ Sterpus(x) ∧ Grimpus(x)) → Brimpus(x))",
+        "pred_fol": "∀x ((gorpus(x) ∧ sterpus(x) ∧ grimpus(x)) → brimpus(x))"
+    },
+    {
+        "true_fol": "Brimpus(wren)",
+        "pred_fol": "brimpus(wren)"
+    },
+    {
+        "true_fol": "∀x ((Gorpus(x) ∨ Dumpus(x) ∨ Rompus(x)) → Impus(x))",
+        "pred_fol": "∀x ((gorpus(x) ∨ dumpus(x) ∨ rompus(x)) → impus(x))"
+    },
+    {
+        "true_fol": "∀x ((Tumpus(x) ∨ Gorpus(x) ∨ Yumpus(x)) → (Numpus(x) ∧ Vumpus(x) ∧ Grimpus(x)))",
+        "pred_fol": "∀x ((tumpus(x) ∨ gorpus(x) ∨ yumpus(x)) → (numpus(x) ∧ vumpus(x) ∧ grimpus(x)))"
+    },
+    {
+        "true_fol": "∀x ((Lorpus(x) ∨ Tumpus(x) ∨ Dumpus(x)) → (Brimpus(x) ∧ Vumpus(x) ∧ Yumpus(x)))",
+        "pred_fol": "∀x ((lorpus(x) ∨ tumpus(x) ∨ dumpus(x)) → (brimpus(x) ∧ vumpus(x) ∧ yumpus(x)))"
+    },
+    {
+        "true_fol": "∀x ((Lorpus(x) ∨ Lempus(x) ∨ Rompus(x)) → Impus(x))",
+        "pred_fol": "∀x ((lorpus(x) ∨ lempus(x) ∨ rompus(x)) → impus(x))"
+    },
+    {
+        "true_fol": "∀x ((Lorpus(x) ∨ Tumpus(x) ∨ Dumpus(x)) → Rompus(x))",
+        "pred_fol": "∀x ((lorpus(x) ∨ tumpus(x) ∨ dumpus(x)) → rompus(x))"
+    },
+    {
+        "true_fol": "∀x ((Gorpus(x) ∨ Zumpus(x) ∨ Grimpus(x)) → Wumpus(x))",
+        "pred_fol": "∀x ((gorpus(x) ∨ zumpus(x) ∨ grimpus(x)) → wumpus(x))"
+    },
+    {
+        "true_fol": "∀x (Sterpus(x) → (Zumpus(x) ∧ Vumpus(x) ∧ Numpus(x)))",
+        "pred_fol": "∀x (sterpus(x) → (zumpus(x) ∧ vumpus(x) ∧ numpus(x)))"
+    },
+    {
+        "true_fol": "Grimpus(fae) ∧ Wumpus(fae) ∧ Jompus(fae)",
+        "pred_fol": "grimpus(fae) ∧ wumpus(fae) ∧ jompus(fae)"
+    },
+    {
+        "true_fol": "∀x (Sterpus(x) → (Impus(x) ∧ Zumpus(x) ∧ Grimpus(x)))",
+        "pred_fol": "∀x (sterpus(x) → (impus(x) ∧ zumpus(x) ∧ grimpus(x)))"
+    },
+    {
+        "true_fol": "∀x ((Numpus(x) ∧ Rompus(x) ∧ Dumpus(x)) → Yumpus(x))",
+        "pred_fol": "∀x ((numpus(x) ∧ rompus(x) ∧ dumpus(x)) → yumpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Numpus(x) ∧ Shumpus(x) ∧ Tumpus(x)) → Dumpus(x))",
+        "pred_fol": "∀x ((numpus(x) ∧ shumpus(x) ∧ tumpus(x)) → dumpus(x))"
+    },
+    {
+        "true_fol": "∀x (Vumpus(x) → (Rompus(x) ∧ Impus(x) ∧ Zumpus(x)))",
+        "pred_fol": "∀x (vumpus(x) → (rompus(x) ∧ impus(x) ∧ zumpus(x)))"
+    },
+    {
+        "true_fol": "∀x (Lorpus(x) → Sterpus(x))",
+        "pred_fol": "∀x (lorpus(x) → sterpus(x))"
+    },
+    {
+        "true_fol": "∀x (Zumpus(x) → (Gorpus(x) ∧ Jompus(x) ∧ Tumpus(x)))",
+        "pred_fol": "∀x (zumpus(x) → (gorpus(x) ∧ jompus(x) ∧ tumpus(x)))"
+    },
+    {
+        "true_fol": "∀x (Lempus(x) → (Gorpus(x) ∧ Sterpus(x) ∧ Yumpus(x)))",
+        "pred_fol": "∀x (lempus(x) → (gorpus(x) ∧ sterpus(x) ∧ yumpus(x)))"
+    },
+    {
+        "true_fol": "∀x ((Yumpus(x) ∨ Rompus(x) ∨ Wumpus(x)) → Impus(x))",
+        "pred_fol": "∀x ((yumpus(x) ∨ rompus(x) ∨ wumpus(x)) → impus(x))"
+    },
+    {
+        "true_fol": "∀x ((Tumpus(x) ∨ Yumpus(x) ∨ Shumpus(x)) → Numpus(x))",
+        "pred_fol": "∀x ((tumpus(x) ∨ yumpus(x) ∨ shumpus(x)) → numpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Lorpus(x) ∧ Tumpus(x) ∧ Numpus(x)) → (Lempus(x) ∧ Vumpus(x) ∧ Gorpus(x)))",
+        "pred_fol": "∀x ((lorpus(x) ∧ tumpus(x) ∧ numpus(x)) → (lempus(x) ∧ vumpus(x) ∧ gorpus(x)))"
+    },
+    {
+        "true_fol": "∀x (Vumpus(x) → (Brimpus(x) ∧ Gorpus(x) ∧ Shumpus(x)))",
+        "pred_fol": "∀x (vumpus(x) → (brimpus(x) ∧ gorpus(x) ∧ shumpus(x)))"
+    },
+    {
+        "true_fol": "∀x ((Lorpus(x) ∧ Tumpus(x) ∧ Numpus(x)) → Grimpus(x))",
+        "pred_fol": "∀x ((lorpus(x) ∧ tumpus(x) ∧ numpus(x)) → grimpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Jompus(x) ∧ Wumpus(x) ∧ Yumpus(x)) → Lorpus(x))",
+        "pred_fol": "∀x ((jompus(x) ∧ wumpus(x) ∧ yumpus(x)) → lorpus(x))"
+    },
+    {
+        "true_fol": "∀x (Brimpus(x) → (Tumpus(x) ∧ Grimpus(x) ∧ Dumpus(x)))",
+        "pred_fol": "∀x (brimpus(x) → (tumpus(x) ∧ grimpus(x) ∧ dumpus(x)))"
+    },
+    {
+        "true_fol": "∀x ((Jompus(x) ∧ Grimpus(x) ∧ Rompus(x)) → Lorpus(x))",
+        "pred_fol": "∀x ((jompus(x) ∧ grimpus(x) ∧ rompus(x)) → lorpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Lempus(x) ∨ Lorpus(x) ∨ Numpus(x)) → (Gorpus(x) ∧ Sterpus(x) ∧ Zumpus(x)))",
+        "pred_fol": "∀x ((lempus(x) ∨ lorpus(x) ∨ numpus(x)) → (gorpus(x) ∧ sterpus(x) ∧ zumpus(x)))"
+    },
+    {
+        "true_fol": "∀x (Rompus(x) → (Lempus(x) ∧ Yumpus(x) ∧ Numpus(x)))",
+        "pred_fol": "∀x (rompus(x) → (lempus(x) ∧ yumpus(x) ∧ numpus(x)))"
+    },
+    {
+        "true_fol": "∀x ((Lempus(x) ∨ Lorpus(x) ∨ Numpus(x)) → Impus(x))",
+        "pred_fol": "∀x ((lempus(x) ∨ lorpus(x) ∨ numpus(x)) → impus(x))"
+    },
+    {
+        "true_fol": "∀x ((Jompus(x) ∨ Yumpus(x) ∨ Vumpus(x)) → Zumpus(x))",
+        "pred_fol": "∀x ((jompus(x) ∨ yumpus(x) ∨ vumpus(x)) → zumpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Grimpus(x) ∧ Gorpus(x) ∧ Lempus(x)) → (Yumpus(x) ∧ Jompus(x) ∧ Shumpus(x)))",
+        "pred_fol": "∀x ((grimpus(x) ∧ gorpus(x) ∧ lempus(x)) → (yumpus(x) ∧ jompus(x) ∧ shumpus(x)))"
+    },
+    {
+        "true_fol": "∀x ((Tumpus(x) ∨ Jompus(x) ∨ Dumpus(x)) → Brimpus(x))",
+        "pred_fol": "∀x ((tumpus(x) ∨ jompus(x) ∨ dumpus(x)) → brimpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Zumpus(x) ∨ Lorpus(x) ∨ Sterpus(x)) → Brimpus(x))",
+        "pred_fol": "∀x ((zumpus(x) ∨ lorpus(x) ∨ sterpus(x)) → brimpus(x))"
+    },
+    {
+        "true_fol": "∀x (Jompus(x) → (Wumpus(x) ∧ Tumpus(x) ∧ Lorpus(x)))",
+        "pred_fol": "∀x (jompus(x) → (wumpus(x) ∧ tumpus(x) ∧ lorpus(x)))"
+    },
+    {
+        "true_fol": "∀x (Wumpus(x) → Sterpus(x))",
+        "pred_fol": "∀x (wumpus(x) → sterpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Jompus(x) ∨ Sterpus(x) ∨ Rompus(x)) → Grimpus(x))",
+        "pred_fol": "∀x ((jompus(x) ∨ sterpus(x) ∨ rompus(x)) → grimpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Jompus(x) ∨ Sterpus(x) ∨ Rompus(x)) → (Wumpus(x) ∧ Yumpus(x) ∧ Zumpus(x)))",
+        "pred_fol": "∀x ((jompus(x) ∨ sterpus(x) ∨ rompus(x)) → (wumpus(x) ∧ yumpus(x) ∧ zumpus(x)))"
+    },
+    {
+        "true_fol": "∀x ((Jompus(x) ∨ Impus(x) ∨ Gorpus(x)) → Vumpus(x))",
+        "pred_fol": "∀x ((jompus(x) ∨ impus(x) ∨ gorpus(x)) → vumpus(x))"
+    },
+    {
+        "true_fol": "∀x (Jompus(x) → (Zumpus(x) ∧ Sterpus(x) ∧ Impus(x)))",
+        "pred_fol": "∀x (jompus(x) → (zumpus(x) ∧ sterpus(x) ∧ impus(x)))"
+    },
+    {
+        "true_fol": "∀x (Rompus(x) → Gorpus(x))",
+        "pred_fol": "∀x (rompus(x) → gorpus(x))"
+    },
+    {
+        "true_fol": "∀x (Sterpus(x) → Gorpus(x))",
+        "pred_fol": "∀x (sterpus(x) → gorpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Numpus(x) ∨ Yumpus(x) ∨ Jompus(x)) → Dumpus(x))",
+        "pred_fol": "∀x ((numpus(x) ∨ yumpus(x) ∨ jompus(x)) → dumpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Vumpus(x) ∨ Lempus(x) ∨ Numpus(x)) → Gorpus(x))",
+        "pred_fol": "∀x ((vumpus(x) ∨ lempus(x) ∨ numpus(x)) → gorpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Rompus(x) ∨ Tumpus(x) ∨ Lempus(x)) → Yumpus(x))",
+        "pred_fol": "∀x ((rompus(x) ∨ tumpus(x) ∨ lempus(x)) → yumpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Yumpus(x) ∨ Vumpus(x) ∨ Lorpus(x)) → Numpus(x))",
+        "pred_fol": "∀x ((yumpus(x) ∨ vumpus(x) ∨ lorpus(x)) → numpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Zumpus(x) ∨ Grimpus(x) ∨ Yumpus(x)) → Lempus(x))",
+        "pred_fol": "∀x ((zumpus(x) ∨ grimpus(x) ∨ yumpus(x)) → lempus(x))"
+    },
+    {
+        "true_fol": "∀x ((Zumpus(x) ∨ Grimpus(x) ∨ Yumpus(x)) → (Shumpus(x) ∧ Rompus(x) ∧ Sterpus(x)))",
+        "pred_fol": "∀x ((zumpus(x) ∨ grimpus(x) ∨ yumpus(x)) → (shumpus(x) ∧ rompus(x) ∧ sterpus(x)))"
+    },
+    {
+        "true_fol": "∀x (Yumpus(x) → (Sterpus(x) ∧ Shumpus(x) ∧ Jompus(x)))",
+        "pred_fol": "∀x (yumpus(x) → (sterpus(x) ∧ shumpus(x) ∧ jompus(x)))"
+    },
+    {
+        "true_fol": "∀x ((Lorpus(x) ∨ Grimpus(x) ∨ Impus(x)) → Rompus(x))",
+        "pred_fol": "∀x ((lorpus(x) ∨ grimpus(x) ∨ impus(x)) → rompus(x))"
+    },
+    {
+        "true_fol": "∀x (Shumpus(x) → (Grimpus(x) ∧ Sterpus(x) ∧ Gorpus(x)))",
+        "pred_fol": "∀x (shumpus(x) → (grimpus(x) ∧ sterpus(x) ∧ gorpus(x)))"
+    },
+    {
+        "true_fol": "∀x ((Brimpus(x) ∨ Rompus(x) ∨ Numpus(x)) → Yumpus(x))",
+        "pred_fol": "∀x ((brimpus(x) ∨ rompus(x) ∨ numpus(x)) → yumpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Shumpus(x) ∨ Tumpus(x) ∨ Rompus(x)) → Grimpus(x))",
+        "pred_fol": "∀x ((shumpus(x) ∨ tumpus(x) ∨ rompus(x)) → grimpus(x))"
+    },
+    {
+        "true_fol": "∀x ((Shumpus(x) ∨ Tumpus(x) ∨ Rompus(x)) → (Lorpus(x) ∧ Lempus(x) ∧ Dumpus(x)))",
+        "pred_fol": "∀x ((shumpus(x) ∨ tumpus(x) ∨ rompus(x)) → (lorpus(x) ∧ lempus(x) ∧ dumpus(x)))"
+    },
+    {
+        "Bleu_mean": 1.0,
+        "LE_mean": 1.0,
+        "Bleu": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+        ],
+        "LE": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+        ]
+    }
+]

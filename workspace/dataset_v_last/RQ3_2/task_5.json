@@ -1,0 +1,162 @@
+{
+    "idx": "ProofWriter_AttNeg-OWA-D5-327_Q5",
+    "premises": [
+        "Bob is quiet.",
+        "Bob is smart.",
+        "Charlie is quiet.",
+        "Charlie is not white.",
+        "Fiona is young.",
+        "Harry is big.",
+        "Harry is nice.",
+        "If something is quiet and white then it is green.",
+        "All smart things are green.",
+        "Green things are white.",
+        "All smart, young things are big.",
+        "White things are not young.",
+        "If something is smart and not young then it is nice.",
+        "If Bob is green and Bob is nice then Bob is big."
+    ],
+    "question": [
+        "Bob is white."
+    ],
+    "label": 1,
+    "reasoning_steps": [
+        "```",
+        "Bob is quiet.",
+        "Bob is smart.",
+        "All smart things are green.",
+        "Bob is green.",
+        "Green things are white.",
+        "Bob is white.",
+        "There is evidence to conclude that Bob is white."
+    ],
+    "reasoning_answer": -1,
+    "premise:_fol": [
+        {
+            "ref": "(1) bob is quiet.",
+            "fol": "quiet(bob)",
+            "tptp": "quiet(bob)"
+        },
+        {
+            "ref": "(2) bob is smart.",
+            "fol": "smart(bob)",
+            "tptp": "smart(bob)"
+        },
+        {
+            "ref": "(3) charlie is quiet.",
+            "fol": "quiet(charlie)",
+            "tptp": "quiet(charlie)"
+        },
+        {
+            "ref": "(4) charlie is not white.",
+            "fol": "¬white(charlie)",
+            "tptp": "~white(charlie)"
+        },
+        {
+            "ref": "(5) fiona is young.",
+            "fol": "young(fiona)",
+            "tptp": "young(fiona)"
+        },
+        {
+            "ref": "(6) harry is big.",
+            "fol": "big(harry)",
+            "tptp": "big(harry)"
+        },
+        {
+            "ref": "(7) harry is nice.",
+            "fol": "nice(harry)",
+            "tptp": "nice(harry)"
+        },
+        {
+            "ref": "(8) if something is quiet and white then it is green.",
+            "fol": "∀x ((quiet(x) ∧ white(x)) → green(x))",
+            "tptp": "![X]: ((quiet(X) & white(X)) => green(X))"
+        },
+        {
+            "ref": "(9) all smart things are green.",
+            "fol": "∀x (smart(x) → green(x))",
+            "tptp": "![X]: (smart(X) => green(X))"
+        },
+        {
+            "ref": "(10) green things are white.",
+            "fol": "∀x (green(x) → white(x))",
+            "tptp": "![X]: (green(X) => white(X))"
+        },
+        {
+            "ref": "(11) all smart, young things are big.",
+            "fol": "∀x ((smart(x) ∧ young(x)) → big(x))",
+            "tptp": "![X]: ((smart(X) & young(X)) => big(X))"
+        },
+        {
+            "ref": "(12) white things are not young.",
+            "fol": "∀x (white(x) → ¬young(x))",
+            "tptp": "![X]: (white(X) => ~young(X))"
+        },
+        {
+            "ref": "(13) if something is smart and not young then it is nice.",
+            "fol": "∀x ((smart(x) ∧ ¬young(x)) → nice(x))",
+            "tptp": "![X]: ((smart(X) & ~young(X)) => nice(X))"
+        },
+        {
+            "ref": "(14) if bob is green and bob is nice then bob is big.",
+            "fol": "(green(bob) ∧ nice(bob)) → big(bob)",
+            "tptp": "(green(bob) & nice(bob)) => big(bob)"
+        }
+    ],
+    "conclusion:_fol": [
+        {
+            "ref": "(1) bob is quiet.",
+            "fol": "quiet(bob)",
+            "tptp": "quiet(bob)"
+        },
+        {
+            "ref": "(2) bob is smart.",
+            "fol": "smart(bob)",
+            "tptp": "smart(bob)"
+        },
+        {
+            "ref": "(3) all smart things are green.",
+            "fol": "∀x (smart(x) → green(x))",
+            "tptp": "![X]: (smart(X) => green(X))"
+        },
+        {
+            "ref": "(4) bob is green.",
+            "fol": "green(bob)",
+            "tptp": "green(bob)"
+        },
+        {
+            "ref": "(5) green things are white.",
+            "fol": "∀x (green(x) → white(x))",
+            "tptp": "![X]: (green(X) => white(X))"
+        },
+        {
+            "ref": "(6) bob is white.",
+            "fol": "white(bob)",
+            "tptp": "white(bob)"
+        }
+    ],
+    "AnswerCorrect": false,
+    "step_correctness_label": [
+        "True",
+        "True",
+        "True",
+        "True",
+        "True"
+    ],
+    "has_valid_proof_path_label": true,
+    "cate": "F1",
+    "filter_reasoning_steps": [
+        "Bob is quiet.",
+        "Bob is smart.",
+        "All smart things are green.",
+        "Bob is green.",
+        "Green things are white."
+    ],
+    "step_correctness_label_manual_annotation": [
+        "True",
+        "True",
+        "True",
+        "True",
+        "True"
+    ]
+}

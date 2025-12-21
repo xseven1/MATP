@@ -1,0 +1,3206 @@
+[
+    {
+        "idx": "453_1305",
+        "premises": [
+            "No birds are ectothermic.",
+            "All penguins are birds.",
+            "An animal is ectothermic or endothermic.",
+            "All endothermic animals produce heat within the body.",
+            "Ron and Henry are both animals.",
+            "Ron is not a bird and does not produce heat with the body. ",
+            "Henry is not a cat and does not produce heat with the body. "
+        ],
+        "question": [
+            "Either Henry is a penguin or Henry is endothermic."
+        ],
+        "premises_gt_fol": [
+            "∀x (Bird(x) → ¬Ectothermic(x))",
+            "∀x (Penguin(x) → Bird(x))",
+            "∀x (Animal(x) → Ectothermic(x) ∨ Endothermic(x))",
+            "∀x (Endothermic(x) → ProduceWithIn(x, heat, body))",
+            "Animal(ron) ∧ Animal(henry)",
+            "¬Bird(ron) ∧ ¬ProduceWithIn(ron, heat, body)",
+            "¬Cat(henry) ∧ ¬ProduceWithIn(henry, heat, body)"
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "No birds are ectothermic.",
+            "All penguins are birds.",
+            "Therefore, no penguins are ectothermic.",
+            "An animal is either ectothermic or endothermic.",
+            "All endothermic animals produce heat within the body.",
+            "Ron is not a bird and does not produce heat with the body.",
+            "Ron is.",
+            "therefore ectothermic.",
+            "Henry is not a cat and does not produce heat with the body.",
+            "Henry is.",
+            "Since Henry is ectothermic, he cannot be endothermic.",
+            "Since no penguins are ectothermic, Henry cannot be a penguin.",
+            "Either Henry is a penguin or Henry is endothermic.",
+            "From steps 9 and 10, we know Henry is neither.",
+            "The conclusion must be false as Henry cannot be both a penguin and endothermic simultaneously."
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "reasoning_content": "",
+        "content": "Thoughts:\n1. No birds are ectothermic.\n2. All penguins are birds.\n3. Therefore, no penguins are ectothermic.\n4. An animal is either ectothermic or endothermic.\n5. All endothermic animals produce heat within the body.\n6. Ron is not a bird and does not produce heat with the body.\n7. Ron is therefore ectothermic.\n8. Henry is not a cat and does not produce heat with the body.\n9. Henry is therefore ectothermic.\n10. Since Henry is ectothermic, he cannot be endothermic.\n11. Since no penguins are ectothermic, Henry cannot be a penguin.\n12. Either Henry is a penguin or Henry is endothermic.\n13. From steps 9 and 10, we know Henry is neither.\n14. The conclusion must be false as Henry cannot be both a penguin and endothermic simultaneously.\nAnswer: (B) False",
+        "filter_reasoning_steps": [
+            "No birds are ectothermic.",
+            "All penguins are birds.",
+            null,
+            "An animal is either ectothermic or endothermic.",
+            "All endothermic animals produce heat within the body.",
+            "Ron is not a bird and does not produce heat with the body.",
+            "Ron is.",
+            null,
+            "Henry is not a cat and does not produce heat with the body.",
+            "Henry is.",
+            "Since Henry is ectothermic, he cannot be endothermic.",
+            "Since no penguins are ectothermic, Henry cannot be a penguin.",
+            "Either Henry is a penguin or Henry is endothermic.",
+            "From steps 9 and 10, we know Henry is neither.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) no birds are ectothermic.",
+                "fol": "∀x (bird(x) → ¬ectothermic(x))",
+                "tptp": "![X]: (bird(X) => ~ectothermic(X))"
+            },
+            {
+                "ref": "(2) all penguins are birds.",
+                "fol": "∀x (penguin(x) → bird(x))",
+                "tptp": "![X]: (penguin(X) => bird(X))"
+            },
+            {
+                "ref": "(3) an animal is ectothermic or endothermic.",
+                "fol": "∀x (ectothermic(x) ⊕ endothermic(x))",
+                "tptp": "![X]: (((~(ectothermic(X)) & (endothermic(X))) | ((ectothermic(X)) & ~(endothermic(X)))))"
+            },
+            {
+                "ref": "(4) all endothermic animals produce heat within the body.",
+                "fol": "∀x (endothermic(x) → produceheat(x))",
+                "tptp": "![X]: (endothermic(X) => produceheat(X))"
+            },
+            {
+                "ref": "(5) ron and henry are both animals.",
+                "fol": "animal(ron) ∧ animal(henry)",
+                "tptp": "animal(ron) & animal(henry)"
+            },
+            {
+                "ref": "(6) ron is not a bird and does not produce heat with the body.",
+                "fol": "¬bird(ron) ∧ ¬produceheat(ron)",
+                "tptp": "~bird(ron) & ~produceheat(ron)"
+            },
+            {
+                "ref": "(7) henry is not a cat and does not produce heat with the body.",
+                "fol": "¬cat(henry) ∧ ¬produceheat(henry)",
+                "tptp": "~cat(henry) & ~produceheat(henry)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(13) either henry is a penguin or henry is endothermic.",
+            "fol": "penguin(henry) ⊕ endothermic(henry)",
+            "tptp": "((~(penguin(henry)) & (endothermic(henry))) | ((penguin(henry)) & ~(endothermic(henry))))"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) no birds are ectothermic.",
+                "fol": "∀x (bird(x) → ¬ectothermic(x))",
+                "tptp": "![X]: (bird(X) => ~ectothermic(X))"
+            },
+            {
+                "ref": "(2) all penguins are birds.",
+                "fol": "∀x (penguin(x) → bird(x))",
+                "tptp": "![X]: (penguin(X) => bird(X))"
+            },
+            {
+                "ref": "(3) an animal is either ectothermic or endothermic.",
+                "fol": "∀x (ectothermic(x) ⊕ endothermic(x))",
+                "tptp": "![X]: (((~(ectothermic(X)) & (endothermic(X))) | ((ectothermic(X)) & ~(endothermic(X)))))"
+            },
+            {
+                "ref": "(4) all endothermic animals produce heat within the body.",
+                "fol": "∀x (endothermic(x) → produceheat(x))",
+                "tptp": "![X]: (endothermic(X) => produceheat(X))"
+            },
+            {
+                "ref": "(5) ron is not a bird and does not produce heat with the body.",
+                "fol": "¬bird(ron) ∧ ¬produceheat(ron)",
+                "tptp": "~bird(ron) & ~produceheat(ron)"
+            },
+            {
+                "ref": "(6) ron is.",
+                "fol": "animal(ron)",
+                "tptp": "animal(ron)"
+            },
+            {
+                "ref": "(7) henry is not a cat and does not produce heat with the body.",
+                "fol": "¬cat(henry) ∧ ¬produceheat(henry)",
+                "tptp": "~cat(henry) & ~produceheat(henry)"
+            },
+            {
+                "ref": "(8) henry is.",
+                "fol": "animal(henry)",
+                "tptp": "animal(henry)"
+            },
+            {
+                "ref": "(9) since henry is ectothermic, he cannot be endothermic.",
+                "fol": "ectothermic(henry) → ¬endothermic(henry)",
+                "tptp": "ectothermic(henry) => ~endothermic(henry)"
+            },
+            {
+                "ref": "(10) since no penguins are ectothermic, henry cannot be a penguin.",
+                "fol": "¬∃x (penguin(x) ∧ ectothermic(x)) → ¬penguin(henry)",
+                "tptp": "~?[X]: (penguin(X) & ectothermic(X)) => ~penguin(henry)"
+            },
+            {
+                "ref": "(12) from steps 9 and 10, we know henry is neither.",
+                "fol": "¬penguin(henry) ∧ ¬endothermic(henry)",
+                "tptp": "~penguin(henry) & ~endothermic(henry)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "No birds are ectothermic.",
+            "All penguins are birds.",
+            "An animal is either ectothermic or endothermic.",
+            "All endothermic animals produce heat within the body.",
+            "Ron is not a bird and does not produce heat with the body.",
+            "Ron is.",
+            "Henry is not a cat and does not produce heat with the body.",
+            "Henry is.",
+            "Since Henry is ectothermic, he cannot be endothermic.",
+            "Since no penguins are ectothermic, Henry cannot be a penguin.",
+            "Either Henry is a penguin or Henry is endothermic."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "15_41",
+        "premises": [
+            "Elephantopus is a genus of perennial plants in the daisy family.",
+            "Elephantopus is widespread over much of Africa, southern Asia, Australia, and the Americas.",
+            "Several species of Elephantopus are native to the southeastern United States.",
+            "Elephantopus scaber is a traditional medicine."
+        ],
+        "question": [
+            "Elephantopus is found in Australia and Southern Asia."
+        ],
+        "premises_gt_fol": [
+            "∀x (Elephantopus(x) → (Genus(x, perennialplants) ∧ BelongTo(x, daisyfamily)))",
+            "∃x ∃y ∃z(Elephantopus(x) ∧ In(x,africa) ∧ (¬(x=y)) ∧ Elephantopus(y) ∧ In(y, southernasia) ∧ (¬(x=z)) ∧ (¬(y=z)) ∧ Elephantopus(z) ∧ In(z, australia))",
+            "∃x ∃y (Elephantopus(x) ∧ NativeTo(x, southeasternunitedstates) ∧ (¬(x=y)) ∧ Elephantopus(y) ∧ NativeTo(y, southeasternunitedstates))",
+            "∀x (ElephantopusScaber(x) → TraditionalMedicine(x))"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Elephantopus is widespread over much of Africa, southern Asia, Australia, and the Americas.",
+            "This includes Australia and southern Asia.",
+            "Elephantopus is a genus of perennial plants in the daisy family.",
+            "This fact is about the classification of Elephantopus, not its distribution.",
+            "Several species of Elephantopus are native to the southeastern United States.",
+            "This information is about specific species, not the genus as a whole.",
+            "Elephantopus scaber is a traditional medicine.",
+            "This fact is unrelated to its geographical distribution."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "",
+        "content": "Thoughts:\nElephantopus is widespread over much of Africa, southern Asia, Australia, and the Americas.\nThis includes Australia and southern Asia.\nElephantopus is a genus of perennial plants in the daisy family.\nThis fact is about the classification of Elephantopus, not its distribution.\nSeveral species of Elephantopus are native to the southeastern United States.\nThis information is about specific species, not the genus as a whole.\nElephantopus scaber is a traditional medicine.\nThis fact is unrelated to its geographical distribution.\nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "Elephantopus is widespread over much of Africa, southern Asia, Australia, and the Americas.",
+            "This includes Australia and southern Asia.",
+            "Elephantopus is a genus of perennial plants in the daisy family.",
+            "This fact is about the classification of Elephantopus, not its distribution.",
+            "Several species of Elephantopus are native to the southeastern United States.",
+            "This information is about specific species, not the genus as a whole.",
+            "Elephantopus scaber is a traditional medicine.",
+            "This fact is unrelated to its geographical distribution."
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) elephantopus is a genus of perennial plants in the daisy family.",
+                "fol": "genus(elephantopus) ∧ perennial(elephantopus) ∧ daisyfamily(elephantopus)",
+                "tptp": "genus(elephantopus) & perennial(elephantopus) & daisyfamily(elephantopus)"
+            },
+            {
+                "ref": "(2) elephantopus is widespread over much of africa, southern asia, australia, and the americas.",
+                "fol": "widespread(elephantopus, africa) ∧ widespread(elephantopus, southern_asia) ∧ widespread(elephantopus, australia) ∧ widespread(elephantopus, americas)",
+                "tptp": "widespread(elephantopus, africa) & widespread(elephantopus, southern_asia) & widespread(elephantopus, australia) & widespread(elephantopus, americas)"
+            },
+            {
+                "ref": "(3) several species of elephantopus are native to the southeastern united states.",
+                "fol": "∃x (species(x, elephantopus) ∧ native(x, southeastern_us))",
+                "tptp": "?[X]: (species(X, elephantopus) & native(X, southeastern_us))"
+            },
+            {
+                "ref": "(4) elephantopus scaber is a traditional medicine.",
+                "fol": "traditionalmedicine(elephantopus_scaber)",
+                "tptp": "traditionalmedicine(elephantopus_scaber)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(9) elephantopus is found in australia and southern asia.",
+            "fol": "widespread(elephantopus, australia) ∧ widespread(elephantopus, southern_asia)",
+            "tptp": "widespread(elephantopus, australia) & widespread(elephantopus, southern_asia)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) elephantopus is widespread over much of africa, southern asia, australia, and the americas.",
+                "fol": "widespread(elephantopus, africa) ∧ widespread(elephantopus, southern_asia) ∧ widespread(elephantopus, australia) ∧ widespread(elephantopus, americas)",
+                "tptp": "widespread(elephantopus, africa) & widespread(elephantopus, southern_asia) & widespread(elephantopus, australia) & widespread(elephantopus, americas)"
+            },
+            {
+                "ref": "(3) elephantopus is a genus of perennial plants in the daisy family.",
+                "fol": "genus(elephantopus) ∧ perennial(elephantopus) ∧ daisyfamily(elephantopus)",
+                "tptp": "genus(elephantopus) & perennial(elephantopus) & daisyfamily(elephantopus)"
+            },
+            {
+                "ref": "(4) this fact is about the classification of elephantopus, not its distribution.",
+                "fol": "genus(elephantopus) ∧ perennial(elephantopus) ∧ daisyfamily(elephantopus)",
+                "tptp": "genus(elephantopus) & perennial(elephantopus) & daisyfamily(elephantopus)"
+            },
+            {
+                "ref": "(5) several species of elephantopus are native to the southeastern united states.",
+                "fol": "∃x (species(x, elephantopus) ∧ native(x, southeastern_us))",
+                "tptp": "?[X]: (species(X, elephantopus) & native(X, southeastern_us))"
+            },
+            {
+                "ref": "(6) this information is about specific species, not the genus as a whole.",
+                "fol": "∃x (species(x, elephantopus) ∧ native(x, southeastern_us))",
+                "tptp": "?[X]: (species(X, elephantopus) & native(X, southeastern_us))"
+            },
+            {
+                "ref": "(7) elephantopus scaber is a traditional medicine.",
+                "fol": "traditionalmedicine(elephantopus_scaber)",
+                "tptp": "traditionalmedicine(elephantopus_scaber)"
+            },
+            {
+                "ref": "(8) this fact is unrelated to its geographical distribution.",
+                "fol": "traditionalmedicine(elephantopus_scaber)",
+                "tptp": "traditionalmedicine(elephantopus_scaber)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Elephantopus is widespread over much of Africa, southern Asia, Australia, and the Americas.",
+            "This includes Australia and southern Asia.",
+            "Elephantopus is a genus of perennial plants in the daisy family.",
+            "This fact is about the classification of Elephantopus, not its distribution.",
+            "Several species of Elephantopus are native to the southeastern United States.",
+            "This information is about specific species, not the genus as a whole.",
+            "Elephantopus scaber is a traditional medicine."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "316_790",
+        "premises": [
+            "There are no mansion houses in an urban area.",
+            "All skyscrapers are in urban areas.",
+            "Every creepy haunted house is a mansion house.",
+            "Every terrifying building on Halloween is a creepy haunted house.",
+            "The LaLaurie House is a creepy haunted house or a terrifying building on Halloween."
+        ],
+        "question": [
+            "The LaLaurie House is not a skyscraper."
+        ],
+        "premises_gt_fol": [
+            "∀x (InUrbanArea(x) → ¬MansionHouse(x))",
+            "∀x (Skyscraper(x) → InUrbanArea(x))",
+            "∀x (CreepyHauntedHouse(x) → MansionHouse(x))",
+            "∀x (TerrifyingBuilding(x) ∧ OnHalloween(x) → CreepyHauntedHouse(x))",
+            "CreepyHauntedHouse(laLaurieHouse) ∨ TerrifyingBuilding(laLaurieHouse) ∧ OnHalloween(laLaurieHouse)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "All skyscrapers are in urban areas.",
+            "Every creepy haunted house is a mansion house.",
+            "There are no mansion houses in an urban area.",
+            "Every terrifying building on Halloween is a creepy haunted house.",
+            "The LaLaurie House is a creepy haunted house or a terrifying building on Halloween.",
+            "If the LaLaurie House is a terrifying building on Halloween, it is also a creepy haunted house.",
+            "From statements 2 and 3, we know that a creepy haunted house cannot be a mansion house.",
+            "Therefore, the LaLaurie House cannot be a mansion house if it is a terrifying building on Halloween.",
+            "Since there are no mansion houses in an urban area, and all skyscrapers are in urban areas, the LaLaurie House cannot be a skyscraper if it is a mansion house.",
+            "The LaLaurie House is either a creepy haunted house or a terrifying building on Halloween.",
+            "If the LaLaurie House is a creepy haunted house, it cannot be a skyscraper.",
+            "it is not a mansion house.",
+            "If the LaLaurie House is a terrifying building on Halloween, it is also a creepy haunted house, and thus cannot be a skyscraper.",
+            "In both cases, the LaLaurie House cannot be a skyscraper."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "",
+        "content": "Thoughts:\n1. All skyscrapers are in urban areas.\n2. Every creepy haunted house is a mansion house.\n3. There are no mansion houses in an urban area.\n4. Every terrifying building on Halloween is a creepy haunted house.\n5. The LaLaurie House is a creepy haunted house or a terrifying building on Halloween.\n6. If the LaLaurie House is a terrifying building on Halloween, it is also a creepy haunted house.\n7. From statements 2 and 3, we know that a creepy haunted house cannot be a mansion house.\n8. Therefore, the LaLaurie House cannot be a mansion house if it is a terrifying building on Halloween.\n9. Since there are no mansion houses in an urban area, and all skyscrapers are in urban areas, the LaLaurie House cannot be a skyscraper if it is a mansion house.\n10. The LaLaurie House is either a creepy haunted house or a terrifying building on Halloween.\n11. If the LaLaurie House is a creepy haunted house, it cannot be a skyscraper because it is not a mansion house.\n12. If the LaLaurie House is a terrifying building on Halloween, it is also a creepy haunted house, and thus cannot be a skyscraper.\n13. In both cases, the LaLaurie House cannot be a skyscraper.\nAnswer: (A) True",
+        "filter_reasoning_steps": [
+            "All skyscrapers are in urban areas.",
+            "Every creepy haunted house is a mansion house.",
+            "There are no mansion houses in an urban area.",
+            "Every terrifying building on Halloween is a creepy haunted house.",
+            "The LaLaurie House is a creepy haunted house or a terrifying building on Halloween.",
+            "If the LaLaurie House is a terrifying building on Halloween, it is also a creepy haunted house.",
+            "From statements 2 and 3, we know that a creepy haunted house cannot be a mansion house.",
+            null,
+            "Since there are no mansion houses in an urban area, and all skyscrapers are in urban areas, the LaLaurie House cannot be a skyscraper if it is a mansion house.",
+            "The LaLaurie House is either a creepy haunted house or a terrifying building on Halloween.",
+            "If the LaLaurie House is a creepy haunted house, it cannot be a skyscraper.",
+            "it is not a mansion house.",
+            "If the LaLaurie House is a terrifying building on Halloween, it is also a creepy haunted house, and thus cannot be a skyscraper.",
+            "In both cases, the LaLaurie House cannot be a skyscraper."
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) there are no mansion houses in an urban area.",
+                "fol": "¬∃x (mansionhouse(x) ∧ urbanarea(x))",
+                "tptp": "~?[X]: (mansionhouse(X) & urbanarea(X))"
+            },
+            {
+                "ref": "(2) all skyscrapers are in urban areas.",
+                "fol": "∀x (skyscraper(x) → urbanarea(x))",
+                "tptp": "![X]: (skyscraper(X) => urbanarea(X))"
+            },
+            {
+                "ref": "(3) every creepy haunted house is a mansion house.",
+                "fol": "∀x (creepyhauntedhouse(x) → mansionhouse(x))",
+                "tptp": "![X]: (creepyhauntedhouse(X) => mansionhouse(X))"
+            },
+            {
+                "ref": "(4) every terrifying building on halloween is a creepy haunted house.",
+                "fol": "∀x (terrifyingbuildingonhalloween(x) → creepyhauntedhouse(x))",
+                "tptp": "![X]: (terrifyingbuildingonhalloween(X) => creepyhauntedhouse(X))"
+            },
+            {
+                "ref": "(5) the lalaurie house is a creepy haunted house or a terrifying building on halloween.",
+                "fol": "creepyhauntedhouse(lalauriehouse) ∨ terrifyingbuildingonhalloween(lalauriehouse)",
+                "tptp": "creepyhauntedhouse(lalauriehouse) | terrifyingbuildingonhalloween(lalauriehouse)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(14) the lalaurie house is not a skyscraper.",
+            "fol": "¬skyscraper(lalauriehouse)",
+            "tptp": "~skyscraper(lalauriehouse)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) all skyscrapers are in urban areas.",
+                "fol": "∀x (skyscraper(x) → urbanarea(x))",
+                "tptp": "![X]: (skyscraper(X) => urbanarea(X))"
+            },
+            {
+                "ref": "(2) every creepy haunted house is a mansion house.",
+                "fol": "∀x (creepyhauntedhouse(x) → mansionhouse(x))",
+                "tptp": "![X]: (creepyhauntedhouse(X) => mansionhouse(X))"
+            },
+            {
+                "ref": "(3) there are no mansion houses in an urban area.",
+                "fol": "¬∃x (mansionhouse(x) ∧ urbanarea(x))",
+                "tptp": "~?[X]: (mansionhouse(X) & urbanarea(X))"
+            },
+            {
+                "ref": "(4) every terrifying building on halloween is a creepy haunted house.",
+                "fol": "∀x (terrifyingbuildingonhalloween(x) → creepyhauntedhouse(x))",
+                "tptp": "![X]: (terrifyingbuildingonhalloween(X) => creepyhauntedhouse(X))"
+            },
+            {
+                "ref": "(5) the lalaurie house is a creepy haunted house or a terrifying building on halloween.",
+                "fol": "creepyhauntedhouse(lalauriehouse) ∨ terrifyingbuildingonhalloween(lalauriehouse)",
+                "tptp": "creepyhauntedhouse(lalauriehouse) | terrifyingbuildingonhalloween(lalauriehouse)"
+            },
+            {
+                "ref": "(6) if the lalaurie house is a terrifying building on halloween, it is also a creepy haunted house.",
+                "fol": "terrifyingbuildingonhalloween(lalauriehouse) → creepyhauntedhouse(lalauriehouse)",
+                "tptp": "terrifyingbuildingonhalloween(lalauriehouse) => creepyhauntedhouse(lalauriehouse)"
+            },
+            {
+                "ref": "(7) from statements 2 and 3, we know that a creepy haunted house cannot be a mansion house.",
+                "fol": "¬∃x (creepyhauntedhouse(x) ∧ mansionhouse(x))",
+                "tptp": "~?[X]: (creepyhauntedhouse(X) & mansionhouse(X))"
+            },
+            {
+                "ref": "(8) since there are no mansion houses in an urban area, and all skyscrapers are in urban areas, the lalaurie house cannot be a skyscraper if it is a mansion house.",
+                "fol": "¬(mansionhouse(lalauriehouse) ∧ skyscraper(lalauriehouse))",
+                "tptp": "~(mansionhouse(lalauriehouse) & skyscraper(lalauriehouse))"
+            },
+            {
+                "ref": "(9) the lalaurie house is either a creepy haunted house or a terrifying building on halloween.",
+                "fol": "creepyhauntedhouse(lalauriehouse) ∨ terrifyingbuildingonhalloween(lalauriehouse)",
+                "tptp": "creepyhauntedhouse(lalauriehouse) | terrifyingbuildingonhalloween(lalauriehouse)"
+            },
+            {
+                "ref": "(10) if the lalaurie house is a creepy haunted house, it cannot be a skyscraper.",
+                "fol": "creepyhauntedhouse(lalauriehouse) → ¬skyscraper(lalauriehouse)",
+                "tptp": "creepyhauntedhouse(lalauriehouse) => ~skyscraper(lalauriehouse)"
+            },
+            {
+                "ref": "(11) it is not a mansion house.",
+                "fol": "¬mansionhouse(lalauriehouse)",
+                "tptp": "~mansionhouse(lalauriehouse)"
+            },
+            {
+                "ref": "(12) if the lalaurie house is a terrifying building on halloween, it is also a creepy haunted house, and thus cannot be a skyscraper.",
+                "fol": "(terrifyingbuildingonhalloween(lalauriehouse) → creepyhauntedhouse(lalauriehouse)) ∧ ¬skyscraper(lalauriehouse)",
+                "tptp": "(terrifyingbuildingonhalloween(lalauriehouse) => creepyhauntedhouse(lalauriehouse)) & ~skyscraper(lalauriehouse)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "All skyscrapers are in urban areas.",
+            "Every creepy haunted house is a mansion house.",
+            "There are no mansion houses in an urban area.",
+            "Every terrifying building on Halloween is a creepy haunted house.",
+            "The LaLaurie House is a creepy haunted house or a terrifying building on Halloween.",
+            "If the LaLaurie House is a terrifying building on Halloween, it is also a creepy haunted house.",
+            "From statements 2 and 3, we know that a creepy haunted house cannot be a mansion house.",
+            "Since there are no mansion houses in an urban area, and all skyscrapers are in urban areas, the LaLaurie House cannot be a skyscraper if it is a mansion house.",
+            "The LaLaurie House is either a creepy haunted house or a terrifying building on Halloween.",
+            "If the LaLaurie House is a creepy haunted house, it cannot be a skyscraper.",
+            "it is not a mansion house.",
+            "If the LaLaurie House is a terrifying building on Halloween, it is also a creepy haunted house, and thus cannot be a skyscraper."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "False",
+            "True",
+            "True",
+            "True",
+            "False",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T2",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "False",
+            "True",
+            "True",
+            "True",
+            "False",
+            "True"
+        ]
+    },
+    {
+        "idx": "57_170",
+        "premises": [
+            "All pets are animals.",
+            "Pets can be either a dog or a cat.",
+            "If a person has a pet, they care for that pet. ",
+            "Dogs and cats can be naughty. ",
+            "Pets who are naughty are not liked as much. ",
+            "Charlie has a naughty pet dog named Leo. "
+        ],
+        "question": [
+            "Dogs are not always naughty."
+        ],
+        "premises_gt_fol": [
+            "∀x (Pet(x) → Animal(x))",
+            "∀x (Pet(x) → (Dog(x) ⊕ Cat(x)))",
+            "∀x ∀y ((Pet(y) ∧ OwnedBy(x,y)) → Cares(x, y))",
+            "∃x ∃y (Cat(x) ∧ Naughty(x) ∧ (¬(x=y)) ∧ Dog(y) ∧ Naughty(y))",
+            "∀x ∀y ((Pet(x) ∧ Naughty(x) ∧ OwnedBy(x,y)) → ¬Liked(x, y))",
+            "OwnedBy(leo, charlie) ∧ Pet(leo) ∧ Dog(leo) ∧ Naughty(leo)"
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "All pets are animals.",
+            "Pets can be either a dog or a cat.",
+            "If a person has a pet, they care for that pet.",
+            "Dogs and cats can be naughty.",
+            "Pets who are naughty are not liked as much.",
+            "Charlie has a naughty pet dog named Leo.",
+            "A dog being naughty does not imply all dogs are naughty.",
+            "There are other pets besides Charlie's dog that might not be naughty."
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "reasoning_content": "",
+        "content": "Thoughts:\n1. All pets are animals.\n2. Pets can be either a dog or a cat.\n3. If a person has a pet, they care for that pet.\n4. Dogs and cats can be naughty.\n5. Pets who are naughty are not liked as much.\n6. Charlie has a naughty pet dog named Leo.\n7. A dog being naughty does not imply all dogs are naughty.\n8. There are other pets besides Charlie's dog that might not be naughty.\n\nAnswer: (B) False",
+        "filter_reasoning_steps": [
+            "All pets are animals.",
+            "Pets can be either a dog or a cat.",
+            "If a person has a pet, they care for that pet.",
+            "Dogs and cats can be naughty.",
+            "Pets who are naughty are not liked as much.",
+            "Charlie has a naughty pet dog named Leo.",
+            "A dog being naughty does not imply all dogs are naughty.",
+            "There are other pets besides Charlie's dog that might not be naughty."
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) all pets are animals.",
+                "fol": "∀x (pet(x) → animal(x))",
+                "tptp": "![X]: (pet(X) => animal(X))"
+            },
+            {
+                "ref": "(2) pets can be either a dog or a cat.",
+                "fol": "∀x (pet(x) → (dog(x) ⊕ cat(x)))",
+                "tptp": "![X]: (pet(X) => (((~(dog(X)) & (cat(X))) | ((dog(X)) & ~(cat(X))))))"
+            },
+            {
+                "ref": "(3) if a person has a pet, they care for that pet.",
+                "fol": "∀x ∀y ((haspet(y, x) ∧ pet(x)) → caresfor(y, x))",
+                "tptp": "![X]: ![Y]: ((haspet(Y, X) & pet(X)) => caresfor(Y, X))"
+            },
+            {
+                "ref": "(4) dogs and cats can be naughty.",
+                "fol": "∀x ((dog(x) ∨ cat(x)) → naughty(x))",
+                "tptp": "![X]: ((dog(X) | cat(X)) => naughty(X))"
+            },
+            {
+                "ref": "(5) pets who are naughty are not liked as much.",
+                "fol": "∀x ((pet(x) ∧ naughty(x)) → ¬likedasmuch(x))",
+                "tptp": "![X]: ((pet(X) & naughty(X)) => ~likedasmuch(X))"
+            },
+            {
+                "ref": "(6) charlie has a naughty pet dog named leo.",
+                "fol": "pet(leo) ∧ dog(leo) ∧ naughty(leo) ∧ haspet(charlie, leo)",
+                "tptp": "pet(leo) & dog(leo) & naughty(leo) & haspet(charlie, leo)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(9) dogs are not always naughty.",
+            "fol": "¬∀x (dog(x) → naughty(x))",
+            "tptp": "~![X]: (dog(X) => naughty(X))"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) all pets are animals.",
+                "fol": "∀x (pet(x) → animal(x))",
+                "tptp": "![X]: (pet(X) => animal(X))"
+            },
+            {
+                "ref": "(2) pets can be either a dog or a cat.",
+                "fol": "∀x (pet(x) → (dog(x) ⊕ cat(x)))",
+                "tptp": "![X]: (pet(X) => (((~(dog(X)) & (cat(X))) | ((dog(X)) & ~(cat(X))))))"
+            },
+            {
+                "ref": "(3) if a person has a pet, they care for that pet.",
+                "fol": "∀x ∀y ((haspet(y, x) ∧ pet(x)) → caresfor(y, x))",
+                "tptp": "![X]: ![Y]: ((haspet(Y, X) & pet(X)) => caresfor(Y, X))"
+            },
+            {
+                "ref": "(4) dogs and cats can be naughty.",
+                "fol": "∀x ((dog(x) ∨ cat(x)) → naughty(x))",
+                "tptp": "![X]: ((dog(X) | cat(X)) => naughty(X))"
+            },
+            {
+                "ref": "(5) pets who are naughty are not liked as much.",
+                "fol": "∀x ((pet(x) ∧ naughty(x)) → ¬likedasmuch(x))",
+                "tptp": "![X]: ((pet(X) & naughty(X)) => ~likedasmuch(X))"
+            },
+            {
+                "ref": "(6) charlie has a naughty pet dog named leo.",
+                "fol": "pet(leo) ∧ dog(leo) ∧ naughty(leo) ∧ haspet(charlie, leo)",
+                "tptp": "pet(leo) & dog(leo) & naughty(leo) & haspet(charlie, leo)"
+            },
+            {
+                "ref": "(7) a dog being naughty does not imply all dogs are naughty.",
+                "fol": "¬(∀x (dog(x) → naughty(x)))",
+                "tptp": "~(![X]: (dog(X) => naughty(X)))"
+            },
+            {
+                "ref": "(8) there are other pets besides charlie's dog that might not be naughty.",
+                "fol": "∃x (pet(x) ∧ ¬naughty(x) ∧ ¬(x = leo))",
+                "tptp": "?[X]: (pet(X) & ~naughty(X) & ~(X = leo))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "All pets are animals.",
+            "Pets can be either a dog or a cat.",
+            "If a person has a pet, they care for that pet.",
+            "Dogs and cats can be naughty.",
+            "Pets who are naughty are not liked as much.",
+            "Charlie has a naughty pet dog named Leo.",
+            "A dog being naughty does not imply all dogs are naughty.",
+            "There are other pets besides Charlie's dog that might not be naughty."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "False",
+            "False"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T2",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "Unknown",
+            "Unknown"
+        ]
+    },
+    {
+        "idx": "444_1278",
+        "premises": [
+            "All birds have wings.",
+            "Animals with wings aren't reptiles.",
+            "Some animals that fly are birds.",
+            "If something is an iguana, then it is a reptile. Simeng: All iguanas are reptiles. ",
+            "John is either both an iguana and a bird, or he is neither. ",
+            "John is an animal. "
+        ],
+        "question": [
+            "John is not both an iguana and an animal that can fly."
+        ],
+        "premises_gt_fol": [
+            "∀x (Bird(x) → ∃y ∃z (¬(y=z) ∧ Wing(y) ∧ Wing(z) ∧ Have(x, y) ∧ Have(x, z)))",
+            "∀x (Animal(x) ∧ (∃y ∃z (¬(y=z) ∧ Wing(y) ∧ Wing(z) ∧ Have(x, y) ∧ Have(x, z))) → ¬Reptile(x))",
+            "∃x (Animal(x) ∧ Fly(x) ∧ Bird(x))",
+            "∀x (Iguana(x) → Reptile(x))",
+            "¬(Iguana(john) ⊕ Bird(john))",
+            "Animal(john)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "All birds have wings.",
+            "Animals with wings aren't reptiles.",
+            "Some animals that fly are birds.",
+            "If something is an iguana, then it is a reptile.",
+            "All iguanas are reptiles.",
+            "John is either both an iguana and a bird, or he is neither.",
+            "John is an animal.",
+            "Iguanas are reptiles.",
+            "Reptiles don't have wings.",
+            "Birds can fly.",
+            "If John were a bird, he would have wings.",
+            "If John had wings, he couldn't be a reptile.",
+            "If John were an iguana, he wouldn't be a bird.",
+            "Since John is an animal and can't be both a bird and a reptile, he can't be both an iguana and a bird.",
+            "Therefore, if John can fly, he must be a bird, which contradicts him being a reptile."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "",
+        "content": "Thoughts:\n1. All birds have wings.\n2. Animals with wings aren't reptiles.\n3. Some animals that fly are birds.\n4. If something is an iguana, then it is a reptile.\n5. All iguanas are reptiles.\n6. John is either both an iguana and a bird, or he is neither.\n7. John is an animal.\n8. Iguanas are reptiles.\n9. Reptiles don't have wings.\n10. Birds can fly.\n11. If John were a bird, he would have wings.\n12. If John had wings, he couldn't be a reptile.\n13. If John were an iguana, he wouldn't be a bird.\n14. Since John is an animal and can't be both a bird and a reptile, he can't be both an iguana and a bird.\n15. Therefore, if John can fly, he must be a bird, which contradicts him being a reptile.\n\nAnswer: (A) True",
+        "filter_reasoning_steps": [
+            "All birds have wings.",
+            "Animals with wings aren't reptiles.",
+            "Some animals that fly are birds.",
+            "If something is an iguana, then it is a reptile.",
+            "All iguanas are reptiles.",
+            "John is either both an iguana and a bird, or he is neither.",
+            "John is an animal.",
+            "Iguanas are reptiles.",
+            "Reptiles don't have wings.",
+            "Birds can fly.",
+            "If John were a bird, he would have wings.",
+            "If John had wings, he couldn't be a reptile.",
+            "If John were an iguana, he wouldn't be a bird.",
+            "Since John is an animal and can't be both a bird and a reptile, he can't be both an iguana and a bird.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) all birds have wings.",
+                "fol": "∀x (bird(x) → haswings(x))",
+                "tptp": "![X]: (bird(X) => haswings(X))"
+            },
+            {
+                "ref": "(2) animals with wings aren't reptiles.",
+                "fol": "∀x (haswings(x) → ¬reptile(x))",
+                "tptp": "![X]: (haswings(X) => ~reptile(X))"
+            },
+            {
+                "ref": "(3) some animals that fly are birds.",
+                "fol": "∃x (fly(x) ∧ bird(x))",
+                "tptp": "?[X]: (fly(X) & bird(X))"
+            },
+            {
+                "ref": "(4) if something is an iguana, then it is a reptile.",
+                "fol": "∀x (iguana(x) → reptile(x))",
+                "tptp": "![X]: (iguana(X) => reptile(X))"
+            },
+            {
+                "ref": "(5) john is either both an iguana and a bird, or he is neither.",
+                "fol": "(iguana(john) ∧ bird(john)) ⊕ ¬(iguana(john) ∨ bird(john))",
+                "tptp": "((~((iguana(john) & bird(john))) & (~(iguana(john) | bird(john)))) | (((iguana(john) & bird(john))) & ~(~(iguana(john) | bird(john)))))"
+            },
+            {
+                "ref": "(6) john is an animal.",
+                "fol": "animal(john)",
+                "tptp": "animal(john)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(15) john is not both an iguana and an animal that can fly.",
+            "fol": "¬(iguana(john) ∧ fly(john))",
+            "tptp": "~(iguana(john) & fly(john))"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) all birds have wings.",
+                "fol": "∀x (bird(x) → haswings(x))",
+                "tptp": "![X]: (bird(X) => haswings(X))"
+            },
+            {
+                "ref": "(2) animals with wings aren't reptiles.",
+                "fol": "∀x (haswings(x) → ¬reptile(x))",
+                "tptp": "![X]: (haswings(X) => ~reptile(X))"
+            },
+            {
+                "ref": "(3) some animals that fly are birds.",
+                "fol": "∃x (fly(x) ∧ bird(x))",
+                "tptp": "?[X]: (fly(X) & bird(X))"
+            },
+            {
+                "ref": "(4) if something is an iguana, then it is a reptile.",
+                "fol": "∀x (iguana(x) → reptile(x))",
+                "tptp": "![X]: (iguana(X) => reptile(X))"
+            },
+            {
+                "ref": "(5) all iguanas are reptiles.",
+                "fol": "∀x (iguana(x) → reptile(x))",
+                "tptp": "![X]: (iguana(X) => reptile(X))"
+            },
+            {
+                "ref": "(6) john is either both an iguana and a bird, or he is neither.",
+                "fol": "(iguana(john) ∧ bird(john)) ⊕ ¬(iguana(john) ∨ bird(john))",
+                "tptp": "((~((iguana(john) & bird(john))) & (~(iguana(john) | bird(john)))) | (((iguana(john) & bird(john))) & ~(~(iguana(john) | bird(john)))))"
+            },
+            {
+                "ref": "(7) john is an animal.",
+                "fol": "animal(john)",
+                "tptp": "animal(john)"
+            },
+            {
+                "ref": "(8) iguanas are reptiles.",
+                "fol": "∀x (iguana(x) → reptile(x))",
+                "tptp": "![X]: (iguana(X) => reptile(X))"
+            },
+            {
+                "ref": "(9) reptiles don't have wings.",
+                "fol": "∀x (reptile(x) → ¬haswings(x))",
+                "tptp": "![X]: (reptile(X) => ~haswings(X))"
+            },
+            {
+                "ref": "(10) birds can fly.",
+                "fol": "∀x (bird(x) → fly(x))",
+                "tptp": "![X]: (bird(X) => fly(X))"
+            },
+            {
+                "ref": "(11) if john were a bird, he would have wings.",
+                "fol": "bird(john) → haswings(john)",
+                "tptp": "bird(john) => haswings(john)"
+            },
+            {
+                "ref": "(12) if john had wings, he couldn't be a reptile.",
+                "fol": "haswings(john) → ¬reptile(john)",
+                "tptp": "haswings(john) => ~reptile(john)"
+            },
+            {
+                "ref": "(13) if john were an iguana, he wouldn't be a bird.",
+                "fol": "iguana(john) → ¬bird(john)",
+                "tptp": "iguana(john) => ~bird(john)"
+            },
+            {
+                "ref": "(14) since john is an animal and can't be both a bird and a reptile, he can't be both an iguana and a bird.",
+                "fol": "animal(john) ∧ ¬(bird(john) ∧ reptile(john)) → ¬(iguana(john) ∧ bird(john))",
+                "tptp": "animal(john) & ~(bird(john) & reptile(john)) => ~(iguana(john) & bird(john))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "All birds have wings.",
+            "Animals with wings aren't reptiles.",
+            "Some animals that fly are birds.",
+            "If something is an iguana, then it is a reptile.",
+            "All iguanas are reptiles.",
+            "John is either both an iguana and a bird, or he is neither.",
+            "John is an animal.",
+            "Iguanas are reptiles.",
+            "Reptiles don't have wings.",
+            "Birds can fly.",
+            "If John were a bird, he would have wings.",
+            "If John had wings, he couldn't be a reptile.",
+            "If John were an iguana, he wouldn't be a bird.",
+            "Since John is an animal and can't be both a bird and a reptile, he can't be both an iguana and a bird."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "Unknown",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T2",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "Unknown",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "316_792",
+        "premises": [
+            "There are no mansion houses in an urban area.",
+            "All skyscrapers are in urban areas.",
+            "Every creepy haunted house is a mansion house.",
+            "Every terrifying building on Halloween is a creepy haunted house.",
+            "The LaLaurie House is a creepy haunted house or a terrifying building on Halloween."
+        ],
+        "question": [
+            "The LaLaurie House is either a skyscraper or a mansion house."
+        ],
+        "premises_gt_fol": [
+            "∀x (InUrbanArea(x) → ¬MansionHouse(x))",
+            "∀x (Skyscraper(x) → InUrbanArea(x))",
+            "∀x (CreepyHauntedHouse(x) → MansionHouse(x))",
+            "∀x (TerrifyingBuilding(x) ∧ OnHalloween(x) → CreepyHauntedHouse(x))",
+            "CreepyHauntedHouse(laLaurieHouse) ∨ TerrifyingBuilding(laLaurieHouse) ∧ OnHalloween(laLaurieHouse)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Every creepy haunted house is a mansion house.",
+            "The LaLaurie House is a creepy haunted house.",
+            "Therefore, the LaLaurie House is a mansion house.",
+            "Every terrifying building on Halloween is a creepy haunted house.",
+            "The LaLaurie House is a creepy haunted house or a terrifying building on Halloween.",
+            "If the LaLaurie House is a terrifying building on Halloween, it is also a creepy haunted house.",
+            "The LaLaurie House is a mansion house.",
+            "Mansion houses are not in urban areas.",
+            "Skyscrapers are in urban areas.",
+            "The LaLaurie House cannot be a skyscraper.",
+            "it is a mansion house."
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "reasoning_content": "",
+        "content": "Thoughts:\nEvery creepy haunted house is a mansion house.\nThe LaLaurie House is a creepy haunted house.\nTherefore, the LaLaurie House is a mansion house.\nEvery terrifying building on Halloween is a creepy haunted house.\nThe LaLaurie House is a creepy haunted house or a terrifying building on Halloween.\nIf the LaLaurie House is a terrifying building on Halloween, it is also a creepy haunted house.\nThe LaLaurie House is a mansion house.\nMansion houses are not in urban areas.\nSkyscrapers are in urban areas.\nThe LaLaurie House cannot be a skyscraper because it is a mansion house.\nAnswer:\n(B) False",
+        "filter_reasoning_steps": [
+            "Every creepy haunted house is a mansion house.",
+            "The LaLaurie House is a creepy haunted house.",
+            null,
+            "Every terrifying building on Halloween is a creepy haunted house.",
+            "The LaLaurie House is a creepy haunted house or a terrifying building on Halloween.",
+            "If the LaLaurie House is a terrifying building on Halloween, it is also a creepy haunted house.",
+            "The LaLaurie House is a mansion house.",
+            "Mansion houses are not in urban areas.",
+            "Skyscrapers are in urban areas.",
+            "The LaLaurie House cannot be a skyscraper.",
+            "it is a mansion house."
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) there are no mansion houses in an urban area.",
+                "fol": "¬∃x (mansionhouse(x) ∧ urbanarea(x))",
+                "tptp": "~?[X]: (mansionhouse(X) & urbanarea(X))"
+            },
+            {
+                "ref": "(2) all skyscrapers are in urban areas.",
+                "fol": "∀x (skyscraper(x) → urbanarea(x))",
+                "tptp": "![X]: (skyscraper(X) => urbanarea(X))"
+            },
+            {
+                "ref": "(3) every creepy haunted house is a mansion house.",
+                "fol": "∀x (creepyhauntedhouse(x) → mansionhouse(x))",
+                "tptp": "![X]: (creepyhauntedhouse(X) => mansionhouse(X))"
+            },
+            {
+                "ref": "(4) every terrifying building on halloween is a creepy haunted house.",
+                "fol": "∀x (terrifyingbuildingonhalloween(x) → creepyhauntedhouse(x))",
+                "tptp": "![X]: (terrifyingbuildingonhalloween(X) => creepyhauntedhouse(X))"
+            },
+            {
+                "ref": "(5) the lalaurie house is a creepy haunted house or a terrifying building on halloween.",
+                "fol": "creepyhauntedhouse(lalauriehouse) ∨ terrifyingbuildingonhalloween(lalauriehouse)",
+                "tptp": "creepyhauntedhouse(lalauriehouse) | terrifyingbuildingonhalloween(lalauriehouse)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(11) the lalaurie house is either a skyscraper or a mansion house.",
+            "fol": "skyscraper(lalauriehouse) ⊕ mansionhouse(lalauriehouse)",
+            "tptp": "((~(skyscraper(lalauriehouse)) & (mansionhouse(lalauriehouse))) | ((skyscraper(lalauriehouse)) & ~(mansionhouse(lalauriehouse))))"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) every creepy haunted house is a mansion house.",
+                "fol": "∀x (creepyhauntedhouse(x) → mansionhouse(x))",
+                "tptp": "![X]: (creepyhauntedhouse(X) => mansionhouse(X))"
+            },
+            {
+                "ref": "(2) the lalaurie house is a creepy haunted house.",
+                "fol": "creepyhauntedhouse(lalauriehouse)",
+                "tptp": "creepyhauntedhouse(lalauriehouse)"
+            },
+            {
+                "ref": "(3) every terrifying building on halloween is a creepy haunted house.",
+                "fol": "∀x (terrifyingbuildingonhalloween(x) → creepyhauntedhouse(x))",
+                "tptp": "![X]: (terrifyingbuildingonhalloween(X) => creepyhauntedhouse(X))"
+            },
+            {
+                "ref": "(4) the lalaurie house is a creepy haunted house or a terrifying building on halloween.",
+                "fol": "creepyhauntedhouse(lalauriehouse) ∨ terrifyingbuildingonhalloween(lalauriehouse)",
+                "tptp": "creepyhauntedhouse(lalauriehouse) | terrifyingbuildingonhalloween(lalauriehouse)"
+            },
+            {
+                "ref": "(5) if the lalaurie house is a terrifying building on halloween, it is also a creepy haunted house.",
+                "fol": "terrifyingbuildingonhalloween(lalauriehouse) → creepyhauntedhouse(lalauriehouse)",
+                "tptp": "terrifyingbuildingonhalloween(lalauriehouse) => creepyhauntedhouse(lalauriehouse)"
+            },
+            {
+                "ref": "(6) the lalaurie house is a mansion house.",
+                "fol": "mansionhouse(lalauriehouse)",
+                "tptp": "mansionhouse(lalauriehouse)"
+            },
+            {
+                "ref": "(7) mansion houses are not in urban areas.",
+                "fol": "¬∃x (mansionhouse(x) ∧ urbanarea(x))",
+                "tptp": "~?[X]: (mansionhouse(X) & urbanarea(X))"
+            },
+            {
+                "ref": "(8) skyscrapers are in urban areas.",
+                "fol": "∀x (skyscraper(x) → urbanarea(x))",
+                "tptp": "![X]: (skyscraper(X) => urbanarea(X))"
+            },
+            {
+                "ref": "(9) the lalaurie house cannot be a skyscraper.",
+                "fol": "¬skyscraper(lalauriehouse)",
+                "tptp": "~skyscraper(lalauriehouse)"
+            },
+            {
+                "ref": "(10) it is a mansion house.",
+                "fol": "mansionhouse(lalauriehouse)",
+                "tptp": "mansionhouse(lalauriehouse)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Every creepy haunted house is a mansion house.",
+            "The LaLaurie House is a creepy haunted house.",
+            "Every terrifying building on Halloween is a creepy haunted house.",
+            "The LaLaurie House is a creepy haunted house or a terrifying building on Halloween.",
+            "If the LaLaurie House is a terrifying building on Halloween, it is also a creepy haunted house.",
+            "The LaLaurie House is a mansion house.",
+            "Mansion houses are not in urban areas.",
+            "Skyscrapers are in urban areas.",
+            "The LaLaurie House cannot be a skyscraper.",
+            "it is a mansion house."
+        ],
+        "AnswerCorrect": false,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "F1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "177_509",
+        "premises": [
+            "The National Lobster Hatchery is a hatchery located in Padstow, England.",
+            "The National Lobster Hatchery is open to visitors.",
+            "A hatchery is either for profit or for conservation.",
+            "If a hatchery is for conservation, it might release animals into the wild.",
+            "The National Lobster Hatchery is not for profit."
+        ],
+        "question": [
+            "The National Lobster Hatchery is for conservation."
+        ],
+        "premises_gt_fol": [
+            "Hatchery(nationalLobsterHatchery) ∧ LocatedIn(nationalLobsterHatchery, padstowEngland)",
+            "OpenToVisitor(nationalLobsterHatchery)",
+            "∀x (Hatchery(x) → ForConservation(x) ⊕ ForProfit(x))",
+            "∃x (Hatchery(x) ∧ ForConservation(x) ∧ ReleaseAnimalToWild(x))",
+            "¬ForProfit(nationalLobsterHatchery)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "The National Lobster Hatchery is a hatchery.",
+            "The National Lobster Hatchery is not for profit.",
+            "A hatchery is either for profit or for conservation.",
+            "Since the National Lobster Hatchery is not for profit, it must be for conservation."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "",
+        "content": "Thoughts:\nThe National Lobster Hatchery is a hatchery.\nThe National Lobster Hatchery is not for profit.\nA hatchery is either for profit or for conservation.\nSince the National Lobster Hatchery is not for profit, it must be for conservation.\nAnswer: (A) True",
+        "filter_reasoning_steps": [
+            "The National Lobster Hatchery is a hatchery.",
+            "The National Lobster Hatchery is not for profit.",
+            "A hatchery is either for profit or for conservation.",
+            "Since the National Lobster Hatchery is not for profit, it must be for conservation."
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) the national lobster hatchery is a hatchery located in padstow, england.",
+                "fol": "hatchery(nationallobsterhatchery) ∧ located(nationallobsterhatchery, padstow) ∧ located(padstow, england)",
+                "tptp": "hatchery(nationallobsterhatchery) & located(nationallobsterhatchery, padstow) & located(padstow, england)"
+            },
+            {
+                "ref": "(2) the national lobster hatchery is open to visitors.",
+                "fol": "opentovisitors(nationallobsterhatchery)",
+                "tptp": "opentovisitors(nationallobsterhatchery)"
+            },
+            {
+                "ref": "(3) a hatchery is either for profit or for conservation.",
+                "fol": "∀x (hatchery(x) → forprofit(x) ⊕ forconservation(x))",
+                "tptp": "![X]: (((~(hatchery(X) => forprofit(X)) & (forconservation(X))) | ((hatchery(X) => forprofit(X)) & ~(forconservation(X)))))"
+            },
+            {
+                "ref": "(4) if a hatchery is for conservation, it might release animals into the wild.",
+                "fol": "∀x (forconservation(x) → mightreleaseintowild(x))",
+                "tptp": "![X]: (forconservation(X) => mightreleaseintowild(X))"
+            },
+            {
+                "ref": "(5) the national lobster hatchery is not for profit.",
+                "fol": "¬forprofit(nationallobsterhatchery)",
+                "tptp": "~forprofit(nationallobsterhatchery)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(5) the national lobster hatchery is for conservation.",
+            "fol": "forconservation(nationallobsterhatchery)",
+            "tptp": "forconservation(nationallobsterhatchery)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) the national lobster hatchery is a hatchery.",
+                "fol": "hatchery(nationallobsterhatchery)",
+                "tptp": "hatchery(nationallobsterhatchery)"
+            },
+            {
+                "ref": "(2) the national lobster hatchery is not for profit.",
+                "fol": "¬forprofit(nationallobsterhatchery)",
+                "tptp": "~forprofit(nationallobsterhatchery)"
+            },
+            {
+                "ref": "(3) a hatchery is either for profit or for conservation.",
+                "fol": "∀x (hatchery(x) → forprofit(x) ⊕ forconservation(x))",
+                "tptp": "![X]: (((~(hatchery(X) => forprofit(X)) & (forconservation(X))) | ((hatchery(X) => forprofit(X)) & ~(forconservation(X)))))"
+            },
+            {
+                "ref": "(4) since the national lobster hatchery is not for profit, it must be for conservation.",
+                "fol": "¬forprofit(nationallobsterhatchery) → forconservation(nationallobsterhatchery)",
+                "tptp": "~forprofit(nationallobsterhatchery) => forconservation(nationallobsterhatchery)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "The National Lobster Hatchery is a hatchery.",
+            "The National Lobster Hatchery is not for profit.",
+            "A hatchery is either for profit or for conservation.",
+            "Since the National Lobster Hatchery is not for profit, it must be for conservation."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "31_90",
+        "premises": [
+            "Naive cynicism was proposed by Justin Kruger and a colleague.",
+            "Thomas Gilovich is a colleague of Justin Kruger. ",
+            "Naive cynicism is a philosophy of mind."
+        ],
+        "question": [
+            "Justin Kruger proposed a philosophy of mind."
+        ],
+        "premises_gt_fol": [
+            "Proposed(justinKruger, naiveCynicism) ∧ ∃y (colleagueOfJustinKruger(y) ∧ Proposed(y, naiveCynicism))",
+            "Colleagues(thomasGilovich, justinKruger)",
+            "PhilosophyOfMind(naiveCynicism)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Naive cynicism was proposed by Justin Kruger and a colleague.",
+            "Thomas Gilovich is a colleague of Justin Kruger.",
+            "Naive cynicism is a philosophy of mind.",
+            "Justin Kruger and a colleague proposed naive cynicism.",
+            "Therefore, Justin Kruger proposed a philosophy of mind."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "",
+        "content": "Thoughts:\nNaive cynicism was proposed by Justin Kruger and a colleague.\nThomas Gilovich is a colleague of Justin Kruger.\nNaive cynicism is a philosophy of mind.\nJustin Kruger and a colleague proposed naive cynicism.\nTherefore, Justin Kruger proposed a philosophy of mind.\nAnswer: (A) True",
+        "filter_reasoning_steps": [
+            "Naive cynicism was proposed by Justin Kruger and a colleague.",
+            "Thomas Gilovich is a colleague of Justin Kruger.",
+            "Naive cynicism is a philosophy of mind.",
+            "Justin Kruger and a colleague proposed naive cynicism.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) naive cynicism was proposed by justin kruger and a colleague.",
+                "fol": "proposed(naivecynicism, justinkruger, colleague)",
+                "tptp": "proposed(naivecynicism, justinkruger, colleague)"
+            },
+            {
+                "ref": "(2) thomas gilovich is a colleague of justin kruger.",
+                "fol": "colleague(thomasgilovich, justinkruger)",
+                "tptp": "colleague(thomasgilovich, justinkruger)"
+            },
+            {
+                "ref": "(3) naive cynicism is a philosophy of mind.",
+                "fol": "philosophyofmind(naivecynicism)",
+                "tptp": "philosophyofmind(naivecynicism)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(5) justin kruger proposed a philosophy of mind.",
+            "fol": "∃x (proposed(naivecynicism, justinkruger, x) ∧ philosophyofmind(naivecynicism))",
+            "tptp": "?[X]: (proposed(naivecynicism, justinkruger, X) & philosophyofmind(naivecynicism))"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) naive cynicism was proposed by justin kruger and a colleague.",
+                "fol": "proposed(naivecynicism, justinkruger, colleague)",
+                "tptp": "proposed(naivecynicism, justinkruger, colleague)"
+            },
+            {
+                "ref": "(2) thomas gilovich is a colleague of justin kruger.",
+                "fol": "colleague(thomasgilovich, justinkruger)",
+                "tptp": "colleague(thomasgilovich, justinkruger)"
+            },
+            {
+                "ref": "(3) naive cynicism is a philosophy of mind.",
+                "fol": "philosophyofmind(naivecynicism)",
+                "tptp": "philosophyofmind(naivecynicism)"
+            },
+            {
+                "ref": "(4) justin kruger and a colleague proposed naive cynicism.",
+                "fol": "proposed(naivecynicism, justinkruger, colleague)",
+                "tptp": "proposed(naivecynicism, justinkruger, colleague)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Naive cynicism was proposed by Justin Kruger and a colleague.",
+            "Thomas Gilovich is a colleague of Justin Kruger.",
+            "Naive cynicism is a philosophy of mind.",
+            "Justin Kruger and a colleague proposed naive cynicism."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "7_17",
+        "premises": [
+            "Six, seven and eight are real numbers.",
+            "If a real number equals another real number added by one, the first number is larger.",
+            "If the number x is larger than the number y, then y is not larger than x.",
+            "Seven equals six plus one.",
+            "Eight equals seven plus one.",
+            "Two is positive.",
+            "If a number is positive, then the double of it is also positive.",
+            "Eight is the double of four.",
+            "Four is the double of two."
+        ],
+        "question": [
+            "Eight is larger than seven."
+        ],
+        "premises_gt_fol": [
+            "RealNum(num6) ∧ RealNum(num7) ∧ RealNum(num8)",
+            "∀x ∀y ((RealNum(x) ∧ RealNum(y) ∧ IsSuccessorOf(x, y)) → Larger(x, y))",
+            "∀x ∀y (Larger(x, y) → ¬Larger(y, x))",
+            "∃y(IsSuccessorOf(y, num6) ∧ Equals(num7, y))",
+            "∃y(IsSuccessorOf(y, num7) ∧ Equals(num8, y))",
+            "Positive(num2)",
+            "∀x ∀y ((Positive(x) ∧ IsDouble(y, x)) → Positive(y))",
+            "IsDouble(num8, num4)",
+            "IsDouble(num4, num2)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Six, seven, and eight are real numbers.",
+            "Seven equals six plus one.",
+            "According to the rule, if a real number equals another real number added by one, the first number is larger.",
+            "Therefore, seven is larger than six.",
+            "Eight equals seven plus one.",
+            "Therefore, eight is larger than seven.",
+            "If the number x is larger than the number y, then y is not larger than x.",
+            "Since eight is larger than seven, seven is not larger than eight."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "",
+        "content": "Thoughts:\nSix, seven, and eight are real numbers.\nSeven equals six plus one.\nAccording to the rule, if a real number equals another real number added by one, the first number is larger.\nTherefore, seven is larger than six.\nEight equals seven plus one.\nAccording to the rule, if a real number equals another real number added by one, the first number is larger.\nTherefore, eight is larger than seven.\nIf the number x is larger than the number y, then y is not larger than x.\nSince eight is larger than seven, seven is not larger than eight.\nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "Six, seven, and eight are real numbers.",
+            "Seven equals six plus one.",
+            "According to the rule, if a real number equals another real number added by one, the first number is larger.",
+            null,
+            "Eight equals seven plus one.",
+            null,
+            "If the number x is larger than the number y, then y is not larger than x.",
+            "Since eight is larger than seven, seven is not larger than eight."
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) six, seven and eight are real numbers.",
+                "fol": "realnumber(six) ∧ realnumber(seven) ∧ realnumber(eight)",
+                "tptp": "realnumber(six) & realnumber(seven) & realnumber(eight)"
+            },
+            {
+                "ref": "(2) if a real number equals another real number added by one, the first number is larger.",
+                "fol": "∀x ∀y ((realnumber(x) ∧ realnumber(y) ∧ equals(x, add(y, one))) → larger(x, y))",
+                "tptp": "![X]: ![Y]: ((realnumber(X) & realnumber(Y) & equals(X, add(Y, one))) => larger(X, Y))"
+            },
+            {
+                "ref": "(3) if the number x is larger than the number y, then y is not larger than x.",
+                "fol": "∀x ∀y (larger(x, y) → ¬larger(y, x))",
+                "tptp": "![X]: ![Y]: (larger(X, Y) => ~larger(Y, X))"
+            },
+            {
+                "ref": "(4) seven equals six plus one.",
+                "fol": "equals(seven, add(six, one))",
+                "tptp": "equals(seven, add(six, one))"
+            },
+            {
+                "ref": "(5) eight equals seven plus one.",
+                "fol": "equals(eight, add(seven, one))",
+                "tptp": "equals(eight, add(seven, one))"
+            },
+            {
+                "ref": "(6) two is positive.",
+                "fol": "positive(two)",
+                "tptp": "positive(two)"
+            },
+            {
+                "ref": "(7) if a number is positive, then the double of it is also positive.",
+                "fol": "∀x (positive(x) → positive(double(x)))",
+                "tptp": "![X]: (positive(X) => positive(double(X)))"
+            },
+            {
+                "ref": "(8) eight is the double of four.",
+                "fol": "equals(eight, double(four))",
+                "tptp": "equals(eight, double(four))"
+            },
+            {
+                "ref": "(9) four is the double of two.",
+                "fol": "equals(four, double(two))",
+                "tptp": "equals(four, double(two))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(7) eight is larger than seven.",
+            "fol": "larger(eight, seven)",
+            "tptp": "larger(eight, seven)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) six, seven, and eight are real numbers.",
+                "fol": "realnumber(six) ∧ realnumber(seven) ∧ realnumber(eight)",
+                "tptp": "realnumber(six) & realnumber(seven) & realnumber(eight)"
+            },
+            {
+                "ref": "(2) seven equals six plus one.",
+                "fol": "equals(seven, add(six, one))",
+                "tptp": "equals(seven, add(six, one))"
+            },
+            {
+                "ref": "(3) according to the rule, if a real number equals another real number added by one, the first number is larger.",
+                "fol": "∀x ∀y ((realnumber(x) ∧ realnumber(y) ∧ equals(x, add(y, one))) → larger(x, y))",
+                "tptp": "![X]: ![Y]: ((realnumber(X) & realnumber(Y) & equals(X, add(Y, one))) => larger(X, Y))"
+            },
+            {
+                "ref": "(4) eight equals seven plus one.",
+                "fol": "equals(eight, add(seven, one))",
+                "tptp": "equals(eight, add(seven, one))"
+            },
+            {
+                "ref": "(5) if the number x is larger than the number y, then y is not larger than x.",
+                "fol": "∀x ∀y (larger(x, y) → ¬larger(y, x))",
+                "tptp": "![X]: ![Y]: (larger(X, Y) => ~larger(Y, X))"
+            },
+            {
+                "ref": "(6) since eight is larger than seven, seven is not larger than eight.",
+                "fol": "larger(eight, seven) → ¬larger(seven, eight)",
+                "tptp": "larger(eight, seven) => ~larger(seven, eight)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Six, seven, and eight are real numbers.",
+            "Seven equals six plus one.",
+            "According to the rule, if a real number equals another real number added by one, the first number is larger.",
+            "Eight equals seven plus one.",
+            "If the number x is larger than the number y, then y is not larger than x.",
+            "Since eight is larger than seven, seven is not larger than eight."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "170_488",
+        "premises": [
+            "The Mona Lisa is a world's best-known painting.",
+            "The Mona Lisa is a portrait painted by Leonardo da Vinci.",
+            "Leonardo da Vinci was a scientist and painter.",
+            "Painting genres can be history, portrait, animal, landscape, and still life."
+        ],
+        "question": [
+            "A world's best-known artwork is painted by a scientist."
+        ],
+        "premises_gt_fol": [
+            "Painting(monaLisa) ∧ TheWorldsBestKnown(monaLisa)",
+            "PaintedBy(monaLisa, leonardodaVinci) ∧ Portrait(monaLisa)",
+            "Scientist(leonardodaVinci) ∧ Painter(leonardodaVinci)",
+            "∀x (Painting(x) → (History(x) ∨ Portrait(x) ∨ Animal(x) ∨ Landscape(x) ∨ StillLife(x)))"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "The Mona Lisa is a world's bestknown painting.",
+            "The Mona Lisa is a portrait.",
+            "Leonardo da Vinci was a scientist and painter.",
+            "A scientist painted the Mona Lisa."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "",
+        "content": "Thoughts:\nThe Mona Lisa is a world's best-known painting.\nThe Mona Lisa is a portrait.\nLeonardo da Vinci was a scientist and painter.\nA scientist painted the Mona Lisa.\nAnswer: (A) True",
+        "filter_reasoning_steps": [
+            "The Mona Lisa is a world's bestknown painting.",
+            "The Mona Lisa is a portrait.",
+            "Leonardo da Vinci was a scientist and painter.",
+            "A scientist painted the Mona Lisa."
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) the mona lisa is a world's best-known painting.",
+                "fol": "bestknown(monalisa) ∧ painting(monalisa)",
+                "tptp": "bestknown(monalisa) & painting(monalisa)"
+            },
+            {
+                "ref": "(2) the mona lisa is a portrait painted by leonardo da vinci.",
+                "fol": "portrait(monalisa) ∧ paintedby(monalisa, leonardo)",
+                "tptp": "portrait(monalisa) & paintedby(monalisa, leonardo)"
+            },
+            {
+                "ref": "(3) leonardo da vinci was a scientist and painter.",
+                "fol": "scientist(leonardo) ∧ painter(leonardo)",
+                "tptp": "scientist(leonardo) & painter(leonardo)"
+            },
+            {
+                "ref": "(4) painting genres can be history, portrait, animal, landscape, and still life.",
+                "fol": "∀x (genre(x) → (history(x) ∨ portrait(x) ∨ animal(x) ∨ landscape(x) ∨ stilllife(x)))",
+                "tptp": "![X]: (genre(X) => (history(X) | portrait(X) | animal(X) | landscape(X) | stilllife(X)))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(5) a world's best-known artwork is painted by a scientist.",
+            "fol": "∃x (bestknown(x) ∧ painting(x) ∧ ∃y (scientist(y) ∧ paintedby(x, y)))",
+            "tptp": "?[X]: (bestknown(X) & painting(X) & ?[Y]: (scientist(Y) & paintedby(X, Y)))"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) the mona lisa is a world's best-known painting.",
+                "fol": "bestknown(monalisa) ∧ painting(monalisa)",
+                "tptp": "bestknown(monalisa) & painting(monalisa)"
+            },
+            {
+                "ref": "(2) the mona lisa is a portrait.",
+                "fol": "portrait(monalisa)",
+                "tptp": "portrait(monalisa)"
+            },
+            {
+                "ref": "(3) leonardo da vinci was a scientist and painter.",
+                "fol": "scientist(leonardo) ∧ painter(leonardo)",
+                "tptp": "scientist(leonardo) & painter(leonardo)"
+            },
+            {
+                "ref": "(4) a scientist painted the mona lisa.",
+                "fol": "∃x (scientist(x) ∧ paintedby(monalisa, x))",
+                "tptp": "?[X]: (scientist(X) & paintedby(monalisa, X))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "The Mona Lisa is a world's bestknown painting.",
+            "The Mona Lisa is a portrait.",
+            "Leonardo da Vinci was a scientist and painter.",
+            "A scientist painted the Mona Lisa."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "7_19",
+        "premises": [
+            "Six, seven and eight are real numbers.",
+            "If a real number equals another real number added by one, the first number is larger.",
+            "If the number x is larger than the number y, then y is not larger than x.",
+            "Seven equals six plus one.",
+            "Eight equals seven plus one.",
+            "Two is positive.",
+            "If a number is positive, then the double of it is also positive.",
+            "Eight is the double of four.",
+            "Four is the double of two."
+        ],
+        "question": [
+            "Six is larger than seven."
+        ],
+        "premises_gt_fol": [
+            "RealNum(num6) ∧ RealNum(num7) ∧ RealNum(num8)",
+            "∀x ∀y ((RealNum(x) ∧ RealNum(y) ∧ IsSuccessorOf(x, y)) → Larger(x, y))",
+            "∀x ∀y (Larger(x, y) → ¬Larger(y, x))",
+            "∃y(IsSuccessorOf(y, num6) ∧ Equals(num7, y))",
+            "∃y(IsSuccessorOf(y, num7) ∧ Equals(num8, y))",
+            "Positive(num2)",
+            "∀x ∀y ((Positive(x) ∧ IsDouble(y, x)) → Positive(y))",
+            "IsDouble(num8, num4)",
+            "IsDouble(num4, num2)"
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "Six, seven and eight are real numbers.",
+            "Seven equals six plus one.",
+            "If a real number equals another real number added by one, the first number is larger.",
+            "Therefore, six is not larger than seven.",
+            "Seven is larger than six.",
+            "Eight equals seven plus one.",
+            "Therefore, seven is not larger than eight.",
+            "Eight is larger than seven."
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "reasoning_content": "",
+        "content": "Thoughts:\nSix, seven and eight are real numbers.\nSeven equals six plus one.\nIf a real number equals another real number added by one, the first number is larger.\nTherefore, six is not larger than seven.\nSeven is larger than six.\nEight equals seven plus one.\nIf a real number equals another real number added by one, the first number is larger.\nTherefore, seven is not larger than eight.\nEight is larger than seven.\nAnswer:\n(B) False",
+        "filter_reasoning_steps": [
+            "Six, seven and eight are real numbers.",
+            "Seven equals six plus one.",
+            "If a real number equals another real number added by one, the first number is larger.",
+            null,
+            "Seven is larger than six.",
+            "Eight equals seven plus one.",
+            null,
+            "Eight is larger than seven."
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) six, seven and eight are real numbers.",
+                "fol": "realnumber(six) ∧ realnumber(seven) ∧ realnumber(eight)",
+                "tptp": "realnumber(six) & realnumber(seven) & realnumber(eight)"
+            },
+            {
+                "ref": "(2) if a real number equals another real number added by one, the first number is larger.",
+                "fol": "∀x ∀y ((realnumber(x) ∧ realnumber(y) ∧ equals(x, add(y, one))) → larger(x, y))",
+                "tptp": "![X]: ![Y]: ((realnumber(X) & realnumber(Y) & equals(X, add(Y, one))) => larger(X, Y))"
+            },
+            {
+                "ref": "(3) if the number x is larger than the number y, then y is not larger than x.",
+                "fol": "∀x ∀y (larger(x, y) → ¬larger(y, x))",
+                "tptp": "![X]: ![Y]: (larger(X, Y) => ~larger(Y, X))"
+            },
+            {
+                "ref": "(4) seven equals six plus one.",
+                "fol": "equals(seven, add(six, one))",
+                "tptp": "equals(seven, add(six, one))"
+            },
+            {
+                "ref": "(5) eight equals seven plus one.",
+                "fol": "equals(eight, add(seven, one))",
+                "tptp": "equals(eight, add(seven, one))"
+            },
+            {
+                "ref": "(6) two is positive.",
+                "fol": "positive(two)",
+                "tptp": "positive(two)"
+            },
+            {
+                "ref": "(7) if a number is positive, then the double of it is also positive.",
+                "fol": "∀x (positive(x) → positive(double(x)))",
+                "tptp": "![X]: (positive(X) => positive(double(X)))"
+            },
+            {
+                "ref": "(8) eight is the double of four.",
+                "fol": "equals(eight, double(four))",
+                "tptp": "equals(eight, double(four))"
+            },
+            {
+                "ref": "(9) four is the double of two.",
+                "fol": "equals(four, double(two))",
+                "tptp": "equals(four, double(two))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(7) six is larger than seven.",
+            "fol": "larger(six, seven)",
+            "tptp": "larger(six, seven)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) six, seven and eight are real numbers.",
+                "fol": "realnumber(six) ∧ realnumber(seven) ∧ realnumber(eight)",
+                "tptp": "realnumber(six) & realnumber(seven) & realnumber(eight)"
+            },
+            {
+                "ref": "(2) seven equals six plus one.",
+                "fol": "equals(seven, add(six, one))",
+                "tptp": "equals(seven, add(six, one))"
+            },
+            {
+                "ref": "(3) if a real number equals another real number added by one, the first number is larger.",
+                "fol": "∀x ∀y ((realnumber(x) ∧ realnumber(y) ∧ equals(x, add(y, one))) → larger(x, y))",
+                "tptp": "![X]: ![Y]: ((realnumber(X) & realnumber(Y) & equals(X, add(Y, one))) => larger(X, Y))"
+            },
+            {
+                "ref": "(4) seven is larger than six.",
+                "fol": "larger(seven, six)",
+                "tptp": "larger(seven, six)"
+            },
+            {
+                "ref": "(5) eight equals seven plus one.",
+                "fol": "equals(eight, add(seven, one))",
+                "tptp": "equals(eight, add(seven, one))"
+            },
+            {
+                "ref": "(6) eight is larger than seven.",
+                "fol": "larger(eight, seven)",
+                "tptp": "larger(eight, seven)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Six, seven and eight are real numbers.",
+            "Seven equals six plus one.",
+            "If a real number equals another real number added by one, the first number is larger.",
+            "Seven is larger than six.",
+            "Eight equals seven plus one.",
+            "Eight is larger than seven."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": false,
+        "cate": "T3",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "54_158",
+        "premises": [
+            "A roundel is a rounded artillery fortification.",
+            "A roundel is not higher than adjacent walls. ",
+            "Cannons can be deployed on artillery fortifications. ",
+            "Roundels are the oldest artillery fortifications.",
+            "Battery towers are artillery fortifications."
+        ],
+        "question": [
+            "Cannons can be deployed on battery towers."
+        ],
+        "premises_gt_fol": [
+            "∀x (Roundel(x) → (Rounded(x) ∧ ArtilleryFortification(x)))",
+            "∀x ∀y ((Roundel(x) ∧ AdjacentWalls(x,y)) → ¬Higher(x, y))",
+            "∀x (ArtilleryFortification(x) → DeployCannons(x))",
+            "∀x ∀y ((Roundel(x) ∧ ArtilleryFortification(y)) → Older(x, y))",
+            "∀x (BatteryTower(x) → ArtilleryFortification(x))"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "A roundel is a rounded artillery fortification.",
+            "Roundels are the oldest artillery fortifications.",
+            "Battery towers are artillery fortifications.",
+            "A roundel can have cannons deployed on it.",
+            "If something is an artillery fortification, cannons can be deployed on it.",
+            "Cannons can be deployed on battery towers."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "",
+        "content": "Thoughts:\nA roundel is a rounded artillery fortification.\nRoundels are the oldest artillery fortifications.\nBattery towers are artillery fortifications.\nA roundel can have cannons deployed on it.\nIf something is an artillery fortification, cannons can be deployed on it.\nBattery towers are artillery fortifications.\nCannons can be deployed on battery towers.\nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "A roundel is a rounded artillery fortification.",
+            "Roundels are the oldest artillery fortifications.",
+            "Battery towers are artillery fortifications.",
+            "A roundel can have cannons deployed on it.",
+            "If something is an artillery fortification, cannons can be deployed on it.",
+            "Cannons can be deployed on battery towers."
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) a roundel is a rounded artillery fortification.",
+                "fol": "∀x (roundel(x) → rounded(x) ∧ artilleryfortification(x))",
+                "tptp": "![X]: (roundel(X) => rounded(X) & artilleryfortification(X))"
+            },
+            {
+                "ref": "(2) a roundel is not higher than adjacent walls.",
+                "fol": "∀x (roundel(x) → ¬higherthanadjacentwalls(x))",
+                "tptp": "![X]: (roundel(X) => ~higherthanadjacentwalls(X))"
+            },
+            {
+                "ref": "(3) cannons can be deployed on artillery fortifications.",
+                "fol": "∀x (artilleryfortification(x) → candeploycannons(x))",
+                "tptp": "![X]: (artilleryfortification(X) => candeploycannons(X))"
+            },
+            {
+                "ref": "(4) roundels are the oldest artillery fortifications.",
+                "fol": "∀x (roundel(x) → oldestartilleryfortification(x))",
+                "tptp": "![X]: (roundel(X) => oldestartilleryfortification(X))"
+            },
+            {
+                "ref": "(5) battery towers are artillery fortifications.",
+                "fol": "∀x (batterytower(x) → artilleryfortification(x))",
+                "tptp": "![X]: (batterytower(X) => artilleryfortification(X))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(7) cannons can be deployed on battery towers.",
+            "fol": "∀x (batterytower(x) → candeploycannons(x))",
+            "tptp": "![X]: (batterytower(X) => candeploycannons(X))"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) a roundel is a rounded artillery fortification.",
+                "fol": "∀x (roundel(x) → rounded(x) ∧ artilleryfortification(x))",
+                "tptp": "![X]: (roundel(X) => rounded(X) & artilleryfortification(X))"
+            },
+            {
+                "ref": "(2) roundels are the oldest artillery fortifications.",
+                "fol": "∀x (roundel(x) → oldestartilleryfortification(x))",
+                "tptp": "![X]: (roundel(X) => oldestartilleryfortification(X))"
+            },
+            {
+                "ref": "(3) battery towers are artillery fortifications.",
+                "fol": "∀x (batterytower(x) → artilleryfortification(x))",
+                "tptp": "![X]: (batterytower(X) => artilleryfortification(X))"
+            },
+            {
+                "ref": "(4) a roundel can have cannons deployed on it.",
+                "fol": "∀x (roundel(x) → candeploycannons(x))",
+                "tptp": "![X]: (roundel(X) => candeploycannons(X))"
+            },
+            {
+                "ref": "(5) if something is an artillery fortification, cannons can be deployed on it.",
+                "fol": "∀x (artilleryfortification(x) → candeploycannons(x))",
+                "tptp": "![X]: (artilleryfortification(X) => candeploycannons(X))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "A roundel is a rounded artillery fortification.",
+            "Roundels are the oldest artillery fortifications.",
+            "Battery towers are artillery fortifications.",
+            "A roundel can have cannons deployed on it.",
+            "If something is an artillery fortification, cannons can be deployed on it."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "451_1299",
+        "premises": [
+            "People on the payroll are being paid by the school.",
+            "If someone has a job at a school, then they are on the payroll.",
+            "All faculty members have a job at a school.",
+            "If someone teaches students, they are a faculty member or a teacher.",
+            "Every teacher has students.",
+            "If Nancy is a teacher, then they are on the payroll.",
+            "If Nancy is not a teacher, then they are not paid by the school.",
+            "Nancy teaches students."
+        ],
+        "question": [
+            "Nancy is paid by the school and has students."
+        ],
+        "premises_gt_fol": [
+            "∀x (OnPayroll(x) → PaidBy(x, school))",
+            "∀x (HaveJobAt(x, school) → OnPayroll(x))",
+            "∀x (FacultyMember(x) → HaveJobAt(x, school))",
+            "∀x (Teach(x, student) → FacultyMember(x) ∨ Teacher(x))",
+            "∀x (Teacher(x) → Have(x, student))",
+            "Teacher(nancy) → OnPayroll(nancy)",
+            "¬Teacher(nancy) → ¬OnPayroll(nancy)",
+            "Teach(nancy, student)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "People on the payroll are being paid by the school.",
+            "If someone has a job at a school, then they are on the payroll.",
+            "All faculty members have a job at a school.",
+            "Nancy teaches students.",
+            "Every teacher has students.",
+            "Nancy is a teacher.",
+            "If Nancy is a teacher, then she is on the payroll.",
+            "If Nancy is not a teacher, then she is not paid by the school.",
+            "Nancy is not not a teacher.",
+            "Nancy is paid by the school.",
+            "Nancy has students."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "",
+        "content": "Thoughts:\nPeople on the payroll are being paid by the school.\nIf someone has a job at a school, then they are on the payroll.\nAll faculty members have a job at a school.\nNancy teaches students.\nEvery teacher has students.\nNancy is a teacher.\nIf Nancy is a teacher, then she is on the payroll.\nIf Nancy is not a teacher, then she is not paid by the school.\nNancy is not not a teacher.\nNancy is paid by the school.\nNancy has students.\nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "People on the payroll are being paid by the school.",
+            "If someone has a job at a school, then they are on the payroll.",
+            "All faculty members have a job at a school.",
+            "Nancy teaches students.",
+            "Every teacher has students.",
+            "Nancy is a teacher.",
+            "If Nancy is a teacher, then she is on the payroll.",
+            "If Nancy is not a teacher, then she is not paid by the school.",
+            "Nancy is not not a teacher.",
+            "Nancy is paid by the school.",
+            "Nancy has students."
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) people on the payroll are being paid by the school.",
+                "fol": "∀x (payroll(x) → paidbyschool(x))",
+                "tptp": "![X]: (payroll(X) => paidbyschool(X))"
+            },
+            {
+                "ref": "(2) if someone has a job at a school, then they are on the payroll.",
+                "fol": "∀x (jobatschool(x) → payroll(x))",
+                "tptp": "![X]: (jobatschool(X) => payroll(X))"
+            },
+            {
+                "ref": "(3) all faculty members have a job at a school.",
+                "fol": "∀x (faculty(x) → jobatschool(x))",
+                "tptp": "![X]: (faculty(X) => jobatschool(X))"
+            },
+            {
+                "ref": "(4) if someone teaches students, they are a faculty member or a teacher.",
+                "fol": "∀x (teaches(x) → faculty(x) ∨ teacher(x))",
+                "tptp": "![X]: (teaches(X) => faculty(X) | teacher(X))"
+            },
+            {
+                "ref": "(5) every teacher has students.",
+                "fol": "∀x (teacher(x) → ∃y (student(y) ∧ teaches(x, y)))",
+                "tptp": "![X]: (teacher(X) => ?[Y]: (student(Y) & teaches(X, Y)))"
+            },
+            {
+                "ref": "(6) if nancy is a teacher, then they are on the payroll.",
+                "fol": "teacher(nancy) → payroll(nancy)",
+                "tptp": "teacher(nancy) => payroll(nancy)"
+            },
+            {
+                "ref": "(7) if nancy is not a teacher, then they are not paid by the school.",
+                "fol": "¬teacher(nancy) → ¬paidbyschool(nancy)",
+                "tptp": "~teacher(nancy) => ~paidbyschool(nancy)"
+            },
+            {
+                "ref": "(8) nancy teaches students.",
+                "fol": "teaches(nancy)",
+                "tptp": "teaches(nancy)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(12) nancy is paid by the school and has students.",
+            "fol": "paidbyschool(nancy) ∧ ∃y (student(y) ∧ teaches(nancy, y))",
+            "tptp": "paidbyschool(nancy) & ?[Y]: (student(Y) & teaches(nancy, Y))"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) people on the payroll are being paid by the school.",
+                "fol": "∀x (payroll(x) → paidbyschool(x))",
+                "tptp": "![X]: (payroll(X) => paidbyschool(X))"
+            },
+            {
+                "ref": "(2) if someone has a job at a school, then they are on the payroll.",
+                "fol": "∀x (jobatschool(x) → payroll(x))",
+                "tptp": "![X]: (jobatschool(X) => payroll(X))"
+            },
+            {
+                "ref": "(3) all faculty members have a job at a school.",
+                "fol": "∀x (faculty(x) → jobatschool(x))",
+                "tptp": "![X]: (faculty(X) => jobatschool(X))"
+            },
+            {
+                "ref": "(4) nancy teaches students.",
+                "fol": "teaches(nancy)",
+                "tptp": "teaches(nancy)"
+            },
+            {
+                "ref": "(5) every teacher has students.",
+                "fol": "∀x (teacher(x) → ∃y (student(y) ∧ teaches(x, y)))",
+                "tptp": "![X]: (teacher(X) => ?[Y]: (student(Y) & teaches(X, Y)))"
+            },
+            {
+                "ref": "(6) nancy is a teacher.",
+                "fol": "teacher(nancy)",
+                "tptp": "teacher(nancy)"
+            },
+            {
+                "ref": "(7) if nancy is a teacher, then she is on the payroll.",
+                "fol": "teacher(nancy) → payroll(nancy)",
+                "tptp": "teacher(nancy) => payroll(nancy)"
+            },
+            {
+                "ref": "(8) if nancy is not a teacher, then she is not paid by the school.",
+                "fol": "¬teacher(nancy) → ¬paidbyschool(nancy)",
+                "tptp": "~teacher(nancy) => ~paidbyschool(nancy)"
+            },
+            {
+                "ref": "(9) nancy is not not a teacher.",
+                "fol": "¬¬teacher(nancy)",
+                "tptp": "~~teacher(nancy)"
+            },
+            {
+                "ref": "(10) nancy is paid by the school.",
+                "fol": "paidbyschool(nancy)",
+                "tptp": "paidbyschool(nancy)"
+            },
+            {
+                "ref": "(11) nancy has students.",
+                "fol": "∃y (student(y) ∧ teaches(nancy, y))",
+                "tptp": "?[Y]: (student(Y) & teaches(nancy, Y))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "People on the payroll are being paid by the school.",
+            "If someone has a job at a school, then they are on the payroll.",
+            "All faculty members have a job at a school.",
+            "Nancy teaches students.",
+            "Every teacher has students.",
+            "Nancy is a teacher.",
+            "If Nancy is a teacher, then she is on the payroll.",
+            "If Nancy is not a teacher, then she is not paid by the school.",
+            "Nancy is not not a teacher.",
+            "Nancy is paid by the school.",
+            "Nancy has students."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "78_237",
+        "premises": [
+            "Ableton has an office in Germany.",
+            "Ableton has an office in the USA.",
+            "USA and Germany are different countries.",
+            "Any company that has offices in different countries is a multinational company.",
+            "Ableton makes music software."
+        ],
+        "question": [
+            "Ableton is a multinational company."
+        ],
+        "premises_gt_fol": [
+            "OfficeIn(ableton, germany)",
+            "OfficeIn(ableton, unitedStates)",
+            "¬SameCountry(germany, unitedStates)",
+            "∀x ∀y ∀z (OfficeIn(x, y) ∧ OfficeIn(x, z) ∧ (¬SameCountry(y, z)) → MultinationalCompany(x))",
+            "MakesMusicSoftware(ableton)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Ableton has an office in Germany.",
+            "Ableton has an office in the USA.",
+            "USA and Germany are different countries.",
+            "Ableton has offices in different countries.",
+            "Any company that has offices in different countries is a multinational company.",
+            "Ableton is a multinational company."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "",
+        "content": "Thoughts:\nAbleton has an office in Germany.\nAbleton has an office in the USA.\nUSA and Germany are different countries.\nAbleton has offices in different countries.\nAny company that has offices in different countries is a multinational company.\nAbleton is a multinational company.\nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "Ableton has an office in Germany.",
+            "Ableton has an office in the USA.",
+            "USA and Germany are different countries.",
+            "Ableton has offices in different countries.",
+            "Any company that has offices in different countries is a multinational company.",
+            "Ableton is a multinational company."
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) ableton has an office in germany.",
+                "fol": "office(ableton, germany)",
+                "tptp": "office(ableton, germany)"
+            },
+            {
+                "ref": "(2) ableton has an office in the usa.",
+                "fol": "office(ableton, usa)",
+                "tptp": "office(ableton, usa)"
+            },
+            {
+                "ref": "(3) usa and germany are different countries.",
+                "fol": "differentcountries(usa, germany)",
+                "tptp": "differentcountries(usa, germany)"
+            },
+            {
+                "ref": "(4) any company that has offices in different countries is a multinational company.",
+                "fol": "∀x ∀y ∀z ((office(x, y) ∧ office(x, z) ∧ differentcountries(y, z)) → multinational(x))",
+                "tptp": "![X]: ![Y]: ![Z]: ((office(X, Y) & office(X, Z) & differentcountries(Y, Z)) => multinational(X))"
+            },
+            {
+                "ref": "(5) ableton makes music software.",
+                "fol": "makes(ableton, music_software)",
+                "tptp": "makes(ableton, music_software)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(7) ableton is a multinational company.",
+            "fol": "multinational(ableton)",
+            "tptp": "multinational(ableton)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) ableton has an office in germany.",
+                "fol": "office(ableton, germany)",
+                "tptp": "office(ableton, germany)"
+            },
+            {
+                "ref": "(2) ableton has an office in the usa.",
+                "fol": "office(ableton, usa)",
+                "tptp": "office(ableton, usa)"
+            },
+            {
+                "ref": "(3) usa and germany are different countries.",
+                "fol": "differentcountries(usa, germany)",
+                "tptp": "differentcountries(usa, germany)"
+            },
+            {
+                "ref": "(4) ableton has offices in different countries.",
+                "fol": "∃y ∃z (office(ableton, y) ∧ office(ableton, z) ∧ differentcountries(y, z))",
+                "tptp": "?[Y]: ?[Z]: (office(ableton, Y) & office(ableton, Z) & differentcountries(Y, Z))"
+            },
+            {
+                "ref": "(5) any company that has offices in different countries is a multinational company.",
+                "fol": "∀x ∀y ∀z ((office(x, y) ∧ office(x, z) ∧ differentcountries(y, z)) → multinational(x))",
+                "tptp": "![X]: ![Y]: ![Z]: ((office(X, Y) & office(X, Z) & differentcountries(Y, Z)) => multinational(X))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Ableton has an office in Germany.",
+            "Ableton has an office in the USA.",
+            "USA and Germany are different countries.",
+            "Ableton has offices in different countries.",
+            "Any company that has offices in different countries is a multinational company."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "476_1384",
+        "premises": [
+            "All phones are things.",
+            "All cell phones are phones. ",
+            "All iPhones are cell phones. ",
+            "All employees are wage earners.",
+            "All wage earners are human. ",
+            "Jack is either an employee or a wage earner.",
+            "Jack is either a human or a phone."
+        ],
+        "question": [
+            "Jack is not both a thing and an iPhone."
+        ],
+        "premises_gt_fol": [
+            "∀x (Phone(x) → Thing(x))",
+            "∀x (Cellphone(x) → Phone(x))",
+            "∀x (Iphone(x) → Cellphone(x))",
+            "∀x (Employee(x) → WageEarner(x))",
+            "∀x (WageEarner(x) → Human(x))",
+            "Employee(jack) ⊕ WageEarner(jack) ",
+            "Human(jack) ⊕ Phone(jack)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "All phones are things.",
+            "All cell phones are phones.",
+            "All iPhones are cell phones.",
+            "Jack is either an employee or a wage earner.",
+            "All wage earners are human.",
+            "Jack is either a human or a phone.",
+            "All employees are wage earners.",
+            "Jack is a wage earner.",
+            "If Jack is a wage earner then he is a human.",
+            "Jack is a human.",
+            "All humans are not phones.",
+            "Jack is not a phone.",
+            "If Jack is not a phone then he is a thing.",
+            "Jack is a thing.",
+            "All iPhones are phones.",
+            "Jack cannot be both a thing and an iPhone."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "",
+        "content": "Thoughts:\nAll phones are things.\nAll cell phones are phones.\nAll iPhones are cell phones.\nJack is either an employee or a wage earner.\nAll wage earners are human.\nJack is either a human or a phone.\nAll employees are wage earners.\nJack is a wage earner.\nIf Jack is a wage earner then he is a human.\nJack is a human.\nAll humans are not phones.\nJack is not a phone.\nIf Jack is not a phone then he is a thing.\nJack is a thing.\nAll iPhones are phones.\nAll phones are things.\nJack cannot be both a thing and an iPhone.\nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "All phones are things.",
+            "All cell phones are phones.",
+            "All iPhones are cell phones.",
+            "Jack is either an employee or a wage earner.",
+            "All wage earners are human.",
+            "Jack is either a human or a phone.",
+            "All employees are wage earners.",
+            "Jack is a wage earner.",
+            "If Jack is a wage earner then he is a human.",
+            "Jack is a human.",
+            "All humans are not phones.",
+            "Jack is not a phone.",
+            "If Jack is not a phone then he is a thing.",
+            "Jack is a thing.",
+            "All iPhones are phones.",
+            "Jack cannot be both a thing and an iPhone."
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) all phones are things.",
+                "fol": "∀x (phone(x) → thing(x))",
+                "tptp": "![X]: (phone(X) => thing(X))"
+            },
+            {
+                "ref": "(2) all cell phones are phones.",
+                "fol": "∀x (cellphone(x) → phone(x))",
+                "tptp": "![X]: (cellphone(X) => phone(X))"
+            },
+            {
+                "ref": "(3) all iphones are cell phones.",
+                "fol": "∀x (iphone(x) → cellphone(x))",
+                "tptp": "![X]: (iphone(X) => cellphone(X))"
+            },
+            {
+                "ref": "(4) all employees are wage earners.",
+                "fol": "∀x (employee(x) → wageearner(x))",
+                "tptp": "![X]: (employee(X) => wageearner(X))"
+            },
+            {
+                "ref": "(5) all wage earners are human.",
+                "fol": "∀x (wageearner(x) → human(x))",
+                "tptp": "![X]: (wageearner(X) => human(X))"
+            },
+            {
+                "ref": "(6) jack is either an employee or a wage earner.",
+                "fol": "employee(jack) ⊕ wageearner(jack)",
+                "tptp": "((~(employee(jack)) & (wageearner(jack))) | ((employee(jack)) & ~(wageearner(jack))))"
+            },
+            {
+                "ref": "(7) jack is either a human or a phone.",
+                "fol": "human(jack) ⊕ phone(jack)",
+                "tptp": "((~(human(jack)) & (phone(jack))) | ((human(jack)) & ~(phone(jack))))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(17) jack is not both a thing and an iphone.",
+            "fol": "¬(thing(jack) ∧ iphone(jack))",
+            "tptp": "~(thing(jack) & iphone(jack))"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) all phones are things.",
+                "fol": "∀x (phone(x) → thing(x))",
+                "tptp": "![X]: (phone(X) => thing(X))"
+            },
+            {
+                "ref": "(2) all cell phones are phones.",
+                "fol": "∀x (cellphone(x) → phone(x))",
+                "tptp": "![X]: (cellphone(X) => phone(X))"
+            },
+            {
+                "ref": "(3) all iphones are cell phones.",
+                "fol": "∀x (iphone(x) → cellphone(x))",
+                "tptp": "![X]: (iphone(X) => cellphone(X))"
+            },
+            {
+                "ref": "(4) jack is either an employee or a wage earner.",
+                "fol": "employee(jack) ⊕ wageearner(jack)",
+                "tptp": "((~(employee(jack)) & (wageearner(jack))) | ((employee(jack)) & ~(wageearner(jack))))"
+            },
+            {
+                "ref": "(5) all wage earners are human.",
+                "fol": "∀x (wageearner(x) → human(x))",
+                "tptp": "![X]: (wageearner(X) => human(X))"
+            },
+            {
+                "ref": "(6) jack is either a human or a phone.",
+                "fol": "human(jack) ⊕ phone(jack)",
+                "tptp": "((~(human(jack)) & (phone(jack))) | ((human(jack)) & ~(phone(jack))))"
+            },
+            {
+                "ref": "(7) all employees are wage earners.",
+                "fol": "∀x (employee(x) → wageearner(x))",
+                "tptp": "![X]: (employee(X) => wageearner(X))"
+            },
+            {
+                "ref": "(8) jack is a wage earner.",
+                "fol": "wageearner(jack)",
+                "tptp": "wageearner(jack)"
+            },
+            {
+                "ref": "(9) if jack is a wage earner then he is a human.",
+                "fol": "wageearner(jack) → human(jack)",
+                "tptp": "wageearner(jack) => human(jack)"
+            },
+            {
+                "ref": "(10) jack is a human.",
+                "fol": "human(jack)",
+                "tptp": "human(jack)"
+            },
+            {
+                "ref": "(11) all humans are not phones.",
+                "fol": "∀x (human(x) → ¬phone(x))",
+                "tptp": "![X]: (human(X) => ~phone(X))"
+            },
+            {
+                "ref": "(12) jack is not a phone.",
+                "fol": "¬phone(jack)",
+                "tptp": "~phone(jack)"
+            },
+            {
+                "ref": "(13) if jack is not a phone then he is a thing.",
+                "fol": "¬phone(jack) → thing(jack)",
+                "tptp": "~phone(jack) => thing(jack)"
+            },
+            {
+                "ref": "(14) jack is a thing.",
+                "fol": "thing(jack)",
+                "tptp": "thing(jack)"
+            },
+            {
+                "ref": "(15) all iphones are phones.",
+                "fol": "∀x (iphone(x) → phone(x))",
+                "tptp": "![X]: (iphone(X) => phone(X))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "All phones are things.",
+            "All cell phones are phones.",
+            "All iPhones are cell phones.",
+            "Jack is either an employee or a wage earner.",
+            "All wage earners are human.",
+            "Jack is either a human or a phone.",
+            "All employees are wage earners.",
+            "Jack is a wage earner.",
+            "If Jack is a wage earner then he is a human.",
+            "Jack is a human.",
+            "All humans are not phones.",
+            "Jack is not a phone.",
+            "If Jack is not a phone then he is a thing.",
+            "Jack is a thing.",
+            "All iPhones are phones."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "Unknown",
+            "True",
+            "Unknown",
+            "Unknown",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T2",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "Unknown",
+            "True",
+            "Unknown",
+            "Unknown",
+            "True"
+        ]
+    },
+    {
+        "idx": "139_408",
+        "premises": [
+            "UFC Fight Night was a mixed martial arts event held in Sweden.",
+            "At UFC Fight Night, Sadollah was scheduled to fight Musoke.",
+            "Sadollah fought Akiyama at UFC Fight Night.",
+            "Musoke fought Yakovlev at UFC Fight Night.",
+            "Jung was injured at UFC Fight Night.",
+            "People injured at UFC Fight Night did not fight."
+        ],
+        "question": [
+            "Jung did not fight at UFC Fight Night."
+        ],
+        "premises_gt_fol": [
+            "Event(uFCFightNight) ∧ MixedMartial(uFCFightNight) ∧ HeldIn(uFCFightNight, sweden)",
+            "ScheduledToFight(sadollah, musoke,uFCFightNight)",
+            "Fight(sadollah, akiyama, uFCFightNight)",
+            "Fight(musoke, yakovlev, uFCFightNight)",
+            "InjuredAt(jung, uFCFightNight)",
+            "∀x (InjuredAt(x, uFCFightNight) → ¬FightIn(x, uFCFightNight))"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "UFC Fight Night was a mixed martial arts event held in Sweden.",
+            "Sadollah fought Akiyama at UFC Fight Night.",
+            "Musoke fought Yakovlev at UFC Fight Night.",
+            "Jung was injured at UFC Fight Night.",
+            "People injured at UFC Fight Night did not fight.",
+            "Jung was injured and thus did not fight."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "",
+        "content": "Thoughts:\nUFC Fight Night was a mixed martial arts event held in Sweden.\nSadollah fought Akiyama at UFC Fight Night.\nMusoke fought Yakovlev at UFC Fight Night.\nJung was injured at UFC Fight Night.\nPeople injured at UFC Fight Night did not fight.\nJung was injured and thus did not fight.\nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "UFC Fight Night was a mixed martial arts event held in Sweden.",
+            "Sadollah fought Akiyama at UFC Fight Night.",
+            "Musoke fought Yakovlev at UFC Fight Night.",
+            "Jung was injured at UFC Fight Night.",
+            "People injured at UFC Fight Night did not fight.",
+            "Jung was injured and thus did not fight."
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1)",
+                "fol": "mixedmartialartsevent(ufcfightnight) ∧ heldin(ufcfightnight, sweden)",
+                "tptp": "mixedmartialartsevent(ufcfightnight) & heldin(ufcfightnight, sweden)"
+            },
+            {
+                "ref": "(2)",
+                "fol": "scheduledtofight(sadollah, musoke, ufcfightnight)",
+                "tptp": "scheduledtofight(sadollah, musoke, ufcfightnight)"
+            },
+            {
+                "ref": "(3)",
+                "fol": "fought(sadollah, akiyama, ufcfightnight)",
+                "tptp": "fought(sadollah, akiyama, ufcfightnight)"
+            },
+            {
+                "ref": "(4)",
+                "fol": "fought(musoke, yakovlev, ufcfightnight)",
+                "tptp": "fought(musoke, yakovlev, ufcfightnight)"
+            },
+            {
+                "ref": "(5)",
+                "fol": "injured(jung, ufcfightnight)",
+                "tptp": "injured(jung, ufcfightnight)"
+            },
+            {
+                "ref": "(6)",
+                "fol": "∀x (injured(x, ufcfightnight) → ¬fought(x, ufcfightnight))",
+                "tptp": "![X]: (injured(X, ufcfightnight) => ~fought(X, ufcfightnight))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(7)",
+            "fol": "¬fought(jung, ufcfightnight)",
+            "tptp": "~fought(jung, ufcfightnight)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1)",
+                "fol": "mixedmartialartsevent(ufcfightnight) ∧ heldin(ufcfightnight, sweden)",
+                "tptp": "mixedmartialartsevent(ufcfightnight) & heldin(ufcfightnight, sweden)"
+            },
+            {
+                "ref": "(2)",
+                "fol": "fought(sadollah, akiyama, ufcfightnight)",
+                "tptp": "fought(sadollah, akiyama, ufcfightnight)"
+            },
+            {
+                "ref": "(3)",
+                "fol": "fought(musoke, yakovlev, ufcfightnight)",
+                "tptp": "fought(musoke, yakovlev, ufcfightnight)"
+            },
+            {
+                "ref": "(4)",
+                "fol": "injured(jung, ufcfightnight)",
+                "tptp": "injured(jung, ufcfightnight)"
+            },
+            {
+                "ref": "(5)",
+                "fol": "∀x (injured(x, ufcfightnight) → ¬fought(x, ufcfightnight))",
+                "tptp": "![X]: (injured(X, ufcfightnight) => ~fought(X, ufcfightnight))"
+            },
+            {
+                "ref": "(6)",
+                "fol": "injured(jung, ufcfightnight) ∧ ¬fought(jung, ufcfightnight)",
+                "tptp": "injured(jung, ufcfightnight) & ~fought(jung, ufcfightnight)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "UFC Fight Night was a mixed martial arts event held in Sweden.",
+            "Sadollah fought Akiyama at UFC Fight Night.",
+            "Musoke fought Yakovlev at UFC Fight Night.",
+            "Jung was injured at UFC Fight Night.",
+            "People injured at UFC Fight Night did not fight.",
+            "Jung was injured and thus did not fight."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "5_12",
+        "premises": [
+            "Peter Parker is either a superhero or a civilian.",
+            "The Hulk is a destroyer.",
+            "The Hulk wakes up when he is angry.",
+            "If the Hulk wakes up, then he will break a bridge.",
+            "Thor is a god.",
+            "Thor will break a bridge when he is happy.",
+            "A god is not a destroyer.",
+            "Peter Parker wears a uniform when he is a superhero.",
+            "Peter Parker is not a civilian if a destroyer is breaking a bridge.",
+            "If Thor is happy, the Hulk is angry."
+        ],
+        "question": [
+            "If Thor is happy, then Peter Parker wears a uniform."
+        ],
+        "premises_gt_fol": [
+            "Superhero(peterParker) ⊕ Civilian(peterParker)",
+            "Destroyer(theHulk)",
+            "Angry(theHulk) → WakesUp(theHulk)",
+            "WakesUp(theHulk) → Breaks(theHulk, bridge)",
+            "God(thor)",
+            "Happy(thor) → Breaks(thor, bridge)",
+            "∀x (God(x) → ¬Destroyer(x))",
+            "Superhero(peter) → Wears(peter, uniform)",
+            "∀x ((Destroyer(x) ∧ Breaks(x,bridge)) → ¬Civilian(peter))",
+            "Happy(thor) → Angry(theHulk)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "The Hulk is a destroyer.",
+            "If the Hulk wakes up, then he will break a bridge.",
+            "The Hulk wakes up when he is angry.",
+            "A god is not a destroyer.",
+            "Thor is a god.",
+            "Thor will break a bridge when he is happy.",
+            "If Thor is happy, the Hulk is angry.",
+            "If the Hulk is angry, then he will wake up.",
+            "If a destroyer breaks a bridge, Peter Parker is not a civilian.",
+            "Peter Parker wears a uniform when he is a superhero.",
+            "If Thor is happy, the Hulk is angry (from\n.",
+            "If the Hulk is angry (from\n, then he will break a bridge (from 3 and\n.",
+            "If a destroyer breaks a bridge (from 10 and\n, Peter Parker is not a civilian (from\n.",
+            "Since Peter Parker is either a superhero or a civilian (from\n, and he is not a civilian if a destroyer breaks a bridge (from\n, Peter Parker must be a superhero when the Hulk breaks a bridge.",
+            "Therefore, if Thor is happy (from 7 and\n, Peter Parker wears a uniform (from\n."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "",
+        "content": "Thoughts:\n1. The Hulk is a destroyer.\n2. If the Hulk wakes up, then he will break a bridge.\n3. The Hulk wakes up when he is angry.\n4. A god is not a destroyer.\n5. Thor is a god.\n6. Thor will break a bridge when he is happy.\n7. If Thor is happy, the Hulk is angry.\n8. If the Hulk is angry, then he will wake up.\n9. If the Hulk wakes up, then he will break a bridge.\n10. If a destroyer breaks a bridge, Peter Parker is not a civilian.\n11. Peter Parker wears a uniform when he is a superhero.\n12. If Thor is happy, the Hulk is angry (from 7).\n13. If the Hulk is angry (from 10), then he will break a bridge (from 3 and 2).\n14. If a destroyer breaks a bridge (from 10 and 2), Peter Parker is not a civilian (from 10).\n15. Since Peter Parker is either a superhero or a civilian (from 1), and he is not a civilian if a destroyer breaks a bridge (from 14), Peter Parker must be a superhero when the Hulk breaks a bridge.\n16. Therefore, if Thor is happy (from 7 and 6), Peter Parker wears a uniform (from 11).\n\nAnswer: (A) True",
+        "filter_reasoning_steps": [
+            "The Hulk is a destroyer.",
+            "If the Hulk wakes up, then he will break a bridge.",
+            "The Hulk wakes up when he is angry.",
+            "A god is not a destroyer.",
+            "Thor is a god.",
+            "Thor will break a bridge when he is happy.",
+            "If Thor is happy, the Hulk is angry.",
+            "If the Hulk is angry, then he will wake up.",
+            "If a destroyer breaks a bridge, Peter Parker is not a civilian.",
+            "Peter Parker wears a uniform when he is a superhero.",
+            "If Thor is happy, the Hulk is angry (from\n.",
+            "If the Hulk is angry (from\n, then he will break a bridge (from 3 and\n.",
+            "If a destroyer breaks a bridge (from 10 and\n, Peter Parker is not a civilian (from\n.",
+            "Since Peter Parker is either a superhero or a civilian (from\n, and he is not a civilian if a destroyer breaks a bridge (from\n, Peter Parker must be a superhero when the Hulk breaks a bridge.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) peter parker is either a superhero or a civilian.",
+                "fol": "superhero(peterparker) ⊕ civilian(peterparker)",
+                "tptp": "((~(superhero(peterparker)) & (civilian(peterparker))) | ((superhero(peterparker)) & ~(civilian(peterparker))))"
+            },
+            {
+                "ref": "(2) the hulk is a destroyer.",
+                "fol": "destroyer(hulk)",
+                "tptp": "destroyer(hulk)"
+            },
+            {
+                "ref": "(3) the hulk wakes up when he is angry.",
+                "fol": "angry(hulk) → wakeup(hulk)",
+                "tptp": "angry(hulk) => wakeup(hulk)"
+            },
+            {
+                "ref": "(4) if the hulk wakes up, then he will break a bridge.",
+                "fol": "wakeup(hulk) → breakbridge(hulk)",
+                "tptp": "wakeup(hulk) => breakbridge(hulk)"
+            },
+            {
+                "ref": "(5) thor is a god.",
+                "fol": "god(thor)",
+                "tptp": "god(thor)"
+            },
+            {
+                "ref": "(6) thor will break a bridge when he is happy.",
+                "fol": "happy(thor) → breakbridge(thor)",
+                "tptp": "happy(thor) => breakbridge(thor)"
+            },
+            {
+                "ref": "(7) a god is not a destroyer.",
+                "fol": "∀x (god(x) → ¬destroyer(x))",
+                "tptp": "![X]: (god(X) => ~destroyer(X))"
+            },
+            {
+                "ref": "(8) peter parker wears a uniform when he is a superhero.",
+                "fol": "superhero(peterparker) → wearsuniform(peterparker)",
+                "tptp": "superhero(peterparker) => wearsuniform(peterparker)"
+            },
+            {
+                "ref": "(9) peter parker is not a civilian if a destroyer is breaking a bridge.",
+                "fol": "∀x (destroyer(x) ∧ breakbridge(x) → ¬civilian(peterparker))",
+                "tptp": "![X]: (destroyer(X) & breakbridge(X) => ~civilian(peterparker))"
+            },
+            {
+                "ref": "(10) if thor is happy, the hulk is angry.",
+                "fol": "happy(thor) → angry(hulk)",
+                "tptp": "happy(thor) => angry(hulk)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(15) if thor is happy, then peter parker wears a uniform.",
+            "fol": "happy(thor) → wearsuniform(peterparker)",
+            "tptp": "happy(thor) => wearsuniform(peterparker)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) the hulk is a destroyer.",
+                "fol": "destroyer(hulk)",
+                "tptp": "destroyer(hulk)"
+            },
+            {
+                "ref": "(2) if the hulk wakes up, then he will break a bridge.",
+                "fol": "wakeup(hulk) → breakbridge(hulk)",
+                "tptp": "wakeup(hulk) => breakbridge(hulk)"
+            },
+            {
+                "ref": "(3) the hulk wakes up when he is angry.",
+                "fol": "angry(hulk) → wakeup(hulk)",
+                "tptp": "angry(hulk) => wakeup(hulk)"
+            },
+            {
+                "ref": "(4) a god is not a destroyer.",
+                "fol": "∀x (god(x) → ¬destroyer(x))",
+                "tptp": "![X]: (god(X) => ~destroyer(X))"
+            },
+            {
+                "ref": "(5) thor is a god.",
+                "fol": "god(thor)",
+                "tptp": "god(thor)"
+            },
+            {
+                "ref": "(6) thor will break a bridge when he is happy.",
+                "fol": "happy(thor) → breakbridge(thor)",
+                "tptp": "happy(thor) => breakbridge(thor)"
+            },
+            {
+                "ref": "(7) if thor is happy, the hulk is angry.",
+                "fol": "happy(thor) → angry(hulk)",
+                "tptp": "happy(thor) => angry(hulk)"
+            },
+            {
+                "ref": "(8) if the hulk is angry, then he will wake up.",
+                "fol": "angry(hulk) → wakeup(hulk)",
+                "tptp": "angry(hulk) => wakeup(hulk)"
+            },
+            {
+                "ref": "(9) if a destroyer breaks a bridge, peter parker is not a civilian.",
+                "fol": "∀x (destroyer(x) ∧ breakbridge(x) → ¬civilian(peterparker))",
+                "tptp": "![X]: (destroyer(X) & breakbridge(X) => ~civilian(peterparker))"
+            },
+            {
+                "ref": "(10) peter parker wears a uniform when he is a superhero.",
+                "fol": "superhero(peterparker) → wearsuniform(peterparker)",
+                "tptp": "superhero(peterparker) => wearsuniform(peterparker)"
+            },
+            {
+                "ref": "(11) if thor is happy, the hulk is angry.",
+                "fol": "happy(thor) → angry(hulk)",
+                "tptp": "happy(thor) => angry(hulk)"
+            },
+            {
+                "ref": "(12) if the hulk is angry, then he will break a bridge.",
+                "fol": "angry(hulk) → breakbridge(hulk)",
+                "tptp": "angry(hulk) => breakbridge(hulk)"
+            },
+            {
+                "ref": "(13) if a destroyer breaks a bridge, peter parker is not a civilian.",
+                "fol": "destroyer(hulk) ∧ breakbridge(hulk) → ¬civilian(peterparker)",
+                "tptp": "destroyer(hulk) & breakbridge(hulk) => ~civilian(peterparker)"
+            },
+            {
+                "ref": "(14) since peter parker is either a superhero or a civilian, and he is not a civilian if a destroyer breaks a bridge, peter parker must be a superhero when the hulk breaks a bridge.",
+                "fol": "(superhero(peterparker) ⊕ civilian(peterparker)) ∧ (destroyer(hulk) ∧ breakbridge(hulk) → ¬civilian(peterparker)) → superhero(peterparker)",
+                "tptp": "(((~(superhero(peterparker)) & (civilian(peterparker))) | ((superhero(peterparker)) & ~(civilian(peterparker))))) & (destroyer(hulk) & breakbridge(hulk) => ~civilian(peterparker)) => superhero(peterparker)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "The Hulk is a destroyer.",
+            "If the Hulk wakes up, then he will break a bridge.",
+            "The Hulk wakes up when he is angry.",
+            "A god is not a destroyer.",
+            "Thor is a god.",
+            "Thor will break a bridge when he is happy.",
+            "If Thor is happy, the Hulk is angry.",
+            "If the Hulk is angry, then he will wake up.",
+            "If a destroyer breaks a bridge, Peter Parker is not a civilian.",
+            "Peter Parker wears a uniform when he is a superhero.",
+            "If Thor is happy, the Hulk is angry (from\n.",
+            "If the Hulk is angry (from\n, then he will break a bridge (from 3 and\n.",
+            "If a destroyer breaks a bridge (from 10 and\n, Peter Parker is not a civilian (from\n.",
+            "Since Peter Parker is either a superhero or a civilian (from\n, and he is not a civilian if a destroyer breaks a bridge (from\n, Peter Parker must be a superhero when the Hulk breaks a bridge."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "Unknown"
+        ],
+        "has_valid_proof_path_label": false,
+        "cate": "T4",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "92_282",
+        "premises": [
+            "Adventures of Rusty is a drama film and children's film.",
+            "Columbia Pictures produced Adventures of Rusty.",
+            "Tintin was produced by Paramount.",
+            "Tintin is an adventure film."
+        ],
+        "question": [
+            "Paramount produces adventure films."
+        ],
+        "premises_gt_fol": [
+            "DramaFilm(adventuresOfRusty) ∧ ChildrensFilm(adventuresOfRusty)",
+            "Produces(columbiaPictures, adventuresOfRusty)",
+            "Produces(paramount, tintin)",
+            "AdventureFilm(tintin)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Adventures of Rusty is a drama film and children's film.",
+            "Columbia Pictures produced Adventures of Rusty.",
+            "Tintin is an adventure film.",
+            "Tintin was produced by Paramount.",
+            "Since Tintin is an adventure film and was produced by Paramount, Paramount produces adventure films."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "",
+        "content": "Thoughts:\nAdventures of Rusty is a drama film and children's film.\nColumbia Pictures produced Adventures of Rusty.\nTintin is an adventure film.\nTintin was produced by Paramount.\nSince Tintin is an adventure film and was produced by Paramount, Paramount produces adventure films.\nAnswer: (A) True",
+        "filter_reasoning_steps": [
+            "Adventures of Rusty is a drama film and children's film.",
+            "Columbia Pictures produced Adventures of Rusty.",
+            "Tintin is an adventure film.",
+            "Tintin was produced by Paramount.",
+            "Since Tintin is an adventure film and was produced by Paramount, Paramount produces adventure films."
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) adventures of rusty is a drama film and children's film.",
+                "fol": "dramafilm(adventuresofrusty) ∧ childrensfilm(adventuresofrusty)",
+                "tptp": "dramafilm(adventuresofrusty) & childrensfilm(adventuresofrusty)"
+            },
+            {
+                "ref": "(2) columbia pictures produced adventures of rusty.",
+                "fol": "producedby(adventuresofrusty, columbiapictures)",
+                "tptp": "producedby(adventuresofrusty, columbiapictures)"
+            },
+            {
+                "ref": "(3) tintin was produced by paramount.",
+                "fol": "producedby(tintin, paramount)",
+                "tptp": "producedby(tintin, paramount)"
+            },
+            {
+                "ref": "(4) tintin is an adventure film.",
+                "fol": "adventurefilm(tintin)",
+                "tptp": "adventurefilm(tintin)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(6) paramount produces adventure films.",
+            "fol": "∃x (adventurefilm(x) ∧ producedby(x, paramount))",
+            "tptp": "?[X]: (adventurefilm(X) & producedby(X, paramount))"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) adventures of rusty is a drama film and children's film.",
+                "fol": "dramafilm(adventuresofrusty) ∧ childrensfilm(adventuresofrusty)",
+                "tptp": "dramafilm(adventuresofrusty) & childrensfilm(adventuresofrusty)"
+            },
+            {
+                "ref": "(2) columbia pictures produced adventures of rusty.",
+                "fol": "producedby(adventuresofrusty, columbiapictures)",
+                "tptp": "producedby(adventuresofrusty, columbiapictures)"
+            },
+            {
+                "ref": "(3) tintin is an adventure film.",
+                "fol": "adventurefilm(tintin)",
+                "tptp": "adventurefilm(tintin)"
+            },
+            {
+                "ref": "(4) tintin was produced by paramount.",
+                "fol": "producedby(tintin, paramount)",
+                "tptp": "producedby(tintin, paramount)"
+            },
+            {
+                "ref": "(5) since tintin is an adventure film and was produced by paramount, paramount produces adventure films.",
+                "fol": "(adventurefilm(tintin) ∧ producedby(tintin, paramount)) → ∃x (adventurefilm(x) ∧ producedby(x, paramount))",
+                "tptp": "(adventurefilm(tintin) & producedby(tintin, paramount)) => ?[X]: (adventurefilm(X) & producedby(X, paramount))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Adventures of Rusty is a drama film and children's film.",
+            "Columbia Pictures produced Adventures of Rusty.",
+            "Tintin is an adventure film.",
+            "Tintin was produced by Paramount.",
+            "Since Tintin is an adventure film and was produced by Paramount, Paramount produces adventure films."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "425_1206",
+        "premises": [
+            "Everyone working at Meta has a high income. ",
+            "A person with a high income will not take a bus to their destination.",
+            "People will either take a bus or drive to their destination. ",
+            "Everyone who has a car will choose to drive to their destination. ",
+            "No students drive to their destination. ",
+            "James has a car or works at Meta."
+        ],
+        "question": [
+            "James either drives to their destination or is a student."
+        ],
+        "premises_gt_fol": [
+            "∀x (WorkAt(x, meta) → HighIncome(x))",
+            "∀x (HighIncome(x) → ¬MeansToDestination(x, bus))",
+            "∀x (MeansToDestination(x, bus) ⊕ MeansToDestination(x, drive))",
+            "∀x (HaveCar(x) → MeansToDestination(x, drive))",
+            "∀x (Student(x) → ¬ MeansToDestination(x, drive))",
+            "HaveCar(james) ∨ WorkAt(james, meta)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Everyone working at Meta has a high income.",
+            "James has a car or works at Meta.",
+            "If James works at Meta, he has a high income.",
+            "A person with a high income will not take a bus to their destination.",
+            "People will either take a bus or drive to their destination.",
+            "If James takes a bus, he does not have a high income.",
+            "No students drive to their destination.",
+            "If James has a car, he will drive.",
+            "James either drives to his destination or does not drive.",
+            "If James does not drive, he takes a bus.",
+            "If James takes a bus, he is not a student.",
+            "James either drives to his destination or is a student."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "",
+        "content": "Thoughts:\nEveryone working at Meta has a high income.\nJames has a car or works at Meta.\nIf James works at Meta, he has a high income.\nA person with a high income will not take a bus to their destination.\nPeople will either take a bus or drive to their destination.\nIf James takes a bus, he does not have a high income.\nNo students drive to their destination.\nIf James has a car, he will drive.\nJames either drives to his destination or does not drive.\nIf James does not drive, he takes a bus.\nIf James takes a bus, he is not a student.\nJames either drives to his destination or is a student.\nAnswer:\n(A) True",
+        "filter_reasoning_steps": [
+            "Everyone working at Meta has a high income.",
+            "James has a car or works at Meta.",
+            "If James works at Meta, he has a high income.",
+            "A person with a high income will not take a bus to their destination.",
+            "People will either take a bus or drive to their destination.",
+            "If James takes a bus, he does not have a high income.",
+            "No students drive to their destination.",
+            "If James has a car, he will drive.",
+            "James either drives to his destination or does not drive.",
+            "If James does not drive, he takes a bus.",
+            "If James takes a bus, he is not a student.",
+            "James either drives to his destination or is a student."
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) everyone working at meta has a high income.",
+                "fol": "∀x (worksatmeta(x) → highincome(x))",
+                "tptp": "![X]: (worksatmeta(X) => highincome(X))"
+            },
+            {
+                "ref": "(2) a person with a high income will not take a bus to their destination.",
+                "fol": "∀x (highincome(x) → ¬takesbus(x))",
+                "tptp": "![X]: (highincome(X) => ~takesbus(X))"
+            },
+            {
+                "ref": "(3) people will either take a bus or drive to their destination.",
+                "fol": "∀x (takesbus(x) ⊕ drives(x))",
+                "tptp": "![X]: (((~(takesbus(X)) & (drives(X))) | ((takesbus(X)) & ~(drives(X)))))"
+            },
+            {
+                "ref": "(4) everyone who has a car will choose to drive to their destination.",
+                "fol": "∀x (hascar(x) → drives(x))",
+                "tptp": "![X]: (hascar(X) => drives(X))"
+            },
+            {
+                "ref": "(5) no students drive to their destination.",
+                "fol": "∀x (student(x) → ¬drives(x))",
+                "tptp": "![X]: (student(X) => ~drives(X))"
+            },
+            {
+                "ref": "(6) james has a car or works at meta.",
+                "fol": "hascar(james) ∨ worksatmeta(james)",
+                "tptp": "hascar(james) | worksatmeta(james)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(13) james either drives to their destination or is a student.",
+            "fol": "drives(james) ⊕ student(james)",
+            "tptp": "((~(drives(james)) & (student(james))) | ((drives(james)) & ~(student(james))))"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) everyone working at meta has a high income.",
+                "fol": "∀x (worksatmeta(x) → highincome(x))",
+                "tptp": "![X]: (worksatmeta(X) => highincome(X))"
+            },
+            {
+                "ref": "(2) james has a car or works at meta.",
+                "fol": "hascar(james) ∨ worksatmeta(james)",
+                "tptp": "hascar(james) | worksatmeta(james)"
+            },
+            {
+                "ref": "(3) if james works at meta, he has a high income.",
+                "fol": "worksatmeta(james) → highincome(james)",
+                "tptp": "worksatmeta(james) => highincome(james)"
+            },
+            {
+                "ref": "(4) a person with a high income will not take a bus to their destination.",
+                "fol": "∀x (highincome(x) → ¬takesbus(x))",
+                "tptp": "![X]: (highincome(X) => ~takesbus(X))"
+            },
+            {
+                "ref": "(5) people will either take a bus or drive to their destination.",
+                "fol": "∀x (takesbus(x) ⊕ drives(x))",
+                "tptp": "![X]: (((~(takesbus(X)) & (drives(X))) | ((takesbus(X)) & ~(drives(X)))))"
+            },
+            {
+                "ref": "(6) if james takes a bus, he does not have a high income.",
+                "fol": "takesbus(james) → ¬highincome(james)",
+                "tptp": "takesbus(james) => ~highincome(james)"
+            },
+            {
+                "ref": "(7) no students drive to their destination.",
+                "fol": "∀x (student(x) → ¬drives(x))",
+                "tptp": "![X]: (student(X) => ~drives(X))"
+            },
+            {
+                "ref": "(8) if james has a car, he will drive.",
+                "fol": "hascar(james) → drives(james)",
+                "tptp": "hascar(james) => drives(james)"
+            },
+            {
+                "ref": "(9) james either drives to his destination or does not drive.",
+                "fol": "drives(james) ⊕ ¬drives(james)",
+                "tptp": "((~(drives(james)) & (~drives(james))) | ((drives(james)) & ~(~drives(james))))"
+            },
+            {
+                "ref": "(10) if james does not drive, he takes a bus.",
+                "fol": "¬drives(james) → takesbus(james)",
+                "tptp": "~drives(james) => takesbus(james)"
+            },
+            {
+                "ref": "(11) if james takes a bus, he is not a student.",
+                "fol": "takesbus(james) → ¬student(james)",
+                "tptp": "takesbus(james) => ~student(james)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Everyone working at Meta has a high income.",
+            "James has a car or works at Meta.",
+            "If James works at Meta, he has a high income.",
+            "A person with a high income will not take a bus to their destination.",
+            "People will either take a bus or drive to their destination.",
+            "If James takes a bus, he does not have a high income.",
+            "No students drive to their destination.",
+            "If James has a car, he will drive.",
+            "James either drives to his destination or does not drive.",
+            "If James does not drive, he takes a bus.",
+            "If James takes a bus, he is not a student."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "27_78",
+        "premises": [
+            "Xiufeng, Xiangshan, Diecai, Qixing are districts in the city of Guilin.",
+            "Yangshuo is not a district in Guilin. "
+        ],
+        "question": [
+            "Xiufeng is a district in Guilin."
+        ],
+        "premises_gt_fol": [
+            "DistrictIn(xiufeng, guilin) ∧ DistrictIn(xiangshan, guilin) ∧ DistrictIn(diecai, guilin) ∧ DistrictIn(qixing, guilin) ∧ City(guilin)",
+            "¬DistrictIn(yangshuo, guilin)"
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Xiufeng, Xiangshan, Diecai, Qixing are districts in the city of Guilin.",
+            "Xiufeng is listed as one of the districts in Guilin.",
+            "Yangshuo is not a district in Guilin.",
+            "This fact about Yangshuo does not affect the status of Xiufeng.",
+            "Xiufeng being a district in Guilin is a given premise."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "reasoning_content": "",
+        "content": "Thoughts:\nXiufeng, Xiangshan, Diecai, Qixing are districts in the city of Guilin.\nXiufeng is listed as one of the districts in Guilin.\nYangshuo is not a district in Guilin.\nThis fact about Yangshuo does not affect the status of Xiufeng.\nXiufeng being a district in Guilin is a given premise.\nAnswer: (A) True",
+        "filter_reasoning_steps": [
+            "Xiufeng, Xiangshan, Diecai, Qixing are districts in the city of Guilin.",
+            "Xiufeng is listed as one of the districts in Guilin.",
+            "Yangshuo is not a district in Guilin.",
+            "This fact about Yangshuo does not affect the status of Xiufeng.",
+            "Xiufeng being a district in Guilin is a given premise."
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) xiufeng, xiangshan, diecai, qixing are districts in the city of guilin.",
+                "fol": "district(xiufeng, guilin) ∧ district(xiangshan, guilin) ∧ district(diecai, guilin) ∧ district(qixing, guilin)",
+                "tptp": "district(xiufeng, guilin) & district(xiangshan, guilin) & district(diecai, guilin) & district(qixing, guilin)"
+            },
+            {
+                "ref": "(2) yangshuo is not a district in guilin.",
+                "fol": "¬district(yangshuo, guilin)",
+                "tptp": "~district(yangshuo, guilin)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(6) xiufeng is a district in guilin.",
+            "fol": "district(xiufeng, guilin)",
+            "tptp": "district(xiufeng, guilin)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) xiufeng, xiangshan, diecai, qixing are districts in the city of guilin.",
+                "fol": "district(xiufeng, guilin) ∧ district(xiangshan, guilin) ∧ district(diecai, guilin) ∧ district(qixing, guilin)",
+                "tptp": "district(xiufeng, guilin) & district(xiangshan, guilin) & district(diecai, guilin) & district(qixing, guilin)"
+            },
+            {
+                "ref": "(3) yangshuo is not a district in guilin.",
+                "fol": "¬district(yangshuo, guilin)",
+                "tptp": "~district(yangshuo, guilin)"
+            },
+            {
+                "ref": "(4) this fact about yangshuo does not affect the status of xiufeng.",
+                "fol": "¬district(yangshuo, guilin) → district(xiufeng, guilin)",
+                "tptp": "~district(yangshuo, guilin) => district(xiufeng, guilin)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Xiufeng, Xiangshan, Diecai, Qixing are districts in the city of Guilin.",
+            "Xiufeng is listed as one of the districts in Guilin.",
+            "Yangshuo is not a district in Guilin."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True"
+        ]
+    }
+]

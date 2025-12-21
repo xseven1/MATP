@@ -1,0 +1,4634 @@
+[
+    {
+        "idx": "ProofWriter_RelNoneg-OWA-D5-116_Q12",
+        "premises": [
+            "The cow is young.",
+            "The cow sees the lion.",
+            "The dog likes the cow.",
+            "The dog likes the rabbit.",
+            "The dog sees the rabbit.",
+            "The lion is young.",
+            "The lion sees the cow.",
+            "The lion sees the dog.",
+            "The lion sees the rabbit.",
+            "The rabbit is round.",
+            "The rabbit likes the cow.",
+            "If someone visits the rabbit then the rabbit likes the lion.",
+            "If someone likes the rabbit and the rabbit is red then the rabbit is big.",
+            "If someone likes the lion and they see the rabbit then the lion likes the rabbit.",
+            "If someone is young then they like the rabbit.",
+            "If someone is young then they see the lion.",
+            "If the lion is big then the lion visits the dog.",
+            "If the rabbit likes the lion then the rabbit is young.",
+            "If someone is young and they like the rabbit then they visit the rabbit."
+        ],
+        "question": [
+            "The rabbit does not see the lion."
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "The lion sees the rabbit.",
+            "If someone visits the rabbit then the rabbit likes the lion.",
+            "If the rabbit likes the lion then the rabbit is young.",
+            "If someone is young then they like the rabbit.",
+            "If someone is young and they like the rabbit then they visit the rabbit.",
+            "If someone visits the rabbit then the rabbit likes the lion.",
+            "If someone likes the lion and they see the rabbit then the lion likes the rabbit.",
+            "There is no direct evidence or rule provided to determine if the rabbit sees the lion."
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "The lion sees the rabbit.",
+            "If someone visits the rabbit then the rabbit likes the lion.",
+            "If the rabbit likes the lion then the rabbit is young.",
+            "If someone is young then they like the rabbit.",
+            "If someone is young and they like the rabbit then they visit the rabbit.",
+            null,
+            "If someone likes the lion and they see the rabbit then the lion likes the rabbit.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) the cow is young.",
+                "fol": "young(cow)",
+                "tptp": "young(cow)"
+            },
+            {
+                "ref": "(2) the cow sees the lion.",
+                "fol": "sees(cow, lion)",
+                "tptp": "sees(cow, lion)"
+            },
+            {
+                "ref": "(3) the dog likes the cow.",
+                "fol": "likes(dog, cow)",
+                "tptp": "likes(dog, cow)"
+            },
+            {
+                "ref": "(4) the dog likes the rabbit.",
+                "fol": "likes(dog, rabbit)",
+                "tptp": "likes(dog, rabbit)"
+            },
+            {
+                "ref": "(5) the dog sees the rabbit.",
+                "fol": "sees(dog, rabbit)",
+                "tptp": "sees(dog, rabbit)"
+            },
+            {
+                "ref": "(6) the lion is young.",
+                "fol": "young(lion)",
+                "tptp": "young(lion)"
+            },
+            {
+                "ref": "(7) the lion sees the cow.",
+                "fol": "sees(lion, cow)",
+                "tptp": "sees(lion, cow)"
+            },
+            {
+                "ref": "(8) the lion sees the dog.",
+                "fol": "sees(lion, dog)",
+                "tptp": "sees(lion, dog)"
+            },
+            {
+                "ref": "(9) the lion sees the rabbit.",
+                "fol": "sees(lion, rabbit)",
+                "tptp": "sees(lion, rabbit)"
+            },
+            {
+                "ref": "(10) the rabbit is round.",
+                "fol": "round(rabbit)",
+                "tptp": "round(rabbit)"
+            },
+            {
+                "ref": "(11) the rabbit likes the cow.",
+                "fol": "likes(rabbit, cow)",
+                "tptp": "likes(rabbit, cow)"
+            },
+            {
+                "ref": "(12) if someone visits the rabbit then the rabbit likes the lion.",
+                "fol": "∀x (visits(x, rabbit) → likes(rabbit, lion))",
+                "tptp": "![X]: (visits(X, rabbit) => likes(rabbit, lion))"
+            },
+            {
+                "ref": "(13) if someone likes the rabbit and the rabbit is red then the rabbit is big.",
+                "fol": "∀x ((likes(x, rabbit) ∧ red(rabbit)) → big(rabbit))",
+                "tptp": "![X]: ((likes(X, rabbit) & red(rabbit)) => big(rabbit))"
+            },
+            {
+                "ref": "(14) if someone likes the lion and they see the rabbit then the lion likes the rabbit.",
+                "fol": "∀x ((likes(x, lion) ∧ sees(x, rabbit)) → likes(lion, rabbit))",
+                "tptp": "![X]: ((likes(X, lion) & sees(X, rabbit)) => likes(lion, rabbit))"
+            },
+            {
+                "ref": "(15) if someone is young then they like the rabbit.",
+                "fol": "∀x (young(x) → likes(x, rabbit))",
+                "tptp": "![X]: (young(X) => likes(X, rabbit))"
+            },
+            {
+                "ref": "(16) if someone is young then they see the lion.",
+                "fol": "∀x (young(x) → sees(x, lion))",
+                "tptp": "![X]: (young(X) => sees(X, lion))"
+            },
+            {
+                "ref": "(17) if the lion is big then the lion visits the dog.",
+                "fol": "big(lion) → visits(lion, dog)",
+                "tptp": "big(lion) => visits(lion, dog)"
+            },
+            {
+                "ref": "(18) if the rabbit likes the lion then the rabbit is young.",
+                "fol": "likes(rabbit, lion) → young(rabbit)",
+                "tptp": "likes(rabbit, lion) => young(rabbit)"
+            },
+            {
+                "ref": "(19) if someone is young and they like the rabbit then they visit the rabbit.",
+                "fol": "∀x ((young(x) ∧ likes(x, rabbit)) → visits(x, rabbit))",
+                "tptp": "![X]: ((young(X) & likes(X, rabbit)) => visits(X, rabbit))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(7) the rabbit does not see the lion.",
+            "fol": "¬sees(rabbit, lion)",
+            "tptp": "~sees(rabbit, lion)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) the lion sees the rabbit.",
+                "fol": "sees(lion, rabbit)",
+                "tptp": "sees(lion, rabbit)"
+            },
+            {
+                "ref": "(2) if someone visits the rabbit then the rabbit likes the lion.",
+                "fol": "∀x (visits(x, rabbit) → likes(rabbit, lion))",
+                "tptp": "![X]: (visits(X, rabbit) => likes(rabbit, lion))"
+            },
+            {
+                "ref": "(3) if the rabbit likes the lion then the rabbit is young.",
+                "fol": "likes(rabbit, lion) → young(rabbit)",
+                "tptp": "likes(rabbit, lion) => young(rabbit)"
+            },
+            {
+                "ref": "(4) if someone is young then they like the rabbit.",
+                "fol": "∀x (young(x) → likes(x, rabbit))",
+                "tptp": "![X]: (young(X) => likes(X, rabbit))"
+            },
+            {
+                "ref": "(5) if someone is young and they like the rabbit then they visit the rabbit.",
+                "fol": "∀x ((young(x) ∧ likes(x, rabbit)) → visits(x, rabbit))",
+                "tptp": "![X]: ((young(X) & likes(X, rabbit)) => visits(X, rabbit))"
+            },
+            {
+                "ref": "(6) if someone likes the lion and they see the rabbit then the lion likes the rabbit.",
+                "fol": "∀x ((likes(x, lion) ∧ sees(x, rabbit)) → likes(lion, rabbit))",
+                "tptp": "![X]: ((likes(X, lion) & sees(X, rabbit)) => likes(lion, rabbit))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "The lion sees the rabbit.",
+            "If someone visits the rabbit then the rabbit likes the lion.",
+            "If the rabbit likes the lion then the rabbit is young.",
+            "If someone is young then they like the rabbit.",
+            "If someone is young and they like the rabbit then they visit the rabbit.",
+            "If someone likes the lion and they see the rabbit then the lion likes the rabbit."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": false,
+        "cate": "T3",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "ProofWriter_RelNoneg-OWA-D5-975_Q4",
+        "premises": [
+            "The lion is kind.",
+            "The mouse chases the lion.",
+            "The rabbit is blue.",
+            "The rabbit is round.",
+            "The tiger is blue.",
+            "The tiger is cold.",
+            "The tiger is young.",
+            "If something sees the rabbit then the rabbit is cold.",
+            "If something sees the tiger then the tiger is kind.",
+            "If something is round then it is kind.",
+            "If the rabbit sees the lion and the rabbit sees the mouse then the mouse sees the tiger.",
+            "If something is kind then it sees the mouse.",
+            "If something is blue and kind then it sees the rabbit.",
+            "If something chases the lion and the lion chases the rabbit then the rabbit chases the mouse.",
+            "If something is kind and it sees the mouse then it sees the lion."
+        ],
+        "question": [
+            "The rabbit is not kind."
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "The rabbit is blue.",
+            "If something is blue and kind then it sees the rabbit.",
+            "If something sees the rabbit then the rabbit is cold.",
+            "If the rabbit is cold then it is not kind.",
+            "There is evidence to conclude that the rabbit is not kind."
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "The rabbit is blue.",
+            "If something is blue and kind then it sees the rabbit.",
+            "If something sees the rabbit then the rabbit is cold.",
+            "If the rabbit is cold then it is not kind.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) the lion is kind.",
+                "fol": "kind(lion)",
+                "tptp": "kind(lion)"
+            },
+            {
+                "ref": "(2) the mouse chases the lion.",
+                "fol": "chases(mouse, lion)",
+                "tptp": "chases(mouse, lion)"
+            },
+            {
+                "ref": "(3) the rabbit is blue.",
+                "fol": "blue(rabbit)",
+                "tptp": "blue(rabbit)"
+            },
+            {
+                "ref": "(4) the rabbit is round.",
+                "fol": "round(rabbit)",
+                "tptp": "round(rabbit)"
+            },
+            {
+                "ref": "(5) the tiger is blue.",
+                "fol": "blue(tiger)",
+                "tptp": "blue(tiger)"
+            },
+            {
+                "ref": "(6) the tiger is cold.",
+                "fol": "cold(tiger)",
+                "tptp": "cold(tiger)"
+            },
+            {
+                "ref": "(7) the tiger is young.",
+                "fol": "young(tiger)",
+                "tptp": "young(tiger)"
+            },
+            {
+                "ref": "(8) if something sees the rabbit then the rabbit is cold.",
+                "fol": "∀x (sees(x, rabbit) → cold(rabbit))",
+                "tptp": "![X]: (sees(X, rabbit) => cold(rabbit))"
+            },
+            {
+                "ref": "(9) if something sees the tiger then the tiger is kind.",
+                "fol": "∀x (sees(x, tiger) → kind(tiger))",
+                "tptp": "![X]: (sees(X, tiger) => kind(tiger))"
+            },
+            {
+                "ref": "(10) if something is round then it is kind.",
+                "fol": "∀x (round(x) → kind(x))",
+                "tptp": "![X]: (round(X) => kind(X))"
+            },
+            {
+                "ref": "(11) if the rabbit sees the lion and the rabbit sees the mouse then the mouse sees the tiger.",
+                "fol": "(sees(rabbit, lion) ∧ sees(rabbit, mouse)) → sees(mouse, tiger)",
+                "tptp": "(sees(rabbit, lion) & sees(rabbit, mouse)) => sees(mouse, tiger)"
+            },
+            {
+                "ref": "(12) if something is kind then it sees the mouse.",
+                "fol": "∀x (kind(x) → sees(x, mouse))",
+                "tptp": "![X]: (kind(X) => sees(X, mouse))"
+            },
+            {
+                "ref": "(13) if something is blue and kind then it sees the rabbit.",
+                "fol": "∀x ((blue(x) ∧ kind(x)) → sees(x, rabbit))",
+                "tptp": "![X]: ((blue(X) & kind(X)) => sees(X, rabbit))"
+            },
+            {
+                "ref": "(14) if something chases the lion and the lion chases the rabbit then the rabbit chases the mouse.",
+                "fol": "(chases(x, lion) ∧ chases(lion, rabbit)) → chases(rabbit, mouse)",
+                "tptp": "(chases(X, lion) & chases(lion, rabbit)) => chases(rabbit, mouse)"
+            },
+            {
+                "ref": "(15) if something is kind and it sees the mouse then it sees the lion.",
+                "fol": "∀x ((kind(x) ∧ sees(x, mouse)) → sees(x, lion))",
+                "tptp": "![X]: ((kind(X) & sees(X, mouse)) => sees(X, lion))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(5) the rabbit is not kind.",
+            "fol": "¬kind(rabbit)",
+            "tptp": "~kind(rabbit)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) the rabbit is blue.",
+                "fol": "blue(rabbit)",
+                "tptp": "blue(rabbit)"
+            },
+            {
+                "ref": "(2) if something is blue and kind then it sees the rabbit.",
+                "fol": "∀x ((blue(x) ∧ kind(x)) → sees(x, rabbit))",
+                "tptp": "![X]: ((blue(X) & kind(X)) => sees(X, rabbit))"
+            },
+            {
+                "ref": "(3) if something sees the rabbit then the rabbit is cold.",
+                "fol": "∀x (sees(x, rabbit) → cold(rabbit))",
+                "tptp": "![X]: (sees(X, rabbit) => cold(rabbit))"
+            },
+            {
+                "ref": "(4) if the rabbit is cold then it is not kind.",
+                "fol": "cold(rabbit) → ¬kind(rabbit)",
+                "tptp": "cold(rabbit) => ~kind(rabbit)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "The rabbit is blue.",
+            "If something is blue and kind then it sees the rabbit.",
+            "If something sees the rabbit then the rabbit is cold.",
+            "If the rabbit is cold then it is not kind."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "False"
+        ],
+        "has_valid_proof_path_label": false,
+        "cate": "T4",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "False"
+        ]
+    },
+    {
+        "idx": "ProofWriter_RelNoneg-OWA-D5-726_Q6",
+        "premises": [
+            "The bear visits the tiger.",
+            "The cat is kind.",
+            "The mouse is green.",
+            "The mouse is kind.",
+            "The mouse sees the tiger.",
+            "The tiger is rough.",
+            "The tiger visits the cat.",
+            "If something visits the bear then it sees the bear.",
+            "If something sees the bear then the bear likes the cat.",
+            "If something visits the cat then the cat visits the bear.",
+            "If something sees the bear and the bear likes the cat then it is cold.",
+            "Cold things are rough.",
+            "If something is green and it likes the tiger then the tiger visits the mouse."
+        ],
+        "question": [
+            "The cat does not see the bear."
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "The mouse sees the tiger.",
+            "If something sees the bear then the bear likes the cat.",
+            "If the bear likes the cat then it is cold.",
+            "Cold things are rough.",
+            "There is no direct evidence connecting the cat to the bear.",
+            "There is no direct evidence connecting the cat to the bear liking it.",
+            "There is no direct evidence connecting the cat to being cold.",
+            "There is no direct evidence connecting the cat to being rough.",
+            "There is no direct evidence connecting the cat to the conclusion.",
+            "The cat does not see the bear."
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "The mouse sees the tiger.",
+            "If something sees the bear then the bear likes the cat.",
+            "If the bear likes the cat then it is cold.",
+            "Cold things are rough.",
+            null,
+            null,
+            null,
+            null,
+            null,
+            "The cat does not see the bear."
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) the bear visits the tiger.",
+                "fol": "visits(bear, tiger)",
+                "tptp": "visits(bear, tiger)"
+            },
+            {
+                "ref": "(2) the cat is kind.",
+                "fol": "kind(cat)",
+                "tptp": "kind(cat)"
+            },
+            {
+                "ref": "(3) the mouse is green.",
+                "fol": "green(mouse)",
+                "tptp": "green(mouse)"
+            },
+            {
+                "ref": "(4) the mouse is kind.",
+                "fol": "kind(mouse)",
+                "tptp": "kind(mouse)"
+            },
+            {
+                "ref": "(5) the mouse sees the tiger.",
+                "fol": "sees(mouse, tiger)",
+                "tptp": "sees(mouse, tiger)"
+            },
+            {
+                "ref": "(6) the tiger is rough.",
+                "fol": "rough(tiger)",
+                "tptp": "rough(tiger)"
+            },
+            {
+                "ref": "(7) the tiger visits the cat.",
+                "fol": "visits(tiger, cat)",
+                "tptp": "visits(tiger, cat)"
+            },
+            {
+                "ref": "(8) if something visits the bear then it sees the bear.",
+                "fol": "∀x (visits(x, bear) → sees(x, bear))",
+                "tptp": "![X]: (visits(X, bear) => sees(X, bear))"
+            },
+            {
+                "ref": "(9) if something sees the bear then the bear likes the cat.",
+                "fol": "∀x (sees(x, bear) → likes(bear, cat))",
+                "tptp": "![X]: (sees(X, bear) => likes(bear, cat))"
+            },
+            {
+                "ref": "(10) if something visits the cat then the cat visits the bear.",
+                "fol": "∀x (visits(x, cat) → visits(cat, bear))",
+                "tptp": "![X]: (visits(X, cat) => visits(cat, bear))"
+            },
+            {
+                "ref": "(11) if something sees the bear and the bear likes the cat then it is cold.",
+                "fol": "∀x ((sees(x, bear) ∧ likes(bear, cat)) → cold(x))",
+                "tptp": "![X]: ((sees(X, bear) & likes(bear, cat)) => cold(X))"
+            },
+            {
+                "ref": "(12) cold things are rough.",
+                "fol": "∀x (cold(x) → rough(x))",
+                "tptp": "![X]: (cold(X) => rough(X))"
+            },
+            {
+                "ref": "(13) if something is green and it likes the tiger then the tiger visits the mouse.",
+                "fol": "∀x ((green(x) ∧ likes(x, tiger)) → visits(tiger, mouse))",
+                "tptp": "![X]: ((green(X) & likes(X, tiger)) => visits(tiger, mouse))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(6) the cat does not see the bear.",
+            "fol": "¬sees(cat, bear)",
+            "tptp": "~sees(cat, bear)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) the mouse sees the tiger.",
+                "fol": "sees(mouse, tiger)",
+                "tptp": "sees(mouse, tiger)"
+            },
+            {
+                "ref": "(2) if something sees the bear then the bear likes the cat.",
+                "fol": "∀x (sees(x, bear) → likes(bear, cat))",
+                "tptp": "![X]: (sees(X, bear) => likes(bear, cat))"
+            },
+            {
+                "ref": "(3) if the bear likes the cat then it is cold.",
+                "fol": "∀x (likes(bear, cat) → cold(bear))",
+                "tptp": "![X]: (likes(bear, cat) => cold(bear))"
+            },
+            {
+                "ref": "(4) cold things are rough.",
+                "fol": "∀x (cold(x) → rough(x))",
+                "tptp": "![X]: (cold(X) => rough(X))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "The mouse sees the tiger.",
+            "If something sees the bear then the bear likes the cat.",
+            "If the bear likes the cat then it is cold.",
+            "Cold things are rough."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "Unknown",
+            "True"
+        ],
+        "has_valid_proof_path_label": false,
+        "cate": "T4",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "Unknown",
+            "True"
+        ]
+    },
+    {
+        "idx": "ProofWriter_AttNoneg-OWA-D5-613_Q12",
+        "premises": [
+            "Anne is blue.",
+            "Anne is nice.",
+            "Anne is quiet.",
+            "Anne is rough.",
+            "Fiona is big.",
+            "Fiona is blue.",
+            "Fiona is quiet.",
+            "Gary is blue.",
+            "Gary is quiet.",
+            "Gary is rough.",
+            "Gary is white.",
+            "Harry is white.",
+            "All big people are rough.",
+            "All blue, nice people are big.",
+            "If someone is rough then they are green.",
+            "All nice people are big.",
+            "Green people are blue.",
+            "Rough, white people are nice.",
+            "White people are nice.",
+            "Green people are nice."
+        ],
+        "question": [
+            "Harry is not blue."
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "Anne is blue.",
+            "Fiona is blue.",
+            "Gary is blue.",
+            "Green people are blue.",
+            "If someone is rough then they are green.",
+            "Anne is rough.",
+            "Gary is rough.",
+            "All big people are rough.",
+            "All blue, nice people are big.",
+            "All nice people are big.",
+            "Rough, white people are nice.",
+            "White people are nice.",
+            "Harry is white.",
+            "There is no evidence to conclude that Harry is not blue."
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "Anne is blue.",
+            "Fiona is blue.",
+            "Gary is blue.",
+            "Green people are blue.",
+            "If someone is rough then they are green.",
+            "Anne is rough.",
+            "Gary is rough.",
+            "All big people are rough.",
+            "All blue, nice people are big.",
+            "All nice people are big.",
+            "Rough, white people are nice.",
+            "White people are nice.",
+            "Harry is white.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) anne is blue.",
+                "fol": "blue(anne)",
+                "tptp": "blue(anne)"
+            },
+            {
+                "ref": "(2) anne is nice.",
+                "fol": "nice(anne)",
+                "tptp": "nice(anne)"
+            },
+            {
+                "ref": "(3) anne is quiet.",
+                "fol": "quiet(anne)",
+                "tptp": "quiet(anne)"
+            },
+            {
+                "ref": "(4) anne is rough.",
+                "fol": "rough(anne)",
+                "tptp": "rough(anne)"
+            },
+            {
+                "ref": "(5) fiona is big.",
+                "fol": "big(fiona)",
+                "tptp": "big(fiona)"
+            },
+            {
+                "ref": "(6) fiona is blue.",
+                "fol": "blue(fiona)",
+                "tptp": "blue(fiona)"
+            },
+            {
+                "ref": "(7) fiona is quiet.",
+                "fol": "quiet(fiona)",
+                "tptp": "quiet(fiona)"
+            },
+            {
+                "ref": "(8) gary is blue.",
+                "fol": "blue(gary)",
+                "tptp": "blue(gary)"
+            },
+            {
+                "ref": "(9) gary is quiet.",
+                "fol": "quiet(gary)",
+                "tptp": "quiet(gary)"
+            },
+            {
+                "ref": "(10) gary is rough.",
+                "fol": "rough(gary)",
+                "tptp": "rough(gary)"
+            },
+            {
+                "ref": "(11) gary is white.",
+                "fol": "white(gary)",
+                "tptp": "white(gary)"
+            },
+            {
+                "ref": "(12) harry is white.",
+                "fol": "white(harry)",
+                "tptp": "white(harry)"
+            },
+            {
+                "ref": "(13) all big people are rough.",
+                "fol": "∀x (big(x) → rough(x))",
+                "tptp": "![X]: (big(X) => rough(X))"
+            },
+            {
+                "ref": "(14) all blue, nice people are big.",
+                "fol": "∀x ((blue(x) ∧ nice(x)) → big(x))",
+                "tptp": "![X]: ((blue(X) & nice(X)) => big(X))"
+            },
+            {
+                "ref": "(15) if someone is rough then they are green.",
+                "fol": "∀x (rough(x) → green(x))",
+                "tptp": "![X]: (rough(X) => green(X))"
+            },
+            {
+                "ref": "(16) all nice people are big.",
+                "fol": "∀x (nice(x) → big(x))",
+                "tptp": "![X]: (nice(X) => big(X))"
+            },
+            {
+                "ref": "(17) green people are blue.",
+                "fol": "∀x (green(x) → blue(x))",
+                "tptp": "![X]: (green(X) => blue(X))"
+            },
+            {
+                "ref": "(18) rough, white people are nice.",
+                "fol": "∀x ((rough(x) ∧ white(x)) → nice(x))",
+                "tptp": "![X]: ((rough(X) & white(X)) => nice(X))"
+            },
+            {
+                "ref": "(19) white people are nice.",
+                "fol": "∀x (white(x) → nice(x))",
+                "tptp": "![X]: (white(X) => nice(X))"
+            },
+            {
+                "ref": "(20) green people are nice.",
+                "fol": "∀x (green(x) → nice(x))",
+                "tptp": "![X]: (green(X) => nice(X))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(14) harry is not blue.",
+            "fol": "¬blue(harry)",
+            "tptp": "~blue(harry)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) anne is blue.",
+                "fol": "blue(anne)",
+                "tptp": "blue(anne)"
+            },
+            {
+                "ref": "(2) fiona is blue.",
+                "fol": "blue(fiona)",
+                "tptp": "blue(fiona)"
+            },
+            {
+                "ref": "(3) gary is blue.",
+                "fol": "blue(gary)",
+                "tptp": "blue(gary)"
+            },
+            {
+                "ref": "(4) green people are blue.",
+                "fol": "∀x (green(x) → blue(x))",
+                "tptp": "![X]: (green(X) => blue(X))"
+            },
+            {
+                "ref": "(5) if someone is rough then they are green.",
+                "fol": "∀x (rough(x) → green(x))",
+                "tptp": "![X]: (rough(X) => green(X))"
+            },
+            {
+                "ref": "(6) anne is rough.",
+                "fol": "rough(anne)",
+                "tptp": "rough(anne)"
+            },
+            {
+                "ref": "(7) gary is rough.",
+                "fol": "rough(gary)",
+                "tptp": "rough(gary)"
+            },
+            {
+                "ref": "(8) all big people are rough.",
+                "fol": "∀x (big(x) → rough(x))",
+                "tptp": "![X]: (big(X) => rough(X))"
+            },
+            {
+                "ref": "(9) all blue, nice people are big.",
+                "fol": "∀x ((blue(x) ∧ nice(x)) → big(x))",
+                "tptp": "![X]: ((blue(X) & nice(X)) => big(X))"
+            },
+            {
+                "ref": "(10) all nice people are big.",
+                "fol": "∀x (nice(x) → big(x))",
+                "tptp": "![X]: (nice(X) => big(X))"
+            },
+            {
+                "ref": "(11) rough, white people are nice.",
+                "fol": "∀x ((rough(x) ∧ white(x)) → nice(x))",
+                "tptp": "![X]: ((rough(X) & white(X)) => nice(X))"
+            },
+            {
+                "ref": "(12) white people are nice.",
+                "fol": "∀x (white(x) → nice(x))",
+                "tptp": "![X]: (white(X) => nice(X))"
+            },
+            {
+                "ref": "(13) harry is white.",
+                "fol": "white(harry)",
+                "tptp": "white(harry)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Anne is blue.",
+            "Fiona is blue.",
+            "Gary is blue.",
+            "Green people are blue.",
+            "If someone is rough then they are green.",
+            "Anne is rough.",
+            "Gary is rough.",
+            "All big people are rough.",
+            "All blue, nice people are big.",
+            "All nice people are big.",
+            "Rough, white people are nice.",
+            "White people are nice.",
+            "Harry is white."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "ProofWriter_RelNoneg-OWA-D5-280_Q8",
+        "premises": [
+            "The bald eagle needs the mouse.",
+            "The bald eagle sees the mouse.",
+            "The cow is red.",
+            "The cow is rough.",
+            "The cow sees the bald eagle.",
+            "The cow sees the mouse.",
+            "The dog eats the bald eagle.",
+            "The dog is cold.",
+            "The dog is rough.",
+            "The dog needs the bald eagle.",
+            "The mouse eats the bald eagle.",
+            "The mouse eats the dog.",
+            "The mouse is red.",
+            "The mouse is rough.",
+            "The mouse is young.",
+            "The mouse sees the cow.",
+            "If something is young then it needs the dog.",
+            "If something eats the cow then the cow is kind.",
+            "If something is young then it sees the bald eagle.",
+            "If something is cold and it needs the dog then it eats the mouse.",
+            "If something needs the bald eagle and it is red then it is young.",
+            "If something eats the mouse then it needs the mouse.",
+            "If something eats the bald eagle then it is red."
+        ],
+        "question": [
+            "The dog does not need the dog."
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "The bald eagle needs the mouse.",
+            "The bald eagle sees the mouse.",
+            "The dog needs the bald eagle.",
+            "If something needs the bald eagle and it is red then it is young.",
+            "If something eats the bald eagle then it is red.",
+            "The mouse eats the bald eagle.",
+            "If something eats the mouse then it needs the mouse.",
+            "The mouse is young.",
+            "If something is young then it needs the dog.",
+            "If something is cold and it needs the dog then it eats the mouse.",
+            "There is no direct evidence or logical connection in the premises to conclude that \"The dog does not need the dog.\""
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "The bald eagle needs the mouse.",
+            "The bald eagle sees the mouse.",
+            "The dog needs the bald eagle.",
+            "If something needs the bald eagle and it is red then it is young.",
+            "If something eats the bald eagle then it is red.",
+            "The mouse eats the bald eagle.",
+            "If something eats the mouse then it needs the mouse.",
+            "The mouse is young.",
+            "If something is young then it needs the dog.",
+            "If something is cold and it needs the dog then it eats the mouse.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) the bald eagle needs the mouse.",
+                "fol": "needs(bald_eagle, mouse)",
+                "tptp": "needs(bald_eagle, mouse)"
+            },
+            {
+                "ref": "(2) the bald eagle sees the mouse.",
+                "fol": "sees(bald_eagle, mouse)",
+                "tptp": "sees(bald_eagle, mouse)"
+            },
+            {
+                "ref": "(3) the cow is red.",
+                "fol": "red(cow)",
+                "tptp": "red(cow)"
+            },
+            {
+                "ref": "(4) the cow is rough.",
+                "fol": "rough(cow)",
+                "tptp": "rough(cow)"
+            },
+            {
+                "ref": "(5) the cow sees the bald eagle.",
+                "fol": "sees(cow, bald_eagle)",
+                "tptp": "sees(cow, bald_eagle)"
+            },
+            {
+                "ref": "(6) the cow sees the mouse.",
+                "fol": "sees(cow, mouse)",
+                "tptp": "sees(cow, mouse)"
+            },
+            {
+                "ref": "(7) the dog eats the bald eagle.",
+                "fol": "eats(dog, bald_eagle)",
+                "tptp": "eats(dog, bald_eagle)"
+            },
+            {
+                "ref": "(8) the dog is cold.",
+                "fol": "cold(dog)",
+                "tptp": "cold(dog)"
+            },
+            {
+                "ref": "(9) the dog is rough.",
+                "fol": "rough(dog)",
+                "tptp": "rough(dog)"
+            },
+            {
+                "ref": "(10) the dog needs the bald eagle.",
+                "fol": "needs(dog, bald_eagle)",
+                "tptp": "needs(dog, bald_eagle)"
+            },
+            {
+                "ref": "(11) the mouse eats the bald eagle.",
+                "fol": "eats(mouse, bald_eagle)",
+                "tptp": "eats(mouse, bald_eagle)"
+            },
+            {
+                "ref": "(12) the mouse eats the dog.",
+                "fol": "eats(mouse, dog)",
+                "tptp": "eats(mouse, dog)"
+            },
+            {
+                "ref": "(13) the mouse is red.",
+                "fol": "red(mouse)",
+                "tptp": "red(mouse)"
+            },
+            {
+                "ref": "(14) the mouse is rough.",
+                "fol": "rough(mouse)",
+                "tptp": "rough(mouse)"
+            },
+            {
+                "ref": "(15) the mouse is young.",
+                "fol": "young(mouse)",
+                "tptp": "young(mouse)"
+            },
+            {
+                "ref": "(16) the mouse sees the cow.",
+                "fol": "sees(mouse, cow)",
+                "tptp": "sees(mouse, cow)"
+            },
+            {
+                "ref": "(17) if something is young then it needs the dog.",
+                "fol": "∀x (young(x) → needs(x, dog))",
+                "tptp": "![X]: (young(X) => needs(X, dog))"
+            },
+            {
+                "ref": "(18) if something eats the cow then the cow is kind.",
+                "fol": "∀x (eats(x, cow) → kind(cow))",
+                "tptp": "![X]: (eats(X, cow) => kind(cow))"
+            },
+            {
+                "ref": "(19) if something is young then it sees the bald eagle.",
+                "fol": "∀x (young(x) → sees(x, bald_eagle))",
+                "tptp": "![X]: (young(X) => sees(X, bald_eagle))"
+            },
+            {
+                "ref": "(20) if something is cold and it needs the dog then it eats the mouse.",
+                "fol": "∀x ((cold(x) ∧ needs(x, dog)) → eats(x, mouse))",
+                "tptp": "![X]: ((cold(X) & needs(X, dog)) => eats(X, mouse))"
+            },
+            {
+                "ref": "(21) if something needs the bald eagle and it is red then it is young.",
+                "fol": "∀x ((needs(x, bald_eagle) ∧ red(x)) → young(x))",
+                "tptp": "![X]: ((needs(X, bald_eagle) & red(X)) => young(X))"
+            },
+            {
+                "ref": "(22) if something eats the mouse then it needs the mouse.",
+                "fol": "∀x (eats(x, mouse) → needs(x, mouse))",
+                "tptp": "![X]: (eats(X, mouse) => needs(X, mouse))"
+            },
+            {
+                "ref": "(23) if something eats the bald eagle then it is red.",
+                "fol": "∀x (eats(x, bald_eagle) → red(x))",
+                "tptp": "![X]: (eats(X, bald_eagle) => red(X))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(11) the dog does not need the dog.",
+            "fol": "¬needs(dog, dog)",
+            "tptp": "~needs(dog, dog)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) the bald eagle needs the mouse.",
+                "fol": "needs(bald_eagle, mouse)",
+                "tptp": "needs(bald_eagle, mouse)"
+            },
+            {
+                "ref": "(2) the bald eagle sees the mouse.",
+                "fol": "sees(bald_eagle, mouse)",
+                "tptp": "sees(bald_eagle, mouse)"
+            },
+            {
+                "ref": "(3) the dog needs the bald eagle.",
+                "fol": "needs(dog, bald_eagle)",
+                "tptp": "needs(dog, bald_eagle)"
+            },
+            {
+                "ref": "(4) if something needs the bald eagle and it is red then it is young.",
+                "fol": "∀x ((needs(x, bald_eagle) ∧ red(x)) → young(x))",
+                "tptp": "![X]: ((needs(X, bald_eagle) & red(X)) => young(X))"
+            },
+            {
+                "ref": "(5) if something eats the bald eagle then it is red.",
+                "fol": "∀x (eats(x, bald_eagle) → red(x))",
+                "tptp": "![X]: (eats(X, bald_eagle) => red(X))"
+            },
+            {
+                "ref": "(6) the mouse eats the bald eagle.",
+                "fol": "eats(mouse, bald_eagle)",
+                "tptp": "eats(mouse, bald_eagle)"
+            },
+            {
+                "ref": "(7) if something eats the mouse then it needs the mouse.",
+                "fol": "∀x (eats(x, mouse) → needs(x, mouse))",
+                "tptp": "![X]: (eats(X, mouse) => needs(X, mouse))"
+            },
+            {
+                "ref": "(8) the mouse is young.",
+                "fol": "young(mouse)",
+                "tptp": "young(mouse)"
+            },
+            {
+                "ref": "(9) if something is young then it needs the dog.",
+                "fol": "∀x (young(x) → needs(x, dog))",
+                "tptp": "![X]: (young(X) => needs(X, dog))"
+            },
+            {
+                "ref": "(10) if something is cold and it needs the dog then it eats the mouse.",
+                "fol": "∀x ((cold(x) ∧ needs(x, dog)) → eats(x, mouse))",
+                "tptp": "![X]: ((cold(X) & needs(X, dog)) => eats(X, mouse))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "The bald eagle needs the mouse.",
+            "The bald eagle sees the mouse.",
+            "The dog needs the bald eagle.",
+            "If something needs the bald eagle and it is red then it is young.",
+            "If something eats the bald eagle then it is red.",
+            "The mouse eats the bald eagle.",
+            "If something eats the mouse then it needs the mouse.",
+            "The mouse is young.",
+            "If something is young then it needs the dog.",
+            "If something is cold and it needs the dog then it eats the mouse."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": false,
+        "cate": "T3",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "ProofWriter_AttNoneg-OWA-D5-844_Q7",
+        "premises": [
+            "Anne is big.",
+            "Anne is cold.",
+            "Anne is furry.",
+            "Anne is white.",
+            "Erin is cold.",
+            "Fiona is round.",
+            "Gary is smart.",
+            "All smart things are furry.",
+            "Big, blue things are round.",
+            "If Gary is cold then Gary is smart.",
+            "All blue, furry things are big.",
+            "If Gary is furry then Gary is blue.",
+            "Round things are cold.",
+            "Cold, white things are furry.",
+            "Round things are blue."
+        ],
+        "question": [
+            "Gary is big."
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "All smart things are furry.",
+            "Gary is smart.",
+            "If Gary is furry then Gary is blue.",
+            "If Gary is cold then Gary is smart.",
+            "Gary is blue.",
+            "If Gary is furry then Gary is blue.",
+            "There is evidence to conclude that Gary is big."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "All smart things are furry.",
+            "Gary is smart.",
+            "If Gary is furry then Gary is blue.",
+            "If Gary is cold then Gary is smart.",
+            "Gary is blue.",
+            null,
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) anne is big.",
+                "fol": "big(anne)",
+                "tptp": "big(anne)"
+            },
+            {
+                "ref": "(2) anne is cold.",
+                "fol": "cold(anne)",
+                "tptp": "cold(anne)"
+            },
+            {
+                "ref": "(3) anne is furry.",
+                "fol": "furry(anne)",
+                "tptp": "furry(anne)"
+            },
+            {
+                "ref": "(4) anne is white.",
+                "fol": "white(anne)",
+                "tptp": "white(anne)"
+            },
+            {
+                "ref": "(5) erin is cold.",
+                "fol": "cold(erin)",
+                "tptp": "cold(erin)"
+            },
+            {
+                "ref": "(6) fiona is round.",
+                "fol": "round(fiona)",
+                "tptp": "round(fiona)"
+            },
+            {
+                "ref": "(7) gary is smart.",
+                "fol": "smart(gary)",
+                "tptp": "smart(gary)"
+            },
+            {
+                "ref": "(8) all smart things are furry.",
+                "fol": "∀x (smart(x) → furry(x))",
+                "tptp": "![X]: (smart(X) => furry(X))"
+            },
+            {
+                "ref": "(9) big, blue things are round.",
+                "fol": "∀x ((big(x) ∧ blue(x)) → round(x))",
+                "tptp": "![X]: ((big(X) & blue(X)) => round(X))"
+            },
+            {
+                "ref": "(10) if gary is cold then gary is smart.",
+                "fol": "cold(gary) → smart(gary)",
+                "tptp": "cold(gary) => smart(gary)"
+            },
+            {
+                "ref": "(11) all blue, furry things are big.",
+                "fol": "∀x ((blue(x) ∧ furry(x)) → big(x))",
+                "tptp": "![X]: ((blue(X) & furry(X)) => big(X))"
+            },
+            {
+                "ref": "(12) if gary is furry then gary is blue.",
+                "fol": "furry(gary) → blue(gary)",
+                "tptp": "furry(gary) => blue(gary)"
+            },
+            {
+                "ref": "(13) round things are cold.",
+                "fol": "∀x (round(x) → cold(x))",
+                "tptp": "![X]: (round(X) => cold(X))"
+            },
+            {
+                "ref": "(14) cold, white things are furry.",
+                "fol": "∀x ((cold(x) ∧ white(x)) → furry(x))",
+                "tptp": "![X]: ((cold(X) & white(X)) => furry(X))"
+            },
+            {
+                "ref": "(15) round things are blue.",
+                "fol": "∀x (round(x) → blue(x))",
+                "tptp": "![X]: (round(X) => blue(X))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(6) gary is big.",
+            "fol": "big(gary)",
+            "tptp": "big(gary)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) all smart things are furry.",
+                "fol": "∀x (smart(x) → furry(x))",
+                "tptp": "![X]: (smart(X) => furry(X))"
+            },
+            {
+                "ref": "(2) gary is smart.",
+                "fol": "smart(gary)",
+                "tptp": "smart(gary)"
+            },
+            {
+                "ref": "(3) if gary is furry then gary is blue.",
+                "fol": "furry(gary) → blue(gary)",
+                "tptp": "furry(gary) => blue(gary)"
+            },
+            {
+                "ref": "(4) if gary is cold then gary is smart.",
+                "fol": "cold(gary) → smart(gary)",
+                "tptp": "cold(gary) => smart(gary)"
+            },
+            {
+                "ref": "(5) gary is blue.",
+                "fol": "blue(gary)",
+                "tptp": "blue(gary)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "All smart things are furry.",
+            "Gary is smart.",
+            "If Gary is furry then Gary is blue.",
+            "If Gary is cold then Gary is smart.",
+            "Gary is blue."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": false,
+        "cate": "T3",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "ProofWriter_RelNeg-OWA-D5-902_Q8",
+        "premises": [
+            "The lion chases the mouse.",
+            "The mouse is cold.",
+            "The mouse needs the rabbit.",
+            "The rabbit chases the squirrel.",
+            "The rabbit sees the lion.",
+            "The rabbit sees the squirrel.",
+            "The squirrel chases the lion.",
+            "If something is cold then it sees the rabbit.",
+            "If something sees the rabbit then it sees the squirrel.",
+            "If something is cold and it sees the squirrel then the squirrel is cold.",
+            "If something chases the squirrel then it needs the squirrel.",
+            "If something chases the squirrel and it is not cold then the squirrel does not chase the rabbit.",
+            "If the rabbit sees the squirrel and the squirrel chases the rabbit then the rabbit does not chase the squirrel.",
+            "If the rabbit chases the squirrel and the squirrel does not chase the rabbit then the squirrel needs the mouse."
+        ],
+        "question": [
+            "The squirrel is not cold."
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "The mouse is cold.",
+            "If something is cold then it sees the rabbit.",
+            "The mouse needs the rabbit.",
+            "If something sees the rabbit then it sees the squirrel.",
+            "The rabbit sees the squirrel.",
+            "If something sees the rabbit then it sees the squirrel.",
+            "If something is cold and it sees the squirrel then the squirrel is cold.",
+            "There is evidence to conclude that the squirrel is cold."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "The mouse is cold.",
+            "If something is cold then it sees the rabbit.",
+            "The mouse needs the rabbit.",
+            "If something sees the rabbit then it sees the squirrel.",
+            "The rabbit sees the squirrel.",
+            null,
+            "If something is cold and it sees the squirrel then the squirrel is cold.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) the lion chases the mouse.",
+                "fol": "chases(lion, mouse)",
+                "tptp": "chases(lion, mouse)"
+            },
+            {
+                "ref": "(2) the mouse is cold.",
+                "fol": "cold(mouse)",
+                "tptp": "cold(mouse)"
+            },
+            {
+                "ref": "(3) the mouse needs the rabbit.",
+                "fol": "needs(mouse, rabbit)",
+                "tptp": "needs(mouse, rabbit)"
+            },
+            {
+                "ref": "(4) the rabbit chases the squirrel.",
+                "fol": "chases(rabbit, squirrel)",
+                "tptp": "chases(rabbit, squirrel)"
+            },
+            {
+                "ref": "(5) the rabbit sees the lion.",
+                "fol": "sees(rabbit, lion)",
+                "tptp": "sees(rabbit, lion)"
+            },
+            {
+                "ref": "(6) the rabbit sees the squirrel.",
+                "fol": "sees(rabbit, squirrel)",
+                "tptp": "sees(rabbit, squirrel)"
+            },
+            {
+                "ref": "(7) the squirrel chases the lion.",
+                "fol": "chases(squirrel, lion)",
+                "tptp": "chases(squirrel, lion)"
+            },
+            {
+                "ref": "(8) if something is cold then it sees the rabbit.",
+                "fol": "∀x (cold(x) → sees(x, rabbit))",
+                "tptp": "![X]: (cold(X) => sees(X, rabbit))"
+            },
+            {
+                "ref": "(9) if something sees the rabbit then it sees the squirrel.",
+                "fol": "∀x (sees(x, rabbit) → sees(x, squirrel))",
+                "tptp": "![X]: (sees(X, rabbit) => sees(X, squirrel))"
+            },
+            {
+                "ref": "(10) if something is cold and it sees the squirrel then the squirrel is cold.",
+                "fol": "∀x ((cold(x) ∧ sees(x, squirrel)) → cold(squirrel))",
+                "tptp": "![X]: ((cold(X) & sees(X, squirrel)) => cold(squirrel))"
+            },
+            {
+                "ref": "(11) if something chases the squirrel then it needs the squirrel.",
+                "fol": "∀x (chases(x, squirrel) → needs(x, squirrel))",
+                "tptp": "![X]: (chases(X, squirrel) => needs(X, squirrel))"
+            },
+            {
+                "ref": "(12) if something chases the squirrel and it is not cold then the squirrel does not chase the rabbit.",
+                "fol": "∀x ((chases(x, squirrel) ∧ ¬cold(x)) → ¬chases(squirrel, rabbit))",
+                "tptp": "![X]: ((chases(X, squirrel) & ~cold(X)) => ~chases(squirrel, rabbit))"
+            },
+            {
+                "ref": "(13) if the rabbit sees the squirrel and the squirrel chases the rabbit then the rabbit does not chase the squirrel.",
+                "fol": "((sees(rabbit, squirrel) ∧ chases(squirrel, rabbit)) → ¬chases(rabbit, squirrel))",
+                "tptp": "((sees(rabbit, squirrel) & chases(squirrel, rabbit)) => ~chases(rabbit, squirrel))"
+            },
+            {
+                "ref": "(14) if the rabbit chases the squirrel and the squirrel does not chase the rabbit then the squirrel needs the mouse.",
+                "fol": "((chases(rabbit, squirrel) ∧ ¬chases(squirrel, rabbit)) → needs(squirrel, mouse))",
+                "tptp": "((chases(rabbit, squirrel) & ~chases(squirrel, rabbit)) => needs(squirrel, mouse))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(7) the squirrel is not cold.",
+            "fol": "¬cold(squirrel)",
+            "tptp": "~cold(squirrel)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) the mouse is cold.",
+                "fol": "cold(mouse)",
+                "tptp": "cold(mouse)"
+            },
+            {
+                "ref": "(2) if something is cold then it sees the rabbit.",
+                "fol": "∀x (cold(x) → sees(x, rabbit))",
+                "tptp": "![X]: (cold(X) => sees(X, rabbit))"
+            },
+            {
+                "ref": "(3) the mouse needs the rabbit.",
+                "fol": "needs(mouse, rabbit)",
+                "tptp": "needs(mouse, rabbit)"
+            },
+            {
+                "ref": "(4) if something sees the rabbit then it sees the squirrel.",
+                "fol": "∀x (sees(x, rabbit) → sees(x, squirrel))",
+                "tptp": "![X]: (sees(X, rabbit) => sees(X, squirrel))"
+            },
+            {
+                "ref": "(5) the rabbit sees the squirrel.",
+                "fol": "sees(rabbit, squirrel)",
+                "tptp": "sees(rabbit, squirrel)"
+            },
+            {
+                "ref": "(6) if something is cold and it sees the squirrel then the squirrel is cold.",
+                "fol": "∀x ((cold(x) ∧ sees(x, squirrel)) → cold(squirrel))",
+                "tptp": "![X]: ((cold(X) & sees(X, squirrel)) => cold(squirrel))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "The mouse is cold.",
+            "If something is cold then it sees the rabbit.",
+            "The mouse needs the rabbit.",
+            "If something sees the rabbit then it sees the squirrel.",
+            "The rabbit sees the squirrel.",
+            "If something is cold and it sees the squirrel then the squirrel is cold."
+        ],
+        "AnswerCorrect": false,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "F1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "ProofWriter_RelNeg-OWA-D5-249_Q10",
+        "premises": [
+            "The cat chases the rabbit.",
+            "The cat chases the tiger.",
+            "The cat sees the mouse.",
+            "The cat does not see the rabbit.",
+            "The mouse chases the cat.",
+            "The mouse does not like the cat.",
+            "The rabbit likes the tiger.",
+            "The tiger is nice.",
+            "The tiger is young.",
+            "The tiger likes the cat.",
+            "All big things are blue.",
+            "If the cat sees the tiger then the cat chases the tiger.",
+            "If something likes the rabbit then the rabbit does not like the mouse.",
+            "All blue things are young.",
+            "If something is blue then it is young.",
+            "If something chases the cat then it likes the mouse.",
+            "If something is young then it likes the tiger.",
+            "If something likes the mouse then the mouse is big.",
+            "If something sees the mouse and the mouse is not blue then the mouse likes the cat."
+        ],
+        "question": [
+            "The mouse is not young."
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "The cat sees the mouse.",
+            "If something sees the mouse and the mouse is not blue then the mouse likes the cat.",
+            "The mouse likes the cat.",
+            "If something likes the mouse then the mouse is big.",
+            "The mouse is big.",
+            "All big things are blue.",
+            "If something is blue then it is young.",
+            "All blue things are young.",
+            "If something is young then it likes the tiger.",
+            "The tiger likes the cat.",
+            "If something likes the tiger then it is young.",
+            "The tiger is young.",
+            "There is no evidence to conclude that the mouse is not young."
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "The cat sees the mouse.",
+            "If something sees the mouse and the mouse is not blue then the mouse likes the cat.",
+            "The mouse likes the cat.",
+            "If something likes the mouse then the mouse is big.",
+            "The mouse is big.",
+            "All big things are blue.",
+            "If something is blue then it is young.",
+            "All blue things are young.",
+            "If something is young then it likes the tiger.",
+            "The tiger likes the cat.",
+            "If something likes the tiger then it is young.",
+            "The tiger is young.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) the cat chases the rabbit.",
+                "fol": "chases(cat, rabbit)",
+                "tptp": "chases(cat, rabbit)"
+            },
+            {
+                "ref": "(2) the cat chases the tiger.",
+                "fol": "chases(cat, tiger)",
+                "tptp": "chases(cat, tiger)"
+            },
+            {
+                "ref": "(3) the cat sees the mouse.",
+                "fol": "sees(cat, mouse)",
+                "tptp": "sees(cat, mouse)"
+            },
+            {
+                "ref": "(4) the cat does not see the rabbit.",
+                "fol": "¬sees(cat, rabbit)",
+                "tptp": "~sees(cat, rabbit)"
+            },
+            {
+                "ref": "(5) the mouse chases the cat.",
+                "fol": "chases(mouse, cat)",
+                "tptp": "chases(mouse, cat)"
+            },
+            {
+                "ref": "(6) the mouse does not like the cat.",
+                "fol": "¬likes(mouse, cat)",
+                "tptp": "~likes(mouse, cat)"
+            },
+            {
+                "ref": "(7) the rabbit likes the tiger.",
+                "fol": "likes(rabbit, tiger)",
+                "tptp": "likes(rabbit, tiger)"
+            },
+            {
+                "ref": "(8) the tiger is nice.",
+                "fol": "nice(tiger)",
+                "tptp": "nice(tiger)"
+            },
+            {
+                "ref": "(9) the tiger is young.",
+                "fol": "young(tiger)",
+                "tptp": "young(tiger)"
+            },
+            {
+                "ref": "(10) the tiger likes the cat.",
+                "fol": "likes(tiger, cat)",
+                "tptp": "likes(tiger, cat)"
+            },
+            {
+                "ref": "(11) all big things are blue.",
+                "fol": "∀x (big(x) → blue(x))",
+                "tptp": "![X]: (big(X) => blue(X))"
+            },
+            {
+                "ref": "(12) if the cat sees the tiger then the cat chases the tiger.",
+                "fol": "sees(cat, tiger) → chases(cat, tiger)",
+                "tptp": "sees(cat, tiger) => chases(cat, tiger)"
+            },
+            {
+                "ref": "(13) if something likes the rabbit then the rabbit does not like the mouse.",
+                "fol": "∀x (likes(x, rabbit) → ¬likes(rabbit, mouse))",
+                "tptp": "![X]: (likes(X, rabbit) => ~likes(rabbit, mouse))"
+            },
+            {
+                "ref": "(14) all blue things are young.",
+                "fol": "∀x (blue(x) → young(x))",
+                "tptp": "![X]: (blue(X) => young(X))"
+            },
+            {
+                "ref": "(15) if something is blue then it is young.",
+                "fol": "∀x (blue(x) → young(x))",
+                "tptp": "![X]: (blue(X) => young(X))"
+            },
+            {
+                "ref": "(16) if something chases the cat then it likes the mouse.",
+                "fol": "∀x (chases(x, cat) → likes(x, mouse))",
+                "tptp": "![X]: (chases(X, cat) => likes(X, mouse))"
+            },
+            {
+                "ref": "(17) if something is young then it likes the tiger.",
+                "fol": "∀x (young(x) → likes(x, tiger))",
+                "tptp": "![X]: (young(X) => likes(X, tiger))"
+            },
+            {
+                "ref": "(18) if something likes the mouse then the mouse is big.",
+                "fol": "∀x (likes(x, mouse) → big(mouse))",
+                "tptp": "![X]: (likes(X, mouse) => big(mouse))"
+            },
+            {
+                "ref": "(19) if something sees the mouse and the mouse is not blue then the mouse likes the cat.",
+                "fol": "∀x ((sees(x, mouse) ∧ ¬blue(mouse)) → likes(mouse, cat))",
+                "tptp": "![X]: ((sees(X, mouse) & ~blue(mouse)) => likes(mouse, cat))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(13) the mouse is not young.",
+            "fol": "¬young(mouse)",
+            "tptp": "~young(mouse)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) the cat sees the mouse.",
+                "fol": "sees(cat, mouse)",
+                "tptp": "sees(cat, mouse)"
+            },
+            {
+                "ref": "(2) if something sees the mouse and the mouse is not blue then the mouse likes the cat.",
+                "fol": "∀x ((sees(x, mouse) ∧ ¬blue(mouse)) → likes(mouse, cat))",
+                "tptp": "![X]: ((sees(X, mouse) & ~blue(mouse)) => likes(mouse, cat))"
+            },
+            {
+                "ref": "(3) the mouse likes the cat.",
+                "fol": "likes(mouse, cat)",
+                "tptp": "likes(mouse, cat)"
+            },
+            {
+                "ref": "(4) if something likes the mouse then the mouse is big.",
+                "fol": "∀x (likes(x, mouse) → big(mouse))",
+                "tptp": "![X]: (likes(X, mouse) => big(mouse))"
+            },
+            {
+                "ref": "(5) the mouse is big.",
+                "fol": "big(mouse)",
+                "tptp": "big(mouse)"
+            },
+            {
+                "ref": "(6) all big things are blue.",
+                "fol": "∀x (big(x) → blue(x))",
+                "tptp": "![X]: (big(X) => blue(X))"
+            },
+            {
+                "ref": "(7) if something is blue then it is young.",
+                "fol": "∀x (blue(x) → young(x))",
+                "tptp": "![X]: (blue(X) => young(X))"
+            },
+            {
+                "ref": "(8) all blue things are young.",
+                "fol": "∀x (blue(x) → young(x))",
+                "tptp": "![X]: (blue(X) => young(X))"
+            },
+            {
+                "ref": "(9) if something is young then it likes the tiger.",
+                "fol": "∀x (young(x) → likes(x, tiger))",
+                "tptp": "![X]: (young(X) => likes(X, tiger))"
+            },
+            {
+                "ref": "(10) the tiger likes the cat.",
+                "fol": "likes(tiger, cat)",
+                "tptp": "likes(tiger, cat)"
+            },
+            {
+                "ref": "(11) if something likes the tiger then it is young.",
+                "fol": "∀x (likes(x, tiger) → young(x))",
+                "tptp": "![X]: (likes(X, tiger) => young(X))"
+            },
+            {
+                "ref": "(12) the tiger is young.",
+                "fol": "young(tiger)",
+                "tptp": "young(tiger)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "The cat sees the mouse.",
+            "If something sees the mouse and the mouse is not blue then the mouse likes the cat.",
+            "The mouse likes the cat.",
+            "If something likes the mouse then the mouse is big.",
+            "The mouse is big.",
+            "All big things are blue.",
+            "If something is blue then it is young.",
+            "All blue things are young.",
+            "If something is young then it likes the tiger.",
+            "The tiger likes the cat.",
+            "If something likes the tiger then it is young.",
+            "The tiger is young."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "False",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "Unknown",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T2",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "False",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "Unknown",
+            "True"
+        ]
+    },
+    {
+        "idx": "ProofWriter_RelNoneg-OWA-D5-301_Q4",
+        "premises": [
+            "The cat eats the dog.",
+            "The cat is young.",
+            "The cat needs the rabbit.",
+            "The dog is young.",
+            "The dog needs the rabbit.",
+            "The lion is green.",
+            "The lion needs the cat.",
+            "The rabbit chases the cat.",
+            "The rabbit chases the dog.",
+            "The rabbit eats the cat.",
+            "The rabbit needs the cat.",
+            "The rabbit needs the lion.",
+            "All green things are red.",
+            "If something is red and young then it eats the lion.",
+            "If something eats the cat then the cat is green.",
+            "If something is blue and it eats the cat then the cat chases the dog.",
+            "If something eats the rabbit and it needs the lion then the rabbit is red.",
+            "If something eats the lion then the lion is young.",
+            "If something is big then it eats the cat.",
+            "If something eats the rabbit then the rabbit eats the dog."
+        ],
+        "question": [
+            "The cat is not green."
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "The cat eats the dog.",
+            "If something eats the cat then the cat is green.",
+            "The cat is green.",
+            "All green things are red.",
+            "The cat is red.",
+            "If something is red and young then it eats the lion.",
+            "The cat is young.",
+            "The cat eats the lion.",
+            "If something eats the lion then the lion is young.",
+            "The lion is young.",
+            "There is no evidence to conclude that the cat is not green."
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "The cat eats the dog.",
+            "If something eats the cat then the cat is green.",
+            "The cat is green.",
+            "All green things are red.",
+            "The cat is red.",
+            "If something is red and young then it eats the lion.",
+            "The cat is young.",
+            "The cat eats the lion.",
+            "If something eats the lion then the lion is young.",
+            "The lion is young.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) the cat eats the dog.",
+                "fol": "eats(cat, dog)",
+                "tptp": "eats(cat, dog)"
+            },
+            {
+                "ref": "(2) the cat is young.",
+                "fol": "young(cat)",
+                "tptp": "young(cat)"
+            },
+            {
+                "ref": "(3) the cat needs the rabbit.",
+                "fol": "needs(cat, rabbit)",
+                "tptp": "needs(cat, rabbit)"
+            },
+            {
+                "ref": "(4) the dog is young.",
+                "fol": "young(dog)",
+                "tptp": "young(dog)"
+            },
+            {
+                "ref": "(5) the dog needs the rabbit.",
+                "fol": "needs(dog, rabbit)",
+                "tptp": "needs(dog, rabbit)"
+            },
+            {
+                "ref": "(6) the lion is green.",
+                "fol": "green(lion)",
+                "tptp": "green(lion)"
+            },
+            {
+                "ref": "(7) the lion needs the cat.",
+                "fol": "needs(lion, cat)",
+                "tptp": "needs(lion, cat)"
+            },
+            {
+                "ref": "(8) the rabbit chases the cat.",
+                "fol": "chases(rabbit, cat)",
+                "tptp": "chases(rabbit, cat)"
+            },
+            {
+                "ref": "(9) the rabbit chases the dog.",
+                "fol": "chases(rabbit, dog)",
+                "tptp": "chases(rabbit, dog)"
+            },
+            {
+                "ref": "(10) the rabbit eats the cat.",
+                "fol": "eats(rabbit, cat)",
+                "tptp": "eats(rabbit, cat)"
+            },
+            {
+                "ref": "(11) the rabbit needs the cat.",
+                "fol": "needs(rabbit, cat)",
+                "tptp": "needs(rabbit, cat)"
+            },
+            {
+                "ref": "(12) the rabbit needs the lion.",
+                "fol": "needs(rabbit, lion)",
+                "tptp": "needs(rabbit, lion)"
+            },
+            {
+                "ref": "(13) all green things are red.",
+                "fol": "∀x (green(x) → red(x))",
+                "tptp": "![X]: (green(X) => red(X))"
+            },
+            {
+                "ref": "(14) if something is red and young then it eats the lion.",
+                "fol": "∀x ((red(x) ∧ young(x)) → eats(x, lion))",
+                "tptp": "![X]: ((red(X) & young(X)) => eats(X, lion))"
+            },
+            {
+                "ref": "(15) if something eats the cat then the cat is green.",
+                "fol": "∀x (eats(x, cat) → green(cat))",
+                "tptp": "![X]: (eats(X, cat) => green(cat))"
+            },
+            {
+                "ref": "(16) if something is blue and it eats the cat then the cat chases the dog.",
+                "fol": "∀x ((blue(x) ∧ eats(x, cat)) → chases(cat, dog))",
+                "tptp": "![X]: ((blue(X) & eats(X, cat)) => chases(cat, dog))"
+            },
+            {
+                "ref": "(17) if something eats the rabbit and it needs the lion then the rabbit is red.",
+                "fol": "∀x ((eats(x, rabbit) ∧ needs(x, lion)) → red(rabbit))",
+                "tptp": "![X]: ((eats(X, rabbit) & needs(X, lion)) => red(rabbit))"
+            },
+            {
+                "ref": "(18) if something eats the lion then the lion is young.",
+                "fol": "∀x (eats(x, lion) → young(lion))",
+                "tptp": "![X]: (eats(X, lion) => young(lion))"
+            },
+            {
+                "ref": "(19) if something is big then it eats the cat.",
+                "fol": "∀x (big(x) → eats(x, cat))",
+                "tptp": "![X]: (big(X) => eats(X, cat))"
+            },
+            {
+                "ref": "(20) if something eats the rabbit then the rabbit eats the dog.",
+                "fol": "∀x (eats(x, rabbit) → eats(rabbit, dog))",
+                "tptp": "![X]: (eats(X, rabbit) => eats(rabbit, dog))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(11) the cat is not green.",
+            "fol": "¬green(cat)",
+            "tptp": "~green(cat)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) the cat eats the dog.",
+                "fol": "eats(cat, dog)",
+                "tptp": "eats(cat, dog)"
+            },
+            {
+                "ref": "(2) if something eats the cat then the cat is green.",
+                "fol": "∀x (eats(x, cat) → green(cat))",
+                "tptp": "![X]: (eats(X, cat) => green(cat))"
+            },
+            {
+                "ref": "(4) all green things are red.",
+                "fol": "∀x (green(x) → red(x))",
+                "tptp": "![X]: (green(X) => red(X))"
+            },
+            {
+                "ref": "(5) the cat is red.",
+                "fol": "red(cat)",
+                "tptp": "red(cat)"
+            },
+            {
+                "ref": "(6) if something is red and young then it eats the lion.",
+                "fol": "∀x ((red(x) ∧ young(x)) → eats(x, lion))",
+                "tptp": "![X]: ((red(X) & young(X)) => eats(X, lion))"
+            },
+            {
+                "ref": "(7) the cat is young.",
+                "fol": "young(cat)",
+                "tptp": "young(cat)"
+            },
+            {
+                "ref": "(8) the cat eats the lion.",
+                "fol": "eats(cat, lion)",
+                "tptp": "eats(cat, lion)"
+            },
+            {
+                "ref": "(9) if something eats the lion then the lion is young.",
+                "fol": "∀x (eats(x, lion) → young(lion))",
+                "tptp": "![X]: (eats(X, lion) => young(lion))"
+            },
+            {
+                "ref": "(10) the lion is young.",
+                "fol": "young(lion)",
+                "tptp": "young(lion)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "The cat eats the dog.",
+            "If something eats the cat then the cat is green.",
+            "The cat is green.",
+            "All green things are red.",
+            "The cat is red.",
+            "If something is red and young then it eats the lion.",
+            "The cat is young.",
+            "The cat eats the lion.",
+            "If something eats the lion then the lion is young."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": false,
+        "cate": "T3",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "ProofWriter_AttNoneg-OWA-D5-308_Q8",
+        "premises": [
+            "Anne is cold.",
+            "Anne is young.",
+            "Charlie is cold.",
+            "Erin is big.",
+            "Fiona is blue.",
+            "Fiona is red.",
+            "Fiona is smart.",
+            "If something is big and young then it is smart.",
+            "If something is big and red then it is young.",
+            "All cold things are red.",
+            "If something is green then it is cold.",
+            "If Anne is blue and Anne is smart then Anne is young.",
+            "All smart, young things are green.",
+            "If something is red and big then it is young.",
+            "If something is big then it is young."
+        ],
+        "question": [
+            "Erin is not green."
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "Anne is cold.",
+            "All cold things are red.",
+            "Anne is red.",
+            "Erin is big.",
+            "If something is big and red then it is young.",
+            "Erin is young.",
+            "If something is big and young then it is smart.",
+            "Erin is smart.",
+            "If something is green then it is cold.",
+            "Erin is not green.",
+            "There is evidence to conclude that Erin is not green."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "Anne is cold.",
+            "All cold things are red.",
+            "Anne is red.",
+            "Erin is big.",
+            "If something is big and red then it is young.",
+            "Erin is young.",
+            "If something is big and young then it is smart.",
+            "Erin is smart.",
+            "If something is green then it is cold.",
+            "Erin is not green.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) anne is cold.",
+                "fol": "cold(anne)",
+                "tptp": "cold(anne)"
+            },
+            {
+                "ref": "(2) anne is young.",
+                "fol": "young(anne)",
+                "tptp": "young(anne)"
+            },
+            {
+                "ref": "(3) charlie is cold.",
+                "fol": "cold(charlie)",
+                "tptp": "cold(charlie)"
+            },
+            {
+                "ref": "(4) erin is big.",
+                "fol": "big(erin)",
+                "tptp": "big(erin)"
+            },
+            {
+                "ref": "(5) fiona is blue.",
+                "fol": "blue(fiona)",
+                "tptp": "blue(fiona)"
+            },
+            {
+                "ref": "(6) fiona is red.",
+                "fol": "red(fiona)",
+                "tptp": "red(fiona)"
+            },
+            {
+                "ref": "(7) fiona is smart.",
+                "fol": "smart(fiona)",
+                "tptp": "smart(fiona)"
+            },
+            {
+                "ref": "(8) if something is big and young then it is smart.",
+                "fol": "∀x ((big(x) ∧ young(x)) → smart(x))",
+                "tptp": "![X]: ((big(X) & young(X)) => smart(X))"
+            },
+            {
+                "ref": "(9) if something is big and red then it is young.",
+                "fol": "∀x ((big(x) ∧ red(x)) → young(x))",
+                "tptp": "![X]: ((big(X) & red(X)) => young(X))"
+            },
+            {
+                "ref": "(10) all cold things are red.",
+                "fol": "∀x (cold(x) → red(x))",
+                "tptp": "![X]: (cold(X) => red(X))"
+            },
+            {
+                "ref": "(11) if something is green then it is cold.",
+                "fol": "∀x (green(x) → cold(x))",
+                "tptp": "![X]: (green(X) => cold(X))"
+            },
+            {
+                "ref": "(12) if anne is blue and anne is smart then anne is young.",
+                "fol": "(blue(anne) ∧ smart(anne)) → young(anne)",
+                "tptp": "(blue(anne) & smart(anne)) => young(anne)"
+            },
+            {
+                "ref": "(13) all smart, young things are green.",
+                "fol": "∀x ((smart(x) ∧ young(x)) → green(x))",
+                "tptp": "![X]: ((smart(X) & young(X)) => green(X))"
+            },
+            {
+                "ref": "(14) if something is red and big then it is young.",
+                "fol": "∀x ((red(x) ∧ big(x)) → young(x))",
+                "tptp": "![X]: ((red(X) & big(X)) => young(X))"
+            },
+            {
+                "ref": "(15) if something is big then it is young.",
+                "fol": "∀x (big(x) → young(x))",
+                "tptp": "![X]: (big(X) => young(X))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(11) erin is not green.",
+            "fol": "¬green(erin)",
+            "tptp": "~green(erin)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) anne is cold.",
+                "fol": "cold(anne)",
+                "tptp": "cold(anne)"
+            },
+            {
+                "ref": "(2) all cold things are red.",
+                "fol": "∀x (cold(x) → red(x))",
+                "tptp": "![X]: (cold(X) => red(X))"
+            },
+            {
+                "ref": "(3) anne is red.",
+                "fol": "red(anne)",
+                "tptp": "red(anne)"
+            },
+            {
+                "ref": "(4) erin is big.",
+                "fol": "big(erin)",
+                "tptp": "big(erin)"
+            },
+            {
+                "ref": "(5) if something is big and red then it is young.",
+                "fol": "∀x ((big(x) ∧ red(x)) → young(x))",
+                "tptp": "![X]: ((big(X) & red(X)) => young(X))"
+            },
+            {
+                "ref": "(6) erin is young.",
+                "fol": "young(erin)",
+                "tptp": "young(erin)"
+            },
+            {
+                "ref": "(7) if something is big and young then it is smart.",
+                "fol": "∀x ((big(x) ∧ young(x)) → smart(x))",
+                "tptp": "![X]: ((big(X) & young(X)) => smart(X))"
+            },
+            {
+                "ref": "(8) erin is smart.",
+                "fol": "smart(erin)",
+                "tptp": "smart(erin)"
+            },
+            {
+                "ref": "(9) if something is green then it is cold.",
+                "fol": "∀x (green(x) → cold(x))",
+                "tptp": "![X]: (green(X) => cold(X))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Anne is cold.",
+            "All cold things are red.",
+            "Anne is red.",
+            "Erin is big.",
+            "If something is big and red then it is young.",
+            "Erin is young.",
+            "If something is big and young then it is smart.",
+            "Erin is smart.",
+            "If something is green then it is cold."
+        ],
+        "AnswerCorrect": false,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": false,
+        "cate": "F1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "ProofWriter_AttNeg-OWA-D5-1210_Q4",
+        "premises": [
+            "Bob is not kind.",
+            "Bob is smart.",
+            "Dave is not blue.",
+            "Dave is cold.",
+            "Dave is kind.",
+            "Dave is not red.",
+            "Dave is smart.",
+            "Dave is white.",
+            "Fiona is kind.",
+            "Fiona is smart.",
+            "Fiona is white.",
+            "Harry is red.",
+            "If someone is red then they are kind.",
+            "If Harry is kind then Harry is blue.",
+            "If Harry is kind and Harry is not red then Harry is not blue.",
+            "If Fiona is not kind then Fiona is blue.",
+            "All young people are smart.",
+            "All red, blue people are smart.",
+            "If Harry is young and Harry is smart then Harry is white.",
+            "If someone is smart and blue then they are young.",
+            "If someone is blue and not red then they are young."
+        ],
+        "question": [
+            "Harry is not kind."
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "Dave is cold.",
+            "Dave is smart.",
+            "Dave is white.",
+            "Dave is not blue.",
+            "Dave is kind.",
+            "Dave is not red.",
+            "If someone is red then they are kind.",
+            "If Harry is kind then Harry is blue.",
+            "If Harry is kind and Harry is not red then Harry is not blue.",
+            "If Fiona is not kind then Fiona is blue.",
+            "Fiona is kind.",
+            "Fiona is smart.",
+            "Fiona is white.",
+            "All young people are smart.",
+            "All red, blue people are smart.",
+            "If someone is smart and blue then they are young.",
+            "If someone is blue and not red then they are young.",
+            "If Harry is young and smart then Harry is white.",
+            "Harry is red.",
+            "If Harry is red then he is kind.",
+            "If Harry is kind then he is blue.",
+            "If Harry is kind and not red then he is not blue.",
+            "There is no evidence to conclude that Harry is not kind."
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "Dave is cold.",
+            "Dave is smart.",
+            "Dave is white.",
+            "Dave is not blue.",
+            "Dave is kind.",
+            "Dave is not red.",
+            "If someone is red then they are kind.",
+            "If Harry is kind then Harry is blue.",
+            "If Harry is kind and Harry is not red then Harry is not blue.",
+            "If Fiona is not kind then Fiona is blue.",
+            "Fiona is kind.",
+            "Fiona is smart.",
+            "Fiona is white.",
+            "All young people are smart.",
+            "All red, blue people are smart.",
+            "If someone is smart and blue then they are young.",
+            "If someone is blue and not red then they are young.",
+            "If Harry is young and smart then Harry is white.",
+            "Harry is red.",
+            "If Harry is red then he is kind.",
+            "If Harry is kind then he is blue.",
+            "If Harry is kind and not red then he is not blue.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) bob is not kind.",
+                "fol": "¬kind(bob)",
+                "tptp": "~kind(bob)"
+            },
+            {
+                "ref": "(2) bob is smart.",
+                "fol": "smart(bob)",
+                "tptp": "smart(bob)"
+            },
+            {
+                "ref": "(3) dave is not blue.",
+                "fol": "¬blue(dave)",
+                "tptp": "~blue(dave)"
+            },
+            {
+                "ref": "(4) dave is cold.",
+                "fol": "cold(dave)",
+                "tptp": "cold(dave)"
+            },
+            {
+                "ref": "(5) dave is kind.",
+                "fol": "kind(dave)",
+                "tptp": "kind(dave)"
+            },
+            {
+                "ref": "(6) dave is not red.",
+                "fol": "¬red(dave)",
+                "tptp": "~red(dave)"
+            },
+            {
+                "ref": "(7) dave is smart.",
+                "fol": "smart(dave)",
+                "tptp": "smart(dave)"
+            },
+            {
+                "ref": "(8) dave is white.",
+                "fol": "white(dave)",
+                "tptp": "white(dave)"
+            },
+            {
+                "ref": "(9) fiona is kind.",
+                "fol": "kind(fiona)",
+                "tptp": "kind(fiona)"
+            },
+            {
+                "ref": "(10) fiona is smart.",
+                "fol": "smart(fiona)",
+                "tptp": "smart(fiona)"
+            },
+            {
+                "ref": "(11) fiona is white.",
+                "fol": "white(fiona)",
+                "tptp": "white(fiona)"
+            },
+            {
+                "ref": "(12) harry is red.",
+                "fol": "red(harry)",
+                "tptp": "red(harry)"
+            },
+            {
+                "ref": "(13) if someone is red then they are kind.",
+                "fol": "∀x (red(x) → kind(x))",
+                "tptp": "![X]: (red(X) => kind(X))"
+            },
+            {
+                "ref": "(14) if harry is kind then harry is blue.",
+                "fol": "kind(harry) → blue(harry)",
+                "tptp": "kind(harry) => blue(harry)"
+            },
+            {
+                "ref": "(15) if harry is kind and harry is not red then harry is not blue.",
+                "fol": "(kind(harry) ∧ ¬red(harry)) → ¬blue(harry)",
+                "tptp": "(kind(harry) & ~red(harry)) => ~blue(harry)"
+            },
+            {
+                "ref": "(16) if fiona is not kind then fiona is blue.",
+                "fol": "¬kind(fiona) → blue(fiona)",
+                "tptp": "~kind(fiona) => blue(fiona)"
+            },
+            {
+                "ref": "(17) all young people are smart.",
+                "fol": "∀x (young(x) → smart(x))",
+                "tptp": "![X]: (young(X) => smart(X))"
+            },
+            {
+                "ref": "(18) all red, blue people are smart.",
+                "fol": "∀x ((red(x) ∧ blue(x)) → smart(x))",
+                "tptp": "![X]: ((red(X) & blue(X)) => smart(X))"
+            },
+            {
+                "ref": "(19) if harry is young and harry is smart then harry is white.",
+                "fol": "(young(harry) ∧ smart(harry)) → white(harry)",
+                "tptp": "(young(harry) & smart(harry)) => white(harry)"
+            },
+            {
+                "ref": "(20) if someone is smart and blue then they are young.",
+                "fol": "∀x ((smart(x) ∧ blue(x)) → young(x))",
+                "tptp": "![X]: ((smart(X) & blue(X)) => young(X))"
+            },
+            {
+                "ref": "(21) if someone is blue and not red then they are young.",
+                "fol": "∀x ((blue(x) ∧ ¬red(x)) → young(x))",
+                "tptp": "![X]: ((blue(X) & ~red(X)) => young(X))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(23) harry is not kind.",
+            "fol": "¬kind(harry)",
+            "tptp": "~kind(harry)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) dave is cold.",
+                "fol": "cold(dave)",
+                "tptp": "cold(dave)"
+            },
+            {
+                "ref": "(2) dave is smart.",
+                "fol": "smart(dave)",
+                "tptp": "smart(dave)"
+            },
+            {
+                "ref": "(3) dave is white.",
+                "fol": "white(dave)",
+                "tptp": "white(dave)"
+            },
+            {
+                "ref": "(4) dave is not blue.",
+                "fol": "¬blue(dave)",
+                "tptp": "~blue(dave)"
+            },
+            {
+                "ref": "(5) dave is kind.",
+                "fol": "kind(dave)",
+                "tptp": "kind(dave)"
+            },
+            {
+                "ref": "(6) dave is not red.",
+                "fol": "¬red(dave)",
+                "tptp": "~red(dave)"
+            },
+            {
+                "ref": "(7) if someone is red then they are kind.",
+                "fol": "∀x (red(x) → kind(x))",
+                "tptp": "![X]: (red(X) => kind(X))"
+            },
+            {
+                "ref": "(8) if harry is kind then harry is blue.",
+                "fol": "kind(harry) → blue(harry)",
+                "tptp": "kind(harry) => blue(harry)"
+            },
+            {
+                "ref": "(9) if harry is kind and harry is not red then harry is not blue.",
+                "fol": "(kind(harry) ∧ ¬red(harry)) → ¬blue(harry)",
+                "tptp": "(kind(harry) & ~red(harry)) => ~blue(harry)"
+            },
+            {
+                "ref": "(10) if fiona is not kind then fiona is blue.",
+                "fol": "¬kind(fiona) → blue(fiona)",
+                "tptp": "~kind(fiona) => blue(fiona)"
+            },
+            {
+                "ref": "(11) fiona is kind.",
+                "fol": "kind(fiona)",
+                "tptp": "kind(fiona)"
+            },
+            {
+                "ref": "(12) fiona is smart.",
+                "fol": "smart(fiona)",
+                "tptp": "smart(fiona)"
+            },
+            {
+                "ref": "(13) fiona is white.",
+                "fol": "white(fiona)",
+                "tptp": "white(fiona)"
+            },
+            {
+                "ref": "(14) all young people are smart.",
+                "fol": "∀x (young(x) → smart(x))",
+                "tptp": "![X]: (young(X) => smart(X))"
+            },
+            {
+                "ref": "(15) all red, blue people are smart.",
+                "fol": "∀x ((red(x) ∧ blue(x)) → smart(x))",
+                "tptp": "![X]: ((red(X) & blue(X)) => smart(X))"
+            },
+            {
+                "ref": "(16) if someone is smart and blue then they are young.",
+                "fol": "∀x ((smart(x) ∧ blue(x)) → young(x))",
+                "tptp": "![X]: ((smart(X) & blue(X)) => young(X))"
+            },
+            {
+                "ref": "(17) if someone is blue and not red then they are young.",
+                "fol": "∀x ((blue(x) ∧ ¬red(x)) → young(x))",
+                "tptp": "![X]: ((blue(X) & ~red(X)) => young(X))"
+            },
+            {
+                "ref": "(18) if harry is young and smart then harry is white.",
+                "fol": "(young(harry) ∧ smart(harry)) → white(harry)",
+                "tptp": "(young(harry) & smart(harry)) => white(harry)"
+            },
+            {
+                "ref": "(19) harry is red.",
+                "fol": "red(harry)",
+                "tptp": "red(harry)"
+            },
+            {
+                "ref": "(20) if harry is red then he is kind.",
+                "fol": "red(harry) → kind(harry)",
+                "tptp": "red(harry) => kind(harry)"
+            },
+            {
+                "ref": "(21) if harry is kind then he is blue.",
+                "fol": "kind(harry) → blue(harry)",
+                "tptp": "kind(harry) => blue(harry)"
+            },
+            {
+                "ref": "(22) if harry is kind and not red then he is not blue.",
+                "fol": "(kind(harry) ∧ ¬red(harry)) → ¬blue(harry)",
+                "tptp": "(kind(harry) & ~red(harry)) => ~blue(harry)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Dave is cold.",
+            "Dave is smart.",
+            "Dave is white.",
+            "Dave is not blue.",
+            "Dave is kind.",
+            "Dave is not red.",
+            "If someone is red then they are kind.",
+            "If Harry is kind then Harry is blue.",
+            "If Harry is kind and Harry is not red then Harry is not blue.",
+            "If Fiona is not kind then Fiona is blue.",
+            "Fiona is kind.",
+            "Fiona is smart.",
+            "Fiona is white.",
+            "All young people are smart.",
+            "All red, blue people are smart.",
+            "If someone is smart and blue then they are young.",
+            "If someone is blue and not red then they are young.",
+            "If Harry is young and smart then Harry is white.",
+            "Harry is red.",
+            "If Harry is red then he is kind.",
+            "If Harry is kind then he is blue.",
+            "If Harry is kind and not red then he is not blue."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "ProofWriter_AttNoneg-OWA-D5-735_Q3",
+        "premises": [
+            "Bob is big.",
+            "Bob is nice.",
+            "Bob is smart.",
+            "Charlie is nice.",
+            "Dave is nice.",
+            "Erin is big.",
+            "Erin is blue.",
+            "Erin is furry.",
+            "Erin is quiet.",
+            "Erin is round.",
+            "Erin is smart.",
+            "All nice things are big.",
+            "All furry things are blue.",
+            "Blue, furry things are quiet.",
+            "If something is round and nice then it is blue.",
+            "If Bob is round then Bob is blue.",
+            "Big, quiet things are furry.",
+            "If something is blue and furry then it is smart.",
+            "If Charlie is nice and Charlie is big then Charlie is quiet."
+        ],
+        "question": [
+            "Dave is big."
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Bob is big.",
+            "Erin is big.",
+            "All nice things are big.",
+            "Charlie is nice.",
+            "Dave is nice.",
+            "If Charlie is nice and Charlie is big then Charlie is quiet.",
+            "Charlie is quiet.",
+            "There is no direct evidence or logical inference to conclude that Dave is big."
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "Bob is big.",
+            "Erin is big.",
+            "All nice things are big.",
+            "Charlie is nice.",
+            "Dave is nice.",
+            "If Charlie is nice and Charlie is big then Charlie is quiet.",
+            "Charlie is quiet.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) bob is big.",
+                "fol": "big(bob)",
+                "tptp": "big(bob)"
+            },
+            {
+                "ref": "(2) bob is nice.",
+                "fol": "nice(bob)",
+                "tptp": "nice(bob)"
+            },
+            {
+                "ref": "(3) bob is smart.",
+                "fol": "smart(bob)",
+                "tptp": "smart(bob)"
+            },
+            {
+                "ref": "(4) charlie is nice.",
+                "fol": "nice(charlie)",
+                "tptp": "nice(charlie)"
+            },
+            {
+                "ref": "(5) dave is nice.",
+                "fol": "nice(dave)",
+                "tptp": "nice(dave)"
+            },
+            {
+                "ref": "(6) erin is big.",
+                "fol": "big(erin)",
+                "tptp": "big(erin)"
+            },
+            {
+                "ref": "(7) erin is blue.",
+                "fol": "blue(erin)",
+                "tptp": "blue(erin)"
+            },
+            {
+                "ref": "(8) erin is furry.",
+                "fol": "furry(erin)",
+                "tptp": "furry(erin)"
+            },
+            {
+                "ref": "(9) erin is quiet.",
+                "fol": "quiet(erin)",
+                "tptp": "quiet(erin)"
+            },
+            {
+                "ref": "(10) erin is round.",
+                "fol": "round(erin)",
+                "tptp": "round(erin)"
+            },
+            {
+                "ref": "(11) erin is smart.",
+                "fol": "smart(erin)",
+                "tptp": "smart(erin)"
+            },
+            {
+                "ref": "(12) all nice things are big.",
+                "fol": "∀x (nice(x) → big(x))",
+                "tptp": "![X]: (nice(X) => big(X))"
+            },
+            {
+                "ref": "(13) all furry things are blue.",
+                "fol": "∀x (furry(x) → blue(x))",
+                "tptp": "![X]: (furry(X) => blue(X))"
+            },
+            {
+                "ref": "(14) blue, furry things are quiet.",
+                "fol": "∀x ((blue(x) ∧ furry(x)) → quiet(x))",
+                "tptp": "![X]: ((blue(X) & furry(X)) => quiet(X))"
+            },
+            {
+                "ref": "(15) if something is round and nice then it is blue.",
+                "fol": "∀x ((round(x) ∧ nice(x)) → blue(x))",
+                "tptp": "![X]: ((round(X) & nice(X)) => blue(X))"
+            },
+            {
+                "ref": "(16) if bob is round then bob is blue.",
+                "fol": "round(bob) → blue(bob)",
+                "tptp": "round(bob) => blue(bob)"
+            },
+            {
+                "ref": "(17) big, quiet things are furry.",
+                "fol": "∀x ((big(x) ∧ quiet(x)) → furry(x))",
+                "tptp": "![X]: ((big(X) & quiet(X)) => furry(X))"
+            },
+            {
+                "ref": "(18) if something is blue and furry then it is smart.",
+                "fol": "∀x ((blue(x) ∧ furry(x)) → smart(x))",
+                "tptp": "![X]: ((blue(X) & furry(X)) => smart(X))"
+            },
+            {
+                "ref": "(19) if charlie is nice and charlie is big then charlie is quiet.",
+                "fol": "(nice(charlie) ∧ big(charlie)) → quiet(charlie)",
+                "tptp": "(nice(charlie) & big(charlie)) => quiet(charlie)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(8) dave is big.",
+            "fol": "big(dave)",
+            "tptp": "big(dave)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) bob is big.",
+                "fol": "big(bob)",
+                "tptp": "big(bob)"
+            },
+            {
+                "ref": "(2) erin is big.",
+                "fol": "big(erin)",
+                "tptp": "big(erin)"
+            },
+            {
+                "ref": "(3) all nice things are big.",
+                "fol": "∀x (nice(x) → big(x))",
+                "tptp": "![X]: (nice(X) => big(X))"
+            },
+            {
+                "ref": "(4) charlie is nice.",
+                "fol": "nice(charlie)",
+                "tptp": "nice(charlie)"
+            },
+            {
+                "ref": "(5) dave is nice.",
+                "fol": "nice(dave)",
+                "tptp": "nice(dave)"
+            },
+            {
+                "ref": "(6) if charlie is nice and charlie is big then charlie is quiet.",
+                "fol": "(nice(charlie) ∧ big(charlie)) → quiet(charlie)",
+                "tptp": "(nice(charlie) & big(charlie)) => quiet(charlie)"
+            },
+            {
+                "ref": "(7) charlie is quiet.",
+                "fol": "quiet(charlie)",
+                "tptp": "quiet(charlie)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Bob is big.",
+            "Erin is big.",
+            "All nice things are big.",
+            "Charlie is nice.",
+            "Dave is nice.",
+            "If Charlie is nice and Charlie is big then Charlie is quiet.",
+            "Charlie is quiet."
+        ],
+        "AnswerCorrect": false,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "F1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "ProofWriter_AttNeg-OWA-D5-327_Q5",
+        "premises": [
+            "Bob is quiet.",
+            "Bob is smart.",
+            "Charlie is quiet.",
+            "Charlie is not white.",
+            "Fiona is young.",
+            "Harry is big.",
+            "Harry is nice.",
+            "If something is quiet and white then it is green.",
+            "All smart things are green.",
+            "Green things are white.",
+            "All smart, young things are big.",
+            "White things are not young.",
+            "If something is smart and not young then it is nice.",
+            "If Bob is green and Bob is nice then Bob is big."
+        ],
+        "question": [
+            "Bob is white."
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Bob is quiet.",
+            "Bob is smart.",
+            "If something is smart and not young then it is nice.",
+            "Bob is nice.",
+            "If Bob is green and Bob is nice then Bob is big.",
+            "There is evidence to conclude that Bob is big.",
+            "If Bob is big then Bob is white.",
+            "There is evidence to conclude that Bob is white."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "Bob is quiet.",
+            "Bob is smart.",
+            "If something is smart and not young then it is nice.",
+            "Bob is nice.",
+            "If Bob is green and Bob is nice then Bob is big.",
+            null,
+            "If Bob is big then Bob is white.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) bob is quiet.",
+                "fol": "quiet(bob)",
+                "tptp": "quiet(bob)"
+            },
+            {
+                "ref": "(2) bob is smart.",
+                "fol": "smart(bob)",
+                "tptp": "smart(bob)"
+            },
+            {
+                "ref": "(3) charlie is quiet.",
+                "fol": "quiet(charlie)",
+                "tptp": "quiet(charlie)"
+            },
+            {
+                "ref": "(4) charlie is not white.",
+                "fol": "¬white(charlie)",
+                "tptp": "~white(charlie)"
+            },
+            {
+                "ref": "(5) fiona is young.",
+                "fol": "young(fiona)",
+                "tptp": "young(fiona)"
+            },
+            {
+                "ref": "(6) harry is big.",
+                "fol": "big(harry)",
+                "tptp": "big(harry)"
+            },
+            {
+                "ref": "(7) harry is nice.",
+                "fol": "nice(harry)",
+                "tptp": "nice(harry)"
+            },
+            {
+                "ref": "(8) if something is quiet and white then it is green.",
+                "fol": "∀x ((quiet(x) ∧ white(x)) → green(x))",
+                "tptp": "![X]: ((quiet(X) & white(X)) => green(X))"
+            },
+            {
+                "ref": "(9) all smart things are green.",
+                "fol": "∀x (smart(x) → green(x))",
+                "tptp": "![X]: (smart(X) => green(X))"
+            },
+            {
+                "ref": "(10) green things are white.",
+                "fol": "∀x (green(x) → white(x))",
+                "tptp": "![X]: (green(X) => white(X))"
+            },
+            {
+                "ref": "(11) all smart, young things are big.",
+                "fol": "∀x ((smart(x) ∧ young(x)) → big(x))",
+                "tptp": "![X]: ((smart(X) & young(X)) => big(X))"
+            },
+            {
+                "ref": "(12) white things are not young.",
+                "fol": "∀x (white(x) → ¬young(x))",
+                "tptp": "![X]: (white(X) => ~young(X))"
+            },
+            {
+                "ref": "(13) if something is smart and not young then it is nice.",
+                "fol": "∀x ((smart(x) ∧ ¬young(x)) → nice(x))",
+                "tptp": "![X]: ((smart(X) & ~young(X)) => nice(X))"
+            },
+            {
+                "ref": "(14) if bob is green and bob is nice then bob is big.",
+                "fol": "(green(bob) ∧ nice(bob)) → big(bob)",
+                "tptp": "(green(bob) & nice(bob)) => big(bob)"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(7) bob is white.",
+            "fol": "white(bob)",
+            "tptp": "white(bob)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) bob is quiet.",
+                "fol": "quiet(bob)",
+                "tptp": "quiet(bob)"
+            },
+            {
+                "ref": "(2) bob is smart.",
+                "fol": "smart(bob)",
+                "tptp": "smart(bob)"
+            },
+            {
+                "ref": "(3) if something is smart and not young then it is nice.",
+                "fol": "∀x ((smart(x) ∧ ¬young(x)) → nice(x))",
+                "tptp": "![X]: ((smart(X) & ~young(X)) => nice(X))"
+            },
+            {
+                "ref": "(4) bob is nice.",
+                "fol": "nice(bob)",
+                "tptp": "nice(bob)"
+            },
+            {
+                "ref": "(5) if bob is green and bob is nice then bob is big.",
+                "fol": "(green(bob) ∧ nice(bob)) → big(bob)",
+                "tptp": "(green(bob) & nice(bob)) => big(bob)"
+            },
+            {
+                "ref": "(6) if bob is big then bob is white.",
+                "fol": "big(bob) → white(bob)",
+                "tptp": "big(bob) => white(bob)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Bob is quiet.",
+            "Bob is smart.",
+            "If something is smart and not young then it is nice.",
+            "Bob is nice.",
+            "If Bob is green and Bob is nice then Bob is big.",
+            "If Bob is big then Bob is white."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": false,
+        "cate": "T3",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "ProofWriter_RelNoneg-OWA-D5-329_Q7",
+        "premises": [
+            "The bald eagle is cold.",
+            "The bald eagle is rough.",
+            "The bald eagle needs the tiger.",
+            "The bald eagle visits the squirrel.",
+            "The lion is cold.",
+            "The lion is kind.",
+            "The lion needs the tiger.",
+            "The squirrel chases the bald eagle.",
+            "The squirrel chases the tiger.",
+            "The squirrel visits the tiger.",
+            "The tiger is red.",
+            "If someone needs the squirrel then they chase the tiger.",
+            "If someone is rough and they chase the squirrel then the squirrel visits the lion.",
+            "If someone visits the tiger and they visit the lion then the lion needs the bald eagle.",
+            "If someone visits the bald eagle and the bald eagle visits the squirrel then the bald eagle chases the squirrel.",
+            "If someone is red then they chase the lion.",
+            "If someone chases the lion and they visit the bald eagle then they need the bald eagle.",
+            "If someone visits the bald eagle then they need the bald eagle.",
+            "If someone chases the lion then they visit the bald eagle.",
+            "If someone chases the tiger then the tiger chases the bald eagle."
+        ],
+        "question": [
+            "The bald eagle chases the squirrel."
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "The bald eagle needs the tiger.",
+            "If someone needs the squirrel then they chase the tiger.",
+            "If someone chases the tiger then the tiger chases the bald eagle.",
+            "If someone visits the bald eagle then they need the bald eagle.",
+            "If someone visits the tiger and they visit the lion then the lion needs the bald eagle.",
+            "If someone visits the bald eagle and the bald eagle visits the squirrel then the bald eagle chases the squirrel.",
+            "There is evidence to conclude that the bald eagle chases the squirrel."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "The bald eagle needs the tiger.",
+            "If someone needs the squirrel then they chase the tiger.",
+            "If someone chases the tiger then the tiger chases the bald eagle.",
+            "If someone visits the bald eagle then they need the bald eagle.",
+            "If someone visits the tiger and they visit the lion then the lion needs the bald eagle.",
+            "If someone visits the bald eagle and the bald eagle visits the squirrel then the bald eagle chases the squirrel.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) the bald eagle is cold.",
+                "fol": "cold(bald_eagle)",
+                "tptp": "cold(bald_eagle)"
+            },
+            {
+                "ref": "(2) the bald eagle is rough.",
+                "fol": "rough(bald_eagle)",
+                "tptp": "rough(bald_eagle)"
+            },
+            {
+                "ref": "(3) the bald eagle needs the tiger.",
+                "fol": "needs(bald_eagle, tiger)",
+                "tptp": "needs(bald_eagle, tiger)"
+            },
+            {
+                "ref": "(4) the bald eagle visits the squirrel.",
+                "fol": "visits(bald_eagle, squirrel)",
+                "tptp": "visits(bald_eagle, squirrel)"
+            },
+            {
+                "ref": "(5) the lion is cold.",
+                "fol": "cold(lion)",
+                "tptp": "cold(lion)"
+            },
+            {
+                "ref": "(6) the lion is kind.",
+                "fol": "kind(lion)",
+                "tptp": "kind(lion)"
+            },
+            {
+                "ref": "(7) the lion needs the tiger.",
+                "fol": "needs(lion, tiger)",
+                "tptp": "needs(lion, tiger)"
+            },
+            {
+                "ref": "(8) the squirrel chases the bald eagle.",
+                "fol": "chases(squirrel, bald_eagle)",
+                "tptp": "chases(squirrel, bald_eagle)"
+            },
+            {
+                "ref": "(9) the squirrel chases the tiger.",
+                "fol": "chases(squirrel, tiger)",
+                "tptp": "chases(squirrel, tiger)"
+            },
+            {
+                "ref": "(10) the squirrel visits the tiger.",
+                "fol": "visits(squirrel, tiger)",
+                "tptp": "visits(squirrel, tiger)"
+            },
+            {
+                "ref": "(11) the tiger is red.",
+                "fol": "red(tiger)",
+                "tptp": "red(tiger)"
+            },
+            {
+                "ref": "(12) if someone needs the squirrel then they chase the tiger.",
+                "fol": "∀x (needs(x, squirrel) → chases(x, tiger))",
+                "tptp": "![X]: (needs(X, squirrel) => chases(X, tiger))"
+            },
+            {
+                "ref": "(13) if someone is rough and they chase the squirrel then the squirrel visits the lion.",
+                "fol": "∀x ((rough(x) ∧ chases(x, squirrel)) → visits(squirrel, lion))",
+                "tptp": "![X]: ((rough(X) & chases(X, squirrel)) => visits(squirrel, lion))"
+            },
+            {
+                "ref": "(14) if someone visits the tiger and they visit the lion then the lion needs the bald eagle.",
+                "fol": "∀x ((visits(x, tiger) ∧ visits(x, lion)) → needs(lion, bald_eagle))",
+                "tptp": "![X]: ((visits(X, tiger) & visits(X, lion)) => needs(lion, bald_eagle))"
+            },
+            {
+                "ref": "(15) if someone visits the bald eagle and the bald eagle visits the squirrel then the bald eagle chases the squirrel.",
+                "fol": "∀x ((visits(x, bald_eagle) ∧ visits(bald_eagle, squirrel)) → chases(bald_eagle, squirrel))",
+                "tptp": "![X]: ((visits(X, bald_eagle) & visits(bald_eagle, squirrel)) => chases(bald_eagle, squirrel))"
+            },
+            {
+                "ref": "(16) if someone is red then they chase the lion.",
+                "fol": "∀x (red(x) → chases(x, lion))",
+                "tptp": "![X]: (red(X) => chases(X, lion))"
+            },
+            {
+                "ref": "(17) if someone chases the lion and they visit the bald eagle then they need the bald eagle.",
+                "fol": "∀x ((chases(x, lion) ∧ visits(x, bald_eagle)) → needs(x, bald_eagle))",
+                "tptp": "![X]: ((chases(X, lion) & visits(X, bald_eagle)) => needs(X, bald_eagle))"
+            },
+            {
+                "ref": "(18) if someone visits the bald eagle then they need the bald eagle.",
+                "fol": "∀x (visits(x, bald_eagle) → needs(x, bald_eagle))",
+                "tptp": "![X]: (visits(X, bald_eagle) => needs(X, bald_eagle))"
+            },
+            {
+                "ref": "(19) if someone chases the lion then they visit the bald eagle.",
+                "fol": "∀x (chases(x, lion) → visits(x, bald_eagle))",
+                "tptp": "![X]: (chases(X, lion) => visits(X, bald_eagle))"
+            },
+            {
+                "ref": "(20) if someone chases the tiger then the tiger chases the bald eagle.",
+                "fol": "∀x (chases(x, tiger) → chases(tiger, bald_eagle))",
+                "tptp": "![X]: (chases(X, tiger) => chases(tiger, bald_eagle))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(7) the bald eagle chases the squirrel.",
+            "fol": "chases(bald_eagle, squirrel)",
+            "tptp": "chases(bald_eagle, squirrel)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) the bald eagle needs the tiger.",
+                "fol": "needs(bald_eagle, tiger)",
+                "tptp": "needs(bald_eagle, tiger)"
+            },
+            {
+                "ref": "(2) if someone needs the squirrel then they chase the tiger.",
+                "fol": "∀x (needs(x, squirrel) → chases(x, tiger))",
+                "tptp": "![X]: (needs(X, squirrel) => chases(X, tiger))"
+            },
+            {
+                "ref": "(3) if someone chases the tiger then the tiger chases the bald eagle.",
+                "fol": "∀x (chases(x, tiger) → chases(tiger, bald_eagle))",
+                "tptp": "![X]: (chases(X, tiger) => chases(tiger, bald_eagle))"
+            },
+            {
+                "ref": "(4) if someone visits the bald eagle then they need the bald eagle.",
+                "fol": "∀x (visits(x, bald_eagle) → needs(x, bald_eagle))",
+                "tptp": "![X]: (visits(X, bald_eagle) => needs(X, bald_eagle))"
+            },
+            {
+                "ref": "(5) if someone visits the tiger and they visit the lion then the lion needs the bald eagle.",
+                "fol": "∀x ((visits(x, tiger) ∧ visits(x, lion)) → needs(lion, bald_eagle))",
+                "tptp": "![X]: ((visits(X, tiger) & visits(X, lion)) => needs(lion, bald_eagle))"
+            },
+            {
+                "ref": "(6) if someone visits the bald eagle and the bald eagle visits the squirrel then the bald eagle chases the squirrel.",
+                "fol": "∀x ((visits(x, bald_eagle) ∧ visits(bald_eagle, squirrel)) → chases(bald_eagle, squirrel))",
+                "tptp": "![X]: ((visits(X, bald_eagle) & visits(bald_eagle, squirrel)) => chases(bald_eagle, squirrel))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "The bald eagle needs the tiger.",
+            "If someone needs the squirrel then they chase the tiger.",
+            "If someone chases the tiger then the tiger chases the bald eagle.",
+            "If someone visits the bald eagle then they need the bald eagle.",
+            "If someone visits the tiger and they visit the lion then the lion needs the bald eagle.",
+            "If someone visits the bald eagle and the bald eagle visits the squirrel then the bald eagle chases the squirrel."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": false,
+        "cate": "T3",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "ProofWriter_RelNeg-OWA-D5-510_Q7",
+        "premises": [
+            "The bear is cold.",
+            "The bear is not green.",
+            "The bear is rough.",
+            "The rabbit is cold.",
+            "The squirrel is nice.",
+            "The squirrel does not visit the rabbit.",
+            "The squirrel visits the tiger.",
+            "The tiger chases the bear.",
+            "The tiger does not eat the rabbit.",
+            "The tiger is cold.",
+            "The tiger is nice.",
+            "The tiger is not rough.",
+            "The tiger visits the rabbit.",
+            "The tiger visits the squirrel.",
+            "If something is green and it visits the squirrel then the squirrel is green.",
+            "If something chases the rabbit then it eats the bear.",
+            "If the squirrel eats the rabbit and the rabbit visits the bear then the bear is not red.",
+            "If something is cold then it chases the rabbit.",
+            "If the rabbit chases the squirrel then the squirrel eats the bear.",
+            "If something chases the bear and it visits the tiger then the tiger chases the squirrel.",
+            "If something is cold and not nice then it eats the rabbit.",
+            "If something eats the bear and the bear visits the squirrel then it eats the rabbit.",
+            "If something eats the bear then it chases the squirrel."
+        ],
+        "question": [
+            "The tiger chases the squirrel."
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "The tiger visits the squirrel.",
+            "If the tiger visits the squirrel, then the squirrel is nice.",
+            "The squirrel is nice.",
+            "If something chases the bear and it visits the tiger then the tiger chases the squirrel.",
+            "The tiger chases the squirrel.",
+            "There is evidence to conclude that the tiger chases the squirrel."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "The tiger visits the squirrel.",
+            "If the tiger visits the squirrel, then the squirrel is nice.",
+            "The squirrel is nice.",
+            "If something chases the bear and it visits the tiger then the tiger chases the squirrel.",
+            "The tiger chases the squirrel.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) the bear is cold.",
+                "fol": "cold(bear)",
+                "tptp": "cold(bear)"
+            },
+            {
+                "ref": "(2) the bear is not green.",
+                "fol": "¬green(bear)",
+                "tptp": "~green(bear)"
+            },
+            {
+                "ref": "(3) the bear is rough.",
+                "fol": "rough(bear)",
+                "tptp": "rough(bear)"
+            },
+            {
+                "ref": "(4) the rabbit is cold.",
+                "fol": "cold(rabbit)",
+                "tptp": "cold(rabbit)"
+            },
+            {
+                "ref": "(5) the squirrel is nice.",
+                "fol": "nice(squirrel)",
+                "tptp": "nice(squirrel)"
+            },
+            {
+                "ref": "(6) the squirrel does not visit the rabbit.",
+                "fol": "¬visits(squirrel, rabbit)",
+                "tptp": "~visits(squirrel, rabbit)"
+            },
+            {
+                "ref": "(7) the squirrel visits the tiger.",
+                "fol": "visits(squirrel, tiger)",
+                "tptp": "visits(squirrel, tiger)"
+            },
+            {
+                "ref": "(8) the tiger chases the bear.",
+                "fol": "chases(tiger, bear)",
+                "tptp": "chases(tiger, bear)"
+            },
+            {
+                "ref": "(9) the tiger does not eat the rabbit.",
+                "fol": "¬eats(tiger, rabbit)",
+                "tptp": "~eats(tiger, rabbit)"
+            },
+            {
+                "ref": "(10) the tiger is cold.",
+                "fol": "cold(tiger)",
+                "tptp": "cold(tiger)"
+            },
+            {
+                "ref": "(11) the tiger is nice.",
+                "fol": "nice(tiger)",
+                "tptp": "nice(tiger)"
+            },
+            {
+                "ref": "(12) the tiger is not rough.",
+                "fol": "¬rough(tiger)",
+                "tptp": "~rough(tiger)"
+            },
+            {
+                "ref": "(13) the tiger visits the rabbit.",
+                "fol": "visits(tiger, rabbit)",
+                "tptp": "visits(tiger, rabbit)"
+            },
+            {
+                "ref": "(14) the tiger visits the squirrel.",
+                "fol": "visits(tiger, squirrel)",
+                "tptp": "visits(tiger, squirrel)"
+            },
+            {
+                "ref": "(15) if something is green and it visits the squirrel then the squirrel is green.",
+                "fol": "∀x ((green(x) ∧ visits(x, squirrel)) → green(squirrel))",
+                "tptp": "![X]: ((green(X) & visits(X, squirrel)) => green(squirrel))"
+            },
+            {
+                "ref": "(16) if something chases the rabbit then it eats the bear.",
+                "fol": "∀x (chases(x, rabbit) → eats(x, bear))",
+                "tptp": "![X]: (chases(X, rabbit) => eats(X, bear))"
+            },
+            {
+                "ref": "(17) if the squirrel eats the rabbit and the rabbit visits the bear then the bear is not red.",
+                "fol": "(eats(squirrel, rabbit) ∧ visits(rabbit, bear)) → ¬red(bear)",
+                "tptp": "(eats(squirrel, rabbit) & visits(rabbit, bear)) => ~red(bear)"
+            },
+            {
+                "ref": "(18) if something is cold then it chases the rabbit.",
+                "fol": "∀x (cold(x) → chases(x, rabbit))",
+                "tptp": "![X]: (cold(X) => chases(X, rabbit))"
+            },
+            {
+                "ref": "(19) if the rabbit chases the squirrel then the squirrel eats the bear.",
+                "fol": "chases(rabbit, squirrel) → eats(squirrel, bear)",
+                "tptp": "chases(rabbit, squirrel) => eats(squirrel, bear)"
+            },
+            {
+                "ref": "(20) if something chases the bear and it visits the tiger then the tiger chases the squirrel.",
+                "fol": "∀x ((chases(x, bear) ∧ visits(x, tiger)) → chases(tiger, squirrel))",
+                "tptp": "![X]: ((chases(X, bear) & visits(X, tiger)) => chases(tiger, squirrel))"
+            },
+            {
+                "ref": "(21) if something is cold and not nice then it eats the rabbit.",
+                "fol": "∀x ((cold(x) ∧ ¬nice(x)) → eats(x, rabbit))",
+                "tptp": "![X]: ((cold(X) & ~nice(X)) => eats(X, rabbit))"
+            },
+            {
+                "ref": "(22) if something eats the bear and the bear visits the squirrel then it eats the rabbit.",
+                "fol": "∀x ((eats(x, bear) ∧ visits(bear, squirrel)) → eats(x, rabbit))",
+                "tptp": "![X]: ((eats(X, bear) & visits(bear, squirrel)) => eats(X, rabbit))"
+            },
+            {
+                "ref": "(23) if something eats the bear then it chases the squirrel.",
+                "fol": "∀x (eats(x, bear) → chases(x, squirrel))",
+                "tptp": "![X]: (eats(X, bear) => chases(X, squirrel))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(6) the tiger chases the squirrel.",
+            "fol": "chases(tiger, squirrel)",
+            "tptp": "chases(tiger, squirrel)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) the tiger visits the squirrel.",
+                "fol": "visits(tiger, squirrel)",
+                "tptp": "visits(tiger, squirrel)"
+            },
+            {
+                "ref": "(2) if the tiger visits the squirrel, then the squirrel is nice.",
+                "fol": "visits(tiger, squirrel) → nice(squirrel)",
+                "tptp": "visits(tiger, squirrel) => nice(squirrel)"
+            },
+            {
+                "ref": "(3) the squirrel is nice.",
+                "fol": "nice(squirrel)",
+                "tptp": "nice(squirrel)"
+            },
+            {
+                "ref": "(4) if something chases the bear and it visits the tiger then the tiger chases the squirrel.",
+                "fol": "∀x ((chases(x, bear) ∧ visits(x, tiger)) → chases(tiger, squirrel))",
+                "tptp": "![X]: ((chases(X, bear) & visits(X, tiger)) => chases(tiger, squirrel))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "The tiger visits the squirrel.",
+            "If the tiger visits the squirrel, then the squirrel is nice.",
+            "The squirrel is nice.",
+            "If something chases the bear and it visits the tiger then the tiger chases the squirrel."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": false,
+        "cate": "T3",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "ProofWriter_RelNoneg-OWA-D5-213_Q8",
+        "premises": [
+            "The cat chases the dog.",
+            "The cat is rough.",
+            "The cat is young.",
+            "The dog likes the squirrel.",
+            "The dog sees the tiger.",
+            "The squirrel chases the tiger.",
+            "The squirrel is big.",
+            "The squirrel is green.",
+            "The squirrel likes the dog.",
+            "The squirrel sees the dog.",
+            "The tiger chases the cat.",
+            "The tiger is green.",
+            "The tiger likes the dog.",
+            "The tiger likes the squirrel.",
+            "If something likes the dog then it chases the tiger.",
+            "If something is big and it chases the cat then the cat likes the squirrel.",
+            "If something sees the cat then the cat is big.",
+            "If something likes the squirrel then it sees the dog.",
+            "If something is cold and it chases the cat then it sees the cat.",
+            "If something sees the tiger then the tiger is big.",
+            "Green, big things are young.",
+            "Big things are cold."
+        ],
+        "question": [
+            "The tiger does not see the cat."
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "The tiger likes the dog.",
+            "If something likes the dog then it chases the tiger.",
+            "The tiger chases the cat.",
+            "If something chases the cat then it sees the cat.",
+            "If something sees the cat then the cat is big.",
+            "If something is big and it chases the cat then the cat likes the squirrel.",
+            "If something likes the squirrel then it sees the dog.",
+            "The squirrel sees the dog.",
+            "If something sees the dog then it likes the dog.",
+            "The dog likes the squirrel.",
+            "There is no direct evidence or logical inference provided to determine whether the tiger sees the cat or not."
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "The tiger likes the dog.",
+            "If something likes the dog then it chases the tiger.",
+            "The tiger chases the cat.",
+            "If something chases the cat then it sees the cat.",
+            "If something sees the cat then the cat is big.",
+            "If something is big and it chases the cat then the cat likes the squirrel.",
+            "If something likes the squirrel then it sees the dog.",
+            "The squirrel sees the dog.",
+            "If something sees the dog then it likes the dog.",
+            "The dog likes the squirrel.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) the cat chases the dog.",
+                "fol": "chases(cat, dog)",
+                "tptp": "chases(cat, dog)"
+            },
+            {
+                "ref": "(2) the cat is rough.",
+                "fol": "rough(cat)",
+                "tptp": "rough(cat)"
+            },
+            {
+                "ref": "(3) the cat is young.",
+                "fol": "young(cat)",
+                "tptp": "young(cat)"
+            },
+            {
+                "ref": "(4) the dog likes the squirrel.",
+                "fol": "likes(dog, squirrel)",
+                "tptp": "likes(dog, squirrel)"
+            },
+            {
+                "ref": "(5) the dog sees the tiger.",
+                "fol": "sees(dog, tiger)",
+                "tptp": "sees(dog, tiger)"
+            },
+            {
+                "ref": "(6) the squirrel chases the tiger.",
+                "fol": "chases(squirrel, tiger)",
+                "tptp": "chases(squirrel, tiger)"
+            },
+            {
+                "ref": "(7) the squirrel is big.",
+                "fol": "big(squirrel)",
+                "tptp": "big(squirrel)"
+            },
+            {
+                "ref": "(8) the squirrel is green.",
+                "fol": "green(squirrel)",
+                "tptp": "green(squirrel)"
+            },
+            {
+                "ref": "(9) the squirrel likes the dog.",
+                "fol": "likes(squirrel, dog)",
+                "tptp": "likes(squirrel, dog)"
+            },
+            {
+                "ref": "(10) the squirrel sees the dog.",
+                "fol": "sees(squirrel, dog)",
+                "tptp": "sees(squirrel, dog)"
+            },
+            {
+                "ref": "(11) the tiger chases the cat.",
+                "fol": "chases(tiger, cat)",
+                "tptp": "chases(tiger, cat)"
+            },
+            {
+                "ref": "(12) the tiger is green.",
+                "fol": "green(tiger)",
+                "tptp": "green(tiger)"
+            },
+            {
+                "ref": "(13) the tiger likes the dog.",
+                "fol": "likes(tiger, dog)",
+                "tptp": "likes(tiger, dog)"
+            },
+            {
+                "ref": "(14) the tiger likes the squirrel.",
+                "fol": "likes(tiger, squirrel)",
+                "tptp": "likes(tiger, squirrel)"
+            },
+            {
+                "ref": "(15) if something likes the dog then it chases the tiger.",
+                "fol": "∀x (likes(x, dog) → chases(x, tiger))",
+                "tptp": "![X]: (likes(X, dog) => chases(X, tiger))"
+            },
+            {
+                "ref": "(16) if something is big and it chases the cat then the cat likes the squirrel.",
+                "fol": "∀x ((big(x) ∧ chases(x, cat)) → likes(cat, squirrel))",
+                "tptp": "![X]: ((big(X) & chases(X, cat)) => likes(cat, squirrel))"
+            },
+            {
+                "ref": "(17) if something sees the cat then the cat is big.",
+                "fol": "∀x (sees(x, cat) → big(cat))",
+                "tptp": "![X]: (sees(X, cat) => big(cat))"
+            },
+            {
+                "ref": "(18) if something likes the squirrel then it sees the dog.",
+                "fol": "∀x (likes(x, squirrel) → sees(x, dog))",
+                "tptp": "![X]: (likes(X, squirrel) => sees(X, dog))"
+            },
+            {
+                "ref": "(19) if something is cold and it chases the cat then it sees the cat.",
+                "fol": "∀x ((cold(x) ∧ chases(x, cat)) → sees(x, cat))",
+                "tptp": "![X]: ((cold(X) & chases(X, cat)) => sees(X, cat))"
+            },
+            {
+                "ref": "(20) if something sees the tiger then the tiger is big.",
+                "fol": "∀x (sees(x, tiger) → big(tiger))",
+                "tptp": "![X]: (sees(X, tiger) => big(tiger))"
+            },
+            {
+                "ref": "(21) green, big things are young.",
+                "fol": "∀x ((green(x) ∧ big(x)) → young(x))",
+                "tptp": "![X]: ((green(X) & big(X)) => young(X))"
+            },
+            {
+                "ref": "(22) big things are cold.",
+                "fol": "∀x (big(x) → cold(x))",
+                "tptp": "![X]: (big(X) => cold(X))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(11) the tiger does not see the cat.",
+            "fol": "¬sees(tiger, cat)",
+            "tptp": "~sees(tiger, cat)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) the tiger likes the dog.",
+                "fol": "likes(tiger, dog)",
+                "tptp": "likes(tiger, dog)"
+            },
+            {
+                "ref": "(2) if something likes the dog then it chases the tiger.",
+                "fol": "∀x (likes(x, dog) → chases(x, tiger))",
+                "tptp": "![X]: (likes(X, dog) => chases(X, tiger))"
+            },
+            {
+                "ref": "(3) the tiger chases the cat.",
+                "fol": "chases(tiger, cat)",
+                "tptp": "chases(tiger, cat)"
+            },
+            {
+                "ref": "(4) if something chases the cat then it sees the cat.",
+                "fol": "∀x (chases(x, cat) → sees(x, cat))",
+                "tptp": "![X]: (chases(X, cat) => sees(X, cat))"
+            },
+            {
+                "ref": "(5) if something sees the cat then the cat is big.",
+                "fol": "∀x (sees(x, cat) → big(cat))",
+                "tptp": "![X]: (sees(X, cat) => big(cat))"
+            },
+            {
+                "ref": "(6) if something is big and it chases the cat then the cat likes the squirrel.",
+                "fol": "∀x ((big(x) ∧ chases(x, cat)) → likes(cat, squirrel))",
+                "tptp": "![X]: ((big(X) & chases(X, cat)) => likes(cat, squirrel))"
+            },
+            {
+                "ref": "(7) if something likes the squirrel then it sees the dog.",
+                "fol": "∀x (likes(x, squirrel) → sees(x, dog))",
+                "tptp": "![X]: (likes(X, squirrel) => sees(X, dog))"
+            },
+            {
+                "ref": "(8) the squirrel sees the dog.",
+                "fol": "sees(squirrel, dog)",
+                "tptp": "sees(squirrel, dog)"
+            },
+            {
+                "ref": "(9) if something sees the dog then it likes the dog.",
+                "fol": "∀x (sees(x, dog) → likes(x, dog))",
+                "tptp": "![X]: (sees(X, dog) => likes(X, dog))"
+            },
+            {
+                "ref": "(10) the dog likes the squirrel.",
+                "fol": "likes(dog, squirrel)",
+                "tptp": "likes(dog, squirrel)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "The tiger likes the dog.",
+            "If something likes the dog then it chases the tiger.",
+            "The tiger chases the cat.",
+            "If something chases the cat then it sees the cat.",
+            "If something sees the cat then the cat is big.",
+            "If something is big and it chases the cat then the cat likes the squirrel.",
+            "If something likes the squirrel then it sees the dog.",
+            "The squirrel sees the dog.",
+            "If something sees the dog then it likes the dog.",
+            "The dog likes the squirrel."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "Unknown",
+            "True",
+            "True",
+            "True",
+            "True",
+            "Unknown",
+            "True"
+        ],
+        "has_valid_proof_path_label": false,
+        "cate": "T4",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "Unknown",
+            "True",
+            "True",
+            "True",
+            "True",
+            "Unknown",
+            "True"
+        ]
+    },
+    {
+        "idx": "ProofWriter_AttNoneg-OWA-D5-178_Q5",
+        "premises": [
+            "Bob is big.",
+            "Bob is quiet.",
+            "Erin is white.",
+            "Gary is big.",
+            "Gary is red.",
+            "Harry is green.",
+            "Harry is smart.",
+            "If someone is smart and big then they are white.",
+            "All quiet, red people are smart.",
+            "If someone is smart and white then they are green.",
+            "Red, round people are quiet.",
+            "If someone is big then they are round.",
+            "If Erin is round and Erin is quiet then Erin is smart.",
+            "If someone is red and green then they are big."
+        ],
+        "question": [
+            "Gary is quiet."
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "Bob is big.",
+            "Bob is quiet.",
+            "Gary is big.",
+            "Gary is red.",
+            "If someone is big then they are round.",
+            "If someone is red and green then they are big.",
+            "If someone is smart and big then they are white.",
+            "If someone is smart and white then they are green.",
+            "If someone is quiet and red then they are smart.",
+            "All quiet, red people are smart.",
+            "There is no direct evidence or logical inference to conclude that Gary is quiet."
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "Bob is big.",
+            "Bob is quiet.",
+            "Gary is big.",
+            "Gary is red.",
+            "If someone is big then they are round.",
+            "If someone is red and green then they are big.",
+            "If someone is smart and big then they are white.",
+            "If someone is smart and white then they are green.",
+            "If someone is quiet and red then they are smart.",
+            "All quiet, red people are smart.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) bob is big.",
+                "fol": "big(bob)",
+                "tptp": "big(bob)"
+            },
+            {
+                "ref": "(2) bob is quiet.",
+                "fol": "quiet(bob)",
+                "tptp": "quiet(bob)"
+            },
+            {
+                "ref": "(3) erin is white.",
+                "fol": "white(erin)",
+                "tptp": "white(erin)"
+            },
+            {
+                "ref": "(4) gary is big.",
+                "fol": "big(gary)",
+                "tptp": "big(gary)"
+            },
+            {
+                "ref": "(5) gary is red.",
+                "fol": "red(gary)",
+                "tptp": "red(gary)"
+            },
+            {
+                "ref": "(6) harry is green.",
+                "fol": "green(harry)",
+                "tptp": "green(harry)"
+            },
+            {
+                "ref": "(7) harry is smart.",
+                "fol": "smart(harry)",
+                "tptp": "smart(harry)"
+            },
+            {
+                "ref": "(8) if someone is smart and big then they are white.",
+                "fol": "∀x ((smart(x) ∧ big(x)) → white(x))",
+                "tptp": "![X]: ((smart(X) & big(X)) => white(X))"
+            },
+            {
+                "ref": "(9) all quiet, red people are smart.",
+                "fol": "∀x ((quiet(x) ∧ red(x)) → smart(x))",
+                "tptp": "![X]: ((quiet(X) & red(X)) => smart(X))"
+            },
+            {
+                "ref": "(10) if someone is smart and white then they are green.",
+                "fol": "∀x ((smart(x) ∧ white(x)) → green(x))",
+                "tptp": "![X]: ((smart(X) & white(X)) => green(X))"
+            },
+            {
+                "ref": "(11) red, round people are quiet.",
+                "fol": "∀x ((red(x) ∧ round(x)) → quiet(x))",
+                "tptp": "![X]: ((red(X) & round(X)) => quiet(X))"
+            },
+            {
+                "ref": "(12) if someone is big then they are round.",
+                "fol": "∀x (big(x) → round(x))",
+                "tptp": "![X]: (big(X) => round(X))"
+            },
+            {
+                "ref": "(13) if erin is round and erin is quiet then erin is smart.",
+                "fol": "(round(erin) ∧ quiet(erin)) → smart(erin)",
+                "tptp": "(round(erin) & quiet(erin)) => smart(erin)"
+            },
+            {
+                "ref": "(14) if someone is red and green then they are big.",
+                "fol": "∀x ((red(x) ∧ green(x)) → big(x))",
+                "tptp": "![X]: ((red(X) & green(X)) => big(X))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(11) gary is quiet.",
+            "fol": "quiet(gary)",
+            "tptp": "quiet(gary)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) bob is big.",
+                "fol": "big(bob)",
+                "tptp": "big(bob)"
+            },
+            {
+                "ref": "(2) bob is quiet.",
+                "fol": "quiet(bob)",
+                "tptp": "quiet(bob)"
+            },
+            {
+                "ref": "(3) gary is big.",
+                "fol": "big(gary)",
+                "tptp": "big(gary)"
+            },
+            {
+                "ref": "(4) gary is red.",
+                "fol": "red(gary)",
+                "tptp": "red(gary)"
+            },
+            {
+                "ref": "(5) if someone is big then they are round.",
+                "fol": "∀x (big(x) → round(x))",
+                "tptp": "![X]: (big(X) => round(X))"
+            },
+            {
+                "ref": "(6) if someone is red and green then they are big.",
+                "fol": "∀x ((red(x) ∧ green(x)) → big(x))",
+                "tptp": "![X]: ((red(X) & green(X)) => big(X))"
+            },
+            {
+                "ref": "(7) if someone is smart and big then they are white.",
+                "fol": "∀x ((smart(x) ∧ big(x)) → white(x))",
+                "tptp": "![X]: ((smart(X) & big(X)) => white(X))"
+            },
+            {
+                "ref": "(8) if someone is smart and white then they are green.",
+                "fol": "∀x ((smart(x) ∧ white(x)) → green(x))",
+                "tptp": "![X]: ((smart(X) & white(X)) => green(X))"
+            },
+            {
+                "ref": "(9) if someone is quiet and red then they are smart.",
+                "fol": "∀x ((quiet(x) ∧ red(x)) → smart(x))",
+                "tptp": "![X]: ((quiet(X) & red(X)) => smart(X))"
+            },
+            {
+                "ref": "(10) all quiet, red people are smart.",
+                "fol": "∀x ((quiet(x) ∧ red(x)) → smart(x))",
+                "tptp": "![X]: ((quiet(X) & red(X)) => smart(X))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Bob is big.",
+            "Bob is quiet.",
+            "Gary is big.",
+            "Gary is red.",
+            "If someone is big then they are round.",
+            "If someone is red and green then they are big.",
+            "If someone is smart and big then they are white.",
+            "If someone is smart and white then they are green.",
+            "If someone is quiet and red then they are smart.",
+            "All quiet, red people are smart."
+        ],
+        "AnswerCorrect": false,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": false,
+        "cate": "F1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "ProofWriter_AttNoneg-OWA-D5-897_Q4",
+        "premises": [
+            "Anne is nice.",
+            "Bob is big.",
+            "Bob is blue.",
+            "Bob is cold.",
+            "Charlie is big.",
+            "Charlie is cold.",
+            "Charlie is nice.",
+            "Charlie is young.",
+            "Fiona is furry.",
+            "Fiona is young.",
+            "If someone is furry and nice then they are cold.",
+            "If Bob is blue and Bob is big then Bob is cold.",
+            "All blue, cold people are big.",
+            "If someone is nice then they are smart.",
+            "All smart, big people are nice.",
+            "All smart people are blue.",
+            "Blue, smart people are furry.",
+            "Furry, cold people are smart.",
+            "Cold people are big."
+        ],
+        "question": [
+            "Charlie is not smart."
+        ],
+        "label": -1,
+        "reasoning_steps": [
+            "Charlie is nice.",
+            "Charlie is young.",
+            "If someone is nice then they are smart.",
+            "All smart, big people are nice.",
+            "Charlie is big.",
+            "If someone is furry and nice then they are cold.",
+            "Charlie is cold.",
+            "If someone is furry and nice then they are cold, and if someone is furry and nice then they are cold, then Charlie is cold.",
+            "Fiona is furry.",
+            "Fiona is young.",
+            "If someone is furry and nice then they are cold.",
+            "Charlie is cold.",
+            "If someone is furry and nice then they are cold, and if someone is furry and nice then they are cold, then Charlie is cold.",
+            "There is evidence to conclude that Charlie is cold.",
+            "If someone is nice then they are smart.",
+            "All smart people are blue.",
+            "Blue, smart people are furry.",
+            "Furry, cold people are smart.",
+            "There is evidence to conclude that Charlie is smart.",
+            "If someone is nice then they are smart.",
+            "All smart, big people are nice.",
+            "All smart people are blue.",
+            "Blue, smart people are furry.",
+            "Furry, cold people are smart.",
+            "There is evidence to conclude that Charlie is smart."
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "Charlie is nice.",
+            "Charlie is young.",
+            "If someone is nice then they are smart.",
+            "All smart, big people are nice.",
+            "Charlie is big.",
+            "If someone is furry and nice then they are cold.",
+            "Charlie is cold.",
+            "If someone is furry and nice then they are cold, and if someone is furry and nice then they are cold, then Charlie is cold.",
+            "Fiona is furry.",
+            "Fiona is young.",
+            null,
+            null,
+            null,
+            null,
+            null,
+            "All smart people are blue.",
+            "Blue, smart people are furry.",
+            "Furry, cold people are smart.",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) anne is nice.",
+                "fol": "nice(anne)",
+                "tptp": "nice(anne)"
+            },
+            {
+                "ref": "(2) bob is big.",
+                "fol": "big(bob)",
+                "tptp": "big(bob)"
+            },
+            {
+                "ref": "(3) bob is blue.",
+                "fol": "blue(bob)",
+                "tptp": "blue(bob)"
+            },
+            {
+                "ref": "(4) bob is cold.",
+                "fol": "cold(bob)",
+                "tptp": "cold(bob)"
+            },
+            {
+                "ref": "(5) charlie is big.",
+                "fol": "big(charlie)",
+                "tptp": "big(charlie)"
+            },
+            {
+                "ref": "(6) charlie is cold.",
+                "fol": "cold(charlie)",
+                "tptp": "cold(charlie)"
+            },
+            {
+                "ref": "(7) charlie is nice.",
+                "fol": "nice(charlie)",
+                "tptp": "nice(charlie)"
+            },
+            {
+                "ref": "(8) charlie is young.",
+                "fol": "young(charlie)",
+                "tptp": "young(charlie)"
+            },
+            {
+                "ref": "(9) fiona is furry.",
+                "fol": "furry(fiona)",
+                "tptp": "furry(fiona)"
+            },
+            {
+                "ref": "(10) fiona is young.",
+                "fol": "young(fiona)",
+                "tptp": "young(fiona)"
+            },
+            {
+                "ref": "(11) if someone is furry and nice then they are cold.",
+                "fol": "∀x ((furry(x) ∧ nice(x)) → cold(x))",
+                "tptp": "![X]: ((furry(X) & nice(X)) => cold(X))"
+            },
+            {
+                "ref": "(12) if bob is blue and bob is big then bob is cold.",
+                "fol": "(blue(bob) ∧ big(bob)) → cold(bob)",
+                "tptp": "(blue(bob) & big(bob)) => cold(bob)"
+            },
+            {
+                "ref": "(13) all blue, cold people are big.",
+                "fol": "∀x ((blue(x) ∧ cold(x)) → big(x))",
+                "tptp": "![X]: ((blue(X) & cold(X)) => big(X))"
+            },
+            {
+                "ref": "(14) if someone is nice then they are smart.",
+                "fol": "∀x (nice(x) → smart(x))",
+                "tptp": "![X]: (nice(X) => smart(X))"
+            },
+            {
+                "ref": "(15) all smart, big people are nice.",
+                "fol": "∀x ((smart(x) ∧ big(x)) → nice(x))",
+                "tptp": "![X]: ((smart(X) & big(X)) => nice(X))"
+            },
+            {
+                "ref": "(16) all smart people are blue.",
+                "fol": "∀x (smart(x) → blue(x))",
+                "tptp": "![X]: (smart(X) => blue(X))"
+            },
+            {
+                "ref": "(17) blue, smart people are furry.",
+                "fol": "∀x ((blue(x) ∧ smart(x)) → furry(x))",
+                "tptp": "![X]: ((blue(X) & smart(X)) => furry(X))"
+            },
+            {
+                "ref": "(18) furry, cold people are smart.",
+                "fol": "∀x ((furry(x) ∧ cold(x)) → smart(x))",
+                "tptp": "![X]: ((furry(X) & cold(X)) => smart(X))"
+            },
+            {
+                "ref": "(19) cold people are big.",
+                "fol": "∀x (cold(x) → big(x))",
+                "tptp": "![X]: (cold(X) => big(X))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(14) charlie is not smart.",
+            "fol": "¬smart(charlie)",
+            "tptp": "~smart(charlie)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) charlie is nice.",
+                "fol": "nice(charlie)",
+                "tptp": "nice(charlie)"
+            },
+            {
+                "ref": "(2) charlie is young.",
+                "fol": "young(charlie)",
+                "tptp": "young(charlie)"
+            },
+            {
+                "ref": "(3) if someone is nice then they are smart.",
+                "fol": "∀x (nice(x) → smart(x))",
+                "tptp": "![X]: (nice(X) => smart(X))"
+            },
+            {
+                "ref": "(4) all smart, big people are nice.",
+                "fol": "∀x ((smart(x) ∧ big(x)) → nice(x))",
+                "tptp": "![X]: ((smart(X) & big(X)) => nice(X))"
+            },
+            {
+                "ref": "(5) charlie is big.",
+                "fol": "big(charlie)",
+                "tptp": "big(charlie)"
+            },
+            {
+                "ref": "(6) if someone is furry and nice then they are cold.",
+                "fol": "∀x ((furry(x) ∧ nice(x)) → cold(x))",
+                "tptp": "![X]: ((furry(X) & nice(X)) => cold(X))"
+            },
+            {
+                "ref": "(7) charlie is cold.",
+                "fol": "cold(charlie)",
+                "tptp": "cold(charlie)"
+            },
+            {
+                "ref": "(8) if someone is furry and nice then they are cold, and if someone is furry and nice then they are cold, then charlie is cold.",
+                "fol": "((furry(charlie) ∧ nice(charlie)) → cold(charlie)) ∧ ((furry(charlie) ∧ nice(charlie)) → cold(charlie)) → cold(charlie)",
+                "tptp": "((furry(charlie) & nice(charlie)) => cold(charlie)) & ((furry(charlie) & nice(charlie)) => cold(charlie)) => cold(charlie)"
+            },
+            {
+                "ref": "(9) fiona is furry.",
+                "fol": "furry(fiona)",
+                "tptp": "furry(fiona)"
+            },
+            {
+                "ref": "(10) fiona is young.",
+                "fol": "young(fiona)",
+                "tptp": "young(fiona)"
+            },
+            {
+                "ref": "(11) all smart people are blue.",
+                "fol": "∀x (smart(x) → blue(x))",
+                "tptp": "![X]: (smart(X) => blue(X))"
+            },
+            {
+                "ref": "(12) blue, smart people are furry.",
+                "fol": "∀x ((blue(x) ∧ smart(x)) → furry(x))",
+                "tptp": "![X]: ((blue(X) & smart(X)) => furry(X))"
+            },
+            {
+                "ref": "(13) furry, cold people are smart.",
+                "fol": "∀x ((furry(x) ∧ cold(x)) → smart(x))",
+                "tptp": "![X]: ((furry(X) & cold(X)) => smart(X))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "Charlie is nice.",
+            "Charlie is young.",
+            "If someone is nice then they are smart.",
+            "All smart, big people are nice.",
+            "Charlie is big.",
+            "If someone is furry and nice then they are cold.",
+            "Charlie is cold.",
+            "If someone is furry and nice then they are cold, and if someone is furry and nice then they are cold, then Charlie is cold.",
+            "Fiona is furry.",
+            "Fiona is young.",
+            "All smart people are blue.",
+            "Blue, smart people are furry.",
+            "Furry, cold people are smart."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "ProofWriter_RelNeg-OWA-D5-266_Q3",
+        "premises": [
+            "The bald eagle eats the cow.",
+            "The bald eagle does not eat the dog.",
+            "The bald eagle is rough.",
+            "The cow is round.",
+            "The cow sees the bald eagle.",
+            "The cow does not see the dog.",
+            "The cow visits the bald eagle.",
+            "The cow visits the lion.",
+            "The dog is rough.",
+            "The lion is young.",
+            "The lion does not see the bald eagle.",
+            "The lion sees the cow.",
+            "If someone is green and they eat the bald eagle then the bald eagle is not rough.",
+            "If someone is big and they do not see the bald eagle then the bald eagle is rough.",
+            "If someone is big then they visit the dog.",
+            "If someone eats the lion and they are big then the lion eats the dog.",
+            "If someone visits the dog then the dog eats the cow.",
+            "If someone is rough and they eat the cow then they are young.",
+            "If the lion eats the cow then the lion visits the bald eagle.",
+            "If someone is big and they see the lion then they are green.",
+            "If someone is young then they are big."
+        ],
+        "question": [
+            "The lion is big."
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "The lion is young.",
+            "If someone is young then they are big.",
+            "The lion is big.",
+            "If someone is big and they see the lion then they are green.",
+            "There is evidence to conclude that the lion is green."
+        ],
+        "reasoning_answer": 1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "The lion is young.",
+            "If someone is young then they are big.",
+            "The lion is big.",
+            "If someone is big and they see the lion then they are green.",
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) the bald eagle eats the cow.",
+                "fol": "eats(bald_eagle, cow)",
+                "tptp": "eats(bald_eagle, cow)"
+            },
+            {
+                "ref": "(2) the bald eagle does not eat the dog.",
+                "fol": "¬eats(bald_eagle, dog)",
+                "tptp": "~eats(bald_eagle, dog)"
+            },
+            {
+                "ref": "(3) the bald eagle is rough.",
+                "fol": "rough(bald_eagle)",
+                "tptp": "rough(bald_eagle)"
+            },
+            {
+                "ref": "(4) the cow is round.",
+                "fol": "round(cow)",
+                "tptp": "round(cow)"
+            },
+            {
+                "ref": "(5) the cow sees the bald eagle.",
+                "fol": "sees(cow, bald_eagle)",
+                "tptp": "sees(cow, bald_eagle)"
+            },
+            {
+                "ref": "(6) the cow does not see the dog.",
+                "fol": "¬sees(cow, dog)",
+                "tptp": "~sees(cow, dog)"
+            },
+            {
+                "ref": "(7) the cow visits the bald eagle.",
+                "fol": "visits(cow, bald_eagle)",
+                "tptp": "visits(cow, bald_eagle)"
+            },
+            {
+                "ref": "(8) the cow visits the lion.",
+                "fol": "visits(cow, lion)",
+                "tptp": "visits(cow, lion)"
+            },
+            {
+                "ref": "(9) the dog is rough.",
+                "fol": "rough(dog)",
+                "tptp": "rough(dog)"
+            },
+            {
+                "ref": "(10) the lion is young.",
+                "fol": "young(lion)",
+                "tptp": "young(lion)"
+            },
+            {
+                "ref": "(11) the lion does not see the bald eagle.",
+                "fol": "¬sees(lion, bald_eagle)",
+                "tptp": "~sees(lion, bald_eagle)"
+            },
+            {
+                "ref": "(12) the lion sees the cow.",
+                "fol": "sees(lion, cow)",
+                "tptp": "sees(lion, cow)"
+            },
+            {
+                "ref": "(13) if someone is green and they eat the bald eagle then the bald eagle is not rough.",
+                "fol": "∀x ((green(x) ∧ eats(x, bald_eagle)) → ¬rough(bald_eagle))",
+                "tptp": "![X]: ((green(X) & eats(X, bald_eagle)) => ~rough(bald_eagle))"
+            },
+            {
+                "ref": "(14) if someone is big and they do not see the bald eagle then the bald eagle is rough.",
+                "fol": "∀x ((big(x) ∧ ¬sees(x, bald_eagle)) → rough(bald_eagle))",
+                "tptp": "![X]: ((big(X) & ~sees(X, bald_eagle)) => rough(bald_eagle))"
+            },
+            {
+                "ref": "(15) if someone is big then they visit the dog.",
+                "fol": "∀x (big(x) → visits(x, dog))",
+                "tptp": "![X]: (big(X) => visits(X, dog))"
+            },
+            {
+                "ref": "(16) if someone eats the lion and they are big then the lion eats the dog.",
+                "fol": "∀x ((eats(x, lion) ∧ big(x)) → eats(lion, dog))",
+                "tptp": "![X]: ((eats(X, lion) & big(X)) => eats(lion, dog))"
+            },
+            {
+                "ref": "(17) if someone visits the dog then the dog eats the cow.",
+                "fol": "∀x (visits(x, dog) → eats(dog, cow))",
+                "tptp": "![X]: (visits(X, dog) => eats(dog, cow))"
+            },
+            {
+                "ref": "(18) if someone is rough and they eat the cow then they are young.",
+                "fol": "∀x ((rough(x) ∧ eats(x, cow)) → young(x))",
+                "tptp": "![X]: ((rough(X) & eats(X, cow)) => young(X))"
+            },
+            {
+                "ref": "(19) if the lion eats the cow then the lion visits the bald eagle.",
+                "fol": "eats(lion, cow) → visits(lion, bald_eagle)",
+                "tptp": "eats(lion, cow) => visits(lion, bald_eagle)"
+            },
+            {
+                "ref": "(20) if someone is big and they see the lion then they are green.",
+                "fol": "∀x ((big(x) ∧ sees(x, lion)) → green(x))",
+                "tptp": "![X]: ((big(X) & sees(X, lion)) => green(X))"
+            },
+            {
+                "ref": "(21) if someone is young then they are big.",
+                "fol": "∀x (young(x) → big(x))",
+                "tptp": "![X]: (young(X) => big(X))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(5) the lion is big.",
+            "fol": "big(lion)",
+            "tptp": "big(lion)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) the lion is young.",
+                "fol": "young(lion)",
+                "tptp": "young(lion)"
+            },
+            {
+                "ref": "(2) if someone is young then they are big.",
+                "fol": "∀x (young(x) → big(x))",
+                "tptp": "![X]: (young(X) => big(X))"
+            },
+            {
+                "ref": "(4) if someone is big and they see the lion then they are green.",
+                "fol": "∀x ((big(x) ∧ sees(x, lion)) → green(x))",
+                "tptp": "![X]: ((big(X) & sees(X, lion)) => green(X))"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "The lion is young.",
+            "If someone is young then they are big.",
+            "The lion is big."
+        ],
+        "AnswerCorrect": true,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": true,
+        "cate": "T1",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True"
+        ]
+    },
+    {
+        "idx": "ProofWriter_RelNoneg-OWA-D5-816_Q7",
+        "premises": [
+            "The cat is rough.",
+            "The cat sees the rabbit.",
+            "The mouse eats the cat.",
+            "The mouse eats the squirrel.",
+            "The mouse is kind.",
+            "The mouse visits the cat.",
+            "The mouse visits the rabbit.",
+            "The rabbit eats the cat.",
+            "The rabbit eats the mouse.",
+            "The rabbit sees the cat.",
+            "The squirrel is round.",
+            "The squirrel sees the rabbit.",
+            "If something sees the squirrel then it is kind.",
+            "If something visits the mouse then the mouse sees the squirrel.",
+            "If something eats the cat then the cat visits the squirrel.",
+            "If something is blue then it sees the squirrel.",
+            "If something is kind then it visits the rabbit.",
+            "If something is rough then it sees the cat.",
+            "If something is rough and it sees the cat then the cat is blue.",
+            "If something visits the rabbit and it sees the squirrel then the squirrel is rough.",
+            "If something eats the mouse then it is rough."
+        ],
+        "question": [
+            "The cat sees the squirrel."
+        ],
+        "label": 1,
+        "reasoning_steps": [
+            "The cat is rough.",
+            "If something is rough then it sees the cat.",
+            "The cat sees the rabbit.",
+            "If something sees the rabbit then it is kind.",
+            "If something is kind then it visits the rabbit.",
+            "The mouse visits the rabbit.",
+            "If something visits the mouse then the mouse sees the squirrel.",
+            "If something sees the squirrel then it is kind.",
+            "The mouse is kind.",
+            "There is no direct evidence connecting the cat and the squirrel.",
+            "The conclusion \"The cat sees the squirrel\" cannot be directly inferred from the given premises."
+        ],
+        "reasoning_answer": -1,
+        "mistake_steps": [],
+        "filter_reasoning_steps": [
+            "The cat is rough.",
+            "If something is rough then it sees the cat.",
+            "The cat sees the rabbit.",
+            "If something sees the rabbit then it is kind.",
+            "If something is kind then it visits the rabbit.",
+            "The mouse visits the rabbit.",
+            "If something visits the mouse then the mouse sees the squirrel.",
+            "If something sees the squirrel then it is kind.",
+            "The mouse is kind.",
+            null,
+            null
+        ],
+        "premise:_fol": [
+            {
+                "ref": "(1) the cat is rough.",
+                "fol": "rough(cat)",
+                "tptp": "rough(cat)"
+            },
+            {
+                "ref": "(2) the cat sees the rabbit.",
+                "fol": "sees(cat, rabbit)",
+                "tptp": "sees(cat, rabbit)"
+            },
+            {
+                "ref": "(3) the mouse eats the cat.",
+                "fol": "eats(mouse, cat)",
+                "tptp": "eats(mouse, cat)"
+            },
+            {
+                "ref": "(4) the mouse eats the squirrel.",
+                "fol": "eats(mouse, squirrel)",
+                "tptp": "eats(mouse, squirrel)"
+            },
+            {
+                "ref": "(5) the mouse is kind.",
+                "fol": "kind(mouse)",
+                "tptp": "kind(mouse)"
+            },
+            {
+                "ref": "(6) the mouse visits the cat.",
+                "fol": "visits(mouse, cat)",
+                "tptp": "visits(mouse, cat)"
+            },
+            {
+                "ref": "(7) the mouse visits the rabbit.",
+                "fol": "visits(mouse, rabbit)",
+                "tptp": "visits(mouse, rabbit)"
+            },
+            {
+                "ref": "(8) the rabbit eats the cat.",
+                "fol": "eats(rabbit, cat)",
+                "tptp": "eats(rabbit, cat)"
+            },
+            {
+                "ref": "(9) the rabbit eats the mouse.",
+                "fol": "eats(rabbit, mouse)",
+                "tptp": "eats(rabbit, mouse)"
+            },
+            {
+                "ref": "(10) the rabbit sees the cat.",
+                "fol": "sees(rabbit, cat)",
+                "tptp": "sees(rabbit, cat)"
+            },
+            {
+                "ref": "(11) the squirrel is round.",
+                "fol": "round(squirrel)",
+                "tptp": "round(squirrel)"
+            },
+            {
+                "ref": "(12) the squirrel sees the rabbit.",
+                "fol": "sees(squirrel, rabbit)",
+                "tptp": "sees(squirrel, rabbit)"
+            },
+            {
+                "ref": "(13) if something sees the squirrel then it is kind.",
+                "fol": "∀x (sees(x, squirrel) → kind(x))",
+                "tptp": "![X]: (sees(X, squirrel) => kind(X))"
+            },
+            {
+                "ref": "(14) if something visits the mouse then the mouse sees the squirrel.",
+                "fol": "∀x (visits(x, mouse) → sees(mouse, squirrel))",
+                "tptp": "![X]: (visits(X, mouse) => sees(mouse, squirrel))"
+            },
+            {
+                "ref": "(15) if something eats the cat then the cat visits the squirrel.",
+                "fol": "∀x (eats(x, cat) → visits(cat, squirrel))",
+                "tptp": "![X]: (eats(X, cat) => visits(cat, squirrel))"
+            },
+            {
+                "ref": "(16) if something is blue then it sees the squirrel.",
+                "fol": "∀x (blue(x) → sees(x, squirrel))",
+                "tptp": "![X]: (blue(X) => sees(X, squirrel))"
+            },
+            {
+                "ref": "(17) if something is kind then it visits the rabbit.",
+                "fol": "∀x (kind(x) → visits(x, rabbit))",
+                "tptp": "![X]: (kind(X) => visits(X, rabbit))"
+            },
+            {
+                "ref": "(18) if something is rough then it sees the cat.",
+                "fol": "∀x (rough(x) → sees(x, cat))",
+                "tptp": "![X]: (rough(X) => sees(X, cat))"
+            },
+            {
+                "ref": "(19) if something is rough and it sees the cat then the cat is blue.",
+                "fol": "∀x ((rough(x) ∧ sees(x, cat)) → blue(cat))",
+                "tptp": "![X]: ((rough(X) & sees(X, cat)) => blue(cat))"
+            },
+            {
+                "ref": "(20) if something visits the rabbit and it sees the squirrel then the squirrel is rough.",
+                "fol": "∀x ((visits(x, rabbit) ∧ sees(x, squirrel)) → rough(squirrel))",
+                "tptp": "![X]: ((visits(X, rabbit) & sees(X, squirrel)) => rough(squirrel))"
+            },
+            {
+                "ref": "(21) if something eats the mouse then it is rough.",
+                "fol": "∀x (eats(x, mouse) → rough(x))",
+                "tptp": "![X]: (eats(X, mouse) => rough(X))"
+            }
+        ],
+        "conclusion:_fol": {
+            "ref": "(10) the cat sees the squirrel.",
+            "fol": "sees(cat, squirrel)",
+            "tptp": "sees(cat, squirrel)"
+        },
+        "steps:_fol": [
+            {
+                "ref": "(1) the cat is rough.",
+                "fol": "rough(cat)",
+                "tptp": "rough(cat)"
+            },
+            {
+                "ref": "(2) if something is rough then it sees the cat.",
+                "fol": "∀x (rough(x) → sees(x, cat))",
+                "tptp": "![X]: (rough(X) => sees(X, cat))"
+            },
+            {
+                "ref": "(3) the cat sees the rabbit.",
+                "fol": "sees(cat, rabbit)",
+                "tptp": "sees(cat, rabbit)"
+            },
+            {
+                "ref": "(4) if something sees the rabbit then it is kind.",
+                "fol": "∀x (sees(x, rabbit) → kind(x))",
+                "tptp": "![X]: (sees(X, rabbit) => kind(X))"
+            },
+            {
+                "ref": "(5) if something is kind then it visits the rabbit.",
+                "fol": "∀x (kind(x) → visits(x, rabbit))",
+                "tptp": "![X]: (kind(X) => visits(X, rabbit))"
+            },
+            {
+                "ref": "(6) the mouse visits the rabbit.",
+                "fol": "visits(mouse, rabbit)",
+                "tptp": "visits(mouse, rabbit)"
+            },
+            {
+                "ref": "(7) if something visits the mouse then the mouse sees the squirrel.",
+                "fol": "∀x (visits(x, mouse) → sees(mouse, squirrel))",
+                "tptp": "![X]: (visits(X, mouse) => sees(mouse, squirrel))"
+            },
+            {
+                "ref": "(8) if something sees the squirrel then it is kind.",
+                "fol": "∀x (sees(x, squirrel) → kind(x))",
+                "tptp": "![X]: (sees(X, squirrel) => kind(X))"
+            },
+            {
+                "ref": "(9) the mouse is kind.",
+                "fol": "kind(mouse)",
+                "tptp": "kind(mouse)"
+            }
+        ],
+        "final_filter_reasoning_steps": [
+            "The cat is rough.",
+            "If something is rough then it sees the cat.",
+            "The cat sees the rabbit.",
+            "If something sees the rabbit then it is kind.",
+            "If something is kind then it visits the rabbit.",
+            "The mouse visits the rabbit.",
+            "If something visits the mouse then the mouse sees the squirrel.",
+            "If something sees the squirrel then it is kind.",
+            "The mouse is kind."
+        ],
+        "AnswerCorrect": false,
+        "step_correctness_label": [
+            "True",
+            "True",
+            "True",
+            "Unknown",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "has_valid_proof_path_label": false,
+        "cate": "F2",
+        "step_correctness_label_manual_annotation": [
+            "True",
+            "True",
+            "True",
+            "Unknown",
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ]
+    }
+]

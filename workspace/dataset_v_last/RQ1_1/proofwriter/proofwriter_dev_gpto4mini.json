@@ -1,0 +1,1690 @@
+[
+    {
+        "true_fol": "∀x ((See(x, cat) ∧ ¬Green(x)) → See(x, cow))",
+        "pred_fol": "∀x ((sees(x, cat) ∧ ¬green(x)) → sees(x, cow))"
+    },
+    {
+        "true_fol": "(Kind(rabbit) ∧ See(rabbit, squirrel)) → Need(squirrel, rabbit)",
+        "pred_fol": "(kind(rabbit) ∧ sees(rabbit, squirrel)) → needs(squirrel, rabbit)"
+    },
+    {
+        "true_fol": "∀x ((See(x, squirrel) ∧ ¬Green(x)) → Need(x, squirrel))",
+        "pred_fol": "∀x ((sees(x, squirrel) ∧ ¬green(x)) → needs(x, squirrel))"
+    },
+    {
+        "true_fol": "∀x ((Visit(x, mouse) ∧ Visit(mouse, dog)) → Cold(x))",
+        "pred_fol": "∀x ((visits(x, mouse) ∧ visits(mouse, dog)) → cold(x))"
+    },
+    {
+        "true_fol": "∀x (Like(x, cat) → Visit(x, dog))",
+        "pred_fol": "∀x (likes(x, cat) → visits(x, dog))"
+    },
+    {
+        "true_fol": "∀x ((Big(x) ∧ Visit(x, bear)) → Green(bear))",
+        "pred_fol": "∀x ((big(x) ∧ visits(x, bear)) → green(bear))"
+    },
+    {
+        "true_fol": "∀x (Blue(x) ∧ Furry(x) → Quiet(x))",
+        "pred_fol": "∀x ((blue(x) ∧ furry(x)) → quiet(x))"
+    },
+    {
+        "true_fol": "∀x (Round(x) ∧ Nice(x) → Blue(x))",
+        "pred_fol": "∀x ((round(x) ∧ nice(x)) → blue(x))"
+    },
+    {
+        "true_fol": "(Nice(charlie) ∧ Big(charlie)) → Quiet(charlie)",
+        "pred_fol": "(nice(charlie) ∧ big(charlie)) → quiet(charlie)"
+    },
+    {
+        "true_fol": "∀x ((Green(x) ∧ Eat(x, cow)) → ¬See(x, bald_eagle))",
+        "pred_fol": "∀x ((green(x) ∧ eats(x, cow)) → ¬sees(x, bald_eagle))"
+    },
+    {
+        "true_fol": "∀x (Eat(x, tiger) → Young(tiger))",
+        "pred_fol": "∀x (eats(x, tiger) → young(tiger))"
+    },
+    {
+        "true_fol": "∀x ((Green(x) ∧ Need(x, dog)) → Need(x, bald_eagle))",
+        "pred_fol": "∀x ((green(x) ∧ needs(x, dog)) → needs(x, bald_eagle))"
+    },
+    {
+        "true_fol": "∀x (Furry(x) ∧ Round(x) → Big(x))",
+        "pred_fol": "∀x ((furry(x) ∧ round(x)) → big(x))"
+    },
+    {
+        "true_fol": "Round(erin) → Young(erin)",
+        "pred_fol": "round(erin) → young(erin)"
+    },
+    {
+        "true_fol": "∀x (Furry(x) ∧ Big(x) → Young(x))",
+        "pred_fol": "∀x ((furry(x) ∧ big(x)) → young(x))"
+    },
+    {
+        "true_fol": "∀x (Green(x) ∧ Nice(x) → Kind(x))",
+        "pred_fol": "∀x ((green(x) ∧ nice(x)) → kind(x))"
+    },
+    {
+        "true_fol": "∀x (Kind(x) ∧ Cold(x) → Nice(x))",
+        "pred_fol": "∀x ((kind(x) ∧ cold(x)) → nice(x))"
+    },
+    {
+        "true_fol": "∀x (Cold(x) ∧ Green(x) → Quiet(x))",
+        "pred_fol": "∀x ((cold(x) ∧ green(x)) → quiet(x))"
+    },
+    {
+        "true_fol": "∀x (Young(x) → Nice(x))",
+        "pred_fol": "∀x (young(x) → nice(x))"
+    },
+    {
+        "true_fol": "∀x (Young(x) ∧ Big(x) → Kind(x))",
+        "pred_fol": "∀x ((young(x) ∧ big(x)) → kind(x))"
+    },
+    {
+        "true_fol": "∀x (Nice(x) ∧ Big(x) → Young(x))",
+        "pred_fol": "∀x ((nice(x) ∧ big(x)) → young(x))"
+    },
+    {
+        "true_fol": "∀x ((Blue(x) ∧ See(x, bear)) → See(x, dog))",
+        "pred_fol": "∀x ((blue(x) ∧ sees(x, bear)) → sees(x, dog))"
+    },
+    {
+        "true_fol": "∀x (Eat(x, dog) → Nice(dog))",
+        "pred_fol": "∀x (eats(x, dog) → nice(dog))"
+    },
+    {
+        "true_fol": "∀x ((Blue(x) ∧ See(x, dog)) → Big(x))",
+        "pred_fol": "∀x ((blue(x) ∧ sees(x, dog)) → big(x))"
+    },
+    {
+        "true_fol": "∀x (Rough(x) ∧ White(x) → Young(x))",
+        "pred_fol": "∀x ((rough(x) ∧ white(x)) → young(x))"
+    },
+    {
+        "true_fol": "∀x (White(x) ∧ Red(x) → Rough(x))",
+        "pred_fol": "∀x ((white(x) ∧ red(x)) → rough(x))"
+    },
+    {
+        "true_fol": "Round(harry) → Big(harry)",
+        "pred_fol": "round(harry) → big(harry)"
+    },
+    {
+        "true_fol": "(Like(mouse, bear) ∧ Like(bear, mouse)) → ¬Kind(mouse)",
+        "pred_fol": "(likes(mouse, bear) ∧ likes(bear, mouse)) → ¬kind(mouse)"
+    },
+    {
+        "true_fol": "∀x ((Like(x, bear) ∧ Visit(bear, tiger)) → Visit(x, bear))",
+        "pred_fol": "∀x ((likes(x, bear) ∧ visits(bear, tiger)) → visits(x, bear))"
+    },
+    {
+        "true_fol": "∀x ((Eat(x, bear) ∧ ¬Like(x, tiger)) → Green(x))",
+        "pred_fol": "∀x ((eats(x, bear) ∧ ¬likes(x, tiger)) → green(x))"
+    },
+    {
+        "true_fol": "∀x (Blue(x) ∧ Nice(x) → Big(x))",
+        "pred_fol": "∀x ((blue(x) ∧ nice(x)) → big(x))"
+    },
+    {
+        "true_fol": "∀x (Rough(x) → Green(x))",
+        "pred_fol": "∀x (rough(x) → green(x))"
+    },
+    {
+        "true_fol": "∀x (Rough(x) ∧ White(x) → Nice(x))",
+        "pred_fol": "∀x ((rough(x) ∧ white(x)) → nice(x))"
+    },
+    {
+        "true_fol": "See(bald_eagle, rabbit) → Big(rabbit)",
+        "pred_fol": "sees(bald_eagle, rabbit) → big(rabbit)"
+    },
+    {
+        "true_fol": "∀x ((Like(x, rabbit) ∧ Visit(rabbit, cow)) → Young(cow))",
+        "pred_fol": "∀x ((likes(x, rabbit) ∧ visits(rabbit, cow)) → young(cow))"
+    },
+    {
+        "true_fol": "∀x ((Round(x) ∧ See(x, cow)) → See(cow, rabbit))",
+        "pred_fol": "∀x ((round(x) ∧ sees(x, cow)) → sees(cow, rabbit))"
+    },
+    {
+        "true_fol": "∀x ((Quiet(x) ∧ White(x)) → Green(x))",
+        "pred_fol": "∀x ((quiet(x) ∧ white(x)) → green(x))"
+    },
+    {
+        "true_fol": "∀x ((Smart(x) ∧ ¬Young(x)) → Nice(x))",
+        "pred_fol": "∀x ((smart(x) ∧ ¬young(x)) → nice(x))"
+    },
+    {
+        "true_fol": "(Green(bob) ∧ Nice(bob)) → Big(bob)",
+        "pred_fol": "(green(bob) ∧ nice(bob)) → big(bob)"
+    },
+    {
+        "true_fol": "(Big(erin) ∧ Red(erin)) → Kind(erin)",
+        "pred_fol": "(big(erin) ∧ red(erin)) → kind(erin)"
+    },
+    {
+        "true_fol": "∀x (Quiet(x) ∧ Green(x) → Big(x))",
+        "pred_fol": "∀x (quiet(x) ∧ green(x) → big(x))"
+    },
+    {
+        "true_fol": "∀x (Rough(x) ∧ Green(x) → Red(x))",
+        "pred_fol": "∀x ((rough(x) ∧ green(x)) → red(x))"
+    },
+    {
+        "true_fol": "(Need(lion, rabbit) ∧ Chase(rabbit, dog)) → Like(lion, dog)",
+        "pred_fol": "(needs(lion, rabbit) ∧ chases(rabbit, dog)) → likes(lion, dog)"
+    },
+    {
+        "true_fol": "∀x ((Round(x) ∧ Chase(x, lion)) → Need(x, cat))",
+        "pred_fol": "∀x ((round(x) ∧ chases(x, lion)) → needs(x, cat))"
+    },
+    {
+        "true_fol": "∀x ((Need(x, cat) ∧ Chase(x, dog)) → Like(x, rabbit))",
+        "pred_fol": "∀x ((needs(x, cat) ∧ chases(x, dog)) → likes(x, rabbit))"
+    },
+    {
+        "true_fol": "Big(charlie) → Green(charlie)",
+        "pred_fol": "big(charlie) → green(charlie)"
+    },
+    {
+        "true_fol": "∀x (Kind(x) ∧ Green(x) → Big(x))",
+        "pred_fol": "∀x ((kind(x) ∧ green(x)) → big(x))"
+    },
+    {
+        "true_fol": "∀x (Big(x) ∧ Nice(x) → Kind(x))",
+        "pred_fol": "∀x ((big(x) ∧ nice(x)) → kind(x))"
+    },
+    {
+        "true_fol": "∀x (Red(x) → ¬Round(x))",
+        "pred_fol": "∀x (red(x) → ¬round(x))"
+    },
+    {
+        "true_fol": "(Red(erin) ∧ ¬Round(erin)) → Nice(erin)",
+        "pred_fol": "(red(erin) ∧ ¬round(erin)) → nice(erin)"
+    },
+    {
+        "true_fol": "∀x ((Round(x) ∧ Nice(x)) → ¬Young(x))",
+        "pred_fol": "∀x ((round(x) ∧ nice(x)) → ¬young(x))"
+    },
+    {
+        "true_fol": "∀x ((Visit(x, mouse) ∧ Visit(mouse, dog)) → Cold(x))",
+        "pred_fol": "∀x ((visits(x, mouse) ∧ visits(mouse, dog)) → cold(x))"
+    },
+    {
+        "true_fol": "∀x (Like(x, cat) → Visit(x, dog))",
+        "pred_fol": "∀x (likes(x, cat) → visits(x, dog))"
+    },
+    {
+        "true_fol": "∀x ((Green(x) ∧ Cold(x)) → Like(x, cat))",
+        "pred_fol": "∀x ((green(x) ∧ cold(x)) → likes(x, cat))"
+    },
+    {
+        "true_fol": "∀x (Kind(x) ∧ Smart(x) → Rough(x))",
+        "pred_fol": "∀x ((kind(x) ∧ smart(x)) → rough(x))"
+    },
+    {
+        "true_fol": "∀x ((Red(x) ∧ Quiet(x)) → Big(x))",
+        "pred_fol": "∀x ((red(x) ∧ quiet(x)) → big(x))"
+    },
+    {
+        "true_fol": "∀x ((Cold(x) ∧ Quiet(x)) → Smart(x))",
+        "pred_fol": "∀x ((cold(x) ∧ quiet(x)) → smart(x))"
+    },
+    {
+        "true_fol": "∀x (Kind(x) → Green(x))",
+        "pred_fol": "∀x (kind(x) → green(x))"
+    },
+    {
+        "true_fol": "∀x ((Quiet(x) ∧ Nice(x)) → Furry(x))",
+        "pred_fol": "∀x ((quiet(x) ∧ nice(x)) → furry(x))"
+    },
+    {
+        "true_fol": "(Kind(bob) ∧ ¬Green(bob)) → Furry(bob)",
+        "pred_fol": "(kind(bob) ∧ ¬green(bob)) → furry(bob)"
+    },
+    {
+        "true_fol": "(Eat(squirrel, mouse) ∧ ¬Green(squirrel)) → ¬Red(mouse)",
+        "pred_fol": "(eats(squirrel, mouse) ∧ ¬green(squirrel)) → ¬red(mouse)"
+    },
+    {
+        "true_fol": "∀x ((Need(x, mouse) ∧ Eat(mouse, cow)) → Eat(cow, squirrel))",
+        "pred_fol": "∀x ((needs(x, mouse) ∧ eats(mouse, cow)) → eats(cow, squirrel))"
+    },
+    {
+        "true_fol": "∀x ((Need(x, cow) ∧ Blue(cow)) → Eat(x, mouse))",
+        "pred_fol": "∀x ((needs(x, cow) ∧ blue(cow)) → eats(x, mouse))"
+    },
+    {
+        "true_fol": "∀x ((Cold(x) ∧ Furry(x)) → Rough(x))",
+        "pred_fol": "∀x ((cold(x) ∧ furry(x)) → rough(x))"
+    },
+    {
+        "true_fol": "(Round(charlie) ∧ Furry(charlie)) → Nice(charlie)",
+        "pred_fol": "(round(charlie) ∧ furry(charlie)) → nice(charlie)"
+    },
+    {
+        "true_fol": "∀x ((Big(x) ∧ Cold(x)) → Furry(x))",
+        "pred_fol": "∀x ((big(x) ∧ cold(x)) → furry(x))"
+    },
+    {
+        "true_fol": "∀x ((Like(x, lion) ∧ ¬Red(x)) → Chase(x, lion))",
+        "pred_fol": "∀x ((likes(x, lion) ∧ ¬red(x)) → chases(x, lion))"
+    },
+    {
+        "true_fol": "∀x ((Red(x) ∧ Need(x, bald_eagle)) → Need(bald_eagle, lion))",
+        "pred_fol": "∀x ((red(x) ∧ needs(x, bald_eagle)) → needs(bald_eagle, lion))"
+    },
+    {
+        "true_fol": "∀x ((Chase(x, lion) ∧ Like(lion, dog)) → ¬Like(dog, lion))",
+        "pred_fol": "∀x ((chases(x, lion) ∧ likes(lion, dog)) → ¬likes(dog, lion))"
+    },
+    {
+        "true_fol": "∀x (Green(x) ∧ Round(x) → White(x))",
+        "pred_fol": "∀x ((green(x) ∧ round(x)) → white(x))"
+    },
+    {
+        "true_fol": "∀x (Smart(x) ∧ White(x) → Big(x))",
+        "pred_fol": "∀x ((smart(x) ∧ white(x)) → big(x))"
+    },
+    {
+        "true_fol": "∀x (Nice(x) ∧ Quiet(x) → Big(x))",
+        "pred_fol": "∀x ((nice(x) ∧ quiet(x)) → big(x))"
+    },
+    {
+        "true_fol": "(Red(erin) ∧ ¬Round(erin)) → Nice(erin)",
+        "pred_fol": "(red(erin) ∧ ¬round(erin)) → nice(erin)"
+    },
+    {
+        "true_fol": "∀x ((Round(x) ∧ Nice(x)) → ¬Young(x))",
+        "pred_fol": "∀x ((round(x) ∧ nice(x)) → ¬young(x))"
+    },
+    {
+        "true_fol": "∀x (Nice(x) → Smart(x))",
+        "pred_fol": "∀x (nice(x) → smart(x))"
+    },
+    {
+        "true_fol": "∀x ((Smart(x) ∧ ¬Red(x)) → ¬Green(x))",
+        "pred_fol": "∀x ((smart(x) ∧ ¬red(x)) → ¬green(x))"
+    },
+    {
+        "true_fol": "∀x ((Red(x) ∧ Green(x)) → Blue(x))",
+        "pred_fol": "∀x ((red(x) ∧ green(x)) → blue(x))"
+    },
+    {
+        "true_fol": "∀x ((Young(x) ∧ Big(x)) → Smart(x))",
+        "pred_fol": "∀x ((young(x) ∧ big(x)) → smart(x))"
+    },
+    {
+        "true_fol": "∀x ((Kind(x) ∧ Rough(x)) → Furry(x))",
+        "pred_fol": "∀x ((kind(x) ∧ rough(x)) → furry(x))"
+    },
+    {
+        "true_fol": "∀x ((Green(x) ∧ Furry(x)) → Quiet(x))",
+        "pred_fol": "∀x ((green(x) ∧ furry(x)) → quiet(x))"
+    },
+    {
+        "true_fol": "∀x ((Quiet(x) ∧ Kind(x)) → Rough(x))",
+        "pred_fol": "∀x ((quiet(x) ∧ kind(x)) → rough(x))"
+    },
+    {
+        "true_fol": "∀x ((Visit(x, squirrel) ∧ Chase(squirrel, cow)) → Round(cow))",
+        "pred_fol": "∀x ((visits(x, squirrel) ∧ chases(squirrel, cow)) → round(cow))"
+    },
+    {
+        "true_fol": "∀x (Big(x) ∧ Red(x) → Chase(x, rabbit))",
+        "pred_fol": "∀x ((big(x) ∧ red(x)) → chases(x, rabbit))"
+    },
+    {
+        "true_fol": "(Chase(squirrel, cow) ∧ Round(cow)) → Young(cow)",
+        "pred_fol": "(chases(squirrel, cow) ∧ round(cow)) → young(cow)"
+    },
+    {
+        "true_fol": "∀x ((Rough(x) ∧ Cold(x)) → Smart(x))",
+        "pred_fol": "∀x ((rough(x) ∧ cold(x)) → smart(x))"
+    },
+    {
+        "true_fol": "∀x ((Young(x) ∧ Blue(x)) → Kind(x))",
+        "pred_fol": "∀x ((young(x) ∧ blue(x)) → kind(x))"
+    },
+    {
+        "true_fol": "∀x ((Cold(x) ∧ Smart(x)) → Young(x))",
+        "pred_fol": "∀x ((cold(x) ∧ smart(x)) → young(x))"
+    },
+    {
+        "true_fol": "∀x (See(x, cow) → See(x, squirrel))",
+        "pred_fol": "∀x (sees(x, cow) → sees(x, squirrel))"
+    },
+    {
+        "true_fol": "∀x ((Need(x, squirrel) ∧ Need(squirrel, cow)) → ¬Need(cow, rabbit))",
+        "pred_fol": "∀x ((needs(x, squirrel) ∧ needs(squirrel, cow)) → ¬needs(cow, rabbit))"
+    },
+    {
+        "true_fol": "(Eat(mouse, rabbit) ∧ ¬See(rabbit, mouse)) → Green(rabbit)",
+        "pred_fol": "(eats(mouse, rabbit) ∧ ¬sees(rabbit, mouse)) → green(rabbit)"
+    },
+    {
+        "true_fol": "∀x ((Like(x, bald_eagle) ∧ ¬Like(bald_eagle, cat)) → ¬Likes(cat, lion))",
+        "pred_fol": "∀x ((likes(x, bald_eagle) ∧ ¬likes(bald_eagle, cat)) → ¬likes(cat, lion))"
+    },
+    {
+        "true_fol": "¬Rough(lion) → Cold(lion)",
+        "pred_fol": "¬rough(lion) → cold(lion)"
+    },
+    {
+        "true_fol": "∀x (Like(x, lion) → Green(lion))",
+        "pred_fol": "∀x (likes(x, lion) → green(lion))"
+    },
+    {
+        "true_fol": "∀x ((Furry(x) ∧ Round(x)) → Smart(x))",
+        "pred_fol": "∀x ((furry(x) ∧ round(x)) → smart(x))"
+    },
+    {
+        "true_fol": "Red(erin) → White(erin)",
+        "pred_fol": "red(erin) → white(erin)"
+    },
+    {
+        "true_fol": "∀x ((Smart(x) ∧ Rough(x)) → Furry(x))",
+        "pred_fol": "∀x ((smart(x) ∧ rough(x)) → furry(x))"
+    },
+    {
+        "true_fol": "∀x ((Smart(x) ∧ Big(x)) → White(x))",
+        "pred_fol": "∀x ((smart(x) ∧ big(x)) → white(x))"
+    },
+    {
+        "true_fol": "∀x ((Smart(x) ∧ White(x)) → Green(x))",
+        "pred_fol": "∀x ((smart(x) ∧ white(x)) → green(x))"
+    },
+    {
+        "true_fol": "∀x ((Red(x) ∧ Round(x)) → Quiet(x))",
+        "pred_fol": "∀x ((red(x) ∧ round(x)) → quiet(x))"
+    },
+    {
+        "true_fol": "∀x (Blue(x) ∧ Cold(x) → Nice(x))",
+        "pred_fol": "∀x ((blue(x) ∧ cold(x)) → nice(x))"
+    },
+    {
+        "true_fol": "∀x (Round(x) → Blue(x))",
+        "pred_fol": "∀x (round(x) → blue(x))"
+    },
+    {
+        "true_fol": "∀x (Nice(x) ∧ Round(x) → Smart(x))",
+        "pred_fol": "∀x ((nice(x) ∧ round(x)) → smart(x))"
+    },
+    {
+        "true_fol": "∀x ((Like(x, tiger) ∧ Need(tiger, dog)) → Round(x))",
+        "pred_fol": "∀x ((likes(x, tiger) ∧ needs(tiger, dog)) → round(x))"
+    },
+    {
+        "true_fol": "∀x (Big(x) → Need(x, dog))",
+        "pred_fol": "∀x (big(x) → needs(x, dog))"
+    },
+    {
+        "true_fol": "∀x ((Need(x, dog) ∧ ¬Eat(x, tiger)) → Blue(x))",
+        "pred_fol": "∀x ((needs(x, dog) ∧ ¬eats(x, tiger)) → blue(x))"
+    },
+    {
+        "true_fol": "∀x (Green(x) → Like(x, tiger))",
+        "pred_fol": "∀x (green(x) → likes(x, tiger))"
+    },
+    {
+        "true_fol": "∀x (Like(x, tiger) → See(tiger, cow))",
+        "pred_fol": "∀x (likes(x, tiger) → sees(tiger, cow))"
+    },
+    {
+        "true_fol": "∀x ((See(x, mouse) ∧ ¬Like(x, mouse)) → Blue(mouse))",
+        "pred_fol": "∀x ((sees(x, mouse) ∧ ¬likes(x, mouse)) → blue(mouse))"
+    },
+    {
+        "true_fol": "∀x ((Cold(x) ∧ Round(x)) → Kind(x))",
+        "pred_fol": "∀x ((cold(x) ∧ round(x)) → kind(x))"
+    },
+    {
+        "true_fol": "(Kind(gary) ∧ Cold(gary)) → Rough(gary)",
+        "pred_fol": "(kind(gary) ∧ cold(gary)) → rough(gary)"
+    },
+    {
+        "true_fol": "(Round(fiona) ∧ Kind(fiona)) → Young(fiona)",
+        "pred_fol": "(round(fiona) ∧ kind(fiona)) → young(fiona)"
+    },
+    {
+        "true_fol": "∀x ((Furry(x) ∧ Big(x)) → Green(x))",
+        "pred_fol": "∀x ((furry(x) ∧ big(x)) → green(x))"
+    },
+    {
+        "true_fol": "∀x ((White(x) ∧ Rough(x)) → Furry(x))",
+        "pred_fol": "∀x ((white(x) ∧ rough(x)) → furry(x))"
+    },
+    {
+        "true_fol": "∀x ((Big(x) ∧ Rough(x)) → White(x))",
+        "pred_fol": "∀x ((big(x) ∧ rough(x)) → white(x))"
+    },
+    {
+        "true_fol": "∀x ((Nice(x) ∧ Eat(x, tiger)) → Need(x, dog))",
+        "pred_fol": "∀x ((nice(x) ∧ eats(x, tiger)) → needs(x, dog))"
+    },
+    {
+        "true_fol": "Chase(dog, tiger) → Need(tiger, rabbit)",
+        "pred_fol": "chases(dog, tiger) → needs(tiger, rabbit)"
+    },
+    {
+        "true_fol": "∀x (Chase(x, cat) → Kind(cat))",
+        "pred_fol": "∀x (chases(x, cat) → kind(cat))"
+    },
+    {
+        "true_fol": "(Nice(bob) ∧ Big(bob)) → Red(bob)",
+        "pred_fol": "(nice(bob) ∧ big(bob)) → red(bob)"
+    },
+    {
+        "true_fol": "Furry(gary) → Blue(gary)",
+        "pred_fol": "furry(gary) → blue(gary)"
+    },
+    {
+        "true_fol": "∀x (Nice(x) ∧ Big(x) → Young(x))",
+        "pred_fol": "∀x ((nice(x) ∧ big(x)) → young(x))"
+    },
+    {
+        "true_fol": "∀x (Big(x) → Rough(x))",
+        "pred_fol": "∀x (big(x) → rough(x))"
+    },
+    {
+        "true_fol": "∀x (Blue(x) ∧ Nice(x) → Big(x))",
+        "pred_fol": "∀x ((blue(x) ∧ nice(x)) → big(x))"
+    },
+    {
+        "true_fol": "∀x (Rough(x) ∧ White(x) → Nice(x))",
+        "pred_fol": "∀x ((rough(x) ∧ white(x)) → nice(x))"
+    },
+    {
+        "true_fol": "∀x (Smart(x) ∧ Rough(x) → Young(x))",
+        "pred_fol": "∀x ((smart(x) ∧ rough(x)) → young(x))"
+    },
+    {
+        "true_fol": "∀x (Cold(x) ∧ White(x) → Quiet(x))",
+        "pred_fol": "∀x ((cold(x) ∧ white(x)) → quiet(x))"
+    },
+    {
+        "true_fol": "∀x (Quiet(x) ∧ Young(x) → Blue(x))",
+        "pred_fol": "∀x ((quiet(x) ∧ young(x)) → blue(x))"
+    },
+    {
+        "true_fol": "∀x (Rough(x) → Round(x))",
+        "pred_fol": "∀x (rough(x) → round(x))"
+    },
+    {
+        "true_fol": "∀x ((Cold(x) ∧ ¬Blue(x)) → Rough(x))",
+        "pred_fol": "∀x ((cold(x) ∧ ¬blue(x)) → rough(x))"
+    },
+    {
+        "true_fol": "Smart(bob) → ¬Green(bob)",
+        "pred_fol": "smart(bob) → ¬green(bob)"
+    },
+    {
+        "true_fol": "∀x (Blue(x) → White(x))",
+        "pred_fol": "∀x (blue(x) → white(x))"
+    },
+    {
+        "true_fol": "∀x (Green(x) → Quiet(x))",
+        "pred_fol": "∀x (green(x) → quiet(x))"
+    },
+    {
+        "true_fol": "∀x (Round(x) ∧ Big(x) → Green(x))",
+        "pred_fol": "∀x ((round(x) ∧ big(x)) → green(x))"
+    },
+    {
+        "true_fol": "∀x (Visit(x, lion) → Round(x))",
+        "pred_fol": "∀x (visits(x, lion) → round(x))"
+    },
+    {
+        "true_fol": "∀x ((Visit(x, lion) ∧ Round(lion)) → Like(x, lion))",
+        "pred_fol": "∀x ((visits(x, lion) ∧ round(lion)) → likes(x, lion))"
+    },
+    {
+        "true_fol": "∀x ((Like(x, lion) ∧ Need(x, lion)) → Visit(lion, mouse))",
+        "pred_fol": "∀x ((likes(x, lion) ∧ needs(x, lion)) → visits(lion, mouse))"
+    },
+    {
+        "true_fol": "∀x (Rough(x) ∧ White(x) → Quiet(x))",
+        "pred_fol": "∀x ((rough(x) ∧ white(x)) → quiet(x))"
+    },
+    {
+        "true_fol": "(Round(charlie) ∧ Quiet(charlie)) → Rough(charlie)",
+        "pred_fol": "(round(charlie) ∧ quiet(charlie)) → rough(charlie)"
+    },
+    {
+        "true_fol": "∀x ((Round(x) ∧ Rough(x)) → Nice(x))",
+        "pred_fol": "∀x ((round(x) ∧ rough(x)) → nice(x))"
+    },
+    {
+        "true_fol": "∀x ((See(x, squirrel) ∧ See(squirrel, bear)) → Need(squirrel, mouse))",
+        "pred_fol": "∀x ((sees(x, squirrel) ∧ sees(squirrel, bear)) → needs(squirrel, mouse))"
+    },
+    {
+        "true_fol": "∀x ((Need(x, rabbit) ∧ See(rabbit, mouse)) → See(mouse, rabbit))",
+        "pred_fol": "∀x ((needs(x, rabbit) ∧ sees(rabbit, mouse)) → sees(mouse, rabbit))"
+    },
+    {
+        "true_fol": "∀x (Rough(x) → Need(x, rabbit))",
+        "pred_fol": "∀x (rough(x) → needs(x, rabbit))"
+    },
+    {
+        "true_fol": "∀x (Furry(x) ∧ White(x) → Nice(x))",
+        "pred_fol": "∀x ((furry(x) ∧ white(x)) → nice(x))"
+    },
+    {
+        "true_fol": "∀x (White(x) → Blue(x))",
+        "pred_fol": "∀x (white(x) → blue(x))"
+    },
+    {
+        "true_fol": "∀x (Nice(x) ∧ Smart(x) → Quiet(x))",
+        "pred_fol": "∀x ((nice(x) ∧ smart(x)) → quiet(x))"
+    },
+    {
+        "true_fol": "∀x (Rough(x) ∧ Kind(x) → Quiet(x))",
+        "pred_fol": "∀x ((rough(x) ∧ kind(x)) → quiet(x))"
+    },
+    {
+        "true_fol": "(Smart(anne) ∧ Quiet(anne)) → ¬Round(anne)",
+        "pred_fol": "(smart(anne) ∧ quiet(anne)) → ¬round(anne)"
+    },
+    {
+        "true_fol": "∀x (Kind(x) ∧ ¬Round(x) → Young(x))",
+        "pred_fol": "∀x ((kind(x) ∧ ¬round(x)) → young(x))"
+    },
+    {
+        "true_fol": "(Need(squirrel, lion) ∧ Nice(squirrel)) → ¬Eat(squirrel, mouse)",
+        "pred_fol": "(needs(squirrel, lion) ∧ nice(squirrel)) → ¬eats(squirrel, mouse)"
+    },
+    {
+        "true_fol": "∀x ((Like(x, mouse) ∧ Need(mouse, squirrel)) → ¬Like(mouse, bald_eagle))",
+        "pred_fol": "∀x ((likes(x, mouse) ∧ needs(mouse, squirrel)) → ¬likes(mouse, bald_eagle))"
+    },
+    {
+        "true_fol": "∀x ((Eat(x, mouse) ∧ Nice(mouse)) → ¬Need(mouse, bald_eagle))",
+        "pred_fol": "∀x ((eats(x, mouse) ∧ nice(mouse)) → ¬needs(mouse, bald_eagle))"
+    },
+    {
+        "true_fol": "∀x (Young(x) → Cold(x))",
+        "pred_fol": "∀x (young(x) → cold(x))"
+    },
+    {
+        "true_fol": "∀x ((Green(x) ∧ Cold(x)) → White(x))",
+        "pred_fol": "∀x ((green(x) ∧ cold(x)) → white(x))"
+    },
+    {
+        "true_fol": "(Green(harry) ∧ Young(harry)) → Furry(harry)",
+        "pred_fol": "(green(harry) ∧ young(harry)) → furry(harry)"
+    },
+    {
+        "true_fol": "∀x ((Chase(x, lion) ∧ Eat(x, squirrel)) → See(squirrel, tiger))",
+        "pred_fol": "∀x ((chases(x, lion) ∧ eats(x, squirrel)) → sees(squirrel, tiger))"
+    },
+    {
+        "true_fol": "(Eat(squirrel, lion) ∧ Green(squirrel)) → See(lion, tiger)",
+        "pred_fol": "(eats(squirrel, lion) ∧ green(squirrel)) → sees(lion, tiger)"
+    },
+    {
+        "true_fol": "∀x (Chase(x, dog) → Chase(x, tiger))",
+        "pred_fol": "∀x (chases(x, dog) → chases(x, tiger))"
+    },
+    {
+        "true_fol": "∀x (Smart(x) → Cold(x))",
+        "pred_fol": "∀x (smart(x) → cold(x))"
+    },
+    {
+        "true_fol": "∀x ((Rough(x) ∧ Kind(x)) → Smart(x))",
+        "pred_fol": "∀x ((rough(x) ∧ kind(x)) → smart(x))"
+    },
+    {
+        "true_fol": "Smart(anne) → White(anne)",
+        "pred_fol": "smart(anne) → white(anne)"
+    },
+    {
+        "true_fol": "∀x (Red(x) ∧ Kind(x) → Rough(x))",
+        "pred_fol": "∀x ((red(x) ∧ kind(x)) → rough(x))"
+    },
+    {
+        "true_fol": "(Cold(dave) ∧ Young(dave)) → Kind(dave)",
+        "pred_fol": "(cold(dave) ∧ young(dave)) → kind(dave)"
+    },
+    {
+        "true_fol": "∀x (Cold(x) ∧ Furry(x) → Smart(x))",
+        "pred_fol": "∀x ((cold(x) ∧ furry(x)) → smart(x))"
+    },
+    {
+        "true_fol": "∀x (Need(x, mouse) → ¬See(mouse, bald_eagle))",
+        "pred_fol": "∀x (needs(x, mouse) → ¬sees(mouse, bald_eagle))"
+    },
+    {
+        "true_fol": "∀x (Rough(x) → See(x, mouse))",
+        "pred_fol": "∀x (rough(x) → sees(x, mouse))"
+    },
+    {
+        "true_fol": "∀x (Need(x, lion) → ¬See(x, bald_eagle))",
+        "pred_fol": "∀x (needs(x, lion) → ¬sees(x, bald_eagle))"
+    },
+    {
+        "true_fol": "∀x (Visit(x, bald_eagle) → Big(x))",
+        "pred_fol": "∀x (visits(x, bald_eagle) → big(x))"
+    },
+    {
+        "true_fol": "∀x ((Visit(x, squirrel) ∧ Visit(x, lion)) → Need(x, squirrel))",
+        "pred_fol": "∀x ((visits(x, squirrel) ∧ visits(x, lion)) → needs(x, squirrel))"
+    },
+    {
+        "true_fol": "∀x (Need(x, squirrel) → Green(x))",
+        "pred_fol": "∀x (needs(x, squirrel) → green(x))"
+    },
+    {
+        "true_fol": "∀x (Furry(x) → Blue(x))",
+        "pred_fol": "∀x (furry(x) → blue(x))"
+    },
+    {
+        "true_fol": "∀x (Big(x) ∧ Quiet(x) → Furry(x))",
+        "pred_fol": "∀x ((big(x) ∧ quiet(x)) → furry(x))"
+    },
+    {
+        "true_fol": "(Nice(charlie) ∧ Big(charlie)) → Quiet(charlie)",
+        "pred_fol": "(nice(charlie) ∧ big(charlie)) → quiet(charlie)"
+    },
+    {
+        "true_fol": "∀x ((Cold(x) ∧ Quiet(x)) → ¬Big(x))",
+        "pred_fol": "∀x ((cold(x) ∧ quiet(x)) → ¬big(x))"
+    },
+    {
+        "true_fol": "∀x ((Cold(x) ∧ Big(x)) → Round(x))",
+        "pred_fol": "∀x ((cold(x) ∧ big(x)) → round(x))"
+    },
+    {
+        "true_fol": "∀x ((Nice(x) ∧ Young(x)) → Rough(x))",
+        "pred_fol": "∀x ((nice(x) ∧ young(x)) → rough(x))"
+    },
+    {
+        "true_fol": "∀x ((Smart(x) ∧ Big(x)) → White(x))",
+        "pred_fol": "∀x ((smart(x) ∧ big(x)) → white(x))"
+    },
+    {
+        "true_fol": "∀x ((Smart(x) ∧ White(x)) → Green(x))",
+        "pred_fol": "∀x ((smart(x) ∧ white(x)) → green(x))"
+    },
+    {
+        "true_fol": "(Round(erin) ∧ Quiet(erin)) → Smart(erin)",
+        "pred_fol": "(round(erin) ∧ quiet(erin)) → smart(erin)"
+    },
+    {
+        "true_fol": "∀x ((See(x, cat) ∧ Like(x, bald_eagle)) → Rough(cat))",
+        "pred_fol": "∀x ((sees(x, cat) ∧ likes(x, bald_eagle)) → rough(cat))"
+    },
+    {
+        "true_fol": "∀x (See(x, bald_eagle) → Like(bald_eagle, dog))",
+        "pred_fol": "∀x (sees(x, bald_eagle) → likes(bald_eagle, dog))"
+    },
+    {
+        "true_fol": "∀x ((Chase(x, dog) ∧ Like(dog, cat)) → See(x, bald_eagle))",
+        "pred_fol": "∀x ((chases(x, dog) ∧ likes(dog, cat)) → sees(x, bald_eagle))"
+    },
+    {
+        "true_fol": "∀x (Green(x) ∧ Furry(x) → Smart(x))",
+        "pred_fol": "∀x ((green(x) ∧ furry(x)) → smart(x))"
+    },
+    {
+        "true_fol": "∀x (Cold(x) ∧ Smart(x) → Red(x))",
+        "pred_fol": "∀x ((cold(x) ∧ smart(x)) → red(x))"
+    },
+    {
+        "true_fol": "(Kind(bob) ∧ Furry(bob)) → Smart(bob)",
+        "pred_fol": "(kind(bob) ∧ furry(bob)) → smart(bob)"
+    },
+    {
+        "true_fol": "(Young(anne) ∧ Rough(anne)) → Smart(anne)",
+        "pred_fol": "(young(anne) ∧ rough(anne)) → smart(anne)"
+    },
+    {
+        "true_fol": "∀x (Young(x) ∧ Cold(x) → Red(x))",
+        "pred_fol": "∀x ((young(x) ∧ cold(x)) → red(x))"
+    },
+    {
+        "true_fol": "∀x (Young(x) → Kind(x))",
+        "pred_fol": "∀x (young(x) → kind(x))"
+    },
+    {
+        "true_fol": "∀x ((Quiet(x) ∧ Green(x)) → Kind(x))",
+        "pred_fol": "∀x ((quiet(x) ∧ green(x)) → kind(x))"
+    },
+    {
+        "true_fol": "∀x ((Green(x) ∧ Young(x)) → Nice(x))",
+        "pred_fol": "∀x ((green(x) ∧ young(x)) → nice(x))"
+    },
+    {
+        "true_fol": "∀x ((Green(x) ∧ White(x)) → Round(x))",
+        "pred_fol": "∀x ((green(x) ∧ white(x)) → round(x))"
+    },
+    {
+        "true_fol": "Like(tiger, bald_eagle) → See(bald_eagle, squirrel)",
+        "pred_fol": "likes(tiger, bald_eagle) → sees(bald_eagle, squirrel)"
+    },
+    {
+        "true_fol": "∀x ((Like(x, tiger) ∧ ¬Chase(x, cat)) → ¬Big(cat))",
+        "pred_fol": "∀x ((likes(x, tiger) ∧ ¬chases(x, cat)) → ¬big(cat))"
+    },
+    {
+        "true_fol": "∀x ((Chase(x, tiger) ∧ See(x, cat)) → Big(tiger))",
+        "pred_fol": "∀x ((chases(x, tiger) ∧ sees(x, cat)) → big(tiger))"
+    },
+    {
+        "true_fol": "∀x (White(x) → Cold(x))",
+        "pred_fol": "∀x (white(x) → cold(x))"
+    },
+    {
+        "true_fol": "∀x (Round(x) ∧ Big(x) → Green(x))",
+        "pred_fol": "∀x ((round(x) ∧ big(x)) → green(x))"
+    },
+    {
+        "true_fol": "∀x (White(x) ∧ Quiet(x) → Big(x))",
+        "pred_fol": "∀x ((white(x) ∧ quiet(x)) → big(x))"
+    },
+    {
+        "true_fol": "∀x ((Blue(x) ∧ ¬Quiet(x)) → Nice(x))",
+        "pred_fol": "∀x ((blue(x) ∧ ¬quiet(x)) → nice(x))"
+    },
+    {
+        "true_fol": "(Nice(erin) ∧ Blue(erin)) → Young(erin)",
+        "pred_fol": "(nice(erin) ∧ blue(erin)) → young(erin)"
+    },
+    {
+        "true_fol": "∀x (White(x) → Green(x))",
+        "pred_fol": "∀x (white(x) → green(x))"
+    },
+    {
+        "true_fol": "(White(harry) ∧ Young(harry)) → ¬Green(harry)",
+        "pred_fol": "(white(harry) ∧ young(harry)) → ¬green(harry)"
+    },
+    {
+        "true_fol": "∀x (Blue(x) ∧ Young(x) → Red(x))",
+        "pred_fol": "∀x ((blue(x) ∧ young(x)) → red(x))"
+    },
+    {
+        "true_fol": "∀x (Blue(x) ∧ White(x) → Kind(x))",
+        "pred_fol": "∀x ((blue(x) ∧ white(x)) → kind(x))"
+    },
+    {
+        "true_fol": "∀x ((Rough(x) ∧ Chase(x, rabbit)) → Rough(rabbit))",
+        "pred_fol": "∀x ((rough(x) ∧ chases(x, rabbit)) → rough(rabbit))"
+    },
+    {
+        "true_fol": "∀x (Need(x, lion) → Chase(x, lion))",
+        "pred_fol": "∀x (needs(x, lion) → chases(x, lion))"
+    },
+    {
+        "true_fol": "(Need(rabbit, lion) ∧ Cold(lion)) → Visit(lion, squirrel)",
+        "pred_fol": "(needs(rabbit, lion) ∧ cold(lion)) → visits(lion, squirrel)"
+    },
+    {
+        "true_fol": "See(cat, tiger) → Chase(cat, tiger)",
+        "pred_fol": "sees(cat, tiger) → chases(cat, tiger)"
+    },
+    {
+        "true_fol": "∀x (Like(x, rabbit) → ¬Like(rabbit, mouse))",
+        "pred_fol": "∀x (likes(x, rabbit) → ¬likes(rabbit, mouse))"
+    },
+    {
+        "true_fol": "∀x (Chase(x, cat) → Like(x, mouse))",
+        "pred_fol": "∀x (chases(x, cat) → likes(x, mouse))"
+    },
+    {
+        "true_fol": "∀x ((Need(x, bald_eagle) ∧ Red(x)) → Visit(x, cow))",
+        "pred_fol": "∀x ((needs(x, bald_eagle) ∧ red(x)) → visits(x, cow))"
+    },
+    {
+        "true_fol": "∀x ((Like(x, bald_eagle) ∧ Need(x, bald_eagle)) → Visit(bald_eagle, rabbit))",
+        "pred_fol": "∀x ((likes(x, bald_eagle) ∧ needs(x, bald_eagle)) → visits(bald_eagle, rabbit))"
+    },
+    {
+        "true_fol": "(Like(cat, bald_eagle) → Visit(bald_eagle, cow))",
+        "pred_fol": "likes(cat, bald_eagle) → visits(bald_eagle, cow)"
+    },
+    {
+        "true_fol": "∀x ((Green(x) ∧ Smart(x)) → ¬Blue(x))",
+        "pred_fol": "∀x ((green(x) ∧ smart(x)) → ¬blue(x))"
+    },
+    {
+        "true_fol": "∀x (Blue(x) ∧ Green(x) → Smart(x))",
+        "pred_fol": "∀x ((blue(x) ∧ green(x)) → smart(x))"
+    },
+    {
+        "true_fol": "(Smart(harry) ∧ Blue(harry)) → Red(harry)",
+        "pred_fol": "(smart(harry) ∧ blue(harry)) → red(harry)"
+    },
+    {
+        "true_fol": "∀x ((Blue(x) ∧ Rough(x)) → See(x, lion))",
+        "pred_fol": "∀x ((blue(x) ∧ rough(x)) → sees(x, lion))"
+    },
+    {
+        "true_fol": "∀x ((Need(x, cow) ∧ ¬Need(x, lion)) → Chase(x, cow))",
+        "pred_fol": "∀x ((needs(x, cow) ∧ ¬needs(x, lion)) → chases(x, cow))"
+    },
+    {
+        "true_fol": "∀x ((Chase(x, bald_eagle) ∧ Chase(bald_eagle, dog)) → See(bald_eagle, dog))",
+        "pred_fol": "∀x ((chases(x, bald_eagle) ∧ chases(bald_eagle, dog)) → sees(bald_eagle, dog))"
+    },
+    {
+        "true_fol": "∀x ((Rough(x) ∧ Chase(x, rabbit)) → Rough(rabbit))",
+        "pred_fol": "∀x ((rough(x) ∧ chases(x, rabbit)) → rough(rabbit))"
+    },
+    {
+        "true_fol": "∀x (Chase(x, squirrel) → Visit(x, dog))",
+        "pred_fol": "∀x (chases(x, squirrel) → visits(x, dog))"
+    },
+    {
+        "true_fol": "(Need(rabbit, lion) ∧ Cold(lion)) → Visit(lion, squirrel)",
+        "pred_fol": "(needs(rabbit, lion) ∧ cold(lion)) → visits(lion, squirrel)"
+    },
+    {
+        "true_fol": "(Furry(harry) ∧ Quiet(harry)) → Round(harry)",
+        "pred_fol": "(furry(harry) ∧ quiet(harry)) → round(harry)"
+    },
+    {
+        "true_fol": "∀x ((Rough(x) ∧ Kind(x)) → Quiet(x))",
+        "pred_fol": "∀x ((rough(x) ∧ kind(x)) → quiet(x))"
+    },
+    {
+        "true_fol": "∀x ((Quiet(x) ∧ Furry(x)) → Round(x))",
+        "pred_fol": "∀x ((quiet(x) ∧ furry(x)) → round(x))"
+    },
+    {
+        "true_fol": "∀x (Visit(x, rabbit) → Like(rabbit, lion))",
+        "pred_fol": "∀x (visits(x, rabbit) → likes(rabbit, lion))"
+    },
+    {
+        "true_fol": "∀x ((Like(x, rabbit) ∧ Red(rabbit)) → Big(rabbit))",
+        "pred_fol": "∀x ((likes(x, rabbit) ∧ red(rabbit)) → big(rabbit))"
+    },
+    {
+        "true_fol": "∀x ((Like(x, lion) ∧ See(x, rabbit)) → Like(lion, rabbit))",
+        "pred_fol": "∀x ((likes(x, lion) ∧ sees(x, rabbit)) → likes(lion, rabbit))"
+    },
+    {
+        "true_fol": "∀x ((Like(x, bear) ∧ Visit(x, lion)) → Green(x))",
+        "pred_fol": "∀x ((likes(x, bear) ∧ visits(x, lion)) → green(x))"
+    },
+    {
+        "true_fol": "∀x ((Like(x, lion) ∧ Nice(lion)) → Chase(x, lion))",
+        "pred_fol": "∀x ((likes(x, lion) ∧ nice(lion)) → chases(x, lion))"
+    },
+    {
+        "true_fol": "∀x ((Green(x) ∧ Chase(x, cow)) → Cold(cow))",
+        "pred_fol": "∀x ((green(x) ∧ chases(x, cow)) → cold(cow))"
+    },
+    {
+        "true_fol": "∀x ((Round(x) ∧ Cold(x)) → Red(x))",
+        "pred_fol": "∀x ((round(x) ∧ cold(x)) → red(x))"
+    },
+    {
+        "true_fol": "∀x (Blue(x) ∧ Big(x) → Round(x))",
+        "pred_fol": "∀x ((blue(x) ∧ big(x)) → round(x))"
+    },
+    {
+        "true_fol": "∀x ((Furry(x) ∧ Blue(x)) → Round(x))",
+        "pred_fol": "∀x ((furry(x) ∧ blue(x)) → round(x))"
+    },
+    {
+        "true_fol": "(Cold(fiona) ∧ Big(fiona)) → Nice(fiona)",
+        "pred_fol": "(cold(fiona) ∧ big(fiona)) → nice(fiona)"
+    },
+    {
+        "true_fol": "∀x ((Nice(x) ∧ Big(x)) → Cold(x))",
+        "pred_fol": "∀x ((nice(x) ∧ big(x)) → cold(x))"
+    },
+    {
+        "true_fol": "∀x ((Young(x) ∧ White(x)) → Cold(x))",
+        "pred_fol": "∀x ((young(x) ∧ white(x)) → cold(x))"
+    },
+    {
+        "true_fol": "Nice(anne) → Cold(anne)",
+        "pred_fol": "nice(anne) → cold(anne)"
+    },
+    {
+        "true_fol": "∀x ((Young(x) ∧ White(x)) → Cold(x))",
+        "pred_fol": "∀x ((young(x) ∧ white(x)) → cold(x))"
+    },
+    {
+        "true_fol": "∀x ((Furry(x) ∧ Red(x)) → Nice(x))",
+        "pred_fol": "∀x ((furry(x) ∧ red(x)) → nice(x))"
+    },
+    {
+        "true_fol": "∀x ((Smart(x) ∧ Cold(x)) → Furry(x))",
+        "pred_fol": "∀x ((smart(x) ∧ cold(x)) → furry(x))"
+    },
+    {
+        "true_fol": "∀x ((Red(x) ∧ Young(x)) → Eat(x, lion))",
+        "pred_fol": "∀x ((red(x) ∧ young(x)) → eats(x, lion))"
+    },
+    {
+        "true_fol": "∀x ((Blue(x) ∧ Eat(x, cat)) → Chase(cat, dog))",
+        "pred_fol": "∀x ((blue(x) ∧ eats(x, cat)) → chases(cat, dog))"
+    },
+    {
+        "true_fol": "∀x ((Eat(x, rabbit) ∧ Need(x, lion)) → Red(rabbit))",
+        "pred_fol": "∀x ((eats(x, rabbit) ∧ needs(x, lion)) → red(rabbit))"
+    },
+    {
+        "true_fol": "∀x ((Visit(x, lion) ∧ ¬Blue(lion)) → ¬Green(lion))",
+        "pred_fol": "∀x ((visits(x, lion) ∧ ¬blue(lion)) → ¬green(lion))"
+    },
+    {
+        "true_fol": "∀x (Like(x, mouse) → Need(mouse, lion))",
+        "pred_fol": "∀x (likes(x, mouse) → needs(mouse, lion))"
+    },
+    {
+        "true_fol": "∀x ((Young(x) ∧ Visit(x, mouse)) → Like(x, cat))",
+        "pred_fol": "∀x ((young(x) ∧ visits(x, mouse)) → likes(x, cat))"
+    },
+    {
+        "true_fol": "∀x (See(x, bear) → Need(x, mouse))",
+        "pred_fol": "∀x (sees(x, bear) → needs(x, mouse))"
+    },
+    {
+        "true_fol": "∀x ((Need(x, bear) ∧ Need(bear, cow)) → Need(bear, cat))",
+        "pred_fol": "∀x ((needs(x, bear) ∧ needs(bear, cow)) → needs(bear, cat))"
+    },
+    {
+        "true_fol": "(Red(bear) ∧ Need(bear, cow)) → Need(cow, bear)",
+        "pred_fol": "(red(bear) ∧ needs(bear, cow)) → needs(cow, bear)"
+    },
+    {
+        "true_fol": "∀x (Chase(x, squirrel) → Need(squirrel, tiger))",
+        "pred_fol": "∀x (chases(x, squirrel) → needs(squirrel, tiger))"
+    },
+    {
+        "true_fol": "∀x ((Chase(x, cat) ∧ Like(x, rabbit)) → Chase(rabbit, squirrel))",
+        "pred_fol": "∀x ((chases(x, cat) ∧ likes(x, rabbit)) → chases(rabbit, squirrel))"
+    },
+    {
+        "true_fol": "∀x (Chase(x, rabbit) → ¬Need(rabbit, tiger))",
+        "pred_fol": "∀x (chases(x, rabbit) → ¬needs(rabbit, tiger))"
+    },
+    {
+        "true_fol": "(Need(dog, cat) → Chase(dog, bear))",
+        "pred_fol": "needs(dog, cat) → chases(dog, bear)"
+    },
+    {
+        "true_fol": "∀x ((Nice(x) ∧ Eat(x, bear)) → Red(bear))",
+        "pred_fol": "∀x ((nice(x) ∧ eats(x, bear)) → red(bear))"
+    },
+    {
+        "true_fol": "∀x ((Eat(x, dog) ∧ ¬Red(x)) → ¬Need(x, cow))",
+        "pred_fol": "∀x ((eats(x, dog) ∧ ¬red(x)) → ¬needs(dog, cow))"
+    },
+    {
+        "true_fol": "∀x ((Young(x) ∧ Eat(x, tiger)) → Eat(x, dog))",
+        "pred_fol": "∀x ((young(x) ∧ eats(x, tiger)) → eats(x, dog))"
+    },
+    {
+        "true_fol": "∀x ((See(x, mouse) ∧ Eat(x, mouse)) → See(mouse, tiger))",
+        "pred_fol": "∀x ((sees(x, mouse) ∧ eats(x, mouse)) → sees(mouse, tiger))"
+    },
+    {
+        "true_fol": "∀x ((Chase(x, tiger) ∧ Eat(tiger, cat)) → See(cat, mouse))",
+        "pred_fol": "∀x ((chases(x, tiger) ∧ eats(tiger, cat)) → sees(cat, mouse))"
+    },
+    {
+        "true_fol": "∀x (Eat(x, bear) → Eat(bear, bald_eagle))",
+        "pred_fol": "∀x (eats(x, bear) → eats(bear, bald_eagle))"
+    },
+    {
+        "true_fol": "∀x ((See(x, cat) ∧ Green(cat)) → Eat(cat, bear))",
+        "pred_fol": "∀x ((sees(x, cat) ∧ green(cat)) → eats(cat, bear))"
+    },
+    {
+        "true_fol": "∀x ((Eat(x, bear) ∧ Eat(x, dog)) → Rough(bear))",
+        "pred_fol": "∀x ((eats(x, bear) ∧ eats(x, dog)) → rough(bear))"
+    },
+    {
+        "true_fol": "∀x ((Need(x, rabbit) ∧ See(rabbit, mouse)) → ¬See(mouse, lion))",
+        "pred_fol": "∀x ((needs(x, rabbit) ∧ sees(rabbit, mouse)) → ¬sees(mouse, lion))"
+    },
+    {
+        "true_fol": "(See(squirrel, lion) ∧ ¬Green(squirrel)) → Need(lion, squirrel)",
+        "pred_fol": "(sees(squirrel, lion) ∧ ¬green(squirrel)) → needs(lion, squirrel)"
+    },
+    {
+        "true_fol": "∀x ((Visit(x, squirrel) ∧ See(squirrel, lion)) → ¬Kind(lion))",
+        "pred_fol": "∀x ((visits(x, squirrel) ∧ sees(squirrel, lion)) → ¬kind(lion))"
+    },
+    {
+        "true_fol": "∀x ((Need(x, mouse) ∧ Need(x, lion)) → Need(lion, mouse))",
+        "pred_fol": "∀x ((needs(x, mouse) ∧ needs(x, lion)) → needs(lion, mouse))"
+    },
+    {
+        "true_fol": "∀x (Visit(x, lion) → Need(x, cat))",
+        "pred_fol": "∀x (visits(x, lion) → needs(x, cat))"
+    },
+    {
+        "true_fol": "Visit(mouse, squirrel) → Like(squirrel, cat)",
+        "pred_fol": "visits(mouse, squirrel) → likes(squirrel, cat)"
+    },
+    {
+        "true_fol": "∀x ((See(x, lion) ∧ See(x, bald_eagle)) → Chase(x, cat))",
+        "pred_fol": "∀x ((sees(x, lion) ∧ sees(x, bald_eagle)) → chases(x, cat))"
+    },
+    {
+        "true_fol": "∀x ((Visit(x, tiger) ∧ See(tiger, cat)) → See(x, lion))",
+        "pred_fol": "∀x ((visits(x, tiger) ∧ sees(tiger, cat)) → sees(x, lion))"
+    },
+    {
+        "true_fol": "See(lion, bald_eagle) → Visit(bald_eagle, tiger)",
+        "pred_fol": "sees(lion, bald_eagle) → visits(bald_eagle, tiger)"
+    },
+    {
+        "true_fol": "∀x ((Blue(x) ∧ See(x, bear)) → See(x, dog))",
+        "pred_fol": "∀x ((blue(x) ∧ sees(x, bear)) → sees(x, dog))"
+    },
+    {
+        "true_fol": "∀x ((Blue(x) ∧ See(x, dog)) → Big(x))",
+        "pred_fol": "∀x ((blue(x) ∧ sees(x, dog)) → big(x))"
+    },
+    {
+        "true_fol": "∀x ((Eat(x, bear) ∧ See(x, dog)) → Big(dog))",
+        "pred_fol": "∀x ((eats(x, bear) ∧ sees(x, dog)) → big(dog))"
+    },
+    {
+        "true_fol": "∀x ((See(x, mouse) ∧ Eat(x, mouse)) → See(mouse, tiger))",
+        "pred_fol": "∀x ((sees(x, mouse) ∧ eats(x, mouse)) → sees(mouse, tiger))"
+    },
+    {
+        "true_fol": "∀x ((Chase(x, tiger) ∧ Eat(tiger, cat)) → See(cat, mouse))",
+        "pred_fol": "∀x ((chases(x, tiger) ∧ eats(tiger, cat)) → sees(cat, mouse))"
+    },
+    {
+        "true_fol": "∀x ((See(x, dog) ∧ Chase(x, tiger)) → Chase(tiger, dog))",
+        "pred_fol": "∀x ((sees(x, dog) ∧ chases(x, tiger)) → chases(tiger, dog))"
+    },
+    {
+        "true_fol": "∀x ((Red(x) ∧ ¬Young(x)) → Need(x, lion))",
+        "pred_fol": "∀x ((red(x) ∧ ¬young(x)) → needs(x, lion))"
+    },
+    {
+        "true_fol": "∀x (See(x, bald_eagle) → Need(x, lion))",
+        "pred_fol": "∀x (sees(x, bald_eagle) → needs(x, lion))"
+    },
+    {
+        "true_fol": "∀x ((Need(x, lion) ∧ Need(x, bear)) → Round(bear))",
+        "pred_fol": "∀x ((needs(x, lion) ∧ needs(x, bear)) → round(bear))"
+    },
+    {
+        "true_fol": "∀x ((Cold(x) ∧ Like(x, bald_eagle)) → Eat(x, rabbit))",
+        "pred_fol": "∀x ((cold(x) ∧ likes(x, bald_eagle)) → eats(x, rabbit))"
+    },
+    {
+        "true_fol": "∀x ((Like(x, dog) ∧ See(x, squirrel)) → Like(dog, bald_eagle))",
+        "pred_fol": "∀x ((likes(x, dog) ∧ sees(x, squirrel)) → likes(dog, bald_eagle))"
+    },
+    {
+        "true_fol": "(See(bald_eagle, dog) ∧ Cold(bald_eagle)) → Like(bald_eagle, dog)",
+        "pred_fol": "(sees(bald_eagle, dog) ∧ cold(bald_eagle)) → likes(bald_eagle, dog)"
+    },
+    {
+        "Bleu_mean": 0.8406602359648642,
+        "LE_mean": 1.0,
+        "Bleu": [
+            0.7749224723289705,
+            0.7076534431960262,
+            0.7749224723289705,
+            0.7641254083103469,
+            0.6422727797927412,
+            0.8725129388059689,
+            0.7978739410843126,
+            0.7978739410843126,
+            1.0,
+            0.7749224723289705,
+            0.8003203203844999,
+            0.7641254083103469,
+            0.7978739410843126,
+            1.0,
+            0.7978739410843126,
+            0.7978739410843126,
+            0.7978739410843126,
+            0.7978739410843126,
+            1.0,
+            0.7978739410843126,
+            0.7978739410843126,
+            0.7641254083103469,
+            0.8003203203844999,
+            0.8725129388059689,
+            0.7978739410843126,
+            0.7978739410843126,
+            1.0,
+            0.7721947901921794,
+            0.6695426343195656,
+            0.7749224723289705,
+            0.7978739410843126,
+            1.0,
+            0.7978739410843126,
+            0.8931539818068694,
+            0.7641254083103469,
+            0.7641254083103469,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.7978739410843126,
+            0.647084148066781,
+            0.7641254083103469,
+            0.6695426343195656,
+            1.0,
+            0.7978739410843126,
+            0.7978739410843126,
+            1.0,
+            1.0,
+            1.0,
+            0.7641254083103469,
+            0.6422727797927412,
+            0.8725129388059689,
+            0.7978739410843126,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.9036020036098448,
+            0.6695426343195656,
+            0.7641254083103469,
+            1.0,
+            1.0,
+            1.0,
+            0.7749224723289705,
+            0.7641254083103469,
+            0.6839329477103357,
+            0.7978739410843126,
+            0.7978739410843126,
+            0.7978739410843126,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.7641254083103469,
+            0.6993266450553225,
+            0.8915993127600096,
+            1.0,
+            1.0,
+            1.0,
+            0.6422727797927412,
+            0.6839329477103357,
+            0.7721947901921794,
+            0.8020219183488043,
+            1.0,
+            0.8003203203844999,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.7978739410843126,
+            1.0,
+            0.7978739410843126,
+            0.7641254083103469,
+            0.8003203203844999,
+            0.7749224723289705,
+            0.8003203203844999,
+            0.6422727797927412,
+            0.7749224723289705,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.7641254083103469,
+            0.6703420896351792,
+            0.8003203203844999,
+            1.0,
+            1.0,
+            0.7978739410843126,
+            1.0,
+            0.7978739410843126,
+            0.7978739410843126,
+            0.7978739410843126,
+            0.7978739410843126,
+            0.7978739410843126,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.7978739410843126,
+            0.8003203203844999,
+            0.7641254083103469,
+            0.6695426343195656,
+            0.7978739410843126,
+            1.0,
+            1.0,
+            0.6695426343195656,
+            0.6695426343195656,
+            0.8003203203844999,
+            0.7978739410843126,
+            1.0,
+            0.7978739410843126,
+            0.7978739410843126,
+            1.0,
+            0.8091067115702212,
+            0.7721947901921794,
+            0.6839329477103357,
+            0.7749224723289705,
+            1.0,
+            1.0,
+            1.0,
+            0.6695426343195656,
+            0.7590994812356263,
+            0.6422727797927412,
+            1.0,
+            1.0,
+            1.0,
+            0.7978739410843126,
+            1.0,
+            0.7978739410843126,
+            0.667278568794606,
+            0.8003203203844999,
+            0.667278568794606,
+            0.8003203203844999,
+            0.6695426343195656,
+            0.8003203203844999,
+            1.0,
+            0.7978739410843126,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.7641254083103469,
+            0.6422727797927412,
+            0.6695426343195656,
+            0.7978739410843126,
+            0.7978739410843126,
+            1.0,
+            1.0,
+            0.7978739410843126,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.6703420896351792,
+            0.784757484773875,
+            0.7641254083103469,
+            1.0,
+            0.7978739410843126,
+            0.7978739410843126,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.7978739410843126,
+            0.7978739410843126,
+            0.8725129388059689,
+            0.6422727797927412,
+            0.7590994812356263,
+            0.6703420896351792,
+            0.667278568794606,
+            0.6422727797927412,
+            0.7641254083103469,
+            0.6695426343195656,
+            0.5747539348314025,
+            1.0,
+            0.7978739410843126,
+            1.0,
+            0.8725129388059689,
+            0.6839329477103357,
+            0.6695426343195656,
+            0.8725129388059689,
+            0.6422727797927412,
+            0.7590994812356263,
+            1.0,
+            1.0,
+            1.0,
+            0.6422727797927412,
+            0.8725129388059689,
+            0.6695426343195656,
+            0.7641254083103469,
+            0.7641254083103469,
+            0.8725129388059689,
+            1.0,
+            0.7978739410843126,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.8725129388059689,
+            0.7641254083103469,
+            0.7641254083103469,
+            0.8843865924896842,
+            0.6422727797927412,
+            0.7641254083103469,
+            0.6422727797927412,
+            0.6695426343195656,
+            0.7076534431960262,
+            0.6422727797927412,
+            0.6695426343195656,
+            0.667278568794606,
+            0.5747539348314025,
+            0.8725129388059689,
+            0.7094521095075527,
+            0.7641254083103469,
+            0.6695426343195656,
+            0.6695426343195656,
+            0.6422727797927412,
+            0.7641254083103469,
+            0.7641254083103469,
+            0.6839329477103357,
+            0.7721947901921794,
+            0.7749224723289705,
+            0.6695426343195656,
+            0.6422727797927412,
+            0.6703420896351792,
+            0.6695426343195656,
+            0.6695426343195656,
+            0.6703420896351792,
+            0.7641254083103469,
+            0.8725129388059689,
+            0.7641254083103469,
+            0.6695426343195656,
+            0.6695426343195656,
+            0.6695426343195656,
+            0.8787419089273848,
+            0.6422727797927412,
+            0.7641254083103469,
+            0.7641254083103469,
+            0.6695426343195656,
+            0.7590994812356263
+        ],
+        "LE": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+        ]
+    }
+]

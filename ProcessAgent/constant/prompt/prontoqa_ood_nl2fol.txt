@@ -1,0 +1,79 @@
+Parse the premises and the conclusions into first-order logic formulars.
+
+### Rules
+1. Each natural language sentence must correspond to a single FOL formula. 
+2. Use the following FOL syntax:
+    - Conjunction ("and"): expr1 ∧ expr2
+    - Disjunction ("or"): expr1 ∨ expr2
+    - Exclusive Disjunction ("exclusive or"): expr1 ⊕ expr2
+    - Negation ("not"): ¬expr1
+    - Implication ("if ... then ..."): expr1 → expr2
+    - Biconditional ("if and only if"): expr1 ↔ expr2
+    - logical universal quantification: ∀x
+    - logical existential quantification: ∃x
+3. Every formula must explicitly include quantifiers (∀x or ∃x) where applicable.
+    - For nl "Brimpuses are vumpuses".
+    - "Brimpus(x) → Vumpus(x)" is false.
+    - "∀x (Brimpus(x) → Vumpus(x))" is true.
+4. Distinguish between "or" and "and".
+    - NL: "Alex is a gorpus, a sterpus, a numpus, or a gorpus." 
+    - FOL: "Gorpus(alex) ∨ Sterpus(alex) ∨ Numpus(alex) ∨ Gorpus(alex)"
+    - NL: "Everything that is a jompus, a lempus, or a zumpus is a lorpus, a shumpus, and a yumpus."
+    - FOL: "∀x ((Jompus(x) ∨ Lempus(x) ∨ Zumpus(x)) → (Lorpus(x) ∧ Shumpus(x) ∧ Yumpus(x)))"
+
+### Output Format
+Premises: 
+fol-formula ::: (index) reference.
+Conclusions: 
+fol-formula ::: (index) reference. 
+
+### Examples
+------
+Premises:
+(1) Polly is a lempus. 
+(2) Each sterpus is a yumpus. 
+(3) Everything that is an impus and a lorpus and a dumpus is a brimpus and a grimpus. 
+(4) Everything that is a rompus or a lempus or a yumpus is a grimpus. 
+(5) Everything that is an impus, a lempus, and a grimpus is a yumpus. 
+(6) Everything that is a shumpus or a rompus or a vumpus is a zumpus or a yumpus. 
+(7) Yumpuses are not sweet.
+(8) Grimpuses are sterpuses.
+(9) Sally is a yumpus.
+(10) Brimpuses are opaque.
+Conclusions:
+(1) Polly is an impus and a lorpus and a dumpus.
+(2) Everything that is an impus, a lorpus, and a dumpus is a numpus and a sterpus and a rompus.
+(3) Polly is a brimpus. 
+(4) Gorpuses are happy.
+(5) Rex is a numpus, a dumpus, or a jompus.
+(6) Yumpuses are not sweet.
+(7) Grimpuses are sterpuses.
+(8) Sally is a yumpus.
+(9) Brimpuses are opaque.
+###
+Premises:
+Lempus(polly) ::: (1) Polly is a lempus. 
+∀x (Sterpus(x) → Yumpus(x)) ::: (2) Each sterpus is a yumpus.
+∀x ((Impus(x) ∧ Lorpus(x) ∧ Dumpus(x)) → (Brimpus(x) ∧ Grimpus(x))) ::: (3) Everything that is an impus and a lorpus and a dumpus is a brimpus and a grimpus. 
+∀x ((Rompus(x) ∨ Lempus(x) ∨ Yumpus(x)) → Grimpus(x)) ::: (4) Everything that is a rompus or a lempus or a yumpus is a grimpus. 
+∀x ((Impus(x) ∧ Lempus(x) ∧ Grimpus(x)) → Yumpus(x)) ::: (5) Everything that is an impus, a lempus, and a grimpus is a yumpus. 
+∀x ((Shumpus(x) ∨ Rompus(x) ∨ Vumpus(x)) → (Zempus(x) ∨ Yumpus(x))) ::: (6) Everything that is a shumpus or a rompus or a vumpus is a zumpus or a yumpus.
+∀x (Yumpus(x) → ¬Sweet(x)) ::: (7) Yumpuses are not sweet.
+∀x (Grimpus(x) → Sterpus(x)) ::: (8) Grimpuses are sterpuses.
+Yumpus(sally) ::: (9) Sally is a yumpus.
+∀x (Brimpus(x) → Opaque(x)) ::: (10) Brimpuses are opaque.
+Conclusions:
+Impus(polly) ∧ Lorpus(polly) ∧ Dumpus(polly) ::: (1) Polly is an impus and a lorpus and a dumpus.
+∀x ((Impus(x) ∧ Lorpus(x) ∧ Dumpus(x)) → (Numpus(x) ∧ Sterpus(x) ∧ Rompus(x))) ::: (2) Everything that is an impus, a lorpus, and a dumpus is a numpus and a sterpus and a rompus.
+Brimpus(polly) ::: (3) Polly is a brimpus. 
+∀x (Gorpus(x) → Happy(x)) :::(4) Gorpuses are happy.
+Numpus(rex) ∨ Dumpus(rex) ∨ Jompus(rex) ::: (5) Rex is a numpus, a dumpus, or a jompus.
+∀x (Yumpus(x) → ¬Sweet(x)) ::: (6) Yumpuses are not sweet.
+∀x (Grimpus(x) → Sterpus(x)) ::: (7) Grimpuses are sterpuses.
+Yumpus(sally) ::: (8) Sally is a yumpus.
+∀x (Brimpus(x) → Opaque(x)) ::: (9) Brimpuses are opaque.
+------
+### Your Task
+Return first-order logic formulars with NO other texts.
+[instruction]
+###

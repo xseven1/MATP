@@ -1,0 +1,83 @@
+# Task
+Based on the known premises, answer whether the conclusion is True or False, and give the corresponding thinking process.
+
+# Rules
+1) Each reasoning step must follow from the Premises or previous thoughts—no assumptions.
+2) No duplicate reasoning thoughts, and the total number of Thoughts must not exceed 15.
+
+# Output Format
+Your output must strictly follow this structure:
+1) Thoughts: Step-by-step reasoning, one statement per line, max 15 lines. Each sentence does not require a sequence number.
+2) Answer: Select one from (A) True, (B) False.
+
+------
+Premises:
+The bald eagle eats the cow.
+The bald eagle is young.
+The cow is nice.
+The cow sees the bald eagle.
+The dog eats the bald eagle.
+The tiger eats the cow.
+The tiger needs the bald eagle.
+If something is green and it eats the cow then it does not see the bald eagle.
+If something eats the tiger then the tiger is young.
+If something is red then it eats the tiger.
+If something sees the bald eagle then it eats the cow.
+If something is green and it needs the dog then it needs the bald eagle.
+If something sees the tiger then it needs the bald eagle.
+If something is red then it eats the bald eagle.
+If something is young then it is red.
+If something eats the dog and it is red then the dog is young.
+Conclusion:
+The tiger is young.
+###
+Thoughts:
+The bald eagle is young. 
+If something is young then it is red.
+The bald eagle is red.
+If something is red then it eats the tiger.
+The bald eagle eats the tiger.
+If something eats the tiger then the tiger is young.
+The tiger is young.
+There is evidence to conclude that the tiger is young.
+Answer:
+(A) True
+------
+Premises:
+Charlie is green.
+Dave is quiet.
+Dave is red.
+Dave is not white.
+Erin is not big.
+Erin is not cold.
+Erin is green.
+Harry is big.
+Harry is cold.
+Harry is green.
+If someone is red then they are not white.
+If Charlie is quiet then Charlie is blue.
+If someone is quiet and red then they are blue.
+All white people are cold.
+All green people are quiet.
+All blue, green people are red.
+If someone is red and not white then they are big.
+Conclusion:
+Charlie is not red.
+###
+Thoughts:
+All green people are quiet.
+Charlie is green. 
+Charlie is quiet.
+If Charlie is quiet then Charlie is blue.
+Charlie is blue.
+All blue, green people are red. 
+Charlie is red.
+There is evidence to conclude that Charlie is red.
+Answer:
+(B) False
+------
+# Your task: Return Thoughts and Answer with NO other texts.
+Now the premises are: 
+{premises}
+the conclusion is: 
+{conclusion}
