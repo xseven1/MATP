@@ -29,7 +29,7 @@ class Constants:
     VAMPIRE_ANSWER_ERROR="Error"
     SEMANTIC_ERROR = "Semantic_Error"
     VAMPIRE_RUN_RES_DIR="vampire_run_res"
-    VAMPIRE_BIN_PATH = "path/to/vampire" # TODO
+    VAMPIRE_BIN_PATH = "/mnt/c/Users/udaya/vampire/build/vampire"
 
     DELIMITER = " &xxx& "
     INPUT_TOKEN = "[instruction]"
