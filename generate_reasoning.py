@@ -42,6 +42,8 @@ def build_bedrock_client(region_name: str):
     return boto3.client("bedrock-runtime", region_name=region_name)
 
 
+_IS_LLAMA_MODEL = None  # set lazily per model_id, see below
+
 def call_claude_bedrock(
     client,
     model_id: str,
@@ -50,21 +52,24 @@ def call_claude_bedrock(
     temperature: float = 0.0,
     max_retries: int = 3,
 ) -> str:
-    body = json.dumps(
-        {
-            "anthropic_version": "bedrock-2023-05-31",
-            "messages": [{"role": "user", "content": prompt}],
-            "max_tokens": max_tokens,
-            "temperature": temperature,
-        }
-    )
+    # Converse API — provider-agnostic (Claude/Qwen/Llama all go through the
+    # same shape), replacing the old Anthropic-only invoke_model body.
+    is_llama = "llama" in model_id.lower()
+    effective_max_tokens = min(max_tokens, 8192) if is_llama else max_tokens
 
     last_err = None
     for attempt in range(1, max_retries + 1):
         try:
-            response = client.invoke_model(modelId=model_id, body=body)
-            response_body = json.loads(response["body"].read())
-            return response_body["content"][0]["text"]
+            response = client.converse(
+                modelId=model_id,
+                messages=[{"role": "user", "content": [{"text": prompt}]}],
+                inferenceConfig={"maxTokens": effective_max_tokens, "temperature": temperature},
+            )
+            content = response["output"]["message"]["content"]
+            for block in content:
+                if "text" in block:
+                    return block["text"]
+            raise RuntimeError(f"No text block in Converse response: {content}")
         except Exception as e:  # noqa: BLE001 - want to retry on any transient error
             last_err = e
             wait = 2 ** attempt

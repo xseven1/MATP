@@ -1,0 +1,4 @@
+llm:
+  api_type: 'bedrock'
+  model: arn:aws:bedrock:us-east-1:626747814346:inference-profile/global.anthropic.claude-haiku-4-5-20251001-v1:0
+  region_name: us-east-1
